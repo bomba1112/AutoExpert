@@ -764,6 +764,97 @@ class Loader:
             self.db.flush()
             self.counts["issues_new"] += 1
 
+    def delete_own_line_rows(self):
+        """--replace-own: remove the rows THIS pipeline wrote for this line (technical_evidence
+        and known_issues tagged with this load version and exactly this line) so the line can be
+        reloaded after a staging-rule change (e.g. moved generation boundaries). Anything else
+        referencing those rows stops the run."""
+        from app.models.evidence import KnownIssue, TechnicalEvidence
+        from app.models.vehicle_knowledge import vehicle_profile_evidence
+        from sqlalchemy import func, select
+
+        own = lambda model: (  # noqa: E731
+            model.make_id == self.make.id,
+            func.json_extract(model.conditions, "$.load") == LOAD_VERSION,
+            func.json_extract(model.conditions, "$.line") == self.s["line"],
+        )
+        te_ids = list(self.db.scalars(select(TechnicalEvidence.id).where(*own(TechnicalEvidence))))
+        if te_ids:
+            used = self.db.scalar(
+                select(func.count()).select_from(vehicle_profile_evidence).where(
+                    vehicle_profile_evidence.c.evidence_id.in_(te_ids)
+                )
+            )
+            if used:
+                raise SystemExit(f"--replace-own: {used} profile evidence rows reference this line's rows; stopped")
+        issues = list(self.db.scalars(select(KnownIssue).where(*own(KnownIssue))))
+        for issue in issues:
+            self.db.delete(issue)
+        self.db.flush()
+        for row in self.db.scalars(select(TechnicalEvidence).where(TechnicalEvidence.id.in_(te_ids))):
+            self.db.delete(row)
+        self.db.flush()
+        self.counts["replaced_own_te"] = len(te_ids)
+        self.counts["replaced_own_issues"] = len(issues)
+
+    def reconcile_own_generations(self, previous: dict | None):
+        """Correct generation years and rows that THIS pipeline wrote in an earlier load when the
+        staging rules have changed since. Provenance is the previous load_report.json: only a
+        year it reports as filled/created (and still holding that value) is changed, and only a
+        generation it reports as created, absent from the staging and referenced by nothing, is
+        removed. Pre-existing generation data is never touched."""
+        from app.models.catalog import VehicleGeneration, VehicleVariant
+        from app.models.evidence import KnownIssue, MaintenanceScheduleItem, TechnicalEvidence
+        from sqlalchemy import func, select
+
+        if not previous:
+            return
+        written = {}
+        for entry in previous.get("generations", []):
+            if entry.get("action") in ("filled", "created"):
+                written[entry["code"]] = entry
+        current = {g["code"]: g for g in self.s["generations"]}
+        model_ids = [m.id for m in self.models.values()]
+        for code, entry in written.items():
+            row = self.db.scalar(
+                select(VehicleGeneration).where(
+                    VehicleGeneration.model_id.in_(model_ids),
+                    VehicleGeneration.code == code,
+                    VehicleGeneration.is_demo.is_(False),
+                )
+            )
+            if row is None:
+                continue
+            gen = current.get(code)
+            if gen is None:
+                if entry.get("action") != "created":
+                    continue
+                refs = sum(
+                    self.db.scalar(select(func.count()).select_from(t).where(t.generation_id == row.id))
+                    for t in (TechnicalEvidence, KnownIssue, MaintenanceScheduleItem, VehicleVariant)
+                )
+                if refs == 0:
+                    self.db.delete(row)
+                    self.report["generations"].append(
+                        {"code": code, "action": "removed (created by an earlier load; no longer in staging; unreferenced)"}
+                    )
+                else:
+                    self.report["generations"].append(
+                        {"code": code, "action": f"kept (no longer in staging, still referenced by {refs} rows)"}
+                    )
+                continue
+            start = gen["start_year"] if gen.get("start_known", True) else None
+            end = None if gen.get("open_ended") or not gen.get("end_known", True) else gen["end_year"]
+            for field, new in (("start_year", start), ("end_year", end)):
+                if field not in entry or entry[field] is None:
+                    continue
+                if getattr(row, field) == entry[field] and new != entry[field]:
+                    setattr(row, field, new)
+                    self.report["generations"].append(
+                        {"code": code, "action": f"corrected {field} {entry[field]} -> {new} (written by an earlier load of this pipeline)"}
+                    )
+        self.db.flush()
+
     def stale_rows(self, prune: bool):
         """Rows written by THIS loader for this make/line that the current staging no longer
         contains (e.g. a narrowed applicability). Pre-existing data is never touched; stale rows
@@ -875,6 +966,11 @@ def main(argv=None):
     parser.add_argument("--db", required=True)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--prune-stale", action="store_true")
+    parser.add_argument(
+        "--replace-own",
+        action="store_true",
+        help="delete this pipeline's rows for the line, then load (implies --prune-stale)",
+    )
     args = parser.parse_args(argv)
     import os
 
@@ -897,8 +993,22 @@ def main(argv=None):
         "started_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "db": str(Path(args.db).resolve()),
     }
+    report_path = (
+        ROOT / "data_work" / args.make / "staging" / args.line / "load_report.json"
+    )
+    previous = (
+        json.loads(report_path.read_text(encoding="utf-8"))
+        if report_path.exists() and staging.get("build")
+        else None
+    )
+    if args.replace_own:
+        args.prune_stale = True
     with Session(engine) as db:
         loader = Loader(db, staging, staging["line"], report)
+        if args.replace_own:
+            loader.delete_own_line_rows()
+        if args.prune_stale:
+            loader.reconcile_own_generations(previous)
         loader.load_sources()
         loader.load_generations()
         loader.load_facts()
@@ -908,6 +1018,8 @@ def main(argv=None):
         loader.load_symptom_patterns()
         loader.load_issues()
         loader.stale_rows(args.prune_stale)
+        if args.prune_stale:
+            loader.reconcile_own_generations(previous)  # removes generations emptied by the prune
         loader.compare_existing_catalog()
         report["counts"] = dict(loader.counts)
         if args.dry_run:
@@ -921,7 +1033,14 @@ def main(argv=None):
         / args.make
         / "staging"
         / args.line
-        / ("load_report_dry_run.json" if args.dry_run else "load_report.json")
+        / (
+            "load_report_dry_run.json"
+            if args.dry_run
+            else "load_report.json"
+            if Path(args.db).resolve() == (ROOT / "autoexpert.db").resolve()
+            # rehearsals on a copy must not replace the live load's provenance report
+            else "load_report_rehearsal.json"
+        )
     )
     out.write_text(json.dumps(report, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     print(

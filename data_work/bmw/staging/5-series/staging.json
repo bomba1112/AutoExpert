@@ -142,21 +142,6 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2023
   },
-  "vpic-ca-bmw-2024": {
-   "key": "vpic-ca-bmw-2024",
-   "kind": "json_gz",
-   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
-   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
-   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
-   "retrieved_at": "2026-10-02T08:31:13+00:00",
-   "tier": "B",
-   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
-   "registry": "nhtsa-vpic-vehicle-api",
-   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
-   "publisher": "NHTSA vPIC (Transport Canada data)",
-   "authenticity": "OFFICIAL_PUBLISHER",
-   "model_year": 2024
-  },
   "vpic-ca-bmw-2019": {
    "key": "vpic-ca-bmw-2019",
    "kind": "json_gz",
@@ -186,6 +171,21 @@
    "publisher": "NHTSA vPIC (Transport Canada data)",
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2020
+  },
+  "vpic-ca-bmw-2024": {
+   "key": "vpic-ca-bmw-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
+   "retrieved_at": "2026-10-02T08:31:13+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
   },
   "vpic-ca-bmw-2025": {
    "key": "vpic-ca-bmw-2025",
@@ -1608,7 +1608,7 @@
    "db_model": "5 Series",
    "existing_id": "b5e0514a-b8b8-4dc0-be50-626b5061b9f6",
    "start_year": 2017,
-   "end_year": 2024,
+   "end_year": 2023,
    "open_ended": false,
    "start_known": true,
    "end_known": true,
@@ -1619,19 +1619,17 @@
    "evidence_tier": "B"
   },
   {
-   "code": "US2025+",
-   "name": "5 Series 2025+ (US)",
+   "code": "US2024+",
+   "name": "5 Series 2024+ (US)",
    "db_model": "5 Series",
    "existing_id": null,
-   "start_year": 2025,
+   "start_year": 2024,
    "end_year": 2026,
    "open_ended": true,
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 298 cm (MY2024) -> 301 cm (MY2025)",
-    "vPIC Canadian specifications: overall length 496 -> 510 cm, overall width 187 -> 197 cm (MY2024 -> MY2025; a change of 6 cm or more)",
-    "mycarusermanual.com generation page starts at 2024 (5-series/4-door/2024-2025), corroborated by vPIC overall length 496 -> 510 cm, overall width 187 -> 197 cm, overall height 147 -> 152 cm, front track 161 -> 168 cm (MY2024 -> MY2025)"
+    "mycarusermanual.com generation page starts at 2024 (5-series/4-door/2024-2025), corroborated by vPIC new body family 5-SERIES|4DRSEDAN wheelbase 300 cm (MY2023 -> MY2024)"
    ],
    "evidence_tier": "B"
   }
@@ -3912,7 +3910,7 @@
   {
    "configuration_key": "bmw-5-series-us-2024-2.0l-4cyl-turbo-hev-a-s8-awd",
    "year": 2024,
-   "generation": "G30",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -3940,7 +3938,7 @@
   {
    "configuration_key": "bmw-5-series-us-2024-2.0l-4cyl-turbo-hev-a-s8-rwd",
    "year": 2024,
-   "generation": "G30",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -3968,7 +3966,7 @@
   {
    "configuration_key": "bmw-5-series-us-2024-3.0l-6cyl-turbo-hev-a-s8-awd",
    "year": 2024,
-   "generation": "G30",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -3996,7 +3994,7 @@
   {
    "configuration_key": "bmw-5-series-us-2025-2.0l-4cyl-turbo-hev-a-s8-awd",
    "year": 2025,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4024,7 +4022,7 @@
   {
    "configuration_key": "bmw-5-series-us-2025-2.0l-4cyl-turbo-hev-a-s8-rwd",
    "year": 2025,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4052,7 +4050,7 @@
   {
    "configuration_key": "bmw-5-series-us-2025-3.0l-6cyl-turbo-hev-a-s8-awd",
    "year": 2025,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4080,7 +4078,7 @@
   {
    "configuration_key": "bmw-5-series-us-2025-3.0l-6cyl-turbo-phev-a-s8-awd",
    "year": 2025,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "PHEV",
@@ -4108,7 +4106,7 @@
   {
    "configuration_key": "bmw-5-series-us-2026-2.0l-4cyl-turbo-hev-a-s8-awd",
    "year": 2026,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4136,7 +4134,7 @@
   {
    "configuration_key": "bmw-5-series-us-2026-2.0l-4cyl-turbo-hev-a-s8-rwd",
    "year": 2026,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4164,7 +4162,7 @@
   {
    "configuration_key": "bmw-5-series-us-2026-3.0l-6cyl-turbo-hev-a-s8-awd",
    "year": 2026,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "HEV",
@@ -4192,7 +4190,7 @@
   {
    "configuration_key": "bmw-5-series-us-2026-3.0l-6cyl-turbo-phev-a-s8-awd",
    "year": 2026,
-   "generation": "US2025+",
+   "generation": "US2024+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "PHEV",
@@ -10894,7 +10892,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 1895,
    "unit": "kg",
@@ -10925,15 +10923,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1895",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
      "field": "CW",
@@ -10998,7 +10987,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": 1470,
    "unit": "mm",
@@ -11047,15 +11036,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
      "field": "OH",
@@ -11120,7 +11100,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 4960,
    "unit": "mm",
@@ -11157,15 +11137,6 @@
      "raw_value": "496",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -11181,7 +11152,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": 1610,
    "unit": "mm",
@@ -11236,15 +11207,6 @@
      "raw_value": "161",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -11260,7 +11222,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": 1630,
    "unit": "mm",
@@ -11315,15 +11277,6 @@
      "raw_value": "163",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -11339,7 +11292,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": "49/51",
    "unit": "%",
@@ -11394,15 +11347,6 @@
      "raw_value": "49/51",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "49/51",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -11418,7 +11362,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": 2980,
    "unit": "mm",
@@ -11473,15 +11417,6 @@
      "raw_value": "298",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -11497,7 +11432,7 @@
    "gen_bound": true,
    "years": [
     2019,
-    2024
+    2023
    ],
    "value": 1870,
    "unit": "mm",
@@ -11546,15 +11481,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "187",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
      "field": "OW",
@@ -11882,7 +11808,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 1680,
    "unit": "kg",
@@ -11913,15 +11839,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1680",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
      "field": "CW",
@@ -11995,7 +11912,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1470,
    "unit": "mm",
@@ -12062,15 +11979,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
      "field": "OH",
@@ -12153,7 +12061,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 4960,
    "unit": "mm",
@@ -12190,15 +12098,6 @@
      "raw_value": "496",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -12214,7 +12113,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1610,
    "unit": "mm",
@@ -12287,15 +12186,6 @@
      "raw_value": "161",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -12311,7 +12201,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1630,
    "unit": "mm",
@@ -12384,15 +12274,6 @@
      "raw_value": "163",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -12408,7 +12289,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": "52/48",
    "unit": "%",
@@ -12481,15 +12362,6 @@
      "raw_value": "52/48",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "52/48",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -12505,7 +12377,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 2980,
    "unit": "mm",
@@ -12578,15 +12450,6 @@
      "raw_value": "298",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -12602,7 +12465,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1870,
    "unit": "mm",
@@ -12669,15 +12532,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "187",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
      "field": "OW",
@@ -13209,7 +13063,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 1745,
    "unit": "kg",
@@ -13240,15 +13094,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1745",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
      "field": "CW",
@@ -13322,7 +13167,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1470,
    "unit": "mm",
@@ -13389,15 +13234,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
      "field": "OH",
@@ -13480,7 +13316,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 4960,
    "unit": "mm",
@@ -13517,15 +13353,6 @@
      "raw_value": "496",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -13541,7 +13368,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1610,
    "unit": "mm",
@@ -13614,15 +13441,6 @@
      "raw_value": "161",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -13638,7 +13456,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1630,
    "unit": "mm",
@@ -13711,15 +13529,6 @@
      "raw_value": "163",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -13735,7 +13544,7 @@
    "gen_bound": true,
    "years": [
     2018,
-    2024
+    2023
    ],
    "value": "53/47",
    "unit": "%",
@@ -13799,15 +13608,6 @@
      "raw_value": "53/47",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "53/47",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -13857,7 +13657,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 2980,
    "unit": "mm",
@@ -13930,15 +13730,6 @@
      "raw_value": "298",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -13954,7 +13745,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1870,
    "unit": "mm",
@@ -14027,15 +13818,6 @@
      "raw_value": "187",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "187",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14085,7 +13867,7 @@
    "gen_bound": true,
    "years": [
     2021,
-    2024
+    2023
    ],
    "value": 1915,
    "unit": "kg",
@@ -14116,15 +13898,6 @@
     },
     {
      "source": "vpic-ca-bmw-2023",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1915",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
      "pages": null,
      "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
      "field": "CW",
@@ -14198,7 +13971,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1470,
    "unit": "mm",
@@ -14271,15 +14044,6 @@
      "raw_value": "147",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14295,7 +14059,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 4960,
    "unit": "mm",
@@ -14368,15 +14132,6 @@
      "raw_value": "496",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14392,7 +14147,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1610,
    "unit": "mm",
@@ -14465,15 +14220,6 @@
      "raw_value": "161",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14489,7 +14235,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1630,
    "unit": "mm",
@@ -14562,15 +14308,6 @@
      "raw_value": "163",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14620,7 +14357,7 @@
    "gen_bound": true,
    "years": [
     2018,
-    2024
+    2023
    ],
    "value": "54/46",
    "unit": "%",
@@ -14684,15 +14421,6 @@
      "raw_value": "54/46",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "54/46",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14708,7 +14436,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 2980,
    "unit": "mm",
@@ -14781,15 +14509,6 @@
      "raw_value": "298",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14805,7 +14524,7 @@
    "gen_bound": true,
    "years": [
     2017,
-    2024
+    2023
    ],
    "value": 1870,
    "unit": "mm",
@@ -14878,7 +14597,1086 @@
      "raw_value": "187",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1895,
+   "unit": "kg",
+   "original": "CW = 1895 (kg, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1895",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1470,
+   "unit": "mm",
+   "original": "OH = 147 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 4960,
+   "unit": "mm",
+   "original": "OL = 496 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWF = 161 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1630,
+   "unit": "mm",
+   "original": "TWR = 163 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": "49/51",
+   "unit": "%",
+   "original": "WD = 49/51 (front/rear %, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2980,
+   "unit": "mm",
+   "original": "WB = 298 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530e-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1870,
+   "unit": "mm",
+   "original": "OW = 187 (cm, Canadian specification row '5 SERIES 530e xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530e xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530e xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "187",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1680,
+   "unit": "kg",
+   "original": "CW = 1680 (kg, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1680",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1470,
+   "unit": "mm",
+   "original": "OH = 147 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 4960,
+   "unit": "mm",
+   "original": "OL = 496 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWF = 161 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1630,
+   "unit": "mm",
+   "original": "TWR = 163 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2980,
+   "unit": "mm",
+   "original": "WB = 298 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1870,
+   "unit": "mm",
+   "original": "OW = 187 (cm, Canadian specification row '5 SERIES 530i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 530i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "187",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1745,
+   "unit": "kg",
+   "original": "CW = 1745 (kg, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1745",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1470,
+   "unit": "mm",
+   "original": "OH = 147 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 4960,
+   "unit": "mm",
+   "original": "OL = 496 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWF = 161 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1630,
+   "unit": "mm",
+   "original": "TWR = 163 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": "53/47",
+   "unit": "%",
+   "original": "WD = 53/47 (front/rear %, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "53/47",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2980,
+   "unit": "mm",
+   "original": "WB = 298 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-540i-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1870,
+   "unit": "mm",
+   "original": "OW = 187 (cm, Canadian specification row '5 SERIES 540i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES 540i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES 540i xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "187",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1915,
+   "unit": "kg",
+   "original": "CW = 1915 (kg, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1915",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1470,
+   "unit": "mm",
+   "original": "OH = 147 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 4960,
+   "unit": "mm",
+   "original": "OL = 496 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWF = 161 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1630,
+   "unit": "mm",
+   "original": "TWR = 163 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": "54/46",
+   "unit": "%",
+   "original": "WD = 54/46 (front/rear %, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2980,
+   "unit": "mm",
+   "original": "WB = 298 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5 SERIES M550i xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2024"
+  },
+  {
+   "id": "5-series-US2024+-vpic-5-series-m550i-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1870,
+   "unit": "mm",
+   "original": "OW = 187 (cm, Canadian specification row '5 SERIES M550i xDRIVE 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "5 SERIES M550i xDRIVE 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
     {
      "source": "vpic-ca-bmw-2024",
      "pages": null,
@@ -14891,18 +15689,18 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2017"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-curb_weight_kg-2024",
-   "generation": "G30",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2024,
-    2024
+    2026
    ],
    "value": 1886,
    "unit": "kg",
@@ -14921,6 +15719,24 @@
      "raw_value": "1886",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1886",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1886",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14928,15 +15744,15 @@
    "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-height_mm-2024",
-   "generation": "G30",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2024,
-    2024
+    2026
    ],
    "value": 1500,
    "unit": "mm",
@@ -14955,6 +15771,24 @@
      "raw_value": "150",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "150",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "150",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14962,15 +15796,15 @@
    "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-length_mm-2024",
-   "generation": "G30",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2024,
-    2024
+    2026
    ],
    "value": 5060,
    "unit": "mm",
@@ -14989,6 +15823,24 @@
      "raw_value": "506",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "506",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "506",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -14996,15 +15848,15 @@
    "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-track_front_mm-2024",
-   "generation": "G30",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2024,
-    2024
+    2026
    ],
    "value": 1620,
    "unit": "mm",
@@ -15023,6 +15875,24 @@
      "raw_value": "162",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -15030,15 +15900,15 @@
    "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-track_rear_mm-2024",
-   "generation": "G30",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2024,
-    2024
+    2026
    ],
    "value": 1660,
    "unit": "mm",
@@ -15057,986 +15927,7 @@
      "raw_value": "166",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-wheelbase_mm-2024",
-   "generation": "G30",
-   "key": "wheelbase_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 3000,
-   "unit": "mm",
-   "original": "WB = 300 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "300",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-530i-xdrive-4dr-sedan-width_mm-2024",
-   "generation": "G30",
-   "key": "width_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1900,
-   "unit": "mm",
-   "original": "OW = 190 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "190",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-curb_weight_kg-2024",
-   "generation": "G30",
-   "key": "curb_weight_kg",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 2230,
-   "unit": "kg",
-   "original": "CW = 2230 (kg, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "2230",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-height_mm-2024",
-   "generation": "G30",
-   "key": "height_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1500,
-   "unit": "mm",
-   "original": "OH = 150 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "150",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-length_mm-2024",
-   "generation": "G30",
-   "key": "length_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 5060,
-   "unit": "mm",
-   "original": "OL = 506 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "506",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-track_front_mm-2024",
-   "generation": "G30",
-   "key": "track_front_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1620,
-   "unit": "mm",
-   "original": "TWF = 162 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "162",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-track_rear_mm-2024",
-   "generation": "G30",
-   "key": "track_rear_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1660,
-   "unit": "mm",
-   "original": "TWR = 166 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "166",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-wheelbase_mm-2024",
-   "generation": "G30",
-   "key": "wheelbase_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 3000,
-   "unit": "mm",
-   "original": "WB = 300 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "300",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-550e-xdrive-4dr-sedan-width_mm-2024",
-   "generation": "G30",
-   "key": "width_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1900,
-   "unit": "mm",
-   "original": "OW = 190 (cm, Canadian specification row '5-SERIES 550e xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 550e xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "190",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-curb_weight_kg-2024",
-   "generation": "G30",
-   "key": "curb_weight_kg",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 2380,
-   "unit": "kg",
-   "original": "CW = 2380 (kg, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "2380",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-height_mm-2024",
-   "generation": "G30",
-   "key": "height_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1510,
-   "unit": "mm",
-   "original": "OH = 151 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "151",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-length_mm-2024",
-   "generation": "G30",
-   "key": "length_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 5060,
-   "unit": "mm",
-   "original": "OL = 506 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "506",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_front_mm-2024",
-   "generation": "G30",
-   "key": "track_front_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1640,
-   "unit": "mm",
-   "original": "TWF = 164 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "164",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_rear_mm-2024",
-   "generation": "G30",
-   "key": "track_rear_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1620,
-   "unit": "mm",
-   "original": "TWR = 162 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "162",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-wheelbase_mm-2024",
-   "generation": "G30",
-   "key": "wheelbase_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 3000,
-   "unit": "mm",
-   "original": "WB = 300 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "300",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-m60-xdrive-4dr-sedan-width_mm-2024",
-   "generation": "G30",
-   "key": "width_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1900,
-   "unit": "mm",
-   "original": "OW = 190 (cm, Canadian specification row '5-SERIES i5 M60 xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "190",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-curb_weight_kg-2024",
-   "generation": "G30",
-   "key": "curb_weight_kg",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 2280,
-   "unit": "kg",
-   "original": "CW = 2280 (kg, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "2280",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-height_mm-2024",
-   "generation": "G30",
-   "key": "height_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1510,
-   "unit": "mm",
-   "original": "OH = 151 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "151",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-length_mm-2024",
-   "generation": "G30",
-   "key": "length_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 5060,
-   "unit": "mm",
-   "original": "OL = 506 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "506",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-track_front_mm-2024",
-   "generation": "G30",
-   "key": "track_front_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1640,
-   "unit": "mm",
-   "original": "TWF = 164 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "164",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-track_rear_mm-2024",
-   "generation": "G30",
-   "key": "track_rear_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1620,
-   "unit": "mm",
-   "original": "TWR = 162 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "162",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-wheelbase_mm-2024",
-   "generation": "G30",
-   "key": "wheelbase_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 3000,
-   "unit": "mm",
-   "original": "WB = 300 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "300",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-G30-vpic-5-series-i5-xdrive40-4dr-sedan-width_mm-2024",
-   "generation": "G30",
-   "key": "width_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2024,
-    2024
-   ],
-   "value": 1900,
-   "unit": "mm",
-   "original": "OW = 190 (cm, Canadian specification row '5-SERIES i5 xDRIVE40 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "190",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2024"
-  },
-  {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-curb_weight_kg-2025",
-   "generation": "US2025+",
-   "key": "curb_weight_kg",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2025,
-    2026
-   ],
-   "value": 1886,
-   "unit": "kg",
-   "original": "CW = 1886 (kg, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1886",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1886",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
-  },
-  {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-height_mm-2025",
-   "generation": "US2025+",
-   "key": "height_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2025,
-    2026
-   ],
-   "value": 1500,
-   "unit": "mm",
-   "original": "OH = 150 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "150",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "150",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
-  },
-  {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-length_mm-2025",
-   "generation": "US2025+",
-   "key": "length_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2025,
-    2026
-   ],
-   "value": 5060,
-   "unit": "mm",
-   "original": "OL = 506 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "506",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "506",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
-  },
-  {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-track_front_mm-2025",
-   "generation": "US2025+",
-   "key": "track_front_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2025,
-    2026
-   ],
-   "value": 1620,
-   "unit": "mm",
-   "original": "TWF = 162 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "162",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "162",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    }
-   ],
-   "display_level": "SECONDARY_NOTE",
-   "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
-  },
-  {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-track_rear_mm-2025",
-   "generation": "US2025+",
-   "key": "track_rear_mm",
-   "level": "GENERATION",
-   "engine": null,
-   "gen_bound": true,
-   "years": [
-    2025,
-    2026
-   ],
-   "value": 1660,
-   "unit": "mm",
-   "original": "TWR = 166 (cm, Canadian specification row '5-SERIES 530i xDRIVE 4DR SEDAN')",
-   "applicability": {
-    "vpic_ca_model": "5-SERIES 530i xDRIVE 4DR SEDAN",
-    "market_of_data": "CA"
-   },
-   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
-   "cites": [
     {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
@@ -16058,11 +15949,11 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -16104,14 +15995,14 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 3000,
@@ -16124,6 +16015,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "300",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
@@ -16144,17 +16044,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-530i-xdrive-4dr-sedan-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-530i-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1900,
@@ -16167,6 +16067,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 530i xDRIVE 4DR SEDAN",
@@ -16187,17 +16096,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-curb_weight_kg-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 2230,
@@ -16210,6 +16119,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "2230",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16230,17 +16148,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-height_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1500,
@@ -16253,6 +16171,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "150",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16273,17 +16200,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-length_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 5060,
@@ -16296,6 +16223,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "506",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16316,17 +16252,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-track_front_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1620,
@@ -16339,6 +16275,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16359,17 +16304,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-track_rear_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1660,
@@ -16382,6 +16327,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16402,11 +16356,11 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -16448,14 +16402,14 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 3000,
@@ -16468,6 +16422,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "300",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16488,17 +16451,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-550e-xdrive-4dr-sedan-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-550e-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1900,
@@ -16511,6 +16474,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES 550e xDRIVE 4DR SEDAN",
@@ -16531,11 +16503,11 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-curb_weight_kg-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-curb_weight_kg-2025",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
@@ -16577,8 +16549,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-height_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-height_mm-2025",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16620,8 +16592,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-length_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-length_mm-2025",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16663,8 +16635,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-track_front_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-track_front_mm-2025",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16706,8 +16678,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-track_rear_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-track_rear_mm-2025",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16749,8 +16721,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -16792,8 +16764,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-wheelbase_mm-2025",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16835,8 +16807,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-4dr-sedan-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-4dr-sedan-width_mm-2025",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16878,8 +16850,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-curb_weight_kg-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-curb_weight_kg-2025",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
@@ -16921,8 +16893,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-height_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-height_mm-2025",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
@@ -16964,8 +16936,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-length_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-length_mm-2025",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
@@ -17007,8 +16979,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-track_front_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-track_front_mm-2025",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
@@ -17050,8 +17022,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-track_rear_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-track_rear_mm-2025",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
@@ -17093,8 +17065,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -17136,8 +17108,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-wheelbase_mm-2025",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
@@ -17179,8 +17151,8 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-m5-touring-4dr-wagon-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-m5-touring-4dr-wagon-width_mm-2025",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
@@ -17222,14 +17194,14 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-curb_weight_kg-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 2380,
@@ -17242,6 +17214,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "2380",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17262,17 +17243,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-height_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1510,
@@ -17285,6 +17266,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "151",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17305,17 +17295,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-length_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 5060,
@@ -17328,6 +17318,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "506",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17348,17 +17347,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_front_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1640,
@@ -17371,6 +17370,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17391,17 +17399,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_rear_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1620,
@@ -17414,6 +17422,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17434,11 +17451,11 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -17480,14 +17497,14 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 3000,
@@ -17500,6 +17517,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "300",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17520,17 +17546,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-m60-xdrive-4dr-sedan-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-m60-xdrive-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1900,
@@ -17543,6 +17569,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 M60 xDRIVE 4DR SEDAN",
@@ -17563,17 +17598,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-curb_weight_kg-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-curb_weight_kg-2024",
+   "generation": "US2024+",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 2280,
@@ -17586,6 +17621,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "2280",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17606,17 +17650,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-height_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-height_mm-2024",
+   "generation": "US2024+",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1510,
@@ -17629,6 +17673,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "151",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17649,17 +17702,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-length_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-length_mm-2024",
+   "generation": "US2024+",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 5060,
@@ -17672,6 +17725,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "506",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17692,17 +17754,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-track_front_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-track_front_mm-2024",
+   "generation": "US2024+",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1640,
@@ -17715,6 +17777,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17735,17 +17806,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-track_rear_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-track_rear_mm-2024",
+   "generation": "US2024+",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1620,
@@ -17758,6 +17829,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17778,11 +17858,11 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-weight_distribution_front_rear_pct-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2024+",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
@@ -17824,14 +17904,14 @@
    "primary_source": "vpic-ca-bmw-2025"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-wheelbase_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-wheelbase_mm-2024",
+   "generation": "US2024+",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 3000,
@@ -17844,6 +17924,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "300",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17864,17 +17953,17 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   },
   {
-   "id": "5-series-US2025+-vpic-5-series-i5-xdrive40-4dr-sedan-width_mm-2025",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-vpic-5-series-i5-xdrive40-4dr-sedan-width_mm-2024",
+   "generation": "US2024+",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
-    2025,
+    2024,
     2026
    ],
    "value": 1900,
@@ -17887,6 +17976,15 @@
    "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
    "cites": [
     {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "5-SERIES i5 xDRIVE40 4DR SEDAN",
@@ -17907,7 +18005,7 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2025"
+   "primary_source": "vpic-ca-bmw-2024"
   }
  ],
  "recalls": [
@@ -18270,7 +18368,7 @@
    "remedy": "Dealers will inspect and reattach the ground connection as necessary, free of charge.  Owner notification letters were mailed December 8, 2023.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "18/10/2023",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18294,7 +18392,7 @@
    "remedy": "Dealers will replace the integrated brake system, free of charge.  Owner notification letters were mailed between June and December 2024.  Owners may contact BMW customer service at 1-800-525-7417 or Rolls Royce customer service at 1-877-877-3735.",
    "report_received_date": "12/02/2024",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18318,7 +18416,7 @@
    "remedy": "Dealers will replace the integrated brake system, free of charge.  Owner notification letters were mailed November 13, 2024.  Owners can contact BMW Customer Service at 1-800-525-7417.",
    "report_received_date": "18/09/2024",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18344,7 +18442,7 @@
    "remedy": "Dealers will replace the integrated brake module, free of charge.  Interim owner notification letters notifying owners of the safety risk are expected to be mailed November 22, 2024.  Second letters will be mailed once the parts are available.  Owners may contact BMW customer service at 1-800-525-7417.   Vehicles in this recall were previously repaired under recall number 24V-104 and will need to have the new remedy completed.",
    "report_received_date": "02/10/2024",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18368,7 +18466,7 @@
    "remedy": "Dealers will replace the engine starter, free of charge. Owner notification letters were mailed July 21, 2026. Owners may contact BMW customer service at 1-800-525-7417 or Toyota's customer service at 1-800-331-4331. Vehicle Identification Numbers (VINs) involved in this recall will be searchable on NHTSA.gov beginning March 24, 2026.",
    "report_received_date": "30/01/2026",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18392,7 +18490,7 @@
    "remedy": "The Integrated brake system will be inspected and, if necessary, replaced, free of charge. Owner notification letters are expected to be mailed August 21, 2026. Owners may contact BMW customer service at 1-800-525-7417 or Rolls-Royce customer service at 1-877-877-3735. Vehicle Identification Numbers (VINs) involved in this recall will become searchable on NHTSA.gov beginning August 21, 2026. Vehicles previously repaired under recall 24V739 or 24V104 will need to have the new remedy completed.",
    "report_received_date": "01/07/2026",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "G30",
+   "generation": "US2024+",
    "model_years": [
     2024
    ],
@@ -18569,7 +18667,7 @@
   {
    "generation": "G30",
    "component": "ELECTRICAL SYSTEM",
-   "count": 51,
+   "count": 49,
    "by_year": {
     "2017": 6,
     "2018": 17,
@@ -18577,8 +18675,7 @@
     "2020": 5,
     "2021": 7,
     "2022": 1,
-    "2023": 2,
-    "2024": 2
+    "2023": 2
    },
    "sample_odi": [
     11731280,
@@ -18732,7 +18829,7 @@
   {
    "generation": "G30",
    "component": "UNKNOWN OR OTHER",
-   "count": 33,
+   "count": 30,
    "by_year": {
     "2017": 4,
     "2018": 10,
@@ -18740,8 +18837,7 @@
     "2020": 3,
     "2021": 3,
     "2022": 4,
-    "2023": 1,
-    "2024": 3
+    "2023": 1
    },
    "sample_odi": [
     11337400,
@@ -18769,49 +18865,6 @@
     11710100,
     11465809,
     11433528
-   ],
-   "above_threshold": true
-  },
-  {
-   "generation": "G30",
-   "component": "SERVICE BRAKES",
-   "count": 30,
-   "by_year": {
-    "2017": 2,
-    "2018": 1,
-    "2019": 5,
-    "2020": 2,
-    "2021": 4,
-    "2022": 1,
-    "2023": 2,
-    "2024": 13
-   },
-   "sample_odi": [
-    11679698,
-    11252879,
-    11460740,
-    11430762,
-    11418859,
-    11308567,
-    11301505,
-    11190425,
-    11717953,
-    11537215,
-    11717479,
-    11658906,
-    11533979,
-    11465809,
-    11580570,
-    11616727,
-    11579823,
-    11716484,
-    11653127,
-    11650048,
-    11650140,
-    11644735,
-    11626816,
-    11622477,
-    11622507
    ],
    "above_threshold": true
   },
@@ -19028,6 +19081,40 @@
    "above_threshold": true
   },
   {
+   "generation": "G30",
+   "component": "SERVICE BRAKES",
+   "count": 17,
+   "by_year": {
+    "2017": 2,
+    "2018": 1,
+    "2019": 5,
+    "2020": 2,
+    "2021": 4,
+    "2022": 1,
+    "2023": 2
+   },
+   "sample_odi": [
+    11679698,
+    11252879,
+    11460740,
+    11430762,
+    11418859,
+    11308567,
+    11301505,
+    11190425,
+    11717953,
+    11537215,
+    11717479,
+    11658906,
+    11533979,
+    11465809,
+    11580570,
+    11616727,
+    11579823
+   ],
+   "above_threshold": true
+  },
+  {
    "generation": "F10",
    "component": "STRUCTURE",
    "count": 16,
@@ -19087,7 +19174,7 @@
   {
    "generation": "G30",
    "component": "FUEL/PROPULSION SYSTEM",
-   "count": 15,
+   "count": 14,
    "by_year": {
     "2017": 2,
     "2018": 1,
@@ -19095,8 +19182,7 @@
     "2020": 1,
     "2021": 3,
     "2022": 2,
-    "2023": 1,
-    "2024": 1
+    "2023": 1
    },
    "sample_odi": [
     11649178,
@@ -19112,38 +19198,33 @@
     11600531,
     11715820,
     11513257,
-    11668648,
-    11716484
+    11668648
    ],
    "above_threshold": true
   },
   {
-   "generation": "G30",
-   "component": "FORWARD COLLISION AVOIDANCE",
+   "generation": "US2024+",
+   "component": "SERVICE BRAKES",
    "count": 14,
    "by_year": {
-    "2017": 1,
-    "2018": 2,
-    "2019": 4,
-    "2021": 1,
-    "2022": 3,
-    "2024": 3
+    "2024": 13,
+    "2025": 1
    },
    "sample_odi": [
-    11679698,
-    11711486,
-    11495027,
-    11642943,
-    11576492,
-    11418859,
-    11415742,
-    11533979,
-    11690264,
-    11580570,
-    11519843,
-    11734926,
+    11716484,
+    11653127,
+    11650048,
+    11650140,
+    11644735,
+    11626816,
+    11622477,
+    11622507,
+    11620205,
     11607948,
-    11622466
+    11639714,
+    11625407,
+    11620068,
+    11737970
    ],
    "above_threshold": true
   },
@@ -19175,14 +19256,39 @@
   },
   {
    "generation": "G30",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 11,
+   "by_year": {
+    "2017": 1,
+    "2018": 2,
+    "2019": 4,
+    "2021": 1,
+    "2022": 3
+   },
+   "sample_odi": [
+    11679698,
+    11711486,
+    11495027,
+    11642943,
+    11576492,
+    11418859,
+    11415742,
+    11533979,
+    11690264,
+    11580570,
+    11519843
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "G30",
    "component": "VEHICLE SPEED CONTROL",
-   "count": 12,
+   "count": 10,
    "by_year": {
     "2018": 1,
     "2019": 6,
     "2021": 1,
-    "2023": 2,
-    "2024": 2
+    "2023": 2
    },
    "sample_odi": [
     11297810,
@@ -19194,61 +19300,9 @@
     11308567,
     11465809,
     11668648,
-    11616727,
-    11734926,
-    11650048
+    11616727
    ],
    "above_threshold": true
-  },
-  {
-   "generation": "G30",
-   "component": "BACK OVER PREVENTION",
-   "count": 10,
-   "by_year": {
-    "2017": 1,
-    "2021": 2,
-    "2022": 3,
-    "2023": 2,
-    "2024": 2
-   },
-   "sample_odi": [
-    11679698,
-    11595658,
-    11515206,
-    11690264,
-    11679855,
-    11630571,
-    11739085,
-    11580316,
-    11625223,
-    11622466
-   ],
-   "above_threshold": true
-  },
-  {
-   "generation": "G30",
-   "component": "STEERING",
-   "count": 9,
-   "by_year": {
-    "2017": 3,
-    "2018": 2,
-    "2019": 1,
-    "2020": 1,
-    "2021": 1,
-    "2024": 1
-   },
-   "sample_odi": [
-    11057277,
-    11047830,
-    11508276,
-    11155176,
-    11711486,
-    11576492,
-    11717953,
-    11488196,
-    11650048
-   ],
-   "above_threshold": false
   },
   {
    "generation": "F10",
@@ -19294,39 +19348,46 @@
   },
   {
    "generation": "G30",
-   "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "component": "BACK OVER PREVENTION",
    "count": 8,
    "by_year": {
-    "2024": 8
+    "2017": 1,
+    "2021": 2,
+    "2022": 3,
+    "2023": 2
    },
    "sample_odi": [
-    11653127,
-    11644735,
-    11626816,
-    11622477,
-    11622507,
-    11620205,
-    11639714,
-    11620068
+    11679698,
+    11595658,
+    11515206,
+    11690264,
+    11679855,
+    11630571,
+    11739085,
+    11580316
    ],
    "above_threshold": false
   },
   {
    "generation": "G30",
-   "component": "HYDRAULIC",
+   "component": "STEERING",
    "count": 8,
    "by_year": {
-    "2024": 8
+    "2017": 3,
+    "2018": 2,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1
    },
    "sample_odi": [
-    11653127,
-    11644735,
-    11626816,
-    11622477,
-    11622507,
-    11620205,
-    11639714,
-    11620068
+    11057277,
+    11047830,
+    11508276,
+    11155176,
+    11711486,
+    11576492,
+    11717953,
+    11488196
    ],
    "above_threshold": false
   },
@@ -19348,6 +19409,44 @@
     11089242,
     11616727,
     11585838
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "count": 8,
+   "by_year": {
+    "2024": 8
+   },
+   "sample_odi": [
+    11653127,
+    11644735,
+    11626816,
+    11622477,
+    11622507,
+    11620205,
+    11639714,
+    11620068
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "HYDRAULIC",
+   "count": 8,
+   "by_year": {
+    "2024": 8
+   },
+   "sample_odi": [
+    11653127,
+    11644735,
+    11626816,
+    11622477,
+    11622507,
+    11620205,
+    11639714,
+    11620068
    ],
    "above_threshold": false
   },
@@ -19549,6 +19648,23 @@
    "above_threshold": false
   },
   {
+   "generation": "US2024+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 4,
+   "by_year": {
+    "2024": 2,
+    "2025": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11698655,
+    11625223,
+    11737970,
+    11746960
+   ],
+   "above_threshold": false
+  },
+  {
    "generation": "F10",
    "component": "FORWARD COLLISION AVOIDANCE",
    "count": 3,
@@ -19640,6 +19756,34 @@
    "above_threshold": false
   },
   {
+   "generation": "US2024+",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 3,
+   "by_year": {
+    "2024": 3
+   },
+   "sample_odi": [
+    11734926,
+    11607948,
+    11622466
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 3,
+   "by_year": {
+    "2024": 3
+   },
+   "sample_odi": [
+    11716484,
+    11715870,
+    11607948
+   ],
+   "above_threshold": false
+  },
+  {
    "generation": "F10",
    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
    "count": 2,
@@ -19694,16 +19838,56 @@
    "above_threshold": false
   },
   {
-   "generation": "US2025+",
-   "component": "ELECTRICAL SYSTEM",
+   "generation": "US2024+",
+   "component": "BACK OVER PREVENTION",
    "count": 2,
    "by_year": {
-    "2025": 1,
+    "2024": 2
+   },
+   "sample_odi": [
+    11625223,
+    11622466
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
     "2026": 1
    },
    "sample_odi": [
-    11737970,
+    11716484,
     11746960
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "STEERING",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11650048,
+    11737970
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 2,
+   "by_year": {
+    "2024": 2
+   },
+   "sample_odi": [
+    11734926,
+    11650048
    ],
    "above_threshold": false
   },
@@ -19756,7 +19940,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2025+",
+   "generation": "US2024+",
    "component": "ENGINE",
    "count": 1,
    "by_year": {
@@ -19768,43 +19952,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2025+",
-   "component": "FUEL/PROPULSION SYSTEM",
-   "count": 1,
-   "by_year": {
-    "2026": 1
-   },
-   "sample_odi": [
-    11746960
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2025+",
-   "component": "SERVICE BRAKES",
-   "count": 1,
-   "by_year": {
-    "2025": 1
-   },
-   "sample_odi": [
-    11737970
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2025+",
-   "component": "STEERING",
-   "count": 1,
-   "by_year": {
-    "2025": 1
-   },
-   "sample_odi": [
-    11737970
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2025+",
+   "generation": "US2024+",
    "component": "WHEELS",
    "count": 1,
    "by_year": {
@@ -20489,16 +20637,12 @@
   "G30|brake-failure": {
    "key": "G30|brake-failure",
    "label": "brake failure / ABS",
-   "count": 4,
+   "count": 1,
    "by_year": {
-    "2021": 1,
-    "2024": 3
+    "2021": 1
    },
    "sample_odi": [
-    11533979,
-    11650048,
-    11620205,
-    11625407
+    11533979
    ],
    "above_threshold": false,
    "engine_specific": false,
@@ -20573,6 +20717,22 @@
    "above_threshold": false,
    "engine_specific": false,
    "source": "nhtsa-complaints-5-series-sedan-2023"
+  },
+  "US2024+|brake-failure": {
+   "key": "US2024+|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 3,
+   "by_year": {
+    "2024": 3
+   },
+   "sample_odi": [
+    11650048,
+    11620205,
+    11625407
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-530i-2024"
   }
  },
  "issues": [
@@ -20959,8 +21119,8 @@
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-23V700000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-23V700000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -20986,8 +21146,8 @@
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-24V104000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-24V104000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -21014,16 +21174,13 @@
      "24V104000"
     ],
     "tsbs": [],
-    "complaint_patterns": [
-     "G30|loss-of-power",
-     "G30|brake-assist"
-    ]
+    "complaint_patterns": []
    },
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-24V697000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-24V697000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -21050,16 +21207,13 @@
      "24V697000"
     ],
     "tsbs": [],
-    "complaint_patterns": [
-     "G30|loss-of-power",
-     "G30|brake-assist"
-    ]
+    "complaint_patterns": []
    },
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-24V739000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-24V739000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -21086,16 +21240,13 @@
      "24V739000"
     ],
     "tsbs": [],
-    "complaint_patterns": [
-     "G30|loss-of-power",
-     "G30|brake-assist"
-    ]
+    "complaint_patterns": []
    },
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-26V056000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-26V056000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -21121,8 +21272,8 @@
    "rule": "recall"
   },
   {
-   "id": "5-series-G30-recall-26V422000",
-   "generation": "G30",
+   "id": "5-series-US2024+-recall-26V422000",
+   "generation": "US2024+",
    "years": [
     2024,
     2024
@@ -21147,9 +21298,7 @@
      "26V422000"
     ],
     "tsbs": [],
-    "complaint_patterns": [
-     "G30|brake-assist"
-    ]
+    "complaint_patterns": []
    },
    "rule": "recall"
   },
@@ -21925,7 +22074,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "FUEL SYSTEM",
@@ -21951,8 +22100,7 @@
      "10153696",
      "10160241",
      "10160284",
-     "10247567",
-     "11005214"
+     "10247567"
     ],
     "complaint_patterns": [
      "G30|fuel-pump-stall"
@@ -22038,7 +22186,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "ELECTRICAL",
@@ -22093,8 +22241,7 @@
      "10248088",
      "10249032",
      "11000533",
-     "11002657",
-     "11018546"
+     "11002657"
     ],
     "complaint_patterns": [
      "G30|infotainment"
@@ -22107,7 +22254,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2021
    ],
    "scope_level": "GENERATION",
    "component": "ENGINE",
@@ -22122,7 +22269,7 @@
    "severity": "MEDIUM",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
-    1
+    0
    ],
    "evidence": {
     "recalls": [],
@@ -22131,8 +22278,7 @@
      "10163991",
      "10172479",
      "10174005",
-     "10188938",
-     "11037505"
+     "10188938"
     ],
     "complaint_patterns": [
      "G30|misfire"
@@ -22187,7 +22333,7 @@
    "generation": "G30",
    "years": [
     2023,
-    2024
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "BODY",
@@ -22195,10 +22341,10 @@
    "symptoms": [
     "paint peeling"
    ],
-   "cause": "The clear coat on the carbon fiber M Performance rear spoiler is delaminating. | The clear coat on the carbon fiber MPerformance rear spoiler is delaminating.",
+   "cause": "The clear coat on the carbon fiber MPerformance rear spoiler is delaminating.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 11013047, 11014657 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 11013047, 11014657",
+   "inspection": "Ask a dealer whether manufacturer communications 11014657 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11014657",
    "severity": "LOW",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -22207,7 +22353,6 @@
    "evidence": {
     "recalls": [],
     "tsbs": [
-     "11013047",
      "11014657"
     ],
     "complaint_patterns": []
@@ -22252,7 +22397,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "STEERING",
@@ -22288,7 +22433,6 @@
      "10230732",
      "10242691",
      "10249017",
-     "11023248",
      "11034465"
     ],
     "complaint_patterns": [
@@ -22302,7 +22446,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2017
    ],
    "scope_level": "GENERATION",
    "component": "SUSPENSION",
@@ -22310,22 +22454,19 @@
    "symptoms": [
     "suspension wear (struts, arms, springs)"
    ],
-   "cause": "Front Suspension Ride Height Has Dropped: The front suspension ride height has dropped on one or both sides due to overload. This is caused by driving over obstacles (e.g. potholes) or an impact severe enough for the front spring strut damper to slip through the clamp of the steering knuckle. | Spring Strut Return | DELIVERY STOP: SUSPENSION STRUT HOLDER",
+   "cause": "Front Suspension Ride Height Has Dropped: The front suspension ride height has dropped on one or both sides due to overload. This is caused by driving over obstacles (e.g. potholes) or an impact severe enough for the front spring strut damper to slip through the clamp of the steering knuckle.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 10166229, 11010939, 11012325, 11013116 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 10166229, 11010939, 11012325, 11013116",
+   "inspection": "Ask a dealer whether manufacturer communications 10166229 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10166229",
    "severity": "MEDIUM",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
-    2
+    1
    ],
    "evidence": {
     "recalls": [],
     "tsbs": [
-     "10166229",
-     "11010939",
-     "11012325",
-     "11013116"
+     "10166229"
     ],
     "complaint_patterns": [
      "G30|suspension"
@@ -22371,7 +22512,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "TRANSMISSION",
@@ -22381,8 +22522,8 @@
    ],
    "cause": "JERKING OR SHUDDERING FROM THE DRIVELINE (XDRIVE TRANSFER CASE ATX13-X): There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads There are no warning lights or Check Control messages. CAUSE Unevenly worn or incorrect fitment tires are installed on the vehicle or the factory-filled transfer case oil does not meet BMW specifications. | There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads There are no warning lights or Check Control messages.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 10176367, 11000500, 11002858, 11006766, 11016472 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 10176367, 11000500, 11002858, 11006766, 11016472",
+   "inspection": "Ask a dealer whether manufacturer communications 10176367, 11000500, 11006766, 11016472 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10176367, 11000500, 11006766, 11016472",
    "severity": "MEDIUM",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -22393,7 +22534,6 @@
     "tsbs": [
      "10176367",
      "11000500",
-     "11002858",
      "11006766",
      "11016472"
     ],
@@ -22406,7 +22546,7 @@
    "generation": "G30",
    "years": [
     2017,
-    2024
+    2020
    ],
    "scope_level": "GENERATION",
    "component": "ENGINE",
@@ -22432,8 +22572,7 @@
      "10198893",
      "10198900",
      "10199286",
-     "10199293",
-     "11010933"
+     "10199293"
     ],
     "complaint_patterns": [
      "G30|turbo"
@@ -22478,8 +22617,8 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-battery-drain",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-battery-drain",
+   "generation": "US2024+",
    "years": [
     2025,
     2025
@@ -22509,8 +22648,8 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-brake-failure",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-brake-failure",
+   "generation": "US2024+",
    "years": [
     2025,
     2025
@@ -22536,13 +22675,46 @@
      "11016432",
      "11022100"
     ],
+    "complaint_patterns": [
+     "US2024+|brake-failure"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "5-series-US2024+-tsb-fuel-pump-stall",
+   "generation": "US2024+",
+   "years": [
+    2024,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM",
+   "title": "Manufacturer communication: fuel pump / stalling",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "DELIVERY STOP: FUEL PUMP DELIVERY PRESSURE",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11005214 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11005214",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11005214"
+    ],
     "complaint_patterns": []
    },
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-hybrid-system",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-hybrid-system",
+   "generation": "US2024+",
    "years": [
     2025,
     2025
@@ -22572,10 +22744,10 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-infotainment",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-infotainment",
+   "generation": "US2024+",
    "years": [
-    2025,
+    2024,
     2026
    ],
    "scope_level": "GENERATION",
@@ -22584,10 +22756,10 @@
    "symptoms": [
     "infotainment / display"
    ],
-   "cause": "Central Information Display (CID) in the vehicle is black or only displays BMW. The head unit (HU-H5) is not responding in ISTA. Additionally, the Receiver Audio Module (RAM), Instrument Cluster (KOMBI) and Telematic Module 4 (TCB4) may not be responding in ISTA. | After the software update to I-level version 25-07-530, the Alexa app may disappear from the App Menu in the head unit (HU-H5). | RSU availability. The vehicle may experience various operation faults with the infotainment system such as: Resets of the head unit Delayed start-up of the head unit (longer than 30 seconds) Failed start-up of the head unit Sporadic or permanent problems with navigation Sporadic or permanent Bluetooth connection problems Sporadic or permanent audio problems Sporadic or permanent speech / IPA (international phonetic alphabet) problems Missing displays, radio stations, camera images or applications",
+   "cause": "Quality improvements and robustness measures are to be implemented on the affected vehicles via thissoftware update. The software update improves functions in the following areas of the vehicle: Bluetooth malfunctions The start-up phase of the head unit (HU) has been shortened (faster start of the operating system) The number of disconnections from Apple CarPlay have been reduced Vehicle access and the drive-ready state have been improved The AC charging abort error has been fixed Remote Control Parking without function | Customer may complain that Projected Modes (Apple CarPlay/Android Auto) do not connect in the vehicle. Itis found that the WiFi in the vehicle is also not active and cannot be turned on. | Central Information Display (CID) in the vehicle is black or only displays BMW. The head unit (HU-H5) is not responding in ISTA. Additionally, the Receiver Audio Module (RAM), Instrument Cluster (KOMBI) and Telematic Module 4 (TCB4) may not be responding in ISTA.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 11022856, 11024727, 11025841, 11026963, 11026964 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 11022856, 11024727, 11025841, 11026963, 11026964",
+   "inspection": "Ask a dealer whether manufacturer communications 11002657, 11018546, 11022856, 11024727, 11025841 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11002657, 11018546, 11022856, 11024727, 11025841",
    "severity": "LOW",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -22596,6 +22768,8 @@
    "evidence": {
     "recalls": [],
     "tsbs": [
+     "11002657",
+     "11018546",
      "11022856",
      "11024727",
      "11025841",
@@ -22609,10 +22783,41 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-paint",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-misfire",
+   "generation": "US2024+",
    "years": [
-    2025,
+    2024,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "ENGINE",
+   "title": "Manufacturer communication: misfire / rough running",
+   "symptoms": [
+    "misfire / rough running"
+   ],
+   "cause": "Potential customer complaints with no fault codes stored / No MIL displayed. 1. Rough idle after idling for a longer period of time 2. Vehicle feels like it is misfiring at idle The automatic Start/Stop function is deactivated. The vehicle is stopped and the engine runs at idle speed. After prolonged idle operation (approximately 30 to 50 seconds), a slight jolt or slight change in idlespeed may be noticeable. There are no relevant errors in the DME fault code memory. No mixture control error, no misfiring, no error relating to a relevant component of the drive system. Motor vehicles affected: 1. Only MHEVs (mild hybrid electric vehicle) with crankshaft-driven starter generator. 2. Only vehicles with optional equipment 01CE = recuperation system 3. Affected I-levels: I-level 24-07-500 or higher",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11037505 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11037505",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11037505"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "5-series-US2024+-tsb-paint",
+   "generation": "US2024+",
+   "years": [
+    2024,
     2025
    ],
    "scope_level": "GENERATION",
@@ -22621,10 +22826,10 @@
    "symptoms": [
     "paint peeling"
    ],
-   "cause": "The clear coat on the carbon fiber MPerformance rear spoiler is delaminating.",
+   "cause": "The clear coat on the carbon fiber M Performance rear spoiler is delaminating. | The clear coat on the carbon fiber MPerformance rear spoiler is delaminating.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 11014657 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 11014657",
+   "inspection": "Ask a dealer whether manufacturer communications 11013047, 11014657 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11013047, 11014657",
    "severity": "LOW",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -22633,6 +22838,7 @@
    "evidence": {
     "recalls": [],
     "tsbs": [
+     "11013047",
      "11014657"
     ],
     "complaint_patterns": []
@@ -22640,8 +22846,8 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-parking-brake",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-parking-brake",
+   "generation": "US2024+",
    "years": [
     2025,
     2025
@@ -22672,10 +22878,10 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-steering-noise",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-steering-noise",
+   "generation": "US2024+",
    "years": [
-    2025,
+    2024,
     2025
    ],
    "scope_level": "GENERATION",
@@ -22703,10 +22909,43 @@
    "rule": "TSB"
   },
   {
-   "id": "5-series-US2025+-tsb-torque-converter",
-   "generation": "US2025+",
+   "id": "5-series-US2024+-tsb-suspension",
+   "generation": "US2024+",
    "years": [
-    2025,
+    2024,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Spring Strut Return | DELIVERY STOP: SUSPENSION STRUT HOLDER",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11010939, 11012325, 11013116 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11010939, 11012325, 11013116",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11010939",
+     "11012325",
+     "11013116"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "5-series-US2024+-tsb-torque-converter",
+   "generation": "US2024+",
+   "years": [
+    2024,
     2025
    ],
    "scope_level": "GENERATION",
@@ -22717,8 +22956,8 @@
    ],
    "cause": "There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads There are no warning lights or Check Control messages. | There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 11016472, 11019579 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 11016472, 11019579",
+   "inspection": "Ask a dealer whether manufacturer communications 11002858, 11016472, 11019579 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11002858, 11016472, 11019579",
    "severity": "MEDIUM",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -22727,8 +22966,40 @@
    "evidence": {
     "recalls": [],
     "tsbs": [
+     "11002858",
      "11016472",
      "11019579"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "5-series-US2024+-tsb-turbo",
+   "generation": "US2024+",
+   "years": [
+    2024,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "ENGINE",
+   "title": "Manufacturer communication: turbocharger failure",
+   "symptoms": [
+    "turbocharger failure"
+   ],
+   "cause": "Wastegate Valve Actuator Return",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11010933 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11010933",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11010933"
     ],
     "complaint_patterns": []
    },
@@ -25021,20 +25292,6 @@
    ]
   },
   {
-   "id": "11005214",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "DELIVERY STOP: FUEL PUMP DELIVERY PRESSURE",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
-   "gen_years": [
-    2024
-   ]
-  },
-  {
    "id": "10174005",
    "make": "BMW",
    "model": "540I",
@@ -25614,21 +25871,6 @@
    "component": "",
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
    "gen_years": [
-    2023,
-    2024
-   ]
-  },
-  {
-   "id": "11018546",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "Customer may complain that Projected Modes (Apple CarPlay/Android Auto) do not connect in the vehicle. Itis found that the WiFi in the vehicle is also not active and cannot be turned on.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
     2024
    ]
   },
@@ -25647,34 +25889,6 @@
    ]
   },
   {
-   "id": "11037505",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "Potential customer complaints with no fault codes stored / No MIL displayed. 1. Rough idle after idling for a longer period of time 2. Vehicle feels like it is misfiring at idle The automatic Start/Stop function is deactivated. The vehicle is stopped and the engine runs at idle speed. After prolonged idle operation (approximately 30 to 50 seconds), a slight jolt or slight change in idlespeed may be noticeable. There are no relevant errors in the DME fault code memory. No mixture control error, no misfiring, no error relating to a relevant component of the drive system. Motor vehicles affected: 1. Only MHEVs (mild hybrid electric vehicle) with crankshaft-driven starter generator. 2. Only vehicles with optional equipment 01CE = recuperation system 3. Affected I-levels: I-level 24-07-500 or higher",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2024
-   ]
-  },
-  {
-   "id": "11013047",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "The clear coat on the carbon fiber M Performance rear spoiler is delaminating.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2024
-   ]
-  },
-  {
    "id": "11014657",
    "make": "BMW",
    "model": "530I",
@@ -25687,6 +25901,7 @@
    "component": "",
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
    "gen_years": [
+    2024,
     2025
    ]
   },
@@ -26041,21 +26256,6 @@
    ]
   },
   {
-   "id": "11023248",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024,
-    2025
-   ],
-   "summary": "When the steering column is adjusted inwards towards the instrument cluster, the noise may occur near thelimit position.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2025
-   ]
-  },
-  {
    "id": "11034465",
    "make": "BMW",
    "model": "530I",
@@ -26081,48 +26281,6 @@
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
    "gen_years": [
     2017
-   ]
-  },
-  {
-   "id": "11010939",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "Spring Strut Return",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
-   "gen_years": [
-    2024
-   ]
-  },
-  {
-   "id": "11012325",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "Spring Strut Return",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2024
-   ]
-  },
-  {
-   "id": "11013116",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "DELIVERY STOP: SUSPENSION STRUT HOLDER",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2024
    ]
   },
   {
@@ -26157,20 +26315,6 @@
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
    "gen_years": [
     2023
-   ]
-  },
-  {
-   "id": "11002858",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads There are no warning lights or Check Control messages.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
-   "gen_years": [
-    2024
    ]
   },
   {
@@ -26242,20 +26386,6 @@
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
    "gen_years": [
     2018
-   ]
-  },
-  {
-   "id": "11010933",
-   "make": "BMW",
-   "model": "530I",
-   "years": [
-    2024
-   ],
-   "summary": "Wastegate Valve Actuator Return",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
-   "gen_years": [
-    2024
    ]
   },
   {
@@ -26357,6 +26487,20 @@
    ]
   },
   {
+   "id": "11005214",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "DELIVERY STOP: FUEL PUMP DELIVERY PRESSURE",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
    "id": "11030054",
    "make": "BMW",
    "model": "550E XDRIVE",
@@ -26368,6 +26512,20 @@
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
    "gen_years": [
     2025
+   ]
+  },
+  {
+   "id": "11018546",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "Customer may complain that Projected Modes (Apple CarPlay/Android Auto) do not connect in the vehicle. Itis found that the WiFi in the vehicle is also not active and cannot be turned on.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
    ]
   },
   {
@@ -26469,6 +26627,106 @@
    ]
   },
   {
+   "id": "11037505",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "Potential customer complaints with no fault codes stored / No MIL displayed. 1. Rough idle after idling for a longer period of time 2. Vehicle feels like it is misfiring at idle The automatic Start/Stop function is deactivated. The vehicle is stopped and the engine runs at idle speed. After prolonged idle operation (approximately 30 to 50 seconds), a slight jolt or slight change in idlespeed may be noticeable. There are no relevant errors in the DME fault code memory. No mixture control error, no misfiring, no error relating to a relevant component of the drive system. Motor vehicles affected: 1. Only MHEVs (mild hybrid electric vehicle) with crankshaft-driven starter generator. 2. Only vehicles with optional equipment 01CE = recuperation system 3. Affected I-levels: I-level 24-07-500 or higher",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11013047",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "The clear coat on the carbon fiber M Performance rear spoiler is delaminating.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11023248",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024,
+    2025
+   ],
+   "summary": "When the steering column is adjusted inwards towards the instrument cluster, the noise may occur near thelimit position.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11010939",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "Spring Strut Return",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11012325",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "Spring Strut Return",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11013116",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "DELIVERY STOP: SUSPENSION STRUT HOLDER",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11002858",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "There is a jerking or shuddering during either or both of the following: Cornering or accelerating from low speeds Driving with low to medium loads There are no warning lights or Check Control messages.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
    "id": "11019579",
    "make": "BMW",
    "model": "530I",
@@ -26480,6 +26738,20 @@
    "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
    "gen_years": [
     2025
+   ]
+  },
+  {
+   "id": "11010933",
+   "make": "BMW",
+   "model": "530I",
+   "years": [
+    2024
+   ],
+   "summary": "Wastegate Valve Actuator Return",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
    ]
   }
  ],
@@ -26924,27 +27196,27 @@
  "notes": [
   "MY2015: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
   "MY2022: mycarusermanual.com generation page starts here, but vPIC shows no dimension change; not used",
-  "MY2024: mycarusermanual.com generation page starts here, but vPIC shows no dimension change; not used",
   "MY2024: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
-  "MY2026: several wheelbases in vPIC Canadian rows (mixed body/generation year)"
+  "MY2026: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
+  "MY2025: boundary signal one year after MY2024 (vPIC Canadian specifications: wheelbase 298 cm (MY2024) -> 301 cm (MY2025); vPIC Canadian specifications: overall length 496 -> 510 cm, overall width 187 -> 197 cm (MY2024 -> MY2025; a change of 6 cm or more); mycarusermanual.com generation page starts at 2024 (5-series/4-door/2024-2025), corroborated by vPIC overall length 496 -> 510 cm, overall width 187 -> 197 cm, overall height 147 -> 152 cm, front track 161 -> 168 cm (MY2024 -> MY2025)); merged into the MY2024 generation"
  ],
  "errors": [],
  "counts": {
   "generations": 3,
   "configurations": 87,
-  "facts": 328,
+  "facts": 332,
   "recalls": 19,
-  "symptom_patterns": 40,
-  "issues": 62,
+  "symptom_patterns": 41,
+  "issues": 66,
   "issues_by_probability": {
    "RARE": 17,
    "COMMON": 3,
-   "OCCASIONAL": 42
+   "OCCASIONAL": 46
   },
   "tsbs": 218,
   "errors": 0,
   "display_levels": {
-   "SECONDARY_NOTE": 328
+   "SECONDARY_NOTE": 332
   }
  }
 }

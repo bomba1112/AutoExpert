@@ -1,20 +1,25 @@
 {
  "generations": [
   {
-   "code": "F10",
-   "action": "filled",
-   "end_year": 2016
-  },
-  {
    "code": "G30",
-   "action": "filled",
-   "start_year": 2017,
-   "end_year": 2024
+   "action": "corrected end_year 2024 -> 2023 (written by an earlier load of this pipeline)"
   },
   {
    "code": "US2025+",
+   "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
+  },
+  {
+   "code": "F10",
+   "action": "unchanged"
+  },
+  {
+   "code": "G30",
+   "action": "unchanged"
+  },
+  {
+   "code": "US2024+",
    "action": "created",
-   "start_year": 2025,
+   "start_year": 2024,
    "end_year": null
   }
  ],
@@ -103,17 +108,18 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T09:55:09+00:00",
+ "started_at": "2026-10-02T10:18:39+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
+  "replaced_own_te": 1634,
+  "replaced_own_issues": 62,
   "raw_documents_seen": 107,
-  "source_records_new": 90,
-  "te_new_GENERATION": 629,
+  "te_new_GENERATION": 634,
   "te_new_CONFIGURATION": 1005,
   "configurations": 87,
   "configurations_linked": 19,
   "configurations_research_only": 68,
-  "issues_new": 62
+  "issues_new": 66
  },
- "finished_at": "2026-10-02T09:55:19+00:00"
+ "finished_at": "2026-10-02T10:18:54+00:00"
 }

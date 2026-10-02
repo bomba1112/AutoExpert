@@ -136,7 +136,7 @@ DRIVE = {
     "Part-time 4-Wheel Drive": "4WD",
     "2-Wheel Drive": "2WD",
 }
-POWERTRAIN = {"": "ICE", "Hybrid": "HEV", "Plug-in Hybrid": "PHEV", "EV": "BEV", "FFV": "ICE", "Diesel": "DIESEL", "CNG": "ICE", "Bifuel (CNG)": "ICE", "FCV": "FCEV"}
+POWERTRAIN = {"": "ICE", "Hybrid": "HEV", "Plug-in Hybrid": "PHEV", "EV": "BEV", "FFV": "ICE", "Diesel": "DIESEL", "CNG": "ICE", "Bifuel (CNG)": "ICE", "FCV": "FCEV", "eFCV": "FCEV"}
 BODY_RE = re.compile(r"\b(\d)\s?DR\b\s*(SEDAN|HATCH\w*|SUV|COUPE|WAGON|CONVERTIBLE|CABRIOLET|ROADSTER|VAN|LIFTBACK|CROSSOVER)?", re.I)
 
 
@@ -291,6 +291,27 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
     def db_codes(year):
         return {g["code"] for g in dbgens if year in g["years"]}
 
+    def new_family_wheelbase(prev, year):
+        """A body family that starts this year with a wheelbase no row had the year before
+        (old rows can stay listed in the Canadian data for years after a redesign)."""
+        before = {r["wheelbase_cm"] for r in ca if r["year"] == prev and r.get("wheelbase_cm")}
+        for f in starting(year, prev):
+            if len(fam_years[f]) < 2 and max(fam_years[f]) != last_year:
+                continue
+            wbs = {r["wheelbase_cm"] for r in ca if r["year"] == year and family(r["model"]) == f and r.get("wheelbase_cm")}
+            if wbs and before and not (wbs & before):
+                return f"{f} wheelbase {'/'.join(sorted(wbs))} cm"
+        return None
+
+    def epa_rename(prev, year):
+        """An EPA base model that starts in `year` while another one of the line ends by `year`."""
+        names = defaultdict(set)
+        for r in epa:
+            names[r["baseModel"]].add(int(r["year"]))
+        started = [n for n, ys in names.items() if min(ys) == year]
+        ended = [n for n, ys in names.items() if min(ys) < year and max(ys) in (prev, year)]
+        return f"{'/'.join(ended)} -> {'/'.join(started)}" if started and ended else None
+
     mcum_starts = mcum_generation_starts(line)
     boundaries = {}
     for prev, year in zip(years, years[1:]):
@@ -304,10 +325,6 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
                 + (f"-{year - 1}" if year - prev > 2 else "")
                 + f" and vPIC has no Canadian rows for those years (the line returns in MY{year})"
             )
-        elif gap_years:
-            st.notes.append(
-                f"MY{min(gap_years)}-{max(gap_years)}: no EPA rows, but vPIC lists the line; not a generation boundary"
-            )
         changed_wb = compare(prev, year, "wheelbase_cm", fam)
         ca_, cb = db_codes(prev), db_codes(year)
         if ca_ and cb and not (ca_ & cb):
@@ -319,6 +336,20 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
             pair = compare(prev, year, field, fam)
             if pair and pair[2] is not None:
                 changes.append((label, pair[0], pair[1], pair[2]))
+        if gap_years and any(r["year"] in gap_years for r in ca):
+            if changes or changed_wb:
+                reasons.append(
+                    f"EPA vehicles.csv has no rows for MY{min(gap_years)}"
+                    + (f"-{max(gap_years)}" if len(gap_years) > 1 else "")
+                    + " and the vPIC dimensions change across that gap ("
+                    + ", ".join(f"{c[0]} {c[1]} -> {c[2]} cm" for c in changes)
+                    + (f"{', ' if changes else ''}wheelbase {changed_wb[0]} -> {changed_wb[1]} cm" if changed_wb else "")
+                    + ")"
+                )
+            else:
+                st.notes.append(
+                    f"MY{min(gap_years)}-{max(gap_years)}: no EPA rows, no dimension change in vPIC; not a generation boundary"
+                )
         if changed_wb and changed_wb[2] is not None:
             a, b, step = changed_wb
             # 1 cm is within the re-measurement noise of the Canadian data unless another body
@@ -339,13 +370,21 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
                 + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in big)
                 + f" (MY{prev} -> MY{year}; a change of {DIMENSION_STEP_CM} cm or more)"
             )
+        appeared = new_family_wheelbase(prev, year)
+        renamed = epa_rename(prev, year)
+        if appeared and renamed and not reasons:
+            reasons.append(
+                f"EPA model name changes ({renamed}) and vPIC lists a new body family "
+                f"({appeared}) from MY{year}"
+            )
         # The site often labels a generation by its European model year, one year before the
         # US one; the vPIC change must still fall exactly on this US model year.
         mcum_year = year if year in mcum_starts else (year - 1 if year - 1 in mcum_starts else None)
-        if mcum_year is not None and changes:
+        solid = [c for c in changes if c[3] >= 2]
+        if mcum_year is not None and (solid or appeared):
             reasons.append(
                 f"mycarusermanual.com generation page starts at {mcum_year} ({mcum_starts[mcum_year]}), corroborated by vPIC "
-                + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in changes)
+                + (", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in solid) if solid else f"new body family {appeared}")
                 + f" (MY{prev} -> MY{year})"
             )
         elif year in mcum_starts:
@@ -361,6 +400,14 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
             st.notes.append(f"MY{year}: no vPIC body family spans MY{prev} and MY{year}; compared across all rows")
         if not changed_wb and len({r["wheelbase_cm"] for r in ca if r["year"] == year}) > 1:
             st.notes.append(f"MY{year}: several wheelbases in vPIC Canadian rows (mixed body/generation year)")
+    # Two boundaries one model year apart: the second is the Canadian data dropping the old
+    # rows a year after the new body was listed (BMW 5 Series 2024/2025); keep the first.
+    for year in sorted(boundaries):
+        if year - 1 in boundaries:
+            st.notes.append(
+                f"MY{year}: boundary signal one year after MY{year - 1} ({'; '.join(boundaries[year])}); merged into the MY{year - 1} generation"
+            )
+            del boundaries[year]
     blocks, start = [], years[0]
     for year in years[1:] + [None]:
         if year is None or year in boundaries:
