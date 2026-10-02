@@ -1,0 +1,147 @@
+{
+ "make": "nissan",
+ "mode": "live",
+ "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "started_at": "2026-10-02T16:37:24+00:00",
+ "replace_own": [
+  "rogue",
+  "sentra"
+ ],
+ "lines": {
+  "nissan/altima": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 86,
+    "source_records_new": 42,
+    "te_existing": 712,
+    "te_new_GENERATION": 529,
+    "te_new_ENGINE": 13,
+    "configurations": 35,
+    "configurations_research_only": 26,
+    "configurations_linked": 9,
+    "issues_existing": 50,
+    "issues_updated": 6
+   },
+   "generations": [
+    {
+     "code": "L33",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2019+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "nissan/sentra": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 592,
+    "replaced_own_issues": 44,
+    "raw_documents_seen": 92,
+    "source_records_new": 40,
+    "te_new_GENERATION": 591,
+    "te_new_ENGINE": 33,
+    "te_new_CONFIGURATION": 343,
+    "configurations": 25,
+    "configurations_research_only": 25,
+    "issues_new": 44
+   },
+   "generations": [
+    {
+     "code": "US2020+",
+     "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
+    },
+    {
+     "code": "B17",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2020-2025",
+     "action": "created",
+     "start_year": 2020,
+     "end_year": 2025
+    },
+    {
+     "code": "US2026+",
+     "action": "created",
+     "start_year": 2026,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "nissan/rogue": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 777,
+    "replaced_own_issues": 71,
+    "raw_documents_seen": 107,
+    "source_records_new": 57,
+    "te_new_GENERATION": 511,
+    "te_new_ENGINE": 72,
+    "te_new_CONFIGURATION": 462,
+    "configurations": 34,
+    "configurations_research_only": 34,
+    "issues_new": 68
+   },
+   "generations": [
+    {
+     "code": "T32",
+     "action": "corrected end_year 2018 -> 2020 (written by an earlier load of this pipeline)"
+    },
+    {
+     "code": "T33",
+     "action": "corrected start_year 2019 -> 2021 (written by an earlier load of this pipeline)"
+    },
+    {
+     "code": "T32",
+     "action": "unchanged"
+    },
+    {
+     "code": "T33",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "nissan/pathfinder": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 84,
+    "source_records_new": 41,
+    "te_existing": 643,
+    "te_new_GENERATION": 195,
+    "te_new_ENGINE": 50,
+    "configurations": 28,
+    "configurations_research_only": 28,
+    "issues_existing": 49,
+    "issues_updated": 8
+   },
+   "generations": [
+    {
+     "code": "R52",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2022+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T16:37:50+00:00"
+}

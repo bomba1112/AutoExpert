@@ -20,7 +20,7 @@
   "publisher": "nissan (manufacturer domain www.nissanusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 628,
  "edition_market": "US",
  "edition_markers": {
@@ -47,6 +47,58 @@
    "approx_in_source": false
   },
   {
+   "key": "fuel_tank_l",
+   "value": 60.6,
+   "unit": "L",
+   "page": 586,
+   "quote": "60.6 L 16 gal",
+   "row": "AWD: | 60.6 L | 16 gal | 13 3/8 gal",
+   "label": "fuel_tank_l",
+   "engine_text": null,
+   "original": "60.6 L 16 gal",
+   "drive": "AWD",
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_l",
+   "value": 5.1,
+   "unit": "L",
+   "page": 586,
+   "quote": "5.1 L 5-3/8 qt",
+   "row": "2.5L | change | • If the above motor oil (or engine oil) is not available, a synthetic | 5.1 L | 5-3/8 qt | 4-1/2 qt",
+   "label": "engine_oil_capacity_l",
+   "engine_text": "2.5L",
+   "original": "5.1 L 5-3/8 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.8,
+   "unit": "L",
+   "page": 586,
+   "quote": "4.8 L 5-1/8 qt",
+   "row": "Engine oil*1 | 4.8 L | 5-1/8 qt | 4-1/4 qt",
+   "label": "engine_oil_capacity_drain_refill_l",
+   "engine_text": "2.5L",
+   "original": "4.8 L 5-1/8 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.7,
+   "unit": "L",
+   "page": 586,
+   "quote": "4.7 L 5 qt",
+   "row": "\"Engine oil\" (P. 8-7). | 2.0L | 4.7 L | 5 qt | 4-1/8 qt",
+   "label": "engine_oil_capacity_drain_refill_l",
+   "engine_text": "2.0L",
+   "original": "4.7 L 5 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
    "key": "coolant",
    "value": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
    "unit": null,
@@ -55,6 +107,19 @@
    "row": "Engine coolant | (PR25DD engine model) | • Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
    "label": "coolant",
    "engine_text": null
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 8.2,
+   "unit": "L",
+   "page": 586,
+   "quote": "8.2 L 2-1/8 gal",
+   "row": "4 cylinder | 8.2 L | 2-1/8 gal | 1-3/4 gal",
+   "label": "coolant_capacity_l",
+   "engine_text": "2.5L",
+   "original": "8.2 L 2-1/8 gal",
+   "drive": null,
+   "approx_in_source": false
   },
   {
    "key": "transmission_fluid",
@@ -118,36 +183,6 @@
   }
  ],
  "review": [
-  {
-   "page": 586,
-   "key": "fuel_tank_l",
-   "row": "AWD: 60.6 L 16 gal 13 3/8 gal",
-   "reason": "several volumes on one row"
-  },
-  {
-   "page": 586,
-   "key": "engine_oil_capacity_l",
-   "row": "2.5L change • If the above motor oil (or engine oil) is not available, a synthetic 5.1 L 5-3/8 qt 4-1/2 qt",
-   "reason": "several volumes on one row"
-  },
-  {
-   "page": 586,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil*1 4.8 L 5-1/8 qt 4-1/4 qt",
-   "reason": "several volumes on one row"
-  },
-  {
-   "page": 586,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "\"Engine oil\" (P. 8-7). 2.0L 4.7 L 5 qt 4-1/8 qt",
-   "reason": "several volumes on one row"
-  },
-  {
-   "page": 586,
-   "key": "coolant_capacity_l",
-   "row": "4 cylinder 8.2 L 2-1/8 gal 1-3/4 gal",
-   "reason": "several volumes on one row"
-  },
   {
    "page": 587,
    "key": "transmission_fluid_capacity_l",

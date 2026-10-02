@@ -2,31 +2,124 @@
  "generations": [
   {
    "code": "L33",
-   "action": "filled",
-   "end_year": 2018
+   "action": "unchanged"
   },
   {
    "code": "US2019+",
-   "action": "created",
-   "start_year": 2019,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T10:20:41+00:00",
+ "started_at": "2026-10-02T16:37:25+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "altima-L33-tsb-cvt",
+   "changes": {
+    "evidence_ids": [
+     76,
+     77
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Cvt Failure\" (owner reports): MY2018: #2, average cost to fix $6,500, average mileage 98,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "altima-L33-tsb-hesitation",
+   "changes": {
+    "evidence_ids": [
+     12,
+     15
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Hesitates/Sputters\" (owner reports): MY2015: #1, average cost to fix $3,000, average mileage 50,000 mi | CarComplaints.com \"Hesitation When Accelerating\" (owner reports): MY2016: #2, average cost to fix N/A, average mileage 75,000 mi | CarComplaints.com \"Delayed Acceleration From A Stop\" (owner reports): MY2016: #3, average cost to fix $500, average mileage 44,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "altima-L33-tsb-torque-converter",
+   "changes": {
+    "evidence_ids": [
+     11,
+     12
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Shudders And Jerks\" (owner reports): MY2014: #2, average cost to fix $3,300, average mileage 40,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "altima-US2019+-tsb-cvt",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     9,
+     10
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Cvt Malfunction\" (owner reports): MY2019: #3, average cost to fix N/A, average mileage 36,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "altima-US2019+-tsb-false-braking",
+   "changes": {
+    "evidence_ids": [
+     6,
+     7
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Automatic Emergency Brake Malfunction\" (owner reports): MY2020: #2, average cost to fix N/A, average mileage 28,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "altima-L33-complaints-transmission-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     1,
+     2
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Transmission Failure\" (owner reports): MY2014: #1, average cost to fix $3,800, average mileage 75,000 mi; MY2015: #3, average cost to fix $4,300, average mileage 65,000 mi; MY2016: #1, average cost to fix $4,200, average mileage 65,000 mi; MY2017: #1, average cost to fix $5,200, average mileage 56,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 44,
-  "source_records_new": 39,
-  "te_new_GENERATION": 275,
-  "te_new_CONFIGURATION": 437,
+  "raw_documents_seen": 86,
+  "source_records_new": 42,
+  "te_existing": 712,
+  "te_new_GENERATION": 529,
+  "te_new_ENGINE": 13,
   "configurations": 35,
   "configurations_research_only": 26,
   "configurations_linked": 9,
-  "issues_new": 50
+  "issues_existing": 50,
+  "issues_updated": 6
  },
- "finished_at": "2026-10-02T10:20:47+00:00"
+ "finished_at": "2026-10-02T16:37:30+00:00"
 }

@@ -1,14 +1,23 @@
 {
  "generations": [
   {
-   "code": "B17",
-   "action": "filled",
-   "end_year": 2019
+   "code": "US2020+",
+   "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
   },
   {
-   "code": "US2020+",
+   "code": "B17",
+   "action": "unchanged"
+  },
+  {
+   "code": "US2020-2025",
    "action": "created",
    "start_year": 2020,
+   "end_year": 2025
+  },
+  {
+   "code": "US2026+",
+   "action": "created",
+   "start_year": 2026,
    "end_year": null
   }
  ],
@@ -16,16 +25,19 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T10:20:48+00:00",
+ "started_at": "2026-10-02T16:37:31+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
-  "raw_documents_seen": 52,
-  "source_records_new": 34,
-  "te_new_GENERATION": 249,
+  "replaced_own_te": 592,
+  "replaced_own_issues": 44,
+  "raw_documents_seen": 92,
+  "source_records_new": 40,
+  "te_new_GENERATION": 591,
+  "te_new_ENGINE": 33,
   "te_new_CONFIGURATION": 343,
   "configurations": 25,
   "configurations_research_only": 25,
   "issues_new": 44
  },
- "finished_at": "2026-10-02T10:20:54+00:00"
+ "finished_at": "2026-10-02T16:37:36+00:00"
 }

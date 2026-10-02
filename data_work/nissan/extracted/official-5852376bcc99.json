@@ -20,7 +20,7 @@
   "publisher": "nissan (manufacturer domain www.nissanusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 594,
  "edition_market": "US",
  "edition_markers": {
@@ -47,15 +47,100 @@
    "approx_in_source": false
   },
   {
+   "key": "fuel_tank_l",
+   "value": 54.9,
+   "unit": "L",
+   "page": 549,
+   "quote": "14-1/2 gal",
+   "row": "Fuel | 55L | 12-1/8 gal | 14-1/2 gal | (cid:257)See\"Fuelinformation\"(P.10-5).",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "14-1/2 gal",
+   "approx_in_source": false
+  },
+  {
    "key": "transmission_fluid",
    "value": "NS-3",
    "unit": null,
    "page": 549,
    "quote": "NS-3",
-   "row": "ContinuouslyVariableTransmission(CVT)fluid | — | (cid:257)GenuineNISSANCVTFluidNS-3 (cid:257)NISSANrecommendsusingGenuineNISSANCVTFluidNS-3(orequiva- lent)ONLYinNISSANCVTs.Donotmixwithotherfluids.Usingfluidsthat arenotequivalenttoGenuineNISSANCVTFluidNS-3maydamagethe CVT.Damagecausedbytheuseoffluidsotherthanasrecommendedis notcoveredunderNISSAN'sNewVehicleLimitedWarranty.",
+   "row": "ContinuouslyVariableTransmission(CVT)fluid | — | — | — | (cid:257)GenuineNISSANCVTFluidNS-3 (cid:257)NISSANrecommendsusingGenuineNISSANCVTFluidNS-3(orequiva- lent)ONLYinNISSANCVTs.Donotmixwithotherfluids.Usingfluidsthat arenotequivalenttoGenuineNISSANCVTFluidNS-3maydamagethe CVT.Damagecausedbytheuseoffluidsotherthanasrecommendedis notcoveredunderNISSAN'sNewVehicleLimitedWarranty.",
    "label": "transmission fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_capacity_l",
+   "value": 5.1,
+   "unit": "L",
+   "page": 549,
+   "quote": "5.1 L 5-3/8 qt",
+   "row": "Engine oil*1 | PR25DD | With oil filter change | 5.1 L 5-3/8 qt 4-1/2 qt (cid:257) Genuine \"NISSAN Motor Oil 0W-20 SN\" (or equivalent) is recommended.",
+   "label": "engine_oil_capacity_l",
+   "engine_text": null,
+   "original": "5.1 L 5-3/8 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_without_filter_l",
+   "value": 4.8,
+   "unit": "L",
+   "page": 549,
+   "quote": "4.8 L 5-1/8 qt",
+   "row": "Drain and refill | Without oil filter change | 4.8 L 5-1/8 qt 4-1/4 qt (cid:257) If the above motor oil (or engine oil) is not available, a synthetic 0W-20",
+   "label": "engine_oil_capacity_without_filter_l",
+   "engine_text": null,
+   "original": "4.8 L 5-1/8 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_l",
+   "value": 4.7,
+   "unit": "L",
+   "page": 549,
+   "quote": "4.7 L 5 qt",
+   "row": "KR15DDT | With oil filter change | 4.7 L | 5 qt 4-1/8 qt | of m o t or o il (o r e n g i n e o i l ) ot h e r t h an a s r e c o m m e n d e d is n ot c o ve r e d",
+   "label": "engine_oil_capacity_l",
+   "engine_text": null,
+   "original": "4.7 L 5 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_without_filter_l",
+   "value": 4.6,
+   "unit": "L",
+   "page": 549,
+   "quote": "4.6 L 4-7/8 qt",
+   "row": "Without oil filter change | 4.6 L 4-7/8 qt 4 qt | under NISSAN's New Vehicle Limited Warranty. For additional informa-",
+   "label": "engine_oil_capacity_without_filter_l",
+   "engine_text": null,
+   "original": "4.6 L 4-7/8 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "coolant",
+   "value": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "unit": null,
+   "page": 549,
+   "quote": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "row": "Engine coolant | PR25DD | With reservoir | 8.8 L 9-1/4 qt 7-3/4 qt (cid:257) Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue) or",
+   "label": "coolant",
+   "engine_text": null
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "unit": null,
+   "page": 549,
+   "quote": "DOT 3",
+   "row": "Brake fluid | Refill to the proper oil level | (cid:257) Genuine NISSAN Super Heavy Duty Brake Fluid*2 or equivalent DOT 3",
+   "label": "brake fluid",
+   "engine_text": null
   },
   {
    "key": "octane_aki",
@@ -71,15 +156,10 @@
  "review": [
   {
    "page": 549,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 55L | (cid:257)See\"Fuelinformation\"(P.10-5).",
-   "reason": "no volume"
-  },
-  {
-   "page": 549,
-   "key": "transmission_fluid_capacity_l",
-   "row": "ContinuouslyVariableTransmission(CVT)fluid | — | (cid:257)GenuineNISSANCVTFluidNS-3 (cid:257)NISSANrecommendsusingGenuineNISSANCVTFluidNS-3(orequiva- lent)ONLYinNISSANCVTs.Donotmixwithotherfluids.Usingfluidsthat arenotequivalenttoGenuineNISSANCVTFluidNS-3maydamagethe CVT.Damagecausedbytheuseoffluidsotherthanasrecommendedis notcoveredunderNISSAN'sNewVehicleLimitedWarranty.",
-   "reason": "no volume"
+   "key": "transmission_fluid",
+   "row": "(cid:257) NISSAN recommends using Genuine NISSAN CVT Fluid NS-3 (or equiva-",
+   "reason": "quote not in page text",
+   "quote": "Genuine NISSAN CVT Fluid NS-3 (or equiva-"
   }
  ],
  "engine_codes": [],
