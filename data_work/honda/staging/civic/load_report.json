@@ -2,102 +2,69 @@
  "generations": [
   {
    "code": "IX Sedan",
-   "action": "filled",
-   "end_year": 2015
+   "action": "unchanged"
   },
   {
    "code": "10th",
-   "action": "filled",
-   "start_year": 2016,
-   "end_year": 2021
+   "action": "unchanged"
   },
   {
    "code": "US2022+",
-   "action": "created",
-   "start_year": 2022,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
- "existing_vs_new": [
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-lx-20-mt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-lx-20-cvt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-ex-20-cvt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-ext-15-mt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-ext-15-cvt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-exl-15-cvt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-touring-15-cvt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-honda-us:honda-civic-10th-sedan-us-2016-2018-source07-2017-si-15-mt-FWD-2017",
-   "existing": "width_in=70.8",
-   "new_values": [
-    1880
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  }
- ],
+ "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T10:20:16+00:00",
+ "started_at": "2026-10-02T16:34:56+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "civic-10th-tsb-air-conditioning",
+   "changes": {
+    "evidence_ids": [
+     23,
+     24
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"A/C Compressor Failure\" (owner reports): MY2018: #3, average cost to fix $3,000, average mileage 27,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "civic-IX Sedan-complaints-transmission-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     1,
+     2
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Transmission Failed\" (owner reports): MY2015: #1, average cost to fix $3,600, average mileage 85,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 108,
-  "source_records_new": 90,
-  "te_new_GENERATION": 487,
-  "te_new_CONFIGURATION": 1095,
+  "raw_documents_seen": 173,
+  "source_records_new": 65,
+  "te_existing": 1582,
+  "te_new_GENERATION": 862,
+  "te_new_ENGINE": 12,
   "configurations": 77,
   "configurations_research_only": 76,
   "configurations_linked": 1,
-  "issues_new": 61
+  "issues_existing": 61,
+  "issues_updated": 2,
+  "issues_new": 1
  },
- "finished_at": "2026-10-02T10:20:30+00:00"
+ "finished_at": "2026-10-02T16:35:11+00:00"
 }

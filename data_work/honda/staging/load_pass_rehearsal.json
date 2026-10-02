@@ -1,0 +1,110 @@
+{
+ "make": "honda",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-02T16:33:37+00:00",
+ "replace_own": [],
+ "lines": {
+  "honda/accord": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 110,
+    "source_records_new": 34,
+    "te_existing": 1207,
+    "te_new_GENERATION": 820,
+    "configurations": 62,
+    "configurations_research_only": 54,
+    "configurations_linked": 8,
+    "issues_existing": 68,
+    "issues_updated": 5,
+    "issues_new": 1
+   },
+   "generations": [
+    {
+     "code": "IX",
+     "action": "unchanged"
+    },
+    {
+     "code": "X",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2023+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "honda/civic": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 173,
+    "source_records_new": 65,
+    "te_existing": 1582,
+    "te_new_GENERATION": 862,
+    "te_new_ENGINE": 12,
+    "configurations": 77,
+    "configurations_research_only": 76,
+    "configurations_linked": 1,
+    "issues_existing": 61,
+    "issues_updated": 2,
+    "issues_new": 1
+   },
+   "generations": [
+    {
+     "code": "IX Sedan",
+     "action": "unchanged"
+    },
+    {
+     "code": "10th",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2022+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "honda/cr-v": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 101,
+    "source_records_new": 43,
+    "te_existing": 833,
+    "te_new_GENERATION": 540,
+    "te_new_ENGINE": 40,
+    "configurations": 45,
+    "configurations_linked": 8,
+    "configurations_research_only": 37,
+    "issues_existing": 81,
+    "issues_updated": 3
+   },
+   "generations": [
+    {
+     "code": "IV",
+     "action": "unchanged"
+    },
+    {
+     "code": "RW",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2023+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T16:34:18+00:00"
+}
