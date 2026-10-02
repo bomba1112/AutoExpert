@@ -47,6 +47,9 @@ class Settings(BaseSettings):
     chat_question_limit: int = Field(default=10, ge=1, le=1000)
     chat_demo_unlimited: bool = True
     demo_mode: bool = True
+    # Seeding demo rows when the preview starts is a QA opt-in; the working database
+    # stays free of demo data unless AUTOEXPERT_SEED_DEMO_ON_START=true is set.
+    seed_demo_on_start: bool = False
     developer_mode: bool = True
     developer_simulate_user_paywall_default: bool = False
     knowledge_data_dir: str = ".localdata"

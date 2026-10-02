@@ -13,8 +13,7 @@ from alembic.script import ScriptDirectory
 ROOT = Path(__file__).resolve().parents[2]
 
 
-@pytest.mark.parametrize("working_directory", ["root", "backend", "unrelated"])
-def test_preview_migrates_and_seeds_from_any_directory(tmp_path, working_directory):
+def run_preview_twice(tmp_path, cwd, extra_env):
     database = tmp_path / "preview.db"
     environment = {
         **os.environ,
@@ -26,8 +25,8 @@ def test_preview_migrates_and_seeds_from_any_directory(tmp_path, working_directo
         "AUTOEXPERT_DATABASE_URL": f"sqlite:///{database.as_posix()}",
         "AUTOEXPERT_ENVIRONMENT": "test",
         "AUTOEXPERT_DEMO_MODE": "true",
+        **extra_env,
     }
-    cwd = {"root": ROOT, "backend": ROOT / "backend", "unrelated": tmp_path}[working_directory]
     # Exercise the real entry point and migration files; only the blocking server is stubbed.
     script = """
 from pathlib import Path
@@ -52,8 +51,19 @@ with patch('app.run_preview.uvicorn.run') as server:
     head = ScriptDirectory.from_config(configuration).get_current_head()
     with sqlite3.connect(database) as connection:
         assert connection.execute("SELECT version_num FROM alembic_version").fetchone() == (head,)
-        count = connection.execute("SELECT COUNT(*) FROM vehicle_knowledge_profiles").fetchone()[0]
-        assert count > 0
+        return connection.execute("SELECT COUNT(*) FROM vehicle_knowledge_profiles").fetchone()[0]
+
+
+@pytest.mark.parametrize("working_directory", ["root", "backend", "unrelated"])
+def test_preview_migrates_and_seeds_from_any_directory(tmp_path, working_directory):
+    cwd = {"root": ROOT, "backend": ROOT / "backend", "unrelated": tmp_path}[working_directory]
+    count = run_preview_twice(tmp_path, cwd, {"AUTOEXPERT_SEED_DEMO_ON_START": "true"})
+    assert count > 0
+
+
+def test_preview_does_not_seed_demo_rows_by_default(tmp_path, monkeypatch):
+    monkeypatch.delenv("AUTOEXPERT_SEED_DEMO_ON_START", raising=False)
+    assert run_preview_twice(tmp_path, ROOT, {}) == 0
 
 
 def test_alembic_config_paths_are_relative_to_config_file(tmp_path):

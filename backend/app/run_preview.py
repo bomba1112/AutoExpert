@@ -44,7 +44,8 @@ def _prepare_database(project_root: Path) -> None:
             with sqlite3.connect(database) as source, sqlite3.connect(backup) as target:
                 source.backup(target)
     command.upgrade(alembic_config, "head")
-    if get_settings().demo_mode:
+    settings = get_settings()
+    if settings.demo_mode and settings.seed_demo_on_start:
         with SessionLocal() as session:
             seed_demo(session)
 
