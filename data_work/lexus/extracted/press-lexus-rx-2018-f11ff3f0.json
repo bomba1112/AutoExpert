@@ -32,26 +32,6 @@
    "page": 1,
    "row": "Passenger Volume",
    "reason": "two values without labels: '116.2 ft3/114.0 ft3 -with moonroof (3.29 m3/3.23m3)'"
-  },
-  {
-   "page": 1,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '15.26 cu.ft. – 3rd-row Seat Folded (Floor to Tonneau Cover)'"
-  },
-  {
-   "page": 1,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '23.03 cu. ft.– 3rd-row Seat Folded (Floor to Roof)'"
-  },
-  {
-   "page": 1,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '34.11 cu. ft.– 2nd and 3rd -row Seats Folded (Floor to Front Seat Top)'"
-  },
-  {
-   "page": 1,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '58.48 cu. ft. – 2nd and 3rd -row Seats Folded (Floor to Roof)'"
   }
  ],
  "facts": [
@@ -147,12 +127,48 @@
   },
   {
    "key": "cargo_cu_ft",
+   "value": 15.26,
+   "page": 1,
+   "quote": "15.26 cu.ft. – 3rd-row Seat Folded (Floor to Tonneau Cover)",
+   "original": "Cargo Volume 15.26 cu.ft. – 3rd-row Seat Folded (Floor to Tonneau Cover)",
+   "engine_text": null,
+   "row": "Cargo Volume (Floor to Tonneau Cover)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 23.03,
+   "page": 1,
+   "quote": "23.03 cu. ft.– 3rd-row Seat Folded (Floor to Roof)",
+   "original": "Cargo Volume 23.03 cu. ft.– 3rd-row Seat Folded (Floor to Roof)",
+   "engine_text": null,
+   "row": "Cargo Volume (Floor to Roof)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 34.11,
+   "page": 1,
+   "quote": "34.11 cu. ft.– 2nd and 3rd -row Seats Folded (Floor to Front Seat Top)",
+   "original": "Cargo Volume 34.11 cu. ft.– 2nd and 3rd -row Seats Folded (Floor to Front Seat Top)",
+   "engine_text": null,
+   "row": "Cargo Volume (Floor to Front Seat Top)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 58.48,
+   "page": 1,
+   "quote": "58.48 cu. ft. – 2nd and 3rd -row Seats Folded (Floor to Roof)",
+   "original": "Cargo Volume 58.48 cu. ft. – 2nd and 3rd -row Seats Folded (Floor to Roof)",
+   "engine_text": null,
+   "row": "Cargo Volume (Floor to Roof)"
+  },
+  {
+   "key": "cargo_cu_ft",
    "value": 0.57,
    "page": 1,
    "quote": "00.57 cu. ft. – Under deck board",
    "original": "Cargo Volume 00.57 cu. ft. – Under deck board",
    "engine_text": null,
-   "row": "Cargo Volume"
+   "row": "Cargo Volume (Under deck board)"
   },
   {
    "key": "curb_weight_lb",
@@ -297,6 +313,33 @@
    "original": "Transmission Type Electronically Controlled Continuously Variable Transmission (ECVT); planetary gear unit for gear reduction and power splitting, electronic all- or front-wheel-drive control system",
    "engine_text": null,
    "row": "Transmission Type"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
+  },
+  {
+   "key": "steering",
+   "value": "Electric Power Steering (EPS): Rack and pinion with electronic power assist",
+   "page": 3,
+   "quote": "Type Electric Power Steering (EPS): Rack and pinion with electronic power assist",
+   "original": "Steering Type Electric Power Steering (EPS): Rack and pinion with electronic power assist",
+   "engine_text": null,
+   "row": "Steering Type"
   },
   {
    "key": "wheel_size_in",

@@ -30,13 +30,13 @@
  "review": [
   {
    "page": 2,
-   "row": "Cargo Volume 6",
-   "reason": "several numbers: '2nd row and 3rd row seat folded (Floor to roof): 58.48 cu. ft.'"
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: 'FWD'"
   },
   {
    "page": 2,
-   "row": "Cargo Volume 6",
-   "reason": "several numbers: '3rd row seat folded (Floor to roof): 23.03 cu. ft. No seat folded (Floor to roof): 6.21 cu. ft.'"
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: '4,464lb (2,025kg)'"
   }
  ],
  "facts": [
@@ -131,13 +131,31 @@
    "row": "Passenger Volume"
   },
   {
-   "key": "curb_weight_lb",
-   "value": 4464,
+   "key": "cargo_cu_ft",
+   "value": 58.48,
    "page": 2,
-   "quote": "4,464lb (2,025kg)",
-   "original": "Curb Weight 4,464lb (2,025kg)",
+   "quote": "Cargo Volume 2nd row and 3rd row seat folded (Floor to roof): 58.48 cu. ft.",
+   "original": "Cargo Volume 6 2nd row and 3rd row seat folded (Floor to roof): 58.48 cu. ft.",
    "engine_text": null,
-   "row": "Curb Weight"
+   "row": "Cargo Volume 6"
+  },
+  {
+   "key": "cargo_max_cu_ft",
+   "value": 23.03,
+   "page": 2,
+   "quote": "3rd row seat folded (Floor to roof): 23.03 cu. ft.",
+   "original": "Cargo Volume 6 3rd row seat folded (Floor to roof): 23.03 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume 6 (3rd row seat folded (Floor to roof))"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 6.21,
+   "page": 2,
+   "quote": "No seat folded (Floor to roof): 6.21 cu. ft.",
+   "original": "Cargo Volume 6 No seat folded (Floor to roof): 6.21 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume 6 (No seat folded (Floor to roof))"
   },
   {
    "key": "curb_weight_lb",
@@ -255,6 +273,24 @@
    "original": "Fuel System Port and Fuel Injection (EFI, D-4S)",
    "engine_text": null,
    "row": "Fuel System"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
   },
   {
    "key": "steering",

@@ -30,8 +30,13 @@
  "review": [
   {
    "page": 1,
-   "row": "EPA Passenger Volume",
-   "reason": "several numbers: '99.9 cu. ft. (with moonroof), 97.0 cu. ft. (with panoramic roof)'"
+   "row": "Tread Width - Front",
+   "reason": "second value in parentheses: '62.9 in. (62.5 in. w/18” or 19” wheels)'"
+  },
+  {
+   "page": 1,
+   "row": "Tread Width - Rear",
+   "reason": "second value in parentheses: '63.4 in. (63.0 in. w/18” or 19” wheels)'"
   },
   {
    "page": 3,
@@ -77,24 +82,6 @@
    "row": "Overall Height"
   },
   {
-   "key": "track_front_in",
-   "value": 62.9,
-   "page": 1,
-   "quote": "- Front 62.9 in. (62.5 in. w/18” or 19” wheels)",
-   "original": "Tread Width - Front 62.9 in. (62.5 in. w/18” or 19” wheels)",
-   "engine_text": null,
-   "row": "Tread Width - Front (62.5 in. w/18” or 19” wheels)"
-  },
-  {
-   "key": "track_rear_in",
-   "value": 63.4,
-   "page": 1,
-   "quote": "- Rear 63.4 in. (63.0 in. w/18” or 19” wheels)",
-   "original": "Tread Width - Rear 63.4 in. (63.0 in. w/18” or 19” wheels)",
-   "engine_text": null,
-   "row": "Tread Width - Rear (63.0 in. w/18” or 19” wheels)"
-  },
-  {
    "key": "seats",
    "value": 5,
    "page": 1,
@@ -102,6 +89,24 @@
    "original": "Seating Capacity 5",
    "engine_text": null,
    "row": "Seating Capacity"
+  },
+  {
+   "key": "passenger_volume_cu_ft",
+   "value": 99.9,
+   "page": 1,
+   "quote": "EPA Passenger Volume 99.9 cu. ft. (with moonroof), 97.0 cu. ft. (with panoramic roof)",
+   "original": "EPA Passenger Volume 99.9 cu. ft. (with moonroof), 97.0 cu. ft. (with panoramic roof)",
+   "engine_text": null,
+   "row": "EPA Passenger Volume (with moonroof)"
+  },
+  {
+   "key": "passenger_volume_cu_ft",
+   "value": 97.0,
+   "page": 1,
+   "quote": "EPA Passenger Volume 99.9 cu. ft. (with moonroof), 97.0 cu. ft. (with panoramic roof)",
+   "original": "EPA Passenger Volume 99.9 cu. ft. (with moonroof), 97.0 cu. ft. (with panoramic roof)",
+   "engine_text": null,
+   "row": "EPA Passenger Volume (with panoramic roof)"
   },
   {
    "key": "curb_weight_lb",
@@ -138,6 +143,15 @@
    "original": "Valvetrain DOHC 24-valve with Variable Valve Timing intelligence Wide VVTiW (intake), Variable Valve Timing intelligence VVTi (exhaust)",
    "engine_text": null,
    "row": "Valvetrain"
+  },
+  {
+   "key": "engine_displacement_cc",
+   "value": 3456,
+   "page": 2,
+   "quote": "Displacement 3.5 liter (3,456 cc)",
+   "original": "Displacement 3.5 liter (3,456 cc)",
+   "engine_text": "3,456 cc",
+   "row": "Displacement"
   },
   {
    "key": "bore_stroke_in",

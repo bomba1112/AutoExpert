@@ -29,17 +29,21 @@
  ],
  "review": [
   {
-   "page": 1,
-   "row": "Seating Capacity Front",
-   "reason": "seating not an integer: '39.4 in.'"
-  },
-  {
    "page": 3,
    "row": "Tire Size/Type",
    "reason": "no tire size: '20 x 8.0 in. (optional)'"
   }
  ],
  "facts": [
+  {
+   "key": "wheelbase_in",
+   "value": 109.8,
+   "page": 1,
+   "quote": "109.8 in.",
+   "original": "Wheelbase 109.8 in.",
+   "engine_text": null,
+   "row": "Wheelbase"
+  },
   {
    "key": "length_in",
    "value": 192.5,
@@ -81,36 +85,54 @@
    "value": 5,
    "page": 1,
    "quote": "Seating Capacity 5",
-   "original": "Seating Capacity Front 5",
+   "original": "Seating Capacity 5",
    "engine_text": null,
-   "row": "Seating Capacity Front"
+   "row": "Seating Capacity"
   },
   {
    "key": "passenger_volume_cu_ft",
    "value": 99.8,
    "page": 1,
    "quote": "Passenger Volume 99.8 cu. ft.",
-   "original": "Passenger Volume Rear seat up 99.8 cu. ft.",
+   "original": "Passenger Volume 99.8 cu. ft.",
    "engine_text": null,
-   "row": "Passenger Volume Rear seat up"
+   "row": "Passenger Volume"
   },
   {
-   "key": "passenger_volume_cu_ft",
+   "key": "cargo_cu_ft",
    "value": 16.0,
    "page": 1,
    "quote": "Rear seat up 16.0 cu ft (453 liters)",
-   "original": "Passenger Volume Rear seat up 16.0 cu ft (453 liters)",
+   "original": "Cargo Volume Rear seat up 16.0 cu ft (453 liters)",
    "engine_text": null,
-   "row": "Passenger Volume Rear seat up"
+   "row": "Cargo Volume Rear seat up"
   },
   {
    "key": "cargo_max_cu_ft",
    "value": 32.6,
    "page": 1,
-   "quote": "Cargo Volume Rear seat folded 32.6 cu ft (924 liters)",
-   "original": "Cargo Volume Rear seat folded down 32.6 cu ft (924 liters)",
+   "quote": "Rear seat folded 32.6 cu ft (924 liters)",
+   "original": "Cargo Volume Rear seat folded 32.6 cu ft (924 liters)",
    "engine_text": null,
-   "row": "Cargo Volume Rear seat folded down"
+   "row": "Cargo Volume Rear seat folded"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4222,
+   "page": 1,
+   "quote": "4,222 lbs. (FWD); 4,387 lbs. (AWD)",
+   "original": "Curb Weight 4,222 lbs. (FWD); 4,387 lbs. (AWD)",
+   "engine_text": "FWD",
+   "row": "Curb Weight"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4387,
+   "page": 1,
+   "quote": "4,222 lbs. (FWD); 4,387 lbs. (AWD)",
+   "original": "Curb Weight 4,222 lbs. (FWD); 4,387 lbs. (AWD)",
+   "engine_text": "AWD",
+   "row": "Curb Weight"
   },
   {
    "key": "towing_lb",
@@ -219,6 +241,42 @@
    "original": "Transmission Type 8-speed Automatic Transmission",
    "engine_text": null,
    "row": "Transmission Type"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
+  },
+  {
+   "key": "turning_circle_ft",
+   "value": 19.4,
+   "page": 3,
+   "quote": "Turning Circle (curb to 19.4 ft.",
+   "original": "Steering Turning Circle (curb to curb) 19.4 ft.",
+   "engine_text": null,
+   "row": "Steering Turning Circle (curb to curb)"
+  },
+  {
+   "key": "front_brakes",
+   "value": "Ventilated Disc with Floating Caliper 2 cylinder/12.9 in. Ventilated Disc with Floating Caliper 1 cylinder /13.3 in.",
+   "page": 3,
+   "quote": "Front - type/diameter Ventilated Disc with Floating Caliper 2 cylinder/12.9 in. Rear - type/diameter Ventilated Disc with Floating Caliper 1 cylinder /13.3 in.",
+   "original": "Brakes Front - type/diameter Rear - type/diameter Ventilated Disc with Floating Caliper 2 cylinder/12.9 in. Ventilated Disc with Floating Caliper 1 cylinder /13.3 in.",
+   "engine_text": null,
+   "row": "Brakes Front - type/diameter Rear - type/diameter"
   },
   {
    "key": "wheel_size_in",

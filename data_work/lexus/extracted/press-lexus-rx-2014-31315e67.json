@@ -30,16 +30,6 @@
  "review": [
   {
    "page": 1,
-   "row": "Curb Weight",
-   "reason": "several numbers: '4,652 lbs. – AWD; 4,520 lbs. – FWD'"
-  },
-  {
-   "page": 3,
-   "row": "Tire Size/Type",
-   "reason": "no tire size: '235/55VR19 (optional)'"
-  },
-  {
-   "page": 1,
    "row": "",
    "reason": "model year not found in document title: 2 0 1 4 R X 4 5 0 h P roduct Information Note: All specs are for both all-weather drive (AWD) and fr"
   }
@@ -134,6 +124,15 @@
    "original": "Cargo Volume - Rear seats folded down 80.3 cu. ft.",
    "engine_text": null,
    "row": "Cargo Volume - Rear seats folded down"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4652,
+   "page": 1,
+   "quote": "Curb Weight 4,652 lbs. – AWD; 4,520 lbs. – FWD",
+   "original": "Curb Weight 4,652 lbs. – AWD; 4,520 lbs. – FWD",
+   "engine_text": "AWD; 4,520 lbs. – FWD",
+   "row": "Curb Weight"
   },
   {
    "key": "towing_lb",
@@ -395,6 +394,15 @@
    "original": "Tire Size/Type 235/60R18 (standard)",
    "engine_text": null,
    "row": "Tire Size/Type (standard)"
+  },
+  {
+   "key": "tires",
+   "value": "235/55VR19",
+   "page": 3,
+   "quote": "235/55VR19 (optional)",
+   "original": "Tire Size/Type 235/55VR19 (optional)",
+   "engine_text": null,
+   "row": "Tire Size/Type (optional)"
   }
  ]
 }

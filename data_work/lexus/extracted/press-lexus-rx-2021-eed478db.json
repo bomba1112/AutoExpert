@@ -32,21 +32,6 @@
    "page": 1,
    "row": "Passenger Volume",
    "reason": "two values without labels: '116.2 ft3/114.0 ft3 -with moonroof (3.29 m3/3.23m3)'"
-  },
-  {
-   "page": 2,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '2nd row and 3rd row seat folded (Floor to roof): 34.11 cu. ft.'"
-  },
-  {
-   "page": 2,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '3rd row seat folded (Floor to roof): 23.03 cu. ft.'"
-  },
-  {
-   "page": 2,
-   "row": "Cargo Volume",
-   "reason": "several numbers: '3rd row seat folded (Floor to Tonneau Cover): 15.26 cu. ft. No seat folded (Floor to roof): 7.45 cu ft.'"
   }
  ],
  "facts": [
@@ -121,6 +106,42 @@
    "original": "Seating Capacity 6",
    "engine_text": null,
    "row": "Seating Capacity"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 34.11,
+   "page": 2,
+   "quote": "Cargo Volume 2nd row and 3rd row seat folded (Floor to roof): 34.11 cu. ft.",
+   "original": "Cargo Volume 2nd row and 3rd row seat folded (Floor to roof): 34.11 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume"
+  },
+  {
+   "key": "cargo_max_cu_ft",
+   "value": 23.03,
+   "page": 2,
+   "quote": "3rd row seat folded (Floor to roof): 23.03 cu. ft.",
+   "original": "Cargo Volume 3rd row seat folded (Floor to roof): 23.03 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume (3rd row seat folded (Floor to roof))"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 15.26,
+   "page": 2,
+   "quote": "3rd row seat folded (Floor to Tonneau Cover): 15.26 cu. ft.",
+   "original": "Cargo Volume 3rd row seat folded (Floor to Tonneau Cover): 15.26 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 7.45,
+   "page": 2,
+   "quote": "No seat folded (Floor to roof): 7.45 cu ft.",
+   "original": "Cargo Volume No seat folded (Floor to roof): 7.45 cu ft.",
+   "engine_text": null,
+   "row": "Cargo Volume (No seat folded (Floor to roof))"
   },
   {
    "key": "curb_weight_lb",
@@ -247,6 +268,24 @@
    "original": "Transmission Type Electronically Controlled Continuously Variable Transmission (ECVT); planetary gear unit for gear reduction and power splitting, electronic all- or front-wheel-drive control system",
    "engine_text": null,
    "row": "Transmission Type"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 4,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 4,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
   },
   {
    "key": "steering",

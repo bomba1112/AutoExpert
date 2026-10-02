@@ -31,7 +31,27 @@
   {
    "page": 1,
    "row": "Cargo Volume 6",
-   "reason": "several numbers: '2nd row and 3rd row seat folded (Floor to roof): 1656 Liters'"
+   "reason": "no value with unit cuft: '2nd row and 3rd row seat folded (Floor to roof): 1656 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Cargo Volume 6",
+   "reason": "no value with unit cuft: '3rd row seat folded (Floor to roof): 652 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Cargo Volume 6",
+   "reason": "no value with unit cuft: 'No seat folded (Floor to roof ): 176 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: 'FWD'"
+  },
+  {
+   "page": 1,
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: '4,464lb (2,025kg)'"
   }
  ],
  "facts": [
@@ -124,24 +144,6 @@
    "original": "Passenger Volume 114.9 ft3 -with moonroof (3.25 m3)",
    "engine_text": "3.25 m3",
    "row": "Passenger Volume"
-  },
-  {
-   "key": "cargo_cu_ft",
-   "value": 3,
-   "page": 1,
-   "quote": "3rd row seat folded (Floor to roof): 652 Liters No seat folded (Floor to roof ): 176 Liters",
-   "original": "Cargo Volume 6 3rd row seat folded (Floor to roof): 652 Liters No seat folded (Floor to roof ): 176 Liters",
-   "engine_text": null,
-   "row": "Cargo Volume 6"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 4464,
-   "page": 1,
-   "quote": "4,464lb (2,025kg)",
-   "original": "Curb Weight 4,464lb (2,025kg)",
-   "engine_text": null,
-   "row": "Curb Weight"
   },
   {
    "key": "curb_weight_lb",
@@ -259,6 +261,24 @@
    "original": "Fuel System Sequential Multiport Fuel Injection (EFI, D-4S)",
    "engine_text": null,
    "row": "Fuel System"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
   },
   {
    "key": "steering",

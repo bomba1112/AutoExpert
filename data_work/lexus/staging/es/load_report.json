@@ -2,86 +2,55 @@
  "generations": [
   {
    "code": "VI",
-   "action": "filled",
-   "end_year": 2018
+   "action": "unchanged"
   },
   {
    "code": "US2019-2025",
-   "action": "created",
-   "start_year": 2019,
-   "end_year": 2025
+   "action": "unchanged"
   },
   {
    "code": "US2026+",
-   "action": "created",
-   "start_year": 2026,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
- "existing_vs_new": [
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-350-6at-FWD-2016",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-350-6at-FWD-2017",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-350-6at-FWD-2018",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-300h-ecvt-FWD-2016",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-300h-ecvt-FWD-2017",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-lexus-us:lexus-es-vi-us-300h-ecvt-FWD-2018",
-   "existing": "length_in=193.3",
-   "new_values": [
-    4900
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  }
- ],
+ "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T10:19:29+00:00",
+ "started_at": "2026-10-02T16:31:34+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "es-VI-tsb-infotainment",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     8,
+     9
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Infotainment Software Bugs\" (owner reports): MY2016: #2, average cost to fix N/A, average mileage 0 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 82,
-  "source_records_new": 77,
-  "te_new_GENERATION": 232,
-  "te_new_CONFIGURATION": 393,
+  "raw_documents_seen": 108,
+  "source_records_new": 26,
+  "te_existing": 625,
+  "te_new_GENERATION": 336,
+  "te_new_ENGINE": 84,
   "configurations": 33,
   "configurations_research_only": 27,
   "configurations_linked": 6,
-  "issues_new": 27
+  "issues_existing": 27,
+  "issues_updated": 1,
+  "issues_new": 1
  },
- "finished_at": "2026-10-02T10:19:36+00:00"
+ "finished_at": "2026-10-02T16:31:42+00:00"
 }

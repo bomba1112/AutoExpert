@@ -36,7 +36,22 @@
   {
    "page": 1,
    "row": "Cargo Volume",
-   "reason": "several numbers: '2nd row and 3rd row seat folded (Floor to roof): 966 Liters'"
+   "reason": "no value with unit cuft: '2nd row and 3rd row seat folded (Floor to roof): 966 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Cargo Volume",
+   "reason": "no value with unit cuft: '3rd row seat folded (Floor to roof): 652 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Cargo Volume",
+   "reason": "no value with unit cuft: '3rd row seat folded (Floor to Tonneau Cover): 432 Liters'"
+  },
+  {
+   "page": 1,
+   "row": "Cargo Volume",
+   "reason": "no value with unit cuft: 'No seat folded (Floor to roof ): 211 Liters'"
   }
  ],
  "facts": [
@@ -111,24 +126,6 @@
    "original": "Seating Capacity 6",
    "engine_text": null,
    "row": "Seating Capacity"
-  },
-  {
-   "key": "cargo_cu_ft",
-   "value": 3,
-   "page": 1,
-   "quote": "3rd row seat folded (Floor to roof): 652 Liters",
-   "original": "Cargo Volume 3rd row seat folded (Floor to roof): 652 Liters",
-   "engine_text": null,
-   "row": "Cargo Volume"
-  },
-  {
-   "key": "cargo_cu_ft",
-   "value": 3,
-   "page": 1,
-   "quote": "3rd row seat folded (Floor to Tonneau Cover): 432 Liters No seat folded (Floor to roof ): 211 Liters",
-   "original": "Cargo Volume 3rd row seat folded (Floor to Tonneau Cover): 432 Liters No seat folded (Floor to roof ): 211 Liters",
-   "engine_text": null,
-   "row": "Cargo Volume"
   },
   {
    "key": "curb_weight_lb",
@@ -273,6 +270,24 @@
    "original": "Transmission Type Electronically Controlled Continuously Variable Transmission (ECVT); planetary gear unit for gear reduction and power splitting, electronic all- or front-wheel-drive control system",
    "engine_text": null,
    "row": "Transmission Type"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double Wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double Wishbone type, coil springs",
+   "original": "Suspension Rear Double Wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
   },
   {
    "key": "steering",

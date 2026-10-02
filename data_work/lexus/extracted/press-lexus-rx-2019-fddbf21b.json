@@ -27,13 +27,7 @@
  "engine_codes": [
   "308 hp"
  ],
- "review": [
-  {
-   "page": 1,
-   "row": "Seating Capacity Front",
-   "reason": "seating not an integer: '39.4 in.'"
-  }
- ],
+ "review": [],
  "facts": [
   {
    "key": "wheelbase_in",
@@ -67,9 +61,9 @@
    "value": 67.7,
    "page": 1,
    "quote": "67.7 in. (without roof rack)",
-   "original": "Overall Height (unloaded) Front 67.7 in. (without roof rack)",
+   "original": "Overall Height (unloaded) 67.7 in. (without roof rack)",
    "engine_text": null,
-   "row": "Overall Height (unloaded) Front (without roof rack)"
+   "row": "Overall Height (unloaded) (without roof rack)"
   },
   {
    "key": "height_in",
@@ -103,27 +97,18 @@
    "value": 5,
    "page": 1,
    "quote": "Seating Capacity 5",
-   "original": "Seating Capacity Front 5",
+   "original": "Seating Capacity 5",
    "engine_text": null,
-   "row": "Seating Capacity Front"
-  },
-  {
-   "key": "cargo_cu_ft",
-   "value": 139.7,
-   "page": 1,
-   "quote": "Total Interior Volume 139.7 cu. ft.",
-   "original": "Total Interior Volume Cargo area 139.7 cu. ft.",
-   "engine_text": null,
-   "row": "Total Interior Volume Cargo area"
+   "row": "Seating Capacity"
   },
   {
    "key": "cargo_cu_ft",
    "value": 18.0,
    "page": 1,
    "quote": "Cargo area 18.0 cu. ft.",
-   "original": "Total Interior Volume Cargo area 18.0 cu. ft.",
+   "original": "Cargo Volume Cargo area 18.0 cu. ft.",
    "engine_text": null,
-   "row": "Total Interior Volume Cargo area"
+   "row": "Cargo Volume Cargo area"
   },
   {
    "key": "cargo_max_cu_ft",
@@ -253,30 +238,93 @@
   },
   {
    "key": "electric_motor",
-   "value": "Type Permanent magnet motor AC 650V Drives front wheels, regenerative braking",
+   "value": "Type Permanent magnet motor AC 650V",
    "page": 2,
-   "quote": "Motor Generator 1 (MG1) Type Permanent magnet motor Max. voltage AC 650V Function Drives front wheels, regenerative braking",
-   "original": "Motor Generator 1 (MG1) Max. voltage Function Type Permanent magnet motor AC 650V Drives front wheels, regenerative braking",
+   "quote": "Motor Generator 1 (MG1) Type Permanent magnet motor Max. voltage AC 650V",
+   "original": "Motor Generator 1 (MG1) Max. voltage Type Permanent magnet motor AC 650V",
+   "engine_text": null,
+   "row": "Motor Generator 1 (MG1) Max. voltage"
+  },
+  {
+   "key": "electric_motor",
+   "value": "Drives front wheels, regenerative braking Type Permanent magnet motor",
+   "page": 2,
+   "quote": "Function Drives front wheels, regenerative braking Type Permanent magnet motor",
+   "original": "Motor Generator 1 (MG1) Max. voltage Function Drives front wheels, regenerative braking Type Permanent magnet motor",
    "engine_text": null,
    "row": "Motor Generator 1 (MG1) Max. voltage Function"
   },
   {
    "key": "electric_motor",
-   "value": "Type Permanent magnet motor AC 650V 165 hp (123 kW) Drives rear wheels, regenerative braking",
+   "value": "AC 650V",
    "page": 2,
-   "quote": "Type Permanent magnet motor Motor Generator 2 (MG2) Max. voltage AC 650V Max. output 165 hp (123 kW) Function Drives rear wheels, regenerative braking",
-   "original": "Motor Generator 2 (MG2) Max. voltage Max. output Function Type Permanent magnet motor AC 650V 165 hp (123 kW) Drives rear wheels, regenerative braking",
+   "quote": "Max. voltage AC 650V",
+   "original": "Motor Generator 2 (MG2) Max. voltage AC 650V",
    "engine_text": null,
-   "row": "Motor Generator 2 (MG2) Max. voltage Max. output Function"
+   "row": "Motor Generator 2 (MG2) Max. voltage"
   },
   {
    "key": "electric_motor",
-   "value": "Type Permanent magnet motor AC 650V 165 hp (123 kW)",
+   "value": "165 hp (123 kW)",
+   "page": 2,
+   "quote": "Max. output 165 hp (123 kW)",
+   "original": "Motor Generator 2 (MG2) Max. output 165 hp (123 kW)",
+   "engine_text": null,
+   "row": "Motor Generator 2 (MG2) Max. output"
+  },
+  {
+   "key": "electric_motor",
+   "value": "Drives rear wheels, regenerative braking",
+   "page": 2,
+   "quote": "Function Drives rear wheels, regenerative braking",
+   "original": "Motor Generator 2 (MG2) Function Drives rear wheels, regenerative braking",
+   "engine_text": null,
+   "row": "Motor Generator 2 (MG2) Function"
+  },
+  {
+   "key": "electric_motor",
+   "value": "Type Permanent magnet motor Max. voltage AC 650V 165 hp (123 kW)",
    "page": 2,
    "quote": "Motor Generator Rear Type Permanent magnet motor (MGR) (AWD Model Only) Max. voltage AC 650V Max. output 165 hp (123 kW)",
-   "original": "Motor Generator Rear (MGR) (AWD Model Only) Max. voltage Max. output Type Permanent magnet motor AC 650V 165 hp (123 kW)",
+   "original": "Motor Generator Rear (MGR) (AWD Model Only) Max. output Type Permanent magnet motor Max. voltage AC 650V 165 hp (123 kW)",
    "engine_text": null,
-   "row": "Motor Generator Rear (MGR) (AWD Model Only) Max. voltage Max. output"
+   "row": "Motor Generator Rear (MGR) (AWD Model Only) Max. output"
+  },
+  {
+   "key": "front_suspension",
+   "value": "MacPherson strut, coil springs",
+   "page": 3,
+   "quote": "Front MacPherson strut, coil springs",
+   "original": "Suspension Front MacPherson strut, coil springs",
+   "engine_text": null,
+   "row": "Suspension Front"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Double wishbone type, coil springs",
+   "page": 3,
+   "quote": "Rear Double wishbone type, coil springs",
+   "original": "Suspension Rear Double wishbone type, coil springs",
+   "engine_text": null,
+   "row": "Suspension Rear"
+  },
+  {
+   "key": "steering",
+   "value": "Electric Power Steering (EPS): rack and pinion with electronic power assist",
+   "page": 3,
+   "quote": "Type Electric Power Steering (EPS): rack and pinion with electronic power assist",
+   "original": "Steering Type Electric Power Steering (EPS): rack and pinion with electronic power assist",
+   "engine_text": null,
+   "row": "Steering Type"
+  },
+  {
+   "key": "turning_circle_ft",
+   "value": 38.0,
+   "page": 3,
+   "quote": "Turning Circle (curb to curb) 38.0 feet",
+   "original": "Steering Turning Circle (curb to curb) 38.0 feet",
+   "engine_text": null,
+   "row": "Steering Turning Circle (curb to curb)"
   },
   {
    "key": "wheel_size_in",
