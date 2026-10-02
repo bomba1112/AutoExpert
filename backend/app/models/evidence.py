@@ -9,6 +9,7 @@ from sqlalchemy import (
     DateTime,
     Enum,
     ForeignKey,
+    Index,
     Integer,
     Numeric,
     String,
@@ -21,8 +22,15 @@ from app.db.base import Base, TimestampMixin, UUIDPrimaryKeyMixin
 from app.models.enums import (
     ConfidenceLevel,
     DataOrigin,
+    DisplayLevel,
     EvidenceCategory,
     EvidenceStatus,
+    IssueProbability,
+    MaintenanceAction,
+    MaintenanceCondition,
+    MaintenanceOccurrence,
+    MaintenanceSystem,
+    ScopeLevel,
     Sentiment,
     Severity,
     SourceTier,
@@ -30,8 +38,29 @@ from app.models.enums import (
 )
 
 
-def enum_column(enum_type: type, name: str) -> Enum:
-    return Enum(enum_type, name=name, native_enum=False, validate_strings=True)
+def enum_column(enum_type: type, name: str, length: int | None = None) -> Enum:
+    return Enum(enum_type, name=name, native_enum=False, validate_strings=True, length=length)
+
+
+class ScopedFactMixin:
+    """f087 scope columns: where a fact is defined, independent of one model-year variant."""
+
+    scope_level: Mapped[ScopeLevel | None] = mapped_column(
+        enum_column(ScopeLevel, "scope_level", 20), index=True
+    )
+    make_id: Mapped[str | None] = mapped_column(ForeignKey("vehicle_makes.id"), index=True)
+    generation_id: Mapped[str | None] = mapped_column(
+        ForeignKey("vehicle_generations.id"), index=True
+    )
+    # Normalized factory family key confirmed by a source (e.g. A25A-FKS); never an EPA code.
+    engine_family_key: Mapped[str | None] = mapped_column(String(40), index=True)
+    transmission_key: Mapped[str | None] = mapped_column(String(40), index=True)
+    year_from: Mapped[int | None] = mapped_column(Integer)
+    year_to: Mapped[int | None] = mapped_column(Integer)
+    display_level: Mapped[DisplayLevel | None] = mapped_column(
+        enum_column(DisplayLevel, "display_level", 20)
+    )
+    natural_key: Mapped[str | None] = mapped_column(String(64), unique=True)
 
 
 class SourceRecord(UUIDPrimaryKeyMixin, TimestampMixin, Base):
@@ -62,10 +91,17 @@ class SourceRecord(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     is_demo: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
 
-class TechnicalEvidence(UUIDPrimaryKeyMixin, TimestampMixin, Base):
+class TechnicalEvidence(ScopedFactMixin, UUIDPrimaryKeyMixin, TimestampMixin, Base):
     __tablename__ = "technical_evidence"
+    __table_args__ = (
+        Index("ix_technical_evidence_years", "year_from", "year_to"),
+        Index("ix_technical_evidence_display_level", "display_level"),
+    )
 
-    vehicle_variant_id: Mapped[str] = mapped_column(ForeignKey("vehicle_variants.id"), index=True)
+    # NULL only for f087 scoped rows (scope_level set); legacy rows always reference a variant.
+    vehicle_variant_id: Mapped[str | None] = mapped_column(
+        ForeignKey("vehicle_variants.id"), index=True
+    )
     source_id: Mapped[str] = mapped_column(ForeignKey("source_records.id"), index=True)
     category: Mapped[EvidenceCategory] = mapped_column(
         enum_column(EvidenceCategory, "evidence_category"), index=True
@@ -84,15 +120,27 @@ class TechnicalEvidence(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     data_origin: Mapped[DataOrigin] = mapped_column(
         enum_column(DataOrigin, "evidence_data_origin"), default=DataOrigin.REAL, index=True
     )
+    configuration_key: Mapped[str | None] = mapped_column(String(180), index=True)
+    fact_key: Mapped[str | None] = mapped_column(String(100), index=True)
+    value: Mapped[object | None] = mapped_column(JSON)
+    unit: Mapped[str | None] = mapped_column(String(30))
+    raw_document_id: Mapped[str | None] = mapped_column(ForeignKey("raw_documents.id"))
+    locator: Mapped[str | None] = mapped_column(String(500))
 
-    vehicle_variant: Mapped[VehicleVariant] = relationship(back_populates="technical_evidence")
+    vehicle_variant: Mapped[VehicleVariant | None] = relationship(
+        back_populates="technical_evidence"
+    )
     source: Mapped[SourceRecord] = relationship()
 
 
-class KnownIssue(UUIDPrimaryKeyMixin, TimestampMixin, Base):
+class KnownIssue(ScopedFactMixin, UUIDPrimaryKeyMixin, TimestampMixin, Base):
     __tablename__ = "known_issues"
+    __table_args__ = (Index("ix_known_issues_years", "year_from", "year_to"),)
 
-    vehicle_variant_id: Mapped[str] = mapped_column(ForeignKey("vehicle_variants.id"), index=True)
+    # NULL only for f087 scoped issues (engine / transmission / generation + years).
+    vehicle_variant_id: Mapped[str | None] = mapped_column(
+        ForeignKey("vehicle_variants.id"), index=True
+    )
     component: Mapped[str] = mapped_column(String(120), index=True)
     description: Mapped[str] = mapped_column(Text)
     affected_variants: Mapped[dict] = mapped_column(JSON, default=dict)
@@ -115,8 +163,15 @@ class KnownIssue(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     data_origin: Mapped[DataOrigin] = mapped_column(
         enum_column(DataOrigin, "known_issue_data_origin"), default=DataOrigin.REAL, index=True
     )
+    market: Mapped[str | None] = mapped_column(String(2), index=True)
+    title: Mapped[str | None] = mapped_column(String(240))
+    cause: Mapped[str | None] = mapped_column(Text)
+    typical_fix: Mapped[str | None] = mapped_column(Text)
+    probability: Mapped[IssueProbability | None] = mapped_column(
+        enum_column(IssueProbability, "issue_probability", 12)
+    )
 
-    vehicle_variant: Mapped[VehicleVariant] = relationship(back_populates="known_issues")
+    vehicle_variant: Mapped[VehicleVariant | None] = relationship(back_populates="known_issues")
 
 
 class MarketListing(UUIDPrimaryKeyMixin, TimestampMixin, Base):
@@ -199,6 +254,69 @@ class OwnerEvidence(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     is_demo: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
     data_origin: Mapped[DataOrigin] = mapped_column(
         enum_column(DataOrigin, "owner_evidence_data_origin"), default=DataOrigin.REAL, index=True
+    )
+
+    source: Mapped[SourceRecord] = relationship()
+
+
+class MaintenanceScheduleItem(UUIDPrimaryKeyMixin, TimestampMixin, Base):
+    """One scheduled maintenance job from an official schedule (f087).
+
+    Intervals are metric; the source's original mileage is kept for audit. Onboard
+    systems (oil-life monitors) keep only the manual's stated maximum, never an
+    invented fixed interval.
+    """
+
+    __tablename__ = "maintenance_schedule_items"
+    __table_args__ = (Index("ix_maintenance_schedule_items_years", "year_from", "year_to"),)
+
+    market: Mapped[str] = mapped_column(String(2), index=True)
+    make_id: Mapped[str] = mapped_column(ForeignKey("vehicle_makes.id"), index=True)
+    model_id: Mapped[str | None] = mapped_column(ForeignKey("vehicle_models.id"), index=True)
+    generation_id: Mapped[str | None] = mapped_column(
+        ForeignKey("vehicle_generations.id"), index=True
+    )
+    engine_family_key: Mapped[str | None] = mapped_column(String(40), index=True)
+    transmission_key: Mapped[str | None] = mapped_column(String(40), index=True)
+    year_from: Mapped[int] = mapped_column(Integer)
+    year_to: Mapped[int] = mapped_column(Integer)
+    applicability: Mapped[dict] = mapped_column(JSON, default=dict)
+    schedule_system: Mapped[MaintenanceSystem] = mapped_column(
+        enum_column(MaintenanceSystem, "maintenance_system", 20)
+    )
+    job: Mapped[str] = mapped_column(String(40), index=True)
+    action: Mapped[MaintenanceAction] = mapped_column(
+        enum_column(MaintenanceAction, "maintenance_action", 12)
+    )
+    condition: Mapped[MaintenanceCondition] = mapped_column(
+        enum_column(MaintenanceCondition, "maintenance_condition", 10)
+    )
+    occurrence: Mapped[MaintenanceOccurrence] = mapped_column(
+        enum_column(MaintenanceOccurrence, "maintenance_occurrence", 12)
+    )
+    interval_km: Mapped[int | None] = mapped_column(Integer)
+    interval_months: Mapped[int | None] = mapped_column(Integer)
+    interval_miles_original: Mapped[int | None] = mapped_column(Integer)
+    rule: Mapped[str | None] = mapped_column(String(20))
+    max_interval_km: Mapped[int | None] = mapped_column(Integer)
+    max_interval_months: Mapped[int | None] = mapped_column(Integer)
+    source_id: Mapped[str] = mapped_column(ForeignKey("source_records.id"), index=True)
+    raw_document_id: Mapped[str | None] = mapped_column(ForeignKey("raw_documents.id"))
+    locator: Mapped[str] = mapped_column(String(500))
+    confidence: Mapped[ConfidenceLevel] = mapped_column(
+        enum_column(ConfidenceLevel, "maintenance_confidence")
+    )
+    status: Mapped[EvidenceStatus] = mapped_column(
+        enum_column(EvidenceStatus, "maintenance_status")
+    )
+    display_level: Mapped[DisplayLevel] = mapped_column(
+        enum_column(DisplayLevel, "maintenance_display_level", 20)
+    )
+    notes: Mapped[str | None] = mapped_column(Text)
+    natural_key: Mapped[str] = mapped_column(String(64), unique=True)
+    is_demo: Mapped[bool] = mapped_column(Boolean, default=False)
+    data_origin: Mapped[DataOrigin] = mapped_column(
+        enum_column(DataOrigin, "maintenance_data_origin"), default=DataOrigin.REAL
     )
 
     source: Mapped[SourceRecord] = relationship()

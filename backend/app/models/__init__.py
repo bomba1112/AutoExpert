@@ -11,6 +11,7 @@ from app.models.catalog import (
 from app.models.evidence import (
     KnownIssue,
     LocalCostItem,
+    MaintenanceScheduleItem,
     MarketListing,
     OwnerEvidence,
     SourceRecord,
@@ -71,6 +72,7 @@ __all__ = [
     "CountryProfile",
     "KnownIssue",
     "LocalCostItem",
+    "MaintenanceScheduleItem",
     "MarketListing",
     "OwnerEvidence",
     "Payment",

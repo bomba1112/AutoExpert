@@ -134,3 +134,60 @@ class Sentiment(StrEnum):
     NEGATIVE = "NEGATIVE"
     MIXED = "MIXED"
     NEUTRAL = "NEUTRAL"
+
+
+class ScopeLevel(StrEnum):
+    """Level at which a scoped technical fact is defined (f087)."""
+
+    CONFIGURATION = "CONFIGURATION"
+    GENERATION = "GENERATION"
+    ENGINE = "ENGINE"
+    TRANSMISSION = "TRANSMISSION"
+
+
+class DisplayLevel(StrEnum):
+    """How a scoped fact may be shown to a consumer.
+
+    FACT: official source or two independent sources agree.
+    SECONDARY_NOTE: a single secondary reference ("по данным справочников").
+    OWNER_REPORTS: owner complaints only ("владельцы сообщают…").
+    HIDDEN_CONFLICT: sources disagree and the conflict is unresolved; never shown.
+    """
+
+    FACT = "FACT"
+    SECONDARY_NOTE = "SECONDARY_NOTE"
+    OWNER_REPORTS = "OWNER_REPORTS"
+    HIDDEN_CONFLICT = "HIDDEN_CONFLICT"
+
+
+class IssueProbability(StrEnum):
+    COMMON = "COMMON"
+    OCCASIONAL = "OCCASIONAL"
+    RARE = "RARE"
+
+
+class MaintenanceSystem(StrEnum):
+    FIXED_INTERVAL = "FIXED_INTERVAL"
+    OIL_LIFE_MONITOR = "OIL_LIFE_MONITOR"
+    MAINTENANCE_MINDER = "MAINTENANCE_MINDER"
+    CBS = "CBS"
+    SERVICE_A_B = "SERVICE_A_B"
+
+
+class MaintenanceAction(StrEnum):
+    REPLACE = "REPLACE"
+    INSPECT = "INSPECT"
+    ROTATE = "ROTATE"
+    ADJUST = "ADJUST"
+    CLEAN = "CLEAN"
+
+
+class MaintenanceCondition(StrEnum):
+    NORMAL = "NORMAL"
+    SEVERE = "SEVERE"
+
+
+class MaintenanceOccurrence(StrEnum):
+    EVERY = "EVERY"
+    FIRST = "FIRST"
+    SUBSEQUENT = "SUBSEQUENT"
