@@ -138,7 +138,7 @@ Camry продаётся в США во всех годах 2014–2026. Отд�
 - `0ff74ff` chore: baseline snapshot of STAGE6_1 before US tech database work
 - `62024c8` feat(db): f087 scoped technical facts and maintenance schedule
 - `0b65774` chore(data-toyota-us): step 0 baseline, schema map and test logs
-- коммит линейки Camry — см. `git log` (добавлен после этого отчёта)
+- `4a6e5d5` data(toyota-us): Camry — US MY2014-2026 tech facts, recalls, known issues
 
 ## 12. Библиотека других рынков
 Собрано **0 материалов**. Все издания, встретившиеся по пути, американские: 12 PDF Camry и 6 поколений на mycarusermanual (Corolla, RAV4, Prius). См. `data_work/_library/README.md`.
