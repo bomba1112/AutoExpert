@@ -34,6 +34,7 @@ def _load_module(name, path):
 
 builder = _load_module("build_us_tech_staging", ROOT / "scripts" / "build_us_tech_staging.py")
 loader = _load_module("load_us_tech_facts", ROOT / "scripts" / "load_us_tech_facts.py")
+batch = _load_module("build_us_batch_staging", ROOT / "scripts" / "build_us_batch_staging.py")
 
 
 def _staging():
@@ -62,13 +63,18 @@ def test_every_technical_fact_has_evidence():
 
 def test_every_configuration_has_engine_transmission_and_drive():
     for staging in _staging():
-        gap_scopes = {g["scope"] for g in staging["gaps"] if g["field"] == "engine_family_key"}
+        gaps = {(g["scope"], g["field"]) for g in staging["gaps"]}
         for cfg in staging["configurations"]:
-            assert cfg["drivetrain"] in {"FWD", "RWD", "AWD", "4WD"}, cfg["configuration_key"]
-            assert cfg["epa_trany"], cfg["configuration_key"]
-            assert Decimal(cfg["displacement_l"]) > 0 and cfg["cylinders"] > 0
+            key = cfg["configuration_key"]
+            # A missing value is allowed only with an explicit gap entry (prompt section 6).
+            assert cfg["drivetrain"] in {"FWD", "RWD", "AWD", "4WD", "2WD"} or (key, "drive") in gaps
+            assert cfg["epa_trany"] or (key, "transmission") in gaps, key
+            if cfg["powertrain"] in {"BEV", "FCEV"}:
+                assert cfg.get("displacement_l") is None, key  # electric motor, no engine
+            else:
+                assert Decimal(cfg["displacement_l"]) > 0 and cfg["cylinders"] > 0, key
             # Engine code only when a source confirms it; otherwise an explicit gap entry.
-            assert cfg["engine_family_key"] or cfg["configuration_key"] in gap_scopes
+            assert cfg["engine_family_key"] or (key, "engine_family_key") in gaps, key
 
 
 def test_generation_years_cover_scope_without_gaps():
@@ -76,7 +82,14 @@ def test_generation_years_cover_scope_without_gaps():
         covered = set()
         for gen in staging["generations"]:
             covered.update(range(gen["start_year"], gen["end_year"] + 1))
-        assert set(YEARS) <= covered, staging["line"]
+        model_years = {cfg["year"] for cfg in staging["configurations"]}
+        if staging.get("build"):
+            # Batch lines: every EPA model year of the line, contiguously, inside 2014-2026.
+            if model_years:
+                assert set(range(min(model_years), max(model_years) + 1)) <= covered, staging["line"]
+            assert covered <= set(YEARS), staging["line"]
+        else:
+            assert set(YEARS) <= covered, staging["line"]
         for cfg in staging["configurations"]:
             assert cfg["generation"], cfg["configuration_key"]
 
@@ -85,15 +98,16 @@ def test_only_us_market_records():
     for staging in _staging():
         assert staging["market"] == "US"
         for item in staging["sources"].values():
-            if item["source_type"] == "OWNER_MANUAL_COPY":
+            if item["source_type"] in {"OWNER_MANUAL_COPY", "OWNER_MANUAL_OFFICIAL"}:
                 assert item.get("edition") == "US", item["key"]
 
 
 def test_numeric_values_within_validator_ranges():
     for staging in _staging():
+        ranges = batch.RANGES if staging.get("build") else builder.RANGES
         for fact in staging["facts"]:
-            if fact["key"] in builder.RANGES and isinstance(fact["value"], (int, float)):
-                low, high = builder.RANGES[fact["key"]]
+            if fact["key"] in ranges and isinstance(fact["value"], (int, float)):
+                low, high = ranges[fact["key"]]
                 assert low <= fact["value"] <= high, (fact["id"], fact["value"])
 
 

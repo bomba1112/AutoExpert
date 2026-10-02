@@ -27,8 +27,18 @@ from pathlib import Path
 import httpx
 from bs4 import BeautifulSoup
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from us_tech_common import RAW_ROOT, read_maybe_gz, write_gz  # noqa: E402
+from us_tech_lines import MAKES, lines_for  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data_work" / "_mcum"
+RAW = RAW_ROOT / "_mcum"
+PRIORITY = re.compile(
+    r"specification|maintenance|lubric|capacit|fluid|oil|tire|tyre|wheel|fuel|dimension|"
+    r"measurement|weight|service|engine|filter|coolant|brake|battery",
+    re.I,
+)
 BASE = "https://www.mycarusermanual.com"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -139,9 +149,16 @@ def page_text(html: str) -> str:
 def save(raw_dir: Path, name: str, html: str) -> str:
     raw_dir.mkdir(parents=True, exist_ok=True)
     data = html.encode("utf-8")
-    (raw_dir / f"{name}.html").write_bytes(data)
+    write_gz(raw_dir / f"{name}.html.gz", data)
     (raw_dir / f"{name}.txt").write_text(page_text(html), encoding="utf-8")
     return hashlib.sha256(data).hexdigest()
+
+
+def load_saved(raw_dir: Path, name: str) -> str | None:
+    for candidate in (raw_dir / f"{name}.html.gz", raw_dir / f"{name}.html"):
+        if candidate.exists():
+            return read_maybe_gz(candidate).decode("utf-8")
+    return None
 
 
 def crawl(args) -> int:
@@ -154,8 +171,7 @@ def crawl(args) -> int:
 
     def fetch(url, meta, raw_dir, name):
         if url in done:
-            path = raw_dir / f"{name}.html"
-            return path.read_text(encoding="utf-8") if path.exists() else None
+            return load_saved(raw_dir, name)
         response = fetcher.get(url)
         status = response.status_code if response is not None else "ERROR"
         row = {
@@ -172,65 +188,92 @@ def crawl(args) -> int:
         append_manifest(manifest_path, row)
         return html
 
-    make = args.make.lower()
-    try:
-        for model in [m.strip().lower() for m in args.models.split(",") if m.strip()]:
-            model_meta = {"make": make, "model": model, "section": "_model"}
-            model_html = fetch(
-                f"{BASE}/{make}/{model}", model_meta, OUT / "raw" / make / model, "_model"
+    if args.all:
+        plan = [
+            (MAKES[line.make]["mcum"], slug)
+            for line in lines_for(include_done=True)
+            if MAKES[line.make]["mcum"]
+            for slug in line.mcum
+        ]
+    else:
+        plan = [
+            (args.make.lower(), m.strip().lower()) for m in args.models.split(",") if m.strip()
+        ]
+
+    def generations_of(make, model):
+        model_html = fetch(
+            f"{BASE}/{make}/{model}", {"make": make, "model": model, "section": "_model"},
+            RAW / make / model, "_model",
+        )
+        if model_html is None:
+            report.append(f"{make}/{model}: model page unavailable")
+            return []
+        found = [
+            url
+            for url in links_under(model_html, f"{BASE}/{make}/{model}/")
+            if re.fullmatch(
+                rf"{re.escape(BASE)}/{make}/{model}/[a-z0-9-]+/[0-9]{{4}}(-[0-9]{{4}})?", url
             )
-            if model_html is None:
-                report.append(f"{model}: model page unavailable")
+        ]
+        if not found:
+            report.append(f"{make}/{model}: not_on_site (no generation pages linked)")
+        return found
+
+    def walk(make, model, gen_url, priority_only):
+        body, years = gen_url.rsplit("/", 2)[-2:]
+        meta = {"make": make, "model": model, "body": body, "years": years}
+        raw_dir = RAW / make / model / f"{body}_{years}"
+        queue, seen, pages = [gen_url], {gen_url}, 0
+        while queue:
+            url = queue.pop(0)
+            section = "_index" if url == gen_url else url[len(gen_url) + 1 :]
+            html = fetch(url, {**meta, "section": section}, raw_dir, section or "_index")
+            if html is None:
                 continue
-            generations = [
-                url
-                for url in links_under(model_html, f"{BASE}/{make}/{model}/")
-                if re.fullmatch(
-                    rf"{re.escape(BASE)}/{make}/{model}/[a-z0-9-]+/[0-9]{{4}}(-[0-9]{{4}})?", url
-                )
-            ]
-            if not generations:
-                report.append(f"{model}: not_on_site (no generation pages linked)")
-                continue
-            for gen_url in generations:
-                body, years = gen_url.rsplit("/", 2)[-2:]
-                if not years_overlap(years, args.year_min, args.year_max):
-                    report.append(
-                        f"{model} {body} {years}: outside {args.year_min}-{args.year_max}, skipped"
-                    )
+            pages += 1
+            for link in links_under(html, gen_url + "/"):
+                if link in seen:
                     continue
-                meta = {"make": make, "model": model, "body": body, "years": years}
-                raw_dir = OUT / "raw" / make / model / f"{body}_{years}"
-                queue, seen, pages = [gen_url], {gen_url}, 0
-                while queue:
-                    url = queue.pop(0)
-                    section = "_index" if url == gen_url else url[len(gen_url) + 1 :]
-                    html = fetch(url, {**meta, "section": section}, raw_dir, section or "_index")
-                    if html is None:
+                if priority_only and not PRIORITY.search(link[len(gen_url) + 1 :]):
+                    continue
+                seen.add(link)
+                queue.append(link)
+        return body, years, pages
+
+    try:
+        for priority_only in ((True, False) if args.all else (False,)):
+            for make, model in plan:
+                for gen_url in generations_of(make, model):
+                    body, years = gen_url.rsplit("/", 2)[-2:]
+                    if not years_overlap(years, args.year_min, args.year_max):
+                        if not priority_only:
+                            report.append(
+                                f"{make}/{model} {body} {years}: outside "
+                                f"{args.year_min}-{args.year_max}, skipped"
+                            )
                         continue
-                    pages += 1
-                    for link in links_under(html, gen_url + "/"):
-                        if link not in seen:
-                            seen.add(link)
-                            queue.append(link)
-                report.append(f"{model} {body} {years}: {pages} pages")
-                print(report[-1], flush=True)
+                    body, years, pages = walk(make, model, gen_url, priority_only)
+                    label = "priority" if priority_only else "full"
+                    report.append(f"{make}/{model} {body} {years}: {pages} pages ({label})")
+                    print(report[-1], flush=True)
     except Blocked as exc:
         report.append(f"STOPPED: repeated block {exc}")
     finally:
-        summary = OUT / f"crawl_report_{make}.txt"
+        name = "all" if args.all else args.make.lower()
+        summary = OUT / f"crawl_report_{name}.txt"
         summary.parent.mkdir(parents=True, exist_ok=True)
         summary.write_text(
             "\n".join(report + [f"requests={fetcher.requests}"]) + "\n", encoding="utf-8"
         )
-        print("\n".join(report), flush=True)
+        print("\n".join(report[-5:]), flush=True)
     return 0
 
 
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--make", required=True)
-    parser.add_argument("--models", required=True)
+    parser.add_argument("--all", action="store_true")
+    parser.add_argument("--make")
+    parser.add_argument("--models")
     parser.add_argument("--year-min", type=int, default=2014)
     parser.add_argument("--year-max", type=int, default=2026)
     parser.add_argument("--min-pause", type=float, default=2.0)

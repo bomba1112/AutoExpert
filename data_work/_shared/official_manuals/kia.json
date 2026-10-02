@@ -1,0 +1,2072 @@
+{
+  "make": "Kia",
+  "portal": "https://owners.kia.com/us/en/manuals.html",
+  "checked_at": "2026-10-02",
+  "access": "mixed",
+  "notes": "Kia USA Owners Portal 'Manuals' (https://owners.kia.com/us/en/manuals.html) is an Angular app (clientlib /etc.clientlibs/owners/designs/owners/angularJS/manuals/clientlib.js): model/year list via POST /apps/services/owners/apigwServlet.html service /cmm/gvmh, documents via /cmm/gam ('preLogin'); each PDF is opened by submitting a hidden form with a token to payload.manualsURL, so owners.kia.com exposes no direct owner's-manual PDF URLs. owners.kia.com/robots.txt disallows /apps/, /bin/, /api/ and /content/ for all user-agents, so those endpoints were not called and PDFs under owners.kia.com/content/dam were not requested. owners.kia.com/us/en/service-page/warranty.html says detailed Warranty and Consumer Information requires login to the Owner's Portal (account_required for current-year warranty booklets). Direct PDFs found: (1) Owner's Manual PDFs from Kia's official web-manual service ownersmanual.kia.com (robots.txt 'Allow: /'): public JSON API /api/v3/kia/model?modelName=..&countryCode=B28&langCode=en_US and /api/v2/kia/model/owners-manuals?projectCode=..&year=..&langCode=en_US&countryCode=B28 (B28 = 'U.S.A' per /api/v2/kia/country-lang-mappings/dealer). The API returned omManual.pdfManual for 3 entries (how='api'); the same /full_pdf/{projCode}/{year}/en_US form was then range-checked for every other projCode/year the API lists (how='pattern_verified'; missing ones return HTTP 500 and are not listed). Note the API names the US Forte 'Cerato' (YD/BD/BDM). (2) General 'Warranty and Consumer Information Manual' PDFs 2014-2020 plus Optima Hybrid/PHEV variants on www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/ (found by site search; the pattern {year}_warranty.pdf returned 404 for 2021-2026). (3) Vehicle Feature Tips PDFs 2018-2026 linked from https://owners.kia.com/us/en/vehicle-feature-tips.html (not range-checked: robots). (4) 2026 Features & Functions Guides on dealervideos.kia.com (no robots.txt; found by site search). All fetched PDFs were checked with Range bytes=0-1023 only. Also available (not PDFs, listed separately in 'web_manuals'): US English HTML web owner's manuals / digital QRGs on ownersmanual.kia.com for the years the API lists; QRG pages for different requested years can carry the same '26MY' title (API returns the current QRG). Out-of-range PDFs seen: K5 DL3 2027: https://ownersmanual.kia.com/full_pdf/DL3/2027/en_US (206 %PDF 11570923 bytes); Sportage (P)HEV NQ5KH 2027: https://ownersmanual.kia.com/full_pdf/NQ5KH/2027/en_US (206 %PDF 11991881 bytes). Other-market Kia documents seen, NOT listed as US: Kia Puerto Rico https://www.kia.com/pr/service/manual.html links owner's manual PDFs under www.kia.com/content/dam/kwcms/pr/es/manual/ (e.g. ManualdePropietario2019/Optima.pdf, Forte.pdf, Forte-Koup.pdf, ManualdePropietario2022/2023_K5_OM.pdf, 2023_Forte_OM.pdf, 2023_Rio_OM.pdf, 2023_Sorento_OM_compressed.pdf, 2023_Sportage_OM.pdf; not range-checked); Kia UK quick reference guides under www.kia.com/content/dam/kwcms/kme/uk/en/... (Sorento, Sportage); ownersmanual.kia.com also serves Canada (B06, en_CA/fr_CA) and Puerto Rico (B35) editions, not queried.",
+  "documents": [
+    {
+      "line": "kia/forte",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2015,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Cerato YD 2015 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_pdf/YD/2015/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2015&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 11005732 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2016,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Cerato YD 2016 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_pdf/YD/2016/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2016&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 16534908 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Cerato YD 2017 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_pdf/YD/2017/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 12620196 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2018,
+      "doc_type": "quick_reference",
+      "title": "2018 Forte Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2018/2018-Kia-Forte-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Cerato BD 2019 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_pdf/BD/2019/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=BD&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 13498044 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2019,
+      "doc_type": "quick_reference",
+      "title": "2019 Forte Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2019/2019-Kia-Forte-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Forte Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Forte.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "2021 Kia Forte Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2021/2021-Kia-Forte-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia Forte Vehicle Feature Tips.",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-Forte-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Forte-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Forte-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-Forte-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-Forte-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 - Warranty and Consumer Information Manual - Kia (Optima Hybrid)",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/warranty-manual/2014_warranty_optima-hybrid.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 887279 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "Warranty and Consumer Information Manual (Optima Hybrid; file 2015_warranty_optima-hybrid.pdf)",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/warranty-manual/2015_warranty_optima-hybrid.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 785187 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima JF 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JF/2017/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 12533825 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima HEV JFE 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JFE/2017/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 13802633 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "Warranty and Consumer Information Manual (Optima Hybrid; file 2017_warranty_optima-hybrid.pdf)",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/warranty-manual/2017_warranty_optima-hybrid.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 955616 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual (Optima Plug-in Hybrid)",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/warranty-manual/2017_warranty_optima-plug-in-hybrid.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 844626 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima JF 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JF/2018/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 11886456 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima HEV JFE 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JFE/2018/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 12123109 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "quick_reference",
+      "title": "2018 Optima Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2018/2018-Kia-Optima-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima JF 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JF/2019/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 14459342 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima HEV JFE 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JFE/2019/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 12549770 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "quick_reference",
+      "title": "2019 Optima Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2019/2019-Kia-Optima-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2020,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Optima HEV JFE 2020 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/JFE/2020/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2020&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 14885172 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Optima HEV Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Optima-HEV.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Optima PHEV Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Optima-PHEV.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Optima Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Optima.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "2021 Kia K5 Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2021/2021-Kia-K5-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia K5 Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-K5-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-K5-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-K5-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-K5-Vehicle-Features-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-K5-Vehicle-Features-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "2025-Kia-K5-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2025/2025-Kia-K5-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "K5 Features & Functions Guide (second path, same size)",
+      "url": "https://dealervideos.kia.com/ffg/dl13/2026/2026_k5_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 6469909 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "K5 Features & Functions Guide",
+      "url": "https://dealervideos.kia.com/ffg/guide/2026/2026_k5_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 6469909 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "2026-Kia-K5-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2026/2026-Kia-K5-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2015,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Rio UB 2015 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/UB/2015/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=UB&year=2015&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 9946891 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2018,
+      "doc_type": "quick_reference",
+      "title": "2018 Rio Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2018/2018-Kia-Rio-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2019,
+      "doc_type": "quick_reference",
+      "title": "2019 Rio Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2019/2019-Kia-Rio-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Rio Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Rio.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "2021 Kia Rio Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2021/2021-Kia-Rio-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia Rio Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-Rio-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Rio-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Rio-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2018,
+      "doc_type": "quick_reference",
+      "title": "2018 Sorento Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2018/2018-Kia-Sorento-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2019,
+      "doc_type": "quick_reference",
+      "title": "2019 Sorento Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2019/2019-Kia-Sorento-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Sorento Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Sorento.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "2021 Kia Sorento Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2021/2021-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia Sorento HEV PHEV Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia Sorento Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Sorento-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-Sorento-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "2025-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2025/2025-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "2025-Kia-Sorento-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2025/2025-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "Sorento Features & Functions Guide",
+      "url": "https://dealervideos.kia.com/ffg/mq13/2026/2026_sorento_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 9696243 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "Features & Functions Guide Sorento Hybrid",
+      "url": "https://dealervideos.kia.com/ffg/mq4hev13/2026/2026_sorento_hev_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 8043559 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sorento MQ4A 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/MQ4A/2026/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 12410615 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sorento (P)HEV MQ4KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/MQ4KH/2026/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 10114475 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "2026-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2026/2026-Kia-Sorento-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "2026-Kia-Sorento-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2026/2026-Kia-Sorento-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sportage QL 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/QL/2017/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 15006183 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sportage QL 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/QL/2018/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 14456506 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2018,
+      "doc_type": "quick_reference",
+      "title": "2018 Sportage Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2018/2018-Kia-Sportage-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sportage QL 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/QL/2019/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 17792331 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2019,
+      "doc_type": "quick_reference",
+      "title": "2019 Sportage Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2019/2019-Kia-Sportage-Vehicle-Feature-Tips-min.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2020,
+      "doc_type": "quick_reference",
+      "title": "2020 Sportage Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2020/2020-Kia-Sportage.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual [general, all models]",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "2021 Kia Sportage Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2021/2021-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "2022 Kia Sportage Vehicle Feature Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2022/2022-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "2023-Kia-Sportage-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2023/2023-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "2024-Kia-Sportage-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2024/2024-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "2025-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2025/2025-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "2025-Kia-Sportage-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2025/2025-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "Sportage Features & Functions Guide",
+      "url": "https://dealervideos.kia.com/ffg/nq13/2026/2026_sportage_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 8497296 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "other",
+      "title": "Sportage Hybrid Features & Functions Guide",
+      "url": "https://dealervideos.kia.com/ffg/nqhev13/2026/2026_sportagehev_ffg.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 7010076 bytes",
+      "how": "site_search"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sportage NQ5 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/NQ5/2026/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 8537364 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (Sportage (P)HEV NQ5KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_pdf/NQ5KH/2026/en_US",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "206 %PDF 9191023 bytes",
+      "how": "pattern_verified"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "2026-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2026/2026-Kia-Sportage-HEV-PHEV-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "2026-Kia-Sportage-Vehicle-Feature-Tips",
+      "url": "https://owners.kia.com/content/dam/kia/us/owners/pdf/2026/2026-Kia-Sportage-Vehicle-Feature-Tips.pdf",
+      "page_url": "https://owners.kia.com/us/en/vehicle-feature-tips.html",
+      "verified": "not_fetched: owners.kia.com robots.txt has 'Disallow: /content/' for all user-agents; link read from the page HTML",
+      "how": "linked"
+    }
+  ],
+  "shared_documents": [
+    {
+      "year": 2014,
+      "doc_type": "warranty_maintenance",
+      "title": "2014 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2014_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 774717 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2015,
+      "doc_type": "warranty_maintenance",
+      "title": "2015 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2015_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 773890 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2016,
+      "doc_type": "warranty_maintenance",
+      "title": "2016 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2016_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 897320 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2017,
+      "doc_type": "warranty_maintenance",
+      "title": "2017 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2017_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 842993 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2018,
+      "doc_type": "warranty_maintenance",
+      "title": "2018 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2018_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 775352 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2019,
+      "doc_type": "warranty_maintenance",
+      "title": "2019 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2019_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2280952 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    },
+    {
+      "year": 2020,
+      "doc_type": "warranty_maintenance",
+      "title": "2020 Warranty and Consumer Information Manual",
+      "url": "https://www.kia.com/us/content/dam/kia/us/en/images/warranty/manual/general-warranty-and-consumer-info/2020_warranty.pdf",
+      "page_url": null,
+      "verified": "206 %PDF 2295697 bytes",
+      "how": "site_search",
+      "applies_to": "general (all-models) US warranty manual for that MY",
+      "role": "primary"
+    }
+  ],
+  "web_manuals": [
+    {
+      "line": "kia/forte",
+      "year": 2014,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato YD 2014 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/YD/2014/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2014&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2015,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato YD 2015 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/YD/2015/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2015&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2016,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato YD 2016 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/YD/2016/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2016&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato YD 2017 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/YD/2017/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato YD 2018 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/YD/2018/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=YD&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Cerato BD 2019 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/BD/2019/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=BD&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2022,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Cerato BDM 2022 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/BDM/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=BDM&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 65414 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2024,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'BDm_24MY' (Cerato BDM 2024 en_US, country U.S.A (B28); API model name 'Cerato' = US Forte)",
+      "url": "https://ownersmanual.kia.com/full_webhelp/BDM/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=BDM&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 36821 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2016,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima JF 2016 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JF/2016/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2016&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima JF 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JF/2017/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima HEV JFE 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JFE/2017/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima JF 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JF/2018/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima HEV JFE 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JFE/2018/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima JF 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JF/2019/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JF&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Optima HEV JFE 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/JFE/2019/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=JFE&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2022,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (K5 DL3A 2022 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/DL3A/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=DL3A&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 63994 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2025,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (K5 DL3 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/DL3/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=DL3&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 63596 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - DL3 ICE 26MY' (K5 DL3 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/DL3/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=DL3&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19097 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (K5 DL3 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/DL3/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=DL3&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 63436 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - DL3 ICE 26MY' (K5 DL3 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/DL3/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=DL3&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19097 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2016,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Rio UB 2016 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/UB/2016/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=UB&year=2016&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Rio UB 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/UB/2017/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=UB&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2021,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sorento MQ4A 2021 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4A/2021/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2021&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 73538 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2021,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4a ICE PE 26MY' (Sorento MQ4A 2021 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4A/2021/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2021&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19106 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sorento MQ4A 2022 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4A/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 70582 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sorento (P)HEV MQ4KH 2022 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4KH/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 73154 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4a ICE PE 26MY' (Sorento MQ4A 2022 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4A/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19106 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4 PHEV PE 26MY' (Sorento (P)HEV MQ4KH 2022 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4KH/2022/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2022&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19113 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2023,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'MQ4_PHEV_23MY_NA' (Sorento (P)HEV MQ4KH 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4KH/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 48753 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4 PHEV PE 26MY' (Sorento (P)HEV MQ4KH 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4KH/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19113 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2024,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sorento MQ4A 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4A/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 70815 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4a ICE PE 26MY' (Sorento MQ4A 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4A/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19106 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2025,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'MQ4a_ICE_PE_US_24MY' (Sorento MQ4A 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4A/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 46436 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4a ICE PE 26MY' (Sorento MQ4A 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4A/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19106 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'MQ4a_ICE_PE_US_26MY' (Sorento MQ4A 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4A/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 48516 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sorento (P)HEV MQ4KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/MQ4KH/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 76351 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4a ICE PE 26MY' (Sorento MQ4A 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4A/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4A&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19106 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - MQ4 PHEV PE 26MY' (Sorento (P)HEV MQ4KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/MQ4KH/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=MQ4KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19113 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2014,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Sportage SL 2014 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/SL/2014/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=SL&year=2014&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2017,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title '' (Sportage QL 2017 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/QL/2017/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2017&langCode=en_US&countryCode=B28",
+      "verified": "404 text/html 0 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2018,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Sportage QL 2018 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/QL/2018/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2018&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2019,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'Kia Owner's Manual' (Sportage QL 2019 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/QL/2019/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=QL&year=2019&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 928 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'NQ5_STD_NA_enus' (Sportage NQ5 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 46336 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'NQ5_HEV_PHEV_23MY_NA_enus' (Sportage (P)HEV NQ5KH 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5KH/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 47877 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 ICE 26MY' (Sportage NQ5 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19331 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 PHEV 26MY' (Sportage (P)HEV NQ5KH 2023 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5KH/2023/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2023&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19111 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'NQ5_ICE_US_24MY' (Sportage NQ5 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 47572 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sportage NQ5A 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5A/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5A&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 69828 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sportage (P)HEV NQ5KH 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5KH/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 74285 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 ICE 26MY' (Sportage NQ5 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19331 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5a ICE 25MY' (Sportage NQ5A 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5A/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5A&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 16974 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 PHEV 26MY' (Sportage (P)HEV NQ5KH 2024 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5KH/2024/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2024&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19111 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sportage NQ5 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 70827 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sportage (P)HEV NQ5KH 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5KH/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 74633 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 ICE 26MY' (Sportage NQ5 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19331 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 PHEV 26MY' (Sportage (P)HEV NQ5KH 2025 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5KH/2025/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2025&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19111 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title '' (Sportage NQ5 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "404 text/html 0 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "owners_manual",
+      "title": "Owner's Manual (web/HTML); page title 'KIA HTML Manual' (Sportage (P)HEV NQ5KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/full_webhelp/NQ5KH/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 75738 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 ICE 26MY' (Sportage NQ5 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19331 bytes",
+      "how": "api"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2026,
+      "doc_type": "quick_reference",
+      "title": "Quick Reference Guide (web/HTML); page title 'Digital QRG - NQ5 PHEV 26MY' (Sportage (P)HEV NQ5KH 2026 en_US, country U.S.A (B28))",
+      "url": "https://ownersmanual.kia.com/qrg_webhelp/NQ5KH/2026/en_US/index.html",
+      "page_url": "https://ownersmanual.kia.com/api/v2/kia/model/owners-manuals?projectCode=NQ5KH&year=2026&langCode=en_US&countryCode=B28",
+      "verified": "200 text/html;charset=UTF-8 19111 bytes",
+      "how": "api"
+    }
+  ],
+  "not_found": [
+    {
+      "line": "kia/optima-k5",
+      "year": 2014,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2015,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2016,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2021,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2022,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2023,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2024,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2025,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/optima-k5",
+      "year": 2026,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (other, quick_reference)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2014,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2018,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2020,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2021,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2022,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2023,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/forte",
+      "year": 2024,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2014,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2016,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2017,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2018,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2019,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2020,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2021,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2022,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/rio",
+      "year": 2023,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2014,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2015,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2016,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2017,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2018,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2019,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2020,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2021,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2022,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2023,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2024,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sorento",
+      "year": 2025,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2014,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2015,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2016,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (warranty_maintenance)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2020,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference, warranty_maintenance)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2021,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2022,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; ownersmanual.kia.com lists no US manual for this year; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2023,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2024,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    },
+    {
+      "line": "kia/sportage",
+      "year": 2025,
+      "reason": "no US owner's manual PDF URL found. owners.kia.com Manuals page (Angular app) gets the list via POST /apps/services/owners/apigwServlet.html (service /cmm/gvmh, /cmm/gam; robots.txt Disallow /apps/, not called) and opens each PDF by a form POST with a one-time token to a 'manualsURL', i.e. no direct PDF URL; ownersmanual.kia.com API (U.S.A/B28, en_US) has no PDF for this year; an official US web (HTML) owner's manual exists for this year, see web_manuals; other documents for this line/year are listed (quick_reference)"
+    }
+  ]
+}

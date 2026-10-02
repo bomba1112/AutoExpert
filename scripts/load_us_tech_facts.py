@@ -27,6 +27,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
+sys.path.insert(0, str(ROOT / "scripts"))
+from us_tech_common import RAW_ROOT  # noqa: E402
+
+
+def source_path(path: str) -> Path:
+    """rawstore:<rel> lives in the raw store outside OneDrive; other paths are repo-relative."""
+    if path.startswith("rawstore:"):
+        return RAW_ROOT / path[len("rawstore:") :]
+    return ROOT / path
 
 LOAD_VERSION = "us-tech-load-1"
 REGISTRY = {  # knowledge_sources registry id per staging source_type (existing rows only)
@@ -122,14 +131,31 @@ class Loader:
 
         self.db, self.s, self.report = db, staging, report
         self.make = db.scalar(select(VehicleMake).where(VehicleMake.name == staging["make"]))
-        self.model = db.scalar(
-            select(VehicleModel).where(
-                VehicleModel.make_id == self.make.id, VehicleModel.name == line_name
-            )
-        )
+        names = staging.get("db_models") or [line_name]
+        self.models = {name: self.model_row(name) for name in names}
+        self.model = self.models[names[0]]
         self.source_ids, self.raw_ids, self.gen_ids = {}, {}, {}
         self.te_by_key = {}
         self.counts = Counter()
+
+    def model_row(self, name):
+        """Existing model of the make, or a new one for a line the catalog does not have yet."""
+        from app.models.catalog import VehicleModel
+        from sqlalchemy import select
+
+        row = self.db.scalar(
+            select(VehicleModel).where(
+                VehicleModel.make_id == self.make.id, VehicleModel.name == name
+            )
+        )
+        if row is None:
+            row = VehicleModel(
+                make_id=self.make.id, name=name, normalized_name=name.lower(), is_demo=False
+            )
+            self.db.add(row)
+            self.db.flush()
+            self.report.setdefault("models_created", []).append(name)
+        return row
 
     # ---- sources -------------------------------------------------------------------
     def load_sources(self):
@@ -139,15 +165,22 @@ class Loader:
         from sqlalchemy import select
 
         for key, item in self.s["sources"].items():
-            registry = REGISTRY.get(item["source_type"])
-            if item["source_type"] == "US_FEDERAL_DATASET":
+            registry = item.get("registry") or REGISTRY.get(item["source_type"])
+            if item["source_type"] == "US_FEDERAL_DATASET" and not item.get("registry"):
                 registry = "epa" if key == "epa" else "nhtsa-safety-batch"
             paths = item.get("paths") or [item["path"]]
             raw_id = None
             for path in paths:
-                content = (ROOT / path).read_bytes()
+                # Batch PDF sources store only the cited pages (with the PDF sha256) as the raw
+                # document; the full PDF stays in the raw store outside OneDrive.
+                extract = item.get("extract")
+                content = extract.encode("utf-8") if extract else source_path(path).read_bytes()
                 media = (
-                    "application/pdf"
+                    "application/json"
+                    if extract
+                    else "application/gzip"
+                    if path.endswith(".gz")
+                    else "application/pdf"
                     if path.endswith(".pdf")
                     else "application/zip"
                     if path.endswith(".zip")
@@ -164,7 +197,7 @@ class Loader:
                 self.counts["raw_documents_seen"] += 1
             self.raw_ids[key] = raw_id
             digest = (
-                item.get("sha256") or hashlib.sha256((ROOT / paths[0]).read_bytes()).hexdigest()
+                item.get("sha256") or hashlib.sha256(source_path(paths[0]).read_bytes()).hexdigest()
             )
             marker = f"us_tech_source={key}; sha256={digest}"
             existing = self.db.scalar(
@@ -202,20 +235,33 @@ class Loader:
         from sqlalchemy import select
 
         for gen in self.s["generations"]:
-            row = self.db.scalar(
-                select(VehicleGeneration).where(
-                    VehicleGeneration.model_id == self.model.id,
-                    VehicleGeneration.code == gen["code"],
-                    VehicleGeneration.is_demo.is_(False),
+            model = self.model
+            if gen.get("db_model"):
+                model = self.models.get(gen["db_model"]) or self.model_row(gen["db_model"])
+            if gen.get("existing_id"):
+                row = self.db.get(VehicleGeneration, gen["existing_id"])
+            else:
+                row = self.db.scalar(
+                    select(VehicleGeneration).where(
+                        VehicleGeneration.model_id == model.id,
+                        VehicleGeneration.code == gen["code"],
+                        VehicleGeneration.is_demo.is_(False),
+                    )
                 )
+            # Batch staging marks which years a detected boundary backs; Camry staging has no
+            # flags because both years come from its sources.
+            start_year = gen["start_year"] if gen.get("start_known", True) else None
+            end_year = (
+                None
+                if gen.get("open_ended") or not gen.get("end_known", True)
+                else gen["end_year"]
             )
-            end_year = None if gen.get("open_ended") else gen["end_year"]
             if row is None:
                 row = VehicleGeneration(
-                    model_id=self.model.id,
+                    model_id=model.id,
                     name=gen.get("name") or f"{gen['code']} generation",
                     code=gen["code"],
-                    start_year=gen["start_year"],
+                    start_year=start_year,
                     end_year=end_year,
                     is_demo=False,
                 )
@@ -225,26 +271,26 @@ class Loader:
                     {
                         "code": gen["code"],
                         "action": "created",
-                        "start_year": gen["start_year"],
+                        "start_year": start_year,
                         "end_year": end_year,
                     }
                 )
             else:
                 changes = {}
-                if row.start_year is None:
-                    row.start_year, changes["start_year"] = gen["start_year"], gen["start_year"]
-                elif row.start_year != gen["start_year"]:
+                if row.start_year is None and start_year is not None:
+                    row.start_year, changes["start_year"] = start_year, start_year
+                elif None not in (row.start_year, start_year) and row.start_year != start_year:
                     self.report["conflicts"].append(
                         {
                             "what": f"generation {gen['code']} start_year",
                             "existing": row.start_year,
-                            "new": gen["start_year"],
+                            "new": start_year,
                             "resolution": "existing kept",
                         }
                     )
                 if row.end_year is None and end_year is not None:
                     row.end_year, changes["end_year"] = end_year, end_year
-                elif row.end_year is not None and row.end_year != end_year:
+                elif None not in (row.end_year, end_year) and row.end_year != end_year:
                     self.report["conflicts"].append(
                         {
                             "what": f"generation {gen['code']} end_year",
@@ -434,7 +480,7 @@ class Loader:
                 VehicleGeneration.model_id == self.model.id,
                 VehicleVariant.year_from == year,
                 VehicleVariant.market == "US",
-                VehicleVariant.catalog_key.like("factory-toyota-us:%"),
+                VehicleVariant.catalog_key.like(f"{self.factory_prefix()}:%"),
                 VehicleVariant.is_demo.is_(False),
             )
         ).all()
@@ -455,11 +501,19 @@ class Loader:
                 matches.append(v.id)
         return matches[0] if len(matches) == 1 else None
 
+    def factory_prefix(self):
+        return {
+            "Mercedes-Benz": "factory-mercedes-us",
+            "Land Rover": "factory-land-rover-us",
+            "Volkswagen": "factory-vw-us",
+        }.get(self.s["make"], f"factory-{self.s['make'].lower()}-us")
+
     def load_configurations(self):
         for cfg in self.s["configurations"]:
             key = cfg["configuration_key"]
             year = cfg["year"]
-            variant = self.factory_variant(year, cfg) if year <= 2020 else None
+            linkable = (year <= 2020 or self.s.get("build")) and cfg.get("displacement_l")
+            variant = self.factory_variant(year, cfg) if linkable else None
             base = {
                 "configuration_key": key,
                 "generation": cfg["generation"],
@@ -542,7 +596,7 @@ class Loader:
 
     def load_recalls(self):
         for r in self.s["recalls"]:
-            src = f"nhtsa-recalls-{r['model_years'][0]}"
+            src = r.get("source") or f"nhtsa-recalls-{r['model_years'][0]}"
             self.add_te(
                 natural_key=nkey("recall", self.s["line"], r["campaign_number"], r["generation"]),
                 category="SAFETY",
@@ -598,7 +652,7 @@ class Loader:
         for key, p in self.s["symptom_patterns"].items():
             gen, symptom = key.split("|", 1)
             years = sorted(int(y) for y in p["by_year"])
-            first = f"nhtsa-complaints-{years[0]}"
+            first = p.get("source") or f"nhtsa-complaints-{years[0]}"
             self.add_te(
                 natural_key=nkey("cmplpattern", self.s["line"], key),
                 category="OTHER",
@@ -773,7 +827,7 @@ class Loader:
             .where(
                 VehicleGeneration.model_id == self.model.id,
                 VehicleVariant.market == "US",
-                VehicleVariant.catalog_key.like("factory-toyota-us:%"),
+                VehicleVariant.catalog_key.like(f"{self.factory_prefix()}:%"),
                 VehicleVariant.year_from >= 2014,
             )
         ).all()

@@ -10,6 +10,7 @@ from __future__ import annotations
 from decimal import ROUND_HALF_UP, Decimal
 
 MM_PER_IN = Decimal("25.4")
+MM_PER_CM = Decimal("10")  # SI definition (vPIC Canadian specifications are in cm)
 L_PER_US_GAL = Decimal("3.785411784")
 L_PER_US_QT = Decimal("0.946352946")
 KG_PER_LB = Decimal("0.45359237")
@@ -22,6 +23,7 @@ L100KM_MPG_US = Decimal("235.2145833")  # L/100 km = constant / US mpg
 
 FACTORS = {
     ("in", "mm"): MM_PER_IN,
+    ("cm", "mm"): MM_PER_CM,
     ("gal", "L"): L_PER_US_GAL,
     ("qt", "L"): L_PER_US_QT,
     ("lb", "kg"): KG_PER_LB,
