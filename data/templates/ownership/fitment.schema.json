@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "part_number": {
+      "title": "Part Number",
+      "type": "string"
+    },
+    "brand": {
+      "title": "Brand",
+      "type": "string"
+    },
+    "material_key": {
+      "title": "Material Key",
+      "type": "string"
+    },
+    "relationship": {
+      "enum": [
+        "OEM",
+        "SUPERSESSION",
+        "MANUFACTURER_EQUIVALENT",
+        "SELLER_CLAIM"
+      ],
+      "title": "Relationship",
+      "type": "string"
+    },
+    "replaces": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Replaces"
+    },
+    "production_from": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Production From"
+    },
+    "production_to": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Production To"
+    },
+    "constraints": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Constraints",
+      "type": "object"
+    },
+    "identity_basis": {
+      "minLength": 10,
+      "title": "Identity Basis",
+      "type": "string"
+    }
+  },
+  "required": [
+    "part_number",
+    "brand",
+    "material_key",
+    "relationship",
+    "identity_basis"
+  ],
+  "title": "PartFitment",
+  "type": "object"
+}

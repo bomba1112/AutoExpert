@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-09-20",
+  "sources": [
+    {
+      "id": "toyota-uk-media",
+      "title": "Toyota UK Media",
+      "url": "https://media.toyota.co.uk/legal-notice/",
+      "market": "UK",
+      "type": "factory_technical_maintenance",
+      "status": "NEEDS_PERMISSION",
+      "reason": "Published terms limit use to personal purposes without prior permission for commercial use. No bulk technical import performed."
+    },
+    {
+      "id": "toyota-us-media",
+      "title": "Toyota US Pressroom",
+      "url": "https://pressroom.toyota.com/terms-agreements/",
+      "market": "US",
+      "type": "factory_technical",
+      "status": "NEEDS_PERMISSION",
+      "reason": "Editorial use terms do not establish permission for commercial catalog reuse; no bulk import."
+    },
+    {
+      "id": "vca-fuel",
+      "title": "VCA UK fuel data",
+      "url": "https://carfueldata.vehicle-certification-agency.gov.uk/downloads/default.aspx",
+      "market": "UK",
+      "type": "fuel_consumption",
+      "status": "TECHNICALLY_UNAVAILABLE",
+      "reason": "Download landing page redirects to home; no verified current downloadable dataset obtained."
+    },
+    {
+      "id": "socar-retail",
+      "title": "SOCAR Petroleum",
+      "url": "https://www.socar-petroleum.az/az/pages/mehsullar",
+      "market": "AZ",
+      "type": "fuel_prices",
+      "status": "TECHNICALLY_UNAVAILABLE",
+      "reason": "Direct fetch ConnectError on product and supplier identity pages; web reader timed out. AI95/AI98 prices not published from snippets."
+    },
+    {
+      "id": "mazda-az-service",
+      "title": "Mazda Azerbaijan Service",
+      "url": "https://www.mazda.az/service/maintaince",
+      "market": "AZ",
+      "type": "maintenance",
+      "status": "APPLICABILITY_REVIEW_REQUIRED",
+      "reason": "Dealer schedule was read. No sufficient model-year/engine applicability to current US/CA configurations; commercial reuse rights not established. No blanket schedule applied."
+    },
+    {
+      "id": "avtoklub-az",
+      "title": "Avtok1ub",
+      "url": "https://avtoklub.com/",
+      "market": "AZ",
+      "type": "labor_quotes",
+      "status": "CHECKED_INSUFFICIENT",
+      "reason": "Provider site exists and lists service categories; no dated comparable operation-level quote established. No fabricated hourly rate or dealer package."
+    },
+    {
+      "id": "autoparts-az",
+      "title": "AutoParts.az",
+      "url": "https://autoparts.az/index.php?page=4&path=1141&route=product%2Fcategory",
+      "market": "AZ",
+      "type": "parts_prices",
+      "status": "NEEDS_PERMISSION",
+      "reason": "Store discovery only. No permission, exact fitment and dated comparable offer established. Marketplace snippets not imported."
+    },
+    {
+      "id": "megazap-az",
+      "title": "MegaZap.az candidate",
+      "url": null,
+      "market": "AZ",
+      "type": "parts_prices",
+      "status": "NOT_VERIFIED",
+      "reason": "Requested candidate existence not verified. Megaparts.az is a different domain and was not silently substituted."
+    },
+    {
+      "id": "commons-images",
+      "title": "Wikimedia Commons selected creators",
+      "url": "https://commons.wikimedia.org/",
+      "market": "US",
+      "type": "vehicle_images",
+      "status": "TECHNICALLY_UNAVAILABLE",
+      "reason": "Four description/licensing pages inspected through web reader. HTML and public original-file downloads returned HTTP403. Four URL candidates, zero stored images, zero approvals."
+    },
+    {
+      "id": "nhtsa-safety-batch",
+      "title": "NHTSA public datasets",
+      "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+      "market": "US",
+      "type": "recall_complaint_tsb",
+      "status": "BATCH_EXECUTED_REVIEW_REQUIRED",
+      "reason": "52 owner-priority US model families attempted; 46 PARTIAL, 5 worker COMPLETE, 1 unresolved source label. Official documentation checked before requests. Model-year evidence needs applicability review, not KnownIssue promotion. Receipt journal under VerifiedData/market-priority."
+    }
+  ]
+}

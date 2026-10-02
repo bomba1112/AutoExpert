@@ -1,0 +1,4515 @@
+{
+  "source_id": "epa",
+  "parser": "manifest-json-v1",
+  "dataset_kind": null,
+  "family_mappings": [],
+  "document_id": null,
+  "download_url": null,
+  "expected_sha256": null,
+  "year_min": 2016,
+  "year_max": 2026,
+  "makes": [],
+  "priority_families": [],
+  "family_limit": 120,
+  "versions_per_family": 6,
+  "selection_basis": "Frozen existing 51-family US verification cohort; reviewed documentary corrections only, no new families or versions",
+  "dry_run": false,
+  "records": [
+    {
+      "external_key": "42440",
+      "make": "Kia",
+      "model": "Cadenza",
+      "configuration": "Cadenza · 3.3 · Automatic (S8) · Front-Wheel Drive",
+      "aliases": [
+        "Cadenza"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "3.3",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "6",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "3.3L V6 DOHC Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: Technology, Limited",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "da8cd511-ede0-4213-8576-a5f4deead54d",
+            "sha256": "dc80fb7de00703ed4cf5924939cfd382e327468ddcf902936404af71bed852af",
+            "url": "https://www.kiamedia.com/us/en/models/cadenza/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: Technology, Limited",
+            "make": "Kia",
+            "model": "Cadenza",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_description": {
+          "value": "Automatic (S8)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Large Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "10.23",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "16",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 42440: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/42440",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "48163",
+      "make": "BMW",
+      "model": "3 Series",
+      "configuration": "330i Sedan · 2.0 · Automatic (S8) · Rear-Wheel Drive",
+      "aliases": [
+        "330i Sedan"
+      ],
+      "original_market": "US",
+      "model_year": 2025,
+      "generation": "Seventh generation · US sedan",
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "MHEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Premium Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "B48B20O2 · 1998 cm3 · I4 turbo · 48V MHEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "8-speed Steptronic automatic",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_family": {
+          "value": "AT",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "epa",
+            "document_id": "82ff65d2-cf6c-4a84-8179-3211d901e329",
+            "sha256": "205181c90f2e9f07f794a2d1e7b2322fd7d2d7e111eb4f6f30ea6b07f566b94f",
+            "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48163",
+            "locator": "EPA vehicle 48163: drive field, matched make/model/year",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "size_class": {
+          "value": "Compact Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "7.59",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "44V Li-Ion",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "13",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48163: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_code": {
+          "value": "B48B20O2",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "gears": {
+          "value": 8,
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48163",
+      "source_date": null,
+      "revision_note": "Factory verification review: retain EPA consumption; refine HEV to documented 48V MHEV and add scoped factory identity. No whole-generation or VIN certification.",
+      "identity_verification": {
+        "previous_revision_id": "33d64853-5148-4374-a9e6-9ce7d9b951eb",
+        "applicability": "US model year 2025, 330i Sedan or 330i xDrive Sedan as individually identified by the existing EPA configuration. No other years, Touring, M340i, trim packages or individual VIN certified.",
+        "field_evidence": {
+          "market": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "applicability": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "transmission_description": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "drivetrain": [
+            {
+              "registry_id": "epa",
+              "document_id": "82ff65d2-cf6c-4a84-8179-3211d901e329",
+              "sha256": "205181c90f2e9f07f794a2d1e7b2322fd7d2d7e111eb4f6f30ea6b07f566b94f",
+              "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48163",
+              "locator": "EPA vehicle 48163: drive field, matched make/model/year",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "engine_description": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "model_year": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "generation": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        "unresolved_conflicts": [],
+        "review_note": "Manufacturer specifies seventh generation, B48B20O2, 48V mild hybrid and 8-speed Steptronic; EPA confirms individual RWD/AWD configuration. EPA HEV is refined to MHEV. Gearbox internal code and entire generation production interval remain unknown."
+      },
+      "documentary_sections": [
+        {
+          "key": "engine",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Для этих версий 2025 года BMW указывает B48B20O2: 1998 см³, четыре цилиндра, турбонаддув и мягкий гибрид 48 В. Это уточнение общей категории HEV исходной записи EPA.",
+            "az": "Bu 2025 versiyaları üçün BMW B48B20O2 göstərir: 1998 sm³, dörd silindr, turbo və 48 V yumşaq hibrid. EPA qeydindəki ümumi HEV kateqoriyası dəqiqləşdirilib."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        {
+          "key": "transmission",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Подтверждена 8-ступенчатая автоматическая Steptronic. Внутренний код коробки пока не подтверждён; вывод не распространяется на другие годы или модели.",
+            "az": "8-pilləli avtomatik Steptronic təsdiqlənib. Qutunun daxili kodu hələ təsdiqlənməyib; nəticə başqa illərə və modellərə aid deyil."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        {
+          "key": "applicability",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Область проверки: США, 2025 год, седан 330i с задним приводом либо 330i xDrive с полным приводом. Пакеты комплектации и состояние конкретного автомобиля не установлены.",
+            "az": "Yoxlama sahəsi: ABŞ, 2025, arxa ötürücülü 330i və ya tam ötürücülü 330i xDrive sedan. Təchizat paketləri və konkret avtomobilin vəziyyəti müəyyən edilməyib."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            },
+            {
+              "registry_id": "epa",
+              "document_id": "82ff65d2-cf6c-4a84-8179-3211d901e329",
+              "sha256": "205181c90f2e9f07f794a2d1e7b2322fd7d2d7e111eb4f6f30ea6b07f566b94f",
+              "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48163",
+              "locator": "EPA vehicle 48163: drive field, matched make/model/year",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        }
+      ],
+      "market_observations": []
+    },
+    {
+      "external_key": "48164",
+      "make": "BMW",
+      "model": "3 Series",
+      "configuration": "330i xDrive Sedan · 2.0 · Automatic (S8) · All-Wheel Drive",
+      "aliases": [
+        "330i xDrive Sedan"
+      ],
+      "original_market": "US",
+      "model_year": 2025,
+      "generation": "Seventh generation · US sedan",
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "MHEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Premium Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "B48B20O2 · 1998 cm3 · I4 turbo · 48V MHEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "8-speed Steptronic automatic",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_family": {
+          "value": "AT",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "epa",
+            "document_id": "884da9fd-f9a4-49f6-ae07-08975484c29a",
+            "sha256": "579f95cd6b6ed2ba9c6c111de26291e5b56fcd900522bb6c235ad64f07e91217",
+            "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48164",
+            "locator": "EPA vehicle 48164: drive field, matched make/model/year",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "size_class": {
+          "value": "Compact Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "8.11",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "44V Li-Ion",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "13",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48164: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_code": {
+          "value": "B48B20O2",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "gears": {
+          "value": 8,
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-bmw-us",
+            "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+            "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+            "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+            "make": "BMW",
+            "model": "3 Series",
+            "market": "US",
+            "model_year": 2025
+          }
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48164",
+      "source_date": null,
+      "revision_note": "Factory verification review: retain EPA consumption; refine HEV to documented 48V MHEV and add scoped factory identity. No whole-generation or VIN certification.",
+      "identity_verification": {
+        "previous_revision_id": "9cf8c41d-7def-4acc-a6e3-ad97437c9a05",
+        "applicability": "US model year 2025, 330i Sedan or 330i xDrive Sedan as individually identified by the existing EPA configuration. No other years, Touring, M340i, trim packages or individual VIN certified.",
+        "field_evidence": {
+          "market": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "applicability": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "transmission_description": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "drivetrain": [
+            {
+              "registry_id": "epa",
+              "document_id": "884da9fd-f9a4-49f6-ae07-08975484c29a",
+              "sha256": "579f95cd6b6ed2ba9c6c111de26291e5b56fcd900522bb6c235ad64f07e91217",
+              "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48164",
+              "locator": "EPA vehicle 48164: drive field, matched make/model/year",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "engine_description": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "model_year": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ],
+          "generation": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        "unresolved_conflicts": [],
+        "review_note": "Manufacturer specifies seventh generation, B48B20O2, 48V mild hybrid and 8-speed Steptronic; EPA confirms individual RWD/AWD configuration. EPA HEV is refined to MHEV. Gearbox internal code and entire generation production interval remain unknown."
+      },
+      "documentary_sections": [
+        {
+          "key": "engine",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Для этих версий 2025 года BMW указывает B48B20O2: 1998 см³, четыре цилиндра, турбонаддув и мягкий гибрид 48 В. Это уточнение общей категории HEV исходной записи EPA.",
+            "az": "Bu 2025 versiyaları üçün BMW B48B20O2 göstərir: 1998 sm³, dörd silindr, turbo və 48 V yumşaq hibrid. EPA qeydindəki ümumi HEV kateqoriyası dəqiqləşdirilib."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        {
+          "key": "transmission",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Подтверждена 8-ступенчатая автоматическая Steptronic. Внутренний код коробки пока не подтверждён; вывод не распространяется на другие годы или модели.",
+            "az": "8-pilləli avtomatik Steptronic təsdiqlənib. Qutunun daxili kodu hələ təsdiqlənməyib; nəticə başqa illərə və modellərə aid deyil."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        },
+        {
+          "key": "applicability",
+          "status": "EVIDENCED",
+          "text": {
+            "ru": "Область проверки: США, 2025 год, седан 330i с задним приводом либо 330i xDrive с полным приводом. Пакеты комплектации и состояние конкретного автомобиля не установлены.",
+            "az": "Yoxlama sahəsi: ABŞ, 2025, arxa ötürücülü 330i və ya tam ötürücülü 330i xDrive sedan. Təchizat paketləri və konkret avtomobilin vəziyyəti müəyyən edilməyib."
+          },
+          "references": [
+            {
+              "registry_id": "factory-bmw-us",
+              "document_id": "d6cf0194-a47e-41d8-99e2-2a0dc147779d",
+              "sha256": "f82c448eb24246f7b1be8510141d0513b10fd77f52bff718ea2230d70fc7cf7c",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0442407EN_US/the-new-2025-bmw-3-series",
+              "locator": "US MY2025 330i / 330i xDrive columns; seventh generation paragraph; B48B20O2 paragraph",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            },
+            {
+              "registry_id": "epa",
+              "document_id": "884da9fd-f9a4-49f6-ae07-08975484c29a",
+              "sha256": "579f95cd6b6ed2ba9c6c111de26291e5b56fcd900522bb6c235ad64f07e91217",
+              "url": "https://www.fueleconomy.gov/ws/rest/vehicle/48164",
+              "locator": "EPA vehicle 48164: drive field, matched make/model/year",
+              "make": "BMW",
+              "model": "3 Series",
+              "market": "US",
+              "model_year": 2025
+            }
+          ]
+        }
+      ],
+      "market_observations": []
+    },
+    {
+      "external_key": "41553",
+      "make": "Kia",
+      "model": "Rio",
+      "configuration": "Rio · 1.6 · Automatic (variable gear ratios) · Front-Wheel Drive",
+      "aliases": [
+        "Rio"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "Automatic (variable gear ratios)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "VARIABLE_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Compact Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "6.53",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "hatch_cargo": {
+          "value": "17",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: hlv",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "14",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41553: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L in-line 4 cylinder, Gamma II Multi Point Injection (MPI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "37148fb9-851a-4806-9d24-966986846bbe",
+            "sha256": "3d7325e681e51decffa1cc793aa1469bc28810f6bc85f3557d76f136838c14cd",
+            "url": "https://www.kiamedia.com/us/en/models/rio/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S",
+            "make": "Kia",
+            "model": "Rio",
+            "market": "US",
+            "model_year": 2020
+          }
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41553",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45349",
+      "make": "Kia",
+      "model": "Forte",
+      "configuration": "Forte · 1.6 · Manual 6-spd · Front-Wheel Drive",
+      "aliases": [
+        "Forte"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L I-4, Turbocharged Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: GT, GT MT",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "7a147942-a6e1-4e13-858d-95c366ff5be5",
+            "sha256": "e7e57ba00e36f3f720cd754ec878268a63c7344d1dc2ff46a04e466a4a75b41a",
+            "url": "https://www.kiamedia.com/us/en/models/forte/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: GT, GT MT",
+            "make": "Kia",
+            "model": "Forte",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "Manual 6-spd",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "MANUAL",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "gears": {
+          "value": 6,
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Midsize Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "9.05",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "15",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45349: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45349",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45350",
+      "make": "Kia",
+      "model": "Forte",
+      "configuration": "Forte · 1.6 · Automatic (AM-S7) · Front-Wheel Drive",
+      "aliases": [
+        "Forte"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L I-4, Turbocharged Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: GT, GT MT",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "7a147942-a6e1-4e13-858d-95c366ff5be5",
+            "sha256": "e7e57ba00e36f3f720cd754ec878268a63c7344d1dc2ff46a04e466a4a75b41a",
+            "url": "https://www.kiamedia.com/us/en/models/forte/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: GT, GT MT",
+            "make": "Kia",
+            "model": "Forte",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "Automatic (AM-S7)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Midsize Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "7.84",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "15",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45350: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45350",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41437",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima Hybrid · 2.0 · Automatic (AM6) · Front-Wheel Drive",
+      "aliases": [
+        "Optima Hybrid"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "HEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.0-liter 4 cylinder, DOHC CVVT (Continuously Variable Valve Timing)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "9efe7e79-b31b-44ec-b857-bef8bb787370",
+            "sha256": "992932c5a507b2b96ed88051bb83971ab79c0c8e81e881b1dd302bec4f9bbe0d",
+            "url": "https://www.kiamedia.com/us/en/models/optima-hybrid/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed electronic automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "9efe7e79-b31b-44ec-b857-bef8bb787370",
+            "sha256": "992932c5a507b2b96ed88051bb83971ab79c0c8e81e881b1dd302bec4f9bbe0d",
+            "url": "https://www.kiamedia.com/us/en/models/optima-hybrid/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Midsize Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "5.60",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "270V Li-Ion",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "13",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41437: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41437",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41464",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima · 1.6 · Automatic (AM7) · Front-Wheel Drive",
+      "aliases": [
+        "Optima"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L Turbo I-4, Gasoline Direct Injection (T-GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX 1.6T, EX Premium 1.6T",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX 1.6T, EX Premium 1.6T",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "7-speed dual-clutch transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX 1.6T, EX Premium 1.6T",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX 1.6T, EX Premium 1.6T",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Large Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "7.59",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "16",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41464: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41464",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41465",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima · 2.0 · Automatic (S6) · Front-Wheel Drive",
+      "aliases": [
+        "Optima"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.0L Turbo I-4, Gasoline Direct Injection (T-GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: SX 2.0T",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: SX 2.0T",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "6-speed automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: SX 2.0T",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: SX 2.0T",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Large Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "9.80",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "16",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41465: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41465",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41466",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima · 2.4 · Automatic (S6) · Front-Wheel Drive",
+      "aliases": [
+        "Optima"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.4",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.4L I-4, Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Large Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "8.71",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "16",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41466: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41466",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41467",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima FE · 2.4 · Automatic (S6) · Front-Wheel Drive",
+      "aliases": [
+        "Optima FE"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.4",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.4L I-4, Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "860e1fb8-3da1-4903-9863-89a52b1398ef",
+            "sha256": "4adaa733cbfc173ab410f53e75d8356aa87c8e664b30bb09ac7d6df315b2df2a",
+            "url": "https://www.kiamedia.com/us/en/models/optima/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX 2.4, S 2.4, Special Edition 2.4",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Large Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "8.11",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "16",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41467: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41467",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "41529",
+      "make": "Kia",
+      "model": "Optima",
+      "configuration": "Optima Plug-in Hybrid · 2.0 · Automatic (AM6) · Front-Wheel Drive",
+      "aliases": [
+        "Optima Plug-in Hybrid"
+      ],
+      "original_market": "US",
+      "model_year": 2020,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "PHEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.0L PHEV I-4, Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "7d12a5ce-1364-42dd-995e-e4485d4be6d7",
+            "sha256": "c1be78020d242c8e2d6714d20931c370319daec5251d070b33da0317ccb8c28f",
+            "url": "https://www.kiamedia.com/us/en/models/optima-phev/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed electronic automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "7d12a5ce-1364-42dd-995e-e4485d4be6d7",
+            "sha256": "c1be78020d242c8e2d6714d20931c370319daec5251d070b33da0317ccb8c28f",
+            "url": "https://www.kiamedia.com/us/en/models/optima-phev/2020/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX",
+            "make": "Kia",
+            "model": "Optima",
+            "market": "US",
+            "model_year": 2020
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Midsize Cars",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "5.74",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "electricity_combined": {
+          "value": "20.51",
+          "unit": "kWh/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: combE converted from kWh/100mi; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "50kW IPMSM",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "charge_ac_240v_hours": {
+          "value": "2.7",
+          "unit": "h",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: charge240",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "epa_range_miles": {
+          "value": "630",
+          "unit": "mi",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: range",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "10",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 41529: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/41529",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "49455",
+      "make": "Kia",
+      "model": "Sportage",
+      "configuration": "Sportage FWD · 2.5 · Automatic (S8) · Front-Wheel Drive",
+      "aliases": [
+        "Sportage FWD"
+      ],
+      "original_market": "US",
+      "model_year": 2026,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.5",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.5L 4-cylinder gasoline direct injection (GDI) engine",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_description": {
+          "value": "8-speed Automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 2WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "8.40",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49455: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49455",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "49503",
+      "make": "Kia",
+      "model": "Sportage",
+      "configuration": "Sportage AWD · 2.5 · Automatic (S8) · All-Wheel Drive",
+      "aliases": [
+        "Sportage AWD"
+      ],
+      "original_market": "US",
+      "model_year": 2026,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.5",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.5L 4-cylinder gasoline direct injection (GDI) engine",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_description": {
+          "value": "8-speed Automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 4WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "9.05",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49503: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49503",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "49510",
+      "make": "Kia",
+      "model": "Sportage",
+      "configuration": "Sportage X-pro · 2.5 · Automatic (S8) · All-Wheel Drive",
+      "aliases": [
+        "Sportage X-pro"
+      ],
+      "original_market": "US",
+      "model_year": 2026,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.5",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.5L 4-cylinder gasoline direct injection (GDI) engine",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_description": {
+          "value": "8-speed Automatic transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "3f76660f-389d-4fb0-979c-0319c6b1c276",
+            "sha256": "8e1ebf932e392b4cb7f58d54744ee9f04ea90d9c41c86deddce6a911b059f6c1",
+            "url": "https://www.kiamedia.com/us/en/models/sportage/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, SX, SX Prestige, X-Line, X-Pro Prestige",
+            "make": "Kia",
+            "model": "Sportage",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 4WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "9.80",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49510: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49510",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "49461",
+      "make": "Kia",
+      "model": "Sorento",
+      "configuration": "Sorento FWD · 2.5 · Automatic (AM-S8) · Front-Wheel Drive",
+      "aliases": [
+        "Sorento FWD"
+      ],
+      "original_market": "US",
+      "model_year": 2026,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.5",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.5L 4-cylinder turbocharged Gasoline Direct Injection (GDI) engine",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2913f513-9836-4221-a9d2-d71ccd7430b1",
+            "sha256": "bd25a07b4d30062b377d2d1969334cded224a2bf36c63bc2f3e1ce2e8ebb6d78",
+            "url": "https://www.kiamedia.com/us/en/models/sorento/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+            "make": "Kia",
+            "model": "Sorento",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "8-Speed Dual Clutch Transmission (DCT)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2913f513-9836-4221-a9d2-d71ccd7430b1",
+            "sha256": "bd25a07b4d30062b377d2d1969334cded224a2bf36c63bc2f3e1ce2e8ebb6d78",
+            "url": "https://www.kiamedia.com/us/en/models/sorento/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+            "make": "Kia",
+            "model": "Sorento",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 2WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "10.23",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49461: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49461",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "49509",
+      "make": "Kia",
+      "model": "Sorento",
+      "configuration": "Sorento AWD · 2.5 · Automatic (AM-S8) · All-Wheel Drive",
+      "aliases": [
+        "Sorento AWD"
+      ],
+      "original_market": "US",
+      "model_year": 2026,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.5",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.5L 4-cylinder turbocharged Gasoline Direct Injection (GDI) engine",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2913f513-9836-4221-a9d2-d71ccd7430b1",
+            "sha256": "bd25a07b4d30062b377d2d1969334cded224a2bf36c63bc2f3e1ce2e8ebb6d78",
+            "url": "https://www.kiamedia.com/us/en/models/sorento/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+            "make": "Kia",
+            "model": "Sorento",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "aspiration": {
+          "value": "TURBO",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: tCharger",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "8-Speed Dual Clutch Transmission (DCT)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2913f513-9836-4221-a9d2-d71ccd7430b1",
+            "sha256": "bd25a07b4d30062b377d2d1969334cded224a2bf36c63bc2f3e1ce2e8ebb6d78",
+            "url": "https://www.kiamedia.com/us/en/models/sorento/2026/specifications",
+            "locator": "US specifications table; common cells across matched trims: EX, SX, SX Prestige",
+            "make": "Kia",
+            "model": "Sorento",
+            "market": "US",
+            "model_year": 2026
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 4WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "10.23",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 49509: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49509",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45302",
+      "make": "Kia",
+      "model": "Soul",
+      "configuration": "Soul · 2.0 · Automatic (variable gear ratios) · Front-Wheel Drive",
+      "aliases": [
+        "Soul"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "Automatic (variable gear ratios)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "VARIABLE_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Station Wagons",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "WAGON",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "7.84",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "24",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45302: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.0L I-4, Multi-Port Injection (MPI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, GT-Line",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2c205336-d66e-4c6a-a9ec-4de9bf1f2c15",
+            "sha256": "0b9d43d428d88f524578ef54e9178523b7e084556180807be71d2c096af31eb5",
+            "url": "https://www.kiamedia.com/us/en/models/soul/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, GT-Line",
+            "make": "Kia",
+            "model": "Soul",
+            "market": "US",
+            "model_year": 2023
+          }
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45302",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45303",
+      "make": "Kia",
+      "model": "Soul",
+      "configuration": "Soul Eco dynamics · 2.0 · Automatic (variable gear ratios) · Front-Wheel Drive",
+      "aliases": [
+        "Soul Eco dynamics"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "2.0",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_description": {
+          "value": "Automatic (variable gear ratios)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: trany",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "transmission_family": {
+          "value": "VARIABLE_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Station Wagons",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "WAGON",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "7.59",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "24",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45303: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "2.0L I-4, Multi-Port Injection (MPI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, GT-Line",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "2c205336-d66e-4c6a-a9ec-4de9bf1f2c15",
+            "sha256": "0b9d43d428d88f524578ef54e9178523b7e084556180807be71d2c096af31eb5",
+            "url": "https://www.kiamedia.com/us/en/models/soul/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, GT-Line",
+            "make": "Kia",
+            "model": "Soul",
+            "market": "US",
+            "model_year": 2023
+          }
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45303",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "48066",
+      "make": "Kia",
+      "model": "Niro",
+      "configuration": "Niro · 1.6 · Automatic (AM-S6) · Front-Wheel Drive",
+      "aliases": [
+        "Niro"
+      ],
+      "original_market": "US",
+      "model_year": 2025,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "HEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "dfa10f62-d51b-4bc7-9297-74aee069bbab",
+            "sha256": "e94b7a76f1e32cff59e7357220e9f820aa7a29b2ab3513e9c16eddb54ce04efc",
+            "url": "https://www.kiamedia.com/us/en/models/niro-hev/2025/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+            "make": "Kia",
+            "model": "Niro",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed Dual Clutch Transmission (DCT)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "dfa10f62-d51b-4bc7-9297-74aee069bbab",
+            "sha256": "e94b7a76f1e32cff59e7357220e9f820aa7a29b2ab3513e9c16eddb54ce04efc",
+            "url": "https://www.kiamedia.com/us/en/models/niro-hev/2025/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+            "make": "Kia",
+            "model": "Niro",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 2WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "4.80",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "240V Li-Ion",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "23",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48066: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48066",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "48067",
+      "make": "Kia",
+      "model": "Niro",
+      "configuration": "Niro FE · 1.6 · Automatic (AM-S6) · Front-Wheel Drive",
+      "aliases": [
+        "Niro FE"
+      ],
+      "original_market": "US",
+      "model_year": 2025,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "HEV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "1.6",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "4",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "1.6L Gasoline Direct Injection (GDI)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "dfa10f62-d51b-4bc7-9297-74aee069bbab",
+            "sha256": "e94b7a76f1e32cff59e7357220e9f820aa7a29b2ab3513e9c16eddb54ce04efc",
+            "url": "https://www.kiamedia.com/us/en/models/niro-hev/2025/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+            "make": "Kia",
+            "model": "Niro",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_description": {
+          "value": "6-speed Dual Clutch Transmission (DCT)",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "dfa10f62-d51b-4bc7-9297-74aee069bbab",
+            "sha256": "e94b7a76f1e32cff59e7357220e9f820aa7a29b2ab3513e9c16eddb54ce04efc",
+            "url": "https://www.kiamedia.com/us/en/models/niro-hev/2025/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, EX, EX Touring, SX, SX Touring",
+            "make": "Kia",
+            "model": "Niro",
+            "market": "US",
+            "model_year": 2025
+          }
+        },
+        "transmission_family": {
+          "value": "AMT_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 2WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "4.44",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "motor_description": {
+          "value": "240V Li-Ion",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: evMotor",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "23",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 48067: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48067",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45951",
+      "make": "Kia",
+      "model": "Telluride",
+      "configuration": "Telluride FWD · 3.8 · Automatic (S8) · Front-Wheel Drive",
+      "aliases": [
+        "Telluride FWD"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "3.8",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "6",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "3.8L, V6, Gasoline Direct Injection (GDI) Lambda-II",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "4e52018d-b346-4330-96a2-d99ce657c545",
+            "sha256": "0238f58ad642442b4314fb8307f0070eddb87f4d66d54ede30e7774ceef9c213",
+            "url": "https://www.kiamedia.com/us/en/models/telluride/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+            "make": "Kia",
+            "model": "Telluride",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "transmission_description": {
+          "value": "8-Speed Automatic Transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "4e52018d-b346-4330-96a2-d99ce657c545",
+            "sha256": "0238f58ad642442b4314fb8307f0070eddb87f4d66d54ede30e7774ceef9c213",
+            "url": "https://www.kiamedia.com/us/en/models/telluride/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+            "make": "Kia",
+            "model": "Telluride",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 2WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "10.23",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "21",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45951: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45951",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    },
+    {
+      "external_key": "45955",
+      "make": "Kia",
+      "model": "Telluride",
+      "configuration": "Telluride AWD · 3.8 · Automatic (S8) · All-Wheel Drive",
+      "aliases": [
+        "Telluride AWD"
+      ],
+      "original_market": "US",
+      "model_year": 2023,
+      "generation": null,
+      "generation_code": null,
+      "facelift": null,
+      "production_from": null,
+      "production_to": null,
+      "assembly_country": null,
+      "supply_channel": null,
+      "facts": {
+        "powertrain": {
+          "value": "ICE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: atvType / fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel": {
+          "value": "GASOLINE",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_grade": {
+          "value": "Regular Gasoline",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: fuelType1",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_displacement": {
+          "value": "3.8",
+          "unit": "L",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: displ",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "cylinders": {
+          "value": "6",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: cylinders",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "engine_description": {
+          "value": "3.8L, V6, Gasoline Direct Injection (GDI) Lambda-II",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "4e52018d-b346-4330-96a2-d99ce657c545",
+            "sha256": "0238f58ad642442b4314fb8307f0070eddb87f4d66d54ede30e7774ceef9c213",
+            "url": "https://www.kiamedia.com/us/en/models/telluride/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+            "make": "Kia",
+            "model": "Telluride",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "transmission_description": {
+          "value": "8-Speed Automatic Transmission",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": {
+            "registry_id": "factory-kia-us",
+            "document_id": "4e52018d-b346-4330-96a2-d99ce657c545",
+            "sha256": "0238f58ad642442b4314fb8307f0070eddb87f4d66d54ede30e7774ceef9c213",
+            "url": "https://www.kiamedia.com/us/en/models/telluride/2023/specifications",
+            "locator": "US specifications table; common cells across matched trims: LX, S, EX, EX X-LINE, SX, SX X-LINE, SX X-PRO, SXP, SXP X-LINE, SXP X-PRO",
+            "make": "Kia",
+            "model": "Telluride",
+            "market": "US",
+            "model_year": 2023
+          }
+        },
+        "transmission_family": {
+          "value": "AUTOMATIC_UNSPECIFIED",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: trany; construction not provided",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: drive",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "size_class": {
+          "value": "Small Sport Utility Vehicle 4WD",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "body": {
+          "value": "SUV",
+          "unit": null,
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: VClass",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "fuel_combined": {
+          "value": "11.20",
+          "unit": "L/100km",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: comb08 converted from US mpg; EPA cycle",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        },
+        "four_door_cargo": {
+          "value": "21",
+          "unit": "ft3",
+          "status": "CONFIRMED",
+          "locator": "EPA vehicle 45955: lv4",
+          "source_date": null,
+          "labels": {},
+          "titles": {},
+          "documentary_source": null
+        }
+      },
+      "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/45955",
+      "source_date": null,
+      "revision_note": "Reviewed factory table: only invariant engine/transmission descriptions across matching displacement/aspiration candidates. No exact trim, generation, drivetrain or mechanical construction inferred.",
+      "identity_verification": null,
+      "documentary_sections": [],
+      "market_observations": []
+    }
+  ],
+  "ownership_records": [],
+  "market_records": []
+}

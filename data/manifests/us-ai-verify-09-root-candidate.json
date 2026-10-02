@@ -1,0 +1,505 @@
+{
+  "version": "basic-catalog-9-root-source",
+  "batch_id": "us-ai-verify-09-root",
+  "selection_status": "OWNER_MASTER_LIST_SOURCE_FIRST",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "gx-2014-09": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2014.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "Annual US GX brochure PDF p2 and p11; printed specifications and trim columns, footnotes retained; visual table review.",
+      "format": "pdf"
+    },
+    "gx-2015-09": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2015.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "Annual US GX brochure PDF p2 and p11; printed specifications and trim columns, footnotes retained; visual table review.",
+      "format": "pdf"
+    },
+    "gx-2016-09": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2016.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "Annual US GX brochure PDF p2 and p19; printed specifications and trim columns, footnotes retained; visual table review.",
+      "format": "pdf"
+    },
+    "gx-generation-09": {
+      "url": "https://pressroom.lexus.com/lexus-introduces-second-generation-gx-460-luxury-suv-for-2010/",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2016,
+      "locator": "Generation lineage only: manufacturer introduces second-generation GX460 MY2010. Joined to annual MY2014/15/16 GX460 and manufacturer chronology ending generation at third-generation launch2023. No 2010 technical values transferred.",
+      "format": "html"
+    },
+    "gx-chronology-09": {
+      "url": "https://pressroom.lexus.com/history-lexus/",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2016,
+      "locator": "Generation-lineage cross-check: 2023 third-generation GX launch; annual GX460 documents establish scoped years. J150 code not claimed.",
+      "format": "html"
+    },
+    "fx-spec-2013-09": {
+      "url": "https://pictures.dealer.com/kuniinfiniti/806986ab0a0d028a00b125bde344479c.pdf",
+      "source_id": "factory-infiniti-us",
+      "publisher": "Infiniti manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2013,
+      "year_to": 2013,
+      "locator": "2013 Infiniti FX Technical Specifications, current Aug2012: PDFp1 engine/gearbox/drive; p2 suspension/brakes; p3 wheel/tire/dimensions; p7 seats/capacities/weights/EPA. Manufacturer document hosted by dealer; visual p1,p7 checked.",
+      "format": "pdf"
+    },
+    "fx-factsheet-2013-09": {
+      "url": "https://www.auto-brochures.com/makes/Infiniti/FX/Infiniti_US%20FX_Factsheet_2013.pdf",
+      "source_id": "factory-infiniti-us",
+      "publisher": "Infiniti manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2013,
+      "year_to": 2013,
+      "locator": "MY2013 US FX factsheet pp2-4; cross-check only. Fuel recommended vs required wording differs from technical specifications; fuel_grade held.",
+      "format": "pdf"
+    },
+    "fx-s51-09": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11009064-0001.pdf",
+      "source_id": "factory-infiniti-us",
+      "publisher": "Infiniti manufacturer-authored US material",
+      "market": "US",
+      "year_from": 2013,
+      "year_to": 2013,
+      "locator": "Infiniti ITB19-024D PDFp1 APPLIED VEHICLES identifies2009-2013FX(S51). Platform identity only; no campaign/damage applicability claim.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "lexus-gx-ii-us-2014-2016-09",
+      "make": "Lexus",
+      "model": "GX",
+      "market": "US",
+      "generation": "II (2010 redesign)",
+      "generation_code": null,
+      "year_from": 2014,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2014": [
+          "gx-2014-09"
+        ],
+        "2015": [
+          "gx-2015-09"
+        ],
+        "2016": [
+          "gx-2016-09"
+        ]
+      },
+      "generation_documents": [
+        "gx-generation-09",
+        "gx-chronology-09"
+      ],
+      "scope_note": "Only explicit annual US factory engine/transmission/drive/trim tuples. No adjacent-year extrapolation.",
+      "exclude": [
+        "Unlisted years, bodies, trims and markets"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "engine_description": "GX 460 4.6L V8 DOHC dual VVT-i",
+        "engine_displacement": {
+          "value": 4.6,
+          "unit": "L"
+        },
+        "cylinders": 8,
+        "power_hp": 301,
+        "torque_lb_ft": {
+          "value": 329,
+          "unit": "lb-ft"
+        },
+        "transmission_family": "AT",
+        "transmission_description": "6-speed electronically controlled automatic, sequential shift",
+        "gears": 6,
+        "seats": 7,
+        "length_in": {
+          "value": 192.1,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 74.2,
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 109.8,
+          "unit": "in"
+        },
+        "ground_clearance": {
+          "value": 8.1,
+          "unit": "in"
+        },
+        "cargo_volume_max_cu_ft": {
+          "value": 64.7,
+          "unit": "cu ft"
+        },
+        "epa_city_mpg": {
+          "value": 15,
+          "unit": "US mpg"
+        },
+        "epa_highway_mpg": {
+          "value": 20,
+          "unit": "US mpg"
+        },
+        "epa_combined_mpg": {
+          "value": 17,
+          "unit": "US mpg"
+        }
+      },
+      "groups": [
+        {
+          "id": "gx-460",
+          "year_from": 2014,
+          "year_to": 2016,
+          "configuration": "GX 460",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "US GX460 MY2014/15 PDFp11 and MY2016p19: trim-specific height/wheels and Luxury-only suspension; all trims4.6V8/6AT/full-time4WD/7 seats.",
+          "facts": {
+            "trim": "GX 460",
+            "height_in": {
+              "value": 74.2,
+              "unit": "in"
+            },
+            "wheels": "18-inch six-spoke alloy"
+          }
+        },
+        {
+          "id": "gx-460-premium",
+          "year_from": 2014,
+          "year_to": 2016,
+          "configuration": "GX 460 Premium",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "US GX460 MY2014/15 PDFp11 and MY2016p19: trim-specific height/wheels and Luxury-only suspension; all trims4.6V8/6AT/full-time4WD/7 seats.",
+          "facts": {
+            "trim": "GX 460 Premium",
+            "height_in": {
+              "value": 74.2,
+              "unit": "in"
+            },
+            "wheels": "18-inch split-six-spoke alloy"
+          }
+        },
+        {
+          "id": "gx-460-luxury",
+          "year_from": 2014,
+          "year_to": 2016,
+          "configuration": "GX 460 Luxury",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "US GX460 MY2014/15 PDFp11 and MY2016p19: trim-specific height/wheels and Luxury-only suspension; all trims4.6V8/6AT/full-time4WD/7 seats.",
+          "facts": {
+            "trim": "GX 460 Luxury",
+            "height_in": {
+              "value": 73.8,
+              "unit": "in"
+            },
+            "wheels": "18-inch split-six-spoke alloy, Liquid Graphite finish",
+            "suspension": "Adaptive Variable Suspension; auto-leveling rear air suspension (Luxury standard only)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "infiniti-fx-s51-us-2013-09",
+      "make": "Infiniti",
+      "model": "FX",
+      "market": "US",
+      "generation": "S51",
+      "generation_code": "S51",
+      "year_from": 2013,
+      "year_to": 2013,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2013": [
+          "fx-spec-2013-09",
+          "fx-factsheet-2013-09"
+        ]
+      },
+      "generation_documents": [
+        "fx-s51-09"
+      ],
+      "scope_note": "Only explicit annual US factory engine/transmission/drive/trim tuples. No adjacent-year extrapolation.",
+      "exclude": [
+        "Unlisted years, bodies, trims and markets"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "transmission_family": "AT",
+        "transmission_description": "7-speed electronically controlled automatic with ASC and manual shift mode",
+        "gears": 7,
+        "seats": 5,
+        "length_in": {
+          "value": 191.3,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 75.9,
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 113.6,
+          "unit": "in"
+        },
+        "ground_clearance": {
+          "value": 7.36,
+          "unit": "in"
+        },
+        "fuel_tank_us_gal": {
+          "value": 23.8,
+          "unit": "US gal"
+        },
+        "cargo_volume_cu_ft": {
+          "value": 24.8,
+          "unit": "cu ft"
+        },
+        "cargo_volume_max_cu_ft": {
+          "value": 62.0,
+          "unit": "cu ft"
+        },
+        "front_suspension": "Independent aluminum double-wishbone with stabilizer bar",
+        "rear_suspension": "Independent multi-link with stabilizer bar"
+      },
+      "groups": [
+        {
+          "id": "fx37-rwd",
+          "year_from": 2013,
+          "year_to": 2013,
+          "configuration": "FX37",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "US MY2013 FX technical specifications PDFpp1-3,7: exact FX50AWD/FX37AWD/FX37RWD columns; LimitedEditionAWD wheel exception; coolant is table capacity, not routine refill.",
+          "facts": {
+            "trim": "FX37",
+            "engine_description": "VQ37VHR 3.7L V6 DOHC VVEL",
+            "engine_code": "VQ37VHR",
+            "engine_displacement": {
+              "value": 3.7,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 325,
+            "torque_lb_ft": {
+              "value": 267,
+              "unit": "lb-ft"
+            },
+            "curb_weight_lb": {
+              "value": 4209,
+              "unit": "lb"
+            },
+            "epa_city_mpg": {
+              "value": 17,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 24,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 11.0,
+            "wheels": "18 x 8.0 alloy;20-inch optional package excluded",
+            "tires": "265/60R18 109V all-season",
+            "front_brakes": "12.6 x 1.3 inch vented discs",
+            "rear_brakes": "12.1 x 0.6 inch vented discs",
+            "coolant": "Factory table system capacity 9.7 L; fluid specification and routine service refill not established"
+          }
+        },
+        {
+          "id": "fx37-awd",
+          "year_from": 2013,
+          "year_to": 2013,
+          "configuration": "FX37",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "US MY2013 FX technical specifications PDFpp1-3,7: exact FX50AWD/FX37AWD/FX37RWD columns; LimitedEditionAWD wheel exception; coolant is table capacity, not routine refill.",
+          "facts": {
+            "trim": "FX37",
+            "engine_description": "VQ37VHR 3.7L V6 DOHC VVEL",
+            "engine_code": "VQ37VHR",
+            "engine_displacement": {
+              "value": 3.7,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 325,
+            "torque_lb_ft": {
+              "value": 267,
+              "unit": "lb-ft"
+            },
+            "curb_weight_lb": {
+              "value": 4321,
+              "unit": "lb"
+            },
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 11.0,
+            "wheels": "18 x 8.0 alloy;20-inch optional package excluded",
+            "tires": "265/60R18 109V all-season",
+            "front_brakes": "12.6 x 1.3 inch vented discs",
+            "rear_brakes": "12.1 x 0.6 inch vented discs",
+            "coolant": "Factory table system capacity 9.7 L; fluid specification and routine service refill not established"
+          }
+        },
+        {
+          "id": "fx37-limited-edition-awd",
+          "year_from": 2013,
+          "year_to": 2013,
+          "configuration": "FX37 Limited Edition",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "US MY2013 FX technical specifications PDFpp1-3,7: exact FX50AWD/FX37AWD/FX37RWD columns; LimitedEditionAWD wheel exception; coolant is table capacity, not routine refill.",
+          "facts": {
+            "trim": "FX37 Limited Edition",
+            "engine_description": "VQ37VHR 3.7L V6 DOHC VVEL",
+            "engine_code": "VQ37VHR",
+            "engine_displacement": {
+              "value": 3.7,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 325,
+            "torque_lb_ft": {
+              "value": 267,
+              "unit": "lb-ft"
+            },
+            "curb_weight_lb": {
+              "value": 4321,
+              "unit": "lb"
+            },
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 11.0,
+            "wheels": "21 x 9.5 alloy",
+            "tires": "265/45R21 104V all-season",
+            "front_brakes": "12.6 x 1.3 inch vented discs",
+            "rear_brakes": "12.1 x 0.6 inch vented discs",
+            "coolant": "Factory table system capacity 9.7 L; fluid specification and routine service refill not established"
+          }
+        },
+        {
+          "id": "fx50-awd",
+          "year_from": 2013,
+          "year_to": 2013,
+          "configuration": "FX50",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "US MY2013 FX technical specifications PDFpp1-3,7: exact FX50AWD/FX37AWD/FX37RWD columns; LimitedEditionAWD wheel exception; coolant is table capacity, not routine refill.",
+          "facts": {
+            "trim": "FX50",
+            "engine_description": "VK50VE 5.0L V8 DOHC VVEL",
+            "engine_code": "VK50VE",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 390,
+            "torque_lb_ft": {
+              "value": 369,
+              "unit": "lb-ft"
+            },
+            "curb_weight_lb": {
+              "value": 4562,
+              "unit": "lb"
+            },
+            "epa_city_mpg": {
+              "value": 14,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.9,
+            "wheels": "21 x 9.5 alloy",
+            "tires": "265/45R21 104V all-season",
+            "front_brakes": "14.0 x 1.3 inch vented discs",
+            "rear_brakes": "13.8 x 0.8 inch vented discs",
+            "coolant": "Factory table system capacity 11.6 L; fluid specification and routine service refill not established"
+          }
+        }
+      ]
+    }
+  ]
+}

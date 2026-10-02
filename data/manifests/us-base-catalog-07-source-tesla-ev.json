@@ -1,0 +1,689 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-source-tesla-ev",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "tesla-model3-vin-source07": {
+      "url": "https://service.tesla.com/docs/Model3/ServiceManual/en-us/GUID-0C797294-574D-4EE4-8017-C339A7D58411.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "VIN decoder digits 4/5/7/8/10 identify Model 3, four-door sedan, electric propulsion, single/dual/performance drive unit and MY2020 (L).",
+      "format": "html"
+    },
+    "tesla-model3-gear-source07": {
+      "url": "https://service.tesla.com/docs/Model3/ServiceManual/en-us/GUID-411B3CD5-2F03-465F-A72C-3E1B68EA7F76.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "2017–2023 Model 3 service manual, Gearbox Fluid - Rear Drive Unit (3DU); rear drive-unit gearbox. One ratio is independently identified by annual EPA Automatic (A1) exact row.",
+      "format": "html"
+    },
+    "tesla-modely-vin-source07": {
+      "url": "https://service.tesla.com/docs/ModelY/ServiceManual/en-us/GUID-0C797294-574D-4EE4-8017-C339A7D58411.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "VIN decoder digits 4/5/7/8/10 identify Model Y, five-door MPV body, electric propulsion, single/dual/performance drive unit and MY2021 (M); EPA classifies as SUV.",
+      "format": "html"
+    },
+    "tesla-modely-gear-source07": {
+      "url": "https://service.tesla.com/docs/ModelY/ServiceManual/en-us/GUID-411B3CD5-2F03-465F-A72C-3E1B68EA7F76.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "2020–2024 Model Y service manual, Gearbox Fluid - Rear Drive Unit (3DU); rear drive-unit gearbox. One ratio is independently identified by annual EPA Automatic (A1) exact row.",
+      "format": "html"
+    },
+    "tesla-models-vin-source07": {
+      "url": "https://service.tesla.com/docs/ModelS/ServiceManual/en-us/GUID-BED77626-E575-4DB7-8C1F-CFA600EAA082.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "VIN decoder 2015–2018 table: five-door hatchback, electric propulsion, digit 8 distinguishes single/dual/performance AC induction units, digit 10 G=MY2016.",
+      "format": "html"
+    },
+    "tesla-models-gear-source07": {
+      "url": "https://service.tesla.com/docs/ModelS/ServiceManual/en-us/GUID-7ED07F28-E892-4F9E-97D0-8635DD074C23.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "2012–2020 Model S service manual, Gearbox Fluid - Large Rear Drive Unit; rear drive-unit reduction gearbox. One ratio is independently identified by annual EPA Automatic (A1) exact row; large-unit subtype not assigned to each EPA tuple.",
+      "format": "html"
+    },
+    "tesla-modelx-vin-source07": {
+      "url": "https://service.tesla.com/docs/ModelX/ServiceManual/en-us/GUID-B81908BE-D0D7-4E89-BD3A-FC3CA402C54F.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "VIN decoder digits 4/5/7/8/10: Model X, five-door MPV, electric propulsion, dual/performance drive units, MY2018 (J); EPA classifies as SUV.",
+      "format": "html"
+    },
+    "tesla-modelx-gear-source07": {
+      "url": "https://service.tesla.com/docs/ModelX/ServiceManual/en-us/GUID-07F4946E-6C1F-4705-BAA6-3BDA3A8492B3.html",
+      "source_id": "factory-tesla-us",
+      "publisher": "Tesla Service Manual",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "2015–2020 Model X service manual, Rear Gearbox Fluid - Large Drive Unit; rear drive-unit gearbox. One ratio is independently identified by annual EPA Automatic (A1) exact row; large-unit subtype not assigned to each EPA tuple.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "tesla-model3-us-2020-source07",
+      "make": "Tesla",
+      "model": "Model 3",
+      "generation": "First generation, 2017–2023 service cohort",
+      "generation_code": "I",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2020": [
+          "tesla-model3-vin-source07",
+          "tesla-model3-gear-source07"
+        ]
+      },
+      "generation_documents": [
+        "tesla-model3-vin-source07"
+      ],
+      "scope_note": "US Tesla Model 3 MY2020 only; 2017-2023 Model 3 Service Manual VIN decoder + Tesla service gearbox + exact US EPA annual EV/A1 motor/drive rows. EPA labels are certification labels only.",
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unmatched VIN/retail trim",
+        "Unproven motor or drive-unit code",
+        "Inferred battery capacity or seats"
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "BEV",
+        "fuel": "ELECTRICITY"
+      },
+      "groups": [
+        {
+          "id": "2020-epa-42278-rwd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Model 3 single rear electric drive unit / EPA motor 211 kW AC three-phase / A1 / RWD (EPA 42278)",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "42278"
+            ],
+            "model": [
+              "Model 3 Standard Range Plus"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2017-2023 Model 3 Service Manual confirms model/body/MY and single rear electric drive unit; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 42278 (2020, Model 3 Standard Range Plus, 211 kW AC 3-Phase, A1, Rear-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "single rear electric drive unit",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-model3-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-model3-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2020-epa-42275-awd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Model 3 dual electric drive units / EPA motor 147 + 188 kW AC three-phase / A1 / AWD (EPA 42275)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "42275"
+            ],
+            "model": [
+              "Model 3 Long Range AWD"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2017-2023 Model 3 Service Manual confirms model/body/MY and dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 42275 (2020, Model 3 Long Range AWD, 147 and 188 kW AC 3-Phase, A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-model3-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-model3-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2020-epa-42279-awd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Model 3 performance dual electric drive units / EPA motor 147 + 211 kW AC three-phase / A1 / AWD (EPA 42279)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "42279"
+            ],
+            "model": [
+              "Model 3 Long Range Performance AWD (18in)"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2017-2023 Model 3 Service Manual confirms model/body/MY and performance dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 42279 (2020, Model 3 Long Range Performance AWD (18in), 147 and 211 kW AC 3-Phase, A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "performance dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-model3-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-model3-gear-source07"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "tesla-modely-us-2021-source07",
+      "make": "Tesla",
+      "model": "Model Y",
+      "generation": "First generation, 2020–2024 service cohort",
+      "generation_code": "I",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2021": [
+          "tesla-modely-vin-source07",
+          "tesla-modely-gear-source07"
+        ]
+      },
+      "generation_documents": [
+        "tesla-modely-vin-source07"
+      ],
+      "scope_note": "US Tesla Model Y MY2021 only; 2020-2024 Model Y Service Manual VIN decoder + Tesla service gearbox + exact US EPA annual EV/A1 motor/drive rows. EPA labels are certification labels only.",
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unmatched VIN/retail trim",
+        "Unproven motor or drive-unit code",
+        "Inferred battery capacity or seats"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "BEV",
+        "fuel": "ELECTRICITY"
+      },
+      "groups": [
+        {
+          "id": "2021-epa-43880-rwd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Model Y single rear electric drive unit / EPA motor 209 kW AC three-phase / A1 / RWD (EPA 43880)",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "43880"
+            ],
+            "model": [
+              "Model Y Standard Range RWD"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2020-2024 Model Y Service Manual confirms model/body/MY and single rear electric drive unit; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 43880 (2021, Model Y Standard Range RWD, 209 kW AC 3-Phase, A1, Rear-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "single rear electric drive unit",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-modely-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-modely-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2021-epa-43406-awd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Model Y dual electric drive units / EPA motor 69 + 201 kW AC three-phase / A1 / AWD (EPA 43406)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "43406"
+            ],
+            "model": [
+              "Model Y Long Range AWD"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2020-2024 Model Y Service Manual confirms model/body/MY and dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 43406 (2021, Model Y Long Range AWD, 69 and 201 kW AC 3-Phase, A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-modely-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-modely-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2021-epa-43407-awd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Model Y performance dual electric drive units / EPA motor 133 + 179 kW AC three-phase / A1 / AWD (EPA 43407)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "43407"
+            ],
+            "model": [
+              "Model Y Performance AWD"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2020-2024 Model Y Service Manual confirms model/body/MY and performance dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 43407 (2021, Model Y Performance AWD, 133 and 179 kW AC 3-Phase, A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "performance dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-modely-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-modely-gear-source07"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "tesla-models-us-2016-source07",
+      "make": "Tesla",
+      "model": "Model S",
+      "generation": "First generation, 2012–2020 service cohort",
+      "generation_code": "I",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "tesla-models-vin-source07",
+          "tesla-models-gear-source07"
+        ]
+      },
+      "generation_documents": [
+        "tesla-models-vin-source07"
+      ],
+      "scope_note": "US Tesla Model S MY2016 only; 2012-2020 Model S Service Manual VIN decoder + Tesla service gearbox + exact US EPA annual EV/A1 motor/drive rows. EPA labels are certification labels only.",
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unmatched VIN/retail trim",
+        "Unproven motor or drive-unit code",
+        "Inferred battery capacity or seats"
+      ],
+      "facts": {
+        "body": "HATCHBACK",
+        "powertrain": "BEV",
+        "fuel": "ELECTRICITY"
+      },
+      "groups": [
+        {
+          "id": "2016-epa-37234-rwd",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Model S single AC induction electric drive unit / EPA motor 285 kW AC induction / A1 / RWD (EPA 37234)",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "37234"
+            ],
+            "model": [
+              "Model S (85 kW-hr battery pack)"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2012-2020 Model S Service Manual confirms model/body/MY and single AC induction electric drive unit; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 37234 (2016, Model S (85 kW-hr battery pack), 285 kW AC Induction (85 kW-hr battery pack), A1, Rear-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "single AC induction electric drive unit",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-models-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-models-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2016-epa-37240-awd",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Model S dual AC induction electric drive units / EPA motor 193 front + 193 rear (EPA evMotor) / A1 / AWD (EPA 37240)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "37240"
+            ],
+            "model": [
+              "Model S AWD - 90D"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2012-2020 Model S Service Manual confirms model/body/MY and dual AC induction electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 37240 (2016, Model S AWD - 90D, 193 (front) 193 (rear) (90 kW-hr battery pack), A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "dual AC induction electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-models-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-models-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2016-epa-37242-awd",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Model S performance dual AC induction electric drive units / EPA motor 193 front + 375 rear (EPA evMotor) / A1 / AWD (EPA 37242)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "37242"
+            ],
+            "model": [
+              "Model S AWD - P90D"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2012-2020 Model S Service Manual confirms model/body/MY and performance dual AC induction electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 37242 (2016, Model S AWD - P90D, 193 (front) 375 (rear) (90 kW-hr battery pack), A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "performance dual AC induction electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-models-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-models-gear-source07"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "tesla-modelx-us-2018-source07",
+      "make": "Tesla",
+      "model": "Model X",
+      "generation": "First generation, 2015–2020 service cohort",
+      "generation_code": "I",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2018": [
+          "tesla-modelx-vin-source07",
+          "tesla-modelx-gear-source07"
+        ]
+      },
+      "generation_documents": [
+        "tesla-modelx-vin-source07"
+      ],
+      "scope_note": "US Tesla Model X MY2018 only; 2015-2020 Model X Service Manual VIN decoder + Tesla service gearbox + exact US EPA annual EV/A1 motor/drive rows. EPA labels are certification labels only.",
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unmatched VIN/retail trim",
+        "Unproven motor or drive-unit code",
+        "Inferred battery capacity or seats"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "BEV",
+        "fuel": "ELECTRICITY"
+      },
+      "groups": [
+        {
+          "id": "2018-epa-39842-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Model X dual electric drive units / EPA motor 193 front + 193 rear (EPA evMotor) / A1 / AWD (EPA 39842)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "39842"
+            ],
+            "model": [
+              "Model X 100D"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2015-2020 Model X Service Manual confirms model/body/MY and dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 39842 (2018, Model X 100D, 193 (front) 193 (rear) (100 kW-hr battery pack), A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-modelx-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-modelx-gear-source07"
+            }
+          }
+        },
+        {
+          "id": "2018-epa-39843-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Model X performance dual electric drive units / EPA motor 193 front + 375 rear (EPA evMotor) / A1 / AWD (EPA 39843)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "id": [
+              "39843"
+            ],
+            "model": [
+              "Model X P100D"
+            ],
+            "displ": [
+              ""
+            ],
+            "trany": [
+              "Automatic (A1)"
+            ]
+          },
+          "locator": "Tesla VIN decoder 2015-2020 Model X Service Manual confirms model/body/MY and performance dual electric drive units; Tesla rear gearbox page confirms drive-unit gearbox. US EPA vehicles.csv exact id 39843 (2018, Model X P100D, 193 (front) 375 (rear) (100 kW-hr battery pack), A1, All-Wheel Drive) confirms annual motor, one ratio and drive. EPA label is certification data, not a Tesla retail trim or battery specification.",
+          "review_note": "Joint Tesla service VIN architecture and US EPA exact annual EV/motor/A1/drive tuple. Rear drive-unit gearbox shown by Tesla service manual. No exact VIN, numeric battery capacity, retail trim, seating or extrapolated model year; specific 3DU/large-rear subtype not assigned to this EPA row.",
+          "facts": {
+            "engine_description": "performance dual electric drive units",
+            "transmission_description": {
+              "value": "Single-speed electric drive-unit reduction gearbox (Tesla gearbox + EPA A1)",
+              "document_key": "tesla-modelx-gear-source07"
+            },
+            "transmission_family": {
+              "value": "SINGLE_SPEED",
+              "document_key": "tesla-modelx-gear-source07"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

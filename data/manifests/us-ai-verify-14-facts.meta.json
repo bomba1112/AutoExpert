@@ -1,0 +1,892 @@
+{
+  "batch_id": "us-ai-verify-14-agent-candidate",
+  "parent_batch": "us-ai-verify-10",
+  "delta_type": "SAME_KEY_FACT_CORRECTION_ONLY",
+  "source_conflicts": [
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-se-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "320f2ce2-9c88-4b9d-ab20-626ac1d79f1d",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-se-AWD-2017",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "882c7362-5cc2-447c-8419-cbfc11fc1977",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-hse-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "1fb76b17-e86a-4fe3-953a-b4844e31be8d",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-hse-AWD-2017",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "cf524743-111e-4895-bf3c-bd1676a33fb2",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-hse-luxury-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "624b26a9-c6ca-4189-b8aa-f8baa60ce855",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "ad426186-a864-44b5-bb54-c80f780c1b66",
+          "sha256": "cde1b371b6c084b154a4461219c517762831a2b7a7d06275ceafc20157d66e4d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p39 engine technical table explicitly Four Wheel Drive (4WD); p42 Efficient Driveline standard on SE/HSE/HSE Luxury.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-discovery-sport-l550-us-hse-luxury-AWD-2017",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "f3d6804d-4d72-4b34-89d3-aba2bc8f174a",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "d4c878c4-db4b-46d5-b172-4ccb30da6fff",
+          "sha256": "df6bb9b3aff289b20690a3be36ebecbda40fb7ce242f8f9197de25c51d1c8d3d",
+          "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+          "locator": "MY2017 US brochure PDF p53 engine table and p60 standard equipment explicitly4WD with Efficient Driveline; p27/p64/p71 Active Driveline optional on HSE/HSE Luxury, not SE; retailer availability qualification.",
+          "make": "Land Rover",
+          "model": "Discovery Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2017,
+          "model_year_to": 2017
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-se-340-2015-AWD-2015",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "f16ebe4d-49c2-40a1-b009-5b510f6f1933",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Pack",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-hse-340-2015-AWD-2015",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "fc9fabb5-e13f-4ffa-9341-442cc570924e",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Pac",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-supercharged-510-2015-AWD-2015",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "ea7182f9-be01-46ec-be1e-53107ecbd363",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dy",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-autobiography-510-2015-AWD-2015",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "a49a4380-dedc-4b21-9447-fb682a7392d5",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. D",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.; US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "e47eca27-0f14-48c8-b143-c9ae46c57d40",
+          "sha256": "1881421fd70ea6960e76295d4fbe4f4d416b86880c5eb3a2b1453a96c582199b",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+          "locator": "MY2015 US brochure PDF p25 engine table explicitly4WD; pp26-28 standard single-speed SE/HSE and twin-speed V8; p54 optional Extra Duty twin-speed package for SE/HSE V6 only.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2015,
+          "model_year_to": 2015
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-se-340-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "ebcd7f90-6f5b-4b78-b928-6ed4f9e748f8",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-hse-340-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "1cab0c00-d7b1-4444-b778-3282cae1eea7",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; p",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-supercharged-510-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "9d46c3b2-9015-442c-9b44-656a4117c72b",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually c",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-autobiography-510-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "f6617c18-2940-423a-a7ca-9d894d5ff1fb",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-se-254-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "07734c6d-5660-48b4-9cbe-bfbff47d680d",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-hse-254-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "52ddd00f-c28e-4c89-a1a8-1a63e41a1478",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp5",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-hst-380-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "d800fc4e-6266-4bdb-9e92-aa222b012ee2",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HST 3.0L 380hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; p",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HST 3.0L 380hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-supercharged-dynamic-510-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "3f1fdd71-09d2-4bca-9b6f-73fd9a802f70",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged Dynamic 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix vi",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged Dynamic 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    },
+    {
+      "catalog_key": "factory-land-rover-us:land-rover-range-rover-sport-l494-us-svr-550-2016-AWD-2016",
+      "field": "drivetrain",
+      "previous_value": "AWD",
+      "corrected_value": "4WD",
+      "previous_revision_id": "e7a9cd6a-c74d-4bd7-92e0-cc1e50baff3d",
+      "previous_fact": {
+        "value": "AWD",
+        "unit": null,
+        "status": "CONFIRMED",
+        "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SVR 5.0L 550hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; p",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SVR 5.0L 550hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.; US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "corrected_fact": {
+        "value": "4WD",
+        "status": "CONFIRMED",
+        "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+        "documentary_source": {
+          "registry_id": "factory-land-rover-us",
+          "document_id": "dbe63c14-370a-4f99-83f3-189605858bf0",
+          "sha256": "b57ae8ec1d1b789d100b3a912bf84a8a3bb1f83802df6972d84db64e7528abe4",
+          "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+          "locator": "MY2016 US brochure PDF p55 engine table explicitly4WD; pp56-60 single-speed SE/HSE/HST standard; two-speed high/low V8/SVR standard; p60 optional Extra Duty package074QA for SE/HSE only, unavailable HST.",
+          "make": "Land Rover",
+          "model": "Range Rover Sport",
+          "market": "US",
+          "model_year": null,
+          "model_year_from": 2016,
+          "model_year_to": 2016
+        }
+      },
+      "reason": "Original annual manufacturer table explicitly4WD; no source justification for generic AWD normalization",
+      "configuration_identity_unchanged": true
+    }
+  ],
+  "corrected_fields": [
+    "drivetrain",
+    "configuration_display_drive",
+    "drivetrain_description"
+  ],
+  "enriched_fields": [
+    "drivetrain_system",
+    "drivetrain_optional_system",
+    "drivetrain_optional_operation",
+    "transfer_case_optional_package"
+  ]
+}

@@ -1,0 +1,1867 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-ai-verify-09-completion",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "cadillac-cts-2015-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Cadillac/CTS/Cadillac_US%20CTS_2015.pdf",
+      "source_id": "factory-cadillac-us",
+      "publisher": "Cadillac manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+      "format": "pdf"
+    },
+    "cadillac-cts-2016-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Cadillac/CTS/Cadillac_US%20CTS_2016.pdf",
+      "source_id": "factory-cadillac-us",
+      "publisher": "Cadillac manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+      "format": "pdf"
+    },
+    "cadillac-third-09-agent": {
+      "url": "https://media.cadillac.com/content/dam/Media/documents/INTL/cadillac/2018/passenger-cars/cts/Cadillac-CTS-Frankfurt-en.pdf",
+      "source_id": "factory-cadillac-us",
+      "publisher": "Cadillac manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "locator": "Cadillac official media PDF p1 names third-generation CTS sedan. This international generation description supplies only generation identity; all US technical facts from annual US brochures.",
+      "format": "pdf"
+    },
+    "jeep-cherokee-2015-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Jeep/Cherokee/Jeep_US%20Cherokee_2015-2.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "Jeep manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "PDF pp28-30 trim/engine matrix,9-speed; Latitude2.4/3.2,4x2/Active DriveI; annual tank15.9gal; seats2+3",
+      "format": "pdf"
+    },
+    "jeep-cherokee-2016-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Jeep/Cherokee/Jeep_US%20Cherokee_2016.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "Jeep manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "PDF p21 Latitude buyer guide; p22 powertrain/capacities; 9-speed,4x2/Active DriveI; tank15.8gal; seats2+3",
+      "format": "pdf"
+    },
+    "jeep-kl-09-agent": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10121787-9999.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "Jeep manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "FCA US TSB21-019-17 RevA PDF p1 maps2015 Cherokee to KL and2.4/3.2 to948TE; code not extrapolated beyond source-year.",
+      "format": "pdf"
+    },
+    "jeep-kl-range-09": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10169207-9999.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "FCA US manufacturer service information hosted by NHTSA",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2018,
+      "locator": "PDFp1 VB3 explicitly lists2014–2018(KL)JeepCherokeeLatitudeandLimited. Generation identity only; no campaign applicability conclusion.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "cadillac-cts-iii-us",
+      "make": "Cadillac",
+      "model": "CTS",
+      "generation": "III",
+      "generation_code": "III",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "cadillac-cts-2015-09-agent"
+        ],
+        "2016": [
+          "cadillac-cts-2016-09-agent"
+        ]
+      },
+      "generation_documents": [
+        "cadillac-third-09-agent"
+      ],
+      "exclude": [
+        "MY2014 mirrored PDF has visible draft placeholders/incorrect Coupe heading; requires final US source",
+        "CTS-V",
+        "Older CTS Coupe/Wagon",
+        "AWD Vsport not in source matrix",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "standard-2t-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Standard sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Standard sedan 2.0T / 6AT / RWD or AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Standard",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-2t-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Luxury sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 2.0T / 6AT / RWD or AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-2t-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Performance sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 2.0T / 6AT / RWD or AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-2t-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Premium sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 2.0T / 6AT / RWD or AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-36-rwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 8AT / RWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-36-awd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 6AT / AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-36-rwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Performance sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 8AT / RWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-36-awd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Performance sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 6AT / AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-36-rwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Premium sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 8AT / RWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-36-awd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Premium sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 6AT / AWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with performance shifting",
+            "gears": 6,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "vsport-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Vsport sedan 3.6 Twin Turbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport sedan 3.6 Twin Turbo V6 / 8AT / RWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Vsport",
+            "engine_description": "3.6L twin-turbo direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance modes",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "vsport-premium-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "CTS Vsport Premium sedan 3.6 Twin Turbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport Premium sedan 3.6 Twin Turbo V6 / 8AT / RWD. PDF p21(printed43) CTS Sedan factory matrix, drivetrain/transmission conditional rows; p17 dimensions and five seats",
+          "facts": {
+            "trim": "Vsport Premium",
+            "engine_description": "3.6L twin-turbo direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance modes",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "standard-2t-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Standard sedan 2.0T / 8AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Standard sedan 2.0T / 8AT / RWD or AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Standard",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 268,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-2t-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Luxury sedan 2.0T / 8AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 2.0T / 8AT / RWD or AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 268,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-2t-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Performance sedan 2.0T / 8AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 2.0T / 8AT / RWD or AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 268,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-2t-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Premium sedan 2.0T / 8AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 2.0T / 8AT / RWD or AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "2.0L turbo direct-injection VVT inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 268,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-36-rwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 8AT / RWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "luxury-36-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 8AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 8AT / AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-36-rwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Performance sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 8AT / RWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "performance-36-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Performance sedan 3.6 V6 / 8AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 8AT / AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-36-rwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Premium sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 8AT / RWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "premium-36-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Premium sedan 3.6 V6 / 8AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 8AT / AWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L direct-injection VVT V6 (LGX)",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 335,
+            "torque_lb_ft": {
+              "value": 285,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance shifting",
+            "gears": 8,
+            "engine_code": "LGX",
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "vsport-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Vsport sedan 3.6 Twin Turbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport sedan 3.6 Twin Turbo V6 / 8AT / RWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Vsport",
+            "engine_description": "3.6L twin-turbo direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance modes",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        },
+        {
+          "id": "vsport-premium-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "CTS Vsport Premium sedan 3.6 Twin Turbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport Premium sedan 3.6 Twin Turbo V6 / 8AT / RWD. PDF p25 CTS standard and collection-specific powertrains; p26 dimensions and five-seat capacity; 2016 V6 LGX differs from2015",
+          "facts": {
+            "trim": "Vsport Premium",
+            "engine_description": "3.6L twin-turbo direct-injection VVT V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with performance modes",
+            "gears": 8,
+            "injection": "Direct injection"
+          }
+        }
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "seats": 5,
+        "wheelbase_in": {
+          "value": 114.6,
+          "unit": "in"
+        },
+        "length_in": {
+          "value": 195.5,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 72.2,
+          "unit": "in"
+        },
+        "height_in": {
+          "value": 57.2,
+          "unit": "in"
+        },
+        "cargo_cu_ft": {
+          "value": 13.7,
+          "unit": "cu ft"
+        },
+        "fuel_tank_us_gal": {
+          "value": 19.0,
+          "unit": "US gal"
+        },
+        "front_suspension": "MacPherson-type with dual lower ball joints",
+        "rear_suspension": "Five-link",
+        "steering": "ZF electric power rack-and-pinion",
+        "front_brakes": "Brembo ventilated discs",
+        "rear_brakes": "Ventilated discs"
+      },
+      "scope_note": "US MY2015-2016 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. MY2014 mirrored PDF has visible draft placeholders/incorrect Coupe heading; requires final US source; CTS-V; Older CTS Coupe/Wagon; AWD Vsport not in source matrix"
+    },
+    {
+      "id": "jeep-cherokee-kl-us",
+      "make": "Jeep",
+      "model": "Cherokee",
+      "generation": "KL",
+      "generation_code": "KL",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "jeep-cherokee-2015-09-agent"
+        ],
+        "2016": [
+          "jeep-cherokee-2016-09-agent"
+        ]
+      },
+      "generation_documents": [
+        "jeep-kl-range-09"
+      ],
+      "exclude": [
+        "Trailhawk Active Drive Lock; other trims and off-road packages awaiting distinct review",
+        "Active DriveII dimensions not generalized to DriveI",
+        "4WD normalized toAWD with original system description retained",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "2-4-fwd",
+          "year_from": 2015,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 2.4L Tigershark MultiAir2 / 9AT / 4x2 FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Jeep Cherokee annual US source matrix: Cherokee Latitude 2.4L Tigershark MultiAir2 / 9AT / 4x2 FWD. PDF pp28-30 trim/engine matrix,9-speed; Latitude2.4/3.2,4x2/Active DriveI; annual tank15.9gal; seats2+3; PDF p21 Latitude buyer guide; p22 powertrain/capacities; 9-speed,4x2/Active DriveI; tank15.8gal; seats2+3",
+          "facts": {
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "drivetrain_description": "Front-wheel drive (4x2)",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_in": {
+              "value": 5.9,
+              "unit": "in"
+            }
+          },
+          "annual_facts": {
+            "2015": {
+              "fuel_tank_us_gal": {
+                "value": 15.9,
+                "unit": "US gal"
+              },
+              "transmission_code": {
+                "value": "948TE",
+                "document_key": "jeep-kl-09-agent"
+              },
+              "curb_weight_lb": {
+                "value": 3655,
+                "unit": "lb"
+              }
+            },
+            "2016": {
+              "fuel_tank_us_gal": {
+                "value": 15.8,
+                "unit": "US gal"
+              },
+              "curb_weight_lb": {
+                "value": 3663,
+                "unit": "lb"
+              }
+            }
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "2-4-awd",
+          "year_from": 2015,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 2.4L Tigershark MultiAir2 / 9AT / Active DriveI single-speed4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Jeep Cherokee annual US source matrix: Cherokee Latitude 2.4L Tigershark MultiAir2 / 9AT / Active DriveI single-speed4WD. PDF pp28-30 trim/engine matrix,9-speed; Latitude2.4/3.2,4x2/Active DriveI; annual tank15.9gal; seats2+3; PDF p21 Latitude buyer guide; p22 powertrain/capacities; 9-speed,4x2/Active DriveI; tank15.8gal; seats2+3",
+          "facts": {
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "drivetrain_description": "Jeep Active DriveI single-speed4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_in": {
+              "value": 7.9,
+              "unit": "in"
+            }
+          },
+          "annual_facts": {
+            "2015": {
+              "fuel_tank_us_gal": {
+                "value": 15.9,
+                "unit": "US gal"
+              },
+              "transmission_code": {
+                "value": "948TE",
+                "document_key": "jeep-kl-09-agent"
+              },
+              "curb_weight_lb": {
+                "value": 3953,
+                "unit": "lb"
+              }
+            },
+            "2016": {
+              "fuel_tank_us_gal": {
+                "value": 15.8,
+                "unit": "US gal"
+              },
+              "curb_weight_lb": {
+                "value": 3947,
+                "unit": "lb"
+              }
+            }
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "3-2-fwd",
+          "year_from": 2015,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 3.2L Pentastar VVT with Stop/Start / 9AT / 4x2 FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Jeep Cherokee annual US source matrix: Cherokee Latitude 3.2L Pentastar VVT with Stop/Start / 9AT / 4x2 FWD. PDF pp28-30 trim/engine matrix,9-speed; Latitude2.4/3.2,4x2/Active DriveI; annual tank15.9gal; seats2+3; PDF p21 Latitude buyer guide; p22 powertrain/capacities; 9-speed,4x2/Active DriveI; tank15.8gal; seats2+3",
+          "facts": {
+            "engine_description": "3.2L Pentastar VVT with Stop/Start V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "drivetrain_description": "Front-wheel drive (4x2)",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_in": {
+              "value": 5.9,
+              "unit": "in"
+            }
+          },
+          "annual_facts": {
+            "2015": {
+              "fuel_tank_us_gal": {
+                "value": 15.9,
+                "unit": "US gal"
+              },
+              "transmission_code": {
+                "value": "948TE",
+                "document_key": "jeep-kl-09-agent"
+              },
+              "curb_weight_lb": {
+                "value": 3775,
+                "unit": "lb"
+              }
+            },
+            "2016": {
+              "fuel_tank_us_gal": {
+                "value": 15.8,
+                "unit": "US gal"
+              },
+              "curb_weight_lb": {
+                "value": 3788,
+                "unit": "lb"
+              }
+            }
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "3-2-awd",
+          "year_from": 2015,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 3.2L Pentastar VVT with Stop/Start / 9AT / Active DriveI single-speed4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Jeep Cherokee annual US source matrix: Cherokee Latitude 3.2L Pentastar VVT with Stop/Start / 9AT / Active DriveI single-speed4WD. PDF pp28-30 trim/engine matrix,9-speed; Latitude2.4/3.2,4x2/Active DriveI; annual tank15.9gal; seats2+3; PDF p21 Latitude buyer guide; p22 powertrain/capacities; 9-speed,4x2/Active DriveI; tank15.8gal; seats2+3",
+          "facts": {
+            "engine_description": "3.2L Pentastar VVT with Stop/Start V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "drivetrain_description": "Jeep Active DriveI single-speed4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_in": {
+              "value": 7.9,
+              "unit": "in"
+            }
+          },
+          "annual_facts": {
+            "2015": {
+              "fuel_tank_us_gal": {
+                "value": 15.9,
+                "unit": "US gal"
+              },
+              "transmission_code": {
+                "value": "948TE",
+                "document_key": "jeep-kl-09-agent"
+              },
+              "curb_weight_lb": {
+                "value": 4044,
+                "unit": "lb"
+              }
+            },
+            "2016": {
+              "fuel_tank_us_gal": {
+                "value": 15.8,
+                "unit": "US gal"
+              },
+              "curb_weight_lb": {
+                "value": 4041,
+                "unit": "lb"
+              }
+            }
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        }
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "trim": "Latitude",
+        "seats": 5,
+        "transmission_family": "AT",
+        "transmission_description": "9-speed automatic with Electronic Range Select",
+        "gears": 9,
+        "length_in": {
+          "value": 182,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 73.2,
+          "unit": "in"
+        },
+        "cargo_cu_ft": {
+          "value": 24.6,
+          "unit": "cu ft"
+        },
+        "cargo_max_cu_ft": {
+          "value": 54.9,
+          "unit": "cu ft"
+        },
+        "front_suspension": "MacPherson strut",
+        "rear_suspension": "Four-link with trailing arm",
+        "steering": "Electric power rack-and-pinion",
+        "injection": "Sequential multi-point electronic injection"
+      },
+      "scope_note": "US MY2015-2016 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. Trailhawk Active Drive Lock; other trims and off-road packages awaiting distinct review; Active DriveII dimensions not generalized to DriveI; 4WD normalized toAWD with original system description retained"
+    }
+  ],
+  "exclusions": [],
+  "source_unit_normalizations": [
+    {
+      "family": "volkswagen-arteon-i-us",
+      "group": "volkswagen-arteon-i-us",
+      "field": "ground_clearance",
+      "raw_value": 5.4,
+      "raw_unit": "in",
+      "value": 137.16,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "toyota-prius-zvw30-us",
+      "group": "toyota-prius-zvw30-us",
+      "field": "ground_clearance",
+      "raw_value": 5.3,
+      "raw_unit": "in",
+      "value": 134.62,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "2-4-fwd",
+      "field": "ground_clearance",
+      "raw_value": 5.9,
+      "raw_unit": "in",
+      "value": 149.86,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "2-4-awd",
+      "field": "ground_clearance",
+      "raw_value": 7.9,
+      "raw_unit": "in",
+      "value": 200.66,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "3-2-fwd",
+      "field": "ground_clearance",
+      "raw_value": 5.9,
+      "raw_unit": "in",
+      "value": 149.86,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "3-2-awd",
+      "field": "ground_clearance",
+      "raw_value": 7.9,
+      "raw_unit": "in",
+      "value": 200.66,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325i-at",
+      "field": "ground_clearance",
+      "raw_value": 4.88,
+      "raw_unit": "in",
+      "value": 123.952,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325i-manual",
+      "field": "ground_clearance",
+      "raw_value": 4.88,
+      "raw_unit": "in",
+      "value": 123.952,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325xi-at",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325xi-manual",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330i-at",
+      "field": "ground_clearance",
+      "raw_value": 4.29,
+      "raw_unit": "in",
+      "value": 108.966,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330i-manual",
+      "field": "ground_clearance",
+      "raw_value": 4.29,
+      "raw_unit": "in",
+      "value": 108.966,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330xi-at",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330xi-manual",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "lexus-gx-ii-us-2014-2016-09",
+      "group": "lexus-gx-ii-us-2014-2016-09",
+      "field": "ground_clearance",
+      "raw_value": 8.1,
+      "raw_unit": "in",
+      "value": 205.74,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "infiniti-fx-s51-us-2013-09",
+      "group": "infiniti-fx-s51-us-2013-09",
+      "field": "ground_clearance",
+      "raw_value": 7.36,
+      "raw_unit": "in",
+      "value": 186.944,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/4/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/5/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/4/facts",
+      "field": "fuel_combined",
+      "raw_value": 50,
+      "raw_unit": "US mpg",
+      "value": 4.704,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    }
+  ],
+  "parent_batch": "us-ai-verify-09"
+}

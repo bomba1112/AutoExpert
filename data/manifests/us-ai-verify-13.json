@@ -1,0 +1,1002 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-ai-verify-13",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "bmw-f32-09-agent": {
+      "url": "https://static.nhtsa.gov/odi/rcl/2015/RCMN-15V189-5553.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "BMW NA fuel-pump campaign p1 explicitly maps F32 to 4 Series Coupe. Platform only; no recall claim.",
+      "format": "pdf"
+    },
+    "bmw-4-series-2015-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/BMW/4%20Series/BMW_US%204Series_2015.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page.",
+      "format": "pdf"
+    },
+    "bmw-4-series-coupe-2015-primary-13-agent": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0142773EN_US/365888",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW U.S. Media Information, Technical Data 2015 BMW 4 Series Coupe",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "format": "pdf",
+      "locator": "Primary MY2015 BMW USA Technical Data PDF pp1-2 exact seven engine/transmission/drive columns. Doors/seats row explicitly2/4; recommended premium row; dimensions, tyres, brakes and transmission factory designation."
+    }
+  },
+  "families": [
+    {
+      "id": "bmw-4-series-f32-us",
+      "make": "BMW",
+      "model": "4 Series",
+      "generation": "F32",
+      "generation_code": "F32",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "bmw-4-series-2015-09-agent",
+          "bmw-4-series-coupe-2015-primary-13-agent"
+        ]
+      },
+      "generation_documents": [
+        "bmw-f32-09-agent"
+      ],
+      "exclude": [
+        "F33 Convertible and F36 Gran Coupe",
+        "M4",
+        "MY2016: no annual source link in inspected index",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "428i-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "428i Coupe 2.0 TwinPower Turbo / 6-speed MT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 428i Coupe 2.0 TwinPower Turbo / 6-speed MT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "428i",
+            "engine_description": "428i 2.0L TwinPower Turbo inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1997,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 240,
+            "torque_lb_ft": {
+              "value": 255,
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3450,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.7,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 34,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.0,
+            "wheels": "17 x 7.5 alloy; 225/50 tires",
+            "height_in": {
+              "value": 54.2,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 130,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 37.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,11.8in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 90.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2.4",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "I plus",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.909,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "428i-at",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "428i Coupe 2.0 TwinPower Turbo / 8-speed AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 428i Coupe 2.0 TwinPower Turbo / 8-speed AT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "428i",
+            "engine_description": "428i 2.0L TwinPower Turbo inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1997,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 240,
+            "torque_lb_ft": {
+              "value": 255,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic",
+            "gears": 8,
+            "curb_weight_lb": {
+              "value": 3495,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.7,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 35,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.0,
+            "wheels": "17 x 7.5 alloy; 225/50 tires",
+            "height_in": {
+              "value": 54.2,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 130,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 37.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,11.8in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 90.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2.4",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.154,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_code": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "428i-xdrive-at",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "428i xDrive Coupe 2.0 TwinPower Turbo / 8-speed AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 428i xDrive Coupe 2.0 TwinPower Turbo / 8-speed AT / AWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "428i xDrive",
+            "engine_description": "428i xDrive 2.0L TwinPower Turbo inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1997,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 240,
+            "torque_lb_ft": {
+              "value": 255,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic",
+            "gears": 8,
+            "curb_weight_lb": {
+              "value": 3645,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.6,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 33,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.0,
+            "wheels": "17 x 7.5 alloy; 225/50 tires",
+            "height_in": {
+              "value": 54.8,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 145,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 38.7,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/50 R17 94V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "7.5J x17 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,11.8in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 90.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2.4",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.154,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_code": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "435i-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i Coupe 3.0 TwinPower Turbo / 6-speed MT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i Coupe 3.0 TwinPower Turbo / 6-speed MT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "435i",
+            "engine_description": "435i 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3600,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.3,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 30,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires",
+            "height_in": {
+              "value": 54.2,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 130,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 37.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13.4in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 89.6,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "K",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.231,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_code": {
+              "value": "N55B30M0",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "435i-at",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i Coupe 3.0 TwinPower Turbo / 8-speed AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i Coupe 3.0 TwinPower Turbo / 8-speed AT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "435i",
+            "engine_description": "435i 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic",
+            "gears": 8,
+            "curb_weight_lb": {
+              "value": 3635,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 32,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires",
+            "height_in": {
+              "value": 54.2,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 130,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 37.1,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13.4in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 89.6,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.154,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_code": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_code": {
+              "value": "N55B30M0",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "435i-xdrive-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i xDrive Coupe 3.0 TwinPower Turbo / 6-speed MT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i xDrive Coupe 3.0 TwinPower Turbo / 6-speed MT / AWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "435i xDrive",
+            "engine_description": "435i xDrive 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3750,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 28,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires",
+            "height_in": {
+              "value": 54.8,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 145,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 38.7,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13.4in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 89.6,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "K",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.231,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_code": {
+              "value": "N55B30M0",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        },
+        {
+          "id": "435i-xdrive-at",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i xDrive Coupe 3.0 TwinPower Turbo / 8-speed AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i xDrive Coupe 3.0 TwinPower Turbo / 8-speed AT / AWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page. Primary BMW Technical Data pp1-2 same exact annual columns; added-field documentary overrides retained.",
+          "facts": {
+            "trim": "435i xDrive",
+            "engine_description": "435i xDrive 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic",
+            "gears": 8,
+            "curb_weight_lb": {
+              "value": 3775,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 4.7,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 30,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires",
+            "height_in": {
+              "value": 54.8,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "in"
+            },
+            "ground_clearance": {
+              "value": 145,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "turning_circle_ft": {
+              "value": 38.7,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "ft"
+            },
+            "front_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_tires": {
+              "value": "225/45 R18 91V RSC",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_wheels": {
+              "value": "8J x18 light alloy",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "front_brakes": {
+              "value": "Ventilated discs,13.4in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "rear_brakes": {
+              "value": "Ventilated discs,13in",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_stroke_mm": {
+              "value": 89.6,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+              "unit": "mm"
+            },
+            "engine_management": {
+              "value": "MEVD17.2",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_factory_designation": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "final_drive_ratio": {
+              "value": 3.154,
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "transmission_code": {
+              "value": "8HP45",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            },
+            "engine_code": {
+              "value": "N55B30M0",
+              "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+            }
+          }
+        }
+      ],
+      "facts": {
+        "body": "COUPE",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "fuel_tank_us_gal": {
+          "value": 15.8,
+          "unit": "US gal"
+        },
+        "fuel_grade": {
+          "value": "Recommended: Premium gasoline; numeric octane scale not stated",
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "seats": {
+          "value": 4,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "doors": {
+          "value": 2,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "length_in": {
+          "value": 182.6,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 71.9,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 110.6,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "cargo_cu_ft": {
+          "value": 15.7,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "cu ft"
+        },
+        "fuel_tank_l": {
+          "value": 60,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "L"
+        },
+        "injection": {
+          "value": "High precision direct injection",
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "steering": {
+          "value": "Rack-and-pinion,15:1 ratio",
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "engine_valve_control": {
+          "value": "VANOS and Valvetronic",
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "induction_description": {
+          "value": "Twin-scroll turbocharger",
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "valves_per_cylinder": {
+          "value": 4,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent"
+        },
+        "engine_bore_mm": {
+          "value": 84,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "mm"
+        },
+        "front_legroom_in": {
+          "value": 42.2,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "rear_legroom_in": {
+          "value": 33.7,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "front_max_headroom_in": {
+          "value": 39.8,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "rear_max_headroom_in": {
+          "value": 36.1,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "in"
+        },
+        "top_speed_standard_mph": {
+          "value": 130,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "mph"
+        },
+        "top_speed_optional_mph": {
+          "value": 155,
+          "document_key": "bmw-4-series-coupe-2015-primary-13-agent",
+          "unit": "mph"
+        }
+      },
+      "scope_note": "US MY2015-2015 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. F33 Convertible and F36 Gran Coupe; M4; MY2016: no annual source link in inspected index"
+    }
+  ],
+  "exclusions": [],
+  "parent_batch": "us-ai-verify-09",
+  "source_conflicts": [
+    {
+      "field": "fuel_grade",
+      "affected_keys": [
+        "factory-bmw-us:bmw-4-series-f32-us-428i-mt-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-428i-at-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-428i-xdrive-at-AWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-mt-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-at-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-xdrive-mt-AWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-xdrive-at-AWD-2015"
+      ],
+      "previous_value": "Required: Unleaded premium gasoline; brochure gives no numeric octane scale",
+      "new_value": "Recommended: Premium gasoline; numeric octane scale not stated",
+      "resolution": "Primary BMW USA annual technical table explicitly labels Fuel type(recomm.). Correct previous interpretation, retain revision history; do not invent AKI/RON."
+    },
+    {
+      "field": "transmission_family",
+      "affected_keys": [
+        "factory-bmw-us:bmw-4-series-f32-us-428i-mt-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-mt-RWD-2015",
+        "factory-bmw-us:bmw-4-series-f32-us-435i-xdrive-mt-AWD-2015"
+      ],
+      "previous_value": "MT",
+      "new_value": "MANUAL",
+      "resolution": "Same six-speed manual fact, canonical existing schema value; not a newly added transmission or configuration."
+    }
+  ],
+  "source_discrepancies": [],
+  "research_holds": []
+}

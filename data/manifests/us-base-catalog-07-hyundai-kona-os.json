@@ -1,0 +1,519 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-hyundai-kona-os",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "hyundai-kona-2018-pricing-source07": {
+      "url": "https://www.prnewswire.com/news-releases/2018-hyundai-kona-suv-pricing-released-a-crossover-for-urban-adventurers-300590920.html",
+      "source_id": "factory-hyundai-us",
+      "publisher": "Hyundai Motor America",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "Hyundai Motor America-authored Jan. 31, 2018 US 2018 Kona pricing release, '2018 HYUNDAI KONA PRICING' table: SE/SEL 2.0L six-speed SHIFTRONIC FWD/AWD; Limited/Ultimate 1.6L Turbo seven-speed EcoShift DCT FWD/AWD. Contrast roof is an SEL package, not another powertrain.",
+      "format": "html"
+    },
+    "hyundai-kona-2019-pricing-source07": {
+      "url": "https://www.prnewswire.com/news-releases/hyundai-announces-pricing-for-2019-kona-300723441.html",
+      "source_id": "factory-hyundai-us",
+      "publisher": "Hyundai Motor America",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2019,
+      "locator": "Hyundai Motor America-authored Oct. 3, 2018 US 2019 Kona release, '2019 Hyundai Kona Pricing' table: SE/SEL 2.0L six-speed SHIFTRONIC FWD/AWD; Limited/Ultimate 1.6L Turbo seven-speed EcoShift DCT FWD/AWD. MY2019 later Iron Man edition is outside this edition's reviewed table.",
+      "format": "html"
+    },
+    "hyundai-kona-os-generation-source07": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10233547-0001.pdf",
+      "source_id": "factory-hyundai-us",
+      "publisher": "Hyundai Motor America",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2019,
+      "locator": "Hyundai Motor America TSB 23-01-014H-2 PDF p9, ROM ID model-year table explicitly labels 'Kona (OS)' and '2018 - 2022'; generation-code identity only, not engine or transmission evidence.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "hyundai-kona-os-us-2018-2019-source07",
+      "make": "Hyundai",
+      "model": "Kona",
+      "generation": "OS SUV",
+      "generation_code": "OS",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2019,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2018": [
+          "hyundai-kona-2018-pricing-source07"
+        ],
+        "2019": [
+          "hyundai-kona-2019-pricing-source07"
+        ]
+      },
+      "generation_documents": [
+        "hyundai-kona-os-generation-source07"
+      ],
+      "scope_note": "Hyundai Motor America US MY2018/19 annual launch/pricing tables directly pair standard trim, 2.0L or 1.6L Turbo engine, SHIFTRONIC AT or EcoShift DCT, and FWD/AWD. No engine-family code or horsepower claimed without separate applicable factory evidence.",
+      "exclude": [
+        "Other model years or markets",
+        "Kona Electric and later N variants",
+        "2018 SEL contrast-roof appearance package as separate powertrain",
+        "2019 Iron Man edition absent from reviewed October 2018 release",
+        "Exact VIN configuration without VIN-specific check"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE"
+      },
+      "groups": [
+        {
+          "id": "2018-se-fwd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona SE 2.0L inline-4 / 6-speed SHIFTRONIC automatic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SE FWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SE",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2018-se-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona SE 2.0L inline-4 / 6-speed SHIFTRONIC automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SE AWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SE",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2018-sel-fwd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona SEL 2.0L inline-4 / 6-speed SHIFTRONIC automatic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SEL FWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SEL",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2018-sel-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona SEL 2.0L inline-4 / 6-speed SHIFTRONIC automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SEL AWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SEL",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2018-limited-fwd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona Limited 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Limited FWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2018-limited-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona Limited 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Limited AWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2018-ultimate-fwd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona Ultimate 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Ultimate FWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Ultimate",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2018-ultimate-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Kona Ultimate 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2018 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Ultimate AWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Ultimate",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2019-se-fwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona SE 2.0L inline-4 / 6-speed SHIFTRONIC automatic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SE FWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SE",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2019-se-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona SE 2.0L inline-4 / 6-speed SHIFTRONIC automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SE AWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SE",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2019-sel-fwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona SEL 2.0L inline-4 / 6-speed SHIFTRONIC automatic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SEL FWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SEL",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2019-sel-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona SEL 2.0L inline-4 / 6-speed SHIFTRONIC automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, SEL AWD same row: 2.0L inline-4, 6-speed SHIFTRONIC automatic. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "SEL",
+            "engine_description": "2.0L inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "transmission_description": "6-speed SHIFTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6
+          }
+        },
+        {
+          "id": "2019-limited-fwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona Limited 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Limited FWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2019-limited-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona Limited 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Limited AWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2019-ultimate-fwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona Ultimate 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Ultimate FWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Ultimate",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2019-ultimate-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Kona Ultimate 1.6L turbo inline-4 / 7-speed EcoShift dual-clutch / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Hyundai Motor America MY2019 Kona launch/pricing release, annual model/engine/transmission/drivetrain table, Ultimate AWD same row: 1.6L turbo inline-4, 7-speed EcoShift dual-clutch. SUV gasoline. Do not transfer trim/engine pairing between years.",
+          "facts": {
+            "trim": "Ultimate",
+            "engine_description": "1.6L turbo inline-4",
+            "engine_displacement": {
+              "value": 1.6,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "transmission_description": "7-speed EcoShift dual-clutch",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        }
+      ]
+    }
+  ]
+}

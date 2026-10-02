@@ -1,0 +1,130 @@
+{
+  "manifest_version": "1.0.0",
+  "data_origin": "REAL",
+  "retrieved_at": "2026-09-14T00:00:00Z",
+  "vehicle": {
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "XV70",
+    "market": "USA",
+    "year": 2019,
+    "engine": "2.5 L gasoline inline-four",
+    "engine_code": "A25A-FKS",
+    "transmission": "8AT",
+    "transmission_code": "UB80E",
+    "drivetrain": "FWD"
+  },
+  "sources": [
+    {
+      "key": "toyota_press",
+      "tier": "A",
+      "publisher": "Toyota Motor Sales, U.S.A.",
+      "title": "2019 Toyota Camry Builds on Exciting Style, Sport Performance and Innovative Safety Tech",
+      "url": "https://pressroom.toyota.com/2019-toyota-camry-builds-exciting-style-sport-perfor-innovative-safety-tech-standard-equipment/",
+      "source_type": "MANUFACTURER_PRODUCT_DOCUMENTATION"
+    },
+    {
+      "key": "toyota_maintenance",
+      "tier": "A",
+      "publisher": "Toyota Motor Sales, U.S.A.",
+      "title": "2019 Camry Warranty & Maintenance Guide (T-MMS-19Camry)",
+      "url": "https://assets.sia.toyota.com/publications/en/omms-s/T-MMS-19Camry/pdf/T-MMS-19Camry.pdf",
+      "source_type": "MANUFACTURER_MAINTENANCE_GUIDE"
+    },
+    {
+      "key": "nhtsa_recalls",
+      "tier": "A",
+      "publisher": "National Highway Traffic Safety Administration",
+      "title": "NHTSA Recalls by Vehicle: 2019 Toyota Camry",
+      "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TOYOTA&model=CAMRY&modelYear=2019",
+      "source_type": "GOVERNMENT_RECALL_API"
+    },
+    {
+      "key": "nhtsa_tsb",
+      "tier": "A",
+      "publisher": "Toyota Motor Sales, U.S.A. / NHTSA document repository",
+      "title": "T-SB-0152-19: Hesitation on Acceleration From a Slow Roll or Rolling Stop",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10169403-9999.pdf",
+      "source_type": "MANUFACTURER_COMMUNICATION"
+    },
+    {
+      "key": "nhtsa_complaints",
+      "tier": "C",
+      "publisher": "National Highway Traffic Safety Administration",
+      "title": "NHTSA Consumer Complaints: 2019 Toyota Camry (pilot sample)",
+      "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TOYOTA&model=CAMRY&modelYear=2019",
+      "source_type": "OWNER_SUBMISSIONS_GOVERNMENT_REPOSITORY"
+    },
+    {
+      "key": "epa_fuel",
+      "tier": "A",
+      "publisher": "U.S. Department of Energy / U.S. Environmental Protection Agency",
+      "title": "FuelEconomy.gov vehicle data: 2019 Toyota Camry",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/menu/options?year=2019&make=Toyota&model=Camry",
+      "source_type": "GOVERNMENT_FUEL_ECONOMY_DATA"
+    },
+    {
+      "key": "vpic",
+      "tier": "A",
+      "publisher": "National Highway Traffic Safety Administration",
+      "title": "vPIC Vehicle Product Information Catalog API",
+      "url": "https://vpic.nhtsa.dot.gov/api/",
+      "source_type": "GOVERNMENT_VIN_DECODE_DOCUMENTATION"
+    },
+    {
+      "key": "engine_reference",
+      "tier": "B",
+      "publisher": "Toyota-Club.Net technical reference",
+      "title": "Toyota A25 Dynamic Force engine technical overview",
+      "url": "https://toyota-club.net/files/faq/18-03-20_faq_df_r4_eng.htm",
+      "source_type": "INDEPENDENT_TECHNICAL_REFERENCE"
+    },
+    {
+      "key": "transmission_reference",
+      "tier": "B",
+      "publisher": "Transmission Digest",
+      "title": "Inside Toyota's UA/UB80E/F torque converter",
+      "url": "https://www.transmissiondigest.com/inside-toyotas-ua-ub80e-f-torque-converter/",
+      "source_type": "AUTOMOTIVE_TRADE_TECHNICAL_REFERENCE"
+    }
+  ],
+  "official_recall_campaigns": [
+    "20V682000",
+    "20V012000",
+    "21V890000",
+    "19V567000",
+    "19V503000",
+    "19V244000"
+  ],
+  "manufacturer_communications": [
+    "T-SB-0152-19"
+  ],
+  "owner_material_ids": [
+    "NHTSA-ODI-11762892",
+    "NHTSA-ODI-11761489",
+    "NHTSA-ODI-11758768",
+    "NHTSA-ODI-11756907",
+    "NHTSA-ODI-11756617",
+    "NHTSA-ODI-11753170",
+    "NHTSA-ODI-11689172",
+    "NHTSA-ODI-11612627",
+    "NHTSA-ODI-11589835",
+    "NHTSA-ODI-11752091"
+  ],
+  "quality_counts": {
+    "real_sources": 9,
+    "confirmed_evidence_items": 18,
+    "known_issues": 4,
+    "owner_materials": 10,
+    "recalls": 6,
+    "manufacturer_communications": 1,
+    "dossier_sections_with_real_data": 16,
+    "dossier_sections_total": 16
+  },
+  "boundaries": [
+    "Recall results are model-level; applicability and remedy completion require a specific VIN check.",
+    "Owner submissions are allegations from a reviewed pilot sample, not fleet failure statistics.",
+    "The model dossier is REAL; the bundled VIN history remains an explicitly separate DEMO fixture.",
+    "No engine-life or repair-cost claim is inferred from the source set."
+  ]
+}

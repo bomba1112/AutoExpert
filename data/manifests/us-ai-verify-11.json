@@ -1,0 +1,1720 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-ai-verify-11",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "chevrolet-equinox-2016-11-agent": {
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Equinox/Chevrolet_US%20Equinox_2016.pdf",
+      "source_id": "factory-chevrolet-us",
+      "publisher": "Chevrolet manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+      "format": "pdf"
+    },
+    "chevrolet-equinox-2017-11-agent": {
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Equinox/Chevrolet_US%20Equinox_2017.pdf",
+      "source_id": "factory-chevrolet-us",
+      "publisher": "Chevrolet manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+      "format": "pdf"
+    },
+    "equinox-cohort-11-agent": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10134596-9999.pdf",
+      "source_id": "factory-chevrolet-us",
+      "publisher": "Chevrolet manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2017,
+      "locator": "GM PI1043D p1 identifies2010-2017 Equinox body cohort. Generation label is derived jointly with manufacturer2010 brochure pp1-2 all-new redesign and manufacturer2018 successor brochure p2 all-new architecture; not an invented GM code or an ordinal claim.",
+      "format": "pdf"
+    },
+    "equinox-boundary-2010-11-agent": {
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Equinox/Chevrolet_US%20Equinox_2010.pdf",
+      "source_id": "factory-chevrolet-us",
+      "publisher": "Chevrolet manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2010,
+      "year_to": 2010,
+      "locator": "MY2010 US brochure PDF pp1-2 explicitly all-new2010 Equinox redesign. Boundary evidence only; not2016/17 technical data.",
+      "format": "pdf"
+    },
+    "equinox-boundary-2018-11-agent": {
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Equinox/Chevrolet_US%20Equinox_2018-2.pdf",
+      "source_id": "factory-chevrolet-us",
+      "publisher": "Chevrolet manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "MY2018 US brochure PDF p2 explicitly all-new successor, newdesign and all-new propulsion. Boundary evidence only; not2016/17 technical data.",
+      "format": "pdf"
+    },
+    "cadillac-cts-2014-11-agent": {
+      "url": "https://media.gm.com/content/dam/Media/microsites/product/cts_launch/gm/presskits/CTS_Quadfold_8-20.pdf",
+      "source_id": "factory-cadillac-us",
+      "publisher": "General Motors/Cadillac ProductSource training, August2013, MY2014 US CTS factual specification; LOCAL_RESEARCH_ONLY; raw document not for consumer redistribution",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+      "format": "pdf"
+    },
+    "cadillac-third-11-agent": {
+      "url": "https://media.cadillac.com/content/dam/Media/documents/INTL/cadillac/2018/passenger-cars/cts/Cadillac-CTS-Frankfurt-en.pdf",
+      "source_id": "factory-cadillac-us",
+      "publisher": "Cadillac manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "Cadillac official media PDF p1 identifies third-generation CTS sedan debuted2014. Generation identity only; MY2014 US technical evidence from separate GM source.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "chevrolet-equinox-2010-redesign-us-us",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "generation": "2010 redesign (US)",
+      "generation_code": null,
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2017,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "chevrolet-equinox-2016-11-agent"
+        ],
+        "2017": [
+          "chevrolet-equinox-2017-11-agent"
+        ]
+      },
+      "generation_documents": [
+        "equinox-cohort-11-agent"
+      ],
+      "exclude": [
+        "No invented ordinal II or GM platform code; source-grounded redesign label only",
+        "V6 FWD, V6 L and V6 LS excluded by annual source",
+        "MY2017 LT V6 excludes Midnight Edition and Sport Edition",
+        "No2010 or2018 technical values applied to2016-2017",
+        "Unknown transmission code, oil and service fluids remain absent",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "l-24-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox L 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox L 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "L",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 32,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 26,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.047,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ls-24-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LS 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LS 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LS",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 32,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 26,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.047,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ls-24-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LS 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LS 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LS",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 29,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-24-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LT 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 32,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 26,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.047,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-24-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LT 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 29,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ltz-24-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LTZ 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LTZ 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LTZ",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 32,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 26,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.047,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ltz-24-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LTZ 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LTZ 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LTZ",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 29,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-36-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LT 3.6 V6 / 6AT / AWD; requires Convenience Package + Technology Package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 3.6 V6 / 6AT / AWD; requires Convenience Package + Technology Package. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "3.6L direct-injection V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 301,
+            "torque_lb_ft": {
+              "value": 272,
+              "unit": "lb-ft"
+            },
+            "steering": "Hydraulic power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 20.9,
+              "unit": "US gal approximate"
+            },
+            "required_factory_packages": "Convenience Package + Technology Package",
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 18,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 13.067,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ltz-36-awd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Equinox LTZ 3.6 V6 / 6AT / AWD; requires Enhanced Convenience Package + Technology Package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LTZ 3.6 V6 / 6AT / AWD; requires Enhanced Convenience Package + Technology Package. US annual brochure PDF pp21-22 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 package requirements; p23 annual EPA table, five seats, dimensions, tanks; p19 wheels; p4 refreshedSUV description.",
+          "facts": {
+            "trim": "LTZ",
+            "engine_description": "3.6L direct-injection V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 301,
+            "torque_lb_ft": {
+              "value": 272,
+              "unit": "lb-ft"
+            },
+            "steering": "Hydraulic power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 20.9,
+              "unit": "US gal approximate"
+            },
+            "required_factory_packages": "Enhanced Convenience Package + Technology Package",
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 18,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 13.067,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "l-24-fwd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox L 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox L 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "L",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 21,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 31,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 25,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.409,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ls-24-fwd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox LS 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LS 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "LS",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 21,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 31,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 25,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.409,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "ls-24-awd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox LS 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LS 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "LS",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 66.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 28,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-24-fwd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox LT 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 21,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 31,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 25,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.409,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-24-awd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox LT 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 28,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "premier-24-fwd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox Premier 2.4 ECOTEC / 6AT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox Premier 2.4 ECOTEC / 6AT / FWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "Premier",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 21,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 31,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 25,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 9.409,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "premier-24-awd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox Premier 2.4 ECOTEC / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox Premier 2.4 ECOTEC / 6AT / AWD. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "Premier",
+            "engine_description": "ECOTEC2.4L DOHC direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 182,
+            "torque_lb_ft": {
+              "value": 172,
+              "unit": "lb-ft"
+            },
+            "steering": "Electric power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 18.8,
+              "unit": "US gal approximate"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 28,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 10.227,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        },
+        {
+          "id": "lt-36-awd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox LT 3.6 V6 / 6AT / AWD; requires Convenience Package + Technology Package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox LT 3.6 V6 / 6AT / AWD; requires Convenience Package + Technology Package. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "LT",
+            "engine_description": "3.6L direct-injection V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 301,
+            "torque_lb_ft": {
+              "value": 272,
+              "unit": "lb-ft"
+            },
+            "steering": "Hydraulic power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 20.9,
+              "unit": "US gal approximate"
+            },
+            "required_factory_packages": "Convenience Package + Technology Package",
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 18,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 13.067,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained",
+            "excluded_factory_packages": "Midnight Edition; Sport Edition"
+          }
+        },
+        {
+          "id": "premier-36-awd-2017",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Equinox Premier 3.6 V6 / 6AT / AWD; requires Enhanced Convenience Package + Technology Package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Chevrolet Equinox annual US source matrix: Equinox Premier 3.6 V6 / 6AT / AWD; requires Enhanced Convenience Package + Technology Package. US annual brochure PDF pp18-20 trimГ—engineГ—gearboxГ—AWD matrix, footnotes3/4 V6 AWD-only packages and Midnight/Sport exclusion; p21 annual EPA table, five seats, dimensions, tanks; p15 wheels.",
+          "facts": {
+            "trim": "Premier",
+            "engine_description": "3.6L direct-injection V6",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 301,
+            "torque_lb_ft": {
+              "value": 272,
+              "unit": "lb-ft"
+            },
+            "steering": "Hydraulic power steering, variable assist",
+            "height_in": {
+              "value": 69.3,
+              "unit": "in"
+            },
+            "wheels": "18in machined-face aluminum",
+            "fuel_tank_us_gal": {
+              "value": 20.9,
+              "unit": "US gal approximate"
+            },
+            "required_factory_packages": "Enhanced Convenience Package + Technology Package",
+            "epa_city_mpg": {
+              "value": 16,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 23,
+              "unit": "US mpg"
+            },
+            "epa_combined_mpg": {
+              "value": 18,
+              "unit": "US mpg"
+            },
+            "fuel_combined": {
+              "value": 13.067,
+              "unit": "L/100km"
+            },
+            "fuel_combined_basis": "Converted from annual US EPA combined mpg; original mpg retained"
+          }
+        }
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "injection": "Direct injection",
+        "transmission_family": "AT",
+        "transmission_description": "6-speed automatic with overdrive",
+        "gears": 6,
+        "seats": 5,
+        "length_in": {
+          "value": 187.8,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 72.5,
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 112.5,
+          "unit": "in"
+        },
+        "front_track_in": {
+          "value": 62.9,
+          "unit": "in"
+        },
+        "rear_track_in": {
+          "value": 62.1,
+          "unit": "in"
+        },
+        "passenger_volume_cu_ft": {
+          "value": 99.7,
+          "unit": "cu ft"
+        },
+        "cargo_max_cu_ft": {
+          "value": 63.7,
+          "unit": "cu ft"
+        },
+        "front_suspension": "Independent struts",
+        "rear_suspension": "Independent multi-link with hydraulic bushings, trailing-arm links and stabilizer bar"
+      },
+      "scope_note": "US MY2016-2017 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. No invented ordinal II or GM platform code; source-grounded redesign label only; V6 FWD, V6 L and V6 LS excluded by annual source; MY2017 LT V6 excludes Midnight Edition and Sport Edition; No2010 or2018 technical values applied to2016-2017; Unknown transmission code, oil and service fluids remain absent",
+      "generation_lineage_support": [
+        "equinox-boundary-2010-11-agent",
+        "equinox-boundary-2018-11-agent"
+      ],
+      "generation_inference": "2010 redesign (US) is a normalized descriptive generation label: all-new2010 launch, GM body cohort2010-2017 and all-new2018 successor. Manufacturer ordinal/code not asserted."
+    },
+    {
+      "id": "cadillac-cts-iii-us",
+      "make": "Cadillac",
+      "model": "CTS",
+      "generation": "III",
+      "generation_code": "III",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2014": [
+          "cadillac-cts-2014-11-agent"
+        ]
+      },
+      "generation_documents": [
+        "cadillac-third-11-agent"
+      ],
+      "exclude": [
+        "CTS-V, Coupe, Wagon and earlier-generation2014 bodies excluded",
+        "Vsport AWD excluded: explicit p2 VsportRWD box overrides generic all-model AWD paragraph",
+        "MY2014 seats, oil/fluids and exact aggregate codes not confirmed",
+        "Raw GM training PDF has employee-only distribution notice: retained private; no raw public redistribution or copied consumer material",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "standard-2t",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Standard sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Standard sedan 2.0T / 6AT / RWD or AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Standard",
+            "engine_description": "2.0L turbocharged inline-4,272hp",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "luxury-2t",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Luxury sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 2.0T / 6AT / RWD or AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "2.0L turbocharged inline-4,272hp",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat",
+            "fuel_grade": "Premium recommended; numerical octane scale not stated",
+            "wheels": "17in standard;18in available",
+            "wheelbase_in": {
+              "value": 114.6,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 195.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 72.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "performance-2t",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Performance sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 2.0T / 6AT / RWD or AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "2.0L turbocharged inline-4,272hp",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "premium-2t",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Premium sedan 2.0T / 6AT / RWD or AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 2.0T / 6AT / RWD or AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "2.0L turbocharged inline-4,272hp",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 272,
+            "torque_lb_ft": {
+              "value": 295,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "luxury-36-rwd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 8AT / RWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with paddle shifters",
+            "gears": 8,
+            "tires": "All-season run-flat",
+            "fuel_grade": "Regular; numerical octane scale not stated",
+            "wheels": "17in standard;18in available",
+            "wheelbase_in": {
+              "value": 114.6,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 195.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 72.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "luxury-36-awd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Luxury sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Luxury sedan 3.6 V6 / 6AT / AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Luxury",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat",
+            "fuel_grade": "Regular; numerical octane scale not stated",
+            "wheels": "17in standard;18in available",
+            "wheelbase_in": {
+              "value": 114.6,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 195.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 72.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "performance-36-rwd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Performance sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 8AT / RWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with paddle shifters",
+            "gears": 8,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "performance-36-awd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Performance sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Performance sedan 3.6 V6 / 6AT / AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Performance",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "premium-36-rwd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Premium sedan 3.6 V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 8AT / RWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with paddle shifters",
+            "gears": 8,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "premium-36-awd",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Premium sedan 3.6 V6 / 6AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Premium sedan 3.6 V6 / 6AT / AWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Premium",
+            "engine_description": "3.6L V6,321hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 321,
+            "torque_lb_ft": {
+              "value": 275,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "6-speed automatic with paddle shifters",
+            "gears": 6,
+            "tires": "All-season run-flat"
+          }
+        },
+        {
+          "id": "vsport",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Vsport sedan 3.6 TwinTurbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport sedan 3.6 TwinTurbo V6 / 8AT / RWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Vsport",
+            "engine_description": "3.6L twin-turbo V6,420hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with paddle shifters",
+            "gears": 8,
+            "wheels": "18in10-spoke",
+            "tires": "Pirelli summer performance run-flat",
+            "limited_slip_differential": "Electronic limited-slip rear differential",
+            "cooler_equipment": "Transmission cooler and oil cooler",
+            "fuel_grade": "Premium required; numerical octane scale not stated",
+            "wheelbase_in": {
+              "value": 114.6,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 195.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 72.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "vsport-premium",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "CTS Vsport Premium sedan 3.6 TwinTurbo V6 / 8AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "Cadillac CTS annual US source matrix: CTS Vsport Premium sedan 3.6 TwinTurbo V6 / 8AT / RWD. GM MY2014 CTS QuickFacts PDF p2 packaging table, exact6AT all2.0/all3.6AWD vs8AT3.6RWD/Vsport; Vsport boxRWD-only; p1 CTS-only columns for fuel grade/dimensions. Competitor columns excluded.",
+          "facts": {
+            "trim": "Vsport Premium",
+            "engine_description": "3.6L twin-turbo V6,420hp",
+            "engine_displacement": {
+              "value": 3.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 420,
+            "torque_lb_ft": {
+              "value": 430,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "8-speed automatic with paddle shifters",
+            "gears": 8,
+            "wheels": "18in10-spoke",
+            "tires": "Pirelli summer performance run-flat",
+            "limited_slip_differential": "Electronic limited-slip rear differential",
+            "cooler_equipment": "Transmission cooler and oil cooler"
+          }
+        }
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "front_suspension": "Independent double-pivot MacPherson strut",
+        "rear_suspension": "Independent five-link",
+        "steering": "ZF electric variable-assist rack-mounted steering",
+        "front_brakes": "Brembo performance discs",
+        "cargo_cu_ft": {
+          "value": 13.7,
+          "unit": "cu ft"
+        },
+        "equipment": "CUE8-inch touch screen; threeUSB ports, SDcard reader and auxiliary input; 11-speakerBose standard; Adaptive Remote Start and Keyless Access"
+      },
+      "scope_note": "US MY2014-2014 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. CTS-V, Coupe, Wagon and earlier-generation2014 bodies excluded; Vsport AWD excluded: explicit p2 VsportRWD box overrides generic all-model AWD paragraph; MY2014 seats, oil/fluids and exact aggregate codes not confirmed; Raw GM training PDF has employee-only distribution notice: retained private; no raw public redistribution or copied consumer material",
+      "source_rights_note": "Public GM-hosted employee training document. Private raw evidence only, normalized factory facts; do not bundle PDF or reproduced tables in deployment/UI."
+    }
+  ],
+  "exclusions": [],
+  "source_conflicts": [],
+  "source_discrepancies": [],
+  "research_holds": []
+}

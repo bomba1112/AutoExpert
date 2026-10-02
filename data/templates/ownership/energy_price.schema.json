@@ -1,0 +1,156 @@
+{
+  "$defs": {
+    "TariffTier": {
+      "additionalProperties": false,
+      "properties": {
+        "up_to_kwh": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Up To Kwh"
+        },
+        "unit_price": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,4}0*$",
+              "type": "string"
+            }
+          ],
+          "title": "Unit Price"
+        }
+      },
+      "required": [
+        "unit_price"
+      ],
+      "title": "TariffTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "energy": {
+      "enum": [
+        "AI92",
+        "AI95",
+        "AI98",
+        "DIESEL",
+        "ELECTRICITY"
+      ],
+      "title": "Energy",
+      "type": "string"
+    },
+    "channel": {
+      "enum": [
+        "RETAIL",
+        "HOME",
+        "PUBLIC_AC",
+        "PUBLIC_DC",
+        "SUPPLIER_TO_OPERATOR"
+      ],
+      "title": "Channel",
+      "type": "string"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "region": {
+      "default": "AZ",
+      "title": "Region",
+      "type": "string"
+    },
+    "unit": {
+      "enum": [
+        "L",
+        "kWh"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "currency": {
+      "const": "AZN",
+      "default": "AZN",
+      "title": "Currency",
+      "type": "string"
+    },
+    "unit_price": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,4}0*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Unit Price"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/TariffTier"
+      },
+      "maxItems": 20,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "fixed_monthly": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,2}0*$",
+          "type": "string"
+        }
+      ],
+      "default": "0",
+      "title": "Fixed Monthly"
+    },
+    "regulated": {
+      "title": "Regulated",
+      "type": "boolean"
+    },
+    "vat_included": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Vat Included"
+    }
+  },
+  "required": [
+    "energy",
+    "channel",
+    "provider",
+    "unit",
+    "regulated"
+  ],
+  "title": "EnergyPrice",
+  "type": "object"
+}

@@ -1,0 +1,233 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-lexus-gx-2017-2019-v2",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "gx-2017-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2017.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus USA",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "Lexus-authored US GX 2017 brochure, PDF pp2 and 18 (zero-based): GX 460 4.6L V8, 301 hp/329 lb-ft, six-speed automatic/full-time 4WD, annual GX/GX Premium/GX Luxury feature columns, dimensions and 15/18/16 EPA estimates.",
+      "format": "pdf"
+    },
+    "gx-2018-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2018.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus USA",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "Lexus-authored US GX 2018 brochure, PDF pp2 and 18 (zero-based): GX 460 4.6L V8, 301 hp/329 lb-ft, six-speed automatic/full-time 4WD, annual GX/GX Premium/GX Luxury feature columns, dimensions and 15/18/16 EPA estimates.",
+      "format": "pdf"
+    },
+    "gx-2019-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/lexus/GX/Lexus_US%20GX_2019.pdf",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus USA",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2019,
+      "locator": "Lexus-authored US GX 2019 brochure, PDF pp2 and 18 (zero-based): GX 460 4.6L V8, 301 hp/329 lb-ft, six-speed automatic/full-time 4WD, annual GX/GX Premium/GX Luxury feature columns, dimensions and 15/18/16 EPA estimates.",
+      "format": "pdf"
+    },
+    "gx-second-gen-lineage-source07": {
+      "url": "https://pressroom.lexus.com/lexus-introduces-second-generation-gx-460-luxury-suv-for-2010/",
+      "source_id": "factory-lexus-us",
+      "publisher": "Lexus USA Newsroom",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2019,
+      "locator": "Generation lineage only: Lexus introduced the second-generation GX 460 for MY2010; the MY2017-2019 annual Lexus brochures identify continued GX 460 US model identity. This 2010 release is not used to transfer 2010 technical values.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "lexus-gx-ii-us-2017-2019-source07",
+      "make": "Lexus",
+      "model": "GX",
+      "generation": "II (2010 redesign)",
+      "generation_code": null,
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2019,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2017": [
+          "gx-2017-us-source07"
+        ],
+        "2018": [
+          "gx-2018-us-source07"
+        ],
+        "2019": [
+          "gx-2019-us-source07"
+        ]
+      },
+      "generation_documents": [
+        "gx-second-gen-lineage-source07"
+      ],
+      "scope_note": "Only Lexus USA annual GX 460, Premium, Luxury grade tuples for MY2017-2019. Sport Design is an optional package, not a separate grade. Seating is recorded only for the unambiguous standard GX 460 base; optional second-row captain's chairs change Premium/Luxury capacity.",
+      "exclude": [
+        "MY2014-2016 already published and not reimported",
+        "Other years, markets, packages, and unlisted engine/transmission tuples",
+        "Premium/Luxury seven-seat assertions without option-level confirmation",
+        "Exact VIN identity without VIN-specific confirmation"
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "engine_description": "GX 460 4.6L V8",
+        "engine_displacement": {
+          "value": 4.6,
+          "unit": "L"
+        },
+        "cylinders": 8,
+        "power_hp": 301,
+        "torque_lb_ft": {
+          "value": 329,
+          "unit": "lb-ft"
+        },
+        "transmission_family": "AT",
+        "transmission_description": "6-speed automatic",
+        "gears": 6,
+        "length_in": {
+          "value": 192.1,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 74.2,
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 109.8,
+          "unit": "in"
+        },
+        "epa_city_mpg": {
+          "value": 15,
+          "unit": "US mpg"
+        },
+        "epa_highway_mpg": {
+          "value": 18,
+          "unit": "US mpg"
+        },
+        "epa_combined_mpg": {
+          "value": 16,
+          "unit": "US mpg"
+        }
+      },
+      "groups": [
+        {
+          "id": "gx-460-base",
+          "year_from": 2017,
+          "year_to": 2019,
+          "configuration": "GX 460 US MY2017-2019",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "GX 460"
+            ],
+            "displ": [
+              "4.6"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Lexus USA MY2017/2018/2019 GX brochures PDF p18: each annual features/specification table explicitly lists GX 460 with 4.6L V8, six-speed automatic, full-time 4WD; same annual page for trim-specific equipment and dimensions. EPA vehicles.csv exact annual GX 460 4.6L Automatic(S6) 4WD tuple corroborates drive.",
+          "facts": {
+            "trim": "GX 460",
+            "wheels": "18-inch six-spoke alloy",
+            "height_in": {
+              "value": 74.2,
+              "unit": "in"
+            },
+            "seats": 7
+          }
+        },
+        {
+          "id": "gx-460-premium",
+          "year_from": 2017,
+          "year_to": 2019,
+          "configuration": "GX 460 Premium US MY2017-2019",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "GX 460"
+            ],
+            "displ": [
+              "4.6"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Lexus USA MY2017/2018/2019 GX brochures PDF p18: each annual features/specification table explicitly lists GX 460 Premium with 4.6L V8, six-speed automatic, full-time 4WD; same annual page for trim-specific equipment and dimensions. EPA vehicles.csv exact annual GX 460 4.6L Automatic(S6) 4WD tuple corroborates drive.",
+          "facts": {
+            "trim": "GX 460 Premium",
+            "wheels": "18-inch split-six-spoke alloy",
+            "height_in": {
+              "value": 74.2,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "gx-460-luxury",
+          "year_from": 2017,
+          "year_to": 2019,
+          "configuration": "GX 460 Luxury US MY2017-2019",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "GX 460"
+            ],
+            "displ": [
+              "4.6"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Lexus USA MY2017/2018/2019 GX brochures PDF p18: each annual features/specification table explicitly lists GX 460 Luxury with 4.6L V8, six-speed automatic, full-time 4WD; same annual page for trim-specific equipment and dimensions. EPA vehicles.csv exact annual GX 460 4.6L Automatic(S6) 4WD tuple corroborates drive.",
+          "facts": {
+            "trim": "GX 460 Luxury",
+            "wheels": "18-inch split-six-spoke alloy, Liquid Graphite finish",
+            "height_in": {
+              "value": 73.8,
+              "unit": "in"
+            },
+            "suspension": "Adaptive Variable Suspension; auto-leveling rear air suspension"
+          }
+        }
+      ]
+    }
+  ]
+}

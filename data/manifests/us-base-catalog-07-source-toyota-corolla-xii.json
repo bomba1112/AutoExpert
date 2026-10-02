@@ -1,0 +1,613 @@
+{
+  "version": "basic-catalog-07-independent-source-candidate-2",
+  "batch_id": "us-base-catalog-07-source-toyota-corolla-xii",
+  "state": "REVIEWED_LOCAL_NOT_PUBLISHED",
+  "selection_status": "OWNER_MASTER_LIST_INDEPENDENT_MANUFACTURER_US_TABLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "corolla-xii-2020-source07": {
+      "url": "https://www.auto-brochures.com/makes/Toyota/Corolla/Toyota_US%20Corolla_2020-3.pdf",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "PDF pp17–19: annual trim powertrain descriptions; p26: exact eight-column transmission/FWD matrix and seating capacity. Sedan scope; hatchback excluded.",
+      "format": "pdf"
+    },
+    "corolla-xii-2021-source07": {
+      "url": "https://www.auto-brochures.com/makes/Toyota/Corolla/Toyota_US%20Corolla_2021.pdf",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "PDF pp9–11: annual trim engine and transmission applicability, including SE and SE Apex optional 6MT; p18: nine-column standard/optional transmission and FWD matrix.",
+      "format": "pdf"
+    },
+    "corolla-xii-generation-source07": {
+      "url": "https://pressroom.toyota.com/all-new-2020-toyota-corolla-ready-to-rock-the-sedan-world/",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota USA Newsroom",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2021,
+      "locator": "Toyota USA announcement calls the all-new MY2020 Corolla sedan twelfth generation. Annual brochures establish MY2020 and MY2021 configurations separately; no adjacent-year transfer.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "toyota-corolla-xii-us-2020-2021-source07",
+      "make": "Toyota",
+      "model": "Corolla",
+      "generation": "XII sedan (TNGA)",
+      "generation_code": "XII",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2021,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2020": [
+          "corolla-xii-2020-source07"
+        ],
+        "2021": [
+          "corolla-xii-2021-source07"
+        ]
+      },
+      "generation_documents": [
+        "corolla-xii-generation-source07"
+      ],
+      "scope_note": "US Corolla XII sedan only. Each model year, grade, engine, transmission and FWD tuple is taken from its own Toyota manufacturer brochure; no hatchback or adjacent-year inheritance.",
+      "exclude": [
+        "Corolla hatchback",
+        "Other model years or markets",
+        "Unlisted engine, transmission, body or grade",
+        "6MT on SE Nightshade, XSE or Hybrid LE"
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "seats": 5,
+        "fuel": "GASOLINE",
+        "cylinders": 4
+      },
+      "groups": [
+        {
+          "id": "2020-l-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla L 1.8 / CVTi-S CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp17,26: L 1.8L 139 hp/CVT/FWD; exact same grade column in p26.",
+          "facts": {
+            "trim": "L",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "CVTi-S continuously variable transmission",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2020-le-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla LE 1.8 / CVTi-S CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp17,26: LE 1.8L 139 hp/CVT/FWD; exact same grade column in p26.",
+          "facts": {
+            "trim": "LE",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "CVTi-S continuously variable transmission",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2020-xle-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla XLE 1.8 / CVTi-S CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp17,26: XLE 1.8L 139 hp/CVT/FWD; exact same grade column in p26.",
+          "facts": {
+            "trim": "XLE",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "CVTi-S continuously variable transmission",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2020-se-manual",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla SE 2.0 / iMT 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp18,26: SE 6MT grade 2.0L 169 hp/intelligent 6MT/FWD.",
+          "facts": {
+            "trim": "SE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed intelligent manual transmission (iMT)",
+            "power_hp": 169,
+            "gears": 6
+          }
+        },
+        {
+          "id": "2020-se-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla SE 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp18–19,26: SE 2.0L 169 hp/Dynamic-Shift CVT/FWD; exact p26 grade column.",
+          "facts": {
+            "trim": "SE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2020-se-nightshade-edition-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla SE Nightshade Edition 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp18–19,26: SE Nightshade Edition 2.0L 169 hp/Dynamic-Shift CVT/FWD; exact p26 grade column.",
+          "facts": {
+            "trim": "SE Nightshade Edition",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2020-xse-cvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla XSE 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp18–19,26: XSE 2.0L 169 hp/Dynamic-Shift CVT/FWD; exact p26 grade column.",
+          "facts": {
+            "trim": "XSE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2020-hybrid-le-ecvt",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "Corolla Hybrid LE 1.8 / ECVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2020 US brochure PDF pp19,26: Hybrid LE 1.8L Hybrid Synergy Drive/ECVT/FWD. Power omitted because this annual brochure does not state a clear net-system rating.",
+          "facts": {
+            "trim": "Hybrid LE",
+            "powertrain": "HEV",
+            "engine_description": "1.8L 4-cylinder Hybrid Synergy Drive",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "ECVT",
+            "transmission_description": "electronically controlled continuously variable transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-l-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla L 1.8 / CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp9,18: L inherited 1.8L 139 hp/CVT/FWD from L; annual grade matrix confirms same column.",
+          "facts": {
+            "trim": "L",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "continuously variable transmission (CVT)",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2021-le-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla LE 1.8 / CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp9,18: LE inherited 1.8L 139 hp/CVT/FWD from L; annual grade matrix confirms same column.",
+          "facts": {
+            "trim": "LE",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "continuously variable transmission (CVT)",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2021-xle-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla XLE 1.8 / CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp9,18: XLE inherited 1.8L 139 hp/CVT/FWD from L; annual grade matrix confirms same column.",
+          "facts": {
+            "trim": "XLE",
+            "powertrain": "ICE",
+            "engine_description": "1.8L 4-cylinder naturally aspirated gasoline",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "continuously variable transmission (CVT)",
+            "power_hp": 139
+          }
+        },
+        {
+          "id": "2021-se-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla SE 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10–11,18: SE 2.0L 169 hp/Dynamic-Shift CVT/FWD; annual grade matrix marks CVT standard.",
+          "facts": {
+            "trim": "SE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2021-se-nightshade-edition-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla SE Nightshade Edition 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10–11,18: SE Nightshade Edition 2.0L 169 hp/Dynamic-Shift CVT/FWD; annual grade matrix marks CVT standard.",
+          "facts": {
+            "trim": "SE Nightshade Edition",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2021-se-apex-edition-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla SE Apex Edition 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10–11,18: SE Apex Edition 2.0L 169 hp/Dynamic-Shift CVT/FWD; annual grade matrix marks CVT standard.",
+          "facts": {
+            "trim": "SE Apex Edition",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2021-xse-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla XSE 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10–11,18: XSE 2.0L 169 hp/Dynamic-Shift CVT/FWD; annual grade matrix marks CVT standard.",
+          "facts": {
+            "trim": "XSE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2021-xse-apex-edition-cvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla XSE Apex Edition 2.0 / Dynamic-Shift CVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10–11,18: XSE Apex Edition 2.0L 169 hp/Dynamic-Shift CVT/FWD; annual grade matrix marks CVT standard.",
+          "facts": {
+            "trim": "XSE Apex Edition",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "CVT",
+            "transmission_description": "Dynamic-Shift continuously variable transmission (CVT)",
+            "power_hp": 169
+          }
+        },
+        {
+          "id": "2021-se-manual",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla SE 2.0 / iMT 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10,18: SE 2.0L 169 hp/optional 6-speed intelligent manual/FWD; annual grade matrix marks 6MT optional only in this column.",
+          "facts": {
+            "trim": "SE",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed intelligent manual transmission (iMT)",
+            "power_hp": 169,
+            "gears": 6
+          }
+        },
+        {
+          "id": "2021-se-apex-edition-manual",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla SE Apex Edition 2.0 / iMT 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp10,18: SE Apex Edition 2.0L 169 hp/optional 6-speed intelligent manual/FWD; annual grade matrix marks 6MT optional only in this column.",
+          "facts": {
+            "trim": "SE Apex Edition",
+            "powertrain": "ICE",
+            "engine_description": "2.0L 4-cylinder Dynamic Force gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed intelligent manual transmission (iMT)",
+            "power_hp": 169,
+            "gears": 6
+          }
+        },
+        {
+          "id": "2021-hybrid-le-ecvt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Corolla Hybrid LE 1.8 / ECVT / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "Toyota Corolla MY2021 US brochure PDF pp11,18: Hybrid LE 1.8L hybrid/ECVT/FWD. Brochure's '121 hp' phrasing is not promoted to a net-system fact.",
+          "facts": {
+            "trim": "Hybrid LE",
+            "powertrain": "HEV",
+            "engine_description": "1.8L 4-cylinder Hybrid Synergy Drive",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "aspiration": "NATURALLY_ASPIRATED",
+            "transmission_family": "ECVT",
+            "transmission_description": "electronically controlled continuously variable transmission (ECVT)"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,955 @@
+{
+  "batch_id": "commercial-manufacturer-drivetrain-01",
+  "reviewed_at": "2026-09-28",
+  "scope_note": "Each exact catalog key has an independently reviewed model/grade/drive assertion from its annual manufacturer document. Candidate EPA drive is checked only for agreement and never chooses a claim value.",
+  "documents": [
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "model_year": 2017,
+      "source_id": "factory-bmw-us",
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0264802EN_US/402275",
+      "sha256": "7d8f77e5a2ef546da74bd237d1613827cec8083be403cf45a11f210ae7ff6965",
+      "cache_path": ".localdata/us-base-catalog-07-bmw-g30-documents/7d8f77e5a2ef546da74bd237d1613827cec8083be403cf45a11f210ae7ff6965",
+      "document_id": "17c86f05-ac41-469e-a8e2-8238a2c5aaf3",
+      "locator": "PDF p18, Technical Data, model-column Drive type (530i/530i xDrive/540i/540i xDrive)",
+      "expected_rows": 4,
+      "drive_counts": {
+        "RWD": 2,
+        "AWD": 2
+      },
+      "keyset_sha256": "9d1fe2c40365fa51486f985c16f1fa596b9eaaaa7cff75a17e1808ad382313d4",
+      "rows": [
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-530i-rwd-8at-RWD-2017",
+          "official_variant": "530i",
+          "official_drive_term": "Drive type: RWD",
+          "drivetrain": "RWD",
+          "locator": "PDF p18, Technical Data, 530i column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-530i-xdrive-awd-8at-AWD-2017",
+          "official_variant": "530i xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p18, Technical Data, 530i xDrive column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-540i-rwd-8at-RWD-2017",
+          "official_variant": "540i",
+          "official_drive_term": "Drive type: RWD",
+          "drivetrain": "RWD",
+          "locator": "PDF p18, Technical Data, 540i column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-540i-xdrive-awd-8at-AWD-2017",
+          "official_variant": "540i xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p18, Technical Data, 540i xDrive column, Drive type row"
+        }
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "model_year": 2018,
+      "source_id": "factory-bmw-us",
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0264802EN_US/402277",
+      "sha256": "098c0c80cec55e5e4cf3b965b3b7c507685b1d2f99e2118f1f7f99bdaab92c67",
+      "cache_path": ".localdata/us-base-catalog-07-bmw-g30-documents/098c0c80cec55e5e4cf3b965b3b7c507685b1d2f99e2118f1f7f99bdaab92c67",
+      "document_id": "5b0833fe-3da8-4daf-96f9-579def5dea35",
+      "locator": "PDF p1, Technical Data, model-column Drive type (530i/540i/M550i/530e and xDrive variants)",
+      "expected_rows": 7,
+      "drive_counts": {
+        "RWD": 3,
+        "AWD": 4
+      },
+      "keyset_sha256": "a5bf5af9caace209050f77b809a5496ee54214889dea71b4c0383f6d634b07c0",
+      "rows": [
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530e-rwd-8at-RWD-2018",
+          "official_variant": "530e",
+          "official_drive_term": "Drive type: RWD",
+          "drivetrain": "RWD",
+          "locator": "PDF p1, Technical Data, 530e column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530e-xdrive-awd-8at-AWD-2018",
+          "official_variant": "530e xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p1, Technical Data, 530e xDrive column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530i-rwd-8at-RWD-2018",
+          "official_variant": "530i",
+          "official_drive_term": "Drive type: RWD",
+          "drivetrain": "RWD",
+          "locator": "PDF p1, Technical Data, 530i column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530i-xdrive-awd-8at-AWD-2018",
+          "official_variant": "530i xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p1, Technical Data, 530i xDrive column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-540i-rwd-8at-RWD-2018",
+          "official_variant": "540i",
+          "official_drive_term": "Drive type: RWD",
+          "drivetrain": "RWD",
+          "locator": "PDF p1, Technical Data, 540i column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-540i-xdrive-awd-8at-AWD-2018",
+          "official_variant": "540i xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p1, Technical Data, 540i xDrive column, Drive type row"
+        },
+        {
+          "catalog_key": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-m550i-xdrive-awd-8at-AWD-2018",
+          "official_variant": "M550i xDrive",
+          "official_drive_term": "Drive type: AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p1, Technical Data, M550i xDrive column, Drive type row"
+        }
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V",
+      "model_year": 2017,
+      "source_id": "factory-honda-us",
+      "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/Past-Models/PDFs/2017-Honda-CRV-Facts-Guide.ashx",
+      "sha256": "c554e9753eb716dfcad8a50b98abb6423f2b1198fbf0f5d4e9a0009a200080ea",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork3/honda_crv_2017.pdf",
+      "document_id": "67120468-59a3-4833-a12c-87c498e95bac",
+      "locator": "PDF pp7,68, 2WD/AWD LX/EX/EX-L/EX-L Navi/Touring model list and Front-Wheel Drive description",
+      "expected_rows": 10,
+      "drive_counts": {
+        "AWD": 5,
+        "FWD": 5
+      },
+      "keyset_sha256": "ac8639109e38ae13a73974c1d9f89a8a892992052d1305ff7b7defcbb612d995",
+      "rows": [
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-awd-AWD-2017",
+          "official_variant": "AWD EX",
+          "official_drive_term": "AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p7, CR-V Model Lineup, AWD EX model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-fwd-FWD-2017",
+          "official_variant": "2WD EX",
+          "official_drive_term": "2WD",
+          "drivetrain": "FWD",
+          "locator": "PDF p7, CR-V Model Lineup, 2WD EX model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-l-awd-AWD-2017",
+          "official_variant": "AWD EX-L",
+          "official_drive_term": "AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p7, CR-V Model Lineup, AWD EX-L model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-l-fwd-FWD-2017",
+          "official_variant": "2WD EX-L",
+          "official_drive_term": "2WD",
+          "drivetrain": "FWD",
+          "locator": "PDF p7, CR-V Model Lineup, 2WD EX-L model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-l-navi-awd-AWD-2017",
+          "official_variant": "AWD EX-L Navi",
+          "official_drive_term": "AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p7, CR-V Model Lineup, AWD EX-L Navi model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-ex-l-navi-fwd-FWD-2017",
+          "official_variant": "2WD EX-L Navi",
+          "official_drive_term": "2WD",
+          "drivetrain": "FWD",
+          "locator": "PDF p7, CR-V Model Lineup, 2WD EX-L Navi model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-lx-awd-AWD-2017",
+          "official_variant": "AWD LX",
+          "official_drive_term": "AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p7, CR-V Model Lineup, AWD LX model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-lx-fwd-FWD-2017",
+          "official_variant": "2WD LX",
+          "official_drive_term": "2WD",
+          "drivetrain": "FWD",
+          "locator": "PDF p7, CR-V Model Lineup, 2WD LX model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-touring-awd-AWD-2017",
+          "official_variant": "AWD Touring",
+          "official_drive_term": "AWD",
+          "drivetrain": "AWD",
+          "locator": "PDF p7, CR-V Model Lineup, AWD Touring model-code row; p68 Front-Wheel Drive"
+        },
+        {
+          "catalog_key": "factory-honda-us:honda-cr-v-v rw-us-2017-2019-aiwork07c-honda-cr-v-v-rw-2017-touring-fwd-FWD-2017",
+          "official_variant": "2WD Touring",
+          "official_drive_term": "2WD",
+          "drivetrain": "FWD",
+          "locator": "PDF p7, CR-V Model Lineup, 2WD Touring model-code row; p68 Front-Wheel Drive"
+        }
+      ]
+    },
+    {
+      "make": "Jeep",
+      "model": "Compass",
+      "model_year": 2019,
+      "source_id": "factory-jeep-us",
+      "url": "https://www.stellantisfleet.com/content/dam/fca-fleet/na/fleet/en_us/shopping-tools/brochures-literature/docs/2019_Compass.pdf",
+      "sha256": "c4bc00a4af04431586266ab57e266a86ed13ccc1410ba4ff07ebd3c77324dba4",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork/jeep_compass_2019.pdf",
+      "document_id": "979eb516-5d03-48d2-8b2b-1ad00e4dc486",
+      "locator": "PDF pp1-3, FWD/4x4 by 6-speed manual, 6-speed automatic and 9-speed automatic; Sport/Latitude/Trailhawk/Limited columns",
+      "expected_rows": 10,
+      "drive_counts": {
+        "4WD": 6,
+        "FWD": 4
+      },
+      "keyset_sha256": "7bf41b8288ea2da3bfd3775b32fce62cf36e4ebd63e48cff63d219ab0268416b",
+      "rows": [
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-latitude-4wd-at9-4WD-2019",
+          "official_variant": "Latitude / 9-speed automatic / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF pp1-3, 9-speed automatic 4x4, Latitude column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-latitude-4wd-mt6-4WD-2019",
+          "official_variant": "Latitude / 6-speed manual / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF p3, manual standard on Latitude 4x4"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-latitude-fwd-at6-FWD-2019",
+          "official_variant": "Latitude / 6-speed automatic / FWD",
+          "official_drive_term": "Front-Wheel Drive",
+          "drivetrain": "FWD",
+          "locator": "PDF pp2-3, 6-speed automatic FWD-only, Latitude column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-limited-4wd-at9-4WD-2019",
+          "official_variant": "Limited / 9-speed automatic / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF pp1-3, 9-speed automatic 4x4, Limited column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-limited-fwd-at6-FWD-2019",
+          "official_variant": "Limited / 6-speed automatic / FWD",
+          "official_drive_term": "Front-Wheel Drive",
+          "drivetrain": "FWD",
+          "locator": "PDF pp2-3, 6-speed automatic FWD-only, Limited column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-sport-4wd-at9-4WD-2019",
+          "official_variant": "Sport / 9-speed automatic / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF pp1-3, 9-speed automatic 4x4, Sport column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-sport-4wd-mt6-4WD-2019",
+          "official_variant": "Sport / 6-speed manual / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF pp1-3, 6-speed manual 4x4, Sport column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-sport-fwd-at6-FWD-2019",
+          "official_variant": "Sport / 6-speed automatic / FWD",
+          "official_drive_term": "Front-Wheel Drive",
+          "drivetrain": "FWD",
+          "locator": "PDF pp2-3, 6-speed automatic FWD-only, Sport column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-sport-fwd-mt6-FWD-2019",
+          "official_variant": "Sport / 6-speed manual / 4x2",
+          "official_drive_term": "Front-Wheel Drive",
+          "drivetrain": "FWD",
+          "locator": "PDF pp1-3, 6-speed manual 4x2, Sport column"
+        },
+        {
+          "catalog_key": "factory-jeep-us:jeep-compass-mp-us-2018-2019-aiwork07-jeep-compass-mp-2019-trailhawk-4wd-at9-4WD-2019",
+          "official_variant": "Trailhawk / 9-speed automatic / 4x4",
+          "official_drive_term": "Four-Wheel Drive",
+          "drivetrain": "4WD",
+          "locator": "PDF pp1-3, 9-speed automatic 4x4, Trailhawk column"
+        }
+      ]
+    },
+    {
+      "make": "Lexus",
+      "model": "RX",
+      "model_year": 2016,
+      "source_id": "factory-lexus-us",
+      "url": "https://pressroom.lexus.com/lexus-2016-rx-redefines-segment-extended/",
+      "sha256": "9df81610f886fb833cd7c2ec7ddd6ec56a45b56170c22f1c3bb5f8381bdad607",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork/lexus_rx_2016_extended.html",
+      "document_id": "91cdf803-ca7c-4080-b9d2-62f167449379",
+      "locator": "Press release intro, RX 350 FWD/AWD and RX 350 F SPORT AWD model availability",
+      "expected_rows": 3,
+      "drive_counts": {
+        "AWD": 2,
+        "FWD": 1
+      },
+      "keyset_sha256": "099e206104ee9ad34369b3470a401b577ec844a95c6416e7978e711eda13bf33",
+      "rows": [
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2016-rx-350-awd-at8-AWD-2016",
+          "official_variant": "RX 350 AWD",
+          "official_drive_term": "all-weather drive (AWD)",
+          "drivetrain": "AWD",
+          "locator": "Press release, RX 350 AWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2016-rx-350-f-sport-awd-at8-AWD-2016",
+          "official_variant": "RX 350 F SPORT AWD",
+          "official_drive_term": "F SPORT available for RX 350 AWD",
+          "drivetrain": "AWD",
+          "locator": "Press release, RX 350 F SPORT AWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2016-rx-350-fwd-at8-FWD-2016",
+          "official_variant": "RX 350 FWD",
+          "official_drive_term": "front-wheel drive",
+          "drivetrain": "FWD",
+          "locator": "Press release, RX 350 FWD availability and Vehicle Details/Drivetrain"
+        }
+      ]
+    },
+    {
+      "make": "Lexus",
+      "model": "RX",
+      "model_year": 2017,
+      "source_id": "factory-lexus-us",
+      "url": "https://pressroom.lexus.com/2017-lexus-rx-350-450h-standard-safety-technology/",
+      "sha256": "9e8d91673fa285750f5de7e7414387847a7911b253cb716361eaf9e9ee2ee498",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork/lexus_rx_2017.html",
+      "document_id": "57221084-35cc-4745-8f17-bc5a1dccbd91",
+      "locator": "Press release FWD or AWD and Vehicle Details, RX 350/F SPORT and RX 450h AWD configurations",
+      "expected_rows": 5,
+      "drive_counts": {
+        "AWD": 3,
+        "FWD": 2
+      },
+      "keyset_sha256": "1594febc3423f4cb6370183a3278eea752c980cb5dec56ded437bf8ac64c7eac",
+      "rows": [
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-350-awd-at8-AWD-2017",
+          "official_variant": "RX 350 AWD",
+          "official_drive_term": "Dynamic Torque Control AWD",
+          "drivetrain": "AWD",
+          "locator": "Press release, RX 350 AWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-350-f-sport-awd-at8-AWD-2017",
+          "official_variant": "RX 350 F SPORT AWD",
+          "official_drive_term": "joining the AWD model",
+          "drivetrain": "AWD",
+          "locator": "Press release, RX 350 F SPORT AWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-350-f-sport-fwd-at8-FWD-2017",
+          "official_variant": "RX 350 F SPORT FWD",
+          "official_drive_term": "new F SPORT FWD model",
+          "drivetrain": "FWD",
+          "locator": "Press release, RX 350 F SPORT FWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-350-fwd-at8-FWD-2017",
+          "official_variant": "RX 350 FWD",
+          "official_drive_term": "front-wheel drive",
+          "drivetrain": "FWD",
+          "locator": "Press release, RX 350 FWD availability and Vehicle Details/Drivetrain"
+        },
+        {
+          "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-450h-awd-ecvt-AWD-2017",
+          "official_variant": "RX 450h AWD",
+          "official_drive_term": "available AWD with rear electric motor",
+          "drivetrain": "AWD",
+          "locator": "Press release, RX 450h AWD availability and Vehicle Details/Drivetrain"
+        }
+      ]
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC-Class",
+      "model_year": 2020,
+      "source_id": "factory-mercedes-us",
+      "url": "https://media.mbusa.com/news/2020-mercedes-benz-glc-suv-quick-reference-guide",
+      "sha256": "776711434f01cd97e95661aa537c9d7332d7d9b1fd3d562ad3529a13f1f1af58",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork3/mb_glc_2020.html",
+      "document_id": "22a19243-57b7-4b0e-a100-1ef22998872c",
+      "locator": "At a Glance, Drive Config row for GLC 300/350e and AMG GLC 43/63",
+      "expected_rows": 5,
+      "drive_counts": {
+        "AWD": 4,
+        "RWD": 1
+      },
+      "keyset_sha256": "efa161973723328726e08c8ea99201ac1c03cbb935c28c8f156834d341fb28b0",
+      "rows": [
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2020-amg-glc-43-awd-AWD-2020",
+          "official_variant": "AMG GLC 43",
+          "official_drive_term": "AMG Performance 4MATIC",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, AMG GLC 43 model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2020-amg-glc-63-awd-AWD-2020",
+          "official_variant": "AMG GLC 63",
+          "official_drive_term": "AMG Performance 4MATIC+",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, AMG GLC 63 model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2020-glc-300-4matic-awd-AWD-2020",
+          "official_variant": "GLC 300 4MATIC",
+          "official_drive_term": "4MATIC: All-Wheel Drive",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, GLC 300 4MATIC model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2020-glc-300-rwd-RWD-2020",
+          "official_variant": "GLC 300",
+          "official_drive_term": "Rear-Wheel Drive",
+          "drivetrain": "RWD",
+          "locator": "At a Glance, GLC 300 model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2020-glc-350e-4matic-awd-AWD-2020",
+          "official_variant": "GLC 350e 4MATIC",
+          "official_drive_term": "4MATIC: All-Wheel Drive",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, GLC 350e 4MATIC model column, Drive Config row"
+        }
+      ]
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC-Class",
+      "model_year": 2021,
+      "source_id": "factory-mercedes-us",
+      "url": "https://media.mbusa.com/news/2021-mercedes-benz-glc-suv-quick-reference-guide",
+      "sha256": "3e8d623adc71521787f975c4409571de9d67d7e63d045f955ea59419310635ab",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork3/mb_glc_2021.html",
+      "document_id": "d182f9be-bd07-41a0-a315-0cf263819dc5",
+      "locator": "At a Glance, Drive Config row for GLC 300 and AMG GLC 43/63",
+      "expected_rows": 4,
+      "drive_counts": {
+        "AWD": 3,
+        "RWD": 1
+      },
+      "keyset_sha256": "fa151dd0f131d9f2ee3e1ded82630d70b1100f8d0fb8afbb5c04132a421067c0",
+      "rows": [
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2021-amg-glc-43-awd-AWD-2021",
+          "official_variant": "AMG GLC 43",
+          "official_drive_term": "AMG Performance 4MATIC",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, AMG GLC 43 model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2021-amg-glc-63-awd-AWD-2021",
+          "official_variant": "AMG GLC 63",
+          "official_drive_term": "AMG Performance 4MATIC+",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, AMG GLC 63 model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2021-glc-300-4matic-awd-AWD-2021",
+          "official_variant": "GLC 300 4MATIC",
+          "official_drive_term": "4MATIC: All-Wheel Drive",
+          "drivetrain": "AWD",
+          "locator": "At a Glance, GLC 300 4MATIC model column, Drive Config row"
+        },
+        {
+          "catalog_key": "factory-mercedes-us:mercedes-benz-glc-class-x253 suv-us-2020-2021-aiwork07c-mercedes-benz-glc-class-x253-suv-2021-glc-300-rwd-RWD-2021",
+          "official_variant": "GLC 300",
+          "official_drive_term": "Rear-Wheel Drive",
+          "drivetrain": "RWD",
+          "locator": "At a Glance, GLC 300 model column, Drive Config row"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "model_year": 2021,
+      "source_id": "factory-nissan-us",
+      "url": "https://usa.nissannews.com/en-US/releases/2021-nissan-rogue-press-kit",
+      "sha256": "dbe06da2ddedeb6d3fb3e6f7c6d993f55912cfc37cca677979a78c7b7a0f7fa0",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork2/nissan_rogue_2021.html",
+      "document_id": "a6ac8e94-189a-4bff-94f4-ba8cadd6dd1f",
+      "locator": "2021 Nissan Rogue Pricing, eight 2.5L Xtronic S/SV/SL/Platinum FWD/AWD rows",
+      "expected_rows": 8,
+      "drive_counts": {
+        "AWD": 4,
+        "FWD": 4
+      },
+      "keyset_sha256": "d5d7d895a7e6c00cf68211ccdd20903dcb1f4aebdf1342810d20cd034986dbe0",
+      "rows": [
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-platinum-awd-cvt-AWD-2021",
+          "official_variant": "Rogue Platinum AWD",
+          "official_drive_term": "Platinum AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, Platinum AWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-platinum-fwd-cvt-FWD-2021",
+          "official_variant": "Rogue Platinum FWD",
+          "official_drive_term": "Platinum FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, Platinum FWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-s-awd-cvt-AWD-2021",
+          "official_variant": "Rogue S AWD",
+          "official_drive_term": "S AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, S AWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-s-fwd-cvt-FWD-2021",
+          "official_variant": "Rogue S FWD",
+          "official_drive_term": "S FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, S FWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-sl-awd-cvt-AWD-2021",
+          "official_variant": "Rogue SL AWD",
+          "official_drive_term": "SL AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, SL AWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-sl-fwd-cvt-FWD-2021",
+          "official_variant": "Rogue SL FWD",
+          "official_drive_term": "SL FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, SL FWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-sv-awd-cvt-AWD-2021",
+          "official_variant": "Rogue SV AWD",
+          "official_drive_term": "SV AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, SV AWD row; 2.5 Liter I4 Xtronic"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2021-sv-fwd-cvt-FWD-2021",
+          "official_variant": "Rogue SV FWD",
+          "official_drive_term": "SV FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, SV FWD row; 2.5 Liter I4 Xtronic"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "model_year": 2022,
+      "source_id": "factory-nissan-us",
+      "url": "https://usa.nissannews.com/en-US/releases/release-9eea16a47c78109cfe96b677a005fc7e-2022-rogue-to-feature-nissans-all-new-15-liter-vc-turbo-engine",
+      "sha256": "bdbdb48230664617be4230d229705e07bcebe43824bbcb5ca22b54418cf48690",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork2/nissan_rogue_2022.html",
+      "document_id": "0fe25e87-f1b8-4258-adb4-a9ab85d7b61f",
+      "locator": "2022 Rogue VC-Turbo across lineup and MSRP table, S/SV/SL/Platinum FWD/AWD rows",
+      "expected_rows": 8,
+      "drive_counts": {
+        "AWD": 4,
+        "FWD": 4
+      },
+      "keyset_sha256": "0025b64a920567e248f6b7ef87fbf2bad7034a4230da837275bfa2f97202f462",
+      "rows": [
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-platinum-awd-cvt-AWD-2022",
+          "official_variant": "Rogue Platinum AWD",
+          "official_drive_term": "Platinum AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, Platinum AWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-platinum-fwd-cvt-FWD-2022",
+          "official_variant": "Rogue Platinum FWD",
+          "official_drive_term": "Platinum FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, Platinum FWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-s-awd-cvt-AWD-2022",
+          "official_variant": "Rogue S AWD",
+          "official_drive_term": "S AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, S AWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-s-fwd-cvt-FWD-2022",
+          "official_variant": "Rogue S FWD",
+          "official_drive_term": "S FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, S FWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-sl-awd-cvt-AWD-2022",
+          "official_variant": "Rogue SL AWD",
+          "official_drive_term": "SL AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, SL AWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-sl-fwd-cvt-FWD-2022",
+          "official_variant": "Rogue SL FWD",
+          "official_drive_term": "SL FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, SL FWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-sv-awd-cvt-AWD-2022",
+          "official_variant": "Rogue SV AWD",
+          "official_drive_term": "SV AWD",
+          "drivetrain": "AWD",
+          "locator": "Annual Rogue pricing/MSRP, SV AWD row; 1.5-liter VC-Turbo across lineup"
+        },
+        {
+          "catalog_key": "factory-nissan-us:nissan-rogue-t33-us-2021-2022-aiwork07b-nissan-rogue-t33-2022-sv-fwd-cvt-FWD-2022",
+          "official_variant": "Rogue SV FWD",
+          "official_drive_term": "SV FWD",
+          "drivetrain": "FWD",
+          "locator": "Annual Rogue pricing/MSRP, SV FWD row; 1.5-liter VC-Turbo across lineup"
+        }
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander",
+      "model_year": 2020,
+      "source_id": "factory-toyota-us",
+      "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2020/highlander_ebrochure.pdf",
+      "sha256": "b596acec1d8a556f3d3dd23cc7b61b2a9ae064d6ac88bd1b4d2d4c5327cb4af2",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork2/toyota_highlander_2020.pdf",
+      "document_id": "fb39feb3-2491-4f14-b85d-fc875b8d293d",
+      "locator": "PDF p30, 2020 gas/hybrid grade matrix, DRIVETRAIN FWD standard and AWD available rows",
+      "expected_rows": 18,
+      "drive_counts": {
+        "AWD": 9,
+        "FWD": 9
+      },
+      "keyset_sha256": "39ca9d7b48d5685e7adf2ffade5f06f8833da751bfa2ac2cfd762db2e21b0581",
+      "rows": [
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-le-awd-ecvt-AWD-2020",
+          "official_variant": "Highlander hybrid LE AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, hybrid LE column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-le-fwd-ecvt-FWD-2020",
+          "official_variant": "Highlander hybrid LE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, hybrid LE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-limited-awd-ecvt-AWD-2020",
+          "official_variant": "Highlander hybrid Limited AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, hybrid Limited column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-limited-fwd-ecvt-FWD-2020",
+          "official_variant": "Highlander hybrid Limited FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, hybrid Limited column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-platinum-awd-ecvt-AWD-2020",
+          "official_variant": "Highlander hybrid Platinum AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, hybrid Platinum column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-platinum-fwd-ecvt-FWD-2020",
+          "official_variant": "Highlander hybrid Platinum FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, hybrid Platinum column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-xle-awd-ecvt-AWD-2020",
+          "official_variant": "Highlander hybrid XLE AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, hybrid XLE column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-hybrid-xle-fwd-ecvt-FWD-2020",
+          "official_variant": "Highlander hybrid XLE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, hybrid XLE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-l-awd-at8-AWD-2020",
+          "official_variant": "Highlander gas L AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, gas L column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-l-fwd-at8-FWD-2020",
+          "official_variant": "Highlander gas L FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, gas L column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-le-awd-at8-AWD-2020",
+          "official_variant": "Highlander gas LE AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, gas LE column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-le-fwd-at8-FWD-2020",
+          "official_variant": "Highlander gas LE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, gas LE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-limited-awd-at8-AWD-2020",
+          "official_variant": "Highlander gas Limited AWD",
+          "official_drive_term": "Dynamic Torque Vectoring AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, gas Limited column, DRIVETRAIN Dynamic Torque Vectoring AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-limited-fwd-at8-FWD-2020",
+          "official_variant": "Highlander gas Limited FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, gas Limited column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-platinum-awd-at8-AWD-2020",
+          "official_variant": "Highlander gas Platinum AWD",
+          "official_drive_term": "Dynamic Torque Vectoring AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, gas Platinum column, DRIVETRAIN Dynamic Torque Vectoring AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-platinum-fwd-at8-FWD-2020",
+          "official_variant": "Highlander gas Platinum FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, gas Platinum column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-xle-awd-at8-AWD-2020",
+          "official_variant": "Highlander gas XLE AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p30, gas XLE column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2020-xle-fwd-at8-FWD-2020",
+          "official_variant": "Highlander gas XLE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p30, gas XLE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        }
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander",
+      "model_year": 2021,
+      "source_id": "factory-toyota-us",
+      "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2021/highlander_ebrochure.pdf",
+      "sha256": "c9f43dee71856e470a5bd6bd20c3e7f367a67410a6d39ab8c0c438c607e3f1fc",
+      "cache_path": ".localdata/us-base-catalog-07-aiwork2/toyota_highlander_2021.pdf",
+      "document_id": "57aa5873-f210-418d-81dd-c2d02b374556",
+      "locator": "PDF p20, 2021 gas/hybrid grade matrix, DRIVETRAIN FWD standard and AWD option rows",
+      "expected_rows": 20,
+      "drive_counts": {
+        "AWD": 10,
+        "FWD": 10
+      },
+      "keyset_sha256": "6c25e77fe3e9b78620c0e3c7fe216707c66c1bc625508fccc06cac8a2a918181",
+      "rows": [
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-le-awd-ecvt-AWD-2021",
+          "official_variant": "Highlander hybrid LE AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, hybrid LE column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-le-fwd-ecvt-FWD-2021",
+          "official_variant": "Highlander hybrid LE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, hybrid LE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-limited-awd-ecvt-AWD-2021",
+          "official_variant": "Highlander hybrid Limited AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, hybrid Limited column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-limited-fwd-ecvt-FWD-2021",
+          "official_variant": "Highlander hybrid Limited FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, hybrid Limited column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-platinum-awd-ecvt-AWD-2021",
+          "official_variant": "Highlander hybrid Platinum AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, hybrid Platinum column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-platinum-fwd-ecvt-FWD-2021",
+          "official_variant": "Highlander hybrid Platinum FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, hybrid Platinum column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-xle-awd-ecvt-AWD-2021",
+          "official_variant": "Highlander hybrid XLE AWD",
+          "official_drive_term": "Electronic On-Demand AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, hybrid XLE column, DRIVETRAIN Electronic On-Demand AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-hybrid-xle-fwd-ecvt-FWD-2021",
+          "official_variant": "Highlander hybrid XLE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, hybrid XLE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-l-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas L AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas L column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-l-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas L FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas L column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-le-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas LE AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas LE column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-le-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas LE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas LE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-limited-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas Limited AWD",
+          "official_drive_term": "Dynamic Torque Vectoring AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas Limited column, DRIVETRAIN Dynamic Torque Vectoring AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-limited-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas Limited FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas Limited column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-platinum-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas Platinum AWD",
+          "official_drive_term": "Dynamic Torque Vectoring AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas Platinum column, DRIVETRAIN Dynamic Torque Vectoring AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-platinum-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas Platinum FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas Platinum column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-xle-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas XLE AWD",
+          "official_drive_term": "All-Wheel Drive: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas XLE column, DRIVETRAIN All-Wheel Drive: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-xle-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas XLE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas XLE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-xse-awd-at8-AWD-2021",
+          "official_variant": "Highlander gas XSE AWD",
+          "official_drive_term": "Dynamic Torque Vectoring AWD: Available",
+          "drivetrain": "AWD",
+          "locator": "PDF p20, gas XSE column, DRIVETRAIN Dynamic Torque Vectoring AWD: Available row"
+        },
+        {
+          "catalog_key": "factory-toyota-us:toyota-highlander-iv-us-2020-2021-aiwork07b-toyota-highlander-iv-2021-xse-fwd-at8-FWD-2021",
+          "official_variant": "Highlander gas XSE FWD",
+          "official_drive_term": "Front-Wheel Drive: Standard",
+          "drivetrain": "FWD",
+          "locator": "PDF p20, gas XSE column, DRIVETRAIN Front-Wheel Drive: Standard row"
+        }
+      ]
+    }
+  ],
+  "held_catalog_keys": [
+    {
+      "catalog_key": "factory-lexus-us:lexus-rx-al20-us-2016-2017-aiwork07-lexus-rx-al20-2017-rx-450h-f-sport-awd-ecvt-AWD-2017",
+      "reason": "The pressroom release does not state RX 450h F SPORT AWD as a single exact combination; the additional brochure needs its own source record."
+    }
+  ]
+}

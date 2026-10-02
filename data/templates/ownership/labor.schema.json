@@ -1,0 +1,124 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "seller_id": {
+      "title": "Seller Id",
+      "type": "string"
+    },
+    "original_offer_id": {
+      "title": "Original Offer Id",
+      "type": "string"
+    },
+    "region": {
+      "title": "Region",
+      "type": "string"
+    },
+    "workshop_type": {
+      "title": "Workshop Type",
+      "type": "string"
+    },
+    "operation": {
+      "title": "Operation",
+      "type": "string"
+    },
+    "unit": {
+      "enum": [
+        "OPERATION",
+        "HOUR",
+        "PACKAGE"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "price_min": {
+      "anyOf": [
+        {
+          "maximum": 1000000.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,2}0*$",
+          "type": "string"
+        }
+      ],
+      "title": "Price Min"
+    },
+    "price_max": {
+      "anyOf": [
+        {
+          "maximum": 1000000.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,2}0*$",
+          "type": "string"
+        }
+      ],
+      "title": "Price Max"
+    },
+    "currency": {
+      "const": "AZN",
+      "default": "AZN",
+      "title": "Currency",
+      "type": "string"
+    },
+    "included_operations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Included Operations",
+      "type": "array"
+    },
+    "included_materials": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Included Materials",
+      "type": "array"
+    },
+    "overlap_group": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Overlap Group"
+    },
+    "hours": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "maximum": 1000.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hours"
+    }
+  },
+  "required": [
+    "seller_id",
+    "original_offer_id",
+    "region",
+    "workshop_type",
+    "operation",
+    "unit",
+    "price_min",
+    "price_max"
+  ],
+  "title": "LaborQuote",
+  "type": "object"
+}

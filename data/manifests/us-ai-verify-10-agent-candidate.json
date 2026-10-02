@@ -1,0 +1,1595 @@
+{
+  "version": "basic-catalog-10-source-candidate",
+  "batch_id": "us-ai-verify-10-agent-candidate",
+  "state": "REVIEWED_LOCAL",
+  "selection_status": "OWNER_US_PRIORITY_SOURCE_FIRST_INDEPENDENT_EXTRACTION",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "land-rover-discovery-sport-2016-10-agent": {
+      "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2016.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table",
+      "format": "pdf"
+    },
+    "land-rover-discovery-sport-2017-10-agent": {
+      "url": "https://www.auto-brochures.com/makes/landrover/Discovery%20Sport/Land%20Rover_US%20Discovery%20Sport_2017.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+      "format": "pdf"
+    },
+    "landrover-l550-range-10-agent": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10138657-9999.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2017,
+      "locator": "JLR SGI18-05, PDF p1 explicitly names Discovery Sport (L550) MY2016-2017, CAN/USA market. Generation/year identity only; no defect or campaign applicability claim.",
+      "format": "pdf"
+    },
+    "land-rover-range-rover-sport-2015-10-agent": {
+      "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2015.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+      "format": "pdf"
+    },
+    "land-rover-range-rover-sport-2016-10-agent": {
+      "url": "https://www.auto-brochures.com/makes/landrover/Range%20Rover%20Sport/Land%20Rover_US%20RangeRoverSport_2016.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+      "format": "pdf"
+    },
+    "landrover-l494-10-agent": {
+      "url": "https://static.nhtsa.gov/odi/rcl/2015/RCMN-15V385-9540.pdf",
+      "source_id": "factory-land-rover-us",
+      "publisher": "Land Rover manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "locator": "JLR North America SRE15-14, PDF p1 explicitly identifies US MY2014-2016 Range Rover Sport as L494. Generation identity only; recall participation is VIN-dependent and is not generalized.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "land-rover-discovery-sport-l550-us",
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "generation": "L550",
+      "generation_code": "L550",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2017,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "land-rover-discovery-sport-2016-10-agent"
+        ],
+        "2017": [
+          "land-rover-discovery-sport-2017-10-agent"
+        ]
+      },
+      "generation_documents": [
+        "landrover-l550-range-10-agent"
+      ],
+      "exclude": [
+        "Non-US diesel and other engines",
+        "Optional third-row package not represented as a five-seat vehicle",
+        "MY2017 torque p95=25 conflicts with p53=250; p53 engine matrix is explicit evidence",
+        "MY2016 tank value18.5 lacks unit in reviewed annual table; held",
+        "Transmission code and all service-fluid values unconfirmed",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "se",
+          "year_from": 2016,
+          "year_to": 2017,
+          "configuration": "Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport SE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "facts": {
+            "trim": "SE",
+            "wheels": "18 in Style109 alloy"
+          },
+          "annual_facts": {
+            "2016": {
+              "compression_ratio": 10,
+              "front_suspension": "Independent coil-sprung struts",
+              "rear_brakes": "Solid discs, 11.8 in",
+              "seating_options": "5 standard; 5+2 optional third-row seats033BI / Row3 Pack074OC. This row is the five-seat configuration.",
+              "torque_lb_ft": {
+                "value": 250,
+                "unit": "lb-ft"
+              }
+            },
+            "2017": {
+              "compression_ratio": "10 ±0.5",
+              "front_suspension": "Independent front struts",
+              "rear_brakes": "Ventilated discs with single-piston sliding caliper, 11.8 in",
+              "fuel_tank_gal": {
+                "value": 18.5,
+                "unit": "US gal usable"
+              },
+              "fuel_city_mpg": {
+                "value": 20,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "fuel_highway_mpg": {
+                "value": 25,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "seating_options": "5 standard; 5+2 optional via Row3 Package P4/074OC, seating033BI. This row excludes P4.",
+              "manufacturer_estimated_combined_mpg": {
+                "value": 22,
+                "unit": "US mpg (manufacturer estimate)"
+              }
+            }
+          }
+        },
+        {
+          "id": "hse",
+          "year_from": 2016,
+          "year_to": 2017,
+          "configuration": "Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "facts": {
+            "trim": "HSE",
+            "wheels": "18 in Style511 alloy"
+          },
+          "annual_facts": {
+            "2016": {
+              "compression_ratio": 10,
+              "front_suspension": "Independent coil-sprung struts",
+              "rear_brakes": "Solid discs, 11.8 in",
+              "seating_options": "5 standard; 5+2 optional third-row seats033BI / Row3 Pack074OC. This row is the five-seat configuration.",
+              "torque_lb_ft": {
+                "value": 250,
+                "unit": "lb-ft"
+              }
+            },
+            "2017": {
+              "compression_ratio": "10 ±0.5",
+              "front_suspension": "Independent front struts",
+              "rear_brakes": "Ventilated discs with single-piston sliding caliper, 11.8 in",
+              "fuel_tank_gal": {
+                "value": 18.5,
+                "unit": "US gal usable"
+              },
+              "fuel_city_mpg": {
+                "value": 20,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "fuel_highway_mpg": {
+                "value": 25,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "seating_options": "5 standard; 5+2 optional via Row3 Package P4/074OC, seating033BI. This row excludes P4.",
+              "manufacturer_estimated_combined_mpg": {
+                "value": 22,
+                "unit": "US mpg (manufacturer estimate)"
+              }
+            }
+          }
+        },
+        {
+          "id": "hse-luxury",
+          "year_from": 2016,
+          "year_to": 2017,
+          "configuration": "Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Discovery Sport annual US source matrix: Discovery Sport HSE Luxury 2.0 turbo / 9AT / 4WD / standard five-seat without Row3 package. US brochure PDF p4 SUV; pp29-30 powertrain/suspension; p39 engine×trim×drive; pp40-45 trim/wheels/seats; p49 Row3 pack; pp74-75 dimensions/technical table; US brochure PDF p4 SUV; pp43,46,48 gearbox/suspension/injection; p53 engine×trim×drive; pp54-55 trim/wheels; pp60,66,70 seating; pp94-95 technical data. Torque source p53=250; p95 printed25 is held as source discrepancy.",
+          "facts": {
+            "trim": "HSE Luxury",
+            "wheels": "19 in Style902 alloy"
+          },
+          "annual_facts": {
+            "2016": {
+              "compression_ratio": 10,
+              "front_suspension": "Independent coil-sprung struts",
+              "rear_brakes": "Solid discs, 11.8 in",
+              "seating_options": "5 standard; 5+2 optional third-row seats033BI / Row3 Pack074OC. This row is the five-seat configuration.",
+              "torque_lb_ft": {
+                "value": 250,
+                "unit": "lb-ft"
+              }
+            },
+            "2017": {
+              "compression_ratio": "10 ±0.5",
+              "front_suspension": "Independent front struts",
+              "rear_brakes": "Ventilated discs with single-piston sliding caliper, 11.8 in",
+              "fuel_tank_gal": {
+                "value": 18.5,
+                "unit": "US gal usable"
+              },
+              "fuel_city_mpg": {
+                "value": 20,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "fuel_highway_mpg": {
+                "value": 25,
+                "unit": "US mpg (manufacturer estimate)"
+              },
+              "seating_options": "5 standard; 5+2 optional via Row3 Package P4/074OC, seating033BI. This row excludes P4.",
+              "manufacturer_estimated_combined_mpg": {
+                "value": 22,
+                "unit": "US mpg (manufacturer estimate)"
+              }
+            }
+          }
+        }
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "engine_description": "2.0L turbocharged direct-injection inline-4",
+        "engine_displacement": {
+          "value": 2.0,
+          "unit": "L"
+        },
+        "engine_displacement_cc": 1999,
+        "cylinders": 4,
+        "aspiration": "TURBO",
+        "injection": "High-pressure direct fuel injection",
+        "power_hp": 240,
+        "transmission_family": "AT",
+        "transmission_description": "9-speed automatic with paddle shift",
+        "gears": 9,
+        "drivetrain_description": "Four-wheel drive with Efficient Driveline",
+        "seats": 5,
+        "seating_applicability": "Standard five-seat configuration; optional Row3 package excluded from this configuration. Do not treat every Discovery Sport as seven-seat.",
+        "wheelbase_in": {
+          "value": 107.9,
+          "unit": "in"
+        },
+        "length_in": {
+          "value": 181.1,
+          "unit": "in"
+        },
+        "width_mirrors_folded_in": {
+          "value": 81.5,
+          "unit": "in"
+        },
+        "width_mirrors_extended_in": {
+          "value": 85.6,
+          "unit": "in"
+        },
+        "height_in": {
+          "value": 67.9,
+          "unit": "in"
+        },
+        "height_basis": "Standard ride height including roof antenna",
+        "ground_clearance": {
+          "value": 210.82,
+          "unit": "mm"
+        },
+        "cargo_cu_ft": {
+          "value": 34.6,
+          "unit": "cu ft"
+        },
+        "cargo_basis": "Rear seats upright, maximum loadspace volume; standard five-seat scope",
+        "cargo_max_cu_ft": {
+          "value": 62.8,
+          "unit": "cu ft"
+        },
+        "rear_suspension": "Independent multi-link",
+        "front_brakes": "Ventilated discs, 12.8 in",
+        "steering": "Electric power-assisted steering",
+        "acceleration_0_60_mph_s": {
+          "value": 7.8,
+          "unit": "s"
+        },
+        "maximum_speed_mph": {
+          "value": 124,
+          "unit": "mph"
+        },
+        "bore_in": {
+          "value": 3.44,
+          "unit": "in"
+        },
+        "stroke_in": {
+          "value": 3.27,
+          "unit": "in"
+        },
+        "curb_weight_from_lb": {
+          "value": 3878,
+          "unit": "lb"
+        },
+        "ground_clearance_in": {
+          "value": 8.3,
+          "unit": "in"
+        }
+      },
+      "scope_note": "US MY2016-2017 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. Non-US diesel and other engines; Optional third-row package not represented as a five-seat vehicle; MY2017 torque p95=25 conflicts with p53=250; p53 engine matrix is explicit evidence; MY2016 tank value18.5 lacks unit in reviewed annual table; held; Transmission code and all service-fluid values unconfirmed"
+    },
+    {
+      "id": "land-rover-range-rover-sport-l494-us",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "generation": "L494",
+      "generation_code": "L494",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "land-rover-range-rover-sport-2015-10-agent"
+        ],
+        "2016": [
+          "land-rover-range-rover-sport-2016-10-agent"
+        ]
+      },
+      "generation_documents": [
+        "landrover-l494-10-agent"
+      ],
+      "exclude": [
+        "Non-US markets",
+        "Optional seven-seat packages excluded from standard-five-seat configuration",
+        "MY2015 SVR lacks reviewed annual source here",
+        "MY2015 Dynamic Package not promoted to independent trim",
+        "MY2016 HST and SVR cannot inherit third-row package",
+        "SVR dimensions held because brochure notes figures may vary",
+        "Service oil/transmission fluid and fuel octane unconfirmed",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "se-340-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "facts": {
+            "trim": "SE",
+            "fuel": "GASOLINE",
+            "engine_description": "3.0L supercharged V6 340 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2995,
+            "cylinders": 6,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 340,
+            "torque_lb_ft": {
+              "value": 332,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 10.5,
+            "wheels": "19 in alloy, standard SE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "suspension": "Four-corner electronic air suspension with automatic load levelling",
+            "curb_weight_from_lb": {
+              "value": 4727,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.9,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "hse-340-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "facts": {
+            "trim": "HSE",
+            "fuel": "GASOLINE",
+            "engine_description": "3.0L supercharged V6 340 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2995,
+            "cylinders": 6,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 340,
+            "torque_lb_ft": {
+              "value": 332,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 10.5,
+            "wheels": "20 in alloy, standard HSE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "suspension": "Four-corner electronic air suspension with automatic load levelling",
+            "curb_weight_from_lb": {
+              "value": 4727,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.9,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "supercharged-510-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "facts": {
+            "trim": "Supercharged",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 510 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 4999.7,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 510,
+            "torque_lb_ft": {
+              "value": 461,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "20 in alloy, standard Supercharged specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "suspension": "Four-corner electronic air suspension with automatic load levelling",
+            "curb_weight_from_lb": {
+              "value": 5093,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "autobiography-510-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p18 SUV; pp25-29 engine×trim×gearbox×drive and wheels; pp40-41 standard five/optional5+2; p56 seating matrix; pp62-63 technical tables. Dynamic Package is optional, not a separate2015 trim.",
+          "facts": {
+            "trim": "Autobiography",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 510 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 4999.7,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 510,
+            "torque_lb_ft": {
+              "value": 461,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "21 in alloy, standard Autobiography specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "suspension": "Four-corner electronic air suspension with automatic load levelling",
+            "curb_weight_from_lb": {
+              "value": 5093,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "se-340-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "SE",
+            "fuel": "GASOLINE",
+            "engine_description": "3.0L supercharged V6 340 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2995,
+            "cylinders": 6,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 340,
+            "torque_lb_ft": {
+              "value": 332,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 10.5,
+            "wheels": "19 in alloy, standard SE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 4661,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.9,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "hse-340-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 340hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "HSE",
+            "fuel": "GASOLINE",
+            "engine_description": "3.0L supercharged V6 340 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2995,
+            "cylinders": 6,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 340,
+            "torque_lb_ft": {
+              "value": 332,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 10.5,
+            "wheels": "20 in alloy, standard HSE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 4661,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.9,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "supercharged-510-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "Supercharged",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 510 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 5000,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 510,
+            "torque_lb_ft": {
+              "value": 461,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "20 in alloy, standard Supercharged specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 5186,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "injection": "High-pressure direct injection",
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "autobiography-510-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Autobiography 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "Autobiography",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 510 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 5000,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 510,
+            "torque_lb_ft": {
+              "value": 461,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "21 in alloy, standard Autobiography specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 5186,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "injection": "High-pressure direct injection",
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "se-254-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport SE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "SE",
+            "fuel": "DIESEL",
+            "engine_description": "3.0L Td6 turbocharged diesel V6 254 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2993,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 254,
+            "torque_lb_ft": {
+              "value": 440,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 16.1,
+            "wheels": "19 in alloy, standard SE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 23.5,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 4709,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 7.1,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "hse-254-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport HSE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HSE 3.0L 254hp DIESEL / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "HSE",
+            "fuel": "DIESEL",
+            "engine_description": "3.0L Td6 turbocharged diesel V6 254 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2993,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 254,
+            "torque_lb_ft": {
+              "value": 440,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 16.1,
+            "wheels": "20 in alloy, standard HSE specification",
+            "front_brakes": "Ventilated discs, 13.78 in",
+            "rear_brakes": "Ventilated discs, 13.78 in",
+            "fuel_tank_us_gal": {
+              "value": 23.5,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 4709,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 7.1,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "hst-380-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport HST 3.0L 380hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport HST 3.0L 380hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "HST",
+            "fuel": "GASOLINE",
+            "engine_description": "3.0L supercharged V6 380 hp",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2995,
+            "cylinders": 6,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 380,
+            "torque_lb_ft": {
+              "value": 332,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 10.5,
+            "wheels": "21 in alloy, standard HST specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Single-speed high-range standard",
+            "seating_options": "5 only; optional5+2 unavailable on this trim",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 4661,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.8,
+              "unit": "s"
+            },
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "supercharged-dynamic-510-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport Supercharged Dynamic 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport Supercharged Dynamic 5.0L 510hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "Supercharged Dynamic",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 510 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 5000,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 510,
+            "torque_lb_ft": {
+              "value": 461,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "21 in alloy, standard Supercharged Dynamic specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 standard; optional5+2 requires annual package/wheel conditions. This row is standard five-seat.",
+            "wheelbase_in": {
+              "value": 115.1,
+              "unit": "in"
+            },
+            "length_in": {
+              "value": 191,
+              "unit": "in"
+            },
+            "width_mirrors_folded_in": {
+              "value": 81.6,
+              "unit": "in"
+            },
+            "width_mirrors_extended_in": {
+              "value": 87.4,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 70.1,
+              "unit": "in"
+            },
+            "height_basis": "Standard ride height with roof rails",
+            "ground_clearance": {
+              "value": 213.36,
+              "unit": "mm"
+            },
+            "ground_clearance_offroad": {
+              "value": 10.9,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 27.7,
+              "unit": "cu ft"
+            },
+            "cargo_basis": "Second-row upright; standard five-seat scope",
+            "cargo_max_cu_ft": {
+              "value": 62.2,
+              "unit": "cu ft"
+            },
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 5186,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "injection": "High-pressure direct injection",
+            "ground_clearance_in": {
+              "value": 8.4,
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "svr-550-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Range Rover Sport SVR 5.0L 550hp GASOLINE / 8AT / 4WD / standard five-seat",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Land Rover Range Rover Sport annual US source matrix: Range Rover Sport SVR 5.0L 550hp GASOLINE / 8AT / 4WD / standard five-seat. US brochure PDF p4 SUV; pp43-44 transmissions/engines; p47 suspension; p55 engine×trim×drive matrix visually checked; pp56-59 wheels/model scopes; pp60,64 seat availability; pp74-75 five/optional5+2; pp94-95 technical tables. HST/SVR cannot take5+2.",
+          "facts": {
+            "trim": "SVR",
+            "fuel": "GASOLINE",
+            "engine_description": "5.0L supercharged V8 550 hp",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 5000,
+            "cylinders": 8,
+            "aspiration": "SUPERCHARGED",
+            "power_hp": 550,
+            "torque_lb_ft": {
+              "value": 502,
+              "unit": "lb-ft"
+            },
+            "compression_ratio": 9.5,
+            "wheels": "21 in alloy, standard SVR specification",
+            "front_brakes": "Ventilated discs, 14.96 in",
+            "rear_brakes": "Ventilated discs, 14.37 in",
+            "fuel_tank_us_gal": {
+              "value": 27.7,
+              "unit": "US gal usable"
+            },
+            "transfer_case": "Two-speed high/low range",
+            "seating_options": "5 only; optional5+2 unavailable on this trim",
+            "transmission_description": "ZF 8-speed automatic with CommandShift 2",
+            "power_basis": "Manufacturer estimate in annual US brochure",
+            "front_suspension": "Independent double wishbone with air suspension",
+            "rear_suspension": "Independent multi-link with air suspension",
+            "curb_weight_from_lb": {
+              "value": 5143,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 4.5,
+              "unit": "s"
+            },
+            "injection": "High-pressure direct injection"
+          }
+        }
+      ],
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "transmission_family": "AT",
+        "transmission_description": "8-speed automatic with CommandShift2",
+        "gears": 8,
+        "drivetrain_description": "Four Wheel Drive (4WD); annual trim-specific transfer case retained",
+        "seats": 5,
+        "seating_applicability": "Standard five-seat configuration; optional third row requires separate package applicability.",
+        "steering": "Speed-proportional electric power-assisted steering"
+      },
+      "scope_note": "US MY2015-2016 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. Non-US markets; Optional seven-seat packages excluded from standard-five-seat configuration; MY2015 SVR lacks reviewed annual source here; MY2015 Dynamic Package not promoted to independent trim; MY2016 HST and SVR cannot inherit third-row package; SVR dimensions held because brochure notes figures may vary; Service oil/transmission fluid and fuel octane unconfirmed"
+    }
+  ]
+}

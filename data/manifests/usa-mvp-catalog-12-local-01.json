@@ -1,0 +1,707 @@
+{
+  "version": "basic-catalog-1",
+  "batch_id": "usa-mvp-catalog-12-local-01",
+  "state": "REVIEWED_LOCAL",
+  "selection_status": "OWNER_PRIORITY_MAKES_EDITORIAL_USED_GENERATIONS_NOT_MEASURED_TURBO_RANK",
+  "epa_document_id": "63955b49-e5ac-40f1-a13b-4f273cc97a52",
+  "documents": {
+    "bmw-f30-2016": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0216443EN_US/the-new-bmw-3-series-sedan-and-sports-wagon",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "US MY2016 F30 LCI launch; 320i/328i/328d/340i sedan tables and improved manual/automatic transmissions.",
+      "format": "html"
+    },
+    "kia-sportage-2017": {
+      "url": "https://www.kiamedia.com/us/en/models/sportage/2017/specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "Annual specification table; preserve trim columns and gear-ratio groups.",
+      "format": "html"
+    },
+    "kia-ql": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10220346-0001.pdf",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2022,
+      "locator": "Manufacturer bulletin SC229, PDF page 2, Model List: Sportage QL MY2017-2022 and listed model years; generation only, no defect inferred.",
+      "format": "pdf"
+    },
+    "kia-sorento-2016": {
+      "url": "https://www.kiamedia.com/us/en/models/sorento/2016/specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "Annual specification table; preserve trim columns and gear-ratio groups.",
+      "format": "html"
+    },
+    "kia-uma": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10220346-0001.pdf",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2020,
+      "locator": "Manufacturer bulletin SC229, PDF page 2, Model List: Sorento UMa MY2016-2020 and listed model years; generation only, no defect inferred.",
+      "format": "pdf"
+    },
+    "vw-passat-2015": {
+      "url": "https://www.auto-brochures.com/makes/Volkswagen/Passat/VW_US%20Passat_2015.pdf",
+      "source_id": "factory-vw-us",
+      "publisher": "Volkswagen manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US Passat brochure: PDF p10 MY2015-2017, p8 MY2018, p13 MY2019; Performance engine/transmission columns. No factory price imported.",
+      "format": "pdf"
+    },
+    "vw-nms": {
+      "url": "https://www.volkswagen-newsroom.com/en/passat-usa-version-3624",
+      "source_id": "factory-vw-us",
+      "publisher": "Volkswagen manufacturer-authored US documents",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2019,
+      "locator": "Volkswagen historical US Passat page: North America-specific New Midsize Sedan launched 2011 and comprehensively updated 2015; matched to each annual US brochure, not EU B7/B8.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "bmw-3-f30-us",
+      "make": "BMW",
+      "model": "3 Series",
+      "generation": "F30 sedan LCI",
+      "generation_code": "F30",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "bmw-f30-2016"
+        ]
+      },
+      "generation_documents": [],
+      "exclude": [
+        "Sports Wagon F31",
+        "Gran Turismo F34",
+        "M3",
+        "330e PHEV",
+        "Other markets",
+        "Factory-only entries without an EPA matching configuration"
+      ],
+      "groups": [
+        {
+          "id": "320i-at",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "320i 2.0L inline-4 TwinPower Turbo gasoline / 8-speed Steptronic automatic / RWD,AWD",
+          "allowed_drives": [
+            "RWD",
+            "AWD"
+          ],
+          "locator": "3 Series US annual factory specification: matching engine column, transmission/drivetrain rows and body; 320i 2.0L inline-4 TwinPower Turbo gasoline / 8-speed Steptronic automatic",
+          "facts": {
+            "engine_description": "320i 2.0L inline-4 TwinPower Turbo gasoline",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "transmission_description": "8-speed Steptronic automatic",
+            "transmission_family": "AT",
+            "fuel": "GASOLINE",
+            "aspiration": "TURBO",
+            "power_hp": 180,
+            "cylinders": 4,
+            "gears": 8
+          },
+          "epa_match": {
+            "model": [
+              "320i",
+              "320i xDrive"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "review_note": "Reviewed same-year BMW US sedan technical matrices and complete EPA rows. Generic 2017/2018 brochure 330i Diesel typo rejected in favor of the gasoline technical matrix. No factory-only 320i xDrive manual row invented from the specification table."
+        }
+      ],
+      "scope_note": "US model years 2016-2018; F30 sedan LCI; only the explicit reviewed engine/transmission/drive combinations in this manifest. No exact VIN or complete trim/options certification.",
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE"
+      },
+      "facelift_from": 2016
+    },
+    {
+      "id": "kia-sportage-ql-us",
+      "make": "Kia",
+      "model": "Sportage",
+      "generation": "QL crossover",
+      "generation_code": "QL",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2017": [
+          "kia-sportage-2017"
+        ]
+      },
+      "generation_documents": [
+        "kia-ql"
+      ],
+      "exclude": [
+        "SL MY2016",
+        "NQ5 MY2023",
+        "Other markets"
+      ],
+      "groups": [
+        {
+          "id": "2.4-6at",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "2.4L GDI inline-4 / 6-speed Sportmatic automatic / FWD,AWD",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "locator": "Sportage US annual factory specification: matching engine column, transmission/drivetrain rows and body; 2.4L GDI inline-4 / 6-speed Sportmatic automatic",
+          "facts": {
+            "engine_description": "2.4L GDI inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "transmission_description": "6-speed Sportmatic automatic",
+            "transmission_family": "AT",
+            "fuel": "GASOLINE",
+            "aspiration": "NATURALLY_ASPIRATED",
+            "cylinders": 4,
+            "gears": 6
+          },
+          "epa_match": {
+            "model": [
+              "Sportage FWD",
+              "Sportage AWD",
+              "Sportage FE FWD",
+              "Sportage FE AWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "annual_facts": {
+            "2017": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2017"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2017"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2017"
+              }
+            },
+            "2018": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2018"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2018"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2018"
+              }
+            },
+            "2019": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2019"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2019"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2019"
+              }
+            },
+            "2020": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2020"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2020"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2020"
+              }
+            },
+            "2021": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2021"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2021"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2021"
+              }
+            },
+            "2022": {
+              "factory_length": {
+                "value": "176.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sportage-2022"
+              },
+              "factory_width": {
+                "value": "73.0 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sportage-2022"
+              },
+              "factory_wheelbase": {
+                "value": "105.1 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sportage-2022"
+              }
+            }
+          }
+        }
+      ],
+      "scope_note": "US model years 2017-2022; QL crossover; only the explicit reviewed engine/transmission/drive combinations in this manifest. No exact VIN or complete trim/options certification.",
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE"
+      },
+      "facelift_from": 2020
+    },
+    {
+      "id": "kia-sorento-um-us",
+      "make": "Kia",
+      "model": "Sorento",
+      "generation": "UM / UMa crossover",
+      "generation_code": "UM",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "kia-sorento-2016"
+        ]
+      },
+      "generation_documents": [
+        "kia-uma"
+      ],
+      "exclude": [
+        "XM",
+        "MQ4",
+        "Hybrid",
+        "Other markets"
+      ],
+      "groups": [
+        {
+          "id": "2.4-6at",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "2.4L GDI inline-4 / 6-speed Sportmatic automatic / FWD,AWD",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "locator": "Sorento US annual factory specification: matching engine column, transmission/drivetrain rows and body; 2.4L GDI inline-4 / 6-speed Sportmatic automatic",
+          "facts": {
+            "engine_description": "2.4L GDI inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "transmission_description": "6-speed Sportmatic automatic",
+            "transmission_family": "AT",
+            "fuel": "GASOLINE",
+            "aspiration": "NATURALLY_ASPIRATED",
+            "cylinders": 4,
+            "gears": 6
+          },
+          "epa_match": {
+            "model": [
+              "Sorento FWD",
+              "Sorento AWD",
+              "Sorento FE AWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "annual_facts": {
+            "2016": {
+              "factory_length": {
+                "value": "4,760 mm (187.4 in.)",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sorento-2016"
+              },
+              "factory_width": {
+                "value": "1,890 mm (74.4 in.)",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sorento-2016"
+              },
+              "factory_wheelbase": {
+                "value": "2,780 mm (109.4 in.)",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sorento-2016"
+              }
+            },
+            "2017": {
+              "factory_length": {
+                "value": "187.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sorento-2017"
+              },
+              "factory_width": {
+                "value": "74.4 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sorento-2017"
+              },
+              "factory_wheelbase": {
+                "value": "109.4 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sorento-2017"
+              }
+            },
+            "2018": {
+              "factory_length": {
+                "value": "187.4 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sorento-2018"
+              },
+              "factory_width": {
+                "value": "74.4 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sorento-2018"
+              },
+              "factory_wheelbase": {
+                "value": "109.4 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sorento-2018"
+              }
+            },
+            "2019": {
+              "factory_length": {
+                "value": "189.0 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sorento-2019"
+              },
+              "factory_width": {
+                "value": "74.4 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sorento-2019"
+              },
+              "factory_wheelbase": {
+                "value": "109.4 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sorento-2019"
+              }
+            },
+            "2020": {
+              "factory_length": {
+                "value": "189.0 in.",
+                "titles": {
+                  "ru": "Длина по заводскому источнику",
+                  "az": "İstehsalçı üzrə uzunluq"
+                },
+                "document_key": "kia-sorento-2020"
+              },
+              "factory_width": {
+                "value": "74.4 in.",
+                "titles": {
+                  "ru": "Ширина по заводскому источнику",
+                  "az": "İstehsalçı üzrə en"
+                },
+                "document_key": "kia-sorento-2020"
+              },
+              "factory_wheelbase": {
+                "value": "109.4 in.",
+                "titles": {
+                  "ru": "Колёсная база по заводскому источнику",
+                  "az": "İstehsalçı üzrə təkər bazası"
+                },
+                "document_key": "kia-sorento-2020"
+              }
+            }
+          }
+        }
+      ],
+      "scope_note": "US model years 2016-2020; UM / UMa crossover; only the explicit reviewed engine/transmission/drive combinations in this manifest. No exact VIN or complete trim/options certification.",
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE"
+      },
+      "facelift_from": 2019
+    },
+    {
+      "id": "vw-passat-nms-us",
+      "make": "Volkswagen",
+      "model": "Passat",
+      "generation": "NMS North American sedan",
+      "generation_code": "NMS",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "vw-passat-2015"
+        ]
+      },
+      "generation_documents": [
+        "vw-nms"
+      ],
+      "exclude": [
+        "European B7/B8",
+        "China-market derivative",
+        "MY2016 TDI announcement without US sales confirmation",
+        "MY2020 restyling",
+        "Other markets"
+      ],
+      "groups": [
+        {
+          "id": "18tsi-6at",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "1.8L TSI inline-4 turbo / 6-speed Tiptronic automatic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "locator": "Passat US annual factory specification: matching engine column, transmission/drivetrain rows and body; 1.8L TSI inline-4 turbo / 6-speed Tiptronic automatic",
+          "facts": {
+            "engine_description": "1.8L TSI inline-4 turbo",
+            "engine_displacement": {
+              "value": 1.8,
+              "unit": "L"
+            },
+            "transmission_description": "6-speed Tiptronic automatic",
+            "transmission_family": "AT",
+            "fuel": "GASOLINE",
+            "aspiration": "TURBO",
+            "power_hp": 170,
+            "cylinders": 4,
+            "gears": 6
+          },
+          "epa_match": {
+            "model": [
+              "Passat"
+            ],
+            "displ": [
+              "1.8"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          }
+        }
+      ],
+      "scope_note": "US model years 2015-2019; NMS North American sedan; only the explicit reviewed engine/transmission/drive combinations in this manifest. No exact VIN or complete trim/options certification.",
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE"
+      },
+      "facelift_from": 2016
+    }
+  ],
+  "exclusions": [],
+  "excluded_workstreams": [
+    "ownership_cost",
+    "parts_prices",
+    "labor_prices",
+    "deep_dossiers",
+    "images",
+    "advertising"
+  ],
+  "next_market_order": [
+    "US within owner-relevant models",
+    "KR",
+    "EU including Skoda",
+    "JP",
+    "CN",
+    "other evidenced markets"
+  ],
+  "source_conflicts": [
+    {
+      "scope": "BMW 330i MY2017/2018 brochure",
+      "issue": "Sedan table says Diesel for gasoline 330i; annual BMW US technical matrices and EPA confirm gasoline.",
+      "decision": "Use manufacturer technical matrix; brochure not used as engine proof."
+    },
+    {
+      "scope": "VW Passat MY2015 wheelbase",
+      "issue": "Printed mm value conflicts with 110.4 inches.",
+      "decision": "No wheelbase conversion or conflicting mm fact published."
+    },
+    {
+      "scope": "Kia Forte YD EPA automatic injection",
+      "issue": "Same named 2.0 automatic rows do not identify MPI versus GDI conclusively.",
+      "decision": "Separate factory-native MPI and GDI records; do not transfer EPA consumption or assign arbitrary trim."
+    },
+    {
+      "scope": "Kia Sportage MY2021-2022",
+      "issue": "Annual specifications omit engine block on MY2022 page; older engine description in EPA may be generic.",
+      "decision": "Use same-year Kia model overview engine/drive/6AT matrix alongside gear-ratio specification; no unknown engine code inferred."
+    }
+  ],
+  "non_us_queue": [
+    {
+      "make": "Skoda",
+      "models": [
+        "Octavia",
+        "Superb",
+        "Kodiaq"
+      ],
+      "market": "EU",
+      "status": "NEXT_SEPARATE_FACTORY_BATCH_NO_US_FALLBACK"
+    }
+  ]
+}

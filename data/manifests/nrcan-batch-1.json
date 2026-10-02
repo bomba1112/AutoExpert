@@ -1,0 +1,816 @@
+{
+  "source_id": "nrcan",
+  "parser": "nrcan-csv-v1",
+  "dataset_kind": "BEV",
+  "family_mappings": [
+    {
+      "make": "Audi",
+      "model": "A3"
+    },
+    {
+      "make": "Audi",
+      "model": "A4"
+    },
+    {
+      "make": "Audi",
+      "model": "A5"
+    },
+    {
+      "make": "Audi",
+      "model": "A6"
+    },
+    {
+      "make": "Audi",
+      "model": "Q3"
+    },
+    {
+      "make": "Audi",
+      "model": "Q5"
+    },
+    {
+      "make": "Audi",
+      "model": "Q7"
+    },
+    {
+      "make": "BMW",
+      "model": "1 Series"
+    },
+    {
+      "make": "BMW",
+      "model": "2 Series"
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series"
+    },
+    {
+      "make": "BMW",
+      "model": "4 Series"
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series"
+    },
+    {
+      "make": "BMW",
+      "model": "X1"
+    },
+    {
+      "make": "BMW",
+      "model": "X3"
+    },
+    {
+      "make": "BMW",
+      "model": "X5"
+    },
+    {
+      "make": "Buick",
+      "model": "Cascada"
+    },
+    {
+      "make": "Buick",
+      "model": "Enclave"
+    },
+    {
+      "make": "Buick",
+      "model": "Encore"
+    },
+    {
+      "make": "Buick",
+      "model": "Envision"
+    },
+    {
+      "make": "Cadillac",
+      "model": "ATS"
+    },
+    {
+      "make": "Cadillac",
+      "model": "ATS-V"
+    },
+    {
+      "make": "Cadillac",
+      "model": "CELESTIQ"
+    },
+    {
+      "make": "Cadillac",
+      "model": "CT4"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Avalanche"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Blazer"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Bolt EUV"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Bolt EV"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Cruze"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Equinox"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Malibu"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Tahoe"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Trax"
+    },
+    {
+      "make": "Chrysler",
+      "model": "200"
+    },
+    {
+      "make": "Chrysler",
+      "model": "300"
+    },
+    {
+      "make": "Chrysler",
+      "model": "300 SRT8"
+    },
+    {
+      "make": "Chrysler",
+      "model": "Pacifica"
+    },
+    {
+      "make": "Dodge",
+      "model": "Avenger"
+    },
+    {
+      "make": "Dodge",
+      "model": "Caliber"
+    },
+    {
+      "make": "Dodge",
+      "model": "Challenger"
+    },
+    {
+      "make": "Dodge",
+      "model": "Charger"
+    },
+    {
+      "make": "Dodge",
+      "model": "Durango"
+    },
+    {
+      "make": "Dodge",
+      "model": "Journey"
+    },
+    {
+      "make": "Fiat",
+      "model": "124 Spider"
+    },
+    {
+      "make": "Fiat",
+      "model": "500"
+    },
+    {
+      "make": "Fiat",
+      "model": "500 L"
+    },
+    {
+      "make": "Fiat",
+      "model": "500 X"
+    },
+    {
+      "make": "Ford",
+      "model": "Bronco"
+    },
+    {
+      "make": "Ford",
+      "model": "Bronco Sport"
+    },
+    {
+      "make": "Ford",
+      "model": "C-MAX"
+    },
+    {
+      "make": "Ford",
+      "model": "E150 Van"
+    },
+    {
+      "make": "Ford",
+      "model": "Edge"
+    },
+    {
+      "make": "Ford",
+      "model": "Escape"
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer"
+    },
+    {
+      "make": "Ford",
+      "model": "Focus"
+    },
+    {
+      "make": "Ford",
+      "model": "Fusion"
+    },
+    {
+      "make": "GMC",
+      "model": "Acadia"
+    },
+    {
+      "make": "GMC",
+      "model": "Canyon"
+    },
+    {
+      "make": "GMC",
+      "model": "Hummer EV"
+    },
+    {
+      "make": "GMC",
+      "model": "Savana Cargo"
+    },
+    {
+      "make": "Genesis",
+      "model": "G70"
+    },
+    {
+      "make": "Genesis",
+      "model": "G80"
+    },
+    {
+      "make": "Genesis",
+      "model": "G90"
+    },
+    {
+      "make": "Genesis",
+      "model": "GV60"
+    },
+    {
+      "make": "Genesis",
+      "model": "GV70"
+    },
+    {
+      "make": "Honda",
+      "model": "Accord"
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V"
+    },
+    {
+      "make": "Honda",
+      "model": "Civic"
+    },
+    {
+      "make": "Honda",
+      "model": "Clarity"
+    },
+    {
+      "make": "Honda",
+      "model": "Fit"
+    },
+    {
+      "make": "Honda",
+      "model": "HR-V"
+    },
+    {
+      "make": "Honda",
+      "model": "Pilot"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Accent"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Azera"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Elantra"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Equus"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Ioniq"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Kona"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Palisade"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Santa Fe"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Sonata"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Tucson"
+    },
+    {
+      "make": "Infiniti",
+      "model": "EX35"
+    },
+    {
+      "make": "Infiniti",
+      "model": "EX37"
+    },
+    {
+      "make": "Infiniti",
+      "model": "FX35"
+    },
+    {
+      "make": "Infiniti",
+      "model": "FX37"
+    },
+    {
+      "make": "Infiniti",
+      "model": "Q50"
+    },
+    {
+      "make": "Infiniti",
+      "model": "QX60"
+    },
+    {
+      "make": "Jaguar",
+      "model": "E-Pace"
+    },
+    {
+      "make": "Jaguar",
+      "model": "F-Pace"
+    },
+    {
+      "make": "Jaguar",
+      "model": "F-Type"
+    },
+    {
+      "make": "Jaguar",
+      "model": "I-Pace"
+    },
+    {
+      "make": "Jeep",
+      "model": "Cherokee"
+    },
+    {
+      "make": "Jeep",
+      "model": "Compass"
+    },
+    {
+      "make": "Jeep",
+      "model": "Gladiator"
+    },
+    {
+      "make": "Jeep",
+      "model": "Gladiator Pickup"
+    },
+    {
+      "make": "Jeep",
+      "model": "Grand Cherokee"
+    },
+    {
+      "make": "Jeep",
+      "model": "Renegade"
+    },
+    {
+      "make": "Kia",
+      "model": "Cadenza"
+    },
+    {
+      "make": "Kia",
+      "model": "Carnival"
+    },
+    {
+      "make": "Kia",
+      "model": "EV6"
+    },
+    {
+      "make": "Kia",
+      "model": "EV9"
+    },
+    {
+      "make": "Kia",
+      "model": "Forte"
+    },
+    {
+      "make": "Kia",
+      "model": "K5"
+    },
+    {
+      "make": "Kia",
+      "model": "Niro"
+    },
+    {
+      "make": "Kia",
+      "model": "Optima"
+    },
+    {
+      "make": "Kia",
+      "model": "Rio"
+    },
+    {
+      "make": "Kia",
+      "model": "Sorento"
+    },
+    {
+      "make": "Kia",
+      "model": "Soul"
+    },
+    {
+      "make": "Kia",
+      "model": "Sportage"
+    },
+    {
+      "make": "Kia",
+      "model": "Telluride"
+    },
+    {
+      "make": "Land Rover",
+      "model": "Defender"
+    },
+    {
+      "make": "Land Rover",
+      "model": "Discovery"
+    },
+    {
+      "make": "Land Rover",
+      "model": "Discovery Sport"
+    },
+    {
+      "make": "Land Rover",
+      "model": "Evoque"
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover"
+    },
+    {
+      "make": "Lexus",
+      "model": "CT"
+    },
+    {
+      "make": "Lexus",
+      "model": "ES"
+    },
+    {
+      "make": "Lexus",
+      "model": "GS"
+    },
+    {
+      "make": "Lexus",
+      "model": "GX"
+    },
+    {
+      "make": "Lexus",
+      "model": "IS"
+    },
+    {
+      "make": "Lexus",
+      "model": "LX"
+    },
+    {
+      "make": "Lexus",
+      "model": "NX"
+    },
+    {
+      "make": "Lexus",
+      "model": "RX"
+    },
+    {
+      "make": "Lincoln",
+      "model": "Aviator"
+    },
+    {
+      "make": "Lincoln",
+      "model": "Continental"
+    },
+    {
+      "make": "Lincoln",
+      "model": "Corsair"
+    },
+    {
+      "make": "Lincoln",
+      "model": "MKC"
+    },
+    {
+      "make": "MINI",
+      "model": "Clubman"
+    },
+    {
+      "make": "MINI",
+      "model": "Cooper"
+    },
+    {
+      "make": "MINI",
+      "model": "Countryman"
+    },
+    {
+      "make": "MINI",
+      "model": "John Cooper Works"
+    },
+    {
+      "make": "Mazda",
+      "model": "2"
+    },
+    {
+      "make": "Mazda",
+      "model": "3"
+    },
+    {
+      "make": "Mazda",
+      "model": "5"
+    },
+    {
+      "make": "Mazda",
+      "model": "6"
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5"
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-9"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "A-Class"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "B-Class Electric Drive"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C-Class"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E-Class"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC-Class"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE-Class"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Eclipse"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Galant"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Lancer"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Outlander"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "i-MiEV"
+    },
+    {
+      "make": "Nissan",
+      "model": "370Z"
+    },
+    {
+      "make": "Nissan",
+      "model": "ARIYA"
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima"
+    },
+    {
+      "make": "Nissan",
+      "model": "Armada"
+    },
+    {
+      "make": "Nissan",
+      "model": "LEAF"
+    },
+    {
+      "make": "Nissan",
+      "model": "Murano"
+    },
+    {
+      "make": "Nissan",
+      "model": "Pathfinder"
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue"
+    },
+    {
+      "make": "Nissan",
+      "model": "Sentra"
+    },
+    {
+      "make": "Porsche",
+      "model": "718"
+    },
+    {
+      "make": "Porsche",
+      "model": "911"
+    },
+    {
+      "make": "Porsche",
+      "model": "918 Spyder"
+    },
+    {
+      "make": "Porsche",
+      "model": "Boxster"
+    },
+    {
+      "make": "Subaru",
+      "model": "Ascent"
+    },
+    {
+      "make": "Subaru",
+      "model": "BRZ"
+    },
+    {
+      "make": "Subaru",
+      "model": "Crosstrek"
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester"
+    },
+    {
+      "make": "Subaru",
+      "model": "Impreza"
+    },
+    {
+      "make": "Subaru",
+      "model": "Legacy"
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback"
+    },
+    {
+      "make": "Tesla",
+      "model": "Cybertruck"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model S"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model X"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model Y"
+    },
+    {
+      "make": "Toyota",
+      "model": "4Runner"
+    },
+    {
+      "make": "Toyota",
+      "model": "86"
+    },
+    {
+      "make": "Toyota",
+      "model": "Avalon"
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry"
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla"
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander"
+    },
+    {
+      "make": "Toyota",
+      "model": "Land Cruiser"
+    },
+    {
+      "make": "Toyota",
+      "model": "Prius"
+    },
+    {
+      "make": "Toyota",
+      "model": "RAV4"
+    },
+    {
+      "make": "Toyota",
+      "model": "Sienna"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Arteon"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Atlas"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Beetle"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Jetta"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Passat"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Tiguan"
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Touareg"
+    },
+    {
+      "make": "Volvo",
+      "model": "C30"
+    },
+    {
+      "make": "Volvo",
+      "model": "C40"
+    },
+    {
+      "make": "Volvo",
+      "model": "C70"
+    },
+    {
+      "make": "Volvo",
+      "model": "S60"
+    },
+    {
+      "make": "Volvo",
+      "model": "S90"
+    },
+    {
+      "make": "Volvo",
+      "model": "XC60"
+    },
+    {
+      "make": "Volvo",
+      "model": "XC90"
+    }
+  ],
+  "document_id": "c4874ed9-a0fc-40b8-a88b-499afb7a4676",
+  "download_url": null,
+  "expected_sha256": null,
+  "year_min": 2015,
+  "year_max": 2026,
+  "makes": [],
+  "priority_families": [],
+  "family_limit": 1000,
+  "versions_per_family": 12,
+  "selection_basis": "Full existing 199-family DRAFT queue; longest same-make model-prefix grouping for search only; original names preserved, up to 12 latest source rows per family per dataset; not AZ prevalence",
+  "dry_run": false,
+  "records": [],
+  "ownership_records": []
+}

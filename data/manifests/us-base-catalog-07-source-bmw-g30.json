@@ -1,0 +1,1570 @@
+{
+  "version": "basic-catalog-07-independent-source-candidate-bmw-g30",
+  "batch_id": "us-base-catalog-07-source-bmw-g30",
+  "state": "REVIEWED_LOCAL_NOT_PUBLISHED",
+  "selection_status": "OWNER_MASTER_LIST_INDEPENDENT_BMW_US_ANNUAL_TABLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "launch17": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0264802EN_US/the-all-new-2017-bmw-5-series%3A-performance-redefined",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America PressClub USA",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2018,
+      "locator": "MY2017 US G30 launch: seventh-generation sedan identity, 530i/540i engines and 8-speed automatic. Annual PDF governs tuples.",
+      "format": "html"
+    },
+    "tech17": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0264802EN_US/402275",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America technical data",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "PDF pp18–20: four MY2017 US sedan columns, drive, B46/B58 engine, 8HP50 automatic, dimensions, seats, fuel/oil.",
+      "format": "pdf"
+    },
+    "price17": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0266788EN_US/bmw-announces-price-for-the-all-new-2017-bmw-5-series",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America PressClub USA",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "MY2017 US launch-price announcement names 530i/xDrive and 540i/xDrive sedan offerings.",
+      "format": "html"
+    },
+    "tech18": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0264802EN_US/402277",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America technical data",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "PDF pp1–2: seven MY2018 US sedan columns; exact drive, engine, 8HP50/8HP75/8P75H automatic, fuel, dimensions and seats.",
+      "format": "pdf"
+    },
+    "gen": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0266788EN_US/391871",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America MY2018 pricing guide",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2018,
+      "locator": "BMW North America pricing PDF names 5 Series Sedan (G30); manufacturer launch article identifies seventh generation.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "bmw-5series-g30-us-2017-2018-source07",
+      "make": "BMW",
+      "model": "5 Series",
+      "generation": "G30 sedan (seventh generation)",
+      "generation_code": "G30",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2018,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2017": [
+          "tech17",
+          "price17"
+        ],
+        "2018": [
+          "tech18"
+        ]
+      },
+      "generation_documents": [
+        "launch17",
+        "gen"
+      ],
+      "scope_note": "BMW USA G30 5 Series sedan only. Each annual engine, 8AT and drive tuple is in its own BMW technical column and independently drive-matched to EPA.",
+      "exclude": [
+        "Other years or markets",
+        "G31 Touring, Gran Turismo, F90 M5",
+        "Unlisted diesel and 2017 PHEV/M550i without annual complete tuple",
+        "MY2019–2020 pending US gearbox source"
+      ],
+      "groups": [
+        {
+          "id": "2017-530i-rwd-8at",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "530i 2.0L / 8-speed Steptronic automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530i"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2017 technical PDF 530i column: B46B20O0, 248 hp, 8HP50 8AT, RWD. EPA ID 38543 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech17"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech17"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech17"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech17"
+            },
+            "engine_description": {
+              "value": "530i 2.0L turbo inline-4",
+              "document_key": "tech17"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech17"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech17"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech17"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech17",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 258,
+              "document_key": "tech17",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech17"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech17"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech17"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech17"
+            },
+            "trim": {
+              "value": "530i",
+              "document_key": "tech17"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech17",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech17",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech17"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech17",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2017-530i-xdrive-awd-8at",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "530i xDrive 2.0L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530i xDrive"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2017 technical PDF 530i xDrive column: B46B20O0, 248 hp, 8HP50 8AT, AWD. EPA ID 38544 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech17"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech17"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech17"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech17"
+            },
+            "engine_description": {
+              "value": "530i xDrive 2.0L turbo inline-4",
+              "document_key": "tech17"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech17"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech17"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech17"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech17",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 258,
+              "document_key": "tech17",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech17"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech17"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech17"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech17"
+            },
+            "trim": {
+              "value": "530i xDrive",
+              "document_key": "tech17"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech17",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech17",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech17"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech17",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2017-540i-rwd-8at",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "540i 3.0L / 8-speed Steptronic automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "540i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2017 technical PDF 540i column: B58B30M0, 335 hp, 8HP50 8AT, RWD. EPA ID 38545 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech17"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech17"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech17"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech17"
+            },
+            "engine_description": {
+              "value": "540i 3.0L turbo inline-6",
+              "document_key": "tech17"
+            },
+            "engine_displacement": {
+              "value": 3.0,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B58B30M0",
+              "document_key": "tech17"
+            },
+            "cylinders": {
+              "value": 6,
+              "document_key": "tech17"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech17"
+            },
+            "power_hp": {
+              "value": 335,
+              "document_key": "tech17",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 332,
+              "document_key": "tech17",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech17"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech17"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech17"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech17"
+            },
+            "trim": {
+              "value": "540i",
+              "document_key": "tech17"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech17",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech17",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 6.5,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech17"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech17",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2017-540i-xdrive-awd-8at",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "540i xDrive 3.0L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "540i xDrive"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2017 technical PDF 540i xDrive column: B58B30M0, 335 hp, 8HP50 8AT, AWD. EPA ID 38546 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech17"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech17"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech17"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech17"
+            },
+            "engine_description": {
+              "value": "540i xDrive 3.0L turbo inline-6",
+              "document_key": "tech17"
+            },
+            "engine_displacement": {
+              "value": 3.0,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B58B30M0",
+              "document_key": "tech17"
+            },
+            "cylinders": {
+              "value": 6,
+              "document_key": "tech17"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech17"
+            },
+            "power_hp": {
+              "value": 335,
+              "document_key": "tech17",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 332,
+              "document_key": "tech17",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech17"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech17"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech17"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech17"
+            },
+            "trim": {
+              "value": "540i xDrive",
+              "document_key": "tech17"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech17",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech17",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 6.5,
+              "document_key": "tech17",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech17"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech17",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech17",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-530i-rwd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "530i 2.0L / 8-speed Steptronic automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530i"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 530i column: B46B20O0, 248 hp, 8HP50 8AT, RWD. EPA ID 39153 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "530i 2.0L turbo inline-4",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 258,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "530i",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-530i-xdrive-awd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "530i xDrive 2.0L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530i xDrive"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 530i xDrive column: B46B20O0, 248 hp, 8HP50 8AT, AWD. EPA ID 39154 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "530i xDrive 2.0L turbo inline-4",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 258,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "530i xDrive",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-540i-rwd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "540i 3.0L / 8-speed Steptronic automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "540i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 540i column: B58B30M0, 335 hp, 8HP50 8AT, RWD. EPA ID 39230 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "540i 3.0L turbo inline-6",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 3.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B58B30M0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 6,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 335,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 332,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "540i",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 6.5,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-540i-xdrive-awd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "540i xDrive 3.0L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "540i xDrive"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 540i xDrive column: B58B30M0, 335 hp, 8HP50 8AT, AWD. EPA ID 39290 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "540i xDrive 3.0L turbo inline-6",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 3.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B58B30M0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 6,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 335,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 332,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8HP50",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "540i xDrive",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 6.5,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.2,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-m550i-xdrive-awd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "M550i xDrive 4.4L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "M550i xDrive"
+            ],
+            "displ": [
+              "4.4"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF M550i xDrive column: N63B44O2, 456 hp, 8HP75 8AT, AWD. EPA ID 38631 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "M550i xDrive 4.4L twin-turbo V8",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 4.4,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "N63B44O2",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 456,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 480,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8HP75",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "M550i xDrive",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.0,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 10.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 195.4,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.8,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-530e-rwd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "530e 2.0L / 8-speed Steptronic automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530e"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 530e column: B46B20O0, 248 hp, 8P75H 8AT, RWD. EPA ID 38754 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "PHEV",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "530e 2.0L turbo inline-4 + plug-in electric motor",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 310,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8P75H",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "530e",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.1,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.4,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        },
+        {
+          "id": "2018-530e-xdrive-awd-8at",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "530e xDrive 2.0L / 8-speed Steptronic automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "530e xDrive"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "BMW NA MY2018 technical PDF 530e xDrive column: B46B20O0, 248 hp, 8P75H 8AT, AWD. EPA ID 38755 confirms drive.",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "tech18"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "tech18"
+            },
+            "powertrain": {
+              "value": "PHEV",
+              "document_key": "tech18"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "tech18"
+            },
+            "engine_description": {
+              "value": "530e xDrive 2.0L turbo inline-4 + plug-in electric motor",
+              "document_key": "tech18"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_code": {
+              "value": "B46B20O0",
+              "document_key": "tech18"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "tech18"
+            },
+            "aspiration": {
+              "value": "TURBO",
+              "document_key": "tech18"
+            },
+            "power_hp": {
+              "value": 248,
+              "document_key": "tech18",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 310,
+              "document_key": "tech18",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "tech18"
+            },
+            "transmission_description": {
+              "value": "8-speed Steptronic automatic",
+              "document_key": "tech18"
+            },
+            "transmission_code": {
+              "value": "8P75H",
+              "document_key": "tech18"
+            },
+            "gears": {
+              "value": 8,
+              "document_key": "tech18"
+            },
+            "trim": {
+              "value": "530e xDrive",
+              "document_key": "tech18"
+            },
+            "octane_aki": {
+              "value": 91,
+              "document_key": "tech18",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.1,
+              "document_key": "tech18",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 5.25,
+              "document_key": "tech18",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "Factory engine-oil filling quantity; service refill may differ",
+              "document_key": "tech18"
+            },
+            "length_in": {
+              "value": 194.6,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.5,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.4,
+              "document_key": "tech18",
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 117.1,
+              "document_key": "tech18",
+              "unit": "in"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

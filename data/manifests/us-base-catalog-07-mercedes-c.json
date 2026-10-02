@@ -1,0 +1,587 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-mercedes-c",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "mb-c2019-source07": {
+      "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY19_C-Class_WebPDF_181212.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA manufacturer brochure",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2019,
+      "locator": "Official MY2019 US brochure PDF p6 sedan model/drive list and p27 C300/C43/C63/C63S specification columns: engine/power/torque/transmission/drivetrain. Sedan only; coupe/cabriolet excluded.",
+      "format": "pdf"
+    },
+    "mb-c2020-source07": {
+      "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY20_C-CLASS_WebPDF_11.14.19.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA manufacturer brochure",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "Official MY2020 US brochure PDF p6 sedan model/drive list and p27 specification columns: C300/C43/C63/C63S engine/power/torque/automatic transmission/drivetrain. Sedan only.",
+      "format": "pdf"
+    },
+    "mb-c2021-source07": {
+      "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY21_C-Class_WebPDF_01132021%20%281%29.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA manufacturer brochure",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "Official MY2021 US brochure PDF p6 sedan model/drive list and p36 specification columns: C300/C43/C63/C63S engine/power/torque/automatic transmission/drivetrain. Sedan only.",
+      "format": "pdf"
+    },
+    "mb-c-w205-facelift-source07": {
+      "url": "https://media.mbusa.com/news/the-2019-mercedes-benz-c-class-sedan",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA Media Newsroom",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2021,
+      "locator": "MBUSA 2019 facelift announcement identifies updated C-Class sedan as current generation launched four years earlier and US sale. Existing published W205 family identity retained; 2022 redesign excluded.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "mb-cclass-w205-facelift-us-2019-2021-source07",
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205 sedan (2019 facelift)",
+      "generation_code": "W205",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2021,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2019": [
+          "mb-c2019-source07"
+        ],
+        "2020": [
+          "mb-c2020-source07"
+        ],
+        "2021": [
+          "mb-c2021-source07"
+        ]
+      },
+      "generation_documents": [
+        "mb-c-w205-facelift-source07"
+      ],
+      "scope_note": "US W205 facelift sedan. Exact MY2019/2020/2021 MBUSA annual brochure model and specification columns. W205 body-code provenance also exists in published earlier-generation catalog; no coupe, cabriolet, wagon or MY2022 extrapolation.",
+      "exclude": [
+        "Coupe",
+        "Cabriolet",
+        "Wagon",
+        "Other model years/markets",
+        "Unlisted engines, transmissions or drives"
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE"
+      },
+      "groups": [
+        {
+          "id": "2019-c-300-rwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "C 300 sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2019 C-Class US brochure PDF pp6,27: C 300 sedan is listed for RWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2019-c-300-4matic-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "C 300 4MATIC sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2019 C-Class US brochure PDF pp6,27: C 300 4MATIC sedan is listed for AWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300 4MATIC",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2019-amg-c-43-awd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "AMG C 43 sedan / AMG-enhanced 3.0L V6 biturbo direct injection / AMG SPEEDSHIFT TCT 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2019 C-Class US brochure PDF pp6,27: AMG C 43 sedan is listed for AWD; AMG C 43 specification column identifies AMG-enhanced 3.0L V6 biturbo direct injection, 385 hp, AMG SPEEDSHIFT TCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 43",
+            "engine_description": "AMG-enhanced 3.0L V6 biturbo direct injection",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 385,
+            "torque_lb_ft": {
+              "value": 384,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT TCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2019-amg-c-63-rwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "AMG C 63 sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2019 C-Class US brochure PDF pp6,27: AMG C 63 sedan is listed for RWD; AMG C 63 specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 469 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 469,
+            "torque_lb_ft": {
+              "value": 479,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2019-amg-c-63-s-rwd",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "AMG C 63 S sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2019 C-Class US brochure PDF pp6,27: AMG C 63 S sedan is listed for RWD; AMG C 63 S specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 503 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63 S",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 503,
+            "torque_lb_ft": {
+              "value": 516,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2020-c-300-rwd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "C 300 sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2020 C-Class US brochure PDF pp6,27: C 300 sedan is listed for RWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2020-c-300-4matic-awd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "C 300 4MATIC sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2020 C-Class US brochure PDF pp6,27: C 300 4MATIC sedan is listed for AWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300 4MATIC",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2020-amg-c-43-awd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "AMG C 43 sedan / AMG-enhanced 3.0L V6 biturbo direct injection / AMG SPEEDSHIFT TCT 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2020 C-Class US brochure PDF pp6,27: AMG C 43 sedan is listed for AWD; AMG C 43 specification column identifies AMG-enhanced 3.0L V6 biturbo direct injection, 385 hp, AMG SPEEDSHIFT TCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 43",
+            "engine_description": "AMG-enhanced 3.0L V6 biturbo direct injection",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 385,
+            "torque_lb_ft": {
+              "value": 384,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT TCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2020-amg-c-63-rwd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "AMG C 63 sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2020 C-Class US brochure PDF pp6,27: AMG C 63 sedan is listed for RWD; AMG C 63 specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 469 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 469,
+            "torque_lb_ft": {
+              "value": 479,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2020-amg-c-63-s-rwd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "AMG C 63 S sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2020 C-Class US brochure PDF pp6,27: AMG C 63 S sedan is listed for RWD; AMG C 63 S specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 503 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63 S",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 503,
+            "torque_lb_ft": {
+              "value": 516,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2021-c-300-rwd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "C 300 sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2021 C-Class US brochure PDF pp6,36: C 300 sedan is listed for RWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2021-c-300-4matic-awd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "C 300 4MATIC sedan / 2.0L turbo direct-injection inline-4 / 9G-TRONIC 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2021 C-Class US brochure PDF pp6,36: C 300 4MATIC sedan is listed for AWD; C 300 specification column identifies 2.0L turbo direct-injection inline-4, 255 hp, 9G-TRONIC 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "C 300 4MATIC",
+            "engine_description": "2.0L turbo direct-injection inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 255,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "9G-TRONIC 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2021-amg-c-43-awd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "AMG C 43 sedan / AMG-enhanced 3.0L V6 biturbo direct injection / AMG SPEEDSHIFT TCT 9-speed automatic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MBUSA MY2021 C-Class US brochure PDF pp6,36: AMG C 43 sedan is listed for AWD; AMG C 43 specification column identifies AMG-enhanced 3.0L V6 biturbo direct injection, 385 hp, AMG SPEEDSHIFT TCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 43",
+            "engine_description": "AMG-enhanced 3.0L V6 biturbo direct injection",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 385,
+            "torque_lb_ft": {
+              "value": 384,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT TCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2021-amg-c-63-rwd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "AMG C 63 sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2021 C-Class US brochure PDF pp6,36: AMG C 63 sedan is listed for RWD; AMG C 63 specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 469 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 469,
+            "torque_lb_ft": {
+              "value": 479,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        },
+        {
+          "id": "2021-amg-c-63-s-rwd",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "AMG C 63 S sedan / handcrafted AMG 4.0L V8 biturbo direct injection / AMG SPEEDSHIFT MCT 9-speed automatic / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MBUSA MY2021 C-Class US brochure PDF pp6,36: AMG C 63 S sedan is listed for RWD; AMG C 63 S specification column identifies handcrafted AMG 4.0L V8 biturbo direct injection, 503 hp, AMG SPEEDSHIFT MCT 9-speed automatic and applicable drivetrain. No body/grade transfer.",
+          "facts": {
+            "trim": "AMG C 63 S",
+            "engine_description": "handcrafted AMG 4.0L V8 biturbo direct injection",
+            "engine_displacement": {
+              "value": 4.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "aspiration": "TURBO",
+            "power_hp": 503,
+            "torque_lb_ft": {
+              "value": 516,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "AMG SPEEDSHIFT MCT 9-speed automatic",
+            "gears": 9
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1232 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-honda-civic-x-sedan-v2",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "honda-civic-2016-brochure-source07": {
+      "url": "https://www.auto-brochures.com/makes/Honda/Civic/Honda_US%20Civic_2016.pdf",
+      "source_id": "factory-honda-us",
+      "publisher": "American Honda Motor Co., Inc.",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "American Honda US 2016 Civic brochure mirrored as publisher-authored PDF, p9 Civic SEDAN Specifications: LX 2.0 158hp 6MT/CVT, EX 2.0 standard CVT, EX-T/EX-L/Touring 1.5 turbo 174hp 162lb-ft inherited CVT; p4 turbo and 2016 economy. Coupe preview is excluded.",
+      "format": "pdf"
+    },
+    "honda-civic-2017-facts-source07": {
+      "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/Past-Models/PDFs/2017-Honda-Civic-Facts-Guide.ashx",
+      "source_id": "factory-honda-us",
+      "publisher": "American Honda Motor Co., Inc.",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "Honda 2017 Civic Facts Guide, PDF pp3-6 Sedan trim walk, pp58-61 SEDAN SPECIFICATIONS & FEATURES: 2.0 LX 6MT/CVT and EX CVT; 1.5 EX-T 6MT/CVT with torque split 167/162lb-ft, EX-L/Touring CVT; Si Sedan 205hp 6MT; dimensions and 5 seats. Coupe/Hatch are separate sections.",
+      "format": "pdf"
+    },
+    "honda-civic-2018-trimwalk-source07": {
+      "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Sedan/PDFs/2018_Civic_Sedan_Trimwalk.ashx",
+      "source_id": "factory-honda-us",
+      "publisher": "American Honda Motor Co., Inc.",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "Honda 2018 Civic Sedan TRIM WALK PDF pp1-3: LX 2.0 158hp 6MT/CVT, EX 2.0 standard CVT, EX-T 1.5 turbo 174hp 6MT/CVT with torque split 167/162lb-ft, EX-L/Touring CVT, Si Sedan 205hp 6MT; source is explicitly Sedan, not Coupe or Hatch.",
+      "format": "pdf"
+    },
+    "honda-civic-2016-gen-source07": {
+      "url": "https://global.honda/en/newsroom/news/2015/4150917eng.html",
+      "source_id": "factory-honda-us",
+      "publisher": "Honda Motor Co., Ltd. / American Honda Motor Co., Inc.",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "Honda September 2015 announcement explicitly calls the all-new 2016 North American Civic Sedan 10th generation and separates planned sedan/coupe/hatch/Si variants; generation identity only, annual transmission applicability comes from year-specific docs.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "honda-civic-10th-sedan-us-2016-2018-source07",
+      "make": "Honda",
+      "model": "Civic",
+      "generation": "10th generation Sedan",
+      "generation_code": "10th",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2018,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "honda-civic-2016-brochure-source07"
+        ],
+        "2017": [
+          "honda-civic-2017-facts-source07"
+        ],
+        "2018": [
+          "honda-civic-2018-trimwalk-source07"
+        ]
+      },
+      "generation_documents": [],
+      "scope_note": "Only US 10th-generation Civic four-door Sedan annual LX, EX, EX-T, EX-L, Touring and 2017-18 Si joint configurations documented by Honda, EPA 4Dr tuple confirms FWD. The 2016 turbo manual is absent; no coupe/hatch transfer.",
+      "exclude": [
+        "Coupe and 5-door hatchback",
+        "2016 Si and 2016 EX-T 6MT",
+        "2019+ facelift and other markets",
+        "Unreviewed trims, body configurations or exact-VIN identity"
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE"
+      },
+      "groups": [
+        {
+          "id": "2016-lx-20-mt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, 6-speed manual; EPA vehicles.csv:id=37076 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2016-lx-20-cvt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=37077 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2016-ex-20-cvt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic EX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, EX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=37077 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2016-ext-15-cvt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic EX-T Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, EX-T Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=37075 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-T",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2016-exl-15-cvt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic EX-L Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, EX-L Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=37075 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-L",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2016-touring-15-cvt",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Civic Touring Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2016 brochure p9, Touring Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=37075 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "Touring",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-lx-20-mt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, 6-speed manual; EPA vehicles.csv:id=38246 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-lx-20-cvt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=38247 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT",
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-ex-20-cvt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic EX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, EX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=38247 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT",
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-ext-15-mt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic EX-T Sedan 1.5L turbocharged direct-injection inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, EX-T Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 167 lb-ft, 6-speed manual; EPA vehicles.csv:id=38248 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-T",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 167,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-ext-15-cvt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic EX-T Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, EX-T Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=38249 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-T",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT",
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-exl-15-cvt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic EX-L Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, EX-L Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=38249 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-L",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT",
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-touring-15-cvt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic Touring Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, Touring Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=38249 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "Touring",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT",
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2017-si-15-mt",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "Civic Si Sedan 1.5L turbocharged direct-injection Si inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic Si 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2017 Facts Guide pp3-6,58-61, Si Sedan: 1.5L turbocharged direct-injection Si inline-4, 205 hp, 192 lb-ft, 6-speed manual; EPA vehicles.csv:id=38772 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "Si",
+            "engine_description": "1.5L turbocharged direct-injection Si inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 205,
+            "torque_lb_ft": {
+              "value": 192,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "seats": 5,
+            "length_in": {
+              "value": 182.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 70.8,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 12.39,
+              "unit": "US gal"
+            }
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-lx-20-mt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, 6-speed manual; EPA vehicles.csv:id=39565 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-lx-20-cvt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic LX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, LX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=39566 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "LX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-ex-20-cvt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic EX Sedan 2.0L DOHC i-VTEC inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, EX Sedan: 2.0L DOHC i-VTEC inline-4, 158 hp, 138 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=39566 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX",
+            "engine_description": "2.0L DOHC i-VTEC inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "NATURALLY_ASPIRATED",
+            "power_hp": 158,
+            "torque_lb_ft": {
+              "value": 138,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-ext-15-mt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic EX-T Sedan 1.5L turbocharged direct-injection inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, EX-T Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 167 lb-ft, 6-speed manual; EPA vehicles.csv:id=39567 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-T",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 167,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-ext-15-cvt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic EX-T Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, EX-T Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=39568 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-T",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-exl-15-cvt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic EX-L Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, EX-L Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=39568 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "EX-L",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-touring-15-cvt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic Touring Sedan 1.5L turbocharged direct-injection inline-4 / continuously variable transmission (CVT) / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, Touring Sedan: 1.5L turbocharged direct-injection inline-4, 174 hp, 162 lb-ft, continuously variable transmission (CVT); EPA vehicles.csv:id=39568 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "Touring",
+            "engine_description": "1.5L turbocharged direct-injection inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 174,
+            "torque_lb_ft": {
+              "value": 162,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "continuously variable transmission (CVT)",
+            "transmission_family": "CVT"
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        },
+        {
+          "id": "2018-si-15-mt",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Civic Si Sedan 1.5L turbocharged direct-injection Si inline-4 / 6-speed manual / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Civic Si 4Dr"
+            ],
+            "displ": [
+              "1.5"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "American Honda US 2018 Sedan Trim Walk pp1-3, Si Sedan: 1.5L turbocharged direct-injection Si inline-4, 205 hp, 192 lb-ft, 6-speed manual; EPA vehicles.csv:id=39569 is same MY 4Dr/engine/gearbox/FWD tuple, drive only.",
+          "facts": {
+            "trim": "Si",
+            "engine_description": "1.5L turbocharged direct-injection Si inline-4",
+            "engine_displacement": {
+              "value": 1.5,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 205,
+            "torque_lb_ft": {
+              "value": 192,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6
+          },
+          "review_note": "Reviewed exact-year Honda Sedan trim/engine/gearbox joint scope and matching EPA 4Dr engine/transmission/drive row. Coupe, Hatch, Si cross-body inference and 2016 EX-T manual excluded."
+        }
+      ]
+    }
+  ]
+}

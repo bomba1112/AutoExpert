@@ -1,0 +1,97 @@
+name: autoexpert
+x-app: &app
+  build:
+    context: ..
+    dockerfile: deploy/Dockerfile
+  image: autoexpert-local:0.8.0
+  env_file: .env
+  environment:
+    AUTOEXPERT_ENVIRONMENT: production
+    AUTOEXPERT_DEVELOPER_MODE: "false"
+    AUTOEXPERT_DEMO_MODE: "false"
+    AUTOEXPERT_KNOWLEDGE_DATA_DIR: /data
+    AUTOEXPERT_KNOWLEDGE_WORKER_ENABLED: "true"
+    AUTOEXPERT_LLM_PROVIDER: deterministic
+    AUTOEXPERT_PAYMENT_PROVIDER: mock
+  volumes:
+    - knowledge:/data
+  networks: [private]
+  read_only: true
+  tmpfs: [/tmp]
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  db:
+    image: postgres:16.15
+    environment:
+      POSTGRES_DB: autoexpert
+      POSTGRES_USER: autoexpert
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a random database password in deploy/.env}
+    volumes: [database:/var/lib/postgresql/data]
+    networks: [private]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U autoexpert -d autoexpert"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  migrate:
+    <<: *app
+    command: [sh, -ec, "alembic -c backend/alembic.ini upgrade head && python scripts/knowledge_admin.py seed-registry"]
+    depends_on:
+      db: {condition: service_healthy}
+    restart: "no"
+  api:
+    <<: *app
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health',timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  worker:
+    <<: *app
+    command: [python, -m, app.knowledge_worker]
+    environment:
+      AUTOEXPERT_ENVIRONMENT: production
+      AUTOEXPERT_DEVELOPER_MODE: "false"
+      AUTOEXPERT_DEMO_MODE: "false"
+      AUTOEXPERT_KNOWLEDGE_DATA_DIR: /data
+      AUTOEXPERT_KNOWLEDGE_WORKER_ENABLED: "true"
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  proxy:
+    image: caddy:2
+    ports: ["127.0.0.1:8088:80"]
+    environment:
+      AUTOEXPERT_SITE: ${AUTOEXPERT_SITE:-:80}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks: [private]
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+volumes:
+  database:
+  knowledge:
+  caddy_data:
+  caddy_config:
+networks:
+  private:

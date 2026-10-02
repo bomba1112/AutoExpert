@@ -1,0 +1,164 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-audi-q5-fy",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "audi-q5-2018-source07": {
+      "url": "https://www.auto-brochures.com/makes/Audi/Q5/Audi_US%20Q5_2018.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi of America, Inc.",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "Audi of America US MY2018 Q5 brochure PDF p18 rasterized Technical Specifications, Q5 (not SQ5) same column: 1984cc turbo I4 252hp/273lb-ft, seven-speed S tronic dual-clutch automatic quattro AWD with ultra technology, five-seat SUV, 111.0in wheelbase/183.6in length/65.3in height.",
+      "format": "pdf"
+    },
+    "audi-q5-2019-source07": {
+      "url": "https://www.auto-brochures.com/makes/Audi/Q5/Audi_US%20Q5_2019.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi of America, Inc.",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2019,
+      "locator": "Audi of America US MY2019 Q5 brochure PDF p10 rasterized Technical Specifications, Q5 (not SQ5) same column: 1984cc turbo I4 248hp/273lb-ft, seven-speed S tronic dual-clutch automatic quattro AWD, five-seat SUV, 111.0in wheelbase/183.6in length/65.3in height. p3 names Q5 45 TFSI badge.",
+      "format": "pdf"
+    },
+    "audi-q5-fy-generation-source07": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10253261-0001.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi of America, Inc.",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2019,
+      "locator": "Audi of America US technical service bulletin 2017082/14 PDF p2 explicitly lists Q5 (FY) 2018–2024 and prior Q5 (8R) 2009–2017; identity/generation boundary only, not powertrain evidence.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "audi-q5-fy-us-2018-2019-source07",
+      "make": "Audi",
+      "model": "Q5",
+      "generation": "FY SUV",
+      "generation_code": "FY",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2019,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2018": [
+          "audi-q5-2018-source07"
+        ],
+        "2019": [
+          "audi-q5-2019-source07"
+        ]
+      },
+      "generation_documents": [
+        "audi-q5-fy-generation-source07"
+      ],
+      "scope_note": "Only annual US Q5 2.0T gasoline 7-speed S tronic/quattro entries from the two Audi-authored brochures; MY2018 252hp and MY2019 248hp are not conflated. SQ5 remains outside this model family.",
+      "exclude": [
+        "SQ5 and other model lines",
+        "MY2020+ or earlier Q5 8R",
+        "Other markets",
+        "Unlisted engines, transmissions or drivetrain variants",
+        "Exact VIN without VIN-specific check"
+      ],
+      "facts": {
+        "body": "SUV",
+        "seats": 5,
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "length_in": {
+          "value": 183.6,
+          "unit": "in"
+        },
+        "height_in": {
+          "value": 65.3,
+          "unit": "in"
+        },
+        "wheelbase_in": {
+          "value": 111.0,
+          "unit": "in"
+        },
+        "fuel_tank_us_gal": {
+          "value": 18.5,
+          "unit": "US gal"
+        }
+      },
+      "groups": [
+        {
+          "id": "2018-2.0t-quattro",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "Q5 2.0T 2.0L turbo TFSI inline-4 / 7-speed S tronic dual-clutch / quattro AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Audi of America US MY2018 Q5 brochure PDF p18, Q5 same technical-specifications column, not adjacent SQ5: 1984cc turbo I4 252hp/273lb-ft, seven-speed S tronic dual-clutch automatic and quattro AWD, five-seat SUV.",
+          "facts": {
+            "trim": "2.0T",
+            "engine_description": "2.0L turbo TFSI inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1984,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 252,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "7-speed S tronic dual-clutch automatic",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        },
+        {
+          "id": "2019-45-tfsi-quattro",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "Q5 45 TFSI 2.0L turbo TFSI inline-4 / 7-speed S tronic dual-clutch / quattro AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Audi of America US MY2019 Q5 brochure PDF p10, Q5 same technical-specifications column, not adjacent SQ5: 1984cc turbo I4 248hp/273lb-ft, seven-speed S tronic dual-clutch automatic and quattro AWD, five-seat SUV.",
+          "facts": {
+            "trim": "45 TFSI",
+            "engine_description": "2.0L turbo TFSI inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1984,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 248,
+            "torque_lb_ft": {
+              "value": 273,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "7-speed S tronic dual-clutch automatic",
+            "transmission_family": "DCT",
+            "gears": 7
+          }
+        }
+      ]
+    }
+  ]
+}

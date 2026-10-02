@@ -1,0 +1,2615 @@
+{
+  "version": "basic-catalog-12-r1-source-candidate",
+  "batch_id": "us-ai-verify-12-r1-agent-candidate",
+  "state": "REVIEWED_LOCAL",
+  "selection_status": "OWNER_US_PRIORITY_SOURCE_FIRST_INDEPENDENT_EXTRACTION",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "jeep-cherokee-2015-12-agent": {
+      "url": "https://www.auto-brochures.com/makes/Jeep/Cherokee/Jeep_US%20Cherokee_2015-2.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "Jeep manufacturer-authored US annual brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis.",
+      "format": "pdf"
+    },
+    "jeep-cherokee-2016-12-agent": {
+      "url": "https://www.auto-brochures.com/makes/Jeep/Cherokee/Jeep_US%20Cherokee_2016.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "Jeep manufacturer-authored US annual brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions.",
+      "format": "pdf"
+    },
+    "jeep-kl-us-2014-2016-12-agent": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10217566-9999.pdf",
+      "source_id": "factory-jeep-us",
+      "publisher": "FCA US manufacturer bulletin hosted by NHTSA; generation identity only",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2016,
+      "locator": "FCA US bulletin 08-028-17 PDF p1 Models table explicitly identifies MY2014-2016 Jeep Cherokee as KL and U.S.-only market. Platform identity only; radio equipment applicability is not used as a recall/service conclusion.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "jeep-cherokee-kl-us",
+      "make": "Jeep",
+      "model": "Cherokee",
+      "generation": "KL",
+      "generation_code": "KL",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "jeep-cherokee-2015-12-agent"
+        ],
+        "2016": [
+          "jeep-cherokee-2016-12-agent"
+        ]
+      },
+      "generation_documents": [
+        "jeep-kl-us-2014-2016-12-agent"
+      ],
+      "exclude": [
+        "Existing Latitude FWD and Active Drive I rows: not republished",
+        "MY2015 Sport V6 not offered in reviewed matrix; MY2016 availability not back-propagated",
+        "Sport Active Drive II and Trailhawk FWD/Active Drive I excluded",
+        "Emission certification/PZEV subvariants not independently represented",
+        "Unreviewed special editions and package-specific equipment",
+        "All other years and non-US markets"
+      ],
+      "groups": [
+        {
+          "id": "sport-2-4-fwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Sport 2.4L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Sport 2.4L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.3,
+              "unit": "in"
+            },
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "sport-2-4-i-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Sport 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Sport 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.2,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-fwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 2.4L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 2.4L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.3,
+              "unit": "in"
+            },
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-i-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.2,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-ii-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.9,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.2,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-fwd-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 3.2L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 3.2L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.3,
+              "unit": "in"
+            },
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-i-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.2,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.4,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-ii-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Limited 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Limited 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.9,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.2,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "trailhawk-2-4-lock-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Trailhawk 2.4L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Trailhawk 2.4L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk.",
+          "facts": {
+            "trim": "Trailhawk",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 74.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.8,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 220.98,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.7,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 29.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 22.9,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 32.2,
+              "unit": "deg"
+            },
+            "wheels": "17in polished/painted off-road aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 63.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 64.0,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 20,
+              "unit": "in"
+            },
+            "tires": "OWL all-terrain",
+            "suspension_equipment": "Off-road lifted suspension with skid plates",
+            "rear_differential": "Rear axle locker",
+            "drivetrain_system": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee Trailhawk 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "trailhawk-3-2-lock-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Trailhawk 3.2L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Trailhawk 3.2L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk.",
+          "facts": {
+            "trim": "Trailhawk",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 74.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.8,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 220.98,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.7,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 29.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 22.9,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 32.2,
+              "unit": "deg"
+            },
+            "wheels": "17in polished/painted off-road aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 63.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 64.0,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 20,
+              "unit": "in"
+            },
+            "tires": "OWL all-terrain",
+            "suspension_equipment": "Off-road lifted suspension with skid plates",
+            "rear_differential": "Rear axle locker",
+            "drivetrain_system": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee Trailhawk 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "latitude-2-4-ii-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Latitude 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Latitude 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Latitude",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.9,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.2,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "latitude-3-2-ii-2015",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Cherokee Latitude 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2015 US brochure PDF p28 visual trim x engine x drive matrix; p29 drive-specific dimensions; p30 engine, five seats, tank, wheels and chassis. Matched Cherokee Latitude 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Latitude",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.9,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.9,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.2,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "sport-2-4-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Sport 2.4L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Sport 2.4L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White",
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "sport-2-4-i-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Sport 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Sport 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.0,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White",
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "sport-3-2-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Sport 3.2L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Sport 3.2L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White",
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "sport-3-2-i-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Sport 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Sport 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Sport",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.0,
+              "unit": "deg"
+            },
+            "wheels": "17in full-face steel",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White",
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 2.4L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 2.4L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-i-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 2.4L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.0,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-2-4-ii-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-fwd-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 3.2L / 9AT / 4x2 front-wheel drive",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 3.2L / 9AT / 4x2 front-wheel drive.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "4x2 front-wheel drive",
+            "wheelbase_in": {
+              "value": 106.26,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 65.7,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 149.86,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 5.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 16.7,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 17.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 24.6,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "4x2 front-wheel drive"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee FWD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-i-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 3.2L / 9AT / Jeep Active Drive I, single-speed 4WD.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive I, single-speed 4WD",
+            "wheelbase_in": {
+              "value": 106.3,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 66.2,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 200.66,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 7.9,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 18.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 19.5,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 25.0,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.2,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 61.9,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive I, single-speed 4WD"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "limited-3-2-ii-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Limited 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Limited 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Limited",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "18in polished aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "trailhawk-2-4-lock-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Trailhawk 2.4L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Trailhawk 2.4L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk.",
+          "facts": {
+            "trim": "Trailhawk",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 74.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.8,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 220.98,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.7,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 29.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 22.9,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 32.2,
+              "unit": "deg"
+            },
+            "wheels": "17in polished/painted off-road aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 63.5,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.5,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 20,
+              "unit": "in"
+            },
+            "tires": "OWL all-terrain",
+            "suspension_equipment": "Off-road lifted suspension with skid plates",
+            "rear_differential": "Rear axle locker",
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic; Rhino; Mango Tango",
+            "drivetrain_system": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee Trailhawk 4WD"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "trailhawk-3-2-lock-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Trailhawk 3.2L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Trailhawk 3.2L / 9AT / Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk.",
+          "facts": {
+            "trim": "Trailhawk",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 74.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.8,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 220.98,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.7,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 29.9,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 22.9,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 32.2,
+              "unit": "deg"
+            },
+            "wheels": "17in polished/painted off-road aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 63.5,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 63.5,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 20,
+              "unit": "in"
+            },
+            "tires": "OWL all-terrain",
+            "suspension_equipment": "Off-road lifted suspension with skid plates",
+            "rear_differential": "Rear axle locker",
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic; Rhino; Mango Tango",
+            "drivetrain_system": "Jeep Active Drive Lock, two-speed 4WD with rear locker; Trailhawk"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee Trailhawk 4WD"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "latitude-2-4-ii-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Latitude 2.4L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Latitude",
+            "engine_description": "2.4L Tigershark MultiAir2 inline-4",
+            "engine_displacement": {
+              "value": 2.4,
+              "unit": "L"
+            },
+            "cylinders": 4,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 171,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6400,
+            "engine_torque_rpm": 4600,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        },
+        {
+          "id": "latitude-3-2-ii-2016",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "Cherokee Latitude 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+          "allowed_drives": [
+            "4WD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "4WD"
+            }
+          ],
+          "locator": "MY2016 US brochure PDF p20 Limited/Trailhawk and p21 Sport/Latitude; p22 engine, seats, tank and drive-specific dimensions; annual color exceptions. Matched Cherokee Latitude 3.2L / 9AT / Jeep Active Drive II, two-speed 4WD with off-road lifted suspension.",
+          "facts": {
+            "trim": "Latitude",
+            "engine_description": "3.2L Pentastar VVT V6 with Stop/Start",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 271,
+            "torque_lb_ft": {
+              "value": 239,
+              "unit": "lb-ft"
+            },
+            "engine_power_rpm": 6500,
+            "engine_torque_rpm": 4400,
+            "drivetrain_description": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension",
+            "wheelbase_in": {
+              "value": 107.0,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 73.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 67.3,
+              "unit": "in"
+            },
+            "height_basis": "With roof rack",
+            "ground_clearance": {
+              "value": 208.28,
+              "unit": "mm"
+            },
+            "ground_clearance_original_in": {
+              "value": 8.2,
+              "unit": "in"
+            },
+            "ground_clearance_basis": "Original annual brochure inches converted at 25.4 mm/in",
+            "approach_angle_degrees": {
+              "value": 21.0,
+              "unit": "deg"
+            },
+            "approach_angle_basis": "With air dam",
+            "breakover_angle_degrees": {
+              "value": 21.7,
+              "unit": "deg"
+            },
+            "departure_angle_degrees": {
+              "value": 27.3,
+              "unit": "deg"
+            },
+            "wheels": "17in painted aluminum",
+            "fuel_tank_us_gal": {
+              "value": 15.8,
+              "unit": "US gal"
+            },
+            "front_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "rear_track_in": {
+              "value": 62.7,
+              "unit": "in"
+            },
+            "water_fording_limit_in": {
+              "value": 19,
+              "unit": "in"
+            },
+            "exterior_colors_available": "Brilliant Black Crystal Pearl; Billet Silver Metallic; True Blue Pearl; Deep Cherry Red Crystal Pearl; Eco Green Pearl; Light Brownstone Pearl; Bright White; Granite Crystal Metallic",
+            "drivetrain_system": "Jeep Active Drive II, two-speed 4WD with off-road lifted suspension"
+          },
+          "epa_drive_match": {
+            "model": [
+              "Cherokee 4WD Active Drive II"
+            ],
+            "displ": [
+              "3.2"
+            ],
+            "trany": [
+              "Automatic 9-spd"
+            ]
+          }
+        }
+      ],
+      "scope_note": "US MY2015-2016 Cherokee KL annual-source expansion: Sport, Limited, Trailhawk and Latitude Active Drive II. Each year, trim, engine and transfer-case combination separately matched. Active Drive I remains EPA AWD; Active Drive II and Lock remain EPA 4WD; manufacturer system names retained; source-first independent extraction.",
+      "facts": {
+        "body": "SUV",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "seats": 5,
+        "injection": "Sequential multi-point electronic returnless",
+        "transmission_family": "AT",
+        "transmission_description": "9-speed automatic with Electronic Range Select (ERS)",
+        "gears": 9,
+        "length_in": {
+          "value": 182,
+          "unit": "in"
+        },
+        "cargo_cu_ft": {
+          "value": 24.6,
+          "unit": "cu ft"
+        },
+        "cargo_max_cu_ft": {
+          "value": 54.9,
+          "unit": "cu ft"
+        },
+        "headroom_front_without_sunroof_in": {
+          "value": 39.4,
+          "unit": "in"
+        },
+        "headroom_rear_without_sunroof_in": {
+          "value": 38.5,
+          "unit": "in"
+        },
+        "legroom_front_in": {
+          "value": 41.1,
+          "unit": "in"
+        },
+        "legroom_rear_in": {
+          "value": 40.3,
+          "unit": "in"
+        },
+        "front_suspension": "MacPherson strut, coil springs and stabilizer bar",
+        "rear_suspension": "Four-link rear with trailing arm, coil springs and stabilizer bar",
+        "steering": "Electric power rack-and-pinion",
+        "front_brakes": "Ventilated discs",
+        "rear_brakes": "Solid discs",
+        "power_hp_basis": "Annual brochure SAE net horsepower, labelled estimated"
+      }
+    }
+  ],
+  "supersedes_unpublished_candidate": "us-ai-verify-12-agent-candidate"
+}

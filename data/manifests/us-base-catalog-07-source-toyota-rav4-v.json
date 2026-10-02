@@ -1,0 +1,1383 @@
+{
+  "version": "basic-catalog-07-independent-source-candidate-rav4-v-1",
+  "batch_id": "us-base-catalog-07-source-toyota-rav4-v",
+  "state": "REVIEWED_LOCAL_NOT_PUBLISHED",
+  "selection_status": "OWNER_MASTER_LIST_TOYOTA_US_ANNUAL_BROCHURES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "rav4-v-2019-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/Toyota/RAV4/Toyota_US%20RAV4_2019-2.pdf",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota USA manufacturer-authored brochure (archived mirror)",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2019,
+      "locator": "MY2019 US RAV4 brochure: annual grade model pages and specification matrix PDF pp39-40; gas/HEV engine, transmission and drive columns.",
+      "format": "pdf"
+    },
+    "rav4-v-2020-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/Toyota/RAV4/Toyota_US%20RAV4_2020.pdf",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota USA manufacturer-authored brochure (archived mirror)",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "MY2020 US RAV4 brochure: annual grade model pages and specification matrix PDF pp39-40; gas/HEV engine, transmission and drive columns.",
+      "format": "pdf"
+    },
+    "rav4-v-2021-us-source07": {
+      "url": "https://www.auto-brochures.com/makes/Toyota/RAV4/Toyota_US%20RAV4_2021.pdf",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota USA manufacturer-authored brochure (archived mirror)",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "MY2021 US RAV4 brochure: annual grade model pages and specification matrix PDF pp24-26; gas/HEV engine, transmission and drive columns.",
+      "format": "pdf"
+    },
+    "rav4-v-generation-us-source07": {
+      "url": "https://pressroom.toyota.com/vehicle/2020-toyota-rav4/",
+      "source_id": "factory-toyota-us",
+      "publisher": "Toyota USA Newsroom",
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2021,
+      "locator": "Toyota USA 2020 RAV4 Newsroom product page: fifth-generation RAV4 introduced in 2019. Generation lineage only; annual powertrains from brochures.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "toyota-rav4-v-us-2019-2021-source07",
+      "make": "Toyota",
+      "model": "RAV4",
+      "generation": "V (2019 redesign, TNGA)",
+      "generation_code": null,
+      "market": "US",
+      "year_from": 2019,
+      "year_to": 2021,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2019": [
+          "rav4-v-2019-us-source07"
+        ],
+        "2020": [
+          "rav4-v-2020-us-source07"
+        ],
+        "2021": [
+          "rav4-v-2021-us-source07"
+        ]
+      },
+      "generation_documents": [
+        "rav4-v-generation-us-source07"
+      ],
+      "scope_note": "US RAV4 fifth-generation gasoline and non-plug-in hybrid grade tuples MY2019-2021 only. Each model year uses its own Toyota-authored US grade matrix; EPA drive confirms only exact annual 2.5L transmission/drive tuple.",
+      "exclude": [
+        "2019 earlier RAV4 generation and other model years/markets",
+        "MY2021 RAV4 Prime PHEV SE/XSE; separate plug-in construction",
+        "Unlisted options, trim-drive pairs, exact VIN claims and factory engine code XA50",
+        "EPA AV-S6 simulated-ratio label as evidence for a stepped six-speed gearbox",
+        "Other technical fields not explicitly reviewed in annual factory tables"
+      ],
+      "facts": {
+        "body": "SUV",
+        "fuel": "GASOLINE",
+        "cylinders": 4,
+        "seats": 5,
+        "wheelbase_in": {
+          "value": 105.9,
+          "unit": "in"
+        }
+      },
+      "groups": [
+        {
+          "id": "2019-gas-le",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 LE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 LE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "LE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2019-gas-xle",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 XLE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 XLE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2019-gas-xle-premium",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 XLE Premium 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 XLE Premium 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE Premium",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2019-gas-adventure",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Adventure 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Adventure 2.5L 203 hp/8AT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Adventure",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2019-gas-limited",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Limited 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Limited 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Limited",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2019-hybrid-le",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Hybrid LE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid LE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid LE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2019-hybrid-xle",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Hybrid XLE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid XLE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XLE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2019-hybrid-xse",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Hybrid XSE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid XSE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XSE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2019-hybrid-limited",
+          "year_from": 2019,
+          "year_to": 2019,
+          "configuration": "RAV4 Hybrid Limited 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2019 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid Limited 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid Limited",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2020-gas-le",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 LE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD LE"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 LE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "LE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-gas-xle",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 XLE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 XLE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-gas-xle-premium",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 XLE Premium 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 XLE Premium 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE Premium",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-gas-adventure",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Adventure 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Adventure 2.5L 203 hp/8AT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Adventure",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-gas-trd-off-road",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 TRD Off-Road 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 AWD TRD OFFROAD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 TRD Off-Road 2.5L 203 hp/8AT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "TRD Off-Road",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-gas-limited",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Limited 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Limited 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Limited",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2020-hybrid-le",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Hybrid LE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid LE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid LE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2020-hybrid-xle",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Hybrid XLE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid XLE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XLE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2020-hybrid-xse",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Hybrid XSE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid XSE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XSE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2020-hybrid-limited",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "RAV4 Hybrid Limited 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2020 RAV4 manufacturer brochure PDF pp39-40: annual RAV4 Hybrid Limited 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid Limited",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-gas-le",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 LE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD LE"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 LE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "LE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-gas-xle",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 XLE 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 XLE 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-gas-xle-premium",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 XLE Premium 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 XLE Premium 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "XLE Premium",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-gas-adventure",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Adventure 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Adventure 2.5L 203 hp/8AT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Adventure",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-gas-trd-off-road",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 TRD Off-Road 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 AWD TRD OFFROAD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 TRD Off-Road 2.5L 203 hp/8AT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "TRD Off-Road",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-gas-limited",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Limited 2.5L / Direct Shift 8-speed automatic (ECT-i)",
+          "allowed_drives": [
+            "FWD",
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            },
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4",
+              "RAV4 AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S8)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Limited 2.5L 203 hp/8AT grade column with FWD/AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Limited",
+            "powertrain": "ICE",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "AT",
+            "transmission_description": "Direct Shift 8-speed automatic (ECT-i)",
+            "power_hp": 203,
+            "torque_lb_ft": {
+              "value": 184,
+              "unit": "lb-ft"
+            },
+            "gears": 8
+          }
+        },
+        {
+          "id": "2021-hybrid-le",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Hybrid LE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Hybrid LE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid LE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-hybrid-xle",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Hybrid XLE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Hybrid XLE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XLE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-hybrid-xle-premium",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Hybrid XLE Premium 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Hybrid XLE Premium 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XLE Premium",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-hybrid-xse",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Hybrid XSE 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Hybrid XSE 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid XSE",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        },
+        {
+          "id": "2021-hybrid-limited",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "RAV4 Hybrid Limited 2.5L / Electronically Controlled Continuously Variable Transmission (ECVT)",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "RAV4 Hybrid  AWD",
+              "RAV4 Hybrid AWD"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (AV-S6)"
+            ]
+          },
+          "locator": "Toyota USA MY2021 RAV4 manufacturer brochure PDF pp24-26: annual RAV4 Hybrid Limited 2.5L HEV/ECVT grade column with AWD applicability. EPA vehicles.csv exact annual 2.5L transmission/drive tuple corroborates drive only; EPA's AV-S6 label is not treated as a conventional six-speed gearbox.",
+          "facts": {
+            "trim": "Hybrid Limited",
+            "powertrain": "HEV",
+            "engine_description": "2.5L Dynamic Force 4-cylinder gasoline and hybrid electric motors; 219 hp combined net system",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "transmission_family": "ECVT",
+            "transmission_description": "Electronically Controlled Continuously Variable Transmission (ECVT)"
+          }
+        }
+      ]
+    }
+  ]
+}

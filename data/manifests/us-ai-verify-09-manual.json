@@ -1,0 +1,855 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-ai-verify-09-manual",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "bmw-4-series-2015-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/BMW/4%20Series/BMW_US%204Series_2015.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page.",
+      "format": "pdf"
+    },
+    "bmw-f32-09-agent": {
+      "url": "https://static.nhtsa.gov/odi/rcl/2015/RCMN-15V189-5553.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "BMW NA fuel-pump campaign p1 explicitly maps F32 to 4 Series Coupe. Platform only; no recall claim.",
+      "format": "pdf"
+    },
+    "audi-a5-2015-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Audi/A5/Audi_US%20A5_2015-2.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "PDF pp48-49 A5 2.0T Coupe vs Cabriolet columns; no S5/RS5 values",
+      "format": "pdf"
+    },
+    "audi-a5-2016-09-agent": {
+      "url": "https://www.auto-brochures.com/makes/Audi/A5/Audi_US%20A5_2016.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi manufacturer-authored US brochure",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2016,
+      "locator": "PDF pp54-55 (printed52-53) A5 2.0T columns; S5 columns excluded",
+      "format": "pdf"
+    },
+    "audi-8t-09-agent": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2013/SB-10065629-6903.pdf",
+      "source_id": "factory-audi-us",
+      "publisher": "Audi manufacturer document; platform identity only",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "locator": "Audi of America equipment update, PDF p11 model list identifies A5 [8T/8F]. Combined platform-family label retained; annual body columns are explicit.",
+      "format": "pdf"
+    }
+  },
+  "families": [
+    {
+      "id": "bmw-4-series-f32-us",
+      "make": "BMW",
+      "model": "4 Series",
+      "generation": "F32",
+      "generation_code": "F32",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "bmw-4-series-2015-09-agent"
+        ]
+      },
+      "generation_documents": [
+        "bmw-f32-09-agent"
+      ],
+      "exclude": [
+        "F33 Convertible and F36 Gran Coupe",
+        "M4",
+        "MY2016: no annual source link in inspected index",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "428i-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "428i Coupe 2.0 TwinPower Turbo / 6-speed MT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 428i Coupe 2.0 TwinPower Turbo / 6-speed MT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page.",
+          "facts": {
+            "trim": "428i",
+            "engine_description": "428i 2.0L TwinPower Turbo inline-4",
+            "engine_displacement": {
+              "value": 2.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 1997,
+            "cylinders": 4,
+            "aspiration": "TURBO",
+            "power_hp": 240,
+            "torque_lb_ft": {
+              "value": 255,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3450,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.7,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 22,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 34,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.0,
+            "wheels": "17 x 7.5 alloy; 225/50 tires"
+          }
+        },
+        {
+          "id": "435i-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i Coupe 3.0 TwinPower Turbo / 6-speed MT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i Coupe 3.0 TwinPower Turbo / 6-speed MT / RWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page.",
+          "facts": {
+            "trim": "435i",
+            "engine_description": "435i 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3600,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.3,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 30,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires"
+          }
+        },
+        {
+          "id": "435i-xdrive-mt",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "435i xDrive Coupe 3.0 TwinPower Turbo / 6-speed MT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW 4 Series annual US source matrix: 435i xDrive Coupe 3.0 TwinPower Turbo / 6-speed MT / AWD. PDF p42 (printed42), coupe-only technical matrix; p43 notes. Glyph-corrupted values verified visually from rendered page.",
+          "facts": {
+            "trim": "435i xDrive",
+            "engine_description": "435i xDrive 3.0L TwinPower Turbo inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "engine_displacement_cc": 2979,
+            "cylinders": 6,
+            "aspiration": "TURBO",
+            "power_hp": 300,
+            "torque_lb_ft": {
+              "value": 300,
+              "unit": "lb-ft"
+            },
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3750,
+              "unit": "lb"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 5.0,
+              "unit": "s"
+            },
+            "epa_city_mpg": {
+              "value": 20,
+              "unit": "US mpg"
+            },
+            "epa_highway_mpg": {
+              "value": 28,
+              "unit": "US mpg"
+            },
+            "compression_ratio": 10.2,
+            "wheels": "18 x 8.0 alloy; 225/45 tires"
+          }
+        }
+      ],
+      "facts": {
+        "body": "COUPE",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "fuel_tank_us_gal": {
+          "value": 15.8,
+          "unit": "US gal"
+        },
+        "fuel_grade": "Required: Unleaded premium gasoline; brochure gives no numeric octane scale"
+      },
+      "scope_note": "US MY2015-2015 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. F33 Convertible and F36 Gran Coupe; M4; MY2016: no annual source link in inspected index"
+    },
+    {
+      "id": "audi-a5-8t-8f-us",
+      "make": "Audi",
+      "model": "A5",
+      "generation": "8T/8F",
+      "generation_code": "8T/8F",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2016,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2015": [
+          "audi-a5-2015-09-agent"
+        ],
+        "2016": [
+          "audi-a5-2016-09-agent"
+        ]
+      },
+      "generation_documents": [
+        "audi-8t-09-agent"
+      ],
+      "exclude": [
+        "S5, RS5",
+        "Cabriolet manual transmission",
+        "FWD/multitronic not in the reviewed MY2015-2016 US table",
+        "All other years and non-US markets",
+        "Unreviewed package-specific configurations"
+      ],
+      "groups": [
+        {
+          "id": "coupe-mt",
+          "year_from": 2015,
+          "year_to": 2016,
+          "configuration": "A5 2.0T COUPE / 6-speed manual / quattro AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "Audi A5 annual US source matrix: A5 2.0T COUPE / 6-speed manual / quattro AWD. PDF pp48-49 A5 2.0T Coupe vs Cabriolet columns; no S5/RS5 values; PDF pp54-55 (printed52-53) A5 2.0T columns; S5 columns excluded",
+          "facts": {
+            "body": "COUPE",
+            "transmission_family": "MANUAL",
+            "transmission_description": "6-speed manual",
+            "gears": 6,
+            "curb_weight_lb": {
+              "value": 3583,
+              "unit": "lb"
+            },
+            "height_in": {
+              "value": 54.0,
+              "unit": "in"
+            },
+            "cargo_cu_ft": {
+              "value": 12.2,
+              "unit": "cu ft"
+            },
+            "acceleration_0_60_mph_s": {
+              "value": 6.3,
+              "unit": "s"
+            }
+          }
+        }
+      ],
+      "facts": {
+        "body": "COUPE",
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "seats": 4,
+        "engine_description": "A5 2.0T 1,984cc turbocharged TFSI inline-4",
+        "engine_displacement": {
+          "value": 2.0,
+          "unit": "L"
+        },
+        "engine_displacement_cc": 1984,
+        "cylinders": 4,
+        "aspiration": "TURBO",
+        "power_hp": 220,
+        "torque_lb_ft": {
+          "value": 258,
+          "unit": "lb-ft"
+        },
+        "compression_ratio": 9.6,
+        "wheelbase_in": {
+          "value": 108.3,
+          "unit": "in"
+        },
+        "length_in": {
+          "value": 182.1,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 73.0,
+          "unit": "in"
+        },
+        "fuel_tank_us_gal": {
+          "value": 16.1,
+          "unit": "US gal"
+        },
+        "engine_oil_capacity_brochure_us_qt": {
+          "value": 4.9,
+          "unit": "US qt"
+        },
+        "engine_oil_capacity_basis": "Brochure engine-oil capacity; oil-change/filter basis not stated",
+        "front_suspension": "Five-link",
+        "rear_suspension": "Trapezoidal-link",
+        "front_brakes": "Ventilated discs, 12.6 in",
+        "rear_brakes": "Solid discs, 11.8 in",
+        "steering": "Electromechanical power steering",
+        "injection": "TFSI direct injection",
+        "fuel_grade": "Recommended: Premium; numeric octane not specified"
+      },
+      "scope_note": "US MY2015-2016 explicit annual brochure configurations; source-first extraction independent of AI hypotheses. S5, RS5; Cabriolet manual transmission; FWD/multitronic not in the reviewed MY2015-2016 US table"
+    }
+  ],
+  "exclusions": [],
+  "source_unit_normalizations": [
+    {
+      "family": "volkswagen-arteon-i-us",
+      "group": "volkswagen-arteon-i-us",
+      "field": "ground_clearance",
+      "raw_value": 5.4,
+      "raw_unit": "in",
+      "value": 137.16,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "toyota-prius-zvw30-us",
+      "group": "toyota-prius-zvw30-us",
+      "field": "ground_clearance",
+      "raw_value": 5.3,
+      "raw_unit": "in",
+      "value": 134.62,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "2-4-fwd",
+      "field": "ground_clearance",
+      "raw_value": 5.9,
+      "raw_unit": "in",
+      "value": 149.86,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "2-4-awd",
+      "field": "ground_clearance",
+      "raw_value": 7.9,
+      "raw_unit": "in",
+      "value": 200.66,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "3-2-fwd",
+      "field": "ground_clearance",
+      "raw_value": 5.9,
+      "raw_unit": "in",
+      "value": 149.86,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "jeep-cherokee-kl-us",
+      "group": "3-2-awd",
+      "field": "ground_clearance",
+      "raw_value": 7.9,
+      "raw_unit": "in",
+      "value": 200.66,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325i-at",
+      "field": "ground_clearance",
+      "raw_value": 4.88,
+      "raw_unit": "in",
+      "value": 123.952,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325i-manual",
+      "field": "ground_clearance",
+      "raw_value": 4.88,
+      "raw_unit": "in",
+      "value": 123.952,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325xi-at",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "325xi-manual",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330i-at",
+      "field": "ground_clearance",
+      "raw_value": 4.29,
+      "raw_unit": "in",
+      "value": 108.966,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330i-manual",
+      "field": "ground_clearance",
+      "raw_value": 4.29,
+      "raw_unit": "in",
+      "value": 108.966,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330xi-at",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "bmw-3-series-e46-sedan-us-2005-09",
+      "group": "330xi-manual",
+      "field": "ground_clearance",
+      "raw_value": 5.55,
+      "raw_unit": "in",
+      "value": 140.97,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "lexus-gx-ii-us-2014-2016-09",
+      "group": "lexus-gx-ii-us-2014-2016-09",
+      "field": "ground_clearance",
+      "raw_value": 8.1,
+      "raw_unit": "in",
+      "value": 205.74,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "family": "infiniti-fx-s51-us-2013-09",
+      "group": "infiniti-fx-s51-us-2013-09",
+      "field": "ground_clearance",
+      "raw_value": 7.36,
+      "raw_unit": "in",
+      "value": 186.944,
+      "unit": "mm",
+      "conversion": "1 in = 25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/4/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/5/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 28,
+      "raw_unit": "US mpg",
+      "value": 8.401,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 30,
+      "raw_unit": "US mpg",
+      "value": 7.84,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2018",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2019",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2020",
+      "field": "fuel_combined",
+      "raw_value": 27,
+      "raw_unit": "US mpg",
+      "value": 8.712,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/4/facts",
+      "field": "fuel_combined",
+      "raw_value": 50,
+      "raw_unit": "US mpg",
+      "value": 4.704,
+      "unit": "L/100km",
+      "conversion": "235.214583 / US mpg; original EPA combined mpg retained"
+    },
+    {
+      "path": "/families/3/groups/0/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/1/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/2/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/3/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/6/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/7/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/8/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    },
+    {
+      "path": "/families/3/groups/9/annual_facts/2018",
+      "field": "ground_clearance",
+      "raw_value": 6.7,
+      "raw_unit": "in",
+      "value": 170.18,
+      "unit": "mm",
+      "conversion": "1 in =25.4 mm exact"
+    }
+  ],
+  "parent_batch": "us-ai-verify-09"
+}

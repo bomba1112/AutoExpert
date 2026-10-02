@@ -1,0 +1,1772 @@
+{
+  "version": "basic-catalog-9-early-candidate",
+  "batch_id": "us-ai-verify-09-early-candidate",
+  "state": "SOURCE_REVIEWED_CANDIDATE_PENDING_PARENT_MERGE",
+  "selection_status": "OWNER_PRIORITY_EARLY_MERCEDES_BMW_US_MY2005_REUSE_EXISTING_PIPELINE",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "mb-c-luxury-2005-09": {
+      "url": "https://www.auto-brochures.com/makes/Mercedes_Benz/C-Class/Mercedes%20Benz_US%20C-Class_Luxury_2005.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA manufacturer brochure",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+      "format": "pdf"
+    },
+    "mb-e-2005-09": {
+      "url": "https://www.auto-brochures.com/makes/Mercedes_Benz/E-Class/Mercedes%20Benz_US%20E-Class_2005.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz USA manufacturer brochure",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+      "format": "pdf"
+    },
+    "bmw-3-2005-09": {
+      "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2005.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America manufacturer brochure",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF pp1,10,14-15: MY2005 325i/325xi/330i/330xi sedans; MT/AT availability and technical columns. p10 SMG only330i, excludes Performance Package.",
+      "format": "pdf"
+    },
+    "bmw-5-2005-09": {
+      "url": "https://www.auto-brochures.com/makes/BMW/5%20Series/BMW_US%205Series_2005.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW of North America manufacturer brochure",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF pp1,9,13-14: MY2005 525i/530i/545i sedan, MT/AT and engine table. Weight row preliminary, excluded. p9 SMG only530i/545i with Sport Package.",
+      "format": "pdf"
+    },
+    "mb-model-codes-09": {
+      "url": "https://static.nhtsa.gov/odi/rcl/2019/RMISC-19V918-4126.pdf",
+      "source_id": "factory-mercedes-us",
+      "publisher": "Mercedes-Benz manufacturer attachment hosted by NHTSA",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF pp1-2 MY2005 C240/C320 203xxx and E320/E320CDI/E500/E55 211xxx model codes. Generation identity only, no recall-risk claim.",
+      "format": "pdf"
+    },
+    "bmw-e46-generation-09": {
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10160287-9999.pdf",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW manufacturer bulletin hosted by NHTSA",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "PDF p1 E46 3 Series including Sedan, MY2000-2006. Generation identity only, no recall applicability claim.",
+      "format": "pdf"
+    },
+    "bmw-5-generation-09": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0079416EN_US/five-times-around-history-of-the-bmw-5-series",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW USA PressClub",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "locator": "Section 2003: fifth-generation BMW5 Series. Establishes descriptive generation label for MY2005; E60 internal code not inferred.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "mercedes-c-class-203-us-2005-09",
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "203 sedan/wagon",
+      "generation_code": "203",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2005": [
+          "mb-c-luxury-2005-09"
+        ]
+      },
+      "generation_documents": [
+        "mb-model-codes-09"
+      ],
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unreviewed body/trim/options",
+        "Unconfirmed seats remain unknown; no automatic draft carry-over"
+      ],
+      "groups": [
+        {
+          "id": "c240-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C240 Luxury sedan 2.6L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C240 Luxury",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "C240 Luxury 2.6L V6",
+            "engine_displacement": {
+              "value": 2.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 168,
+            "torque_lb_ft": {
+              "value": 177,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 2597,
+            "length_in": {
+              "value": 178.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.1,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3360,
+              "unit": "lb"
+            },
+            "alternative_fuel_compatibility": "E85 or blend of E85 and premium gasoline; rear-wheel-drive FFV only"
+          }
+        },
+        {
+          "id": "c240-sedan-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C240 Luxury 4MATIC sedan 2.6L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C240 Luxury 4MATIC",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "C240 Luxury 4MATIC 2.6L V6",
+            "engine_displacement": {
+              "value": 2.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 168,
+            "torque_lb_ft": {
+              "value": 177,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 2597,
+            "length_in": {
+              "value": 178.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.1,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3520,
+              "unit": "lb"
+            }
+          }
+        },
+        {
+          "id": "c320-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C320 Luxury sedan 3.2L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C320 Luxury",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "C320 Luxury 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 215,
+            "torque_lb_ft": {
+              "value": 229,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "length_in": {
+              "value": 178.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.1,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3450,
+              "unit": "lb"
+            },
+            "alternative_fuel_compatibility": "E85 or blend of E85 and premium gasoline; rear-wheel-drive FFV only"
+          }
+        },
+        {
+          "id": "c320-sedan-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C320 Luxury 4MATIC sedan 3.2L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C320 Luxury 4MATIC",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "C320 Luxury 4MATIC 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 215,
+            "torque_lb_ft": {
+              "value": 229,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "length_in": {
+              "value": 178.2,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 55.1,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3615,
+              "unit": "lb"
+            }
+          }
+        },
+        {
+          "id": "c240-wagon-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C240 Luxury Wagon wagon 2.6L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C240 Luxury Wagon",
+            "body": "WAGON",
+            "powertrain": "ICE",
+            "engine_description": "C240 Luxury Wagon 2.6L V6",
+            "engine_displacement": {
+              "value": 2.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 168,
+            "torque_lb_ft": {
+              "value": 177,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 2597,
+            "length_in": {
+              "value": 178.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 56.7,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3470,
+              "unit": "lb"
+            },
+            "alternative_fuel_compatibility": "E85 or blend of E85 and premium gasoline; rear-wheel-drive FFV only",
+            "seats": 5
+          }
+        },
+        {
+          "id": "c240-wagon-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "C240 Luxury Wagon 4MATIC wagon 2.6L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 C240 Luxury Sedan/Wagon and C320 Luxury Sedan; powertrain/drive table. p13 explicitly five occupants in C240 Wagon only.",
+          "facts": {
+            "trim": "C240 Luxury Wagon 4MATIC",
+            "body": "WAGON",
+            "powertrain": "ICE",
+            "engine_description": "C240 Luxury Wagon 4MATIC 2.6L V6",
+            "engine_displacement": {
+              "value": 2.6,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 168,
+            "torque_lb_ft": {
+              "value": 177,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 2597,
+            "length_in": {
+              "value": 178.9,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 56.7,
+              "unit": "in"
+            },
+            "curb_weight_lb": {
+              "value": 3625,
+              "unit": "lb"
+            },
+            "seats": 5
+          }
+        }
+      ],
+      "facts": {
+        "injection": "MULTIPOINT",
+        "fuel_tank_us_gal": {
+          "value": 16.4,
+          "unit": "US gal"
+        },
+        "wheelbase_in": {
+          "value": 106.9,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 68.0,
+          "unit": "in"
+        },
+        "front_suspension": "Independent 3-link with antidive geometry",
+        "rear_suspension": "Independent 5-arm multilink",
+        "standard_tires": "205/55HR16",
+        "standard_wheels": "7.0Jx16",
+        "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)"
+      },
+      "scope_note": "US MY2005 only; exact annual manufacturer joint columns plus scoped generation source. Additional unverified draft oil/fluids/codes excluded."
+    },
+    {
+      "id": "mercedes-e-class-211-us-2005-09",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "211 sedan/wagon",
+      "generation_code": "211",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2005": [
+          "mb-e-2005-09"
+        ]
+      },
+      "generation_documents": [
+        "mb-model-codes-09"
+      ],
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unreviewed body/trim/options",
+        "Unconfirmed seats remain unknown; no automatic draft carry-over"
+      ],
+      "groups": [
+        {
+          "id": "e320-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E320 sedan 3.2L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E320",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E320 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 221,
+            "torque_lb_ft": {
+              "value": 232,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent 4-link"
+          }
+        },
+        {
+          "id": "e320-sedan-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E320 4MATIC sedan 3.2L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E320 4MATIC",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E320 4MATIC 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 221,
+            "torque_lb_ft": {
+              "value": 232,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent double wishbone"
+          }
+        },
+        {
+          "id": "e320-cdi-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E320 CDI sedan 3.2L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E320 CDI",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E320 CDI 3.2L inline-6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 201,
+            "torque_lb_ft": {
+              "value": 369,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "DIESEL",
+            "engine_displacement_cc": 3222,
+            "injection": "COMMON_RAIL_DIRECT_INJECTION",
+            "required_fuel_grade": "Diesel fuel #2",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent 4-link",
+            "aspiration": "TURBO",
+            "availability_note": "US MY2005 not available in CA, ME, MA, NY or VT per annual brochure emissions footnote"
+          }
+        },
+        {
+          "id": "e500-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E500 sedan 5L / 7-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E500",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E500 5L V8",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 302,
+            "torque_lb_ft": {
+              "value": 339,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "7-speed automatic",
+            "transmission_family": "AT",
+            "gears": 7,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 4966,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent 4-link"
+          }
+        },
+        {
+          "id": "e500-sedan-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E500 4MATIC sedan 5L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E500 4MATIC",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E500 4MATIC 5L V8",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 302,
+            "torque_lb_ft": {
+              "value": 339,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 4966,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent double wishbone"
+          }
+        },
+        {
+          "id": "e55-sedan-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E55 AMG sedan 5.4L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E55 AMG",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "E55 AMG 5.4L V8",
+            "engine_displacement": {
+              "value": 5.4,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 469,
+            "torque_lb_ft": {
+              "value": 516,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "AMG-enhanced 5-speed automatic with SpeedShift and torque-converter lockup",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 5439,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 189.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 57.2,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.3,
+              "unit": "in"
+            },
+            "front_suspension": "Independent 4-link",
+            "aspiration": "SUPERCHARGED"
+          }
+        },
+        {
+          "id": "e320-wagon-rwd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E320 Wagon wagon 3.2L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E320 Wagon",
+            "body": "WAGON",
+            "powertrain": "ICE",
+            "engine_description": "E320 Wagon 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 221,
+            "torque_lb_ft": {
+              "value": 232,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 191.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.9,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "front_suspension": "Independent 4-link",
+            "seats": 7
+          }
+        },
+        {
+          "id": "e320-wagon-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E320 Wagon 4MATIC wagon 3.2L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E320 Wagon 4MATIC",
+            "body": "WAGON",
+            "powertrain": "ICE",
+            "engine_description": "E320 Wagon 4MATIC 3.2L V6",
+            "engine_displacement": {
+              "value": 3.2,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 221,
+            "torque_lb_ft": {
+              "value": 232,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 3199,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 191.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.9,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "front_suspension": "Independent double wishbone",
+            "seats": 7
+          }
+        },
+        {
+          "id": "e500-wagon-awd",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "E500 Wagon 4MATIC wagon 5L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "PDF pp1,3-4: MY2005 sedan/wagon engine/transmission/drive matrix; p13 standard seven-seat wagon. Gasoline economy figures explicitly MY2004, excluded from MY2005.",
+          "facts": {
+            "trim": "E500 Wagon 4MATIC",
+            "body": "WAGON",
+            "powertrain": "ICE",
+            "engine_description": "E500 Wagon 4MATIC 5L V8",
+            "engine_displacement": {
+              "value": 5.0,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 302,
+            "torque_lb_ft": {
+              "value": 339,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "engine_displacement_cc": 4966,
+            "injection": "MULTIPOINT",
+            "required_fuel_grade": "Premium unleaded gasoline, 91 pump octane (US AKI)",
+            "length_in": {
+              "value": 191.7,
+              "unit": "in"
+            },
+            "height_in": {
+              "value": 58.9,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "front_suspension": "Independent double wishbone",
+            "seats": 7
+          }
+        }
+      ],
+      "facts": {
+        "fuel_tank_us_gal": {
+          "value": 21.1,
+          "unit": "US gal"
+        },
+        "wheelbase_in": {
+          "value": 112.4,
+          "unit": "in"
+        },
+        "rear_suspension": "Independent 5-arm multilink"
+      },
+      "scope_note": "US MY2005 only; exact annual manufacturer joint columns plus scoped generation source. Additional unverified draft oil/fluids/codes excluded."
+    },
+    {
+      "id": "bmw-3-series-e46-sedan-us-2005-09",
+      "make": "BMW",
+      "model": "3 Series",
+      "generation": "E46 sedan",
+      "generation_code": "E46",
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2005": [
+          "bmw-3-2005-09"
+        ]
+      },
+      "generation_documents": [
+        "bmw-e46-generation-09"
+      ],
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unreviewed body/trim/options",
+        "Unconfirmed seats remain unknown; no automatic draft carry-over"
+      ],
+      "groups": [
+        {
+          "id": "325i-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "325i sedan 2.5L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "325i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "325i 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3307,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 4.88,
+              "unit": "in"
+            },
+            "standard_tires": "205/55R16",
+            "standard_wheels": "16x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "325i"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S5)"
+            ]
+          }
+        },
+        {
+          "id": "325i-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "325i sedan 2.5L / 5-MANUAL / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "325i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "325i 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3219,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 4.88,
+              "unit": "in"
+            },
+            "standard_tires": "205/55R16",
+            "standard_wheels": "16x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "325i"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Manual 5-spd"
+            ]
+          }
+        },
+        {
+          "id": "325xi-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "325xi sedan 2.5L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "325xi",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "325xi 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3527,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 5.55,
+              "unit": "in"
+            },
+            "standard_tires": "205/55R16",
+            "standard_wheels": "16x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "325xi"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S5)"
+            ]
+          }
+        },
+        {
+          "id": "325xi-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "325xi sedan 2.5L / 5-MANUAL / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "325xi",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "325xi 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3461,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 5.55,
+              "unit": "in"
+            },
+            "standard_tires": "205/55R16",
+            "standard_wheels": "16x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "325xi"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Manual 5-spd"
+            ]
+          }
+        },
+        {
+          "id": "330i-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "330i sedan 3L / 5-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "330i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "330i 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3362,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 4.29,
+              "unit": "in"
+            },
+            "standard_tires": "205/50R17",
+            "standard_wheels": "17x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "330i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S5)"
+            ]
+          }
+        },
+        {
+          "id": "330i-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "330i sedan 3L / 6-MANUAL / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "330i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "330i 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3285,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 4.29,
+              "unit": "in"
+            },
+            "standard_tires": "205/50R17",
+            "standard_wheels": "17x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "330i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          }
+        },
+        {
+          "id": "330xi-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "330xi sedan 3L / 5-AT / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "330xi",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "330xi 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "5-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 5,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3538,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 5.55,
+              "unit": "in"
+            },
+            "standard_tires": "205/50R17",
+            "standard_wheels": "17x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "330xi"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S5)"
+            ]
+          }
+        },
+        {
+          "id": "330xi-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "330xi sedan 3L / 6-MANUAL / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "MY2005 sedan p10 explicit transmission availability by trim; p14 technical table excludes 330i Performance Package bracket values; p15 dimensions. Drive from same-year exact EPA model/displacement/transmission tuple.",
+          "facts": {
+            "trim": "330xi",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "330xi 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "curb_weight_lb": {
+              "value": 3483,
+              "unit": "lb"
+            },
+            "ground_clearance_in": {
+              "value": 5.55,
+              "unit": "in"
+            },
+            "standard_tires": "205/50R17",
+            "standard_wheels": "17x7.0"
+          },
+          "epa_drive_match": {
+            "model": [
+              "330xi"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          }
+        }
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "required_fuel_grade": "Unleaded premium (octane number not specified)",
+        "wheelbase_in": {
+          "value": 107.3,
+          "unit": "in"
+        },
+        "length_in": {
+          "value": 176.0,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 68.5,
+          "unit": "in"
+        },
+        "front_suspension": "Strut-type with forged-aluminum lower arms",
+        "rear_suspension": "Multi-link with cast-aluminum upper transverse arms",
+        "powertrain": "ICE"
+      },
+      "scope_note": "US MY2005 only; exact annual manufacturer joint columns plus scoped generation source. Additional unverified draft oil/fluids/codes excluded."
+    },
+    {
+      "id": "bmw-5-series-v-sedan-us-2005-09",
+      "make": "BMW",
+      "model": "5 Series",
+      "generation": "V sedan (2003 redesign)",
+      "generation_code": null,
+      "market": "US",
+      "year_from": 2005,
+      "year_to": 2005,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2005": [
+          "bmw-5-2005-09"
+        ]
+      },
+      "generation_documents": [
+        "bmw-5-generation-09"
+      ],
+      "exclude": [
+        "Other model years",
+        "Other markets",
+        "Unreviewed body/trim/options",
+        "Unconfirmed seats remain unknown; no automatic draft carry-over"
+      ],
+      "groups": [
+        {
+          "id": "525i-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "525i sedan 2.5L / 6-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "525i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "525i 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "225/50R17",
+            "standard_wheels": "17x7.5"
+          },
+          "epa_drive_match": {
+            "model": [
+              "525i"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          }
+        },
+        {
+          "id": "525i-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "525i sedan 2.5L / 6-MANUAL / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "525i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "525i 2.5L inline-6",
+            "engine_displacement": {
+              "value": 2.5,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 184,
+            "torque_lb_ft": {
+              "value": 175,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "225/50R17",
+            "standard_wheels": "17x7.5"
+          },
+          "epa_drive_match": {
+            "model": [
+              "525i"
+            ],
+            "displ": [
+              "2.5"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          }
+        },
+        {
+          "id": "530i-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "530i sedan 3L / 6-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "530i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "530i 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "225/50R17",
+            "standard_wheels": "17x7.5"
+          },
+          "epa_drive_match": {
+            "model": [
+              "530i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          }
+        },
+        {
+          "id": "530i-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "530i sedan 3L / 6-MANUAL / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "530i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "530i 3L inline-6",
+            "engine_displacement": {
+              "value": 3.0,
+              "unit": "L"
+            },
+            "cylinders": 6,
+            "power_hp": 225,
+            "torque_lb_ft": {
+              "value": 214,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "225/50R17",
+            "standard_wheels": "17x7.5"
+          },
+          "epa_drive_match": {
+            "model": [
+              "530i"
+            ],
+            "displ": [
+              "3.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          }
+        },
+        {
+          "id": "545i-at",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "545i sedan 4.4L / 6-AT / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "545i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "545i 4.4L V8",
+            "engine_displacement": {
+              "value": 4.4,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 325,
+            "torque_lb_ft": {
+              "value": 330,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed STEPTRONIC automatic",
+            "transmission_family": "AT",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "225/50R17",
+            "standard_wheels": "17x7.5"
+          },
+          "epa_drive_match": {
+            "model": [
+              "545i"
+            ],
+            "displ": [
+              "4.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          }
+        },
+        {
+          "id": "545i-manual",
+          "year_from": 2005,
+          "year_to": 2005,
+          "configuration": "545i sedan 4.4L / 6-MANUAL / RWD",
+          "allowed_drives": [
+            "RWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "RWD"
+            }
+          ],
+          "locator": "MY2005 sedan pp9,13 explicit engine/6MT/6-speed STEPTRONIC AT columns; p14 dimensions. Preliminary weight row omitted. RWD from exact same-year EPA tuple; SMG remains distinct and held.",
+          "facts": {
+            "trim": "545i",
+            "body": "SEDAN",
+            "powertrain": "ICE",
+            "engine_description": "545i 4.4L V8",
+            "engine_displacement": {
+              "value": 4.4,
+              "unit": "L"
+            },
+            "cylinders": 8,
+            "power_hp": 325,
+            "torque_lb_ft": {
+              "value": 330,
+              "unit": "lb-ft"
+            },
+            "transmission_description": "6-speed manual",
+            "transmission_family": "MANUAL",
+            "gears": 6,
+            "fuel": "GASOLINE",
+            "standard_tires": "245/40R18 front; 275/35R18 rear",
+            "standard_wheels": "18x8.0 front; 18x9.0 rear"
+          },
+          "epa_drive_match": {
+            "model": [
+              "545i"
+            ],
+            "displ": [
+              "4.4"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          }
+        }
+      ],
+      "facts": {
+        "body": "SEDAN",
+        "required_fuel_grade": "Unleaded premium (octane number not specified)",
+        "fuel_tank_us_gal": {
+          "value": 18.5,
+          "unit": "US gal"
+        },
+        "wheelbase_in": {
+          "value": 113.7,
+          "unit": "in"
+        },
+        "length_in": {
+          "value": 190.6,
+          "unit": "in"
+        },
+        "width_in": {
+          "value": 72.7,
+          "unit": "in"
+        },
+        "height_in": {
+          "value": 58.0,
+          "unit": "in"
+        },
+        "front_suspension": "Aluminum double-pivot-type",
+        "rear_suspension": "Aluminum 4-link Integral",
+        "powertrain": "ICE"
+      },
+      "scope_note": "US MY2005 only; exact annual manufacturer joint columns plus scoped generation source. Additional unverified draft oil/fluids/codes excluded."
+    }
+  ]
+}

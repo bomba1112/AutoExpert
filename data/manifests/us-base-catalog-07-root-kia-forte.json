@@ -1,0 +1,1307 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-kia-forte",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "s21": {
+      "url": "https://www.kiamedia.com/us/es/models/forte/2021/specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "US Forte manufacturer specifications, trim columns and technical table",
+      "format": "html"
+    },
+    "f21": {
+      "url": "https://www.kiamedia.com/us/en/models/forte/2021/features",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "US Forte features matrix, Mechanical trim columns",
+      "format": "html"
+    },
+    "p21": {
+      "url": "https://www.kiamedia.com/us/en/models/forte/2021/pricing",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "US Forte MSRP matrix, exact trim, engine and transmission line; prices not imported",
+      "format": "html"
+    },
+    "o21": {
+      "url": "https://www.kiamedia.com/us/es/media/documenttext/16504/2021-forte-overview",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2021,
+      "locator": "US Forte annual overview, body, generation continuity and engine scope",
+      "format": "html"
+    },
+    "s22": {
+      "url": "https://www.kiamedia.com/us/en/media/specifications/20027/2022-kia-forte-specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2022,
+      "year_to": 2022,
+      "locator": "US Forte manufacturer specifications, trim columns and technical table",
+      "format": "html"
+    },
+    "f22": {
+      "url": "https://www.kiamedia.com/us/en/models/forte/2022/features",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2022,
+      "year_to": 2022,
+      "locator": "US Forte features matrix, Mechanical trim columns",
+      "format": "html"
+    },
+    "p22": {
+      "url": "https://www.kiamedia.com/us/en/models/forte/2022/pricing",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2022,
+      "year_to": 2022,
+      "locator": "US Forte MSRP matrix, exact trim, engine and transmission line; prices not imported",
+      "format": "html"
+    },
+    "o22": {
+      "url": "https://www.kiamedia.com/us/en/models/forte/2022",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US specifications and model material",
+      "market": "US",
+      "year_from": 2022,
+      "year_to": 2022,
+      "locator": "US Forte annual overview, body, generation continuity and engine scope",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "kia-forte-bd-us-2021-2022-07",
+      "make": "Kia",
+      "model": "Forte",
+      "generation": "BD / BDm sedan",
+      "generation_code": "BD",
+      "market": "US",
+      "year_from": 2021,
+      "year_to": 2022,
+      "facelift_from": 2022,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2021": [
+          "s21",
+          "f21",
+          "p21",
+          "o21"
+        ],
+        "2022": [
+          "s22",
+          "f22",
+          "p22",
+          "o22"
+        ]
+      },
+      "generation_documents": [],
+      "scope_note": "US Forte 2021/22 sedan, only factory pricing and Mechanical matrix listed trim/engine/gear pairs; EPA exact matching tuple confirms FWD.",
+      "exclude": [
+        "Other MY, body styles, market versions and unavailable trim/gear pairings"
+      ],
+      "facts": {},
+      "groups": [
+        {
+          "id": "2021-fe-2.0-mt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte FE · 2.0L · 6-speed manual",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte FE: 2.0L I4 - 6 M/T; Features Mechanical columns FE engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "6-speed manual",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte FE",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "f21"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-fe-2.0-ivt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte FE · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte FE"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte FE: 2.0L I4 - IVT; Features Mechanical columns FE engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte FE",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-lxs-2.0-ivt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte LXS · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte LXS: 2.0L I4 - IVT; Features Mechanical columns LXS engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte LXS",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-gt-line-2.0-ivt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte GT-Line · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte GT-Line: 2.0L I4 - IVT; Features Mechanical columns GT Line engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte GT-Line",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-ex-2.0-ivt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte EX · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte EX: 2.0L I4 - IVT; Features Mechanical columns EX engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte EX",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.0,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-gt-1.6-dct",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte GT · 1.6L · 7-speed dual-clutch",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "1.6"
+            ],
+            "trany": [
+              "Automatic (AM-S7)"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte GT: 1.6L Turbo - DCT; Features Mechanical columns GT engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "1.6L turbo GDI inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 1.6,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 201,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 195,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "DCT",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "7-speed dual-clutch",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte GT",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "gears": {
+              "value": 7,
+              "document_key": "f21"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.5,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2021-gt-1.6-mt",
+          "year_from": 2021,
+          "year_to": 2021,
+          "configuration": "Forte GT · 1.6L · 6-speed manual",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "1.6"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2021 pricing line Forte GT: 1.6L Turbo - 6 M/T; Features Mechanical columns GT engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o21"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o21"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s21"
+            },
+            "engine_description": {
+              "value": "1.6L turbo GDI inline-4",
+              "document_key": "s21"
+            },
+            "engine_displacement": {
+              "value": 1.6,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s21"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "f21"
+            },
+            "power_hp": {
+              "value": 201,
+              "document_key": "s21",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 195,
+              "document_key": "s21",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "f21"
+            },
+            "transmission_description": {
+              "value": "6-speed manual",
+              "document_key": "f21"
+            },
+            "trim": {
+              "value": "Forte GT",
+              "document_key": "p21"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s21",
+              "unit": "in"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "f21"
+            },
+            "octane_aki": {
+              "value": 87,
+              "document_key": "s21",
+              "unit": "AKI"
+            },
+            "fuel_tank_us_gal": {
+              "value": 14.0,
+              "document_key": "s21",
+              "unit": "US gal"
+            },
+            "engine_oil_capacity_l": {
+              "value": 4.5,
+              "document_key": "s21",
+              "unit": "L"
+            },
+            "engine_oil_capacity_note": {
+              "value": "With oil filter; factory table capacity",
+              "document_key": "s21"
+            }
+          }
+        },
+        {
+          "id": "2022-fe-2.0-ivt",
+          "year_from": 2022,
+          "year_to": 2022,
+          "configuration": "Forte FE · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte FE"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2022 pricing line Forte FE: 2.0G - IVT; Features Mechanical columns FE engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o22"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o22"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "f22"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "o22"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "o22",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "o22"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f22"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "o22",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "o22",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f22"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f22"
+            },
+            "trim": {
+              "value": "Forte FE",
+              "document_key": "p22"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s22",
+              "unit": "in"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "o22"
+            }
+          }
+        },
+        {
+          "id": "2022-lxs-2.0-ivt",
+          "year_from": 2022,
+          "year_to": 2022,
+          "configuration": "Forte LXS · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2022 pricing line Forte LXS: 2.0G - IVT; Features Mechanical columns LXS engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o22"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o22"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "f22"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "o22"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "o22",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "o22"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f22"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "o22",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "o22",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f22"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f22"
+            },
+            "trim": {
+              "value": "Forte LXS",
+              "document_key": "p22"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s22",
+              "unit": "in"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "o22"
+            }
+          }
+        },
+        {
+          "id": "2022-gt-line-2.0-ivt",
+          "year_from": 2022,
+          "year_to": 2022,
+          "configuration": "Forte GT Line · 2.0L · Intelligent Variable Transmission (IVT)",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (variable gear ratios)"
+            ]
+          },
+          "locator": "Kia US MY2022 pricing line Forte GT Line: 2.0G - IVT; Features Mechanical columns GT Line engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o22"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o22"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "f22"
+            },
+            "engine_description": {
+              "value": "2.0L MPI Atkinson-cycle inline-4",
+              "document_key": "o22"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "o22",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "o22"
+            },
+            "injection": {
+              "value": "MPI",
+              "document_key": "f22"
+            },
+            "power_hp": {
+              "value": 147,
+              "document_key": "o22",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 132,
+              "document_key": "o22",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "CVT",
+              "document_key": "f22"
+            },
+            "transmission_description": {
+              "value": "Intelligent Variable Transmission (IVT)",
+              "document_key": "f22"
+            },
+            "trim": {
+              "value": "Forte GT Line",
+              "document_key": "p22"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s22",
+              "unit": "in"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "o22"
+            }
+          }
+        },
+        {
+          "id": "2022-gt-1.6-dct",
+          "year_from": 2022,
+          "year_to": 2022,
+          "configuration": "Forte GT · 1.6L · 7-speed dual-clutch",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "1.6"
+            ],
+            "trany": [
+              "Automatic (AM-S7)"
+            ]
+          },
+          "locator": "Kia US MY2022 pricing line Forte GT: 1.6T - DCT; Features Mechanical columns GT engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o22"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o22"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "f22"
+            },
+            "engine_description": {
+              "value": "1.6L turbo GDI inline-4",
+              "document_key": "o22"
+            },
+            "engine_displacement": {
+              "value": 1.6,
+              "document_key": "o22",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "o22"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "f22"
+            },
+            "power_hp": {
+              "value": 201,
+              "document_key": "o22",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 195,
+              "document_key": "o22",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "DCT",
+              "document_key": "f22"
+            },
+            "transmission_description": {
+              "value": "7-speed dual-clutch",
+              "document_key": "f22"
+            },
+            "trim": {
+              "value": "Forte GT",
+              "document_key": "p22"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s22",
+              "unit": "in"
+            },
+            "gears": {
+              "value": 7,
+              "document_key": "f22"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "o22"
+            }
+          }
+        },
+        {
+          "id": "2022-gt-mt-1.6-mt",
+          "year_from": 2022,
+          "year_to": 2022,
+          "configuration": "Forte GT MT · 1.6L · 6-speed manual",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Forte"
+            ],
+            "displ": [
+              "1.6"
+            ],
+            "trany": [
+              "Manual 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2022 pricing line Forte GT MT: 1.6T - 6 M/T; Features Mechanical columns GT MT engine+gear; EPA exact tuple confirms FWD; no adjacent MY extrapolation",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o22"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o22"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "f22"
+            },
+            "engine_description": {
+              "value": "1.6L turbo GDI inline-4",
+              "document_key": "o22"
+            },
+            "engine_displacement": {
+              "value": 1.6,
+              "document_key": "o22",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "o22"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "f22"
+            },
+            "power_hp": {
+              "value": 201,
+              "document_key": "o22",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 195,
+              "document_key": "o22",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "MANUAL",
+              "document_key": "f22"
+            },
+            "transmission_description": {
+              "value": "6-speed manual",
+              "document_key": "f22"
+            },
+            "trim": {
+              "value": "Forte GT MT",
+              "document_key": "p22"
+            },
+            "wheelbase_in": {
+              "value": 106.3,
+              "document_key": "s22",
+              "unit": "in"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "f22"
+            },
+            "seats": {
+              "value": 5,
+              "document_key": "o22"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": "epa-master-aliases-1",
+  "notes": "These aliases select research candidates only. They do not assert a factory trim, body, gearbox construction, or applicability to a published variant.",
+  "base_aliases": [
+    {"make": "Infiniti", "model": "FX", "epa_base_models": ["FX35", "FX37", "FX45", "FX50"]}
+  ],
+  "raw_prefixes": [
+    {"make": "Land Rover", "model": "Range Rover Sport", "prefixes": ["Range Rover Sport"]},
+    {"make": "Land Rover", "model": "Range Rover Evoque", "prefixes": ["Range Rover Evoque", "Evoque"]},
+    {"make": "Land Rover", "model": "Discovery Sport", "prefixes": ["Discovery Sport"]},
+    {"make": "Mitsubishi", "model": "Outlander Sport", "prefixes": ["Outlander Sport"]}
+  ],
+  "base_model_exclusions": [
+    {"make": "Land Rover", "model": "Range Rover", "raw_prefixes": ["Range Rover Velar"]},
+    {"make": "Toyota", "model": "Camry", "raw_prefixes": ["Camry Solara"]},
+    {"make": "Honda", "model": "Accord", "raw_prefixes": ["Accord Crosstour"]}
+  ]
+}

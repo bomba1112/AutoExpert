@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.ruff_cache/
+.runtime/
+.backups/
+.localdata/
+.signing/
+.env
+*.db
+*.sqlite3
+build/
+dist/
+deliverables/
+.dart_tool/
+
+# Added 2026-10-02 at git init (baseline for the US tech database work)
+tmp/
+PROJECT_HANDOFF_TOTAL_REPORT_2026-09-29/
+node_modules/
+.gradle/
+*.backup_*
+# Raw downloads (PDF/HTML/API dumps) stay on disk only; manifests and parsed data are tracked
+data_work/**/raw/
+data_work/_library/**/*.pdf
+data_work/_library/**/*.html

@@ -1,0 +1,140 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "seller_id": {
+      "title": "Seller Id",
+      "type": "string"
+    },
+    "original_offer_id": {
+      "title": "Original Offer Id",
+      "type": "string"
+    },
+    "part_number": {
+      "title": "Part Number",
+      "type": "string"
+    },
+    "brand": {
+      "title": "Brand",
+      "type": "string"
+    },
+    "region": {
+      "title": "Region",
+      "type": "string"
+    },
+    "condition": {
+      "enum": [
+        "NEW",
+        "USED",
+        "REMANUFACTURED"
+      ],
+      "title": "Condition",
+      "type": "string"
+    },
+    "unit": {
+      "enum": [
+        "EACH",
+        "L",
+        "SET",
+        "AXLE"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "package_quantity": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "maximum": 10000.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Package Quantity"
+    },
+    "package_price": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "maximum": 1000000.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,2}0*$",
+          "type": "string"
+        }
+      ],
+      "title": "Package Price"
+    },
+    "currency": {
+      "const": "AZN",
+      "default": "AZN",
+      "title": "Currency",
+      "type": "string"
+    },
+    "available": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Available"
+    },
+    "additional_cost": {
+      "anyOf": [
+        {
+          "maximum": 1000000.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d{0,2}0*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Additional Cost"
+    },
+    "authenticity": {
+      "default": "UNVERIFIED",
+      "enum": [
+        "UNVERIFIED",
+        "SELLER_CLAIM",
+        "DOCUMENTED"
+      ],
+      "title": "Authenticity",
+      "type": "string"
+    },
+    "offer_type": {
+      "default": "EXACT",
+      "enum": [
+        "EXACT",
+        "FROM_PRICE"
+      ],
+      "title": "Offer Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "seller_id",
+    "original_offer_id",
+    "part_number",
+    "brand",
+    "region",
+    "condition",
+    "unit",
+    "package_quantity",
+    "package_price"
+  ],
+  "title": "PartPrice",
+  "type": "object"
+}

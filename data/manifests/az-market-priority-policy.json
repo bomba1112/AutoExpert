@@ -1,0 +1,259 @@
+{
+  "version": "us-market-base-6",
+  "active": true,
+  "basis": "OWNER_US_BASE_CATALOG_07_2026_09_26",
+  "primary_makes": [
+    "Mercedes-Benz",
+    "BMW",
+    "Audi",
+    "Volkswagen",
+    "Hyundai",
+    "Kia",
+    "Toyota",
+    "Nissan",
+    "Honda",
+    "Land Rover",
+    "Chevrolet",
+    "Lexus",
+    "Infiniti",
+    "Jeep",
+    "Mitsubishi",
+    "Cadillac",
+    "Tesla"
+  ],
+  "make_aliases": {
+    "Mercedes": "Mercedes-Benz",
+    "Mercedes Benz": "Mercedes-Benz",
+    "Е koda": "Skoda",
+    "Range Rover": "Land Rover"
+  },
+  "reviewed_model_aliases": [],
+  "freshness_days": 7,
+  "allow_uniform_catalog_expansion": false,
+  "work_mode": "BUILD_BASE_CATALOG",
+  "active_verification_manifest": "data/manifests/az-local-usable-batch-01.json",
+  "priority_order": [
+    "local_relevance",
+    "owner_priority_make",
+    "locally_observed_generation_years",
+    "source_quality_availability"
+  ],
+  "bmw_330i_my2025_role": "PIPELINE_PROOF_ONLY",
+  "allow_evidenced_year_ranges_within_existing_families": true,
+  "verification_cohort": "data/manifests/us-51-verification-cohort.json",
+  "new_research_model_year_waves_allowed": true,
+  "require_observed_local_presence": false,
+  "require_us_seller_claim_or_verified_market": false,
+  "inventory_scope": "ACTIVE_LOCAL",
+  "priority_formula": "LEXICOGRAPHIC_LOCAL_RELEVANCE_MAKE_GENERATION_SOURCE",
+  "queue_order": [
+    "PRIMARY_US_MARKET_QUEUE"
+  ],
+  "notes": [
+    "Listing counts measure dated platform inventory, not Azerbaijan fleet size.",
+    "Seller-entered market is a discovery claim, never factory identity.",
+    "Official dealer is a sales channel; unknown original market remains unknown.",
+    "Partial samples provide observed lower bounds, not extrapolated totals.",
+    "Technical jobs use official source-backed model-years; Turbo observations are optional.",
+    "Unknown counts and blocked collection must not fall back to EPA/NRCan catalogue size.",
+    "Owner withdrew export availability; do not wait for an export or create one.",
+    "Exact Turbo counts are optional manual input; missing counts do not block owner-priority makes.",
+    "2026-09-20 critical scope correction: mass base catalog; no ownership/dossier/image gating. New locally relevant owner-priority model families may be added by manifest.",
+    "2026-09-21 owner override: 17 primary makes, US only, MY2000+. Skoda and all non-US expansion deferred. Preserve existing records. Range Rover is a Land Rover model family, not an extra make. Approved existing UI may be extended with requested results/profile flow.",
+    "2026-09-25 owner scope: Mercedes-Benz/BMW MY2000+, other allowed makes MY2005+. Historical rows retained; scope changes are not technical verification.",
+    "2026-09-26 owner BASE_READY correction: confirmed seating is optional; unknown seating only fails an explicit seating filter."
+  ],
+  "primary_basis": "OWNER_PRIORITY_WITH_OFFICIAL_US_SOURCE_CONFIGURATIONS",
+  "turbo_role": "MANUAL_EXTERNAL_REFERENCE_ONLY",
+  "turbo_ingestion_required": false,
+  "first_wave_model_order": {
+    "Mercedes-Benz": [
+      "C-Class",
+      "E-Class",
+      "GLC-Class",
+      "GLE-Class",
+      "A-Class"
+    ],
+    "BMW": [
+      "3 Series",
+      "5 Series",
+      "X5",
+      "X3",
+      "X1",
+      "4 Series"
+    ],
+    "Audi": [
+      "A4",
+      "A6",
+      "Q5",
+      "Q7",
+      "A3",
+      "Q3",
+      "A5"
+    ],
+    "Hyundai": [
+      "Elantra",
+      "Sonata",
+      "Tucson",
+      "Santa Fe",
+      "Accent",
+      "Kona"
+    ],
+    "Kia": [
+      "Optima",
+      "K5",
+      "Sportage",
+      "Sorento",
+      "Forte",
+      "Rio"
+    ],
+    "Volkswagen": [
+      "Passat",
+      "Jetta",
+      "Tiguan",
+      "Touareg",
+      "Atlas",
+      "Arteon"
+    ],
+    "Toyota": [
+      "Camry",
+      "Corolla",
+      "RAV4",
+      "Highlander",
+      "Prius"
+    ],
+    "Nissan": [
+      "Altima",
+      "Rogue",
+      "Sentra",
+      "Pathfinder"
+    ],
+    "Honda": [
+      "Accord",
+      "Civic",
+      "CR-V"
+    ],
+    "Land Rover": [
+      "Range Rover",
+      "Range Rover Sport",
+      "Range Rover Evoque",
+      "Discovery Sport"
+    ],
+    "Chevrolet": [
+      "Cruze",
+      "Malibu",
+      "Equinox"
+    ],
+    "Lexus": [
+      "ES",
+      "RX",
+      "NX",
+      "GX"
+    ],
+    "Infiniti": [
+      "Q50",
+      "QX60",
+      "FX"
+    ],
+    "Jeep": [
+      "Grand Cherokee",
+      "Compass",
+      "Cherokee"
+    ],
+    "Mitsubishi": [
+      "Outlander",
+      "Outlander Sport"
+    ],
+    "Cadillac": [
+      "Escalade",
+      "CTS",
+      "SRX"
+    ],
+    "Tesla": [
+      "Model 3",
+      "Model Y",
+      "Model S",
+      "Model X"
+    ]
+  },
+  "model_order_status": "EDITORIAL_DRAFT_NOT_MEASURED_TURBO_POPULARITY",
+  "active_catalog_manifest": "data/manifests/us-ai-verify-09.json",
+  "basic_catalog_done_requires": [
+    "make_model",
+    "generation",
+    "year_scope",
+    "market",
+    "body",
+    "powertrain",
+    "fuel_type",
+    "engine_variant",
+    "transmission_family",
+    "drivetrain",
+    "valid_combinations",
+    "provenance",
+    "filter_resolver"
+  ],
+  "deferred_workstreams": [
+    "local_parts_prices",
+    "labor_prices",
+    "ownership_cost",
+    "deep_dossier",
+    "images",
+    "advertising"
+  ],
+  "allowed_markets": [
+    "US"
+  ],
+  "minimum_model_year": 2005,
+  "excluded_makes": [
+    "Skoda"
+  ],
+  "next_market_order": [
+    "US"
+  ],
+  "active_layer": "US_BASE_CATALOG_MAKE_YEAR_SCOPE",
+  "checkpoint_reporting": {
+    "format": "vehicle-lists-first-v1",
+    "required_sections_in_order": [
+      "delta_from_previous_batch_complete_vehicle_list",
+      "cumulative_strict_output_complete_vehicle_list",
+      "cumulative_conditional_output_complete_vehicle_list",
+      "technical_coverage_and_remaining_named_scope",
+      "aggregate_totals"
+    ],
+    "required_columns": [
+      "Make",
+      "Model",
+      "Generation",
+      "USA market",
+      "Model years",
+      "Engine",
+      "Transmission",
+      "Drivetrain",
+      "Configuration count",
+      "Status"
+    ],
+    "exact_years_and_versions_required": true,
+    "generic_model_ready_status_for_partial_coverage_allowed": false,
+    "reference": "docs/CATALOG_CHECKPOINT_REPORTING.md"
+  },
+  "catalog_correction_manifests": [
+    "data/manifests/us-base-catalog-04-correction-01.json",
+    "data/manifests/us-base-catalog-05-correction-01.json",
+    "data/manifests/us-ai-verify-09-completion.json",
+    "data/manifests/us-ai-verify-09-manual.json",
+    "data/manifests/us-ai-verify-13.json"
+  ],
+  "minimum_model_year_overrides": {
+    "Mercedes-Benz": 2000,
+    "BMW": 2000
+  },
+  "active_catalog_additional_manifests": [
+    "data/manifests/us-ai-verify-10.json",
+    "data/manifests/us-ai-verify-11.json",
+    "data/manifests/us-ai-verify-12.json"
+  ],
+  "catalog_fact_correction_manifests": [
+    "data/manifests/us-ai-verify-14-facts.json"
+  ]
+}

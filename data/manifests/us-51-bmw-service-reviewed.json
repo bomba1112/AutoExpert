@@ -1,0 +1,169 @@
+{
+  "source_id": "factory-bmw-us",
+  "parser": "ownership-json-v1",
+  "dataset_kind": null,
+  "family_mappings": [],
+  "document_id": null,
+  "download_url": null,
+  "expected_sha256": null,
+  "year_min": 2016,
+  "year_max": 2026,
+  "makes": [],
+  "priority_families": [],
+  "family_limit": 120,
+  "versions_per_family": 6,
+  "selection_basis": "Reviewed US MY2025 BMW maintenance; exact verified configurations; conditional CBS/service-count rules only",
+  "dry_run": false,
+  "records": [],
+  "ownership_records": [
+    {
+      "external_key": "bmw-us-my2025-330i-engine_oil_filter",
+      "kind": "MAINTENANCE",
+      "variant_ids": [
+        "ea6c5d78-423b-4434-80d0-894b233f0fd7",
+        "7f33694e-7337-43f3-90a2-3f5d5640ab70"
+      ],
+      "source_url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+      "locator": "US MY2025 Maintenance booklet, printed pp. 1-3 and 11-13; 3 Series column; sha256:9f556e4ec58b90ae1d5e97808a45dfb379ce2768faddb638f0995ffb3fffeca0",
+      "observed_at": "2026-09-20T10:52:36.838339Z",
+      "effective_from": "2026-09-20",
+      "effective_to": null,
+      "verification": "CONFIRMED",
+      "limitations": {
+        "ru": "Только проверенные US MY2025 330i/330i xDrive. CBS и счётчик замен масла требуют истории автомобиля. Фиксированные интервалы, материалы и цены не установлены; тяжёлые условия отдельно не подтверждены.",
+        "az": "Yalnız yoxlanmış US MY2025 330i/330i xDrive. CBS və yağ dəyişmə sayı üçün avtomobilin tarixçəsi lazımdır. Sabit intervallar, materiallar və qiymətlər müəyyən edilməyib; ağır şərait ayrıca təsdiqlənməyib."
+      },
+      "data": {
+        "operation": "engine_oil_filter",
+        "action": "REPLACE",
+        "schedule": "NORMAL",
+        "condition_codes": [
+          "BMW_CBS_ENGINE_OIL_DUE"
+        ],
+        "interval_km": null,
+        "interval_months": null,
+        "first_km": null,
+        "first_months": null,
+        "original_interval": "CBS engine oil service",
+        "rule": "CONDITION_ONLY",
+        "materials": [],
+        "labels": {
+          "ru": "Масло и фильтр · по CBS",
+          "az": "Yağ və filtr · CBS göstərişi ilə"
+        }
+      }
+    },
+    {
+      "external_key": "bmw-us-my2025-330i-cabin_microfilter",
+      "kind": "MAINTENANCE",
+      "variant_ids": [
+        "ea6c5d78-423b-4434-80d0-894b233f0fd7",
+        "7f33694e-7337-43f3-90a2-3f5d5640ab70"
+      ],
+      "source_url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+      "locator": "US MY2025 Maintenance booklet, printed pp. 1-3 and 11-13; 3 Series column; sha256:9f556e4ec58b90ae1d5e97808a45dfb379ce2768faddb638f0995ffb3fffeca0",
+      "observed_at": "2026-09-20T10:52:36.838339Z",
+      "effective_from": "2026-09-20",
+      "effective_to": null,
+      "verification": "CONFIRMED",
+      "limitations": {
+        "ru": "Только проверенные US MY2025 330i/330i xDrive. CBS и счётчик замен масла требуют истории автомобиля. Фиксированные интервалы, материалы и цены не установлены; тяжёлые условия отдельно не подтверждены.",
+        "az": "Yalnız yoxlanmış US MY2025 330i/330i xDrive. CBS və yağ dəyişmə sayı üçün avtomobilin tarixçəsi lazımdır. Sabit intervallar, materiallar və qiymətlər müəyyən edilməyib; ağır şərait ayrıca təsdiqlənməyib."
+      },
+      "data": {
+        "operation": "cabin_microfilter",
+        "action": "REPLACE",
+        "schedule": "NORMAL",
+        "condition_codes": [
+          "EVERY_2ND_ENGINE_OIL_SERVICE"
+        ],
+        "interval_km": null,
+        "interval_months": null,
+        "first_km": null,
+        "first_months": null,
+        "original_interval": "Every 2nd engine oil service",
+        "rule": "CONDITION_ONLY",
+        "materials": [],
+        "labels": {
+          "ru": "Салонный фильтр · каждая вторая замена масла",
+          "az": "Salon filtri · hər ikinci yağ dəyişməsində"
+        }
+      }
+    },
+    {
+      "external_key": "bmw-us-my2025-330i-spark_plugs",
+      "kind": "MAINTENANCE",
+      "variant_ids": [
+        "ea6c5d78-423b-4434-80d0-894b233f0fd7",
+        "7f33694e-7337-43f3-90a2-3f5d5640ab70"
+      ],
+      "source_url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+      "locator": "US MY2025 Maintenance booklet, printed pp. 1-3 and 11-13; 3 Series column; sha256:9f556e4ec58b90ae1d5e97808a45dfb379ce2768faddb638f0995ffb3fffeca0",
+      "observed_at": "2026-09-20T10:52:36.838339Z",
+      "effective_from": "2026-09-20",
+      "effective_to": null,
+      "verification": "CONFIRMED",
+      "limitations": {
+        "ru": "Только проверенные US MY2025 330i/330i xDrive. CBS и счётчик замен масла требуют истории автомобиля. Фиксированные интервалы, материалы и цены не установлены; тяжёлые условия отдельно не подтверждены.",
+        "az": "Yalnız yoxlanmış US MY2025 330i/330i xDrive. CBS və yağ dəyişmə sayı üçün avtomobilin tarixçəsi lazımdır. Sabit intervallar, materiallar və qiymətlər müəyyən edilməyib; ağır şərait ayrıca təsdiqlənməyib."
+      },
+      "data": {
+        "operation": "spark_plugs",
+        "action": "REPLACE",
+        "schedule": "NORMAL",
+        "condition_codes": [
+          "EVERY_6TH_ENGINE_OIL_SERVICE"
+        ],
+        "interval_km": null,
+        "interval_months": null,
+        "first_km": null,
+        "first_months": null,
+        "original_interval": "Every 6th engine oil service",
+        "rule": "CONDITION_ONLY",
+        "materials": [],
+        "labels": {
+          "ru": "Свечи · каждая шестая замена масла",
+          "az": "Şamlar · hər altıncı yağ dəyişməsində"
+        }
+      }
+    },
+    {
+      "external_key": "bmw-us-my2025-330i-brake_fluid",
+      "kind": "MAINTENANCE",
+      "variant_ids": [
+        "ea6c5d78-423b-4434-80d0-894b233f0fd7",
+        "7f33694e-7337-43f3-90a2-3f5d5640ab70"
+      ],
+      "source_url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+      "locator": "US MY2025 Maintenance booklet, printed pp. 1-3 and 11-13; 3 Series column; sha256:9f556e4ec58b90ae1d5e97808a45dfb379ce2768faddb638f0995ffb3fffeca0",
+      "observed_at": "2026-09-20T10:52:36.838339Z",
+      "effective_from": "2026-09-20",
+      "effective_to": null,
+      "verification": "CONFIRMED",
+      "limitations": {
+        "ru": "Только проверенные US MY2025 330i/330i xDrive. CBS и счётчик замен масла требуют истории автомобиля. Фиксированные интервалы, материалы и цены не установлены; тяжёлые условия отдельно не подтверждены.",
+        "az": "Yalnız yoxlanmış US MY2025 330i/330i xDrive. CBS və yağ dəyişmə sayı üçün avtomobilin tarixçəsi lazımdır. Sabit intervallar, materiallar və qiymətlər müəyyən edilməyib; ağır şərait ayrıca təsdiqlənməyib."
+      },
+      "data": {
+        "operation": "brake_fluid",
+        "action": "REPLACE",
+        "schedule": "NORMAL",
+        "condition_codes": [
+          "BMW_CBS_BRAKE_FLUID_DUE"
+        ],
+        "interval_km": null,
+        "interval_months": null,
+        "first_km": null,
+        "first_months": null,
+        "original_interval": "CBS brake fluid due date",
+        "rule": "CONDITION_ONLY",
+        "materials": [],
+        "labels": {
+          "ru": "Тормозная жидкость · по CBS",
+          "az": "Əyləc mayesi · CBS göstərişi ilə"
+        }
+      }
+    }
+  ],
+  "market_records": []
+}

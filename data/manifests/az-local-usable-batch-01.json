@@ -1,0 +1,57 @@
+{
+  "version": "local-usable-family-1",
+  "batch_id": "az-local-usable-01",
+  "state": "IN_REVIEW",
+  "selection_status": "EDITORIAL_DRAFT_LOCAL_REFERENCE_NOT_MEASURED_MARKET_RANKING",
+  "priority_order": ["local_relevance", "owner_priority_make", "locally_observed_generation_years", "source_quality_availability"],
+  "bmw_330i_my2025_role": "PIPELINE_PROOF_ONLY",
+  "new_makes_allowed": false,
+  "new_model_families_allowed": false,
+  "existing_family_applicable_year_expansion_allowed": true,
+  "turbo_role": "MANUAL_REFERENCE_ONLY_NO_INGESTION",
+  "all_workstreams": ["identity_range", "technical_specs", "aggregate_applicability", "recalls", "manufacturer_communications", "known_issues", "maintenance", "dossier_az_ru", "ownership_inputs", "image_qa"],
+  "families": [
+    {
+      "id": "mercedes-c-class-w205-us",
+      "make": "Mercedes-Benz", "model": "C-Class", "generation_candidate": "W205 sedan",
+      "market": "US", "requested_model_year_from": 2015, "requested_model_year_to": 2018,
+      "target_configuration": "C 300 sedan RWD / 4MATIC; split transmission applicability by documented model year",
+      "exclude": ["Coupe", "Cabriolet", "AMG", "C 350e", "other markets"],
+      "local_relevance_tier": 1, "owner_make_priority": 1,
+      "local_reference_url": "https://turbo.az/autos/10361369-mercedes-c-300",
+      "local_reference_note": "Manual reference demonstrates historical local presence of an advertised 2016 C300, with seller market Amerika. Listing is removed; advertised year is not model-year proof. No count, VIN, seller data or listing payload ingested.",
+      "current_listing_count": null, "source_availability_rank": 0,
+      "status": "RESEARCHED"
+    },
+    {
+      "id": "hyundai-elantra-ad-us",
+      "make": "Hyundai", "model": "Elantra", "generation_candidate": "AD sedan",
+      "market": "US", "requested_model_year_from": 2017, "requested_model_year_to": 2020,
+      "target_configuration": "2.0 Nu MPI sedan FWD; distinguish 6AT/6MT from MY2020 IVT",
+      "exclude": ["Elantra GT", "Sport 1.6T", "Eco 1.4T", "1.6 MPI Korea", "other markets"],
+      "local_relevance_tier": 1, "owner_make_priority": 1,
+      "local_reference_url": "https://turbo.az/autos/10220276-hyundai-elantra",
+      "local_reference_note": "Manual local reference advertises 2018 Elantra 2.0, but description distinguishes registration/year from VIN year. Market and mechanical claims require official verification. No listing payload ingested.",
+      "current_listing_count": null, "source_availability_rank": 0,
+      "status": "RESEARCHED"
+    },
+    {
+      "id": "kia-optima-jf-us",
+      "make": "Kia", "model": "Optima", "generation_candidate": "JF sedan",
+      "market": "US", "requested_model_year_from": 2016, "requested_model_year_to": 2020,
+      "target_configuration": "ICE 2.4 GDI / 2.0 T-GDI 6AT and 1.6 T-GDI 7DCT, FWD; preserve each combination",
+      "exclude": ["Hybrid", "PHEV", "Korean 2.0 MPI/LPI", "other markets"],
+      "local_relevance_tier": 1, "owner_make_priority": 1,
+      "local_reference_url": "https://turbo.az/autos?q%5Bmake%5D%5B%5D=8&q%5Bmodel%5D%5B%5D=119&q%5Bsort%5D=reg_year&q%5Byear_from%5D=2017&q%5Byear_to%5D=2017",
+      "local_reference_note": "Manual model-year reference contains Optima listings in Azerbaijan. Search-index counts are not a live census. Common local 2.0 descriptions do not prove US T-GDI applicability. No seller rows stored.",
+      "current_listing_count": null, "source_availability_rank": 0,
+      "status": "RESEARCHED"
+    }
+  ],
+  "next_owner_make_groups": [
+    {"make":"BMW", "model":"3 Series", "generation_candidate":"F30 sedan", "year_candidates":[2012,2018], "status":"DRAFT_LOCAL_RANGE_REVIEW"},
+    {"make":"Audi", "model":"A4", "generation_candidate":"B8/B9 separate", "year_candidates":[2009,2020], "status":"DRAFT_LOCAL_RANGE_REVIEW"},
+    {"make":"Volkswagen", "model":"Passat", "generation_candidate":"NMS US / B7-B8 EU separate", "year_candidates":[2012,2019], "status":"DRAFT_LOCAL_RANGE_REVIEW"},
+    {"make":"Skoda", "model":"Octavia", "generation_candidate":"5E", "year_candidates":[2013,2020], "market":"EU", "status":"SEPARATE_NON_US_DOCUMENTARY_QUEUE_NOT_US_PIPELINE"}
+  ]
+}

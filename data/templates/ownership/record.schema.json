@@ -1,0 +1,100 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "external_key": {
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "External Key",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "MAINTENANCE",
+        "FITMENT",
+        "PART_PRICE",
+        "LABOR",
+        "ENERGY_PRICE"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "variant_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10000,
+      "title": "Variant Ids",
+      "type": "array"
+    },
+    "source_url": {
+      "maxLength": 2000,
+      "minLength": 8,
+      "title": "Source Url",
+      "type": "string"
+    },
+    "locator": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Locator",
+      "type": "string"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "effective_from": {
+      "format": "date",
+      "title": "Effective From",
+      "type": "string"
+    },
+    "effective_to": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Effective To"
+    },
+    "verification": {
+      "enum": [
+        "CONFIRMED",
+        "ESTIMATE",
+        "NEEDS_INSPECTION",
+        "INSUFFICIENT_DATA"
+      ],
+      "title": "Verification",
+      "type": "string"
+    },
+    "limitations": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "object"
+    },
+    "data": {
+      "additionalProperties": true,
+      "title": "Data",
+      "type": "object"
+    }
+  },
+  "required": [
+    "external_key",
+    "kind",
+    "source_url",
+    "locator",
+    "observed_at",
+    "effective_from",
+    "verification",
+    "limitations",
+    "data"
+  ],
+  "title": "OwnershipRecord",
+  "type": "object"
+}

@@ -1,0 +1,203 @@
+{
+  "$defs": {
+    "Material": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "maximum": 10000.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Quantity"
+        },
+        "unit": {
+          "enum": [
+            "EACH",
+            "L",
+            "SET",
+            "AXLE"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "specification": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Specification"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        }
+      },
+      "required": [
+        "key",
+        "quantity",
+        "unit"
+      ],
+      "title": "Material",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "operation": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Operation",
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "INSPECT",
+        "REPLACE",
+        "CONDITION",
+        "SCENARIO_REPAIR"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "schedule": {
+      "enum": [
+        "NORMAL",
+        "SEVERE"
+      ],
+      "title": "Schedule",
+      "type": "string"
+    },
+    "condition_codes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Condition Codes",
+      "type": "array"
+    },
+    "interval_km": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "maximum": 1000000.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Interval Km"
+    },
+    "interval_months": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 1200,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Interval Months"
+    },
+    "first_km": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "maximum": 1000000.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "First Km"
+    },
+    "first_months": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 1200,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "First Months"
+    },
+    "original_interval": {
+      "title": "Original Interval",
+      "type": "string"
+    },
+    "rule": {
+      "default": "WHICHEVER_FIRST",
+      "enum": [
+        "WHICHEVER_FIRST",
+        "CONDITION_ONLY"
+      ],
+      "title": "Rule",
+      "type": "string"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/Material"
+      },
+      "maxItems": 30,
+      "title": "Materials",
+      "type": "array"
+    },
+    "labels": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Labels",
+      "type": "object"
+    }
+  },
+  "required": [
+    "operation",
+    "action",
+    "schedule",
+    "original_interval",
+    "labels"
+  ],
+  "title": "MaintenanceOperation",
+  "type": "object"
+}

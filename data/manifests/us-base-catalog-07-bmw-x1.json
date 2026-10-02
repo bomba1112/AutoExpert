@@ -1,0 +1,387 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-bmw-x1-corrected",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "bmw-x1-2016-launch-source07": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0220582EN_US/the-all-new-bmw-x1",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW Group PressClub USA",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2018,
+      "locator": "BMW Group USA launch release explicitly identifies second-generation F48 US MY2016 xDrive28i as launch variant, 2.0L TwinPower Turbo 228 hp/258 lb-ft, 8-speed Steptronic AWD; inline technical table gives seats and dimensions. Generation identity supports subsequent annual US sheets, not technical year transfer.",
+      "format": "html"
+    },
+    "bmw-x1-2017-tech-source07": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0220582EN_US/391951",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW Group PressClub USA",
+      "market": "US",
+      "year_from": 2017,
+      "year_to": 2017,
+      "locator": "BMW USA 2017 X1 Technical Data PDF pp1–2, same-column sDrive28i/xDrive28i: FWD/AWD, 5 seats, B46A20O0 1998cc 228hp/258lb-ft, Aisin F22 8-speed automatic, dimensions.",
+      "format": "pdf"
+    },
+    "bmw-x1-2018-tech-source07": {
+      "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0220582EN_US/391953",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW Group PressClub USA",
+      "market": "US",
+      "year_from": 2018,
+      "year_to": 2018,
+      "locator": "BMW USA 2018 X1 Technical Data PDF pp1–2, same-column sDrive28i/xDrive28i: FWD/AWD, 5 seats, B46A20O0 1998cc 228hp/258lb-ft, Aisin F22 8-speed automatic, dimensions.",
+      "format": "pdf"
+    },
+    "bmw-x1-2020-update-source07": {
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0296549EN_US/the-2020-bmw-x1-sports-activity-vehicle",
+      "source_id": "factory-bmw-us",
+      "publisher": "BMW Group PressClub USA",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "locator": "BMW Group USA MY2020 facelift release and inline two-column technical specification table: sDrive28i FWD/xDrive28i AWD, 5 seats, B46A20O1 1998cc 228hp/258lb-ft, GA8Y45EW 8-speed Steptronic automatic, dimensions.",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "bmw-x1-f48-us-2016-2018-source07",
+      "make": "BMW",
+      "model": "X1",
+      "generation": "F48 SAV",
+      "generation_code": "F48",
+      "market": "US",
+      "year_from": 2016,
+      "year_to": 2018,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2016": [
+          "bmw-x1-2016-launch-source07"
+        ],
+        "2017": [
+          "bmw-x1-2017-tech-source07"
+        ],
+        "2018": [
+          "bmw-x1-2018-tech-source07"
+        ]
+      },
+      "generation_documents": [
+        "bmw-x1-2016-launch-source07"
+      ],
+      "scope_note": "US BMW X1 F48 MY2016 launch xDrive28i, then exact two-column US annual MY2017/18 technical sheets. 2016 sDrive not asserted; no MY2019 extrapolation.",
+      "exclude": [
+        "Other model years, especially MY2019",
+        "Other markets",
+        "E84/U11 X1",
+        "Unlisted engines or transmissions"
+      ],
+      "facts": {
+        "body": "SUV",
+        "seats": 5,
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "engine_description": "2.0L BMW TwinPower Turbo inline-4",
+        "engine_displacement": {
+          "value": 2.0,
+          "unit": "L"
+        },
+        "cylinders": 4,
+        "aspiration": "TURBO",
+        "power_hp": 228,
+        "torque_lb_ft": {
+          "value": 258,
+          "unit": "lb-ft"
+        },
+        "transmission_family": "AT",
+        "gears": 8
+      },
+      "groups": [
+        {
+          "id": "2016-xdrive28i-awd",
+          "year_from": 2016,
+          "year_to": 2016,
+          "configuration": "X1 xDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW Group USA all-new 2016 X1 release: second-generation F48, US launch xDrive28i only; inline spec table B46 1998cc 228hp/258lb-ft and Aisin F22 8-speed AWD, 5 seats and dimensions. Do not infer MY2016 sDrive.",
+          "facts": {
+            "trim": "xDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.4,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46",
+            "transmission_code": "Aisin F22"
+          }
+        },
+        {
+          "id": "2017-sdrive28i-fwd",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "X1 sDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "BMW Group USA MY2017 X1 F48 Technical Data PDF pp1–2, sDrive28i same column: FWD, 5 seats, B46A20O0 1998cc/228hp/258lb-ft, Aisin F22 8-speed automatic. No MY2019 transfer.",
+          "facts": {
+            "trim": "sDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.4,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O0",
+            "transmission_code": "Aisin F22"
+          }
+        },
+        {
+          "id": "2017-xdrive28i-awd",
+          "year_from": 2017,
+          "year_to": 2017,
+          "configuration": "X1 xDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW Group USA MY2017 X1 F48 Technical Data PDF pp1–2, xDrive28i same column: AWD, 5 seats, B46A20O0 1998cc/228hp/258lb-ft, Aisin F22 8-speed automatic. No MY2019 transfer.",
+          "facts": {
+            "trim": "xDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.4,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O0",
+            "transmission_code": "Aisin F22"
+          }
+        },
+        {
+          "id": "2018-sdrive28i-fwd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "X1 sDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "BMW Group USA MY2018 X1 F48 Technical Data PDF pp1–2, sDrive28i same column: FWD, 5 seats, B46A20O0 1998cc/228hp/258lb-ft, Aisin F22 8-speed automatic. No MY2019 transfer.",
+          "facts": {
+            "trim": "sDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.4,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O0",
+            "transmission_code": "Aisin F22"
+          }
+        },
+        {
+          "id": "2018-xdrive28i-awd",
+          "year_from": 2018,
+          "year_to": 2018,
+          "configuration": "X1 xDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW Group USA MY2018 X1 F48 Technical Data PDF pp1–2, xDrive28i same column: AWD, 5 seats, B46A20O0 1998cc/228hp/258lb-ft, Aisin F22 8-speed automatic. No MY2019 transfer.",
+          "facts": {
+            "trim": "xDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.4,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O0",
+            "transmission_code": "Aisin F22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bmw-x1-f48-us-2020-source07",
+      "make": "BMW",
+      "model": "X1",
+      "generation": "F48 SAV",
+      "generation_code": "F48",
+      "market": "US",
+      "year_from": 2020,
+      "year_to": 2020,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2020": [
+          "bmw-x1-2020-update-source07"
+        ]
+      },
+      "generation_documents": [
+        "bmw-x1-2020-update-source07"
+      ],
+      "scope_note": "US BMW X1 F48 MY2020 facelift; manufacturer release contains annual two-column sDrive28i/xDrive28i table. MY2019 intentionally absent.",
+      "exclude": [
+        "Other model years, especially MY2019",
+        "Other markets",
+        "E84/U11 X1",
+        "Unlisted engines or transmissions"
+      ],
+      "facts": {
+        "body": "SUV",
+        "seats": 5,
+        "powertrain": "ICE",
+        "fuel": "GASOLINE",
+        "engine_description": "2.0L BMW TwinPower Turbo inline-4",
+        "engine_displacement": {
+          "value": 2.0,
+          "unit": "L"
+        },
+        "cylinders": 4,
+        "aspiration": "TURBO",
+        "power_hp": 228,
+        "torque_lb_ft": {
+          "value": 258,
+          "unit": "lb-ft"
+        },
+        "transmission_family": "AT",
+        "gears": 8
+      },
+      "groups": [
+        {
+          "id": "2020-sdrive28i-fwd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "X1 sDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / FWD",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "locator": "BMW Group USA 2020 X1 update release inline Technical Specifications table: sDrive28i FWD, 5 seats, B46A20O1 1998cc/228hp/258lb-ft and GA8Y45EW 8-speed Steptronic automatic. Dimensions are same-column values; MY2019 not claimed.",
+          "facts": {
+            "trim": "sDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O1",
+            "transmission_code": "GA8Y45EW"
+          }
+        },
+        {
+          "id": "2020-xdrive28i-awd",
+          "year_from": 2020,
+          "year_to": 2020,
+          "configuration": "X1 xDrive28i 2.0L TwinPower Turbo / 8-speed Steptronic / AWD",
+          "allowed_drives": [
+            "AWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "AWD"
+            }
+          ],
+          "locator": "BMW Group USA 2020 X1 update release inline Technical Specifications table: xDrive28i AWD, 5 seats, B46A20O1 1998cc/228hp/258lb-ft and GA8Y45EW 8-speed Steptronic automatic. Dimensions are same-column values; MY2019 not claimed.",
+          "facts": {
+            "trim": "xDrive28i",
+            "transmission_description": "8-speed Steptronic automatic",
+            "length_in": {
+              "value": 175.5,
+              "unit": "in"
+            },
+            "width_in": {
+              "value": 71.7,
+              "unit": "in"
+            },
+            "wheelbase_in": {
+              "value": 105.1,
+              "unit": "in"
+            },
+            "engine_code": "B46A20O1",
+            "transmission_code": "GA8Y45EW"
+          }
+        }
+      ]
+    }
+  ]
+}

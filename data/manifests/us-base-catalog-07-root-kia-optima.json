@@ -1,0 +1,1055 @@
+{
+  "version": "basic-catalog-ai-source-1",
+  "batch_id": "us-base-catalog-07-kia-optima-corrected",
+  "selection_status": "OWNER_MASTER_LIST_REVIEWED_SOURCE_TUPLES",
+  "epa_document_id": "761a077a-3298-4796-aaa3-755f7763d69e",
+  "documents": {
+    "s14": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2014/specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "US Optima MY2014 technical specifications",
+      "format": "html"
+    },
+    "f14": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2014/features",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "US Optima MY2014 Mechanical trim matrix",
+      "format": "html"
+    },
+    "p14": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2014/pricing",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "US Optima MY2014 exact MSRP trim-engine-gear line, price not imported",
+      "format": "html"
+    },
+    "o14": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2014",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2014,
+      "locator": "US Optima MY2014 US annual model overview",
+      "format": "html"
+    },
+    "s15": {
+      "url": "https://www.kiamedia.com/us/en/media/specifications/20416/2015-kia-optima-specifications",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US Optima MY2015 technical specifications",
+      "format": "html"
+    },
+    "f15": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2015/features",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US Optima MY2015 Mechanical trim matrix",
+      "format": "html"
+    },
+    "p15": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2015/pricing",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US Optima MY2015 exact MSRP trim-engine-gear line, price not imported",
+      "format": "html"
+    },
+    "o15": {
+      "url": "https://www.kiamedia.com/us/en/models/optima/2015",
+      "source_id": "factory-kia-us",
+      "publisher": "Kia America manufacturer US model material",
+      "market": "US",
+      "year_from": 2015,
+      "year_to": 2015,
+      "locator": "US Optima MY2015 US annual model overview",
+      "format": "html"
+    }
+  },
+  "families": [
+    {
+      "id": "kia-optima-tfqf-us-2014-2015-07",
+      "make": "Kia",
+      "model": "Optima",
+      "generation": "TF/QF",
+      "generation_code": "TF/QF",
+      "market": "US",
+      "year_from": 2014,
+      "year_to": 2015,
+      "local_relevance_tier": 1,
+      "local_generation_year_priority": 1,
+      "source_availability_rank": 1,
+      "annual_documents": {
+        "2014": [
+          "s14",
+          "f14",
+          "p14",
+          "o14"
+        ],
+        "2015": [
+          "s15",
+          "f15",
+          "p15",
+          "o15"
+        ]
+      },
+      "generation_documents": [],
+      "scope_note": "US TF/QF sedan MY2014/15, only Kia pricing and Mechanical matrix trim/engine/gear lines; annual EPA exact tuple confirms FWD. No hybrid inference.",
+      "exclude": [
+        "Hybrid, other markets, other MY, and unlisted trim/gear pairs"
+      ],
+      "facts": {},
+      "groups": [
+        {
+          "id": "2014-lx-2.4",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "Optima LX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2014 pricing line Optima LX: 2.4L GDI I-4 - 6 A/T; Features Mechanical LX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o14"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o14"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s14"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s14"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s14",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s14"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s14"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s14",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s14",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s14"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s14"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s14"
+            },
+            "trim": {
+              "value": "Optima LX",
+              "document_key": "p14"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s14",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s14",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2014-ex-2.4",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "Optima EX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2014 pricing line Optima EX: 2.4L GDI I-4 - 6 A/T; Features Mechanical EX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o14"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o14"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s14"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s14"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s14",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s14"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s14"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s14",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s14",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s14"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s14"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s14"
+            },
+            "trim": {
+              "value": "Optima EX",
+              "document_key": "p14"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s14",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s14",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2014-sx-2.4",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "Optima SX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2014 pricing line Optima SX: 2.4L GDI I-4 - 6 A/T; Features Mechanical SX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o14"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o14"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s14"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s14"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s14",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s14"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s14"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s14",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s14",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s14"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s14"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s14"
+            },
+            "trim": {
+              "value": "Optima SX",
+              "document_key": "p14"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s14",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s14",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2014-sx-turbo-2.0",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "Optima SX Turbo · 2.0L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2014 pricing line Optima SX Turbo: 2.0L T-GDI I-4 - 6 A/T; Features Mechanical SX Turbo column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o14"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o14"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s14"
+            },
+            "engine_description": {
+              "value": "2.0L turbo GDI inline-4",
+              "document_key": "s14"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s14",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s14"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s14"
+            },
+            "power_hp": {
+              "value": 274,
+              "document_key": "s14",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 269,
+              "document_key": "s14",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s14"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s14"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s14"
+            },
+            "trim": {
+              "value": "Optima SX Turbo",
+              "document_key": "p14"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s14",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s14",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2014-sxl-turbo-2.0",
+          "year_from": 2014,
+          "year_to": 2014,
+          "configuration": "Optima SXL Turbo · 2.0L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic 6-spd"
+            ]
+          },
+          "locator": "Kia US MY2014 pricing line Optima SXL Turbo: 2.0L T-GDI I-4 - 6 A/T; Features Mechanical SXL Turbo column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o14"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o14"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s14"
+            },
+            "engine_description": {
+              "value": "2.0L turbo GDI inline-4",
+              "document_key": "s14"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s14",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s14"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s14"
+            },
+            "power_hp": {
+              "value": 274,
+              "document_key": "s14",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 269,
+              "document_key": "s14",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s14"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s14"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s14"
+            },
+            "trim": {
+              "value": "Optima SXL Turbo",
+              "document_key": "p14"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s14",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s14",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2015-lx-2.4",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Optima LX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Kia US MY2015 pricing line Optima LX: 2.4L GDI I-4 - 6 A/T; Features Mechanical LX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o15"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o15"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s15"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s15"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s15",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s15"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s15"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s15",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s15",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s15"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s15"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s15"
+            },
+            "trim": {
+              "value": "Optima LX",
+              "document_key": "p15"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s15",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s15",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2015-ex-2.4",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Optima EX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Kia US MY2015 pricing line Optima EX: 2.4L GDI I-4 - 6 A/T; Features Mechanical EX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o15"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o15"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s15"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s15"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s15",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s15"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s15"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s15",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s15",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s15"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s15"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s15"
+            },
+            "trim": {
+              "value": "Optima EX",
+              "document_key": "p15"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s15",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s15",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2015-sx-2.4",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Optima SX · 2.4L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.4"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Kia US MY2015 pricing line Optima SX: 2.4L GDI I-4 - 6 A/T; Features Mechanical SX column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o15"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o15"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s15"
+            },
+            "engine_description": {
+              "value": "2.4L GDI inline-4",
+              "document_key": "s15"
+            },
+            "engine_displacement": {
+              "value": 2.4,
+              "document_key": "s15",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s15"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s15"
+            },
+            "power_hp": {
+              "value": 192,
+              "document_key": "s15",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 181,
+              "document_key": "s15",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s15"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s15"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s15"
+            },
+            "trim": {
+              "value": "Optima SX",
+              "document_key": "p15"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s15",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s15",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2015-sx-turbo-2.0",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Optima SX Turbo · 2.0L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Kia US MY2015 pricing line Optima SX Turbo: 2.0L T-GDI I-4 - 6 A/T; Features Mechanical SX Turbo column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o15"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o15"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s15"
+            },
+            "engine_description": {
+              "value": "2.0L turbo GDI inline-4",
+              "document_key": "s15"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s15",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s15"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s15"
+            },
+            "power_hp": {
+              "value": 274,
+              "document_key": "s15",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 269,
+              "document_key": "s15",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s15"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s15"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s15"
+            },
+            "trim": {
+              "value": "Optima SX Turbo",
+              "document_key": "p15"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s15",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s15",
+              "unit": "US gal"
+            }
+          }
+        },
+        {
+          "id": "2015-sxl-turbo-2.0",
+          "year_from": 2015,
+          "year_to": 2015,
+          "configuration": "Optima SXL Turbo · 2.0L · 6-speed Sportmatic automatic",
+          "allowed_drives": [
+            "FWD"
+          ],
+          "factory_combinations": [
+            {
+              "drivetrain": "FWD"
+            }
+          ],
+          "epa_drive_match": {
+            "model": [
+              "Optima"
+            ],
+            "displ": [
+              "2.0"
+            ],
+            "trany": [
+              "Automatic (S6)"
+            ]
+          },
+          "locator": "Kia US MY2015 pricing line Optima SXL Turbo: 2.0L T-GDI I-4 - 6 A/T; Features Mechanical SXL Turbo column; EPA annual exact tuple FWD",
+          "facts": {
+            "body": {
+              "value": "SEDAN",
+              "document_key": "o15"
+            },
+            "powertrain": {
+              "value": "ICE",
+              "document_key": "o15"
+            },
+            "fuel": {
+              "value": "GASOLINE",
+              "document_key": "s15"
+            },
+            "engine_description": {
+              "value": "2.0L turbo GDI inline-4",
+              "document_key": "s15"
+            },
+            "engine_displacement": {
+              "value": 2.0,
+              "document_key": "s15",
+              "unit": "L"
+            },
+            "cylinders": {
+              "value": 4,
+              "document_key": "s15"
+            },
+            "injection": {
+              "value": "GDI",
+              "document_key": "s15"
+            },
+            "power_hp": {
+              "value": 274,
+              "document_key": "s15",
+              "unit": "hp"
+            },
+            "torque_lb_ft": {
+              "value": 269,
+              "document_key": "s15",
+              "unit": "lb-ft"
+            },
+            "transmission_family": {
+              "value": "AT",
+              "document_key": "s15"
+            },
+            "transmission_description": {
+              "value": "6-speed Sportmatic automatic",
+              "document_key": "s15"
+            },
+            "gears": {
+              "value": 6,
+              "document_key": "s15"
+            },
+            "trim": {
+              "value": "Optima SXL Turbo",
+              "document_key": "p15"
+            },
+            "wheelbase_in": {
+              "value": 110.0,
+              "document_key": "s15",
+              "unit": "in"
+            },
+            "fuel_tank_us_gal": {
+              "value": 18.5,
+              "document_key": "s15",
+              "unit": "US gal"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

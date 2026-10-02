@@ -1,0 +1,60 @@
+from fastapi import APIRouter
+
+from app.core.config import get_settings
+from app.pricing.vin import configured_product_prices
+from app.providers.vin import FORD_EXAMPLE_VIN
+from app.services.chat_access import configured_chat_access_policy
+
+router = APIRouter(prefix="/meta", tags=["meta"])
+
+
+@router.get("/client-config")
+def client_config() -> dict:
+    settings = get_settings()
+    chat_policy = configured_chat_access_policy()
+    qa_mode = settings.environment in {"development", "test"} and settings.demo_mode
+    return {
+        "version": "0.8.1",
+        "buyer_api_version": 1,
+        "catalog_api_version": 1,
+        "buyer_languages": ["az", "ru"],
+        "concept_products": settings.concept_products if qa_mode else {"active": False},
+        "languages": ["az", "ru", "en"],
+        "countries": ["AZ", "RU"],
+        "prices": {
+            "AZ": {
+                "full_report": str(settings.full_report_price_az_azn),
+                "comparison": str(settings.compare_report_price_az_azn),
+                "model_dossier": str(configured_product_prices("AZ")["MODEL_DOSSIER"]),
+                "vin_check_1": str(configured_product_prices("AZ")["VIN_CHECK_1"]),
+                "vin_check_3": str(configured_product_prices("AZ")["VIN_CHECK_3"]),
+                "currency": "AZN",
+            },
+            "RU": None,
+        },
+        # A production deployment must never advertise the local fixtures,
+        # even if an old environment accidentally leaves demo_mode enabled.
+        "qa_mode": qa_mode,
+        "demo_mode": qa_mode,
+        "vin_demo": {
+            "sample_vin": FORD_EXAMPLE_VIN,
+            "make": "Ford",
+            "model": "Fusion",
+            "year": 2019,
+            "history_origin": "DEMO",
+        }
+        if qa_mode
+        else None,
+        "developer": {
+            "enabled": settings.developer_mode and qa_mode,
+            "simulate_user_paywall_default": (
+                settings.developer_simulate_user_paywall_default and qa_mode
+            ),
+            "diagnostics_visible": settings.developer_mode and qa_mode,
+        },
+        "chat": {
+            "access_mode": chat_policy.mode,
+            "demo_unlimited": settings.chat_demo_unlimited and qa_mode,
+            "question_limit": settings.chat_question_limit,
+        },
+    }
