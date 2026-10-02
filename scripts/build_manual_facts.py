@@ -95,6 +95,25 @@ def press_value(fact: dict) -> tuple[str, object]:
 CYLINDERS = {"three": 3, "four": 4, "five": 5, "six": 6, "eight": 8, "ten": 10, "twelve": 12}
 
 
+EDITION_NOISE = re.compile(
+    r"\b(?:the|technical|specifications?|specs?|spec sheet|product information|quick reference guide|"
+    r"press kit|features|and features)\b|&|\b(?:19|20)\d\d(?:\.5)?\b",
+    re.I,
+)
+
+
+def press_edition(meta: dict, make: str) -> str:
+    """The press document's edition within the line, from its published title ("2018 Elantra GT
+    Specifications" -> "elantra gt", "2020 Accord Hybrid Specifications & Features" -> "accord
+    hybrid"): editions of one model year (body styles, hybrids, AMG/M models) are separate
+    scopes, not a conflict."""
+    title = (meta.get("title") or "").split(":")[0]
+    for name in {MAKES[make]["epa"], make.replace("-", " "), "Mercedes-Benz", "Mercedes-AMG", "BMW", "Land Rover"}:
+        title = re.sub(re.escape(name) + r"(?!-)", " ", title, flags=re.I) if name != "Mercedes-AMG" else title
+    title = EDITION_NOISE.sub(" ", title)
+    return " ".join(re.sub(r"[^\w\s/+-]", " ", title).lower().split()) or "base"
+
+
 def press_engine_label(text: str | None) -> str | None:
     """One spelling per engine across model years of a press site: displacement, cylinders,
     turbo/supercharged, hybrid ("2.5-liter 4-cylinder" = "2.5L I-4" = "2.5L I4")."""
@@ -265,7 +284,7 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                 if gen is None:
                     continue
                 engine_key = None
-                applicability = {}
+                applicability = {"edition": press_edition(meta, make)} if press else {}
                 if key in ENGINE_DEPENDENT:
                     if code:
                         engine_key = code

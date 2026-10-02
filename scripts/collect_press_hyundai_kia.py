@@ -360,7 +360,7 @@ def collect_hyundai(host: Host) -> dict:
                 for url, title, how in hyundai_spec_docs(host, slug, key, year, kits_seen):
                     found.setdefault(url, (title, []))[1].append(f"{name} ({how})")
             if not found:
-                url = f"{host.base}/models/{year_nodes[(key, year)]}"
+                url = f"{host.base}/models/{models[0][0]}"  # the line's own model page (unique per line)
                 note = "no Specifications tab or spec document on model pages: " + ", ".join(slug for slug, _, _ in models)
                 prev = host.manifest.rows.get(url)
                 if not (prev and prev.get("status") == "not_found" and prev.get("note") == note):

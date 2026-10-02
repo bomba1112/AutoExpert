@@ -44,11 +44,14 @@ def check_fact(fact, sources) -> list[str]:
     problems = []
     for cite in fact["cites"]:
         item = sources[cite["source"]]
-        data = source_bytes(item)
-        body = gzip.decompress(data) if item["path"].endswith(".gz") else data
-        if item.get("sha256") and hashlib.sha256(body).hexdigest() != item["sha256"]:
-            problems.append(f"{cite['source']}: sha256 differs from manifest")
-            continue
+        raw_file = raw_path_of(item)
+        body = None
+        if not raw_file.is_dir():  # mycarusermanual sections: a folder, checked through the page text store
+            data = raw_file.read_bytes()
+            body = gzip.decompress(data) if item["path"].endswith(".gz") else data
+            if item.get("sha256") and hashlib.sha256(body).hexdigest() != item["sha256"]:
+                problems.append(f"{cite['source']}: sha256 differs from manifest")
+                continue
         if item["kind"] == "json_gz" and cite.get("field"):
             payload = json.loads(body)
             rows = [
@@ -68,39 +71,45 @@ def check_fact(fact, sources) -> list[str]:
                 if Decimal(str(fact["value"])) != again:
                     problems.append(f"conversion {raw} {unit_from} -> {again} != {fact['value']}")
         elif item["kind"] == "pdf_pages":
-            raw_file = raw_path_of(item)
-            if raw_file.is_dir():  # mycarusermanual sections: the pagetext store holds the checked text
-                pdf_bytes = None
-            else:
-                pdf_bytes = source_bytes(item)
-                if item["path"].endswith(".gz"):  # press pages: sha256 of the stored body
-                    pdf_bytes = gzip.decompress(pdf_bytes)
-            if pdf_bytes is not None and hashlib.sha256(pdf_bytes).hexdigest() != item["sha256"]:
-                problems.append(f"{cite['source']}: PDF sha256 differs from manifest")
-                continue
             pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{item['sha256']}.json.gz").read_bytes()))
             texts = [" ".join(pages["pages"][p - 1].split()) for p in cite["pages"] or []]
             quote = " ".join(cite["quote"].split())
-            if not any(quote in t for t in texts):
+            if not any(quote in t or norm_text(quote) in norm_text(t) for t in texts):
                 problems.append(f"{cite['source']}: quote not on page {cite['pages']}")
                 continue
-            # the table row is rebuilt again from the PDF word positions: the value must sit
-            # on the same row as when it was extracted (label/value pairing re-checked)
-            if cite.get("row") and ROWS is not None:
+            # PDF rows are rebuilt again from the word positions (label/value pairing re-checked);
+            # a ruled capacity table is read again cell by cell; HTML pages: quote check only
+            # press pages: `row` is the table label of the press parser (its own --verify checks the
+            # pairing), so only the quote is re-checked here
+            if (cite.get("row") and ROWS is not None and raw_file.suffix.lower() == ".pdf"
+                    and item.get("source_type") != "PRESS_RELEASE"):
                 import pdfplumber
 
-                with pdfplumber.open(raw_path_of(item)) as pdf:
-                    rebuilt = [r["text"] for col in ROWS(pdf.pages[cite["pages"][0] - 1]) for r in col]
-                if cite["row"] not in rebuilt and not any(cite["row"][:200] in r for r in rebuilt):
-                    if not any(cite["row"][:120] in t for t in texts):
-                        problems.append(f"{cite['source']}: row not rebuilt on page {cite['pages'][0]}: {cite['row'][:80]}")
+                with pdfplumber.open(raw_file) as pdf:
+                    page = pdf.pages[cite["pages"][0] - 1]
+                    rebuilt = [r["text"] for col in ROWS(page) for r in col]
+                    found = cite["row"] in rebuilt or any(cite["row"][:200] in r for r in rebuilt) \
+                        or any(cite["row"][:120] in t for t in texts)
+                    if not found and TABLES is not None:
+                        again = [f for table in TABLES[0](page) for f in TABLES[1](cite["pages"][0], table, pages["pages"][cite["pages"][0] - 1])[0]]
+                        found = any(f["row"] == cite["row"] for f in again)
+                if not found:
+                    problems.append(f"{cite['source']}: row not rebuilt on page {cite['pages'][0]}: {cite['row'][:80]}")
     return problems
+
+
+def norm_text(text: str) -> str:
+    return " ".join(text.replace("\u00a0", " ").split())
 
 
 try:  # geometric re-check needs pdfplumber (run through uv); without it only quotes are checked
     from extract_manual_facts import rows_of as ROWS
+    from extract_manual_facts import ruled_tables, table_facts
+
+    TABLES = (ruled_tables, table_facts)
 except Exception:  # noqa: BLE001
     ROWS = None
+    TABLES = None
 
 
 def raw_path_of(item) -> Path:
@@ -158,6 +167,11 @@ def main(make: str) -> int:
                 body = source_bytes(source)
                 if source.get("sha256") and hashlib.sha256(body).hexdigest() != source["sha256"]:
                     problems.append(f"{cite['source']}: sha256 differs from manifest")
+                elif source["kind"] == "pdf_pages":
+                    # schedule tables: the item text is found again on the cited page
+                    pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{source['sha256']}.json.gz").read_bytes()))
+                    if not any(norm_text(cite["quote"]) in norm_text(pages["pages"][p - 1]) for p in cite.get("pages") or []):
+                        problems.append(f"{cite['source']}: schedule text not found on page {cite.get('pages')}")
                 elif cite["quote"].split(" ", 6)[-1][:60] not in body.decode("utf-8", errors="ignore"):
                     problems.append(f"{cite['source']}: service text not found again")
             results.append({"kind": "maintenance", "id": item["id"], "problems": problems})
