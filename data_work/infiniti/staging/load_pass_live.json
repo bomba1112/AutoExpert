@@ -1,0 +1,89 @@
+{
+ "make": "infiniti",
+ "mode": "live",
+ "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "started_at": "2026-10-02T17:02:40+00:00",
+ "replace_own": [],
+ "lines": {
+  "infiniti/q50": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 60,
+    "source_records_new": 55,
+    "te_new_GENERATION": 416,
+    "te_new_ENGINE": 1,
+    "te_new_CONFIGURATION": 552,
+    "configurations": 40,
+    "configurations_research_only": 28,
+    "configurations_linked": 12,
+    "issues_new": 30
+   },
+   "generations": [
+    {
+     "code": "V37",
+     "action": "filled",
+     "end_year": 2024
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "infiniti/qx60": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 71,
+    "source_records_new": 56,
+    "te_new_GENERATION": 365,
+    "te_new_CONFIGURATION": 352,
+    "configurations": 32,
+    "configurations_research_only": 22,
+    "configurations_linked": 10,
+    "issues_new": 38
+   },
+   "generations": [
+    {
+     "code": "L50",
+     "action": "filled",
+     "end_year": 2020
+    },
+    {
+     "code": "US2022+",
+     "action": "created",
+     "start_year": 2022,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "infiniti/fx-qx70": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 23,
+    "source_records_new": 14,
+    "te_new_GENERATION": 155,
+    "te_new_CONFIGURATION": 99,
+    "configurations": 9,
+    "configurations_research_only": 9,
+    "issues_new": 6
+   },
+   "generations": [
+    {
+     "code": "US2014-2017",
+     "action": "created",
+     "start_year": null,
+     "end_year": 2017
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T17:02:56+00:00"
+}

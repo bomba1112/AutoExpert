@@ -20,7 +20,7 @@
   "publisher": "infiniti (manufacturer domain owners.infinitiusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 479,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,29 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "fuel_tank_l",
+   "value": 75.7,
+   "unit": "L",
+   "page": 435,
+   "quote": "20 gal",
+   "row": "Fuel | 76 | 16-5/8gal | 20gal | · See\"Fuelinformation\"(P.10-4).",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "20gal",
+   "approx_in_source": false
+  },
+  {
+   "key": "coolant",
+   "value": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "unit": null,
+   "page": 435,
+   "quote": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "row": "· Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue) or",
+   "label": "coolant",
+   "engine_text": null
+  },
   {
    "key": "engine_oil_oem_approval",
    "value": "MB229.5",
@@ -94,6 +117,66 @@
    "engine_text": null
   },
   {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF",
+   "unit": null,
+   "page": 436,
+   "quote": "Genuine NISSAN Matic S ATF",
+   "row": "Genuine NISSAN Matic S ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF may damage the",
+   "unit": null,
+   "page": 436,
+   "quote": "Genuine NISSAN Matic S ATF may damage the",
+   "row": "are not equivalent to Genuine NISSAN Matic S ATF may damage the",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF",
+   "unit": null,
+   "page": 436,
+   "quote": "Genuine NISSAN Matic J ATF",
+   "row": "Genuine NISSAN Matic J ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF ONLY in INFINITI",
+   "unit": null,
+   "page": 436,
+   "quote": "Genuine NISSAN Matic J ATF ONLY in INFINITI",
+   "row": "INFINITI recommends using Genuine NISSAN Matic J ATF ONLY in INFINITI",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF may damage the tra",
+   "unit": null,
+   "page": 436,
+   "quote": "Genuine NISSAN Matic J ATF may damage the tra",
+   "row": "equivalent to Genuine NISSAN Matic J ATF may damage the transfer.",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "unit": null,
+   "page": 436,
+   "quote": "DOT 3",
+   "row": "Genuine NISSAN Super Heavy Duty Brake Fluid*4 or equivalent DOT 3",
+   "label": "brake fluid",
+   "engine_text": null
+  },
+  {
    "key": "engine_oil_viscosity",
    "value": "SAE 75W-90",
    "unit": null,
@@ -148,8 +231,74 @@
   {
    "page": 435,
    "key": "fuel_tank_l",
-   "row": "Fuel | 76 | · See\"Fuelinformation\"(P.10-4).",
-   "reason": "no volume"
+   "row": "Fuel 76 20 gal 16-5/8 gal",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Drain and refill model Drive (2WD) change 4.8 5-1/8 qt 4-1/4 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "tion, see \"Engine oil\" (P.8- 4.6 4-7/8 qt 4 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "All-WheelDrive With oil filter 5.4 5-3/4 qt 4-3/4 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "change 5.2 5-1/2 qt 4-5/8 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "line engine model Drive (2WD) change 6.3 6-5/8 qt 5-1/2 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "change 5.8 6-1/8 qt 5-1/8 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "(AWD) model change 6.6 7 qt 5-7/8 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "change 6.1 6-1/2 qt 5-3/8 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "model Standard and premium grade 8.8 9-1/4 qt 7-3/4 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "Sport grade 10.3 10-7/8 qt 9-1/8 qt",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 435,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "Reservoir 0.6 5/8 qt 1/2 qt",
+   "reason": "several volumes on one row"
   }
  ],
  "engine_codes": [],

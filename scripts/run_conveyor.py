@@ -76,6 +76,7 @@ def one(make: str) -> bool:
     if summary.get("stopped_at") or summary.get("quick_check") != "ok" or found or summary.get("stale_without_same_value"):
         print("STOP: review the rehearsal", json.dumps({"conflicts": found[:20], "stale": summary.get("stale_without_same_value", [])[:20]}, ensure_ascii=False, indent=1))
         return False
+    first = not any((ROOT / f"data_work/{make}/staging/{line.slug}/load_report.json").exists() for line in lines_for(make))
     r = sh([PY, "scripts/run_make_pass.py", make, "live"])
     live = json.loads((ROOT / f"data_work/{make}/staging/load_pass_live.json").read_text(encoding="utf-8"))
     print(f"live: stopped_at={live.get('stopped_at')} quick_check={live.get('quick_check')} fk={live.get('foreign_key_violations')}", flush=True)
@@ -94,9 +95,10 @@ def one(make: str) -> bool:
         counts["te"] += sum(n for k, n in c.items() if k.startswith("te_new"))
         counts["issues_updated"] += c.get("issues_updated", 0)
         counts["maintenance"] += c.get("maintenance_new", 0)
-    message = (
-        f"data(us): {name} — owner's manual facts, press specifications, CarComplaints (second pass)\n\n"
-        f"Lines: {', '.join(v for v in live.get('lines', {}))}. New technical evidence rows: {counts['te']}; "
+    title = (f"data(us): {name} — first load: base layer (EPA, vPIC, NHTSA, known issues), manual and press facts, CarComplaints\n\n"
+             if first else f"data(us): {name} — owner's manual facts, press specifications, CarComplaints (second pass)\n\n")
+    message = title + (
+        f"Lines:{', '.join(v for v in live.get('lines', {}))}. New technical evidence rows: {counts['te']}; "
         f"issues updated with CarComplaints evidence: {counts['issues_updated']}; maintenance items: {counts['maintenance']}.\n"
         f"Lines reloaded with --replace-own (generation blocks changed): {live.get('replace_own') or 'none'}.\n"
         f"Live: quick_check ok, FK violations {live.get('foreign_key_violations')}, 0 conflicts, 0 stale values "

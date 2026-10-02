@@ -20,7 +20,7 @@
   "publisher": "infiniti (manufacturer domain owners.infinitiusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 445,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,69 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "fuel_tank_l",
+   "value": 67.7,
+   "unit": "L",
+   "page": 399,
+   "quote": "17-7/8 gal",
+   "row": "Fuel | 14-7/8gal | 67.4 | 17-7/8gal | ·See\"Fuelinformation\"(P.9-4).",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "17-7/8gal",
+   "approx_in_source": false
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF",
+   "unit": null,
+   "page": 399,
+   "quote": "Genuine NISSAN Matic S ATF",
+   "row": "Automatic transmission fluid | · Genuine NISSAN Matic S ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Matic S",
+   "unit": null,
+   "page": 399,
+   "quote": "Matic S",
+   "row": "NISSAN Matic S ATF may cause deterioration in",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF",
+   "unit": null,
+   "page": 399,
+   "quote": "Genuine NISSAN Matic J ATF",
+   "row": "Transfer fluid | — | — | — | · Genuine NISSAN Matic J ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J",
+   "unit": null,
+   "page": 399,
+   "quote": "Genuine NISSAN Matic J",
+   "row": "· Using transfer fluid other than Genuine NISSAN Matic J",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "unit": null,
+   "page": 399,
+   "quote": "DOT 3",
+   "row": "equivalent DOT 3",
+   "label": "brake fluid",
+   "engine_text": null
+  },
   {
    "key": "engine_oil_viscosity",
    "value": "SAE 5W-30",
@@ -78,9 +141,32 @@
   {
    "page": 399,
    "key": "fuel_tank_l",
-   "row": "Fuel | 17-7/8gal | ·See\"Fuelinformation\"(P.9-4).",
-   "reason": "quote not in page text",
-   "quote": "8gal"
+   "row": "Fuel 17-7/8 gal 14-7/8 gal 67.4 · See \"Fuel information\" (P.9-4).",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 399,
+   "key": "engine_oil_capacity_l",
+   "row": "Engine oil *1 With oil filter change 5-1/8 qt 4-3/8 qt 4.9 · Genuine NISSAN engine oil or equivalent",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 399,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "engine oil and oil filter\" (P.8-14). Without oil filter change 4-7/8 qt 4.0 qt 4.6",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 399,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine coolant With reservoir Pressurized radiator reservoir tank 11-3/8 qt 9-1/2 qt 10.8 · Pre-diluted Genuine NISSAN Long Life Antifreeze/Cool-",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 399,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Non-pressurized radiator 2WD model 10-3/8 qt 8-5/8 qt 9.8",
+   "reason": "several volumes on one row"
   }
  ],
  "engine_codes": [],

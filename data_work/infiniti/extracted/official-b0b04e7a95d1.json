@@ -20,7 +20,7 @@
   "publisher": "infiniti (manufacturer domain owners.infinitiusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 468,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,55 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "fuel_tank_l",
+   "value": 75.7,
+   "unit": "L",
+   "page": 426,
+   "quote": "20 gal",
+   "row": "Fuel | 76L | 16-5/8gal | 20gal | (cid:194)See\"Fuelinformation(forVR30DDTTenginemodel)\"(P.10-4)or \"Fuelinformation(for2.0Lturbogasolineenginemodel)\"(P.10-6).",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "20gal",
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5.3,
+   "unit": "L",
+   "page": 426,
+   "quote": "5.3 L 5-5/8 qt",
+   "row": "Drain and refill | gine model | Drive (2WD) change | 5.3 L | 5-5/8 qt | 4-5/8 qt",
+   "label": "engine_oil_capacity_drain_refill_l",
+   "engine_text": null,
+   "original": "5.3 L 5-5/8 qt",
+   "drive": "2WD",
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_l",
+   "value": 5.9,
+   "unit": "L",
+   "page": 426,
+   "quote": "5.9 L 6-1/4 qt",
+   "row": "All-Wheel | With oil filter | 5.9 L | 6-1/4 qt | 5-1/4 qt",
+   "label": "engine_oil_capacity_l",
+   "engine_text": null,
+   "original": "5.9 L 6-1/4 qt",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "coolant",
+   "value": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "unit": null,
+   "page": 426,
+   "quote": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "row": "(cid:194) Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "label": "coolant",
+   "engine_text": null
+  },
   {
    "key": "engine_oil_oem_approval",
    "value": "MB229.71",
@@ -104,6 +153,67 @@
    "engine_text": null
   },
   {
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "unit": null,
+   "page": 427,
+   "quote": "DOT 3",
+   "row": "Brakefluid | Refilltotheproperoillevelaccordingtothe instructionsinthe\"8.Do-it-yourself\"section. | (cid:194)GenuineNISSANSuperHeavyDutyBrakeFluid*2orequivalent DOT3 *2:AvailableinmainlandU.S.A.throughanINFINITIretailer.",
+   "label": "brake fluid",
+   "engine_text": null,
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF",
+   "unit": null,
+   "page": 427,
+   "quote": "Genuine NISSAN Matic S ATF",
+   "row": "Genuine NISSAN Matic S ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF ONLY",
+   "unit": null,
+   "page": 427,
+   "quote": "Genuine NISSAN Matic S ATF ONLY",
+   "row": "INFINITI recommends using Genuine NISSAN Matic S ATF ONLY",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S",
+   "unit": null,
+   "page": 427,
+   "quote": "Genuine NISSAN Matic S",
+   "row": "Using fluids that are not equivalent to Genuine NISSAN Matic S",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF",
+   "unit": null,
+   "page": 427,
+   "quote": "Genuine NISSAN Matic J ATF",
+   "row": "Genuine NISSAN Matic J ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF may damage",
+   "unit": null,
+   "page": 427,
+   "quote": "Genuine NISSAN Matic J ATF may damage",
+   "row": "are not equivalent to Genuine NISSAN Matic J ATF may damage",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
    "key": "octane_aki",
    "value": 91,
    "unit": null,
@@ -167,16 +277,9 @@
  "review": [
   {
    "page": 426,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 76L | (cid:194)See\"Fuelinformation(forVR30DDTTenginemodel)\"(P.10-4)or \"Fuelinformation(for2.0Lturbogasolineenginemodel)\"(P.10-6).",
-   "reason": "no volume"
-  },
-  {
-   "page": 427,
-   "key": "brake_fluid",
-   "row": "Brakefluid | Refilltotheproperoillevelaccordingtothe instructionsinthe\"8.Do-it-yourself\"section. | (cid:194)GenuineNISSANSuperHeavyDutyBrakeFluid*2orequivalent DOT3 *2:AvailableinmainlandU.S.A.throughanINFINITIretailer.",
-   "reason": "quote not in page text",
-   "quote": "DOT3"
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "tion, see \"Engine oil\" (P.8- 5.1 L 5-3/8 qt 4-1/2 qt",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

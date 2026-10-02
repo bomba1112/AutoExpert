@@ -20,7 +20,7 @@
   "publisher": "infiniti (manufacturer domain owners.infinitiusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 477,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,29 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "fuel_tank_l",
+   "value": 75.7,
+   "unit": "L",
+   "page": 429,
+   "quote": "20 gal",
+   "row": "Fuel | 16-5/8gal | 76 | 20gal | · See\"Fuelinformation\"(P.10-4).",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "20gal",
+   "approx_in_source": false
+  },
+  {
+   "key": "coolant",
+   "value": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "unit": null,
+   "page": 429,
+   "quote": "Genuine NISSAN Long Life Antifreeze/Coolant (blue)",
+   "row": "Engine coolant | VR30DDTT engine Total (with reservoir) | · Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue) or",
+   "label": "coolant",
+   "engine_text": null
+  },
   {
    "key": "engine_oil_viscosity",
    "value": "SAE 0W-20",
@@ -114,6 +137,56 @@
    "engine_text": null
   },
   {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S ATF",
+   "unit": null,
+   "page": 430,
+   "quote": "Genuine NISSAN Matic S ATF",
+   "row": "· Genuine NISSAN Matic S ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic S",
+   "unit": null,
+   "page": 430,
+   "quote": "Genuine NISSAN Matic S",
+   "row": "· Using automatic transmission fluid other than Genuine NISSAN Matic S",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF",
+   "unit": null,
+   "page": 430,
+   "quote": "Genuine NISSAN Matic J ATF",
+   "row": "· Genuine NISSAN Matic J ATF",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN Matic J ATF may cause",
+   "unit": null,
+   "page": 430,
+   "quote": "Genuine NISSAN Matic J ATF may cause",
+   "row": "· Using transfer fluid other than Genuine NISSAN Matic J ATF may cause",
+   "label": "transmission fluid",
+   "engine_text": null
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "unit": null,
+   "page": 430,
+   "quote": "DOT 3",
+   "row": "· Genuine NISSAN Super Heavy Duty Brake Fluid*4 or equivalent DOT 3",
+   "label": "brake fluid",
+   "engine_text": null
+  },
+  {
    "key": "octane_aki",
    "value": 91,
    "unit": null,
@@ -148,9 +221,68 @@
   {
    "page": 429,
    "key": "fuel_tank_l",
-   "row": "Fuel | 20gal | · See\"Fuelinformation\"(P.10-4).",
-   "reason": "quote not in page text",
-   "quote": "20gal"
+   "row": "Fuel 20 gal 16-5/8 gal 76 · See \"Fuel information\" (P.10-4).",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "5-1/8 qt 4-1/4 qt 4.8 Mark*2, 0W-20*3",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "tion, see \"Engine oil\" (P.8- 4-7/8 qt 4 qt 4.6 r e co m m en d a t i o n \" ( P. 1 0 - 6 ) o f t h i s m a n ua l .",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "5-3/4 qt 4-3/4 qt 5.4 necessary to maintain the INFINITI new vehicle limited warranty.",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "Without oil filter 5-1/2 qt 4-5/8 qt 5.2",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "6-1/8 qt 5-1/8 qt 5.8 specification MB229.5, viscosity SAE 0W-40, 5W-30 and 5W-40 may be",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "7 qt 5-7/8 qt 6.6 · Foradditionalinformation,referto\"Selectingthecorrectoil\"(P.10-7)and",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "engine_oil_capacity_without_filter_l",
+   "row": "Without oil filter (P.10-6) of this manual. 6-1/2 qt 5-3/8 qt 6.1",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "coolant_capacity_l",
+   "row": "Reservoir while using non-genuine engine coolant may not be covered by the 1 qt 3/4 qt 0.9",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "coolant_capacity_l",
+   "row": "Intercooler coolant Total (with reservoir) 3-3/8 qt 2-7/8 qt 3.2 · Pre-diluted Genuine NISSAN Long Life Antifreeze/Coolant (blue) or",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 429,
+   "key": "coolant_capacity_l",
+   "row": "Reservoir 3/8 qt 3/8 qt 0.4",
+   "reason": "several volumes on one row"
   }
  ],
  "engine_codes": [],
