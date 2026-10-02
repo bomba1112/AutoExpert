@@ -2,31 +2,95 @@
  "generations": [
   {
    "code": "VIII",
-   "action": "filled",
-   "end_year": 2015
+   "action": "unchanged"
   },
   {
    "code": "IX",
-   "action": "filled",
-   "start_year": 2016,
-   "end_year": 2025
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T09:55:58+00:00",
+ "started_at": "2026-10-02T16:27:16+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "malibu-IX-recall-18V358000",
+   "changes": {
+    "evidence_ids": [
+     19,
+     20
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Loses Power, Stalls\" (owner reports): MY2018: #2, average cost to fix N/A, average mileage 37,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "malibu-IX-tsb-loss-of-power",
+   "changes": {
+    "evidence_ids": [
+     48,
+     49
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Loss Of Power\" (owner reports): MY2016: #1, average cost to fix $500, average mileage 53,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "malibu-IX-complaints-brake-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     1,
+     2
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Brake Failure, Multiple Problems\" (owner reports): MY2016: #3, average cost to fix $1,500, average mileage 96,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "malibu-IX-complaints-engine-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     1,
+     2
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Engine Failure\" (owner reports): MY2020: #2, average cost to fix N/A, average mileage 16,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 53,
-  "source_records_new": 48,
-  "te_new_GENERATION": 477,
-  "te_new_CONFIGURATION": 297,
+  "raw_documents_seen": 71,
+  "source_records_new": 18,
+  "te_existing": 774,
+  "te_new_GENERATION": 50,
   "configurations": 27,
   "configurations_linked": 5,
   "configurations_research_only": 22,
-  "issues_new": 70
+  "issues_existing": 70,
+  "issues_updated": 4
  },
- "finished_at": "2026-10-02T09:56:14+00:00"
+ "finished_at": "2026-10-02T16:27:22+00:00"
 }

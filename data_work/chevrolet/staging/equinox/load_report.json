@@ -2,20 +2,15 @@
  "generations": [
   {
    "code": "2010 redesign (US)",
-   "action": "filled",
-   "end_year": 2017
+   "action": "unchanged"
   },
   {
    "code": "US2018-2024",
-   "action": "created",
-   "start_year": 2018,
-   "end_year": 2024
+   "action": "unchanged"
   },
   {
    "code": "US2025+",
-   "action": "created",
-   "start_year": 2025,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
@@ -311,16 +306,137 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T09:56:32+00:00",
+ "started_at": "2026-10-02T16:27:31+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "equinox-2010 redesign (US)-tsb-oil-consumption",
+   "changes": {
+    "evidence_ids": [
+     2,
+     3
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Excessive Oil Consumption\" (owner reports): MY2014: #1, average cost to fix $2,800, average mileage 103,000 mi; MY2016: #3, average cost to fix $1,800, average mileage 94,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-2010 redesign (US)-tsb-timing-drive",
+   "changes": {
+    "evidence_ids": [
+     2,
+     3
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Timing Chain Loosened Causing Engine Failure\" (owner reports): MY2015: #2, average cost to fix $12,000, average mileage 100,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-US2018-2024-tsb-battery-drain",
+   "changes": {
+    "evidence_ids": [
+     52,
+     54
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Engine Will Not Start Intermittently (No Turn Over - ...\" (owner reports): MY2023: #1, average cost to fix N/A, average mileage 15,000 mi | CarComplaints.com \"Engine Will Not Start Intermittently -No Starter Response\" (owner reports): MY2023: #2, average cost to fix N/A, average mileage 7,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-US2018-2024-tsb-brake-assist",
+   "changes": {
+    "evidence_ids": [
+     5,
+     6
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Service Brake Assist Alert\" (owner reports): MY2020: #2, average cost to fix N/A, average mileage 1,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-US2018-2024-tsb-hesitation",
+   "changes": {
+    "evidence_ids": [
+     10,
+     11
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Engine Hesitation\" (owner reports): MY2020: #1, average cost to fix $5,000, average mileage 44,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-US2018-2024-tsb-infotainment",
+   "changes": {
+    "evidence_ids": [
+     13,
+     14
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Apple Carplay Navigation Errors\" (owner reports): MY2024: #1, average cost to fix N/A, average mileage 0 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-US2018-2024-tsb-loss-of-power",
+   "changes": {
+    "evidence_ids": [
+     42,
+     43
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Loss Of Power/ High Rpm No Acceleration\" (owner reports): MY2023: #3, average cost to fix N/A, average mileage 19,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "equinox-2010 redesign (US)-complaints-engine-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     1,
+     4
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Rear Main Seal And Engine Blown\" (owner reports): MY2014: #3, average cost to fix $4,300, average mileage 113,000 mi | CarComplaints.com \"Timing Chain Loosened Causing Engine Failure\" (owner reports): MY2015: #2, average cost to fix $12,000, average mileage 100,000 mi | CarComplaints.com \"Excessive Oil Consumption - Engine Failure\" (owner reports): MY2016: #2, average cost to fix $9,500, average mileage 95,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 44,
-  "source_records_new": 27,
-  "te_new_GENERATION": 585,
-  "te_new_CONFIGURATION": 524,
+  "raw_documents_seen": 77,
+  "source_records_new": 33,
+  "te_existing": 1109,
+  "te_new_GENERATION": 94,
+  "te_new_ENGINE": 2,
   "configurations": 44,
   "configurations_research_only": 44,
-  "issues_new": 74
+  "issues_existing": 74,
+  "issues_updated": 8,
+  "issues_new": 1
  },
- "finished_at": "2026-10-02T09:56:52+00:00"
+ "finished_at": "2026-10-02T16:27:40+00:00"
 }

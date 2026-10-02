@@ -2,15 +2,11 @@
  "generations": [
   {
    "code": "US2014-2015",
-   "action": "created",
-   "start_year": null,
-   "end_year": 2015
+   "action": "unchanged"
   },
   {
    "code": "II",
-   "action": "filled",
-   "start_year": 2016,
-   "end_year": 2019
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
@@ -23,17 +19,80 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T09:58:42+00:00",
+ "started_at": "2026-10-02T16:27:23+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "cruze-II-tsb-fuel-pump-stall",
+   "changes": {
+    "evidence_ids": [
+     26,
+     27
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Fuel Pump Failed\" (owner reports): MY2019: #1, average cost to fix $800, average mileage 47,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "cruze-II-tsb-transmission-failure",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     7,
+     8
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Transmission Slips\" (owner reports): MY2018: #1, average cost to fix N/A, average mileage 6,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "cruze-US2014-2015-tsb-coolant-leak",
+   "changes": {
+    "evidence_ids": [
+     7,
+     8
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Water Pump Stopped Working\" (owner reports): MY2014: #2, average cost to fix $2,800, average mileage 83,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "cruze-US2014-2015-tsb-overheating",
+   "changes": {
+    "evidence_ids": [
+     4,
+     5
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Overheating\" (owner reports): MY2014: #3, average cost to fix $1,600, average mileage 84,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 25,
-  "source_records_new": 14,
-  "te_new_GENERATION": 448,
-  "te_new_CONFIGURATION": 388,
+  "raw_documents_seen": 35,
+  "source_records_new": 10,
+  "te_existing": 836,
+  "te_new_GENERATION": 24,
   "configurations": 28,
   "configurations_research_only": 26,
   "configurations_linked": 2,
-  "issues_new": 63
+  "issues_existing": 63,
+  "issues_updated": 4
  },
- "finished_at": "2026-10-02T09:58:52+00:00"
+ "finished_at": "2026-10-02T16:27:29+00:00"
 }

@@ -9290,7 +9290,7 @@
      "US2015-2022|battery-drain"
     ],
     "carcomplaints": [
-     "US2015-2022|car_won_t_start_won_t_turn_over"
+     "US2015-2022|car_wont_start_wont_turn_over"
     ]
    },
    "rule": "TSB + CarComplaints (probability +1)",
@@ -10405,14 +10405,14 @@
    "rule": "complaint pattern only (owner reports)"
   },
   {
-   "id": "trax-US2015-2022-cc-a_c_not_working_properly",
+   "id": "trax-US2015-2022-cc-AC_not_working_properly",
    "generation": "US2015-2022",
    "years": [
     2015,
     2016
    ],
    "scope_level": "GENERATION",
-   "component": "UNKNOWN",
+   "component": "AC_HEATER",
    "title": "Owners report (CarComplaints.com): A/C Not Working Properly",
    "symptoms": [
     "A/C Not Working Properly"
@@ -10429,7 +10429,7 @@
     "tsbs": [],
     "complaint_patterns": [],
     "carcomplaints": [
-     "US2015-2022|a_c_not_working_properly"
+     "US2015-2022|AC_not_working_properly"
     ]
    },
    "rule": "CarComplaints only, recurring (owner reports; SECONDARY)",
@@ -10438,10 +10438,10 @@
  ],
  "cc_problems": [
   {
-   "key": "US2015-2022|a_c_not_working_properly",
+   "key": "US2015-2022|AC_not_working_properly",
    "generation": "US2015-2022",
    "problem": "A/C Not Working Properly",
-   "category": "",
+   "category": "AC_heater",
    "symptoms": [],
    "by_year": {
     "2015": {
@@ -10450,7 +10450,7 @@
      "avg_mileage": "34,000 mi",
      "quote": "#2: A/C Not Working Properly Average Cost to Fix: $300 Average Mileage: 34,000 mi",
      "url": "https://www.carcomplaints.com/Chevrolet/Trax/2015/",
-     "problem_url": null
+     "problem_url": "https://www.carcomplaints.com/Chevrolet/Trax/2015/AC_heater/AC_not_working_properly.shtml"
     },
     "2016": {
      "rank": 1,
@@ -10458,7 +10458,7 @@
      "avg_mileage": "40,000 mi",
      "quote": "#1: A/C Not Working Properly Average Cost to Fix: $900 Average Mileage: 40,000 mi",
      "url": "https://www.carcomplaints.com/Chevrolet/Trax/2016/",
-     "problem_url": null
+     "problem_url": "https://www.carcomplaints.com/Chevrolet/Trax/2016/AC_heater/AC_not_working_properly.shtml"
     }
    },
    "site_model": "Trax",
@@ -10476,7 +10476,7 @@
    "key": "US2015-2022|car_brakes_lock_down_transmission_goes_into_limp_mode",
    "generation": "US2015-2022",
    "problem": "Car Brakes Lock Down, Transmission Goes Into Limp Mode",
-   "category": "",
+   "category": "electrical",
    "symptoms": [
     "loss-of-power"
    ],
@@ -10487,7 +10487,7 @@
      "avg_mileage": "47,000 mi",
      "quote": "#2: Car Brakes Lock Down, Transmission Goes Into Limp Mode Average Cost to Fix: $700 Average Mileage: 47,000 mi",
      "url": "https://www.carcomplaints.com/Chevrolet/Trax/2020/",
-     "problem_url": null
+     "problem_url": "https://www.carcomplaints.com/Chevrolet/Trax/2020/electrical/car_brakes_lock_down_transmission_goes_into_limp_mode.shtml"
     }
    },
    "site_model": "Trax",
@@ -10501,10 +10501,10 @@
    ]
   },
   {
-   "key": "US2015-2022|car_won_t_start_won_t_turn_over",
+   "key": "US2015-2022|car_wont_start_wont_turn_over",
    "generation": "US2015-2022",
    "problem": "Car Won't Start, Won't Turn Over",
-   "category": "",
+   "category": "electrical",
    "symptoms": [
     "battery-drain"
    ],
@@ -10515,7 +10515,7 @@
      "avg_mileage": "11,000 mi",
      "quote": "#1: Car Won't Start, Won't Turn Over Average Cost to Fix: N/A Average Mileage: 11,000 mi",
      "url": "https://www.carcomplaints.com/Chevrolet/Trax/2021/",
-     "problem_url": null
+     "problem_url": "https://www.carcomplaints.com/Chevrolet/Trax/2021/electrical/car_wont_start_wont_turn_over.shtml"
     }
    },
    "site_model": "Trax",
@@ -10532,7 +10532,7 @@
    "key": "US2024+|broken_connecting_rod_knocked_a_hole_in_the_engine_block",
    "generation": "US2024+",
    "problem": "Broken Connecting Rod Knocked A Hole In The Engine Block",
-   "category": "",
+   "category": "engine",
    "symptoms": [
     "engine-failure"
    ],
@@ -10543,7 +10543,7 @@
      "avg_mileage": "20,000 mi",
      "quote": "#3: Broken Connecting Rod Knocked A Hole In The Engine Block Average Cost to Fix: N/A Average Mileage: 20,000 mi",
      "url": "https://www.carcomplaints.com/Chevrolet/Trax/2024/",
-     "problem_url": null
+     "problem_url": "https://www.carcomplaints.com/Chevrolet/Trax/2024/engine/broken_connecting_rod_knocked_a_hole_in_the_engine_block.shtml"
     }
    },
    "site_model": "Trax",
