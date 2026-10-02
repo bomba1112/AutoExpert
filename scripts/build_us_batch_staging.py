@@ -211,7 +211,9 @@ def family(model_text: str) -> str:
     text = model_text.upper()
     body = BODY_RE.search(text)
     words = text.split()
-    return (words[0] if words else "") + ("|" + body.group(0).upper().replace(" ", "") if body else "")
+    # "C-CLASS C250 ..." (2014) and "C CLASS C 300 ..." (2015+) are the same model word.
+    first = re.sub(r"-CLASS$", "", words[0]) if words else ""
+    return first + ("|" + body.group(0).upper().replace(" ", "") if body else "")
 
 
 def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: list[dict]) -> list[dict]:
@@ -242,34 +244,41 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
     def starting(year, prev):
         return [f for f, ys in fam_years.items() if year in ys and prev not in ys]
 
+    last_year = years[-1]
+
+    def timeline(field, fam):
+        out = defaultdict(set)
+        for r in ca:
+            if r.get(field) and (fam is None or family(r["model"]) == fam):
+                out[r[field]].add(r["year"])
+        return out
+
+    def transition(prev, year, field, fam):
+        """A value appears in `year` and stays (or the data ends), while a value seen before
+        disappears in `prev` or `year`. Transition years with both generations on sale and
+        variants listed every year (short/long wheelbase, trims) do not trigger it."""
+        tl = timeline(field, fam)
+        new = [v for v, ys in tl.items() if min(ys) == year and (len(ys) >= 2 or max(ys) == last_year)]
+        old = [v for v, ys in tl.items() if min(ys) < year and max(ys) in (prev, year)]
+        if not new or not old:
+            return None
+        numbers = all(re.fullmatch(r"\d+", v) for v in new + old)
+        # Within one body family: the largest jump between a disappearing and an appearing
+        # value (variants listed every year are already filtered out above). Across families
+        # (a renamed or replacing body): the smallest jump, so trim spread does not count.
+        pick = max if fam is not None else min
+        step = pick(abs(int(x) - int(y)) for x in old for y in new) if numbers else None
+        return "/".join(sorted(old)), "/".join(sorted(new)), step
+
     def compare(prev, year, field, fam):
-        """(old, new) when the dimension changed between the years, else None."""
-        main_prev = main in fam_years and prev in fam_years[main]
-        main_year = main in fam_years and year in fam_years[main]
-        new_family = None
-        if main_year and not main_prev:
-            new_family = main  # the line's main body family begins this year
-        elif main_prev and not main_year and starting(year, prev):
-            # the main family ends; the family that replaces it is compared with the old year
-            new_family = max(starting(year, prev), key=lambda f: (len(fam_years[f]), f))
-        if new_family is not None:
-            a, b = values(prev, field), values(year, field, new_family)
-            if a and b:
-                old, new = a.most_common(1)[0][0], b.most_common(1)[0][0]
-                return (old, new) if new not in a else None
-            return None
-        if fam is not None:
-            a, b = values(prev, field, fam), values(year, field, fam)
-            if a and b and a.most_common(1)[0][0] != b.most_common(1)[0][0]:
-                return a.most_common(1)[0][0], b.most_common(1)[0][0]
-            return None
-        # No body family spans both years (renamed rows at a redesign, or a body dropped):
-        # count a change only when neither year's main value appears in the other year.
-        a, b = values(prev, field), values(year, field)
-        if not a or not b:
-            return None
-        old, new = a.most_common(1)[0][0], b.most_common(1)[0][0]
-        return (old, new) if old not in b and new not in a else None
+        """Transition within the main body family, or across all rows of the line (bodies are
+        renamed at a redesign); the first that shows one wins."""
+        spans = main is not None and fam == main
+        for scope in [fam] if spans else ([fam] if fam is not None else []) + [None]:
+            found = transition(prev, year, field, scope)
+            if found:
+                return found
+        return None
 
     def db_codes(year):
         return {g["code"] for g in dbgens if year in g["years"]}
@@ -281,7 +290,7 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
         fam = common_family(prev, year)
         changed_wb = compare(prev, year, "wheelbase_cm", fam)
         if changed_wb:
-            a, b = changed_wb
+            a, b, _ = changed_wb
             reasons.append(f"vPIC Canadian specifications: wheelbase {a} cm (MY{prev}) -> {b} cm (MY{year})")
         ca_, cb = db_codes(prev), db_codes(year)
         if ca_ and cb and not (ca_ & cb):
@@ -291,26 +300,26 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
                              ("height_cm", "overall height"), ("track_front_cm", "front track"),
                              ("track_rear_cm", "rear track")):
             pair = compare(prev, year, field, fam)
-            if pair and all(re.fullmatch(r"\d+", v) for v in pair):
-                changes.append((label, int(pair[0]), int(pair[1])))
-        big = [c for c in changes if c[0] in ("overall length", "overall height") and abs(c[2] - c[1]) >= DIMENSION_STEP_CM]
+            if pair and pair[2] is not None:
+                changes.append((label, pair[0], pair[1], pair[2]))
+        big = [c for c in changes if c[0] in ("overall length", "overall height") and c[3] >= DIMENSION_STEP_CM]
         if big:
             reasons.append(
                 "vPIC Canadian specifications: "
-                + ", ".join(f"{label} {x} -> {y} cm" for label, x, y in big)
+                + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in big)
                 + f" (MY{prev} -> MY{year}; a change of {DIMENSION_STEP_CM} cm or more)"
             )
         if year in mcum_starts and changes:
             reasons.append(
                 f"mycarusermanual.com generation page starts at {year} ({mcum_starts[year]}), corroborated by vPIC "
-                + ", ".join(f"{label} {x} -> {y} cm" for label, x, y in changes)
+                + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in changes)
             )
         elif year in mcum_starts:
             st.notes.append(f"MY{year}: mycarusermanual.com generation page starts here, but vPIC shows no dimension change; not used")
         if not reasons and changes:
             st.notes.append(
                 f"MY{year}: vPIC dimension change without a generation signal ("
-                + ", ".join(f"{label} {x} -> {y}" for label, x, y in changes) + "); treated as a facelift"
+                + ", ".join(f"{label} {x} -> {y}" for label, x, y, _ in changes) + "); treated as a facelift"
             )
         if reasons:
             boundaries[year] = reasons

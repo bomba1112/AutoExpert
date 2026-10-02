@@ -1,0 +1,56 @@
+{
+ "make": "Mercedes-Benz",
+ "line": "V-Class",
+ "line_key": "mercedes-benz/v-class",
+ "db_models": [
+  "V-Class"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [],
+ "configurations": [],
+ "facts": [],
+ "recalls": [],
+ "complaint_patterns": [],
+ "symptom_patterns": {},
+ "issues": [],
+ "tsbs": [],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "mercedes-benz/v-class",
+   "field": "all",
+   "reason": "no EPA rows: model not sold in the US in 2014-2026 under this name"
+  }
+ ],
+ "notes": [],
+ "errors": [],
+ "counts": {
+  "generations": 0,
+  "configurations": 0,
+  "facts": 0,
+  "recalls": 0,
+  "symptom_patterns": 0,
+  "issues": 0,
+  "issues_by_probability": {},
+  "tsbs": 0,
+  "errors": 0,
+  "display_levels": {}
+ }
+}

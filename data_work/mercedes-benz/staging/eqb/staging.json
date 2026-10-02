@@ -1,0 +1,3341 @@
+{
+ "make": "Mercedes-Benz",
+ "line": "EQB",
+ "line_key": "mercedes-benz/eqb",
+ "db_models": [
+  "EQB"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-mercedes-benz-2023": {
+   "key": "vpic-ca-mercedes-benz-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/mercedes-benz/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=Mercedes-Benz&model=&units=Metric&format=json",
+   "sha256": "e92d85ee180c920d2ddf393cd3e1cf5a09f7ad37931df4ef40868edfac9808d2",
+   "retrieved_at": "2026-10-02T08:30:01+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Mercedes-Benz 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-mercedes-benz-2024": {
+   "key": "vpic-ca-mercedes-benz-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/mercedes-benz/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=Mercedes-Benz&model=&units=Metric&format=json",
+   "sha256": "71b5ad3356f04fe7d4457013f48a7f81ae03eddd55567ef227075e85eba9bd97",
+   "retrieved_at": "2026-10-02T08:30:06+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Mercedes-Benz 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-mercedes-benz-2025": {
+   "key": "vpic-ca-mercedes-benz-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/mercedes-benz/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=Mercedes-Benz&model=&units=Metric&format=json",
+   "sha256": "9b6b6f8dfdfe17ce93ca83669ce12291ecc9449171c95d5754116a74e81716b1",
+   "retrieved_at": "2026-10-02T08:30:12+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Mercedes-Benz 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-recalls-eqb-300-4matic-2022": {
+   "key": "nhtsa-recalls-eqb-300-4matic-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/eqb-300-4matic_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=EQB+300+4MATIC&modelYear=2022",
+   "sha256": "569f01e9e9c6ca2d4a2289531df90792e87c4f251a6ff76b6b6d96aaaf2c3faf",
+   "retrieved_at": "2026-10-02T09:12:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls EQB 300 4MATIC 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-eqb-350-4matic-2022": {
+   "key": "nhtsa-recalls-eqb-350-4matic-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/eqb-350-4matic_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=EQB+350+4MATIC&modelYear=2022",
+   "sha256": "e4ddde07991a3db474260ad283630bae1b18901c0f36b045193687e685368f9b",
+   "retrieved_at": "2026-10-02T09:12:22+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls EQB 350 4MATIC 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-eqb-2023": {
+   "key": "nhtsa-recalls-eqb-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/eqb_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=EQB&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:13:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls EQB 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-eqb-2024": {
+   "key": "nhtsa-recalls-eqb-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/eqb_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=EQB&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:15:00+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls EQB 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-eqb-300-4matic-2025": {
+   "key": "nhtsa-recalls-eqb-300-4matic-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/eqb-300-4matic_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=EQB+300+4MATIC&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:18:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls EQB 300 4MATIC 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-complaints-eqb-300-4matic-2022": {
+   "key": "nhtsa-complaints-eqb-300-4matic-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/eqb-300-4matic_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=EQB+300+4MATIC&modelYear=2022",
+   "sha256": "2e8d0bf85f055a63401f0d97ad82121403c2face0686fd7bbfcf8158cb81d691",
+   "retrieved_at": "2026-10-02T09:13:08+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints EQB 300 4MATIC 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-eqb-350-4matic-2022": {
+   "key": "nhtsa-complaints-eqb-350-4matic-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/eqb-350-4matic_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=EQB+350+4MATIC&modelYear=2022",
+   "sha256": "714e361b635c05af684955eeee0641878292e2cf342d8009f23a0cfe41dabeb2",
+   "retrieved_at": "2026-10-02T09:13:10+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints EQB 350 4MATIC 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-eqb-2023": {
+   "key": "nhtsa-complaints-eqb-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/eqb_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=EQB&modelYear=2023",
+   "sha256": "12a69a9ddc829d30ff2d4f1f2728e391e5f17389d53467cf0e106d1f3ef4966a",
+   "retrieved_at": "2026-10-02T09:14:35+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints EQB 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-eqb-2024": {
+   "key": "nhtsa-complaints-eqb-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/eqb_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=EQB&modelYear=2024",
+   "sha256": "16dd9a95e3624210fcd8134725eb0829fbb6e247019af01fa4a5cb766b1a64aa",
+   "retrieved_at": "2026-10-02T09:17:51+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints EQB 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-eqb-300-4matic-2025": {
+   "key": "nhtsa-complaints-eqb-300-4matic-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/eqb-300-4matic_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=EQB+300+4MATIC&modelYear=2025",
+   "sha256": "1c2b38d502f696166d586032c1e1e5f8305c22e9c2971391b5804c1c177c4cb3",
+   "retrieved_at": "2026-10-02T09:19:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints EQB 300 4MATIC 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "US2022-2025",
+   "name": "EQB (US, through 2025)",
+   "db_model": "EQB",
+   "existing_id": null,
+   "start_year": 2022,
+   "end_year": 2025,
+   "open_ended": false,
+   "start_known": true,
+   "end_known": true,
+   "boundary_evidence": [
+    "first US model year of the line in EPA vehicles.csv: 2022"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "mercedes-benz-eqb-us-2022-ev-bev-a-a1-awd",
+   "year": 2022,
+   "generation": "US2022-2025",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "46331",
+     "epa_model": "EQB 300 4matic",
+     "city_mpg": 104,
+     "highway_mpg": 98,
+     "combined_mpg": 101,
+     "combined_l_100km": "2.3",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 and 96 kW AC 3-Phase",
+     "range_mi": "243"
+    },
+    {
+     "epa_id": "46332",
+     "epa_model": "EQB 350 4matic",
+     "city_mpg": 98,
+     "highway_mpg": 93,
+     "combined_mpg": 96,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 and 143 kW AC 3-Phase",
+     "range_mi": "227"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-eqb-us-2024-ev-bev-a-a1-awd",
+   "year": 2024,
+   "generation": "US2022-2025",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "47845",
+     "epa_model": "EQB 350 4matic",
+     "city_mpg": 89,
+     "highway_mpg": 85,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 and 96 kW ACPM 3-Phase",
+     "range_mi": "207"
+    },
+    {
+     "epa_id": "48472",
+     "epa_model": "EQB 300 4matic",
+     "city_mpg": 89,
+     "highway_mpg": 85,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 kW ACPM",
+     "range_mi": "205"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-eqb-us-2024-ev-bev-a-a1-fwd",
+   "year": 2024,
+   "generation": "US2022-2025",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "47844",
+     "epa_model": "EQB 250 Plus",
+     "city_mpg": 114,
+     "highway_mpg": 100,
+     "combined_mpg": 107,
+     "combined_l_100km": "2.2",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "140 kW ACPM 3-Phase",
+     "range_mi": "251"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-eqb-us-2025-ev-bev-a-a1-awd",
+   "year": 2025,
+   "generation": "US2022-2025",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "49117",
+     "epa_model": "EQB 300 4matic",
+     "city_mpg": 89,
+     "highway_mpg": 85,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 and 96 kW ACPM 3-Phase",
+     "range_mi": "205"
+    },
+    {
+     "epa_id": "49118",
+     "epa_model": "EQB 350 4matic",
+     "city_mpg": 89,
+     "highway_mpg": 85,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "72 and 96 kW ACPM 3-Phase",
+     "range_mi": "207"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-eqb-us-2025-ev-bev-a-a1-fwd",
+   "year": 2025,
+   "generation": "US2022-2025",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "49116",
+     "epa_model": "EQB 250 Plus",
+     "city_mpg": 114,
+     "highway_mpg": 100,
+     "combined_mpg": 107,
+     "combined_l_100km": "2.2",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "140 kW ACPM 3-Phase",
+     "range_mi": "251"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-curb_weight_kg-2023",
+   "generation": "US2022-2025",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 2040,
+   "unit": "kg",
+   "original": "CW = 2040 (kg, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "CW",
+     "raw_value": "2040",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "CW",
+     "raw_value": "2040",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "CW",
+     "raw_value": "2040",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-height_mm-2023",
+   "generation": "US2022-2025",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1670,
+   "unit": "mm",
+   "original": "OH = 167 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-length_mm-2023",
+   "generation": "US2022-2025",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 4680,
+   "unit": "mm",
+   "original": "OL = 468 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-track_front_mm-2023",
+   "generation": "US2022-2025",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1590,
+   "unit": "mm",
+   "original": "TWF = 159 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-track_rear_mm-2023",
+   "generation": "US2022-2025",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWR = 158 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-weight_distribution_front_rear_pct-2023",
+   "generation": "US2022-2025",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": "54/46",
+   "unit": "%",
+   "original": "WD = 54/46 (front/rear %, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-wheelbase_mm-2023",
+   "generation": "US2022-2025",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 2830,
+   "unit": "mm",
+   "original": "WB = 283 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-250-4dr-suv-width_mm-2023",
+   "generation": "US2022-2025",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1830,
+   "unit": "mm",
+   "original": "OW = 183 (cm, Canadian specification row 'EQB CLASS 250 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 250 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 250 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-curb_weight_kg-2023",
+   "generation": "US2022-2025",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 2175,
+   "unit": "kg",
+   "original": "CW = 2175 (kg, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "CW",
+     "raw_value": "2175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "CW",
+     "raw_value": "2175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "CW",
+     "raw_value": "2175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-height_mm-2023",
+   "generation": "US2022-2025",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1670,
+   "unit": "mm",
+   "original": "OH = 167 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OH",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-length_mm-2023",
+   "generation": "US2022-2025",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 4680,
+   "unit": "mm",
+   "original": "OL = 468 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OL",
+     "raw_value": "468",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-track_front_mm-2023",
+   "generation": "US2022-2025",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1590,
+   "unit": "mm",
+   "original": "TWF = 159 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWF",
+     "raw_value": "159",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-track_rear_mm-2023",
+   "generation": "US2022-2025",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWR = 158 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-weight_distribution_front_rear_pct-2023",
+   "generation": "US2022-2025",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-wheelbase_mm-2023",
+   "generation": "US2022-2025",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 2830,
+   "unit": "mm",
+   "original": "WB = 283 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "WB",
+     "raw_value": "283",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  },
+  {
+   "id": "eqb-US2022-2025-vpic-eqb-class-350-4matic-4dr-suv-width_mm-2023",
+   "generation": "US2022-2025",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2023,
+    2025
+   ],
+   "value": 1830,
+   "unit": "mm",
+   "original": "OW = 183 (cm, Canadian specification row 'EQB CLASS 350 4MATIC 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "EQB CLASS 350 4MATIC 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-mercedes-benz-2023",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2024",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-mercedes-benz-2025",
+     "pages": null,
+     "quote": "EQB CLASS 350 4MATIC 4DR SUV",
+     "field": "OW",
+     "raw_value": "183",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-mercedes-benz-2023"
+  }
+ ],
+ "recalls": [
+  {
+   "campaign_number": "24V331000",
+   "component": "POWER TRAIN",
+   "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022 EQB 300 and EQB 350 vehicles.  The welded spur gear within the front axle electric drivetrain may not have been welded properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 114, \"Theft Protection.\"",
+   "consequence": "An improperly welded spur gear can fail and result in a vehicle rollaway, increasing the risk of a crash.",
+   "remedy": "Dealers will replace the front axle electric drivetrain, free of charge.   Owner notification letters were mailed on August 9, 2024.  Owners may contact MBUSA at 1-800-367-6372.  MBUSA's number for this recall is 2024060007.",
+   "report_received_date": "10/05/2024",
+   "manufacturer": "Mercedes-Benz USA, LLC",
+   "generation": "US2022-2025",
+   "model_years": [
+    2022
+   ],
+   "years": [
+    2022,
+    2022
+   ],
+   "nhtsa_models": [
+    "EQB 300 4MATIC",
+    "EQB 350 4MATIC"
+   ],
+   "source": "nhtsa-recalls-eqb-300-4matic-2022",
+   "sources": [
+    "nhtsa-recalls-eqb-300-4matic-2022",
+    "nhtsa-recalls-eqb-350-4matic-2022"
+   ]
+  },
+  {
+   "campaign_number": "25V050000",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022-2025 EQB 250, EQB 300 4MATIC, and EQB 350 4MATIC electric vehicles.  The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequence": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "remedy": "Owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the repair has been completed.  Dealers will update the battery management system software, free of charge.  Owner notification letters were mailed on  May 22, 2025. This is a phased recall. Phase 1 owner letters were mailed on May 22, 2025. Phase 2 owner letters were mailed on October 31, 2025 and Phase 3 owner letters were mailed on December 12, 2025. Owners may contact MBUSA customer service at 1-800-367-6372.  MBUSA's number for this recall is 2025040005.",
+   "report_received_date": "07/02/2025",
+   "manufacturer": "Mercedes-Benz USA, LLC",
+   "generation": "US2022-2025",
+   "model_years": [
+    2022
+   ],
+   "years": [
+    2022,
+    2022
+   ],
+   "nhtsa_models": [
+    "EQB 300 4MATIC",
+    "EQB 350 4MATIC"
+   ],
+   "source": "nhtsa-recalls-eqb-300-4matic-2022",
+   "sources": [
+    "nhtsa-recalls-eqb-300-4matic-2022",
+    "nhtsa-recalls-eqb-350-4matic-2022"
+   ]
+  },
+  {
+   "campaign_number": "25V487000",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022-2023  EQB 350 4MATIC, and EQB 300 4MATIC vehicles. The bus bar in the high voltage battery may be secured with incorrect screws, which can cause the system to have a sudden loss of drive power without warning.",
+   "consequence": "A loss of drive power increases the risk of a crash.",
+   "remedy": "Owners are advised to park outside until the recall repair is complete. Dealers will inspect and replace the high-voltage battery as necessary, free of charge. This will be a phased campaign, with the remedy becoming available in different phases based on model and model years. Owner notification letters were mailed January 9, 2026.  Owners may contact MBUSA customer service at 1-800-367-6372. MBUSA's number for this recall is 2025080004.",
+   "report_received_date": "25/07/2025",
+   "manufacturer": "Mercedes-Benz USA, LLC",
+   "generation": "US2022-2025",
+   "model_years": [
+    2022
+   ],
+   "years": [
+    2022,
+    2022
+   ],
+   "nhtsa_models": [
+    "EQB 300 4MATIC",
+    "EQB 350 4MATIC"
+   ],
+   "source": "nhtsa-recalls-eqb-300-4matic-2022",
+   "sources": [
+    "nhtsa-recalls-eqb-300-4matic-2022",
+    "nhtsa-recalls-eqb-350-4matic-2022"
+   ]
+  },
+  {
+   "campaign_number": "25V894000",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2023 EQB 250, 2022-2023 EQB 300 4MATIC, and EQB 350 4MATIC vehicles. The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequence": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "remedy": "Owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the repair has been completed.  Vehicles previously repaired under Recall 25V050 will need to be repaired again. Dealers will update the battery management system software, free of charge. Owner notification letters were mailed February 6, 2026. Owners may contact MBUSA customer service at 1-800-367-6372. MBUSA's number for this recall is 2025120005. Vehicle Identification Numbers (VINs) involved in this recall will be searchable on NHTSA.gov on December 23, 2025.",
+   "report_received_date": "19/12/2025",
+   "manufacturer": "Mercedes-Benz USA, LLC",
+   "generation": "US2022-2025",
+   "model_years": [
+    2022
+   ],
+   "years": [
+    2022,
+    2022
+   ],
+   "nhtsa_models": [
+    "EQB 300 4MATIC",
+    "EQB 350 4MATIC"
+   ],
+   "source": "nhtsa-recalls-eqb-300-4matic-2022",
+   "sources": [
+    "nhtsa-recalls-eqb-300-4matic-2022",
+    "nhtsa-recalls-eqb-350-4matic-2022"
+   ]
+  },
+  {
+   "campaign_number": "26V073000",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2023-2024 EQB 250+, 2022-2024 EQB 300 4MATIC, and EQB 350 4MATIC vehicles. The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequence": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "remedy": "Owners are advised to park outside and away from structures until the recall repair is complete. Also, owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the remedy has been completed. Dealers will replace the high voltage battery, free of charge. Interim letters, notifying owners of the safety risk, were mailed March 13, 2026. Additional letters will be sent once the final remedy is available. This recall replaces recalls 25V050 and 25V894. Vehicles previously repaired under recall 25V050 or 25V894 will need to have the new remedy completed. Owners may contact MBUSA customer service at 1-800-367-6372. Vehicle Identification Numbers (VINs) involved in this recall will be searchable on NHTSA.gov beginning February 13, 2026.",
+   "report_received_date": "06/02/2026",
+   "manufacturer": "Mercedes-Benz USA, LLC",
+   "generation": "US2022-2025",
+   "model_years": [
+    2022
+   ],
+   "years": [
+    2022,
+    2022
+   ],
+   "nhtsa_models": [
+    "EQB 300 4MATIC",
+    "EQB 350 4MATIC"
+   ],
+   "source": "nhtsa-recalls-eqb-300-4matic-2022",
+   "sources": [
+    "nhtsa-recalls-eqb-300-4matic-2022",
+    "nhtsa-recalls-eqb-350-4matic-2022"
+   ]
+  }
+ ],
+ "complaint_patterns": [
+  {
+   "generation": "US2022-2025",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 97,
+   "by_year": {
+    "2022": 18,
+    "2023": 72,
+    "2024": 6,
+    "2025": 1
+   },
+   "sample_odi": [
+    11766221,
+    11764845,
+    11758466,
+    11741759,
+    11738333,
+    11732935,
+    11730199,
+    11728360,
+    11726005,
+    11690713,
+    11759519,
+    11752480,
+    11748664,
+    11744726,
+    11736651,
+    11731916,
+    11730230,
+    11512639,
+    11767494,
+    11764816,
+    11761084,
+    11760111,
+    11752312,
+    11751342,
+    11750608
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "UNKNOWN OR OTHER",
+   "count": 24,
+   "by_year": {
+    "2022": 3,
+    "2023": 16,
+    "2024": 4,
+    "2025": 1
+   },
+   "sample_odi": [
+    11766366,
+    11748664,
+    11697247,
+    11760604,
+    11760111,
+    11756741,
+    11744343,
+    11732704,
+    11730953,
+    11729151,
+    11725709,
+    11721612,
+    11719844,
+    11697675,
+    11696868,
+    11664100,
+    11659224,
+    11642086,
+    11556308,
+    11744015,
+    11718584,
+    11652624,
+    11641571,
+    11756857
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 23,
+   "by_year": {
+    "2022": 5,
+    "2023": 16,
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11764845,
+    11732935,
+    11726005,
+    11759519,
+    11730230,
+    11767494,
+    11751342,
+    11744240,
+    11741394,
+    11739346,
+    11736400,
+    11733927,
+    11732255,
+    11729151,
+    11725380,
+    11725036,
+    11724702,
+    11719844,
+    11710665,
+    11697675,
+    11689827,
+    11727121,
+    11756857
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "ENGINE",
+   "count": 15,
+   "by_year": {
+    "2022": 2,
+    "2023": 10,
+    "2024": 3
+   },
+   "sample_odi": [
+    11690713,
+    11759519,
+    11767494,
+    11751342,
+    11742099,
+    11736761,
+    11734681,
+    11732704,
+    11732255,
+    11727710,
+    11727383,
+    11726059,
+    11746037,
+    11744337,
+    11724420
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "POWER TRAIN",
+   "count": 8,
+   "by_year": {
+    "2022": 2,
+    "2023": 6
+   },
+   "sample_odi": [
+    11764845,
+    11730230,
+    11760111,
+    11737954,
+    11730623,
+    11727383,
+    11725380,
+    11710665
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 4,
+   "by_year": {
+    "2023": 3,
+    "2024": 1
+   },
+   "sample_odi": [
+    11736984,
+    11642086,
+    11558792,
+    11744337
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "SERVICE BRAKES",
+   "count": 3,
+   "by_year": {
+    "2023": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11641405,
+    11558792,
+    11699909
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11699909,
+    11756857
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "AIR BAGS",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11559516
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "BACK OVER PREVENTION",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11736984
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "LANE DEPARTURE",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11558792
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "SEAT BELTS",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11559516
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "SEATS",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11736761
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "STRUCTURE",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11730953
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "VISIBILITY/WIPER",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11696777
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022-2025",
+   "component": "WHEELS",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11560751
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "US2022-2025|hybrid-system": {
+   "key": "US2022-2025|hybrid-system",
+   "label": "hybrid / high-voltage system",
+   "count": 34,
+   "by_year": {
+    "2022": 6,
+    "2023": 26,
+    "2024": 2
+   },
+   "sample_odi": [
+    11738333,
+    11732935,
+    11766366,
+    11759519,
+    11748664,
+    11730230,
+    11764816,
+    11761084,
+    11760604,
+    11760111,
+    11744240,
+    11744343,
+    11742099,
+    11739346,
+    11737006,
+    11736387,
+    11734681,
+    11732966,
+    11732704,
+    11730953,
+    11730623,
+    11730676,
+    11729151,
+    11727721,
+    11727383
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-2023"
+  },
+  "US2022-2025|fuel-pump-stall": {
+   "key": "US2022-2025|fuel-pump-stall",
+   "label": "fuel pump / stalling",
+   "count": 2,
+   "by_year": {
+    "2022": 2
+   },
+   "sample_odi": [
+    11690713,
+    11730230
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-300-4matic-2022"
+  },
+  "US2022-2025|loss-of-power": {
+   "key": "US2022-2025|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 2,
+   "by_year": {
+    "2022": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11690713,
+    11697675
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-2023"
+  },
+  "US2022-2025|battery-drain": {
+   "key": "US2022-2025|battery-drain",
+   "label": "battery drain / no start",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11752480
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-350-4matic-2022"
+  },
+  "US2022-2025|overheating": {
+   "key": "US2022-2025|overheating",
+   "label": "overheating",
+   "count": 3,
+   "by_year": {
+    "2023": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11767494,
+    11737954,
+    11746037
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-2023"
+  },
+  "US2022-2025|engine-fire": {
+   "key": "US2022-2025|engine-fire",
+   "label": "engine compartment fire",
+   "count": 9,
+   "by_year": {
+    "2023": 9
+   },
+   "sample_odi": [
+    11760111,
+    11739346,
+    11736387,
+    11731113,
+    11730623,
+    11730676,
+    11729151,
+    11727383,
+    11725709
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-2023"
+  },
+  "US2022-2025|false-braking": {
+   "key": "US2022-2025|false-braking",
+   "label": "pre-collision false braking",
+   "count": 3,
+   "by_year": {
+    "2023": 1,
+    "2024": 2
+   },
+   "sample_odi": [
+    11642086,
+    11720017,
+    11708644
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-eqb-2023"
+  }
+ },
+ "issues": [
+  {
+   "id": "eqb-US2022-2025-recall-24V331000",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN",
+   "title": "NHTSA recall 24V331000: POWER TRAIN",
+   "symptoms": [],
+   "cause": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022 EQB 300 and EQB 350 vehicles.  The welded spur gear within the front axle electric drivetrain may not have been welded properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 114, \"Theft Protection.\"",
+   "consequences": "An improperly welded spur gear can fail and result in a vehicle rollaway, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 24V331000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Dealers will replace the front axle electric drivetrain, free of charge.   Owner notification letters were mailed on August 9, 2024.  Owners may contact MBUSA at 1-800-367-6372.  MBUSA's number for this recall is 2024060007.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "24V331000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "eqb-US2022-2025-recall-25V050000",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "title": "NHTSA recall 25V050000: ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "symptoms": [
+    "hybrid / high-voltage system"
+   ],
+   "cause": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022-2025 EQB 250, EQB 300 4MATIC, and EQB 350 4MATIC electric vehicles.  The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequences": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "inspection": "Check that NHTSA recall 25V050000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the repair has been completed.  Dealers will update the battery management system software, free of charge.  Owner notification letters were mailed on  May 22, 2025. This is a phased recall. Phase 1 owner letters were mailed on May 22, 2025. Phase 2 owner letters were mailed on October 31, 2025 and Phase 3 owner letters were mailed on December 12, 2025. Owners may contact MBUSA customer service at 1-800-367-6372.  MBUSA's number for this recall is 2025040005.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "25V050000"
+    ],
+    "tsbs": [
+     "11018160",
+     "11023153",
+     "11026026",
+     "11026834",
+     "11027583",
+     "11028610",
+     "11028826",
+     "11029023",
+     "11029061",
+     "11036138",
+     "11036192"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|hybrid-system"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-recall-25V487000",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "title": "NHTSA recall 25V487000: ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "symptoms": [
+    "hybrid / high-voltage system"
+   ],
+   "cause": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022-2023  EQB 350 4MATIC, and EQB 300 4MATIC vehicles. The bus bar in the high voltage battery may be secured with incorrect screws, which can cause the system to have a sudden loss of drive power without warning.",
+   "consequences": "A loss of drive power increases the risk of a crash.",
+   "inspection": "Check that NHTSA recall 25V487000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Owners are advised to park outside until the recall repair is complete. Dealers will inspect and replace the high-voltage battery as necessary, free of charge. This will be a phased campaign, with the remedy becoming available in different phases based on model and model years. Owner notification letters were mailed January 9, 2026.  Owners may contact MBUSA customer service at 1-800-367-6372. MBUSA's number for this recall is 2025080004.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "25V487000"
+    ],
+    "tsbs": [
+     "11018160",
+     "11023153",
+     "11026026",
+     "11026834",
+     "11027583",
+     "11028610",
+     "11028826",
+     "11029023",
+     "11029061",
+     "11036138",
+     "11036192"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|hybrid-system"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-recall-25V894000",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "title": "NHTSA recall 25V894000: ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "symptoms": [
+    "hybrid / high-voltage system"
+   ],
+   "cause": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2023 EQB 250, 2022-2023 EQB 300 4MATIC, and EQB 350 4MATIC vehicles. The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequences": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "inspection": "Check that NHTSA recall 25V894000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the repair has been completed.  Vehicles previously repaired under Recall 25V050 will need to be repaired again. Dealers will update the battery management system software, free of charge. Owner notification letters were mailed February 6, 2026. Owners may contact MBUSA customer service at 1-800-367-6372. MBUSA's number for this recall is 2025120005. Vehicle Identification Numbers (VINs) involved in this recall will be searchable on NHTSA.gov on December 23, 2025.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "25V894000"
+    ],
+    "tsbs": [
+     "11018160",
+     "11023153",
+     "11026026",
+     "11026834",
+     "11027583",
+     "11028610",
+     "11028826",
+     "11029023",
+     "11029061",
+     "11036138",
+     "11036192"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|hybrid-system"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-recall-26V073000",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "title": "NHTSA recall 26V073000: ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+   "symptoms": [
+    "hybrid / high-voltage system"
+   ],
+   "cause": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2023-2024 EQB 250+, 2022-2024 EQB 300 4MATIC, and EQB 350 4MATIC vehicles. The high voltage battery may fail internally and lead to a vehicle fire while parked or driving.",
+   "consequences": "A vehicle fire while parked or driving can increase the risk of injury.",
+   "inspection": "Check that NHTSA recall 26V073000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Owners are advised to park outside and away from structures until the recall repair is complete. Also, owners are advised to only charge their vehicles to a maximum of 80% battery capacity until the remedy has been completed. Dealers will replace the high voltage battery, free of charge. Interim letters, notifying owners of the safety risk, were mailed March 13, 2026. Additional letters will be sent once the final remedy is available. This recall replaces recalls 25V050 and 25V894. Vehicles previously repaired under recall 25V050 or 25V894 will need to have the new remedy completed. Owners may contact MBUSA customer service at 1-800-367-6372. Vehicle Identification Numbers (VINs) involved in this recall will be searchable on NHTSA.gov beginning February 13, 2026.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "26V073000"
+    ],
+    "tsbs": [
+     "11018160",
+     "11023153",
+     "11026026",
+     "11026834",
+     "11027583",
+     "11028610",
+     "11028826",
+     "11029023",
+     "11029061",
+     "11036138",
+     "11036192"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|hybrid-system"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-air-conditioning",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "HVAC",
+   "title": "Manufacturer communication: air conditioning",
+   "symptoms": [
+    "air conditioning"
+   ],
+   "cause": "Complaint  Insufficient heating output in vehicle interior  Customer describes a one-off, loud \"plopping\" noise during the journey Workshop findings:  Refrigerant line between refrigerant compressor and condenser is cracked  If listed line is cracked, please conduct the following tests 1. Are the fault codes B19A200 or P053400 current or stored in air conditioner control unit N10*1? 2. Check dryer cartridge at condenser for particles: Remove dryer cartridge, illuminate inlet of dryer cartridge using flashlight (A), and examine filter screen through outlet of dryer cartridge (B) -> see comparison picture bad/good Further possible signs for this fault profile are:  Refrigerant level clearly too low (target: 670 g): In this case, please first of all check where a leak is present in the system  Loud noises from compressor: If loud noises are coming from the compressor, this finding must be validated with the two tests specified above (check the dryer cartridges or the specified fault codes). Loud noises alone are no reason to replace the compressor, since these can be very subjectively perceived in individual cases. Cause The refrigerant line between the A/C compressor and capacitor may be damaged due to a high refrigerant temperature. Remedy If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: 1. Flushing of the refrigerant circuit as per AR83.30-P-1785EQA 2. Then replace the following parts:  A/C compressor (***IMPORTANT: If the A/C compressor A0008304404 or A0008307704 is installed in the vehicle, it must be replaced by part number A0008307804***)  Refrigerant line between refrigerant compressor and condenser  If the capacitor A0998301100 is installed, then replace the complete capacitor (including dryer cartridge and PT sensor).  If capacitor A0998301400/1500 is installed, only new dryer cartridge (A2938350500) 3. Check SAM (N10) for latest software. If necessary, perform software ",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11019640, 11023937, 11031421, 11032364 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11019640, 11023937, 11031421, 11032364",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11019640",
+     "11023937",
+     "11031421",
+     "11032364"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-battery-drain",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "Complaint Transfer of selected user-defined scene/ animation (MeApp) from HU to ECU software fails to start. Charging bar stops at 0%. (Picture in attachment) Cause Communication between light control unit and HU Remedy Software update to latest version: - A26/17 - MBUX multimedia system (head unit) - E1n14 - Front left digital headlamp control unit (DHLS-CU-VL) - E2n14 - Front right digital headlamp control unit (DHLS-CU-VR) | Complaint Vehicle will not start after charging, HV warning in IC Cause Due to charging error from the charging EVSE the contactors for the DCCU are jammed closed and must be reset via Xentry. Short test found fault code P154B00 in PTCU warning for stuck contactor. Remedy Check for new DCCU (N116/5) SW. Perform SW update to DCCU (N116/5) via XENTRY. Reset contactors through special procedures through N116/5. If no new SW is available - Open TIPS case. Please provide HV CUL and QT in TIPS case. | Complaint Vehicle will not start after DC charging Warning in the instrument cluster related to High-voltage on board electrical system The following fault codes related to stuck contactor can be found in the High Voltage Control units : PTCU - N127 (Powertrain control unit)  P154900 - There is a warning due to overcurrent in the charging system of the high-voltage electric circuit.  P154A00 - There is a warning due to a detected crash event at standstill.  P154B00 - There is a warning due to a stuck contactor. DCB223 - N116/5 (Direct current charge connection unit)  P0E8929 - The input current of the on-board DC charging connection unit is too high. There is an invalid signal.  P2BC500 - The contact ''Positive terminal'' of the contactor in the on-board DC current charge-connection unit is jammed closed  P2BCC00 - The contact ''Negative terminal'' of the contactor in the on-board DC current charge-connection unit is jammed closed. Cause  Current ripple due to EVSE (Electric Vehicle Supply Equipment)  Overcurrent or Overvoltage due to EVSE (Electric V",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11007752, 11018611, 11025534 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11007752, 11018611, 11025534",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    1
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11007752",
+     "11018611",
+     "11025534"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|battery-drain"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-infotainment",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "Complaint  The Apple Carplay interface cannot be controlled via the center console touchpad or the right-hand steering wheel  touchpad.  Cause  A setting on the iPhone may prevent control via the touchpad  Remedy  To remedy on the affected iPhone, navigate to \"Settings\" -> \"Accessibility\" -> \"Touch\" and turn the \"BackTap\" option OFF. | Complaint Once the head unit A26/17 is | Complaint Transfer of selected user-defined scene/ animation (MeApp) from HU to ECU software fails to start. Charging bar stops at 0%. (Picture in attachment) Cause Communication between light control unit and HU Remedy Software update to latest version: - A26/17 - MBUX multimedia system (head unit) - E1n14 - Front left digital headlamp control unit (DHLS-CU-VL) - E2n14 - Front right digital headlamp control unit (DHLS-CU-VR)",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10217163, 11006700, 11007752, 11009551, 11010907 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10217163, 11006700, 11007752, 11009551, 11010907",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10217163",
+     "11006700",
+     "11007752",
+     "11009551",
+     "11010907",
+     "11011544",
+     "11012787",
+     "11013086",
+     "11013339",
+     "11014576",
+     "11016159",
+     "11018712",
+     "11019750",
+     "11026835",
+     "11029927",
+     "11033722",
+     "11036192"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-loss-of-power",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "Complaint Partly reduced power steering assist when stationary or at low speeds, at approximately 7 MPH, such as when parking. No warning message is displayed and no fault codes are stored. Steering assist returns to normal after key cycle or at speeds greater than 7 MPH but condition may return until remedy is performed. Cause Software in the electric power steering (ES) N68. Remedy Perform software update of electric power steering (ES) N68. Disclaimer NOTE: The information contained in this document is intended for use by trained, professional technicians with the knowledge to properly and safely perform diagnosis and repairs on Mercedes-Benz vehicles, using Mercedes-Benz approved tools and equipment. It informs service technicians about conditions that could occur in certain vehicles and provides information that could assist in proper vehicle diagnosis, service, or repair. It does not indicate that a defect is present in any vehicle referenced in this document nor does it imply warranty coverage. DO NOT assume that a symptom or condition, or a described cause of a symptom or condition, affects any particular vehicle or groups of vehicles, or that a described repair applies to any particular vehicle or groups of vehicles. There can be multiple causes resulting in the same or similar symptoms or conditions described in this document, and trained professional service technicians must use their diagnostic skills to make evaluations on a case-by-case basis. The information contained in this document does not guarantee warranty coverage nor does it extend the vehicles warranty in any way.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11007745 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11007745",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    2
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11007745"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|loss-of-power"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-overheating",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "COOLING",
+   "title": "Manufacturer communication: overheating",
+   "symptoms": [
+    "overheating"
+   ],
+   "cause": "Crease formation on genuine leather seat covers in vehicles with low mileage     Objects left on the seats for extended periods of time (pressure marks).   Objects wedged between the seat backrest and seat cushion (e.g. seat belt buckle).   Light initial creases due to vehicle handling.   Light creases in the outer covers originating from the production process (missing finish).    Heat treatment of the seat covers using heat gun and plastic wedge. Be very careful to not overheat the seat material! | Complaint Displayed Message: Driver camera not functioning, see Operators Manual Cause Interior temperature too high due to:  Summer heat  Direct sunlight  Lack of air conditioning or ventilation Camera enters self-protection mode to prevent overheating. Remedy Do NOT replace any parts. The driver camera (NTG7: MDC295; CIVIC.i2: CIVIC206) is operating as designed. Allow the interior to cool down. If the message remains after cooling:  Run XENTRY Diagnosis  Check latest software for Actuation of Driver Camera (A26/17) No TIPS case required.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10248162, 11026127 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10248162, 11026127",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    3
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10248162",
+     "11026127"
+    ],
+    "complaint_patterns": [
+     "US2022-2025|overheating"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-parking-brake",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "BRAKES",
+   "title": "Manufacturer communication: electronic parking brake",
+   "symptoms": [
+    "electronic parking brake"
+   ],
+   "cause": "Complaint Instrument cluster warning lamp and/or warning message for brake system, EPB, ESP (yellow or red) and possibly 12 V battery (red) Different combinations of the following DTCs present in the ESP: B23AA77, B23AB77, B23D177 and in part (C100BE0, C100BE1, B23AA1B, B23D152) Cause Due to a reduction in resistance at the HV voltage divider, the DC/DC converter measures an incorrect HV voltage. Regulation of the 12 V output voltage therefore becomes unstable. I.e. the output voltage starts to fluctuate and the output current starts to jump instead of slowly regulating to the currently requested value. The EPB position is calculated by the voltage and the current. Since these fluctuate, the ESP control unit loses its position and sets the DTCs. Remedy Check of the DC/DC converter via XENTRY Diagnosis:  Compare the serial number of the DC/DC converter with a list of potentially affected parts in XENTRY -> DC/DC converter N83/1 -> Special Processes.  If the evaluation comes back as defective - Replace the DC/DC converter and inspect the EPB for Subsequent complaint, defect.  If the evaluation comes comes back not affected: Actuate BUCK mode for approx. 30 s  The output current normally jumps to a high value (e.g. 100 A) and then falls slowly to the current specified value e.g. 50 A and then only changes slowly and in small increments.  In the event of this fault cause, the output current is subject to strong fluctuations/jumps (multiple 1-10 A) (see videos in attachment).  In the event of strong fluctuations and the S/N not identified in the Special Process, please open a TIPS case and attach print out of DC/DC special procedure and buck mode actual values. Subsequent complaint, defect on the EPB:  Check of the actuators and brake caliper piston  Manually extend and retract the piston on the brake caliper completely using the suitable socket  If the piston sticks at a certain point, the rotation force increases significantly  If the brake caliper piston sticks, the b",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11019637, 11023138 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11019637, 11023138",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11019637",
+     "11023138"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-steering-loss",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: power steering loss",
+   "symptoms": [
+    "power steering loss"
+   ],
+   "cause": "Complaint Partly reduced power steering assist when stationary or at low speeds, at approximately 7 MPH, such as when parking. No warning message is displayed and no fault codes are stored. Steering assist returns to normal after key cycle or at speeds greater than 7 MPH but condition may return until remedy is performed. Cause Software in the electric power steering (ES) N68. Remedy Perform software update of electric power steering (ES) N68. Disclaimer NOTE: The information contained in this document is intended for use by trained, professional technicians with the knowledge to properly and safely perform diagnosis and repairs on Mercedes-Benz vehicles, using Mercedes-Benz approved tools and equipment. It informs service technicians about conditions that could occur in certain vehicles and provides information that could assist in proper vehicle diagnosis, service, or repair. It does not indicate that a defect is present in any vehicle referenced in this document nor does it imply warranty coverage. DO NOT assume that a symptom or condition, or a described cause of a symptom or condition, affects any particular vehicle or groups of vehicles, or that a described repair applies to any particular vehicle or groups of vehicles. There can be multiple causes resulting in the same or similar symptoms or conditions described in this document, and trained professional service technicians must use their diagnostic skills to make evaluations on a case-by-case basis. The information contained in this document does not guarantee warranty coverage nor does it extend the vehicles warranty in any way.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11007745 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11007745",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11007745"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-steering-noise",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "Complaint  Malfunction of the electric steering column adjustment.  The adjustment application by the driver does not correspond to the adjustment direction of the steering column.  Cause  Polarity reversal of the lines M20/1 (steering column adjustment motor, forward and backward) and M20/2 (steering  column adjustment motor, upward and downward) results in a  malfunction of the electric steering column adjustment.  Remedy  Check the lines (line colors) of M20/1 and M20/2 as per the WIS circuit diagram and correct if necessary. | Complaint  Height adjustment of electric steering column adjustment jammed in the top/bottom adjustment position (e.g. with Easy  Entry function).  Cause  Height adjustment moves to the top/bottom limit stop and jams. | The steering wheel generates grinding noises between the steering wheel and steering column switch module during  steering maneuvers  See example file in the attachments area: Lenkrad-Schleifgerusch_SteeringWheel-GrindingNoises.mp4    The plastic cover on the back of the steering wheel is not positioned correctly and may therefore rub against the steering  column switch module    Please use the following noise files for the damaged part analysis:  1. Grinding noise | pot. cause: steering wheel | see attachment: Lenkrad-Schleifgerusch_SteeringWheel-GrindingNoises.  mp4  2. Creaking/cracking noise | pot. cause: steering column switch module | see attachment: MRSM-Schleifgerusch_  SCCM-GrindingNoises.MOV  If the noise is due to the steering column switch module, please use LI46.10-P-077314.  Check for grinding areas on the steering wheel:  Please check the covers on the rear for protrusion and, if necessary, remount.  1. Mask off openings on back of steering wheel with adhesive tape  1. Mark the back of the steering wheel with colored chalk (see Picture 1)  2. Mount steering wheel on steering column switch module and turn the steering wheel from left lock to right lock ten  times.  3. The chalk will now have disappeared in the",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10222462, 10228807, 10249482, 10249495, 11027796 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10222462, 10228807, 10249482, 10249495, 11027796",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10222462",
+     "10228807",
+     "10249482",
+     "10249495",
+     "11027796",
+     "11029919",
+     "11032576",
+     "11033019"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "eqb-US2022-2025-tsb-suspension",
+   "generation": "US2022-2025",
+   "years": [
+    2022,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Complaint When driving on uneven road surfaces, there may be cracking, thumping, or knocking noises from the area of the rear axle. Cause The lower connection of the shock absorber (damper) to the lower transverse control arm might not have been torqued to specification. Remedy Tighten threaded connection to listed appropriate torque. (See WIS). Replacing the shock absorber (damper) does not remedy the problem. Invoice SSL 32D07 and 32S07 for this. Note: The threaded connection is self-locking and will not detach. Noise is the only byproduct. | Complaint There may be creaking noises when steering while stationary or driving slowly. See \"Sound Example\" attachment. Cause The vehicle level of the front axle may be too low. The noises when steering can be caused by continuous contact of the end stop buffer with the damper tube. Remedy IMPORTANT: Do not apply document to vehicles outside of the listed validity range. The vehicle level must first be measured using the romess inclinometer (follow WIS instructions!) and the measured values should be compared with the target values in the Wheel Alignment online tool. If the vehicle level is out of tolerance, then the springs on the front axle must be replaced in order to correct the level. The currently installed springs can be pulled up in the XENTRY Parts Information tool through the corresponding selection. How to identify currently installed springs:  Check for colored dots on the front springs.  If no dots or color markings, please check if there is a parts label that is affixed to the spring. If the MB part number is listed, continue with process listed in the paragraph below.  If the part label does not contain an MB part number, is missing or illegible, please check for a barcode label with a 3 digit number. See \"Spring Barcode\" picture for example. Open a TIPS case with this number and list that it is from the barcode attached to the currently installed spring.  If none of the above references can be found, open a T",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11020156, 11021107, 11029964, 11032789 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11020156, 11021107, 11029964, 11032789",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11020156",
+     "11021107",
+     "11029964",
+     "11032789"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "11018160",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, the IC message with charging error appears and the FC P0CFE00 is stored in the \"N83 - AC charger for high-voltage battery (SG-LG)\" control unit. The fault message and the fault memory entry can also appear during time-delayed charging at the start of the pause in charging. Both only occur in combination with active pre-entry climate control. Cause Software in the \"N83 - AC charger for high-voltage battery (SG-LG)\" control unit. Remedy For 206 and 223 model lines with code 802 - Perform SCN coding in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". If, even after the coding has been successfully completed, the FC P0CFE00 continues to occur, please do not replace any parts. New software fix is currently in development and it is expected to be released by 08/2025. Replacing of parts will not bring in any remedial action. For 243 model line - Fix is already available. Please tell the workshop to perform software update and SCN coding for control units \"N116/5 - Direct current charge connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" to resolve the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11023153",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The fault message and the fault memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For model series 167, 214, 254 and 223 with code 802: Perform SCN coding in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Please do not replace any parts even if the FC P0CFE00 coding continues to appear after successfully completing this step. A new software is currently in development and will become available in 11/2025. Replacing parts will not remedy the issue. For model series 243: The correction is already available. Please inform the workshop to perform a software update and SCN coding for the control units \"N116/5 - Direct current charging connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" in order to remedy the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11026026",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0C\u0002FE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The fault message and the fault memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For model series 167, 214, 254 and 223 with code 802: Perform SCN coding in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Please do not replace any parts even if the FC P0CFE00 coding continues to appear after successfully completing this step. A new software is currently in development and will become available in late 12/2025. Replacing parts will not remedy the issue. For model series 243: The correction is already available. Please inform the workshop to perform a software update and SCN coding for the control units \"N116/5 - Direct cur\u0002rent charging connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" in order to remedy the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11026834",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The fault message and the fault memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For model series 167, 214, 254 and 223 with code 802: Perform SCN coding in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Please do not replace any parts even if the FC P0CFE00 coding continues to appear after successfully completing this step. A new software is currently in development and will become available in late 01/2026. Replacing parts will not remedy the issue. For model series 243: The correction is already available. Please inform the workshop to perform a software update and SCN coding for the control units \"N116/5 - Direct current charging connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" in order to remedy the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11027583",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The instrument cluster message and the FC memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For model series 206 and 223 with code 802: Perform SCN coding in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Please do not replace any parts even if the FC P0CFE00 coding continues to appear after successfully completing this step. A new software fix is currently in development and will likely be published in 01/2026. Replacing parts will not remedy the issue. For model series 243: The correction is already available. Perform a software update and SCN coding for the control units \"N116/5 - Direct current charging connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" in order to remedy the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11028610",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The instrument cluster message and the FC memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For model series 206 and 223 with code 802: Perform a software update and SCN coding for the control unit \"N83/11 - AC charger for high-voltage battery (SGLG)\" in order to remedy the problem. For model series 243: The correction is already available. Perform a software update and SCN coding for the control units \"N116/5 - Direct current charging connection unit (DCCU)\" and \"N83/11 - AC charger for high-voltage battery (SG-LG)\" in order to remedy the problem.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11028826",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The fault message and the fault memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For the plug-in hybrid model series 118, 167, 206, 214, 223, 247, 254: Carry out software update and SCN coding for the control unit \"N83  AC charger for high-voltage battery (SG-LG)\". For model series 243: Carry out software update and SCN coding for the control units \"N116/5  DC charge-connection unit (DCCU)\" and \"N83/11  AC charger for high-voltage battery (SG-LG)\"",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11029023",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Noise when the following conditions are met:  Pressing brake pedal or releasing accelerator pedal  High voltage battery state of charge (SOC) is >80%  Recouperation settings active (Intelligent, D-, or D) Cause The high voltage battery cannot achieve full recouperation from the electric motor due to the already high battery state of charge and is supported via the hydraulic portion of the brakes. The sound is from the hydraulic portion of the braking system. Remedy The noise is normal, no parts need to be replaced and no further action required.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11029061",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint After the charging process is complete, an instrument cluster message with a charging error appears and FC P0CFE00 is stored in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". The fault message and the fault memory entry can also appear at the beginning of the charging pause during delayed charging. Both only occur in combination with active pre-entry climate control. Cause Software in control unit \"N83 - AC charger for high-voltage battery (SG-LG)\". Remedy For plug-in Model Series167, 206, 214, 223, 247, 254: Carry out software update and SCN coding for the control unit \"N83  AC charger for high-voltage battery (SG-LG)\". For model series 243: Carry out software update and SCN coding for the control units \"N116/5  DC charge-connection unit (DCCU)\" and \"N83/11  AC charger for high-voltage battery (SG-LG)\"",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11036138",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint AC and DC charging are not possible. The white LED on the charging inlet completely goes OFF after plugging in the charging cable. Related DTCs in quick test: There are no related fault codes (DTCs) stored in relevant control units. CPC3 - N127 (Drivetrain control unit) OBL223_GEN4 - N83/11 (Alternating current charger for high-voltage battery) DCB223 - N116/5 - Direct current charge connection unit (DCCU) Cause Control pilot (CP) circuit in DCB (N116/5: Direct current charge connection unit) might be not functional due to electrical overstress from EVSE (Electric Vehicle Supply Equipment | Charging Station). Remedy Refer to the charging cable actual values in DCB (N116/5). The actual value Charging cable at charging station and status of pilot function shows Charging cable NOT PLUGGED IN & CP not connected respectively, even though the charging cable is connected on both sides. This confirms a possible breakdown of Control Pilot (CP) circuit inside the DCB. Measurement of the resistance of Proximity Pilot (PP) and Control Pilot (CP) at the charging socket (G10) (see Annex Resistance measurement Proximity Pilot (CP) and Control Pilot (CP))",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11036192",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Customer Complaint: - AC charging is not possible. - The departure time, charging pause, location-based charging or target SOC limit is automatically set to 50% or to a random value in the Mercedes me application or in the charging settings on the head unit display. (Picture 1 & 3) - Incorrect notifications appear in the Mercedes me application for charging-related functions. (Picture 2) Related DTCs in quick test: No related fault codes (DTCs) are stored in the relevant control units. CPC3 - N127 (Drivetrain control unit) OBL223_GEN4 - N83/11 (Alternating current charger for high-voltage battery) DCB223 - N116/5 - Direct current charge connection unit (DCCU) Picture1 The target SOC limit is automatically set to 50% or any random values during charging. Picture 2 Incorrect notification Example Unable to unlock charging cable. Picture 3 Incorrect settings of charge interruption or pause. (If applicable) Cause - The Customer shares their Mercedes me credentials (password) with a third-party application, for example, a wall box application. This causes the Mercedes Benz backend server to receive random requests to reset the maximum SOC, departure time, charging pause, etc. - Charging settings are set incorrectly, for example, incorrect departure time, charging program, charging interruption/ pause, etc. Remedy The remedies below may vary depending on the customer complaint. Refer to the remedy that best matches the customer complaint. Remedy 1: The target SOC limit is automatically set to 50% or to random values during charging. - Change the Mercedes me login password on the Mercedes me homepage. (My Account > Login and Security > Reset). (Refer to Annex 1). Previously granted authorizations should then be revoked so that the charging settings can no longer be changed by external applications. Advise customers not to share the new password again. - Are there any sub-users? If yes, revoke their rights and reassess the function. -If differences between the vehicle and the Mercedes me app are visible, a new synchronization is recommended. Turn off Digital Extras through the Mercedes me app or the MMCR portal, and then turn the services on again. Remedy 2: Incorrect notifications in the Mercedes me app for charging-related functions. - Restart synchronization between the app and backend. Turn off Digital Extras through the Mercedes me app or the MMCR portal, and then turn the services on again. (Refer to Annex 2) Remedy 3: Incorrect charge interruption or pause setting. - Perform a factory reset of the head unit (A26/17). (Home > Functions > System > Reset), or turn off/correct all charging settings. (Refer to Annex 3) Additional Information: (Good to know) The LED on the charging inlet or socket indicates whether charging is completed or paused. 1) If the target SOC is reached, the charging inlet LED lights up Blue/Green without flashing. 2) If charging is paused, the charging inlet LED lights up orange without flashing. Additionally, the head unit charging settings display a charging pause. Note: Do not replace any hardware components for these complaints. If the complaint cannot be solved, please contact via TIPS or CAC.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11019640",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint  Insufficient heating output in vehicle interior  Customer describes a one-off, loud \"plopping\" noise during the journey Workshop findings:  Refrigerant line between refrigerant compressor and condenser is cracked  If listed line is cracked, please conduct the following tests 1. Are the fault codes B19A200 or P053400 current or stored in air conditioner control unit N10*1? 2. Check dryer cartridge at condenser for particles: Remove dryer cartridge, illuminate inlet of dryer cartridge using flashlight (A), and examine filter screen through outlet of dryer cartridge (B) -> see comparison picture bad/good Further possible signs for this fault profile are:  Refrigerant level clearly too low (target: 670 g): In this case, please first of all check where a leak is present in the system  Loud noises from compressor: If loud noises are coming from the compressor, this finding must be validated with the two tests specified above (check the dryer cartridges or the specified fault codes). Loud noises alone are no reason to replace the compressor, since these can be very subjectively perceived in individual cases. Cause The refrigerant line between the A/C compressor and capacitor may be damaged due to a high refrigerant temperature. Remedy If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: 1. Flushing of the refrigerant circuit as per AR83.30-P-1785EQA 2. Then replace the following parts:  A/C compressor (***IMPORTANT: If the A/C compressor A0008304404 or A0008307704 is installed in the vehicle, it must be replaced by part number A0008307804***)  Refrigerant line between refrigerant compressor and condenser  If the capacitor A0998301100 is installed, then replace the complete capacitor (including dryer cartridge and PT sensor).  If capacitor A0998301400/1500 is installed, only new dryer cartridge (A2938350500) 3. Check SAM (N10) for latest software. If necessary, perform software update. 4. Please then check whether all of the heating and cooling functions are active. If not, please create a TIPS case with the following information:  Detailed description of the customer complaint and the workshop measures carried out  Initial quick test  Photos of the filter screen of the dryer cartridge",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11023937",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint  Insufficient heating output in vehicle interior  Customer describes a one-off, loud \"plopping\" noise during the journey Workshop findings:  Refrigerant line between refrigerant compressor and condenser is cracked  If listed line is cracked, please conduct the following tests 1. Are the fault codes B19A200 or P053400 current or stored in air conditioner control unit N10*1? 2.Check dryer cartridge at condenser for particles: Remove dryer cartridge, illuminate inlet of dryer cartridge using flashlight (A), and examine filter screen through outlet of dryer cartridge (B) -> see comparison picture bad/good Further possible signs for this fault profile are:  Refrigerant level clearly too low (target: 670 g): In this case, please first of all check where a leak is present in the system  Loud noises from compressor: If loud noises are coming from the compressor, this finding must be validated with the two tests specified above (check the dryer cartridges or the specified fault codes). Loud noises alone are no reason to replace the compressor, since these can be very subjectively perceived in individual cases. Cause The refrigerant line between the A/C compressor and capacitor may be damaged due to a high refrigerant temperature. Remedy If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: 1. Flushing of the refrigerant circuit as per AR83.30-P-1785EQA 2. Then replace the following parts:  A/C compressor (***IMPORTANT: If the A/C compressor A0008304404 or A0008307704 is installed in the vehicle, it must be replaced by part number A0008307804***)  Refrigerant line between refrigerant compressor and condenser  If the capacitor A0998301100 is installed, then replace the complete capacitor (including dryer cartridge and PT sensor).  If capacitor A0998301400/1500 is installed, only new dryer cartridge (A2938350500) 33. In order to use the new refrigerant line A2438308600, the electrical wire of pressure sensor B161/2 must be extended.  Disconnect plug from pT sensor.  Remove insulation approx. 15 cm from the plug.  Extend lines by 425 mm. For this purpose, please observe the Basic data for wiring harness repairs with axial solder connectors (AR54.18-P-0100-06A).  Wrap wiring harness with complete insulation wrapping.  Route wire to the newly positioned pT sensor and secure with cable tie to prevent scouring. 4. Install 4 blind plugs (4x A0005458780) in coupling housing A0285458362 and fit it onto the old sensor. 5. Check SAM (N10) for latest software. If necessary, perform software update. 6. Please then check whether all of the heating and cooling functions are active. If not, please create a TIPS case with the following information:  Detailed description of the customer complaint and the workshop measures carried out  Initial quick test  Photos of the filter screen of the dryer cartridge",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11031421",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint  Insufficient heating output in vehicle interior  Customer describes a one-off, loud \"plopping\" noise during the journey Workshop findings:  Refrigerant line between refrigerant compressor and condenser is cracked  If listed line is cracked, please conduct the following tests 1. Are the fault codes B19A200 or P053400 current or stored in air conditioner control unit N10*1? 2. Check dryer cartridge at condenser for particles: Remove dryer cartridge, illuminate inlet of dryer cartridge using flashlight (A), and examine filter screen through outlet of dryer cartridge (B) -> see comparison picture bad/good Cause The refrigerant line between the A/C compressor and capacitor may be damaged due to a high refrigerant temperature. Remedy If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: 1. Flushing of the refrigerant circuit as per AR83.30-P-1785EQA 2. Then replace the following parts:  A/C compressor (***IMPORTANT: If the A/C compressor A0008304404 or A0008307704 is installed in the vehicle, it must be replaced by part number A0008307804***)  If the capacitor A0998301100 is installed, then replace the complete capacitor (including dryer cartridge and PT sensor).  If capacitor A0998301400/1500 is installed, only new dryer cartridge (A2938350500)  Refrigerant line between refrigerant compressor and capacitor (A2438308600) 3. To use the new refrigerant line A2438308600, the electric line for pressure sensor B161/2 must be extended using the adapter wiring harness A2435408724.  Disconnect plug from pT sensor  Route the adapter line A2435408724 to the newly positioned pT sensor and secure it with a cable tie to prevent chafing 4. Insert the blind plug from the adapter wiring harness onto the old sensor. 5. Check SAM (N10) for latest software. If necessary, perform software update. 6. Finally, please check whether all heating and cooling functions are working; if not, please create a TIPS case with the following information:  Detailed description of the customer complaint and the workshop measures carried out  Initial quick test  Photos of the filter screen of the dryer cartridge",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11032364",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint  Insufficient heating output in vehicle interior  Customer describes a one-off, loud \"plopping\" noise during the journey Workshop findings:  Refrigerant line between refrigerant compressor and condenser is cracked  If listed line is cracked, please conduct the following tests 1. Are the fault codes B19A200 or P053400 current or stored in air conditioner control unit N10*1? 2. Check dryer cartridge at condenser for particles: Remove dryer cartridge, illuminate inlet of dryer cartridge using flashlight (A), and examine filter screen through outlet of dryer cartridge (B) -> see comparison picture bad/good Further possible signs for this fault profile are:  Refrigerant level clearly too low (target: 670 g): In this case, please first of all check where a leak is present in the system  Loud noises from compressor: If loud noises are coming from the compressor, this finding must be validated with the two tests specified above (check the dryer cartridges or the specified fault codes). Loud noises alone are no reason to replace the compressor, since these can be very subjectively perceived in individual cases. Cause The refrigerant line between the A/C compressor and capacitor may be damaged due to a high refrigerant temperature. Remedy If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: If the tests listed have been carried out and the results correspond to the described fault profile, please carry out the following steps: 1. Flushing of the refrigerant circuit as per AR83.30-P-1785EQA 2. Then replace the following parts:  A/C compressor (***IMPORTANT: If the A/C compressor A0008304404 or A0008307704 is installed in the vehicle, it must be replaced by part number A0008307804***)  If the capacitor A0998301100 is installed, then replace the complete capacitor (including dryer cartridge and PT sensor).  If capacitor A0998301400/1500 is installed, only new dryer cartridge (A2938350500)  Refrigerant line between refrigerant compressor and capacitor (A2438308600) 3. To use the new refrigerant line A2438308600, the electric line for pressure sensor B161/2 must be extended using the adapter wiring harness A2435408724.  Disconnect plug from pT sensor  Route the adapter line A2435408724 to the newly positioned pT sensor and secure it with a cable tie to prevent chafing 4. Insert the blind plug from the adapter wiring harness onto the old sensor. 5. Check SAM (N10) for latest software. If necessary, perform software update. 6. Finally, please check whether all heating and cooling functions are working; if not, please create a TIPS case with the following information:  Detailed description of the customer complaint and the workshop measures carried out  Initial quick test  Photos of the filter screen of the dryer cartridge",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11007752",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint Transfer of selected user-defined scene/ animation (MeApp) from HU to ECU software fails to start. Charging bar stops at 0%. (Picture in attachment) Cause Communication between light control unit and HU Remedy Software update to latest version: - A26/17 - MBUX multimedia system (head unit) - E1n14 - Front left digital headlamp control unit (DHLS-CU-VL) - E2n14 - Front right digital headlamp control unit (DHLS-CU-VR)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11018611",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Vehicle will not start after charging, HV warning in IC Cause Due to charging error from the charging EVSE the contactors for the DCCU are jammed closed and must be reset via Xentry. Short test found fault code P154B00 in PTCU warning for stuck contactor. Remedy Check for new DCCU (N116/5) SW. Perform SW update to DCCU (N116/5) via XENTRY. Reset contactors through special procedures through N116/5. If no new SW is available - Open TIPS case. Please provide HV CUL and QT in TIPS case.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11025534",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Vehicle will not start after DC charging Warning in the instrument cluster related to High-voltage on board electrical system The following fault codes related to stuck contactor can be found in the High Voltage Control units : PTCU - N127 (Powertrain control unit)  P154900 - There is a warning due to overcurrent in the charging system of the high-voltage electric circuit.  P154A00 - There is a warning due to a detected crash event at standstill.  P154B00 - There is a warning due to a stuck contactor. DCB223 - N116/5 (Direct current charge connection unit)  P0E8929 - The input current of the on-board DC charging connection unit is too high. There is an invalid signal.  P2BC500 - The contact ''Positive terminal'' of the contactor in the on-board DC current charge-connection unit is jammed closed  P2BCC00 - The contact ''Negative terminal'' of the contactor in the on-board DC current charge-connection unit is jammed closed. Cause  Current ripple due to EVSE (Electric Vehicle Supply Equipment)  Overcurrent or Overvoltage due to EVSE (Electric Vehicle Supply Equipment)  DCB contactors did not open immediately due to welding time at the end of DC charging Remedy  Check for a new software availability for DCCU (N116/5 - Direct Current Charge connection Unit). If a new software is available, update the software first.  Reset contactor fault through special procedure without password. ( N116/5 >> Special Procedure >> Resetting of contactor fault.) Important Note :  Do not replace component DCB (N116/5)  If fault codes are not erasable, please raise a TIPS case and send it to HQ.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "10217163",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022
+   ],
+   "summary": "Complaint  The Apple Carplay interface cannot be controlled via the center console touchpad or the right-hand steering wheel  touchpad.  Cause  A setting on the iPhone may prevent control via the touchpad  Remedy  To remedy on the affected iPhone, navigate to \"Settings\" -> \"Accessibility\" -> \"Touch\" and turn the \"BackTap\" option OFF.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "11006700",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint Once the head unit A26/17 is updated to the FUP4 software release E445.0, it may be the case that online connectivity is no longer available Cause E445.0 FUP4 software release Remedy Update the A26/17 - MBUX multimedia system (Head unit) software to E445.2 FUP4 Optimized or newer version to resolve the complaint.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11009551",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint \"Weekly profile\" pre-entry climate control setting not available in the climate control menu or grayed out in the Mercedes me connect App. Cause There may be limitations on the indicator in the display due to incorrect parametrization in the head unit and PTCU SW. Remedy PTCU software update (N127)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11010907",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint The flap of the reversing camera opens and closes by itself during forward travel. This happens several times during the trip. The customer notices the sound of opening and closing. No camera image is displayed in the head unit. The reversing camera or the 360 system functions normally when activated manually or by engaging drive range \"R\". This behavior occurs again during each driving cycle. Cause This is not a malfunction, but an intended system behavior: Calibration of the reversing camera is in progress. For this, the cover on the camera is opened for max. 5 cumulative minutes in forward travel. The calibration can be performed if the vehicle speed is < 35 km/h and the steering wheel angle is < 10 (for early vehicles from MFA2 facelift model series such as A-Class, CLA, etc., the 35 km/h (~22 MPH) opening limit may only be reached after the SCN coding is replaced). If the speed of 35 km/h (~22 MPH) is exceeded, the camera retracts and the calibration is therefore aborted. The sequence is started again once the speed returns to the range of 18 km/h (~11 MPH). Remedy Complete the calibration successfully. For this, the vehicle must be driven forwards for a certain time (usually significantly less than one minute) at a speed < 35 km/h (~22 MPH) and a steering wheel angle < 10. This should occur during daylight and without a vehicle following too closely (the camera must be able to see the asphalt). When calibration is successful, the camera flap closes automatically at an unchanged speed. For the rest of the driving cycle, the camera now only opens if the customer requests this, for example by applying the reverse gear. When starting a new driving cycle (ignition change), another calibration is required. The customer can generally perform calibration at the first attempt when a speed in the range between 15 km/h (~9 MPH) and 35 km/h (~22 MPH) is briefly maintained and can therefore play a significant role in reducing the actuation frequency and therefore also the noticeability of the noise to a minimum. In the case of early MFA2 facelift vehicles (A-Class, CLA, etc.), the parking control unit may have to be SCN-coded again to have the complete speed window available for the calibration.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11011544",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024
+   ],
+   "summary": "Complaint Symptoms with driver display and/or central display Cause Under analysis Remedy NOTE: Please do not replace any parts. If you have symptoms with one or both displays, a TIPS case must be created. The TIPS case will be reviewed by MBUSA and GCSP. NOTE: Please perform the following steps before creating a TIPS case: Step 1: Check software release of the following control units to see if they are up to date; if necessary perform software update.  Instrument cluster (IC177 / IC 177M)  Head unit (HU6 / HU7)  All displays (DISP6 / DISP7S2) Reassess problem. If the problem is still present, continue with step 2. Step 2: Perform swap (swap display with a display from a reference vehicle) and reassess problem. If the problem relates to the display, replace display. If the problem does not relate to the display, continue with step 3. Step 3: Check electrical wiring harness and video line for routing, breakovers and external damage. Check contact springs and contact sockets for corrosion and bonding (photo documentation in micro view). Check electric wiring harness for conductivity and short circuit, document measurement results in a measurement report or referenced wiring diagram using the CDT four level model. If the wiring harness and the video line is OK, please complete the attached questionnaire, create TIPS case according to list of requirements. Please add the following documents to the TIPS  case:  Video of problem  Completed questionnaire  Current quick test with freeze frame results  Measurement report and photo documentation of wiring harness  Control unit log of head unit  Control unit log of instrument cluster  Control unit log of display cluster  Log-files HU-logging (password via TIPS case)  NOTE: Make sure to document the original customer complaint. NOTE: Please refer to this LI in the warranty claim in the \"Notes\" section. The damage code of the component determined to be the root cause of the symptom must be used in the warranty claim.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11012787",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint The vehicle's position on the map is displayed far away from its actual position, e.g. the vehicle is displayed as being in the middle of the ocean. Note: In the quick test, no relevant DTC is displayed for this. Cause The GNSS antenna is not correctly inserted at the GNSS connection (see picture in the attachment) in the head unit (A26/17). Remedy Insert the connector into the GNSS connection and ensure that the connector has engaged correctly and is fully seated.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11013086",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250",
+   "years": [
+    2023
+   ],
+   "summary": "Complaint The flap of the reversing camera opens and closes by itself during forward travel several times during the trip. No camera image is displayed in the head unit. The reversing camera or the 360 system functions normally when activated manually or by engaging drive range \"R\". Cause This is not a malfunction, but an intended system behavior. Calibration of the reversing camera is in progress. The calibration is completed by:  Opening the camera cover for a maximum of 5 cumulative minutes.  If the vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10. If calibration is aborted by exceeding one of the above conditions, the camera retracts and the calibration will re-attempt once the conditions are achieved and the speed returns to the range of 18 km/h (~11 MPH). Remedy SCN code PARK213M on MFA2 facelift vehicles produced after 09/2024 (A-Class, CLA, GLA, etc...) so the complete calibration speed window is available. For vehicles with PARK213M or PARK223 a calibration is completed successfully by:  Driving forward (typically less than 1 minute).  Vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10.  During daylight.  Without a vehicle following too closely (camera must be able to see asphalt). When calibration has completed successfully, the camera door closes automatically for the rest of the driving cycle. The camera will now only open if the customer requests (Example: Engaging reverse gear). The calibration of the camera will re-initiate every drive cycle (ignition change). The customer can generally perform calibration at the first attempt while briefly maintaining a speed range of 15 km/h (~9 MPH) and 35 km/h (~22 MPH). The customer can therefore play a significant role in reducing the camera door noise and actuation frequency.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023
+   ]
+  },
+  {
+   "id": "11013339",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint Symptoms with driver display and/or central display Cause Under analysis Remedy NOTE: Please do not replace any parts. If you have symptoms with one or both displays, a TIPS case must be created. The TIPS case will be reviewed by MBUSA and GCSP. NOTE: Please perform the following steps before creating a TIPS case: Step 1: Check software release of the following control units to see if they are up to date; if necessary perform software update.  Instrument cluster (IC177 / IC 177M)  Head unit (HU6 / HU7)  All displays (DISP6 / DISP7S2) Reassess for the symptom. If the symptom is still present, continue with step 2. Step 2: Perform swap (swap display with a display from a reference vehicle) and reassess for the symptom. If the problem relates to the display, replace display. If the problem does not relate to the display, continue with step 3. Step 3: Check electrical wiring harness and video line (LVDS) for routing and external damage. Check contact pins and contact sockets for corrosion and bonding (photo documentation in micro view format requested). Check electric wiring harness for conductivity and short circuit, document measurement results in a measurement report or referenced wiring diagram using the CDT four level model. If the wiring harness and the video line is OK, please complete the attached questionnaire, create TIPS case according to list of requirements. Please add the following documents to the TIPS case:  Video of problem  Completed questionnaire  Current quick test with freeze frame results  Measurement report and photo documentation of wiring harness  Control unit log of head unit  Control unit log of instrument cluster  Control unit log of display cluster  Log-files HU-logging (password via TIPS case) NOTE: Make sure to document the original customer complaint. NOTE: Please refer to this LI in the warranty claim in the \"Notes\" section. The damage code of the component determined to be the root cause of the symptom must be used in the warranty claim.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11014576",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint The flap of the reversing camera opens and closes by itself during forward travel several times during the trip. No camera image is displayed in the head unit. The reversing camera or the 360 system functions normally when activated manually or by engaging drive range \"R\". Cause This is not a malfunction, but an intended system behavior. Calibration of the reversing camera is in progress. The calibration is completed by:  Opening the camera cover for a maximum of 5 cumulative minutes.  If the vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10. If calibration is aborted by exceeding one of the above conditions, the camera retracts and the calibration will re-attempt once the conditions are achieved and the speed returns to the range of 18 km/h (~11 MPH). Remedy SCN code PARK213M on MFA2 facelift vehicles produced after 09/2024 (A-Class, CLA, GLA, etc...) so the complete calibration speed window is available. For vehicles with PARK213M or PARK223 a calibration is completed successfully by:  Driving forward (typically less than 1 minute).  Vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10.  During daylight.  Without a vehicle following too closely (camera must be able to see asphalt). When calibration has completed successfully, the camera door closes automatically for the rest of the driving cycle. The camera will now only open if the customer requests (Example: Engaging reverse gear). The calibration of the camera will re-initiate every drive cycle (ignition change). The customer can generally perform calibration at the first attempt while briefly maintaining a speed range of 15 km/h (~9 MPH) and 35 km/h (~22 MPH). The customer can therefore play a significant role in reducing the camera door noise and actuation frequency.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11016159",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint MBUX head unit display with red text box \"System Inoperative\". ONLY for vehicles with SA code (549+21U) or (549+U19). Cause Head unit software variant. Remedy For all chassis use Xentry to update head unit (A26/17). Target boot software number should be either:  247 904 6600 (E905.4) OR  247 904 7500 (E906.1) If vehicle fits all criteria and either target software is not available via Xentry, please open an XSS ticket.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11018712",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint MBUX head unit display with red text box \"System Inoperative\". ONLY for vehicles with SA code (549+21U) or (549+U19). Cause Head unit software variant. Remedy For all chassis use Xentry to update head unit (A26/17). Target boot software number should be either:  247 904 6600 (E905.4) OR  247 904 7500 (E906.1) If vehicle fits all criteria and either target software is not available via Xentry, please open an XSS ticket. Damage code 5424x-01 may be used with a repair start date after June 2nd, 2025.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11019750",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint The head unit cannot be operated via the steering wheel buttons on the right side. Cause A26/17 - MBUX multimedia system (head unit) software Remedy Update the A26/17 - MBUX multimedia system (head unit) to newest/latest software. Then recommission steering wheel electronics N135 - steering wheel electronics (LRE). If the problem is still present, please create a TIPS case. Note: Please do not replace any parts.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11026835",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint The flap of the reversing camera opens and closes by itself during forward travel several times during the trip. No ca\u0002mera image is displayed in the head unit. The reversing camera or the 360 system functions normally when activated manually or by engaging drive range \"R\". Cause This is not a malfunction, but an intended system behavior. Calibration of the reversing camera is in progress. The calibration is completed by:  Opening the camera cover for a maximum of 5 cumulative minutes.  If the vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10. If calibration is aborted by exceeding one of the above conditions, the camera retracts and the calibration will re-attempt once the conditions are achieved and the speed returns to the range of 18 km/h (~11 MPH). Remedy SCN code PARK213M on MFA2 facelift vehicles produced after 09/2024 (A-Class, CLA, GLA, etc...) so the complete calibration speed window is available. For vehicles with PARK213M or PARK223 a calibration is completed successfully by:  Driving forward (typically less than 1 minute).  Vehicle speed is < 35 km/h (<22 MPH).  The steering wheel angle is < 10.  During daylight.  Without a vehicle following too closely (camera must be able to see asphalt). When calibration has completed successfully, the camera door closes automatically for the rest of the driving cycle. The camera will now only open if the customer requests (Example: Engaging reverse gear). The calibration of the camera will re-initiate every drive cycle (ignition change). The customer can generally perform calibration at the first attempt while briefly maintaining a speed range of 15 km/ h (~9 MPH) and 35 km/h (~22 MPH). The customer can therefore play a significant role in reducing the camera door noise and actuation frequency.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11029927",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Yellow information message in driver display (instrument cluster): \"Switch on motor to charge the 12V battery\" Cause The state of charge (SOC) of the 12V battery has dropped to 45% or less. Remedy This warning message appears as soon as the state of charge (SOC) of the 12V primary battery drops below 45%. This message is displayed to safeguard the vehicle's starting ability. At the same time as the display appears in the instrument cluster, customers with a linked Mercedes me connect account also receive a push notification via the app/by email (if this function is activated). The battery must be charged to a state of charge (SOC) of at least 50%. To do this, an external charger can be connected (please comply with AR54.10-P-1133S) or the vehicle can be driven (by the customer) for 30 to 60 minutes. Please make customers aware of how the vehicle behaves:  If the vehicle is used for short journeys, the battery state of charge may slowly drop to less than 45%  a negative charge balance  A negative charge balance will also occur if the vehicle is used while stationary without running the engine, e.g. if the head unit is used, the ignition is switched on, or other comfort & convenience power consumers, e.g. seat heating/seat ventilation, are active.  An unlocked vehicle may increase consumption, because certain vehicle functions are actively kept ready for the customer. In combination with Keyless-Go or flush-mounted door handles, the vehicle may be woken up if the vehicle key is detected in the vicinity of the vehicle. The cause of the discharge can be identified with the aid of the onboard electrical system data in the EZS using XENTRY Diagnosis. See attached examples for identifying typical customer situations (e.g. operation with ignition on, operation of head unit while stationary or vehicle unlocked while parked). Vehicles with code B01+801: When charging while stationary, the 48V battery must have a state of charge (SOC) of 70% before the 12V primary battery, or the secondary battery in the case of code 503, can be charged. To ensure optimum battery care, please also comply with the existing Service Information documents regarding the handling of stock vehicles (SI54.10-P-0024A) and on remaining in transport mode (SI54.00-P-0004A) until immediately before handover to end customers. Special note: Do not replace any parts, if the message has occurred due to battery discharge as a result of the driving profile or the ignition being switched on (see attached examples); in such cases separate warranty and goodwill invoicing is not possible, as this is a normal on-board electrical system protection function. Likewise battery care and recharging do not qualify as a W&G case. Please advise customers accordingly regarding the above-mentioned issues relating to vehicle use.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11033722",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint \"Weekly profile\" pre-entry climate control setting not available in the climate control menu or grayed out in the Mercedes me connect App. Cause There may be limitations on the indicator in the display due to incorrect parametrization in the head unit and PTCU SW. Remedy Open and XSS ticket and request \"Delete code O98 from the data card\" After, perform SCN coding for HU7 and PTCU software update (N127)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11007745",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Complaint Partly reduced power steering assist when stationary or at low speeds, at approximately 7 MPH, such as when parking. No warning message is displayed and no fault codes are stored. Steering assist returns to normal after key cycle or at speeds greater than 7 MPH but condition may return until remedy is performed. Cause Software in the electric power steering (ES) N68. Remedy Perform software update of electric power steering (ES) N68. Disclaimer NOTE: The information contained in this document is intended for use by trained, professional technicians with the knowledge to properly and safely perform diagnosis and repairs on Mercedes-Benz vehicles, using Mercedes-Benz approved tools and equipment. It informs service technicians about conditions that could occur in certain vehicles and provides information that could assist in proper vehicle diagnosis, service, or repair. It does not indicate that a defect is present in any vehicle referenced in this document nor does it imply warranty coverage. DO NOT assume that a symptom or condition, or a described cause of a symptom or condition, affects any particular vehicle or groups of vehicles, or that a described repair applies to any particular vehicle or groups of vehicles. There can be multiple causes resulting in the same or similar symptoms or conditions described in this document, and trained professional service technicians must use their diagnostic skills to make evaluations on a case-by-case basis. The information contained in this document does not guarantee warranty coverage nor does it extend the vehicles warranty in any way.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10248162",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023
+   ],
+   "summary": "Crease formation on genuine leather seat covers in vehicles with low mileage     Objects left on the seats for extended periods of time (pressure marks).   Objects wedged between the seat backrest and seat cushion (e.g. seat belt buckle).   Light initial creases due to vehicle handling.   Light creases in the outer covers originating from the production process (missing finish).    Heat treatment of the seat covers using heat gun and plastic wedge. Be very careful to not overheat the seat material!",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "11026127",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Displayed Message: Driver camera not functioning, see Operators Manual Cause Interior temperature too high due to:  Summer heat  Direct sunlight  Lack of air conditioning or ventilation Camera enters self-protection mode to prevent overheating. Remedy Do NOT replace any parts. The driver camera (NTG7: MDC295; CIVIC.i2: CIVIC206) is operating as designed. Allow the interior to cool down. If the message remains after cooling:  Run XENTRY Diagnosis  Check latest software for Actuation of Driver Camera (A26/17) No TIPS case required.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11019637",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Instrument cluster warning lamp and/or warning message for brake system, EPB, ESP (yellow or red) and possibly 12 V battery (red) Different combinations of the following DTCs present in the ESP: B23AA77, B23AB77, B23D177 and in part (C100BE0, C100BE1, B23AA1B, B23D152) Cause Due to a reduction in resistance at the HV voltage divider, the DC/DC converter measures an incorrect HV voltage. Regulation of the 12 V output voltage therefore becomes unstable. I.e. the output voltage starts to fluctuate and the output current starts to jump instead of slowly regulating to the currently requested value. The EPB position is calculated by the voltage and the current. Since these fluctuate, the ESP control unit loses its position and sets the DTCs. Remedy Check of the DC/DC converter via XENTRY Diagnosis:  Compare the serial number of the DC/DC converter with a list of potentially affected parts in XENTRY -> DC/DC converter N83/1 -> Special Processes.  If the evaluation comes back as defective - Replace the DC/DC converter and inspect the EPB for Subsequent complaint, defect.  If the evaluation comes comes back not affected: Actuate BUCK mode for approx. 30 s  The output current normally jumps to a high value (e.g. 100 A) and then falls slowly to the current specified value e.g. 50 A and then only changes slowly and in small increments.  In the event of this fault cause, the output current is subject to strong fluctuations/jumps (multiple 1-10 A) (see videos in attachment).  In the event of strong fluctuations and the S/N not identified in the Special Process, please open a TIPS case and attach print out of DC/DC special procedure and buck mode actual values. Subsequent complaint, defect on the EPB:  Check of the actuators and brake caliper piston  Manually extend and retract the piston on the brake caliper completely using the suitable socket  If the piston sticks at a certain point, the rotation force increases significantly  If the brake caliper piston sticks, the brake caliper has to be replaced  If the retaining ring of the actuator is broken, the actuator has to be replaced  In XENTRY, edit the stored test instructions of the remaining DTCs",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11023138",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Instrument cluster warning lamp and/or warning message for brake system, EPB, ESP (yellow or red) and possibly 12V battery (red) Different combinations of the following DTCs present in the ESP: B23AA77, B23AB77, B23D177 and in part (C100BE0, C100BE1, B23AA1B, B23D152) Cause Due to a reduction in resistance at the HV voltage divider, the DC/DC converter measures an incorrect HV voltage. Regulation of the 12 V output voltage therefore becomes unstable. I.e. the output voltage starts to fluctuate and the output current starts to jump instead of slowly regulating to the currently requested value. The EPB position is calculated by the voltage and the current. Since these fluctuate, the ESP control unit loses its position and sets the DTCs. Remedy Check of the DC/DC converter via XENTRY Diagnosis  Actuate BUCK mode for approx. 40 s  The output current normally jumps to a high value (e.g. 100 A) and then falls slowly to the current specified value e.g. 50 A and then only changes slowly and in small increments.  In the event of this fault cause, the output current is subject to strong fluctuations/jumps (multiple 1-10 A) (see videos in attachment)  Perform in XENTRY -> DC/DC converter N83/1 -> Special procedures -> \"Evaluation of the HV resistance reduction of the DC/DC converter control unit\". The special procedure compares the serial number of the installed DC/DC converter with the list of potentially affected parts.  Depending on the result:  If the serial number can be found in the list of potentially affected component parts, then replace the DC/DC converter.  If the serial number cannot be found in the list of potentially affected parts, XENTRY reports that the part is not malfunction. If the problem from this LI applies, please open a TIPS case and forward to HQ. Subsequent complaint, malfunction on the EPB:  Check of the actuators and brake caliper piston  Manually extend and retract the piston on the brake caliper completely using the suitable socket  If the piston sticks at a certain point, the rotation force increases significantly  If the brake caliper piston sticks, the brake caliper has to be replaced  If the retaining ring of the actuator is broken, the actuator has to be replaced  In XENTRY, edit the stored test instructions of the remaining DTCs",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "10222462",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2022
+   ],
+   "summary": "Complaint  Malfunction of the electric steering column adjustment.  The adjustment application by the driver does not correspond to the adjustment direction of the steering column.  Cause  Polarity reversal of the lines M20/1 (steering column adjustment motor, forward and backward) and M20/2 (steering  column adjustment motor, upward and downward) results in a  malfunction of the electric steering column adjustment.  Remedy  Check the lines (line colors) of M20/1 and M20/2 as per the WIS circuit diagram and correct if necessary.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10228807",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2023
+   ],
+   "summary": "Complaint  Height adjustment of electric steering column adjustment jammed in the top/bottom adjustment position (e.g. with Easy  Entry function).  Cause  Height adjustment moves to the top/bottom limit stop and jams.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2023
+   ]
+  },
+  {
+   "id": "10249482",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023
+   ],
+   "summary": "The steering wheel generates grinding noises between the steering wheel and steering column switch module during  steering maneuvers  See example file in the attachments area: Lenkrad-Schleifgerusch_SteeringWheel-GrindingNoises.mp4    The plastic cover on the back of the steering wheel is not positioned correctly and may therefore rub against the steering  column switch module    Please use the following noise files for the damaged part analysis:  1. Grinding noise | pot. cause: steering wheel | see attachment: Lenkrad-Schleifgerusch_SteeringWheel-GrindingNoises.  mp4  2. Creaking/cracking noise | pot. cause: steering column switch module | see attachment: MRSM-Schleifgerusch_  SCCM-GrindingNoises.MOV  If the noise is due to the steering column switch module, please use LI46.10-P-077314.  Check for grinding areas on the steering wheel:  Please check the covers on the rear for protrusion and, if necessary, remount.  1. Mask off openings on back of steering wheel with adhesive tape  1. Mark the back of the steering wheel with colored chalk (see Picture 1)  2. Mount steering wheel on steering column switch module and turn the steering wheel from left lock to right lock ten  times.  3. The chalk will now have disappeared in the areas where there is rubbing (see Picture 2)  Warning: Ensure that no cables and visible areas of the steering wheel are damaged.  The abrasive excess material on the back of the steering wheel must be carefully removed with a Dremel tool.  Tip: You will need to remove approx. 0.1 mm to 0.3 mm of material (example: Picture 3)  Make sure that none of the ground-off material gets into the steering wheel.  After removing the material, clean the entire back of the steering wheel with a 1% soap solution.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10249495",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 300 4MATIC",
+   "years": [
+    2023
+   ],
+   "summary": "Noises in the steering column area when steering.    Under analysis.    Check which area of the steering column the noises occur in.  Do the noises tend to occur at the bottom in the driver footwell or do they tend to occur in the area of the steering column  switch module (MRSM/SCCM)?  If the noises occur in the area of the MRSM/SCCM, work through the following points:  - Loosen screws of the MRSM/SCCM and steering wheel, re-align the MRSM/SCCM, and re-fasten the screws (see  WIS). Sometimes there is stress at the MRSM/SCCM and noises occur.  - If noises continue to occur, swap the MRSM/SCCM into a vehicle without any (noise) complaints.  - If the noises occur with the MRSM/SCCM complained about when it is in the vehicle without a complaint (donor vehicle),  the MRSM/SCCM can be replaced.  - If noises also occur in the customer vehicle with the MRSM/SCCM from the reference vehicle, the MRSM/SCCM is  not the cause and must not be replaced.    Notes:  - When installing the MRSM/SCCM, make sure that no damage occurs!  - Only disassemble and mount all component parts in the \"straight-ahead position\" (see also WIS).  - Please refer to this LI in the \"Notes\" section of the warranty claim!",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2023
+   ]
+  },
+  {
+   "id": "11027796",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Noises from the area of the steering column. - Creaking - Squeaking - Chattering - Humming - Grinding Cause At present, there are no known noise problems with the steering column. Remedy Check surrounding area of the steering column for possible noises.  Instrument panel support  Steering column switch module If noise only occurs when adjusting the steering column via electric actuation please perform: 1. Disassemble bellows of steering column tube module. 2. Move steering column entirely out and entirely down. 3. Grease steering column on green-marked positions with a suitable brush (find pictures in attachment). 4. Move column up 1/4 of the way and grease again. 5. Continue until upper limit stop is reached. 6. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 7. If noise does not resolve, perform above procedure again. 8. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 9. If noise still does not resolve, please open a TIPS case. For all other noises or if the above does not resolve, create a TIPS case Body, Chassis, and Entertainment inbox. Attach a detailed description of the noise complaint, images, and a recording of the noise. A detailed description includes:  Position of height and longitudinal adjustment when the noise occurs  If possible, locate affected component part on steering column  State any change in the noise when steering column component parts are touched (e.g. spring, etc.)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11029919",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Noises from the area of the steering column. - Creaking - Squeaking - Chattering - Humming - Grinding Cause At present, there are no known noise problems with the steering column. Remedy Check surrounding area of the steering column for possible noises.  Instrument panel support  Steering column switch module If noise only occurs when adjusting the steering column via electric actuation please perform: 1. Disassemble bellows of steering column tube module. 2. Move steering column entirely out and entirely down. 3. Grease steering column on green-marked positions with a suitable brush (find pictures in attachment). 4. Move column up 1/4 of the way and grease again. 5. Continue until upper limit stop is reached. 6. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 7. If noise does not resolve, perform above procedure again. 8. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 9. If noise still does not resolve, please open a TIPS case. For all other noises or if the above does not resolve, create a TIPS case Body, Chassis, and Entertainment inbox. Attach a detailed description of the noise complaint, images, and a recording of the noise. A detailed description includes:  Position of height and longitudinal adjustment when the noise occurs  If possible, locate affected component part on steering column  State any change in the noise when steering column component parts are touched (e.g. spring, etc.)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11032576",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Cause At present, there are no known noise problems with the steering column. Remedy Check surrounding area of the steering column for possible noises.  Instrument panel support  Steering column switch module If noise only occurs when adjusting the steering column via electric actuation please perform: 1. Disassemble bellows of steering column tube module. 2. Move steering column entirely out and entirely down. 3. Grease steering column on green-marked positions with a suitable brush (find pictures in attachment). 4. Move column up 1/4 of the way and grease again. 5. Continue until upper limit stop is reached. 6. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 7. If noise does not resolve, perform above procedure again and anywhere there are movement or friction points that the noise seems to be emanating from. 8. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 9. If noise still does not resolve, please open a TIPS case. For all other noises or if the above does not resolve, create a TIPS case Body, Chassis, and Entertainment inbox. Attach a detailed description of the noise complaint, images, and a recording of the noise. A detailed description includes:  Position of height and longitudinal adjustment when the noise occurs  If possible, locate affected component part on steering column  State any change in the noise when steering column component parts are touched (e.g. spring, etc.)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11033019",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint Noises from the area of the steering column. - Creaking - Squeaking - Chattering - Humming - Grinding Cause At present, there are no known noise problems with the steering column. Remedy Check surrounding area of the steering column for possible noises.  Instrument panel support  Steering column switch module NOTE: Occasionally to verify complaint, the steering column/vehicle needs to be in direct sunlight or hot conditions for a few hours. If noise only occurs when adjusting the steering column via electric actuation, please perform: 1. Disassemble bellows of steering column tube module. 2. Move steering column entirely out and entirely down. 3. Grease steering column on all pivot points including, but not limited to, green-marked positions with a suitable brush (find pictures in attachment). 4. Move column up 1/4 of the way and grease again. 5. Continue until upper limit stop is reached. 6. Then move steering column adjustment in all directions from limit stop to limit stop several times to work in the grease. 7. If noise does not resolve, wipe excess grease off and perform greasing and movement to limit stops in all directions again. For all other noises or if the above does not resolve, create a TIPS case Body, Chassis, and Entertainment inbox. Attach a detailed description of the noise complaint, images, and a recording of the noise. Include detailed items of the following:  Position of height and longitudinal adjustment when the noise occurs  If possible, locate affected component part on steering column  State any change in the noise when steering column component parts are touched (e.g. spring, etc.)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11020156",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 350 4MATIC",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint When driving on uneven road surfaces, there may be cracking, thumping, or knocking noises from the area of the rear axle. Cause The lower connection of the shock absorber (damper) to the lower transverse control arm might not have been torqued to specification. Remedy Tighten threaded connection to listed appropriate torque. (See WIS). Replacing the shock absorber (damper) does not remedy the problem. Invoice SSL 32D07 and 32S07 for this. Note: The threaded connection is self-locking and will not detach. Noise is the only byproduct.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11021107",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint There may be creaking noises when steering while stationary or driving slowly. See \"Sound Example\" attachment. Cause The vehicle level of the front axle may be too low. The noises when steering can be caused by continuous contact of the end stop buffer with the damper tube. Remedy IMPORTANT: Do not apply document to vehicles outside of the listed validity range. The vehicle level must first be measured using the romess inclinometer (follow WIS instructions!) and the measured values should be compared with the target values in the Wheel Alignment online tool. If the vehicle level is out of tolerance, then the springs on the front axle must be replaced in order to correct the level. The currently installed springs can be pulled up in the XENTRY Parts Information tool through the corresponding selection. How to identify currently installed springs:  Check for colored dots on the front springs.  If no dots or color markings, please check if there is a parts label that is affixed to the spring. If the MB part number is listed, continue with process listed in the paragraph below.  If the part label does not contain an MB part number, is missing or illegible, please check for a barcode label with a 3 digit number. See \"Spring Barcode\" picture for example. Open a TIPS case with this number and list that it is from the barcode attached to the currently installed spring.  If none of the above references can be found, open a TIPS case. How to identify next spring in line with color dots:  Navigate to the parts catalog and enter the vehicle VIN/FIN.  Navigate to group 32 sub-group 054 (front spring strut) and find the spring. The spring listed in the parts catalog will have a \"color marking\" indicator. If the dots on the spring and the color listed in the parts catalog is the same then you have the part number of the currently installed spring. If it does not, then you need to clear the vehicle specific filter by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures). Proceed to finding the spring that matches the color dots on the vehicles currently installed spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool.  The spring item numbers are normally listed in sequence (observe and verify valid SA code for vehicle). The next strongest spring is selected by the ascending, next highest item number (Example: If the currently installed spring ends in \"13 00\" then then next spring in line is \"14 00\".) How to identify next spring in line with part number tag:  Navigate to the parts catalog and enter the vehicle VIN/FIN and the part number found from the spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool. To do this, you need to clear the filters by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures).  The spring item numbers are normally listed in sequence (observe and verify valid SA code for vehicle). The next strongest spring is selected by the ascending, next highest item number (Example: If the currently installed spring ends in \"13 00\" then then next spring in line is \"14 00\".)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11029964",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint There may be creaking noises when steering while stationary or driving slowly. See Example Noise attachment Cause The vehicle level of the front axle may be too low. The noises when steering can be caused by continuous contact of the end stop buffer with the damper tube. Remedy IMPORTANT: Do not apply document to vehicles outside of the listed validity range. The vehicle level must first be measured using the romess inclinometer (follow WIS instructions!) and the measured values should be compared with the target values in the Wheel Alignment online tool. If the vehicle level is out of tolerance, then the springs on the front axle must be replaced in order to correct the level. The currently installed springs can be pulled up in the XENTRY Parts Information tool through the corresponding selection. How to identify currently installed springs:  Check for colored dots on the front springs.  If no dots or color markings, please check if there is a parts label that is affixed to the spring. If the MB part number is listed, continue with process listed in the paragraph below.  If the part label does not contain an MB part number, is missing or illegible, please check for a barcode label with a 3 digit number. See \"Spring Barcode\" picture for example. Open a TIPS case with this number and list that it is from the barcode attached to the currently installed spring.  If none of the above references can be found, open a TIPS case. How to identify next spring in line with color dots:  Navigate to the parts catalog and enter the vehicle VIN/FIN.  Navigate to group 32 sub-group 054 (front spring strut) and find the spring. The spring listed in the parts catalog will have a \"color marking\" indicator. If the dots on the spring and the color listed in the parts catalog is the same then you have the part number of the currently installed spring. If it does not, then you need to clear the vehicle specific filter by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures). Proceed to finding the spring that matches the color dots on the vehicles currently installed spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool.  The spring item numbers are normally listed in sequence (observe and verify valid SA code for vehicle). The next strongest spring is selected by the ascending, next highest item number (Example: If the currently installed spring ends in \"13 00\" then then next spring in line is \"14 00\".) How to identify next spring in line with part number tag:  Navigate to the parts catalog and enter the vehicle VIN/FIN and the part number found from the spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool. To do this, you need to clear the filters by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures).  The spring item numbers are normally listed in sequence (observe and verify valid SA code for vehicle). The next strongest spring is selected by the ascending, next highest item number (Example: If the currently installed spring ends in \"13 00\" then then next spring in line is \"14 00\".)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11032789",
+   "make": "MERCEDES-BENZ",
+   "model": "EQB 250+",
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "summary": "Complaint There may be creaking noises when steering while stationary or driving slowly. See Example Noise attachment Cause The vehicle level of the front axle may be too low. The noises when steering can be caused by continuous contact of the end stop buffer with the damper tube. Remedy IMPORTANT: Do not apply document to vehicles outside of the listed validity range. The vehicle level must first be measured using the romess inclinometer (follow WIS instructions!) and the measured values should be compared with the target values in the Wheel Alignment online tool. If the vehicle level is out of tolerance, then the springs on the front axle must be replaced in order to correct the level. The currently installed springs can be pulled up in the XENTRY Parts Information tool through the corresponding selection. How to identify currently installed springs:  Check for colored dots on the front springs.  If no dots or color markings, please check if there is a parts label that is affixed to the spring. If the MB part number is listed, continue with process listed in the paragraph below.  If the part label does not contain an MB part number, is missing or illegible, please check for a barcode label with a 3 digit number. See \"Spring Barcode\" picture for example. Open a TIPS case with this number and list that it is from the barcode attached to the currently installed spring.  If none of the above references can be found, open a TIPS case. How to identify next spring in line with color dots:  Navigate to the parts catalog and enter the vehicle VIN/FIN.  Navigate to group 32 sub-group 054 (front spring strut) and find the spring. The spring listed in the parts catalog will have a \"color marking\" indicator. If the dots on the spring and the color listed in the parts catalog is the same then you have the part number of the currently installed spring. If it does not, then you need to clear the vehicle specific filter by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures). Proceed to finding the spring that matches the color dots on the vehicles currently installed spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool.  The spring item numbers are normally listed in sequence (observe and verify valid SA code for vehicle). The next strongest spring is selected by the ascending, next highest item number (Example: If the currently installed spring ends in \"13 00\" then then next spring in line is \"14 00\".) How to identify next spring in line with part number tag:  Navigate to the parts catalog and enter the vehicle VIN/FIN and the part number found from the spring.  In order to find the correct or next highest spring, the spring filter must be removed in the XENTRY Parts Information tool. To do this, you need to clear the filters by using the funnel icon on the right side column of the page and clicking \"no filter\" at the top and then \"apply filter\" (see \"Clear Vehicle EPC Filter\" for how-to pictures).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2023,
+    2024,
+    2025
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "mercedes-benz-eqb-us-2022-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-eqb-us-2024-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-eqb-us-2024-ev-bev-a-a1-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-eqb-us-2025-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-eqb-us-2025-ev-bev-a-a1-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [
+  "MY2024: no vPIC body family spans MY2022 and MY2024; compared across all rows"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 1,
+  "configurations": 5,
+  "facts": 16,
+  "recalls": 5,
+  "symptom_patterns": 7,
+  "issues": 14,
+  "issues_by_probability": {
+   "RARE": 1,
+   "OCCASIONAL": 13
+  },
+  "tsbs": 50,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 16
+  }
+ }
+}

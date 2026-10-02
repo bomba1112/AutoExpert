@@ -144,7 +144,7 @@ LINES: list[Line] = [
       vpic_ca=r"(GLE|M[ -]CLASS|ML)\b.*", carmans=r"mercedes-benz-(gle|m-class|ml)(-class)?(-[a-z-]+)?",
       db_models=("GLE-Class", "ML-Class")),
     L("mercedes-benz", "gls", "GLS (+GL)", ("GLS-Class", "GL-Class"), nhtsa=r"(GLS|GL-CLASS|GL ?\d{3}|AMG GLS|MAYBACH GLS).*",
-      vpic_ca=r"(GLS|GL[ -]CLASS|GL ?\d{3})\b.*", carmans=r"mercedes-benz-(gls|gl-class)(-class)?(-[a-z-]+)?",
+      vpic_ca=r"(MAYBACH )?(GLS|GL[ -]CLASS|GL ?\d{3})\b.*", carmans=r"mercedes-benz-(gls|gl-class)(-class)?(-[a-z-]+)?",
       db_models=("GLS-Class", "GL-Class")),
     L("mercedes-benz", "cla", "CLA", "CLA-Class", db_models=("CLA-Class",), nhtsa=r"(CLA\b|CLA-CLASS|CLA ?\d{2,3}|AMG CLA).*",
       vpic_ca=r"CLA\b.*", carmans=r"mercedes-benz-cla(-class)?(-[a-z-]+)?"),
@@ -337,7 +337,17 @@ def _full(pattern: str, text: str) -> bool:
     return bool(pattern) and re.fullmatch(pattern, text.strip().upper(), re.I) is not None
 
 
+def normalize_nhtsa(model: str) -> str:
+    """NHTSA spells the same model several ways: a make prefix, 'ACTIVE HYBRID', '4DR'."""
+    text = re.sub(r"\s+", " ", model.strip().upper())
+    text = re.sub(r"^MERCEDES-MAYBACH ", "MAYBACH ", text)
+    text = re.sub(r"^(LAND ROVER|MERCEDES-BENZ) ", "", text)
+    text = text.replace("ACTIVE HYBRID", "ACTIVEHYBRID")
+    return re.sub(r"\b4DR\b", "4-DOOR", text)
+
+
 def nhtsa_line(make_slug: str, model: str) -> Line | None:
+    model = normalize_nhtsa(model)
     hits = [line for line in LINES if line.make == make_slug and _full(line.nhtsa, model)]
     # The most specific pattern wins when several match (e.g. X5 vs X5 M).
     return max(hits, key=lambda line: len(line.nhtsa)) if hits else None

@@ -1,0 +1,1366 @@
+{
+ "make": "Mercedes-Benz",
+ "line": "AMG GT 4-Door",
+ "line_key": "mercedes-benz/amg-gt-4-door",
+ "db_models": [
+  "AMG GT 4-Door"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "nhtsa-recalls-amg-gt-class-4-door-2021": {
+   "key": "nhtsa-recalls-amg-gt-class-4-door-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/amg-gt-class-4-door_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=AMG+GT-CLASS+4+DOOR&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:10:43+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls AMG GT-CLASS 4 DOOR 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-gt-4-door-coupe-2024": {
+   "key": "nhtsa-recalls-gt-4-door-coupe-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/gt-4-door-coupe_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=GT+4-DOOR+COUPE&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:14:48+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GT 4-DOOR COUPE 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-amg-gt-class-4-door-2021": {
+   "key": "nhtsa-complaints-amg-gt-class-4-door-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/amg-gt-class-4-door_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=AMG+GT-CLASS+4+DOOR&modelYear=2021",
+   "sha256": "26ce85914a7224cf7f18367f89c260cf06d21f633219cb77c56ebca27f50276d",
+   "retrieved_at": "2026-10-02T09:11:31+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints AMG GT-CLASS 4 DOOR 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-gt-4-door-coupe-2024": {
+   "key": "nhtsa-complaints-gt-4-door-coupe-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/gt-4-door-coupe_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=GT+4-DOOR+COUPE&modelYear=2024",
+   "sha256": "fd5e2fa10adf5247d67ef272e3a97f0a986dd39433e7a60012ede590a51af90d",
+   "retrieved_at": "2026-10-02T09:15:29+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GT 4-DOOR COUPE 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "US2019+",
+   "name": "AMG GT 4-Door (US, through 2026)",
+   "db_model": "AMG GT 4-Door",
+   "existing_id": null,
+   "start_year": 2019,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "first US model year of the line in EPA vehicles.csv: 2019"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2019-3.0l-6cyl-hev-a-9-spd-4wd",
+   "year": 2019,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "41253",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2019-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "year": 2019,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "41139",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "41140",
+     "epa_model": "AMG GT 63 S 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2020-3.0l-6cyl-hev-a-9-spd-4wd",
+   "year": 2020,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "41715",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2020-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "year": 2020,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42122",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "42123",
+     "epa_model": "AMG GT 63 S 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2021-3.0l-6cyl-hev-a-9-spd-4wd",
+   "year": 2021,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43350",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 20,
+     "highway_mpg": 25,
+     "combined_mpg": 22,
+     "combined_l_100km": "10.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "43351",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 20,
+     "highway_mpg": 25,
+     "combined_mpg": 22,
+     "combined_l_100km": "10.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2021-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "year": 2021,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43536",
+     "epa_model": "AMG GT 63 S 4matic Plus",
+     "city_mpg": 16,
+     "highway_mpg": 21,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "43565",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 16,
+     "highway_mpg": 21,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2022-3.0l-6cyl-hev-a-9-spd-4wd",
+   "year": 2022,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44801",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 25,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "44831",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 25,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2023-3.0l-6cyl-hev-a-9-spd-awd",
+   "year": 2023,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46220",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "46221",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2023-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "year": 2023,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46318",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "46319",
+     "epa_model": "AMG GT 63 S 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2024-3.0l-6cyl-hev-a-9-spd-awd",
+   "year": 2024,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47051",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "47052",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2024-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "year": 2024,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47338",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2025-3.0l-6cyl-hev-a-9-spd-awd",
+   "year": 2025,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "48867",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "48868",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "48V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2025-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "year": 2025,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "48848",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2025-4.0l-8cyl-turbo-phev-a-9-spd-awd",
+   "year": 2025,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "PHEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49161",
+     "epa_model": "AMG GT 63 S E Performance",
+     "city_mpg": 16,
+     "highway_mpg": 19,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; PHEV",
+     "ev_motor": "150 kW PMSM",
+     "range_mi": "340"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2026-3.0l-6cyl-hev-a-9-spd-awd",
+   "year": 2026,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49345",
+     "epa_model": "AMG GT 43 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "49347",
+     "epa_model": "AMG GT 53 4matic Plus",
+     "city_mpg": 19,
+     "highway_mpg": 24,
+     "combined_mpg": 21,
+     "combined_l_100km": "11.2",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mercedes-benz-amg-gt-4-door-us-2026-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "year": 2026,
+   "generation": "US2019+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic 9-spd",
+   "displacement_l": "4.0",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49346",
+     "epa_model": "AMG GT 63 4matic Plus",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [],
+ "recalls": [],
+ "complaint_patterns": [
+  {
+   "generation": "US2019+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2021": 2
+   },
+   "sample_odi": [
+    11739859,
+    11629844
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2019+",
+   "component": "BACK OVER PREVENTION",
+   "count": 1,
+   "by_year": {
+    "2024": 1
+   },
+   "sample_odi": [
+    11674687
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2019+",
+   "component": "POWER TRAIN",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11739859
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2019+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11660293
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "US2019+|overheating": {
+   "key": "US2019+|overheating",
+   "label": "overheating",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11739859
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-amg-gt-class-4-door-2021"
+  }
+ },
+ "issues": [
+  {
+   "id": "amg-gt-4-door-US2019+-tsb-harsh-shifting",
+   "generation": "US2019+",
+   "years": [
+    2025,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Manufacturer communication: harsh / erratic shifting",
+   "symptoms": [
+    "harsh / erratic shifting"
+   ],
+   "cause": "Complaint This document is intended as a pre-case diagnostic reference for transmission related concerns. It will also ensure that if a case is necessary, all supporting documentation is available. This should not be used on its own as justification for creating a TIPS case. Cause The root cause will vary depending on the complaint. The goal of this document is to provide diagnostic checks and procedures that may help resolve customer complaints without opening a TIPS case. Remedy Before opening a transmission-related TIPS case, the following steps must be performed to ensure all relevant data has been collected and possible remedies (when applicable) have been performed. Please Note: At minimum, the documents below must be collected before proceeding to ensure the data in its original state when the vehicle arrived is captured. - Initial Quick Test w/ Freeze frame data - VGS Control Unit Log - Initial EEPROM data (.txt format) - IPR Result (if applicable. See LI27.00-P-073124 - Transmission diagnosis using the Intelligent Predictive Repair (IPR) tool) - Transmission Heath Page If the vehicle has previously been repaired for the same concern, note the date, mileage, and TIPS case or RO number, along with a brief description of the prior work performed. IPR Guidance: The IPR recommended repair should be completed prior to following any steps in this LI and prior to case creation. IPR repairs do not require additional warranty approvals or a TIPS case to validate/confirm the results. To ensure efficient case handling, please avoid opening TIPS cases for this reason. For further information regarding IPR please see the following documents: LI27.00-P-073124 - Transmission diagnosis using the Intelligent Predictive Repair (IPR) tool Oil Pan Condition Evaluation: In some situations, IPR will advise checking the oil pan condition and determining a repair based on the evaluation. Example photos in Xentry can be found in two ways:  Use the blue hyperlink in the IPR result, a",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11036077 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11036077",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11036077"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "amg-gt-4-door-US2019+-tsb-infotainment",
+   "generation": "US2019+",
+   "years": [
+    2025,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "Complaint The intent of this document is to provide workshops with helpful technical reference language.  Commonly used acronyms in LI's and TIPS cases.  Control unit names, numbers, and how to identify.  Network/wiring architecture groups to baumuster quick reference.  Platform to baumuster quick reference. Cause Information only Remedy Acronyms:  AV = Actual Values  CU = Control Unit  CUL = Control Unit Log  DTC = Diagnostic Trouble Code  E-Stand = Fresh-up head unit boot software (found in head unit control unit log)  FUP = Fresh-up  FW = Firmware  HSVL = High Speed Video Line  HU = Head Unit  HW = Hardware  IPD = Injector Performance Data  ISU = Initial Start Up  LVDS = Low Voltage Differential Signal  NAG\"x\" = New Automatic Gearbox (\"x\" is the generation number, example: NAG3)  NSFT = Not Safe For Transport  MOPF = Model Facelift (Ex: 167 MOPF)  PiH = Plug-in Hybrid  P3 Hybrid = AMG Plug-in Hybrid with rear drive unit  SA Code = Sonderausstattungscode (Option Code)  SCN = Software Calibration Number  SW = Software  TCU = Telecommunication Control Unit (Hermes/Ramses/Etc...)  QT = Quicktest  XD = XENTRY Diagnosis Control Unit Identification: Refer to the attachment \"Control Unit Nomenclature\" for location of each.  Control Unit Name  Control Unit Number  Control Unit Short name  Control Unit Diogenes (\"dy-oj-uh-neez\") name - Control unit variant/family. Network/Wiring Architecture to Baumuster Quick Reference: Star 1  117, 156, 246 (MFA)  166, 176, 221, 242, 246, 292 Star 2  205, 213, 238, 253, 257, 290 (MRA)  117, 156, 246 (MFA)  118, 177, 243, 247 (MFA2)  167, 222, 292, 463, 465, 906 Star 3  294, 295, 296, 297 (EVA2)  206, 214, 223, 236, 254 (MRA2)  192 and 232 (MSA)  907 Platform to Baumuster Quick Reference: MRA = \"Mercedes-Benz Rearwheel Architecture\":  205  213  222  238  253  257  290 MRA2 = \"Mercedes-Benz Rearwheel Architecture - Generation 2\":  206  214  223  236  254 MFA = \"Mercedes-Benz Frontwheel Architecture\"  117  156  246 MFA2 = \"Mercedes-Benz Fro",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11027782, 11027820, 11029094, 11029927, 11030089 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11027782, 11027820, 11029094, 11029927, 11030089",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11027782",
+     "11027820",
+     "11029094",
+     "11029927",
+     "11030089",
+     "11030159",
+     "11030301",
+     "11031255",
+     "11031389",
+     "11031558",
+     "11033164",
+     "11033852",
+     "11034273",
+     "11034538",
+     "11035016",
+     "11035230",
+     "11036091",
+     "11036608"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "amg-gt-4-door-US2019+-tsb-loss-of-power",
+   "generation": "US2019+",
+   "years": [
+    2025,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other Cause Increased electrical resistance in pins for left and right throttle actuators. (M16/60 and M16/61) Remedy Replaced left and right throttle actuator Sockets with | Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other  P210B85 - The throttle valve actuator 2 has a malfunction. There is a signal above the permissible limit value.  P2AD300 - The values from the position sensors \"A/G\" of the throttle valve are implausible relative to each other Cause Increased electrical resistance in pins for left and right throttle actuators. (M16/60 and M16/61) Remedy Replaced left and right throttle actuator Sockets with | Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other  P210B85 - The throttle valve actuator 2 has a malfunction. There is a signal above the permissi",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11031698, 11032873, 11036076 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11031698, 11032873, 11036076",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11031698",
+     "11032873",
+     "11036076"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "amg-gt-4-door-US2019+-tsb-torque-converter",
+   "generation": "US2019+",
+   "years": [
+    2025,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Manufacturer communication: torque converter shudder",
+   "symptoms": [
+    "torque converter shudder"
+   ],
+   "cause": "Complaint There are several types of complaint about noises or poor windshield wiper wiping performance: A: Wiper blades squeaking, chattering, shuddering B: The windshield is not wiped completely (streaking) C: During the downward movement water is pulled back onto the windshield from the A-pillar (Figure 1) D: After windshield cleaning, water keeps spraying onto the windshield for several wipe cycles (Figure 2) A1: The windshield and wiper blades are contaminated with residues from car washing facilities, identifiable by the water beading. The resulting differences in the friction values between the wiper blades and the windshield can excite the wiper blades to vibrate. Note: It is mostly wax residue from the washer system, but also water-repellent nano-particle coating for paint and/or silicone-based washer fluid, that could cause this problem. A partially dry windshield also has different friction values, which can likewise result in squeaking of the wiper blades A2: The wiper blades are worn by mechanical damage (wiper lip damaged by ice or insect debris, or deformed by long periods of disuse). A3: Incorrect angle of incidence of the wiper arms to the windshield. Because of this, the rubber lip of the wiper blade may not flip over at the reversal point. Cause B: B1: Wax/ dirt residues on the windshield B2: Wiper blades deformed or worn B3: Downforce of wiper arm not OK (Figure 3) Cause C: Water is pulled back onto the windshield by the differential pressure created as the wiper arm moves downwards. Cause D: Washer water collects in the fastening of the wiper blade and is blown onto the windshield by the airstream over several wipe cycles. Note and supporting information: Wiper blades are wear parts which, even when \"not used\" for long periods (kept in park position), may become permanently deformed and damaged. Further stresses on the rubber wiper blade arise due to various environmental influences which progressively change the effectiveness of the rubber wipe",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11032875, 11036077 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11032875, 11036077",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11032875",
+     "11036077"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "11036077",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025
+   ],
+   "summary": "Complaint This document is intended as a pre-case diagnostic reference for transmission related concerns. It will also ensure that if a case is necessary, all supporting documentation is available. This should not be used on its own as justification for creating a TIPS case. Cause The root cause will vary depending on the complaint. The goal of this document is to provide diagnostic checks and procedures that may help resolve customer complaints without opening a TIPS case. Remedy Before opening a transmission-related TIPS case, the following steps must be performed to ensure all relevant data has been collected and possible remedies (when applicable) have been performed. Please Note: At minimum, the documents below must be collected before proceeding to ensure the data in its original state when the vehicle arrived is captured. - Initial Quick Test w/ Freeze frame data - VGS Control Unit Log - Initial EEPROM data (.txt format) - IPR Result (if applicable. See LI27.00-P-073124 - Transmission diagnosis using the Intelligent Predictive Repair (IPR) tool) - Transmission Heath Page If the vehicle has previously been repaired for the same concern, note the date, mileage, and TIPS case or RO number, along with a brief description of the prior work performed. IPR Guidance: The IPR recommended repair should be completed prior to following any steps in this LI and prior to case creation. IPR repairs do not require additional warranty approvals or a TIPS case to validate/confirm the results. To ensure efficient case handling, please avoid opening TIPS cases for this reason. For further information regarding IPR please see the following documents: LI27.00-P-073124 - Transmission diagnosis using the Intelligent Predictive Repair (IPR) tool Oil Pan Condition Evaluation: In some situations, IPR will advise checking the oil pan condition and determining a repair based on the evaluation. Example photos in Xentry can be found in two ways:  Use the blue hyperlink in the IPR result, and it will take you to the Condition check of transmission oil  Navigate to Xentry Bluebook > Help for control unit > Condition check of transmission oil If a different repair that what is recommended by IPR is performed, attaching photo documentation of the complaint vehicle oil pan and the IPR example to the claim is required. Reproducing the Concern: Proper evaluation of transmission concerns generally requires the condition to be reproducible. It is recommended to compare the vehicle to a similar model, if available, to help determine whether the shift behavior is characteristic of the drivetrain or uncharacteristic for the vehicle. If the concern cannot be duplicated:  A test drive with the customer may assist in understanding and reproducing the complaint.  The vehicle shift quality should be compared to a known-good vehicle with identical drivetrain and model year.  Check Shift Quality History (VGS Control Unit > Adaptations > Shift Quality History) Shift Quality History will show the last 5 noticeable harsh shifts and some of the parameters in which it occurred. You can use this to attempt recreation of the operating conditions and increase likelihood of reproducing the complaint. Complaint A: Shift Quality Note: Certain AMG variants may exhibit more firm and noticeable shift behavior as a normal characteristic. Refer to LI27.60P075147 for additional information. 1. Perform Valve flushing procedure 2. Perform 5 Torque Converter adaptions in a row - Allow the vehicle to warm up naturally, DO NOT power brake as it will increase the temperature in the torque converter. - After the 5th adaptation, collect a screen shot showing all 5 on one page 3. Perform a standstill adaption - collect a screen shot Recheck vehicle operation. If the concern has not improved, driving adaptations should be performed to target specific gear shifts.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "11027782",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint The intent of this document is to provide workshops with helpful technical reference language.  Commonly used acronyms in LI's and TIPS cases.  Control unit names, numbers, and how to identify.  Network/wiring architecture groups to baumuster quick reference.  Platform to baumuster quick reference. Cause Information only Remedy Acronyms:  AV = Actual Values  CU = Control Unit  CUL = Control Unit Log  DTC = Diagnostic Trouble Code  E-Stand = Fresh-up head unit boot software (found in head unit control unit log)  FUP = Fresh-up  FW = Firmware  HSVL = High Speed Video Line  HU = Head Unit  HW = Hardware  IPD = Injector Performance Data  ISU = Initial Start Up  LVDS = Low Voltage Differential Signal  NAG\"x\" = New Automatic Gearbox (\"x\" is the generation number, example: NAG3)  NSFT = Not Safe For Transport  MOPF = Model Facelift (Ex: 167 MOPF)  PiH = Plug-in Hybrid  P3 Hybrid = AMG Plug-in Hybrid with rear drive unit  SA Code = Sonderausstattungscode (Option Code)  SCN = Software Calibration Number  SW = Software  TCU = Telecommunication Control Unit (Hermes/Ramses/Etc...)  QT = Quicktest  XD = XENTRY Diagnosis Control Unit Identification: Refer to the attachment \"Control Unit Nomenclature\" for location of each.  Control Unit Name  Control Unit Number  Control Unit Short name  Control Unit Diogenes (\"dy-oj-uh-neez\") name - Control unit variant/family. Network/Wiring Architecture to Baumuster Quick Reference: Star 1  117, 156, 246 (MFA)  166, 176, 221, 242, 246, 292 Star 2  205, 213, 238, 253, 257, 290 (MRA)  117, 156, 246 (MFA)  118, 177, 243, 247 (MFA2)  167, 222, 292, 463, 465, 906 Star 3  294, 295, 296, 297 (EVA2)  206, 214, 223, 236, 254 (MRA2)  192 and 232 (MSA)  907 Platform to Baumuster Quick Reference: MRA = \"Mercedes-Benz Rearwheel Architecture\":  205  213  222  238  253  257  290 MRA2 = \"Mercedes-Benz Rearwheel Architecture - Generation 2\":  206  214  223  236  254 MFA = \"Mercedes-Benz Frontwheel Architecture\"  117  156  246 MFA2 = \"Mercedes-Benz Frontwheel Architecture - Generation 2\"  118  177  243  247 EVA1.5 = \"Electric Vehicle Architecture\"  243 EVA2 = \"Electric Vehicle Architecture - Generation 2\"  294  295  296  297 MSA = \"Mercedes-Benz Sport Architecture\"  192  232 MMA = \"Mercedes-Benz Modular Architecture\"  174",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11027820",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint The vehicle's position on the map is displayed far away from its actual position, e.g. the vehicle is displayed as being in the middle of the ocean. Note: No relevant DTC is displayed during the quick test. Cause The GNSS antenna is not correctly inserted at the GNSS connection (see picture in the attachment) in the head unit (A26/17). Remedy Insert the plug into the GNSS connection and ensure that the plug has engaged correctly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11029094",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Traffic sign symbol for \"Traffic Sign Assist\" is blinking in instrument cluster without obvious cause usually with one of the following scenarios:  Flashing without a speed limit (\"- -\").  Flashing when current vehicle speed is under speed limit.  Flashing between US speed limit symbol and European speed limit symbol. Cause There are two identified reasons for this concern: 1. Country code information stored incorrectly at a particular geographic latitude range. 2. Incorrect reference data when the vehicle is started and a GPS signal is not immediately available. Remedy No TIPS case is necessary. Do not replace parts. A new software for the head unit is scheduled for tentative release in Q4 2025 to early Q1 2026 to rectify concern.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11029927",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Yellow information message in driver display (instrument cluster): \"Switch on motor to charge the 12V battery\" Cause The state of charge (SOC) of the 12V battery has dropped to 45% or less. Remedy This warning message appears as soon as the state of charge (SOC) of the 12V primary battery drops below 45%. This message is displayed to safeguard the vehicle's starting ability. At the same time as the display appears in the instrument cluster, customers with a linked Mercedes me connect account also receive a push notification via the app/by email (if this function is activated). The battery must be charged to a state of charge (SOC) of at least 50%. To do this, an external charger can be connected (please comply with AR54.10-P-1133S) or the vehicle can be driven (by the customer) for 30 to 60 minutes. Please make customers aware of how the vehicle behaves:  If the vehicle is used for short journeys, the battery state of charge may slowly drop to less than 45%  a negative charge balance  A negative charge balance will also occur if the vehicle is used while stationary without running the engine, e.g. if the head unit is used, the ignition is switched on, or other comfort & convenience power consumers, e.g. seat heating/seat ventilation, are active.  An unlocked vehicle may increase consumption, because certain vehicle functions are actively kept ready for the customer. In combination with Keyless-Go or flush-mounted door handles, the vehicle may be woken up if the vehicle key is detected in the vicinity of the vehicle. The cause of the discharge can be identified with the aid of the onboard electrical system data in the EZS using XENTRY Diagnosis. See attached examples for identifying typical customer situations (e.g. operation with ignition on, operation of head unit while stationary or vehicle unlocked while parked). Vehicles with code B01+801: When charging while stationary, the 48V battery must have a state of charge (SOC) of 70% before the 12V primary battery, or the secondary battery in the case of code 503, can be charged. To ensure optimum battery care, please also comply with the existing Service Information documents regarding the handling of stock vehicles (SI54.10-P-0024A) and on remaining in transport mode (SI54.00-P-0004A) until immediately before handover to end customers. Special note: Do not replace any parts, if the message has occurred due to battery discharge as a result of the driving profile or the ignition being switched on (see attached examples); in such cases separate warranty and goodwill invoicing is not possible, as this is a normal on-board electrical system protection function. Likewise battery care and recharging do not qualify as a W&G case. Please advise customers accordingly regarding the above-mentioned issues relating to vehicle use.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11030089",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint The vehicle's position on the map is displayed far away from its actual position, e.g. the vehicle is displayed as being in the middle of the ocean. Note: No relevant DTC is displayed during the quick test. Cause The GNSS antenna is not correctly inserted at the GNSS connection (see picture in the attachment) in the head unit (A26/17). Remedy Insert the plug into the GNSS connection and ensure that the plug has engaged correctly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11030159",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 PRO 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Mercedes me connect services inoperative (me-Call, Remote Status, etc.). Mercedes me services - activation not possible Notes: - The event code \"B16AC00 - The configuration of the SIM card is erroneous\" is active and stored - The head unit shows no internet connection Cause The RAMSES module may be faulty. This fault profile can be recognized as follows: With XENTRY Diagnosis, enter the \"ACTUAL values\" menu of the RAMSES control unit and read out the values with position 175 and 727. ACTUAL values in the event of a fault: Type of mobile service (position 175): No reception Operating mode (position 727): Ready mode Remedy If B16AC00 is permanently active and saved and position 175 is no reception and position 727 is ready mode, it is highly likely that the communication module is faulty. In this case, an initial start up must be carried out. If the problem persists even after an initial start up, please create a TIPS case.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11030301",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint The intent of this document is to provide workshops with helpful technical reference language.  Commonly used acronyms in LI's and TIPS cases.  Control unit names, numbers, and how to identify.  Network/wiring architecture groups to baumuster quick reference.  Platform to baumuster quick reference. Cause Information only Remedy Acronyms:  AV = Actual Values  CU = Control Unit  CUL = Control Unit Log  DTC = Diagnostic Trouble Code  E-Stand = Fresh-up head unit boot software (found in head unit control unit log)  FUP = Fresh-up  FW = Firmware  HSVL = High Speed Video Line  HU = Head Unit  HW = Hardware  IPD = Injector Performance Data  ISU = Initial Start Up  LVDS = Low Voltage Differential Signal  NAG\"x\" = New Automatic Gearbox (\"x\" is the generation number, example: NAG3)  NSFT = Not Safe For Transport  MOPF = Model Facelift (Ex: 167 MOPF)  PiH = Plug-in Hybrid  P3 Hybrid = AMG Plug-in Hybrid with rear drive unit  SA Code = Sonderausstattungscode (Option Code)  SCN = Software Calibration Number  SW = Software  TCU = Telecommunication Control Unit (Hermes/Ramses/Etc...)  QT = Quicktest  XD = XENTRY Diagnosis Control Unit Identification: Refer to the attachment \"Control Unit Nomenclature\" for location of each.  Control Unit Name  Control Unit Number  Control Unit Short name  Control Unit Diogenes (\"dy-oj-uh-neez\") name - Control unit variant/family. Network/Wiring Architecture to Baumuster Quick Reference: Star 1  117, 156, 246 (MFA)  166, 176, 221, 242, 246, 292  906 Star 2  205, 213, 238, 253, 257, 290 (MRA)  117, 156, 246 (MFA)  118, 177, 243, 247 (MFA2)  167, 222, 292, 463, 465  907 Star 3  294, 295, 296, 297 (EVA2)  206, 214, 223, 236, 254 (MRA2)  192 and 232 (MSA) Star 3.5  174  178 Platform to Baumuster Quick Reference: MRA = \"Mercedes-Benz Rearwheel Architecture\":  205  213  222  238  253  257  290 MRA2 = \"Mercedes-Benz Rearwheel Architecture - Generation 2\":  206  214  223  236  254 MFA = \"Mercedes-Benz Frontwheel Architecture\"  117  156  246 MFA2 = \"Mercedes-Benz Frontwheel Architecture - Generation 2\"  118  177  243  247 EVA1.5 = \"Electric Vehicle Architecture\"  243 EVA2 = \"Electric Vehicle Architecture - Generation 2\"  294  295  296  297 MSA = \"Mercedes-Benz Sport Architecture\"  192  232 MMA = \"Mercedes-Benz Modular Architecture\"  174  178",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11031255",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Traffic sign symbol for \"Traffic Sign Assist\" is blinking in instrument cluster without obvious cause usually with one of the following scenarios:  Flashing without a speed limit (\"- -\").  Flashing when current vehicle speed is under speed limit.  Flashing between US speed limit symbol and European speed limit symbol. NOTE:  Verify that the concern falls under one of the attachment videos. If not, then it is outside of the scope of this LI.  This also does not cover \"Traffic Sign Inoperative\" messages on the instrument cluster. Cause There are two identified reasons for this concern: 1. Country code information stored incorrectly at a particular geographic latitude range. 2. Incorrect reference data when the vehicle is started and a GPS signal is not immediately available. Remedy No TIPS case is necessary. Do not replace parts. A new software for the head unit is scheduled for tentative release in Q2 2026.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11031389",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Traffic sign symbol for \"Traffic Sign Assist\" is blinking in instrument cluster without obvious cause usually with one of the following scenarios:  Flashing without a speed limit (\"- -\").  Flashing when current vehicle speed is under speed limit.  Flashing between US speed limit symbol and European speed limit symbol. NOTE:  Verify that the concern falls under one of the attachment videos. If not, then it is outside of the scope of this LI.  This also does not cover \"Traffic Sign Inoperative\" messages on the instrument cluster. Cause There are two identified reasons for this concern: 1. Country code information stored incorrectly at a particular geographic latitude range. 2. Incorrect reference data when the vehicle is started and a GPS signal is not immediately available. Remedy Do not replace parts. Please open a TIPS case to the Body/Chassis/Entertainment inbox but read the below carefully:  The vehicle must be exhibiting the concern as shown in the attachment videos.  The vehicle DOES NOT need to be at the dealer, nor does it need to be brought into the dealership.  If the geographic location is known, it is very important that it is provided.  Provide any pictures or videos, if available. A new software for the head unit is scheduled for tentative release in Q2 2026.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11031558",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint The intent of this document is to provide workshops with helpful technical reference language.  Commonly used acronyms in LI's and TIPS cases.  Control unit names, numbers, and how to identify.  Network/wiring architecture groups to baumuster quick reference.  Platform to baumuster quick reference. Cause Information only Remedy Acronyms:  AV = Actual Values  CPR = Car Package Release (For MB.OS)  CU = Control Unit  CUL = Control Unit Log  DTC = Diagnostic Trouble Code  E-Stand = Fresh-up head unit boot software (found in head unit control unit log)  FUP = Fresh-up  FW = Firmware  HSVL = High Speed Video Line  HU = Head Unit  HW = Hardware  IPD = Injector Performance Data  ISU = Initial Start Up  LVDS = Low Voltage Differential Signal  NAG\"x\" = New Automatic Gearbox (\"x\" is the generation number, example: NAG3)  NSFT = Not Safe For Transport  MOPF = Model Facelift (Ex: 167 MOPF)  PiH = Plug-in Hybrid  SA Code = Sonderausstattungscode (Option Code)  SCN = Software Calibration Number  SW = Software  TCU = Telecommunication Control Unit (Hermes/Ramses/Etc...)  QT = Quicktest  XD = XENTRY Diagnosis Control Unit Identification: Refer to the attachment \"Control Unit Nomenclature\" for location of each.  Control Unit Name  Control Unit Number  Control Unit Short name  Control Unit Diogenes (\"dy-oj-uh-neez\") name - Control unit variant/family. Network/Wiring Architecture to Baumuster Quick Reference: Star 1  117, 156, 246 (MFA)  166, 176, 221, 242, 246, 292  906 Star 2  205, 213, 238, 253, 257, 290 (MRA)  117, 156, 246 (MFA)  118, 177, 243, 247 (MFA2)  167, 222, 292, 463, 465  907 Star 3  294, 295, 296, 297 (EVA2)  206, 214, 223, 236, 254 (MRA2)  192 and 232 (MSA) Star 3.5  174  178 Platform to Baumuster Quick Reference: MRA = \"Mercedes-Benz Rearwheel Architecture\":  205  213  222  238  253  257  290 MRA2 = \"Mercedes-Benz Rearwheel Architecture - Generation 2\":  206  214  223  236  254 MFA = \"Mercedes-Benz Frontwheel Architecture\"  117  156  246 MFA2 = \"Mercedes-Benz Frontwheel Architecture - Generation 2\"  118  177  243  247 EVA1.5 = \"Electric Vehicle Architecture\"  243 EVA2 = \"Electric Vehicle Architecture - Generation 2\"  294  295  296  297 MSA = \"Mercedes-Benz Sport Architecture\"  192  232 MMA = \"Mercedes-Benz Modular Architecture\"  174  178",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11033164",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint 1. \"Perform vehicle handover\" in the workshop menu to start the maintenance computer for service A/B cannot be carried out. 2. Service confirmation is not possible because \"Perform vehicle handover\" is displayed. This cannot be carried out. 3. The service display in the instrument cluster permanently displays 365 days (remaining time) and does not change. Cause Routine change in the software in N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)). Vehicle handover was not performed. Remedy For model series 290 AMG up to and including AEJ 22 and model series 167 up to and including AEJ 21/2, the following applies: Manually commission already-installed instrument cluster control unit N133/1 and then perform special procedure to re-initialize ASSYST data in N127 powertrain control unit. For model series 167 as of AEJ 22/1, 192 AMG, 206, 214, 232 AMG, 236, 254, 290 AMG as of AEJ 23, 294, 295, 296, 297 and 465, the following applies: Reinitialize ASSYST Plus under Adaptations  Teach-in processes  ASSYST PLUS in control unit N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)), and then perform the special procedure for reinitializing the ASSYST data in powertrain control unit N127.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11033852",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint 1. \"Perform vehicle handover\" in the workshop menu to start the maintenance computer for service A/B cannot be carried out. 2. Service confirmation is not possible because \"Perform vehicle handover\" is displayed. This cannot be carried out. 3. The service display in the instrument cluster permanently displays 365 days (remaining time) and does not change. Cause Routine change in the software in N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)). Vehicle handover was not performed. Remedy For model series 290 AMG up to and including AEJ 22 and model series 167 up to and including AEJ 21/2, the following applies: Manually commission already-installed instrument cluster control unit N133/1 and then perform special procedure to re-initialize ASSYST data in N127 powertrain control unit. For model series 167 as of AEJ 22/1, 192 AMG, 206, 214, 232 AMG, 236, 254, 290 AMG as of AEJ 23, 294, 295, 296, 297 and 465, the following applies: Reinitialize ASSYST Plus under Adaptations  Teach-in processes  ASSYST PLUS in control unit N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)), and then perform the special procedure for reinitializing the ASSYST data in powertrain control unit N127.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11034273",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 PRO 4MATIC+",
+   "years": [
+    2026
+   ],
+   "summary": "We are experiencing intermittent issues when flashing A26/17 - MBUX multimedia system + Instrument cluster (Head unit) when using flashing method ethernet to USB-C. Until further notice, please flash via VCI only.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11034538",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint 1. \"Perform vehicle handover\" in the workshop menu to start the maintenance computer for service A/B cannot be carried out. 2. Service confirmation is not possible because \"Perform vehicle handover\" is displayed. This cannot be carried out. 3. The service display in the instrument cluster permanently displays 365 days (remaining time) and does not change. Cause Routine change in the software in N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)). Vehicle handover was not performed. Remedy For model series 290 AMG up to and including AEJ 22 and model series 167 up to and including AEJ 21/2, the following applies: Manually commission already-installed instrument cluster control unit N133/1 and then perform special procedure to re-initialize ASSYST data in N127 powertrain control unit. The following applies to model series 167 from AEJ 22/1 onward, 192 AMG, 206, 214, 223, 232 AMG, 236, 254, 290 AMG from AEJ 23 onward, 294, 295, 296, 297 and 465: Reinitialize ASSYST Plus under Adaptations  Teach-in processes  ASSYST PLUS in control unit N133/1 (instrument cluster) or A26/17 (MBUX multimedia system and instrument cluster (head unit)), and then perform the special procedure for reinitializing the ASSYST data in powertrain control unit N127.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11035016",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Traffic sign symbol for \"Traffic Sign Assist\" is blinking in instrument cluster without obvious cause usually with one of the following scenarios:  Flashing without a speed limit (\"- -\").  Flashing when current vehicle speed is under speed limit.  Flashing between US speed limit symbol and European speed limit symbol. NOTE:  Verify that the concern falls under one of the attachment videos. If not, then it is outside of the scope of this LI.  This also does not cover \"Traffic Sign Inoperative\" messages on the instrument cluster. Cause There are two identified reasons for this concern: 1. Country code information stored incorrectly at a particular geographic latitude range. 2. Incorrect reference data when the vehicle is started and a GPS signal is not immediately available. Remedy Do not replace parts. Please open a TIPS case to the Body/Chassis/Entertainment inbox but read the below carefully:  The vehicle must be exhibiting the concern as shown in the attachment videos.  The vehicle DOES NOT need to be at the dealer, nor does it need to be brought into the dealership.  If the geographic location is known, it is very important that it is provided.  Provide any pictures or videos, if available. A new software for the head unit is scheduled for tentative release in Q3 2026.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11035230",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 PRO 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint After an \"Over the Air\" update (OTA), FM or SDARS radio reception is limited; only a few stations are found. Cause The firmware installation was incomplete. Remedy In the A26/17 control unit \"MBUX multimedia system\" (head unit), use XENTRY to carry out the special process \"All Modules\"; this will reinstall the firmware completely.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11036091",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2026
+   ],
+   "summary": "Complaint DAB, FM, or SDARS radio reception is limited, only a few stations are found. Cause The firmware installation was incomplete. Remedy In the A26/17 control unit \"MBUX multimedia system\" (head unit), use XENTRY to carry out the special process \"All Modules\"; this will reinstall the firmware completely.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11036608",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 PRO 4MATIC+",
+   "years": [
+    2026
+   ],
+   "summary": "Complaint Traffic sign symbol for \"Traffic Sign Assist\" is blinking in instrument cluster without obvious cause usually with one of the following scenarios:  Flashing without a speed limit (\" \").  Flashing when current vehicle speed is under speed limit.  Flashing between US speed limit symbol and European speed limit symbol. NOTE:  Verify that the concern falls under one of the attachment videos. If not, then it is outside of the scope of this LI.  This also does not cover \"Traffic Sign Inoperative\" messages on the instrument cluster. Cause There are two identified reasons for this concern: 1. Country code information stored incorrectly at a particular geographic latitude range. 2. Incorrect reference data when the vehicle is started and a GPS signal is not immediately available. Remedy Update head unit software to latest version and the recheck function in the same location. If vehicle is still exhibiting one of the symptoms as described exactly as in the complaint section or as shown in the video attachments, open a TIPS case to the Body/Chassis/Entertainment inbox with the following:  Video of the concern.  Exact location (latitude and longitude is best)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11031698",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other Cause Increased electrical resistance in pins for left and right throttle actuators. (M16/60 and M16/61) Remedy Replaced left and right throttle actuator Sockets with updated part. Silver Coated Pins 8x A 003 982 70 26 (according to wiring diagram 0,5mm) 4x A 003 982 75 26 (according to wiring diagram 0,75mm) ELA Seals 12x A 001 545 50 80",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  },
+  {
+   "id": "11032873",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 4MATIC+",
+   "years": [
+    2026
+   ],
+   "summary": "Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other  P210B85 - The throttle valve actuator 2 has a malfunction. There is a signal above the permissible limit value.  P2AD300 - The values from the position sensors \"A/G\" of the throttle valve are implausible relative to each other Cause Increased electrical resistance in pins for left and right throttle actuators. (M16/60 and M16/61) Remedy Replaced left and right throttle actuator Sockets with updated part. Silver Coated Pins 8x A 003 982 70 26 (according to wiring diagram 0,5mm) Gold Coated Pins 4x A 003 982 75 26 (according to wiring diagram 0,75mm) ELA Seals 12x A 001 545 50 80",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11036076",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 4MATIC+",
+   "years": [
+    2025
+   ],
+   "summary": "Complaint Customer reports Check Engine Light with possible loss of power concern. The Following DTC's are present  P210185 - The throttle valve actuator has a malfunction. There is a signal above the permissible limit value.  P213500 - The values from the position sensors of the throttle valve are implausible relative to each other  P213600 - The values from position sensors \"A/C\" of the throttle valve are implausible relative to each other  P210B85 - The throttle valve actuator 2 has a malfunction. There is a signal above the permissible limit value.  P2AD300 - The values from the position sensors \"A/G\" of the throttle valve are implausible relative to each other  P2AD200 - The values from position sensors \"B/G\" of the throttle valve are implausible relative to each other. Cause Increased electrical resistance in pins for left and right throttle actuators. (M16/60 and M16/61) Remedy Replaced left and right throttle actuator Sockets with updated part. Silver Coated Pins 8x A 003 982 70 26 (according to wiring diagram 0,5mm) Gold Coated Pins 4x A 003 982 75 26 (according to wiring diagram 0,75mm) ELA Seals 12x A 001 545 50 80",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "11032875",
+   "make": "MERCEDES-BENZ",
+   "model": "AMG GT63 S E PERFORMANCE 4MATIC+",
+   "years": [
+    2025,
+    2026
+   ],
+   "summary": "Complaint There are several types of complaint about noises or poor windshield wiper wiping performance: A: Wiper blades squeaking, chattering, shuddering B: The windshield is not wiped completely (streaking) C: During the downward movement water is pulled back onto the windshield from the A-pillar (Figure 1) D: After windshield cleaning, water keeps spraying onto the windshield for several wipe cycles (Figure 2) A1: The windshield and wiper blades are contaminated with residues from car washing facilities, identifiable by the water beading. The resulting differences in the friction values between the wiper blades and the windshield can excite the wiper blades to vibrate. Note: It is mostly wax residue from the washer system, but also water-repellent nano-particle coating for paint and/or silicone-based washer fluid, that could cause this problem. A partially dry windshield also has different friction values, which can likewise result in squeaking of the wiper blades A2: The wiper blades are worn by mechanical damage (wiper lip damaged by ice or insect debris, or deformed by long periods of disuse). A3: Incorrect angle of incidence of the wiper arms to the windshield. Because of this, the rubber lip of the wiper blade may not flip over at the reversal point. Cause B: B1: Wax/ dirt residues on the windshield B2: Wiper blades deformed or worn B3: Downforce of wiper arm not OK (Figure 3) Cause C: Water is pulled back onto the windshield by the differential pressure created as the wiper arm moves downwards. Cause D: Washer water collects in the fastening of the wiper blade and is blown onto the windshield by the airstream over several wipe cycles. Note and supporting information: Wiper blades are wear parts which, even when \"not used\" for long periods (kept in park position), may become permanently deformed and damaged. Further stresses on the rubber wiper blade arise due to various environmental influences which progressively change the effectiveness of the rubber wiper blade and accelerate the aging process. Due to the natural aging process and wear, the wiper blades should be replaced twice a year, preferably in Spring and Fall (see operator's manual). Remedy Remedy A: A1: Cleaning entire windshield with A 000 986 40 71. A2: Checking water's flow behavior after windshield has been cleaned (see Video 1). If, after cleaning, there are still areas with water beading, then the cleaning process must be carried out again until a rejection reaction is no longer present.  Note: On the vehicle in the video (Video 1), water still beads on the bottom left of the windshield. The windshield is still not properly clean, even though it appears to be clean. The windshield is only properly clean when there are no more areas on the windshield where water beads. A3: Replace wiper blades with genuine wiper blades. Important: Only exchange wiper blades if windshield no longer has water-repellent areas Note: Replacement of wiper blades is not covered under warranty and can be replaced at the expense of the customer. Remedy B: B1: Clean windshield with intensive cleaner A 000 986 40 71. Important: Do not clean the wiper blades otherwise the graphite coating will be damaged. B2: Replace wiper blades with genuine wiper blades  Note: Replacement of wiper blades is not covered under warranty and can be replaced at the expense of the customer. B3: Check the wiper arm for excessive resistance in the bearing. Restore mobility or replace wiper arm if necessary. Remedy C: Problem inherent in design for which there is no technical remedy. Exception: X204 up to 02/2014. In these vehicles, it is possible to install the design configuration of vehicles as of 02/2014. This includes wiper arms (styled arms) with improved behavior in this respect. It is also necessary to replace the wiper blades because the styled arms feature a Top Lock connection (previously Side Lock).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025,
+    2026
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "mercedes-benz/amg-gt-4-door",
+   "field": "generation_boundaries",
+   "reason": "no vPIC Canadian specification rows for this line; boundaries from DB codes only"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2019-3.0l-6cyl-hev-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2019-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2020-3.0l-6cyl-hev-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2020-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2021-3.0l-6cyl-hev-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2021-4.0l-8cyl-turbo-ice-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2022-3.0l-6cyl-hev-a-9-spd-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2023-3.0l-6cyl-hev-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2023-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2024-3.0l-6cyl-hev-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2024-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2025-3.0l-6cyl-hev-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2025-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2025-4.0l-8cyl-turbo-phev-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2026-3.0l-6cyl-hev-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz-amg-gt-4-door-us-2026-4.0l-8cyl-turbo-ice-a-9-spd-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [],
+ "errors": [],
+ "counts": {
+  "generations": 1,
+  "configurations": 16,
+  "facts": 0,
+  "recalls": 0,
+  "symptom_patterns": 1,
+  "issues": 4,
+  "issues_by_probability": {
+   "OCCASIONAL": 4
+  },
+  "tsbs": 23,
+  "errors": 0,
+  "display_levels": {}
+ }
+}
