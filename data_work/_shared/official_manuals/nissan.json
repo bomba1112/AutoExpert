@@ -1,0 +1,1235 @@
+{
+ "make": "Nissan",
+ "portal": "https://www.nissanusa.com/owners/manuals-guides.html",
+ "checked_at": "2026-10-02",
+ "access": "free",
+ "notes": "Nissan USA Manuals & Guides page is dynamic (model/year dropdowns filled by AEM lookup JSON under /owners/manuals-guides/_jcr_content/...manualsandguidessear.lookup.json/{model}/{year}/...); nissanusa.com/robots.txt disallows *_jcr_content*, so that endpoint was NOT called. Links were taken from web search restricted to nissanusa.com (how=site_search) and the observed naming patterns were applied to missing years only with Range-GET verification (how=pattern_verified). Two official hosts: www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/... (current DAM; case-sensitive file names, 'YYYY-Nissan-Model' up to ~2019, 'YYYY-nissan-model' later) and legacy owners.nissanusa.com/content/techpub/ManualsAndGuides/... (still serves PDFs; listed as alt_urls when both exist). All PDFs verified with GET Range bytes=0-1023 -> 206 application/pdf, body %PDF. US editions (Nissan North America; covers mention NissanUSA.com, miles). From MY2017 the owner's manual is titled 'Owner's Manual and Maintenance Information' (maintenance schedule inside); a separate 'Service and Maintenance Guide' exists only 2014-2016 (2017-2026 patterns 404 on both hosts). Warranty Information Booklet and Service & Maintenance Guide are model-agnostic yearly booklets (shared/YYYY/), repeated per line. Rogue variants included: Rogue Hybrid 2017-2019, Rogue Select 2014-2015, 2017 HEV warranty booklet; Pathfinder Hybrid 2014 supplement. Rogue Sport excluded per scope. Not resolved: whether the 2026 Rogue owner's manual also covers the 2026 Rogue Plug-in Hybrid (no separate PHEV manual found by site search). Quick Reference Guides exist but were not collected.",
+ "documents": [
+  {
+   "line": "altima",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Nissan Altima Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2014/2014-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search",
+   "alt_urls": [
+    "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Altima/2014/2014-Altima-owner-manual.pdf"
+   ]
+  },
+  {
+   "line": "altima",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Nissan Altima Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2015/2015-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Nissan Altima Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2016/2016-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search",
+   "alt_urls": [
+    "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Altima/2016/2016-Altima-owner-manual.pdf"
+   ]
+  },
+  {
+   "line": "altima",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Altima/2017/2017-Altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2017/2017-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Altima/2018/2018-Altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2018/2018-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2019/2019-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2019/2019-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2020/2020-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search",
+   "alt_urls": [
+    "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Altima/2020/2020-Altima-owner-manual.pdf"
+   ]
+  },
+  {
+   "line": "altima",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2020/2020-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2021/2021-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2021/2021-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2022/2022-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2022/2022-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2023/2023-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2023/2023-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2024/2024-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "altima",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2024/2024-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2025/2025-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2025/2025-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Nissan Altima Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/altima/2026/2026-nissan-altima-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "altima",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Nissan Pathfinder Owner's Manual",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Pathfinder/2014/2014-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2014,
+   "doc_type": "other",
+   "title": "2014 Nissan Pathfinder Hybrid Owner's Manual Supplement",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/PathfinderHybrid/2014/2014-PathfinderHybrid-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Nissan Pathfinder Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2015/2015-Nissan-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Nissan Pathfinder Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2016/2016-Nissan-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2017/2017-Nissan-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2017/2017-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2018/2018-Nissan-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2018/2018-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Pathfinder/2019/2019-Pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2019/2019-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2020/2020-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2020/2020-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2022/2022-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2022/2022-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2023/2023-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2023/2023-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2024/2024-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2024/2024-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2025/2025-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2025/2025-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Nissan Pathfinder Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/pathfinder/2026/2026-nissan-pathfinder-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "pathfinder",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Nissan Rogue Owner's Manual",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Rogue/2014/2014-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Nissan Rogue Select Owner's Manual (previous-generation Rogue sold alongside new Rogue; variant)",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/RogueSelect/2014/2014-RogueSelect-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Nissan Rogue Owner's Manual",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Rogue/2015/2015-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Nissan Rogue Select Owner's Manual (previous-generation Rogue sold alongside new Rogue; variant)",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/RogueSelect/2015/2015-RogueSelect-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Nissan Rogue Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2016/2016-Nissan-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Nissan Rogue Hybrid Owner's Manual (variant)",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/RogueHybrid/2017/2017-RogueHybrid-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Rogue/2017/2017-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Nissan Hybrid (HEV) Warranty Information Booklet (Rogue Hybrid)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue_hybrid/2017/2017-Nissan-Hybrid-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2017/2017-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Nissan Rogue Hybrid Owner's Manual (variant)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue_hybrid/2018/2018-Nissan-RogueHybrid-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Rogue/2018/2018-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2018/2018-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Nissan Rogue Hybrid Owner's Manual (variant)",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/RogueHybrid/2019/2019-RogueHybrid-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Rogue/2019/2019-Rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2019/2019-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2020/2020-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2020/2020-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2021/2021-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2021/2021-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2022/2022-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2022/2022-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2023/2023-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2023/2023-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2024/2024-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2024/2024-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2025/2025-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "rogue",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2025/2025-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Nissan Rogue Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/rogue/2026/2026-nissan-rogue-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "rogue",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Nissan Sentra Owner's Manual",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Sentra/2014/2014-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2014/2014-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Nissan Sentra Owner's Manual",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Sentra/2015/2015-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2015/2015-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Nissan Sentra Owner's Manual",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2016/2016-Nissan-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 Nissan Service and Maintenance Guide (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-service-maintenance-guide.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2016/2016-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2017/2017-Nissan-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2017/2017-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/Sentra/2018/2018-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2018/2018-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2019/2019-Nissan-Sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2019/2019-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2020/2020-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2020/2020-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2021/2021-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2021/2021-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2022/2022-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2022/2022-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2023/2023-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2023/2023-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2024/2024-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "site_search"
+  },
+  {
+   "line": "sentra",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2024/2024-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2025/2025-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2025/2025-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Nissan Sentra Owner's Manual and Maintenance Information",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/sentra/2026/2026-nissan-sentra-owner-manual.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  },
+  {
+   "line": "sentra",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Nissan Warranty Information Booklet (all Nissan models)",
+   "url": "https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-warranty-booklet.pdf",
+   "page_url": "https://www.nissanusa.com/owners/manuals-guides.html",
+   "verified": true,
+   "how": "pattern_verified"
+  }
+ ],
+ "not_found": [
+  {
+   "line": "pathfinder",
+   "year": 2021,
+   "reason": "No MY2021 Pathfinder was sold in the US (model went 2020 -> 2022); no document found by site search and all three verified URL patterns returned 404."
+  }
+ ]
+}

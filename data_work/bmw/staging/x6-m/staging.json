@@ -1,0 +1,3359 @@
+{
+ "make": "BMW",
+ "line": "X6 M",
+ "line_key": "bmw/x6-m",
+ "db_models": [
+  "X6 M"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-bmw-2014": {
+   "key": "vpic-ca-bmw-2014",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2014.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2014&make=BMW&model=&units=Metric&format=json",
+   "sha256": "38f4bdd29fcc22ea19b559c2d1265804f790b4fef051fb8167850ea883654791",
+   "retrieved_at": "2026-10-02T08:30:21+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2014 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "vpic-ca-bmw-2015": {
+   "key": "vpic-ca-bmw-2015",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2015.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2015&make=BMW&model=&units=Metric&format=json",
+   "sha256": "bdfa1449c178b0cc195801bb35b94d46d7fccf1d4b2cbe2d8e701eaccc67764c",
+   "retrieved_at": "2026-10-02T08:30:26+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2015 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "vpic-ca-bmw-2016": {
+   "key": "vpic-ca-bmw-2016",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2016.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2016&make=BMW&model=&units=Metric&format=json",
+   "sha256": "62a30c9ee098574d4a7b050b7ed85217cc2a52410b7fa6eb924831f4605601e8",
+   "retrieved_at": "2026-10-02T08:30:31+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2016 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "vpic-ca-bmw-2017": {
+   "key": "vpic-ca-bmw-2017",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2017.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2017&make=BMW&model=&units=Metric&format=json",
+   "sha256": "1efa5ad2198e8446334fed7fb824c1b5004cf775b433d3cb500dfcf21f501d0d",
+   "retrieved_at": "2026-10-02T08:30:36+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2017 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "vpic-ca-bmw-2018": {
+   "key": "vpic-ca-bmw-2018",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2018.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2018&make=BMW&model=&units=Metric&format=json",
+   "sha256": "8c3fa382fe0a51d8be4d4de2900f93170b861bc9120071752c1daee13d920992",
+   "retrieved_at": "2026-10-02T08:30:43+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2018 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "vpic-ca-bmw-2019": {
+   "key": "vpic-ca-bmw-2019",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2019.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2019&make=BMW&model=&units=Metric&format=json",
+   "sha256": "4bed38270826c0563ac5e822533e4e65627e7265916e43f59e8ed175b44dae4f",
+   "retrieved_at": "2026-10-02T08:30:47+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2019 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "vpic-ca-bmw-2020": {
+   "key": "vpic-ca-bmw-2020",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2020.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2020&make=BMW&model=&units=Metric&format=json",
+   "sha256": "bf2ced866853782b6ac93136571e6cc88057a4d3adf32c65a92b2db1c4c7a51a",
+   "retrieved_at": "2026-10-02T08:30:52+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2020 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "vpic-ca-bmw-2021": {
+   "key": "vpic-ca-bmw-2021",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2021.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2021&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f11433424cac2da5a108faeb69bd78cacd6b134ecb21e53381d66fd2d35b2f28",
+   "retrieved_at": "2026-10-02T08:30:58+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2021 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "vpic-ca-bmw-2022": {
+   "key": "vpic-ca-bmw-2022",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2022.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2022&make=BMW&model=&units=Metric&format=json",
+   "sha256": "df7693783c80e5c470bfe7736b6dc736b495dbefdb077f42c51cd20a8057fbcb",
+   "retrieved_at": "2026-10-02T08:31:03+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2022 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "vpic-ca-bmw-2023": {
+   "key": "vpic-ca-bmw-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=BMW&model=&units=Metric&format=json",
+   "sha256": "7a6ce71bb2a0a8d7af783fb3a9b164637269ed94485746e66c73510eeaffb0ce",
+   "retrieved_at": "2026-10-02T08:31:08+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-bmw-2024": {
+   "key": "vpic-ca-bmw-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
+   "retrieved_at": "2026-10-02T08:31:13+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-bmw-2025": {
+   "key": "vpic-ca-bmw-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=BMW&model=&units=Metric&format=json",
+   "sha256": "2e185ac4936f63e8a14df8d4dd915357537b234c52521ae3f66e3ce0bbb9b726",
+   "retrieved_at": "2026-10-02T08:31:19+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "vpic-ca-bmw-2026": {
+   "key": "vpic-ca-bmw-2026",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2026.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2026&make=BMW&model=&units=Metric&format=json",
+   "sha256": "c6a01d7b312f51e147bd371cdfd9f341894ce35f6e009d57485e21806e1d845b",
+   "retrieved_at": "2026-10-02T08:31:25+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2026 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-recalls-x6-m-2014": {
+   "key": "nhtsa-recalls-x6-m-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x6-m_2014.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X6+M&modelYear=2014",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:21:13+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X6 M 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-recalls-x6-m-2021": {
+   "key": "nhtsa-recalls-x6-m-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x6-m_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X6+M&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:29:22+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X6 M 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-x6-m-2022": {
+   "key": "nhtsa-recalls-x6-m-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x6-m_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X6+M&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:30:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X6 M 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-x6-m-2014": {
+   "key": "nhtsa-complaints-x6-m-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x6-m_2014.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X6+M&modelYear=2014",
+   "sha256": "e51162ace3aeb195a0de180c79d15a06688805237b153d33e3ae3084d0527584",
+   "retrieved_at": "2026-10-02T09:22:29+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X6 M 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-complaints-x6-m-2021": {
+   "key": "nhtsa-complaints-x6-m-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x6-m_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X6+M&modelYear=2021",
+   "sha256": "8afc42d60ae24d23980b2bc1c146cbe8fe5359c36e6ab46134db2ab37cd2e748",
+   "retrieved_at": "2026-10-02T09:29:52+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X6 M 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-x6-m-2022": {
+   "key": "nhtsa-complaints-x6-m-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x6-m_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X6+M&modelYear=2022",
+   "sha256": "1b707f38024c5342321a607c485998c4ff430c85b12f66f80a12b02e99d5e289",
+   "retrieved_at": "2026-10-02T09:30:47+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X6 M 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "US2014-2019",
+   "name": "X6 M (US, through 2019)",
+   "db_model": "X6 M",
+   "existing_id": null,
+   "start_year": 2014,
+   "end_year": 2019,
+   "open_ended": false,
+   "start_known": false,
+   "end_known": true,
+   "boundary_evidence": [
+    "scope starts at MY2014; the generation may have begun earlier"
+   ],
+   "evidence_tier": "B"
+  },
+  {
+   "code": "US2020+",
+   "name": "X6 M 2020+ (US)",
+   "db_model": "X6 M",
+   "existing_id": null,
+   "start_year": 2020,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "vPIC Canadian specifications: wheelbase 293 cm (MY2019) -> 297 cm (MY2020)"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "bmw-x6-m-us-2014-4.4l-8cyl-turbo-ice-a-s6-awd",
+   "year": 2014,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "33556",
+     "epa_model": "X6 M",
+     "city_mpg": 13,
+     "highway_mpg": 17,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2015-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2015,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36039",
+     "epa_model": "X6 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2016-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2016,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36777",
+     "epa_model": "X6 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2017-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2017,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37999",
+     "epa_model": "X6 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2018-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2018,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39481",
+     "epa_model": "X6 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2019-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2019,
+   "generation": "US2014-2019",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40576",
+     "epa_model": "X6 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2020-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2020,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42445",
+     "epa_model": "X6 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "42446",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2021-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2021,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42868",
+     "epa_model": "X6 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "42869",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2022-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2022,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44330",
+     "epa_model": "X6 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "44331",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2023-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2023,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45578",
+     "epa_model": "X6 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "45579",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2024-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2024,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46550",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2025-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2025,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47748",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x6-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2026,
+   "generation": "US2020+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49569",
+     "epa_model": "X6 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-curb_weight_kg-2014",
+   "generation": "US2014-2019",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2019
+   ],
+   "value": 2415,
+   "unit": "kg",
+   "original": "CW = 2415 (kg, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2415",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-height_mm-2014",
+   "generation": "US2014-2019",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2019
+   ],
+   "value": 1700,
+   "unit": "mm",
+   "original": "OH = 170 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-length_mm-2014",
+   "generation": "US2014-2019",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2014
+   ],
+   "value": 4890,
+   "unit": "mm",
+   "original": "OL = 489 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "489",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-length_mm-2015",
+   "generation": "US2014-2019",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2019
+   ],
+   "value": 4910,
+   "unit": "mm",
+   "original": "OL = 491 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "491",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "491",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "491",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "491",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "491",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-track_front_mm-2015",
+   "generation": "US2014-2019",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2019
+   ],
+   "value": 1640,
+   "unit": "mm",
+   "original": "TWF = 164 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-track_front_mm-2014",
+   "generation": "US2014-2019",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2014
+   ],
+   "value": 1650,
+   "unit": "mm",
+   "original": "TWF = 165 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "165",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-track_rear_mm-2014",
+   "generation": "US2014-2019",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2014
+   ],
+   "value": 1640,
+   "unit": "mm",
+   "original": "TWR = 164 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-track_rear_mm-2015",
+   "generation": "US2014-2019",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2019
+   ],
+   "value": 1700,
+   "unit": "mm",
+   "original": "TWR = 170 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-weight_distribution_front_rear_pct-2014",
+   "generation": "US2014-2019",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2014
+   ],
+   "value": "50/50",
+   "unit": "%",
+   "original": "WD = 50/50 (front/rear %, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-weight_distribution_front_rear_pct-2015",
+   "generation": "US2014-2019",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2019
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-wheelbase_mm-2014",
+   "generation": "US2014-2019",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2019
+   ],
+   "value": 2930,
+   "unit": "mm",
+   "original": "WB = 293 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-width_mm-2014",
+   "generation": "US2014-2019",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2014
+   ],
+   "value": 1980,
+   "unit": "mm",
+   "original": "OW = 198 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2014",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2014"
+  },
+  {
+   "id": "x6-m-US2014-2019-vpic-x6m-4dr-suv-awd-width_mm-2015",
+   "generation": "US2014-2019",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2019
+   ],
+   "value": 1990,
+   "unit": "mm",
+   "original": "OW = 199 (cm, Canadian specification row 'X6M 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "199",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "199",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "199",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "199",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X6M 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "199",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-curb_weight_kg-2020",
+   "generation": "US2020+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2025
+   ],
+   "value": 2443,
+   "unit": "kg",
+   "original": "CW = 2443 (kg, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2443",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-curb_weight_kg-2026",
+   "generation": "US2020+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2026,
+    2026
+   ],
+   "value": 2553,
+   "unit": "kg",
+   "original": "CW = 2553 (kg, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2553",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2026"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-height_mm-2020",
+   "generation": "US2020+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 1700,
+   "unit": "mm",
+   "original": "OH = 170 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OH",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-length_mm-2020",
+   "generation": "US2020+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 4950,
+   "unit": "mm",
+   "original": "OL = 495 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OL",
+     "raw_value": "495",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-track_front_mm-2020",
+   "generation": "US2020+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 1640,
+   "unit": "mm",
+   "original": "TWF = 164 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "164",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-track_rear_mm-2020",
+   "generation": "US2020+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 1710,
+   "unit": "mm",
+   "original": "TWR = 171 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "171",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-weight_distribution_front_rear_pct-2020",
+   "generation": "US2020+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": "51/49",
+   "unit": "%",
+   "original": "WD = 51/49 (front/rear %, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WD",
+     "raw_value": "51/49",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-wheelbase_mm-2020",
+   "generation": "US2020+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 2970,
+   "unit": "mm",
+   "original": "WB = 297 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  },
+  {
+   "id": "x6-m-US2020+-vpic-x6m-4dr-suv-width_mm-2020",
+   "generation": "US2020+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2026
+   ],
+   "value": 2000,
+   "unit": "mm",
+   "original": "OW = 200 (cm, Canadian specification row 'X6M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X6M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X6M 4DR SUV",
+     "field": "OW",
+     "raw_value": "200",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2020"
+  }
+ ],
+ "recalls": [],
+ "complaint_patterns": [
+  {
+   "generation": "US2014-2019",
+   "component": "AIR BAGS",
+   "count": 6,
+   "by_year": {
+    "2014": 6
+   },
+   "sample_odi": [
+    11004295,
+    10957084,
+    10929697,
+    10889278,
+    10876247,
+    10865648
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2014-2019",
+   "component": "POWER TRAIN",
+   "count": 4,
+   "by_year": {
+    "2014": 4
+   },
+   "sample_odi": [
+    11657448,
+    11492552,
+    11423073,
+    11004295
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2021": 2
+   },
+   "sample_odi": [
+    11713418,
+    11698929
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 2,
+   "by_year": {
+    "2021": 2
+   },
+   "sample_odi": [
+    11589248,
+    11384275
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "SERVICE BRAKES",
+   "count": 2,
+   "by_year": {
+    "2021": 2
+   },
+   "sample_odi": [
+    11713418,
+    11694233
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "STEERING",
+   "count": 2,
+   "by_year": {
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11694233,
+    11758509
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2014-2019",
+   "component": "SUSPENSION",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    11431493
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2014-2019",
+   "component": "UNKNOWN OR OTHER",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    11733643
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "AIR BAGS",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11701406
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "BACK OVER PREVENTION",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11589248
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "ENGINE AND ENGINE COOLING",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11698929
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "HYDRAULIC",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11713418
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "LANE DEPARTURE",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11384275
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "POWER TRAIN",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11761561
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2020+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11514795
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "US2014-2019|torque-converter": {
+   "key": "US2014-2019|torque-converter",
+   "label": "torque converter shudder",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    11657448
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x6-m-2014"
+  },
+  "US2020+|battery-drain": {
+   "key": "US2020+|battery-drain",
+   "label": "battery drain / no start",
+   "count": 2,
+   "by_year": {
+    "2021": 2
+   },
+   "sample_odi": [
+    11713418,
+    11698929
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x6-m-2021"
+  },
+  "US2020+|loss-of-power": {
+   "key": "US2020+|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11761561
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x6-m-2022"
+  }
+ },
+ "issues": [
+  {
+   "id": "x6-m-US2014-2019-tsb-airbag",
+   "generation": "US2014-2019",
+   "years": [
+    2018,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10214266 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10214266",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10214266"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2014-2019-tsb-battery-drain",
+   "generation": "US2014-2019",
+   "years": [
+    2018,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or | ENGINE DOES NOT START BELOW FREEZING TEMPERATURES: Engine designation correction Parts availability Warranty. The engine will not start at temperatures below freezing. The starter does not turn and engage.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10143565, 10170572 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10143565, 10170572",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10143565",
+     "10170572"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2014-2019-tsb-infotainment",
+   "generation": "US2014-2019",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing. 'Component Protection Active': If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN. | HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when: | NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing: If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10135992, 10138404, 10138411, 10142940, 10142941 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10135992, 10138404, 10138411, 10142940, 10142941",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10135992",
+     "10138404",
+     "10138411",
+     "10142940",
+     "10142941",
+     "10143570",
+     "10145316"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2014-2019-tsb-steering-noise",
+   "generation": "US2014-2019",
+   "years": [
+    2015,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "NOISE WHEN ADJUSTING THE STEERING COLUMN UP OR DOWN: Creaking noise when raising or lowering the steering column position. CAUSE Steering column adjustment.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10170575 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10170575",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10170575"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2020+-tsb-airbag",
+   "generation": "US2020+",
+   "years": [
+    2020,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently. | A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently. One of the following fault codes is stored in the ACSM (air bag control unit):   930949 - Knee airbag, driver: short circuit to negative terminal 93094F - Knee airbag, front passenger: short circuit to negative terminal 93094C - Knee airbag driver's side: Resistance too great 930952 - Knee airbag, front passenger: Resistance too great.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10212527, 10214266, 10227927 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10212527, 10214266, 10227927",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10212527",
+     "10214266",
+     "10227927"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2020+-tsb-infotainment",
+   "generation": "US2020+",
+   "years": [
+    2020,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "BMW CONNECTEDDRIVE APPS ARE NO LONGER AVAILABLE AFTER PROGRAMMING: After programming vehicle with \"20-03\" software, BMW ConnecedDrive apps are no longer available in the head unit. Software in the Head Unit High (HU-H3). | HEAD UNIT RESETS WHEN NAVIGATION IS USED IN CERTAIN LOCATIONS: The head unit resets sporadically causing the CID to turn black and then starts up again after a short time with the message \"Start navigation system\". This only occurs during navigation guidance when the \"3D building\" function is used Software in the Head Unit High (HU-H3). | HEAD UNIT RESETS WITH FAULT CODE B7F8F9 RESET WATCHDOG: Customer states the following about their vehicle: Active radio or music source is interrupted. The navigation is no longer available. A black screen is shown in the Control Display.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10179010, 10179821, 10184588, 10186230, 10186892 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10179010, 10179821, 10184588, 10186230, 10186892",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10179010",
+     "10179821",
+     "10184588",
+     "10186230",
+     "10186892",
+     "10200482",
+     "10238090",
+     "10249032"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2020+-tsb-steering-noise",
+   "generation": "US2020+",
+   "years": [
+    2020,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column. Note: Opening, closing and starting via the BMW Digital Key or the Digital Key Card are not affected. Software error in the BDC (Body Domain Controller) module. | FAILURE OF THE ELECTRIC STEERING COLUMN ADJUSTMENT AT HIGHER CABIN TEMPERATURE: Electric steering column adjustment fails when interior cabin temperatures rise above 122 degrees F (e.g., parked outdoors on hot day). Faulty self-diagnosis of the steering column control unit. | GROANING NOISE DURING HEIGHT ADJUSTMENT OF THE ELECTRIC STEERING COLUMN: A groaning type noise is heard during the height adjustment.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10179825, 10181219, 10181220, 10182608, 10182907 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10179825, 10181219, 10181220, 10182608, 10182907",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10179825",
+     "10181219",
+     "10181220",
+     "10182608",
+     "10182907",
+     "10186233",
+     "10186895",
+     "10200484",
+     "10204661",
+     "10206690",
+     "10230732",
+     "10242691"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x6-m-US2020+-tsb-water-leak",
+   "generation": "US2020+",
+   "years": [
+    2020,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "BODY",
+   "title": "Manufacturer communication: water leak into cabin",
+   "symptoms": [
+    "water leak into cabin"
+   ],
+   "cause": "?Water leaking into the vehicle from the headliner/microphone area.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10242696 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10242696",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10242696"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "10214266",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10143565",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10170572",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018,
+    2019
+   ],
+   "summary": "ENGINE DOES NOT START BELOW FREEZING TEMPERATURES: Engine designation correction Parts availability Warranty. The engine will not start at temperatures below freezing. The starter does not turn and engage.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019
+   ]
+  },
+  {
+   "id": "10135992",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing. 'Component Protection Active': If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10138411",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10138404",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing: If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10142941",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO (NEXT GENERATION NAVIGATION PROFESSIONAL) HEAD UNIT CANNOT BE SWAPPED BETWEEN VEHICLES FOR TESTING. COMPONENT PROTECTION ACTIVE",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10142940",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "NO AUDIO PLAYBACK AFTER REPLACING THE HEAD UNIT HIGH 2 (HU-H2): After replacing the Head Unit High (HU-H2) and performing ISTA4 programming, there is no audio playback.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10143570",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10145316",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2018
+   ],
+   "summary": "COMPONENT PROTECTION ACTIVE. HEAD UNITS CANNOT BE SWAPPED BETWEEN VEHICLES FOR TESTING.: If either the head unit (NBT-EVO or ENTRY-NAV-EVO) or the Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10170575",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "summary": "NOISE WHEN ADJUSTING THE STEERING COLUMN UP OR DOWN: Creaking noise when raising or lowering the steering column position. CAUSE Steering column adjustment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  {
+   "id": "10212527",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10227927",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently. One of the following fault codes is stored in the ACSM (air bag control unit):   930949 - Knee airbag, driver: short circuit to negative terminal 93094F - Knee airbag, front passenger: short circuit to negative terminal 93094C - Knee airbag driver's side: Resistance too great 930952 - Knee airbag, front passenger: Resistance too great.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10179010",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "BMW CONNECTEDDRIVE APPS ARE NO LONGER AVAILABLE AFTER PROGRAMMING: After programming vehicle with \"20-03\" software, BMW ConnecedDrive apps are no longer available in the head unit. Software in the Head Unit High (HU-H3).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10179821",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "HEAD UNIT RESETS WHEN NAVIGATION IS USED IN CERTAIN LOCATIONS: The head unit resets sporadically causing the CID to turn black and then starts up again after a short time with the message \"Start navigation system\". This only occurs during navigation guidance when the \"3D building\" function is used Software in the Head Unit High (HU-H3).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10184588",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "HEAD UNIT RESETS WITH FAULT CODE B7F8F9 RESET WATCHDOG: Customer states the following about their vehicle: Active radio or music source is interrupted. The navigation is no longer available. A black screen is shown in the Control Display.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10186230",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "?PROGRAM HEAD UNIT: Satellite radio content is not available over IP, this does not affect channels received over satellite.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10186892",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "?PROGRAM HEAD UNIT: Satellite radio content is not available over IP, this does not affect channels received over satellite.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10200482",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "HU-H3 MGU RESETS DUE TO BLUETOOTH CONNECTION WITH SAMSUNG ANDROID 11 : The head unit resets when using various apps (e.g., YouTube, Spotify, etc) on the connected mobile phone.   This affects Samsung mobile phones (e.g., Galaxy S20 / S21) with the Android 11 operating system.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10238090",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "After programming the head unit (HU-H2), activating the FSC (German word Freischaltcode) Enabling Codes repeatedly fails.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10249032",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "The Central Information Display goes black intermittently due to resets of the Head Unit (HU-H3). FaultB7F8F9  HU-H: Reset will be stored in the HU-H3.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10179825",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column. Note: Opening, closing and starting via the BMW Digital Key or the Digital Key Card are not affected. Software error in the BDC (Body Domain Controller) module.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10181219",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "FAILURE OF THE ELECTRIC STEERING COLUMN ADJUSTMENT AT HIGHER CABIN TEMPERATURE: Electric steering column adjustment fails when interior cabin temperatures rise above 122 degrees F (e.g., parked outdoors on hot day). Faulty self-diagnosis of the steering column control unit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10181220",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "GROANING NOISE DURING HEIGHT ADJUSTMENT OF THE ELECTRIC STEERING COLUMN: A groaning type noise is heard during the height adjustment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10182608",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "GROANING NOISE DURING HEIGHT ADJUSTMENT OF THE ELECTRIC STEERING COLUMN: A groaning type noise is heard during the height adjustment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10182907",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "GROANING NOISE DURING HEIGHT ADJUSTMENT OF THE ELECTRIC STEERING COLUMN: A groaning type noise is heard during the height adjustment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10186233",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10186895",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10200484",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10204661",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10206690",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10230732",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "The saved steering column positions, vertical and horizontal, are not stored long term.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10242691",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "?Unusual noises occur only when operating the steering column in the axial direction.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  },
+  {
+   "id": "10242696",
+   "make": "BMW",
+   "model": "X6 M",
+   "years": [
+    2020
+   ],
+   "summary": "?Water leaking into the vehicle from the headliner/microphone area.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2020
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "bmw-x6-m-us-2014-4.4l-8cyl-turbo-ice-a-s6-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2015-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2016-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2017-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2018-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2019-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2020-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2021-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2022-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2023-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2024-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2025-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x6-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [
+  "MY2015: vPIC dimension change without a generation signal (overall length 489 -> 491, overall width 198 -> 199, front track 165 -> 164, rear track 164 -> 170); treated as a facelift"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 2,
+  "configurations": 13,
+  "facts": 22,
+  "recalls": 0,
+  "symptom_patterns": 3,
+  "issues": 8,
+  "issues_by_probability": {
+   "OCCASIONAL": 8
+  },
+  "tsbs": 34,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 22
+  }
+ }
+}

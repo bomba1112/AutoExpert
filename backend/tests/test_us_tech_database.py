@@ -84,10 +84,14 @@ def test_generation_years_cover_scope_without_gaps():
             covered.update(range(gen["start_year"], gen["end_year"] + 1))
         model_years = {cfg["year"] for cfg in staging["configurations"]}
         if staging.get("build"):
-            # Batch lines: every EPA model year of the line, contiguously, inside 2014-2026.
-            if model_years:
-                assert set(range(min(model_years), max(model_years) + 1)) <= covered, staging["line"]
+            # Batch lines: every EPA model year of the line is inside a generation (2014-2026).
+            # A year left uncovered is explained only by the line being absent from EPA that
+            # year (e.g. no US BMW M3 in 2019-2020).
+            assert model_years <= covered, staging["line"]
             assert covered <= set(YEARS), staging["line"]
+            if model_years:
+                for year in set(range(min(model_years), max(model_years) + 1)) - covered:
+                    assert year not in model_years, (staging["line"], year)
         else:
             assert set(YEARS) <= covered, staging["line"]
         for cfg in staging["configurations"]:

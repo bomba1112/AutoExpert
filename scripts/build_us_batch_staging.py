@@ -258,16 +258,24 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
         disappears in `prev` or `year`. Transition years with both generations on sale and
         variants listed every year (short/long wheelbase, trims) do not trigger it."""
         tl = timeline(field, fam)
-        new = [v for v, ys in tl.items() if min(ys) == year and (len(ys) >= 2 or max(ys) == last_year)]
-        old = [v for v, ys in tl.items() if min(ys) < year and max(ys) in (prev, year)]
+        # `prev` and `year` are consecutive EPA years of the line; vPIC can list the line in
+        # the years between (sold in Canada only), so a change may happen inside that gap.
+        new = [
+            v for v, ys in tl.items()
+            if prev < min(ys) <= year and year in ys and (len(ys) >= 2 or max(ys) == last_year)
+        ]
+        old = [v for v, ys in tl.items() if min(ys) <= prev and prev <= max(ys) <= year]
         if not new or not old:
             return None
         numbers = all(re.fullmatch(r"\d+", v) for v in new + old)
-        # Within one body family: the largest jump between a disappearing and an appearing
-        # value (variants listed every year are already filtered out above). Across families
-        # (a renamed or replacing body): the smallest jump, so trim spread does not count.
+        # Each appearing value is matched with the nearest disappearing one (short with short,
+        # long with long wheelbase). Within one body family the largest of these distances
+        # counts; across families (a renamed or replacing body) the smallest, so trim spread
+        # does not count.
         pick = max if fam is not None else min
-        step = pick(abs(int(x) - int(y)) for x in old for y in new) if numbers else None
+        step = (
+            pick(min(abs(int(x) - int(y)) for x in old) for y in new) if numbers else None
+        )
         return "/".join(sorted(old)), "/".join(sorted(new)), step
 
     def compare(prev, year, field, fam):
@@ -288,10 +296,19 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
     for prev, year in zip(years, years[1:]):
         reasons = []
         fam = common_family(prev, year)
+        gap_years = set(range(prev + 1, year))
+        if gap_years and not any(r["year"] in gap_years for r in ca):
+            # EPA and vPIC both lack the years in between: the line was off the US market.
+            reasons.append(
+                f"EPA vehicles.csv has no rows for MY{prev + 1}"
+                + (f"-{year - 1}" if year - prev > 2 else "")
+                + f" and vPIC has no Canadian rows for those years (the line returns in MY{year})"
+            )
+        elif gap_years:
+            st.notes.append(
+                f"MY{min(gap_years)}-{max(gap_years)}: no EPA rows, but vPIC lists the line; not a generation boundary"
+            )
         changed_wb = compare(prev, year, "wheelbase_cm", fam)
-        if changed_wb:
-            a, b, _ = changed_wb
-            reasons.append(f"vPIC Canadian specifications: wheelbase {a} cm (MY{prev}) -> {b} cm (MY{year})")
         ca_, cb = db_codes(prev), db_codes(year)
         if ca_ and cb and not (ca_ & cb):
             reasons.append(f"existing DB generation codes {sorted(ca_)} (MY{prev}) -> {sorted(cb)} (MY{year})")
@@ -302,17 +319,34 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
             pair = compare(prev, year, field, fam)
             if pair and pair[2] is not None:
                 changes.append((label, pair[0], pair[1], pair[2]))
-        big = [c for c in changes if c[0] in ("overall length", "overall height") and c[3] >= DIMENSION_STEP_CM]
+        if changed_wb and changed_wb[2] is not None:
+            a, b, step = changed_wb
+            # 1 cm is within the re-measurement noise of the Canadian data unless another body
+            # dimension moved by 3 cm or more in the same year.
+            body = [c for c in changes if c[3] >= 3]
+            if step >= 2 or body:
+                reasons.append(
+                    f"vPIC Canadian specifications: wheelbase {a} cm (MY{prev}) -> {b} cm (MY{year})"
+                    + ("" if step >= 2 else ", with " + ", ".join(f"{c[0]} {c[1]} -> {c[2]} cm" for c in body))
+                )
+        big = [
+            c for c in changes
+            if c[0] in ("overall length", "overall height", "overall width") and c[3] >= DIMENSION_STEP_CM
+        ]
         if big:
             reasons.append(
                 "vPIC Canadian specifications: "
                 + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in big)
                 + f" (MY{prev} -> MY{year}; a change of {DIMENSION_STEP_CM} cm or more)"
             )
-        if year in mcum_starts and changes:
+        # The site often labels a generation by its European model year, one year before the
+        # US one; the vPIC change must still fall exactly on this US model year.
+        mcum_year = year if year in mcum_starts else (year - 1 if year - 1 in mcum_starts else None)
+        if mcum_year is not None and changes:
             reasons.append(
-                f"mycarusermanual.com generation page starts at {year} ({mcum_starts[year]}), corroborated by vPIC "
+                f"mycarusermanual.com generation page starts at {mcum_year} ({mcum_starts[mcum_year]}), corroborated by vPIC "
                 + ", ".join(f"{label} {x} -> {y} cm" for label, x, y, _ in changes)
+                + f" (MY{prev} -> MY{year})"
             )
         elif year in mcum_starts:
             st.notes.append(f"MY{year}: mycarusermanual.com generation page starts here, but vPIC shows no dimension change; not used")

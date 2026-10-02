@@ -1,0 +1,2226 @@
+{
+ "make": "Honda",
+ "portal": "https://mygarage.honda.com/s/owners-manuals (owners.honda.com/vehicles/... now redirects to mygarage.honda.com/s/find-honda)",
+ "checked_at": "2026-10-02",
+ "access": "free",
+ "notes": "Honda MyGarage (Salesforce Experience Cloud) is a dynamic SPA: a guest picks Year/Model/Trim on /s/find-honda (no login, no VIN), then /s/owners-manuals lists PDFs. Links were collected from the portal's own guest Apex endpoints (POST https://mygarage.honda.com/s/sfsites/aura): FindProductController.getProductChooserData {division:'Honda'} -> modelId per year/model/trim; OwnManualsApiController.getManualByModelIdAuto {divisionId:'A', division:'Honda', modelId} -> manualsList[{title,url,year}]; OwnAPIController.getEmissionWarrantyBooklet {modelId} -> warranty booklet path, prefixed with https://owners.honda.com/ exactly as the page JS does. One trim per year/model was queried plus the first hybrid trim. Owner's manual PDFs are hosted on techinfo.honda.com (free, no login; the portal returns http:// URLs, served as application/pdf). Each PDF verified with GET Range bytes=0-1023 (206, %PDF). Interactive (HTML) manuals for 2022+ also verified (206 text/html). Navigation and CarPlay/Android Auto manuals are also listed by the portal but omitted here. All documents are US (American Honda; site footer: 'Applies To U.S. Products Only'). Quirks preserved as listed by the portal: 2014 'Accord Coupe Owner's Manual' points to .../A2A1414OM/enu/2A1414OM.PDF while '2014 Accord Sedan Owner's Manual' points to .../A2A14SEOM/... ; 2020 CR-V Hybrid URL mixes codes (ATMA2020OM/enu/ATPG2020OMEN.PDF) but verifies as a PDF. Civic Si (2014-2026) and Civic Type R (2017-2026) have no separate owner's manual: the portal returns the Civic Coupe/Sedan (Si) and Civic Hatchback (Type R) manuals for them. Civic Hybrid exists 2014-2015 and 2025-2026; Accord Hybrid 2014-2015, 2017-2026 (no 2016 model); Accord Plug-In 2014; CR-V Hybrid 2020-2026. CR-V e:FCEV (2025-2026) excluded. Out-of-range extra seen: 2027 CR-V and CR-V Hybrid owner's manuals (A3A02727OM/A3D42727OM) are already published.",
+ "documents": [
+  {
+   "line": "accord",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Accord Coupe Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A2A1414OM/enu/2A1414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Accord Coupe",
+    "2014 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Accord Hybrid Owner's Manual (Unlinked)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/3W1414/3W1414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Accord Hybrid"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Accord Plug-In Hybrid Owner's Manual (Revised 4/14/2016)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3V1414OM/enu/3V1414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Accord Plug-In"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Accord Sedan Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A2A14SEOM/enu/A2A14SEOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Accord Coupe",
+    "2014 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL48372.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Hybrid",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Accord Coupe Owner's Manual (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3L1515OM/enu/A3L1515OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Accord Coupe",
+    "2015 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3W1515OM/enu/A3W1515OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Accord Hybrid"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Accord Sedan Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A2A154DOM/enu/A2A154DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Accord Coupe",
+    "2015 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL50465.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Hybrid",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Accord Coupe Owner's Manual (Revised 9/28/2015)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3L1616OM/enu/A3L1616OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2016 Accord Coupe",
+    "2016 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Accord Sedan Owner's Manual (Revised 9/28/2015)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT2A1616OM/enu/AT2A1616OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2016 Accord Coupe",
+    "2016 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL00476.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Accord Coupe Owner's Manual (Revised 03/07/2017)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT3L1717OM/enu/AT3L1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Accord Coupe",
+    "2017 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Accord Hybrid Owner's Manual (Revised 03/04/2017)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT3W1717OM/enu/AT3W1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Accord Hybrid"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Accord Sedan Owner's Manual (Revised 03/07/2017) (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT2A1717OM/enu/AT2A1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Accord Coupe",
+    "2017 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL_02971_2017_Honda_Warranty_Basebook__KA__FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Hybrid",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATWA1818OM/enu/ATWA1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Accord Owner's Manual (Revised 12/08/2017)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA1818OM/enu/ATVA1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2018_Honda_Warranty_Basebook_AWL05251_FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan (hybrid trim)",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATWA1919OM/enu/ATWA1919OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA1919OM/enu/ATVA1919OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2019_Honda_Warranty_Basebook_AWL07531_Petrol_Hybrid_PHEV__SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan (hybrid trim)",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATWA2020OM/enu/ATWA2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Accord Owner's Manual (Revised 05/11/2020)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2020OM/enu/ATVA2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2020_Honda_Warranty_Basebook_Rev02_FINAL_-_SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan (hybrid trim)",
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATWA2121OM/enu/ATWA2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2121OM/enu/ATVA2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2021_Honda_Warranty_Basebook_Petrol_Hybrid_PHEV.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATWA2222OM/enu/ATWA2222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2022_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2323OMEN/enu/A30B2323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2323OMEN/enu/A30A2323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2023,
+   "doc_type": "html_manual",
+   "title": "2023 Accord Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2323IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2023,
+   "doc_type": "html_manual",
+   "title": "2023 Accord Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2323IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2023_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2424OM/enu/A30B2424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2424OM/enu/A30A2424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2024,
+   "doc_type": "html_manual",
+   "title": "2024 Accord Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2424IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2024,
+   "doc_type": "html_manual",
+   "title": "2024 Accord Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2424IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2024_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2525OM/enu/A30B2525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2525OM/enu/A30A2525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Accord Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Accord Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2025_Honda_Hybrid_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan (hybrid trim)"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2025_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Accord Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2626OMEN/enu/A30B2626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Accord Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2626OMEN/enu/A30A2626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Accord Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30B2626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Accord Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A30A2626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Accord Sedan"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2026_Honda_Hybrid_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan (hybrid trim)"
+   ]
+  },
+  {
+   "line": "accord",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2026_Honda_Warranty_Booklet.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Accord Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Civic CNG Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AR51414OM/enu/R51414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Civic Coupe",
+    "2014 Civic HF",
+    "2014 Civic Natural Gas",
+    "2014 Civic Sedan",
+    "2014 Civic Si Coupe",
+    "2014 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Civic Coupe Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AR0142DOM/enu/R0142DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Civic Coupe",
+    "2014 Civic HF",
+    "2014 Civic Natural Gas",
+    "2014 Civic Sedan",
+    "2014 Civic Si Coupe",
+    "2014 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Civic Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AR21414OM/enu/R21414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Civic Hybrid"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 Civic Sedan Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AR0144DOM/enu/R0144DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 Civic Coupe",
+    "2014 Civic HF",
+    "2014 Civic Natural Gas",
+    "2014 Civic Sedan",
+    "2014 Civic Si Coupe",
+    "2014 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL48372.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hybrid",
+    "Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Civic Coupe Owner's Manual (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATR0152DOM/enu/ATR0152DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Civic Coupe",
+    "2015 Civic HF",
+    "2015 Civic Natural Gas",
+    "2015 Civic Sedan",
+    "2015 Civic Si Coupe",
+    "2015 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Civic Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATR21515OM/enu/ATR21515OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Civic Hybrid"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATR0154DOM/enu/ATR0154DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Civic Coupe",
+    "2015 Civic HF",
+    "2015 Civic Natural Gas",
+    "2015 Civic Sedan",
+    "2015 Civic Si Coupe",
+    "2015 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 Civic Sedan Owner's Manual (CNG)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATR51515OM/enu/ATR51515OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 Civic Coupe",
+    "2015 Civic HF",
+    "2015 Civic Natural Gas",
+    "2015 Civic Sedan",
+    "2015 Civic Si Coupe",
+    "2015 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL50465.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hybrid",
+    "Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Civic Coupe Owner's Manual (Revised 2/1/2019) (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBG164DOM/enu/ATBG164DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2016 Civic Coupe",
+    "2016 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 Civic Sedan Owner's Manual (Revised 2/1/2019) (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA164DOM/enu/ATBA164DOM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2016 Civic Coupe",
+    "2016 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL00476.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Civic Coupe Owner's Manual (Revised 02/01/2019) (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBG1717OM/enu/ATBG1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Civic Coupe",
+    "2017 Civic Hatchback",
+    "2017 Civic Sedan",
+    "2017 Civic Si Coupe",
+    "2017 Civic Si Sedan",
+    "2017 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Civic Hatch Owner's Manual (Revised 06/01/2017) (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATGG1717OM/enu/ATGG1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Civic Coupe",
+    "2017 Civic Hatchback",
+    "2017 Civic Sedan",
+    "2017 Civic Si Coupe",
+    "2017 Civic Si Sedan",
+    "2017 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 Civic Sedan Owner's Manual (02/01/2019) (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA1717OM/enu/ATBA1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 Civic Coupe",
+    "2017 Civic Hatchback",
+    "2017 Civic Sedan",
+    "2017 Civic Si Coupe",
+    "2017 Civic Si Sedan",
+    "2017 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL_02971_2017_Honda_Warranty_Basebook__KA__FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Civic Coupe Owner's Manual (Revised 2/1/2019) (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBG1818OM/enu/ATBG1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 Civic Coupe",
+    "2018 Civic Hatchback",
+    "2018 Civic Sedan",
+    "2018 Civic Si Coupe",
+    "2018 Civic Si Sedan",
+    "2018 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Civic Hatchback Owner's Manual (07/03/2018) (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATGG1818OM/enu/ATGG1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 Civic Coupe",
+    "2018 Civic Hatchback",
+    "2018 Civic Sedan",
+    "2018 Civic Si Coupe",
+    "2018 Civic Si Sedan",
+    "2018 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 Civic Sedan Owner's Manual (Revised 2/1/2019) (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA1818OM/enu/ATBA1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 Civic Coupe",
+    "2018 Civic Hatchback",
+    "2018 Civic Sedan",
+    "2018 Civic Si Coupe",
+    "2018 Civic Si Sedan",
+    "2018 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2018_Honda_Warranty_Basebook_AWL05251_FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Civic Coupe Owner's Manual (Revised 2/1/2019) (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBG1919OM/enu/ATBG1919OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 Civic Coupe",
+    "2019 Civic Hatchback",
+    "2019 Civic Sedan",
+    "2019 Civic Si Coupe",
+    "2019 Civic Si Sedan",
+    "2019 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Civic Hatchback Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATGG1919OM/enu/ATGG1919OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 Civic Coupe",
+    "2019 Civic Hatchback",
+    "2019 Civic Sedan",
+    "2019 Civic Si Coupe",
+    "2019 Civic Si Sedan",
+    "2019 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 Civic Sedan Owner's Manual (Revised 2/1/2019) (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA1919OM/enu/ATBA1919OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 Civic Coupe",
+    "2019 Civic Hatchback",
+    "2019 Civic Sedan",
+    "2019 Civic Si Coupe",
+    "2019 Civic Si Sedan",
+    "2019 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2019_Honda_Warranty_Basebook_AWL07531_Petrol_Hybrid_PHEV__SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Civic Coupe Owner's Manual (2-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBG2020OM/enu/ATBG2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 Civic Coupe",
+    "2020 Civic Hatchback",
+    "2020 Civic Sedan",
+    "2020 Civic Si Coupe",
+    "2020 Civic Si Sedan",
+    "2020 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Civic Hatchback Owner's Manual (Revised 02/24/2020) (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATGG2020OM/enu/ATGG2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 Civic Coupe",
+    "2020 Civic Hatchback",
+    "2020 Civic Sedan",
+    "2020 Civic Si Coupe",
+    "2020 Civic Si Sedan",
+    "2020 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA2020OM/enu/ATBA2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 Civic Coupe",
+    "2020 Civic Hatchback",
+    "2020 Civic Sedan",
+    "2020 Civic Si Coupe",
+    "2020 Civic Si Sedan",
+    "2020 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2020_Honda_Warranty_Basebook_Rev02_FINAL_-_SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Civic Hatchback Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATGG2121OM/enu/ATGG2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 Civic Hatchback",
+    "2021 Civic Sedan",
+    "2021 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATBA2121OM/enu/ATBA2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 Civic Hatchback",
+    "2021 Civic Sedan",
+    "2021 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2021_Honda_Warranty_Basebook_Petrol_Hybrid_PHEV.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Civic Hatchback Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402222OM/enu/AT402222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 Civic Hatchback",
+    "2022 Civic Sedan",
+    "2022 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 Civic Sedan Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202222OM/enu/AT202222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 Civic Hatchback",
+    "2022 Civic Sedan",
+    "2022 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2022,
+   "doc_type": "html_manual",
+   "title": "2022 Civic Sedan Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202222IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 Civic Hatchback",
+    "2022 Civic Sedan",
+    "2022 Civic Si Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2022_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Civic Hatchback Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402323OM/enu/AT402323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Civic Hatchback",
+    "2023 Civic Sedan",
+    "2023 Civic Si Sedan",
+    "2023 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 Civic Sedan Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202323OMEN/enu/AT202323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Civic Hatchback",
+    "2023 Civic Sedan",
+    "2023 Civic Si Sedan",
+    "2023 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2023,
+   "doc_type": "html_manual",
+   "title": "2023 Civic Sedan Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202323IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 Civic Hatchback",
+    "2023 Civic Sedan",
+    "2023 Civic Si Sedan",
+    "2023 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2023_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Civic Hatchback Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402424OM/enu/AT402424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Civic Hatchback",
+    "2024 Civic Sedan",
+    "2024 Civic Si Sedan",
+    "2024 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202424OM/enu/AT202424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Civic Hatchback",
+    "2024 Civic Sedan",
+    "2024 Civic Si Sedan",
+    "2024 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2024,
+   "doc_type": "html_manual",
+   "title": "2024 Civic Sedan Interactive Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202424IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 Civic Hatchback",
+    "2024 Civic Sedan",
+    "2024 Civic Si Sedan",
+    "2024 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2024_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Civic Hatchback Hybrid Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT502525OM/enu/AT502525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Civic Hatchback Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402525OM/enu/AT402525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan",
+    "2025 Civic Si Sedan",
+    "2025 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Civic Sedan Hybrid Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT542525OM/enu/AT542525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202525OM/enu/AT202525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan",
+    "2025 Civic Si Sedan",
+    "2025 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Civic Hatchback Hybrid Interactive Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT502525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Civic Hatchback Interactive Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan",
+    "2025 Civic Si Sedan",
+    "2025 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Civic Sedan Hybrid Interactive Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT542525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 Civic Sedan Interactive Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 Civic Hatchback",
+    "2025 Civic Sedan",
+    "2025 Civic Si Sedan",
+    "2025 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2025_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan (hybrid trim)",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Civic Hatchback Hybrid Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT502626OM/enu/AT502626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Civic Hatchback Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402626OM/enu/AT402626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan",
+    "2026 Civic Si Sedan",
+    "2026 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Civic Sedan Hybrid Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT542626OM/enu/AT542626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 Civic Sedan Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202626OM/enu/AT202626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan",
+    "2026 Civic Si Sedan",
+    "2026 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Civic Hatchback Hybrid Interactive Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT502626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Civic Hatchback Interactive Owner's Manual (5-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT402626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan",
+    "2026 Civic Si Sedan",
+    "2026 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Civic Sedan Hybrid Interactive Owner's Manual (4-door)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT542626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 Civic Sedan Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT202626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 Civic Hatchback",
+    "2026 Civic Sedan",
+    "2026 Civic Si Sedan",
+    "2026 Civic Type R"
+   ]
+  },
+  {
+   "line": "civic",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2026_Honda_Warranty_Booklet.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "Civic Hatchback",
+    "Civic Sedan",
+    "Civic Type R"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2014,
+   "doc_type": "owners_manual",
+   "title": "2014 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A0A1414OM/enu/0A1414OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2014 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "2014 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL48372.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2015,
+   "doc_type": "owners_manual",
+   "title": "2015 CR-V Owner's Manual (Revised 2/26/2015)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT0Z1515OM/enu/AT0Z1515OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2015 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "2015 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL50465.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2016,
+   "doc_type": "owners_manual",
+   "title": "2016 CR-V Owner's Manual (Revised 4/14/2016)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT0A1616OM/enu/AT0A1616OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2016 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "2016 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL00476.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2017,
+   "doc_type": "owners_manual",
+   "title": "2017 CR-V Owner's Manual (Revised 10/30/2018)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1717OM/enu/ATLA1717OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2017 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "2017 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/AWL_02971_2017_Honda_Warranty_Basebook__KA__FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2018,
+   "doc_type": "owners_manual",
+   "title": "2018 CR-V Owner's Manual (Revised 10/30/2018)",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1818OM/enu/ATLA1818OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2018 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2018_Honda_Warranty_Basebook_AWL05251_FINAL.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2019,
+   "doc_type": "owners_manual",
+   "title": "2019 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1919OM/enu/ATLA1919OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2019 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2019_Honda_Warranty_Basebook_AWL07531_Petrol_Hybrid_PHEV__SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATMA2020OM/enu/ATPG2020OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2020,
+   "doc_type": "owners_manual",
+   "title": "2020 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2020OM/enu/ATLA2020OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2020 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2020_Honda_Warranty_Basebook_Rev02_FINAL_-_SIS.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATMA2121OM/enu/ATMA2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2021,
+   "doc_type": "owners_manual",
+   "title": "2021 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2121OM/enu/ATLA2121OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2021 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Honda Hybrid Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2021_Honda_Warranty_Basebook_Petrol_Hybrid_PHEV.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATPG2222OM/enu/ATPG2222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2022,
+   "doc_type": "owners_manual",
+   "title": "2022 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2222OM/enu/ATLA2222OM.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2022 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2022_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42323OMEN/enu/A3D42323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2023,
+   "doc_type": "owners_manual",
+   "title": "2023 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02323OMEN/enu/A3A02323OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2023,
+   "doc_type": "html_manual",
+   "title": "2023 CR-V Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42323IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2023,
+   "doc_type": "html_manual",
+   "title": "2023 CR-V Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02323IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2023 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2023_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42424OM/enu/A3D42424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2024,
+   "doc_type": "owners_manual",
+   "title": "2024 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02424OM/enu/A3A02424OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2024,
+   "doc_type": "html_manual",
+   "title": "2024 CR-V Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42424IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2024,
+   "doc_type": "html_manual",
+   "title": "2024 CR-V Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02424IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2024 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2024_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42525OM/enu/A3D42525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2025,
+   "doc_type": "owners_manual",
+   "title": "2025 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02525OM/enu/A3A02525OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 CR-V Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2025,
+   "doc_type": "html_manual",
+   "title": "2025 CR-V Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02525IOM/enu/index.HTM",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2025 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2025_Honda_Warranty_Basebook.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 CR-V Hybrid Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42626OM/enu/A3D42626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2026,
+   "doc_type": "owners_manual",
+   "title": "2026 CR-V Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02626OM/enu/A3A02626OMEN.PDF",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 CR-V Hybrid Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3D42626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2026,
+   "doc_type": "html_manual",
+   "title": "2026 CR-V Interactive Owner's Manual",
+   "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02626IOM/enu/index.HTML",
+   "page_url": "https://mygarage.honda.com/s/owners-manuals",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "2026 CR-V"
+   ]
+  },
+  {
+   "line": "cr-v",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "2026 Honda Warranty Basebook (warranty booklet; maintenance schedule is in the owner's manual / Maintenance Minder)",
+   "url": "https://owners.honda.com/Documentum/Warranty/Handbooks/2026_Honda_Warranty_Booklet.pdf",
+   "page_url": "https://mygarage.honda.com/s/warranty-info",
+   "verified": true,
+   "how": "api",
+   "variants_listed_for": [
+    "CR-V"
+   ]
+  }
+ ],
+ "not_found": []
+}

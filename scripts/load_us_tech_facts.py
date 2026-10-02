@@ -837,7 +837,15 @@ class Loader:
                 old = (facts.get(old_key) or {}).get("value")
                 if old is None:
                     continue
-                converted = convert(old, unit_from, unit_to)
+                try:
+                    converted = convert(old, unit_from, unit_to)
+                except (ArithmeticError, ValueError):
+                    # Read-only comparison: a non-numeric catalog value is reported, not parsed.
+                    self.report["existing_vs_new"].append(
+                        {"variant": v.catalog_key, "existing": f"{old_key}={old!r}",
+                         "resolution": "existing value is not numeric; not compared"}
+                    )
+                    continue
                 candidates = [
                     f
                     for f in self.s["facts"]

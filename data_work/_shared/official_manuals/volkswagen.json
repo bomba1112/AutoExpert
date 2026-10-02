@@ -1,0 +1,1577 @@
+{
+ "make": "volkswagen",
+ "portal": "https://www.vw.com/en/owners-and-services/about-my-vehicle/owners-manuals.html ; https://maintenance.vw.com/ (APIs: https://orderguide.vw.com/order-guide-service/v1/{car-lines|model-trims}, https://ownersliterature.vw.com/owners-literature-service/v1/documents?brand=V&importer-code=444&language-code=en-US&model-year=YYYY&model-code=XXX)",
+ "checked_at": "2026-10-02",
+ "access": "mixed",
+ "notes": "Owner's manuals: VIN required for all years (vw.com: 'For models 2023 and newer Enter your VIN'; 'For models 2012-2022 Visit our maintenance website' where the owner's manual is retrieved only with a VIN). Free without VIN (select Model Year/Model/Trim on maintenance.vw.com): official US owner's-literature PDFs - Warranty and Maintenance booklet (all-model, per MY) and Maintenance Card; also available but not listed here: Tire Warranty summary, 24h Roadside guide, Collision brochure, California emissions warranty. Document URLs are stable UUID links on ownersliterature.vw.com (VW Group of America). Model codes = first 3 chars of the sales model code (e.g. Jetta 162/163/BU3/BU4/BU5, Passat A32/A33/A34, Tiguan 5N2/BW2/BJ2/CL1/RM1, Atlas CA1/CA2/CA3, Arteon 3H7/3H8, Touareg 7P5/7P6). Jetta GLI shares the Jetta model code and documents. Atlas Cross Sport, Jetta Hybrid and Jetta SportWagen (2014) were not mapped.",
+ "documents": [
+  {
+   "line": "arteon",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "2019 VW Maintenance Card (en-US-V-USA5R507421_2019_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H7",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/dc4d245a-d485-4782-9408-e67bb42236e2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79812,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2019 EN (USA_VW_MY19_WM_allmodel_5N0012723SH_EN_3Ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 3H7",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e33409e0-1c10-4428-a074-b40d7b161f96",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1861964,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "2020 VW Maintenance Card (en-US-V-USA5R507621_2020_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H7",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/3d28a878-048b-4a7c-8afe-faa81cea6919",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 78634,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2020 EN (USA_VW_MY20_WM_allmodel_5NA012723GB_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 3H7",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d1890228-c488-4506-8a6b-625f87d30fc0",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1577535,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "2021 VW Maintenance Card (en-US-V-USA5R507821_2021_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/b84f4eef-af10-494e-9115-309968da22d7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 76720,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW Warranty 2021 (USA_VW_MY21_WM_allmodel_5NA012723GD_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f7e47928-1b5f-4630-884a-f3a803394d36",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1644865,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "2022 VW Maintenance Card (en-US-V-USA5R507921_2022_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7902c126-ce9f-44ea-842e-754effc6d27c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 77208,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW WARR MY 2022 EN (USA_VW_MY22_WM_allmodel_22VWGASWMUSENAA_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/fb89c358-5dee-4470-9045-fd4fcbc5ac3a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1661775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "2023 VW Maintenance Card (en-US-V-USA5R507521_2023_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7f3ce02f-ee20-4e97-8747-fb18f14b9b66",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 74185,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW GAS WM MY2023 EN (USA_VW_MY23_WM_ALLMODEL_23VWGASWMUSENCA_EN.pdf, edition 1) - Warranty and Maintenance booklet; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/6cad4529-5e38-40ed-9050-df5c32982647",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1662715,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "2024 VW Maintenance Card (en-US-V-USA5R505721_2024_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/2721b3eb-0228-4be4-94d6-0b8e24dbf74c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72712,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "arteon",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW ALLM WM 2nd ED MY24 EN (USA_VW_MY24_WM_ALLMODEL_24VWGASWMUSENCB_2NDEd_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 3H8",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/11025511-673f-445a-a6a5-20b5f3e5cc59",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1682392,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "2018 VW Maintenance Card (en-US-V-USA5R507221_2018_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceacbe76-21f0-44a9-977e-74ce3a9ff0b3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79705,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2018 EN (USA_VW_MY18_WM_allmodel_5N0012723SF_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/772caca1-c6fc-4188-bbd5-db307f067026",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1598620,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "2019 VW Maintenance Card (en-US-V-USA5R507421_2019_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/dc4d245a-d485-4782-9408-e67bb42236e2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79812,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2019 EN (USA_VW_MY19_WM_allmodel_5N0012723SH_EN_3Ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e33409e0-1c10-4428-a074-b40d7b161f96",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1861964,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "2020 VW Maintenance Card (en-US-V-USA5R507621_2020_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/3d28a878-048b-4a7c-8afe-faa81cea6919",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 78634,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2020 EN (USA_VW_MY20_WM_allmodel_5NA012723GB_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code CA1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d1890228-c488-4506-8a6b-625f87d30fc0",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1577535,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "2021 VW Maintenance Card (en-US-V-USA5R507821_2021_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/b84f4eef-af10-494e-9115-309968da22d7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 76720,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW Warranty 2021 (USA_VW_MY21_WM_allmodel_5NA012723GD_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f7e47928-1b5f-4630-884a-f3a803394d36",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1644865,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "2022 VW Maintenance Card (en-US-V-USA5R507921_2022_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7902c126-ce9f-44ea-842e-754effc6d27c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 77208,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW WARR MY 2022 EN (USA_VW_MY22_WM_allmodel_22VWGASWMUSENAA_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/fb89c358-5dee-4470-9045-fd4fcbc5ac3a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1661775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "2023 VW Maintenance Card (en-US-V-USA5R507521_2023_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7f3ce02f-ee20-4e97-8747-fb18f14b9b66",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 74185,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW GAS WM MY2023 EN (USA_VW_MY23_WM_ALLMODEL_23VWGASWMUSENCA_EN.pdf, edition 1) - Warranty and Maintenance booklet; queried with model code CA2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/6cad4529-5e38-40ed-9050-df5c32982647",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1662715,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "2024 VW Maintenance Card (en-US-V-USA5R505721_2024_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/2721b3eb-0228-4be4-94d6-0b8e24dbf74c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72712,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW ALLM WM 2nd ED MY24 EN (USA_VW_MY24_WM_ALLMODEL_24VWGASWMUSENCB_2NDEd_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/11025511-673f-445a-a6a5-20b5f3e5cc59",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1682392,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "2025 VW Maintenance Card (en-US-V-USA5R701521_2025_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/760f5f9a-0290-4dfe-adf0-30d03981a9ad",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 69783,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "MY25 VW WM GAS US ENG V3 (USA_VW_MY25_WM_25VWGASWMUSENV3_ENG_UPG.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/8572c52a-5799-417f-a15c-315ca87494f3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1674311,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "2026 VW Maintenance Card (en-US-V-USA5R506821_2026_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d063309f-f793-4d23-8799-a4ff5ffb3850",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72108,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "atlas",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "MY26 VW WARR USA EN V4 (USA_VW_MY26_WM_26VWGASWMUSENV4_ENG_Final_UPGUpload.pdf, edition 4) - Warranty and Maintenance booklet; queried with model code CA3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d34b47ec-bc90-493f-843c-91b0a787c4ed",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1709035,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 VW Maintenance Card (en-US-V-USA5R505521_2014_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 162",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/033ff2d5-58e3-4663-97cf-1bbdb864258d",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 73194,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2014 EN (USA_VW_MY14_WM_142.5U3.WTM_23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 162",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/2a6558ea-6283-447c-8e07-aa8a7458eb75",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 323723,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.7 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 VW Maintenance Card (en-US-V-USA5R505821_2015_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e6d745d2-dc65-41eb-89b8-843fdeacb5ab",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 85735,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2015 EN (USA_VW_MY15_WM_152.5U3.WTM.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/42b61ff6-2740-4374-bb0d-ca7dc9c11977",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 332775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.7 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 VW Maintenance Card (en-US-V-USA5R506521_2016_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceab8882-749e-4dda-ba29-a7af0f418d43",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 84647,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2016 EN (USA_VW_MY16_WM_5N0012723SB_EN_3rdED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d3a466d8-9831-4962-9042-7c734423cec7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 927659,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "2017 VW Maintenance Card (en-US-V-USA5R506721_2017_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/79833ead-258d-4acf-ba6a-5be91876f4d2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 81038,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY 2017 EN (USA_VW_MY17_WM_5N0012723SD_EN_3ED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7d12d933-8359-4cfe-97b9-c498b723723a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1975419,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "2018 VW Maintenance Card (en-US-V-USA5R507221_2018_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceacbe76-21f0-44a9-977e-74ce3a9ff0b3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79705,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2018 EN (USA_VW_MY18_WM_allmodel_5N0012723SF_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 163",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/772caca1-c6fc-4188-bbd5-db307f067026",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1598620,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "2019 VW Maintenance Card (en-US-V-USA5R507421_2019_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/dc4d245a-d485-4782-9408-e67bb42236e2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79812,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2019 EN (USA_VW_MY19_WM_allmodel_5N0012723SH_EN_3Ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e33409e0-1c10-4428-a074-b40d7b161f96",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1861964,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "2020 VW Maintenance Card (en-US-V-USA5R507621_2020_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/3d28a878-048b-4a7c-8afe-faa81cea6919",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 78634,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2020 EN (USA_VW_MY20_WM_allmodel_5NA012723GB_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d1890228-c488-4506-8a6b-625f87d30fc0",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1577535,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "2021 VW Maintenance Card (en-US-V-USA5R507821_2021_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/b84f4eef-af10-494e-9115-309968da22d7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 76720,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW Warranty 2021 (USA_VW_MY21_WM_allmodel_5NA012723GD_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BU3",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f7e47928-1b5f-4630-884a-f3a803394d36",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1644865,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "2022 VW Maintenance Card (en-US-V-USA5R507921_2022_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7902c126-ce9f-44ea-842e-754effc6d27c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 77208,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW WARR MY 2022 EN (USA_VW_MY22_WM_allmodel_22VWGASWMUSENAA_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/fb89c358-5dee-4470-9045-fd4fcbc5ac3a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1661775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "2023 VW Maintenance Card (en-US-V-USA5R507521_2023_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7f3ce02f-ee20-4e97-8747-fb18f14b9b66",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 74185,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW GAS WM MY2023 EN (USA_VW_MY23_WM_ALLMODEL_23VWGASWMUSENCA_EN.pdf, edition 1) - Warranty and Maintenance booklet; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/6cad4529-5e38-40ed-9050-df5c32982647",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1662715,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "2024 VW Maintenance Card (en-US-V-USA5R505721_2024_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/2721b3eb-0228-4be4-94d6-0b8e24dbf74c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72712,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW ALLM WM 2nd ED MY24 EN (USA_VW_MY24_WM_ALLMODEL_24VWGASWMUSENCB_2NDEd_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BU4",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/11025511-673f-445a-a6a5-20b5f3e5cc59",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1682392,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "2025 VW Maintenance Card (en-US-V-USA5R701521_2025_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/760f5f9a-0290-4dfe-adf0-30d03981a9ad",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 69783,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "MY25 VW WM GAS US ENG V3 (USA_VW_MY25_WM_25VWGASWMUSENV3_ENG_UPG.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BU5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/8572c52a-5799-417f-a15c-315ca87494f3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1674311,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "2026 VW Maintenance Card (en-US-V-USA5R506821_2026_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BU5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d063309f-f793-4d23-8799-a4ff5ffb3850",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72108,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "jetta",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "MY26 VW WARR USA EN V4 (USA_VW_MY26_WM_26VWGASWMUSENV4_ENG_Final_UPGUpload.pdf, edition 4) - Warranty and Maintenance booklet; queried with model code BU5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d34b47ec-bc90-493f-843c-91b0a787c4ed",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1709035,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 VW Maintenance Card (en-US-V-USA5R505521_2014_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A32",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/033ff2d5-58e3-4663-97cf-1bbdb864258d",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 73194,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR EN (USA_VW_MY14_WM_143.5U3.WAR.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code A32",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/086c39ed-801a-48e7-85d3-3777d38e04eb",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 787885,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 VW Maintenance Card (en-US-V-USA5R505821_2015_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A32",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e6d745d2-dc65-41eb-89b8-843fdeacb5ab",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 85735,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2015 EN (USA_VW_MY15_WM_153.5U3.WAR.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code A32",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f4d7725a-64bc-4b68-856f-bec239e7d24e",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 741325,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 VW Maintenance Card (en-US-V-USA5R506521_2016_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceab8882-749e-4dda-ba29-a7af0f418d43",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 84647,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2016 EN (USA_VW_MY16_WM_5N0012723SB_EN_3rdED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d3a466d8-9831-4962-9042-7c734423cec7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 927659,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "2017 VW Maintenance Card (en-US-V-USA5R506721_2017_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/79833ead-258d-4acf-ba6a-5be91876f4d2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 81038,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY 2017 EN (USA_VW_MY17_WM_5N0012723SD_EN_3ED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7d12d933-8359-4cfe-97b9-c498b723723a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1975419,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "2018 VW Maintenance Card (en-US-V-USA5R507221_2018_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceacbe76-21f0-44a9-977e-74ce3a9ff0b3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79705,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2018 EN (USA_VW_MY18_WM_allmodel_5N0012723SF_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/772caca1-c6fc-4188-bbd5-db307f067026",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1598620,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "2019 VW Maintenance Card (en-US-V-USA5R507421_2019_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/dc4d245a-d485-4782-9408-e67bb42236e2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79812,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2019 EN (USA_VW_MY19_WM_allmodel_5N0012723SH_EN_3Ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code A33",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e33409e0-1c10-4428-a074-b40d7b161f96",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1861964,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "2020 VW Maintenance Card (en-US-V-USA5R507621_2020_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/3d28a878-048b-4a7c-8afe-faa81cea6919",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 78634,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2020 EN (USA_VW_MY20_WM_allmodel_5NA012723GB_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d1890228-c488-4506-8a6b-625f87d30fc0",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1577535,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "2021 VW Maintenance Card (en-US-V-USA5R507821_2021_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/b84f4eef-af10-494e-9115-309968da22d7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 76720,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW Warranty 2021 (USA_VW_MY21_WM_allmodel_5NA012723GD_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f7e47928-1b5f-4630-884a-f3a803394d36",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1644865,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "2022 VW Maintenance Card (en-US-V-USA5R507921_2022_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7902c126-ce9f-44ea-842e-754effc6d27c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 77208,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "passat",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW WARR MY 2022 EN (USA_VW_MY22_WM_allmodel_22VWGASWMUSENAA_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code A34",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/fb89c358-5dee-4470-9045-fd4fcbc5ac3a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1661775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 VW Maintenance Card (en-US-V-USA5R505521_2014_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/033ff2d5-58e3-4663-97cf-1bbdb864258d",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 73194,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR EN (USA_VW_MY14_WM_143.5U3.WAR.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/086c39ed-801a-48e7-85d3-3777d38e04eb",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 787885,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 VW Maintenance Card (en-US-V-USA5R505821_2015_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e6d745d2-dc65-41eb-89b8-843fdeacb5ab",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 85735,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2015 EN (USA_VW_MY15_WM_153.5U3.WAR.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f4d7725a-64bc-4b68-856f-bec239e7d24e",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 741325,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 VW Maintenance Card (en-US-V-USA5R506521_2016_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceab8882-749e-4dda-ba29-a7af0f418d43",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 84647,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2016 EN (USA_VW_MY16_WM_5N0012723SB_EN_3rdED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d3a466d8-9831-4962-9042-7c734423cec7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 927659,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "2017 VW Maintenance Card (en-US-V-USA5R506721_2017_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/79833ead-258d-4acf-ba6a-5be91876f4d2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 81038,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY 2017 EN (USA_VW_MY17_WM_5N0012723SD_EN_3ED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 5N2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7d12d933-8359-4cfe-97b9-c498b723723a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1975419,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "2018 VW Maintenance Card (en-US-V-USA5R507221_2018_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceacbe76-21f0-44a9-977e-74ce3a9ff0b3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79705,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2018 EN (USA_VW_MY18_WM_allmodel_5N0012723SF_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/772caca1-c6fc-4188-bbd5-db307f067026",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1598620,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "2019 VW Maintenance Card (en-US-V-USA5R507421_2019_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/dc4d245a-d485-4782-9408-e67bb42236e2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 79812,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2019 EN (USA_VW_MY19_WM_allmodel_5N0012723SH_EN_3Ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e33409e0-1c10-4428-a074-b40d7b161f96",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1861964,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "2020 VW Maintenance Card (en-US-V-USA5R507621_2020_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/3d28a878-048b-4a7c-8afe-faa81cea6919",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 78634,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY2020 EN (USA_VW_MY20_WM_allmodel_5NA012723GB_EN_3ed.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d1890228-c488-4506-8a6b-625f87d30fc0",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1577535,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "2021 VW Maintenance Card (en-US-V-USA5R507821_2021_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/b84f4eef-af10-494e-9115-309968da22d7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 76720,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW Warranty 2021 (USA_VW_MY21_WM_allmodel_5NA012723GD_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BW2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f7e47928-1b5f-4630-884a-f3a803394d36",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1644865,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "2022 VW Maintenance Card (en-US-V-USA5R507921_2022_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7902c126-ce9f-44ea-842e-754effc6d27c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 77208,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "US VW WARR MY 2022 EN (USA_VW_MY22_WM_allmodel_22VWGASWMUSENAA_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/fb89c358-5dee-4470-9045-fd4fcbc5ac3a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1661775,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "2023 VW Maintenance Card (en-US-V-USA5R507521_2023_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7f3ce02f-ee20-4e97-8747-fb18f14b9b66",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 74185,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW GAS WM MY2023 EN (USA_VW_MY23_WM_ALLMODEL_23VWGASWMUSENCA_EN.pdf, edition 1) - Warranty and Maintenance booklet; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/6cad4529-5e38-40ed-9050-df5c32982647",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1662715,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "2024 VW Maintenance Card (en-US-V-USA5R505721_2024_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/2721b3eb-0228-4be4-94d6-0b8e24dbf74c",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72712,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW ALLM WM 2nd ED MY24 EN (USA_VW_MY24_WM_ALLMODEL_24VWGASWMUSENCB_2NDEd_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code BJ2",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/11025511-673f-445a-a6a5-20b5f3e5cc59",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1682392,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "2025 VW Maintenance Card (en-US-V-USA5R701521_2025_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code RM1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/760f5f9a-0290-4dfe-adf0-30d03981a9ad",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 69783,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "MY25 VW WM GAS US ENG V3 (USA_VW_MY25_WM_25VWGASWMUSENV3_ENG_UPG.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code RM1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/8572c52a-5799-417f-a15c-315ca87494f3",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1674311,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "2026 VW Maintenance Card (en-US-V-USA5R506821_2026_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code RM1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d063309f-f793-4d23-8799-a4ff5ffb3850",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 72108,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "MY26 VW WARR USA EN V4 (USA_VW_MY26_WM_26VWGASWMUSENV4_ENG_Final_UPGUpload.pdf, edition 4) - Warranty and Maintenance booklet; queried with model code RM1",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d34b47ec-bc90-493f-843c-91b0a787c4ed",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1709035,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2014,
+   "doc_type": "maintenance_guide",
+   "title": "2014 VW Maintenance Card (en-US-V-USA5R505521_2014_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 7P5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/033ff2d5-58e3-4663-97cf-1bbdb864258d",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 73194,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2014 EN (USA_VW_MY14_WM_Touareg_143.5U3.WAT.23_EN.pdf, edition 1) - Warranty and Maintenance booklet; queried with model code 7P5",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e27742f5-b153-414b-a6bc-eb926369be2f",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 458059,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2015,
+   "doc_type": "maintenance_guide",
+   "title": "2015 VW Maintenance Card (en-US-V-USA5R505821_2015_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/e6d745d2-dc65-41eb-89b8-843fdeacb5ab",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 85735,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2015 EN (USA_VW_MY15_WM_153.5U3.WAR.23_EN.pdf, edition 2) - Warranty and Maintenance booklet; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/f4d7725a-64bc-4b68-856f-bec239e7d24e",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 741325,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2016,
+   "doc_type": "maintenance_guide",
+   "title": "2016 VW Maintenance Card (en-US-V-USA5R506521_2016_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/ceab8882-749e-4dda-ba29-a7af0f418d43",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 84647,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR 2016 EN (USA_VW_MY16_WM_5N0012723SB_EN_3rdED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/d3a466d8-9831-4962-9042-7c734423cec7",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 927659,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "2017 VW Maintenance Card (en-US-V-USA5R506721_2017_VW_Maintenance_Card.pdf, edition 1) - Maintenance card; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/79833ead-258d-4acf-ba6a-5be91876f4d2",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 81038,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.4 (server ignores Range; read stopped after first 1 KB)"
+  },
+  {
+   "line": "touareg",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "USA VW WARR MY 2017 EN (USA_VW_MY17_WM_5N0012723SD_EN_3ED.pdf, edition 3) - Warranty and Maintenance booklet; queried with model code 7P6",
+   "url": "https://ownersliterature.vw.com/owners-literature-service/v1/document/7d12d933-8359-4cfe-97b9-c498b723723a",
+   "page_url": "https://maintenance.vw.com/",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1975419,
+   "verify_note": "HTTP 200 application/pdf head %PDF-1.6 (server ignores Range; read stopped after first 1 KB)"
+  }
+ ],
+ "not_found": [
+  {
+   "line": "jetta",
+   "year": 2014,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2015,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2016,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2017,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2018,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2019,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2020,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2021,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2022,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2023,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2024,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2025,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "jetta",
+   "year": 2026,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2014,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2015,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2016,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2017,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2018,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2019,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2020,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2021,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "passat",
+   "year": 2022,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2014,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2015,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2016,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2017,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2018,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2019,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2020,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2021,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2022,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2023,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2024,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2025,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "tiguan",
+   "year": 2026,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2018,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2019,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2020,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2021,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2022,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2023,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2024,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2025,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "atlas",
+   "year": 2026,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2019,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2020,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2021,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2022,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2023,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "arteon",
+   "year": 2024,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "touareg",
+   "year": 2014,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "touareg",
+   "year": 2015,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "touareg",
+   "year": 2016,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  },
+  {
+   "line": "touareg",
+   "year": 2017,
+   "reason": "owners_manual: VIN required - MY2012-2022 via maintenance.vw.com VIN search (owner's manual link only after VIN), MY2023+ via vw.com Digital Manual (VIN)"
+  }
+ ]
+}

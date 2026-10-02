@@ -1,0 +1,3073 @@
+{
+ "make": "bmw",
+ "portal": "https://www.bmwusa.com/owners-manuals.html (VIN form); https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html (API: https://www.bmwusa.com/bin/services/warranty-books?year=YYYY&series=SERIES)",
+ "checked_at": "2026-10-02",
+ "access": "mixed",
+ "notes": "Owner's manuals: VIN required for every model/year (Digital Owner's Manual form 'vinCodeForm' on bmwusa.com/owners-manuals.html; the 'Select a Series' links only go to marketing pages). Free: US Service & Warranty Information / New Vehicle Limited Warranty booklets and Maintenance booklets per model year, from the official selector on bmwusa.com (JSON endpoint bin/services/warranty-books). Booklets are multi-model (e.g. 3/5/7 Series, X1-X6, M models); from MY2023 BMW publishes one all-model warranty booklet and one all-model maintenance booklet. MY2024-2026 M cars are listed only under series 'the-m' (BMW M, all models) - mapped to m3/m5/x5-m/x6-m where the model existed. Tire manufacturers' warranty guides were also listed but are excluded. bmwusa.com blocks non-browser HTTP clients (timeouts); all data and Range checks were made from a real browser session on bmwusa.com. A few PDFs (2019/2020 X7 warranty, 2022 X3M-X6M warranty) ignored the Range header (HTTP 200).",
+ "documents": [
+  {
+   "line": "3-series",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty and Maintenance booklet (2014_3_5_7Series.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014_3_5_7Series.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1073019,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty and Maintenance booklet (2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2025715,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty booklet (2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2936709,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-3-5-7 Series-New-Vehicle-Limited-Warranty (BF07-2152193).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-3-5-7%20Series-New-Vehicle-Limited-Warranty%20(BF07-2152193).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 917347,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_3_5_7_Series_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_3_5_7_Series_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 493723,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (02_2469774_19MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_060319.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/02_2469774_19MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_060319.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 966583,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0C9B5_20MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_042920.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0C9B5_20MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_042920.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2478188,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC85_21MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC85_21MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1830893,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_3-5_Series_Warranty_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_3-5_Series_Warranty_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2465854,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "3-series",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty and Maintenance booklet (2014_3_5_7Series.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014_3_5_7Series.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1073019,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty and Maintenance booklet (2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2025715,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty booklet (2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2936709,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-3-5-7 Series-New-Vehicle-Limited-Warranty (BF07-2152193).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-3-5-7%20Series-New-Vehicle-Limited-Warranty%20(BF07-2152193).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 917347,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_3_5_7_Series_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_3_5_7_Series_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 493723,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (02_2469774_19MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_060319.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/02_2469774_19MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_060319.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 966583,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0C9B5_20MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_042920.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0C9B5_20MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_042920.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2478188,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC85_21MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC85_21MY_BMW_3_5_Series_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1830893,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_3-5_Series_Warranty_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_3-5_Series_Warranty_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2465854,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "5-series",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty and Maintenance booklet (2014_3_5_7Series.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014_3_5_7Series.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1073019,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty and Maintenance booklet (2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2025715,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty booklet (2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016-BMW-3Series-5Series-7Series-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2936709,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-3-5-7 Series-New-Vehicle-Limited-Warranty (BF07-2152193).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-3-5-7%20Series-New-Vehicle-Limited-Warranty%20(BF07-2152193).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 917347,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_3_5_7_Series_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_3_5_7_Series_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 493723,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (2019-BMW-7Series-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-7Series-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1487407,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (2472208_20MY_BMW_7_Series_Warranty_FINAL_Print_withCover_041720.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/2472208_20MY_BMW_7_Series_Warranty_FINAL_Print_withCover_041720.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1687224,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC72_21MY_BMW_7_Series_Warranty_FINAL_Print_withCover_111120.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC72_21MY_BMW_7_Series_Warranty_FINAL_Print_withCover_111120.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1144224,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_Text_2022_7_Series_Warranty_web.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_Text_2022_7_Series_Warranty_web.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1740237,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "7-series",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty booklet (2015-BMW-M3-M4-M5-M6-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-M3-M4-M5-M6-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1299328,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty and Maintenance booklet (2016_M2_M3_M4_M5_M6_SW.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016_M2_M3_M4_M5_M6_SW.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1719725,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-M2-M3-M4-M6-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-M2-M3-M4-M6-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1792636,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_M2_M3_M4_M6_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_M2_M3_M4_M6_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 283305,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC95_21MY_BMW_M2_M3_M4_M5_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC95_21MY_BMW_M2_M3_M4_M5_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1851423,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_M3_M4_M5_Warranty_ADA (1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_M3_M4_M5_Warranty_ADA%20(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2452595,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m3",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty booklet (2014-BMW-M5-M6-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014-BMW-M5-M6-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1132046,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty booklet (2015-BMW-M3-M4-M5-M6-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-M3-M4-M5-M6-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1299328,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty and Maintenance booklet (2016_M2_M3_M4_M5_M6_SW.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016_M2_M3_M4_M5_M6_SW.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1719725,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_M2_M3_M4_M5_M6_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_M2_M3_M4_M5_M6_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 584541,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (2019-BMW-M2-M4-M5-M6-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-M2-M4-M5-M6-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1449185,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A1CA60_20MY_BMW_M2_M4_M5_Warranty_FINAL_Print_withCover_050420.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A1CA60_20MY_BMW_M2_M4_M5_Warranty_FINAL_Print_withCover_050420.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1161040,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC95_21MY_BMW_M2_M3_M4_M5_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC95_21MY_BMW_M2_M3_M4_M5_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1851423,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_M3_M4_M5_Warranty_ADA (1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_M3_M4_M5_Warranty_ADA%20(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2452595,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "m5",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty booklet (2014 BMW X3-X5-X6 Service-Warranty-Information (BF02-446).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014%20BMW%20X3-X5-X6%20Service-Warranty-Information%20(BF02-446).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 801790,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty booklet (2015-BMW-X3-X4-X5-X6-Service-Warranty-Information (BF03-460).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-X3-X4-X5-X6-Service-Warranty-Information%20(BF03-460).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 840375,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty booklet (2016-BMW-X1-X3-X4-X5-X6-Service-Warranty-Information (BF04-473).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016-BMW-X1-X3-X4-X5-X6-Service-Warranty-Information%20(BF04-473).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1158092,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-X1-X3-X4-X5-X6-New-Vehicle-Limited-Warranty (BF06-2152195).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-X1-X3-X4-X5-X6-New-Vehicle-Limited-Warranty%20(BF06-2152195).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 761143,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_X1_X2_X3_X4_X5_X6_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_X1_X2_X3_X4_X5_X6_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1504798,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (2019-BMW-X1-X2-X3-X4-X5-X6-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-X1-X2-X3-X4-X5-X6-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 3809733,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0BC06_20MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_043020.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC06_20MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_043020.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1642636,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC74_21MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_111120.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC74_21MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_111120.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2932167,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X1-X2-X3-X4-X5-X6_Series_Warranty_ADA (1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X1-X2-X3-X4-X5-X6_Series_Warranty_ADA%20(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2095976,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty and Maintenance booklet (2015_X5M_X6M.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015_X5M_X6M.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 741196,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-X5M-X6M-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-X5M-X6M-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1056500,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0BC02_20MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_042820.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC02_20MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_042820.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1945766,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC75_21MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC75_21MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2087535,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X3M_X4M_X5M_X6M_Warranty_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X3M_X4M_X5M_X6M_Warranty_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": null,
+   "verify_note": "HTTP 200 + %PDF (server ignored Range)"
+  },
+  {
+   "line": "x5-m",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x5-m",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty booklet (2014 BMW X3-X5-X6 Service-Warranty-Information (BF02-446).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014%20BMW%20X3-X5-X6%20Service-Warranty-Information%20(BF02-446).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 801790,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty booklet (2015-BMW-X3-X4-X5-X6-Service-Warranty-Information (BF03-460).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015-BMW-X3-X4-X5-X6-Service-Warranty-Information%20(BF03-460).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 840375,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2016,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2016 Warranty booklet (2016-BMW-X1-X3-X4-X5-X6-Service-Warranty-Information (BF04-473).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2016/2016-BMW-X1-X3-X4-X5-X6-Service-Warranty-Information%20(BF04-473).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1158092,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-X1-X3-X4-X5-X6-New-Vehicle-Limited-Warranty (BF06-2152195).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-X1-X3-X4-X5-X6-New-Vehicle-Limited-Warranty%20(BF06-2152195).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 761143,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2018,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2018 Maintenance booklet (2018-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/2018-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 953687,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2018 Warranty booklet (MY2018_BMW_X1_X2_X3_X4_X5_X6_Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2018/MY2018_BMW_X1_X2_X3_X4_X5_X6_Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1504798,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (2019-BMW-X1-X2-X3-X4-X5-X6-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-X1-X2-X3-X4-X5-X6-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 3809733,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0BC06_20MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_043020.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC06_20MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_043020.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1642636,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC74_21MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_111120.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC74_21MY_BMW_X1_X2_X3_X4_X5_X6_Warranty_FINAL_Print_withCover_111120.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2932167,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X1-X2-X3-X4-X5-X6_Series_Warranty_ADA (1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X1-X2-X3-X4-X5-X6_Series_Warranty_ADA%20(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2095976,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2014,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2014 Warranty and Maintenance booklet (2014-BMW-X6M-Service-Warranty-Information.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2014/2014-BMW-X6M-Service-Warranty-Information.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1173593,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2015,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2015 Warranty and Maintenance booklet (2015_X5M_X6M.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2015/2015_X5M_X6M.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 741196,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2017,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2017 Maintenance booklet (2017-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1189307,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2017,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2017 Warranty booklet (2017-BMW-X5M-X6M-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2017/2017-BMW-X5M-X6M-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1056500,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (19MY_BMW_X6M_Warranty_1st_Print_withCover.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/19MY_BMW_X6M_Warranty_1st_Print_withCover.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1060108,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (5A0BC02_20MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_042820.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC02_20MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_042820.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1945766,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC75_21MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC75_21MY_BMW_X3M_X4M_X5M_X6M_Warranty_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2087535,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X3M_X4M_X5M_X6M_Warranty_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X3M_X4M_X5M_X6M_Warranty_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": null,
+   "verify_note": "HTTP 200 + %PDF (server ignored Range)"
+  },
+  {
+   "line": "x6-m",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x6-m",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf) - listed under 'BMW M' (all M models) for this year",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2019,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2019 Maintenance booklet (2019-BMW-Maintenance.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-Maintenance.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1027813,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2019 Warranty booklet (2019-BMW-X7-NewVehicle-Limited-Warranty.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2019/2019-BMW-X7-NewVehicle-Limited-Warranty.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": null,
+   "verify_note": "HTTP 200 + %PDF (server ignored Range)"
+  },
+  {
+   "line": "x7",
+   "year": 2020,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2020 Maintenance booklet (5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/5A0BC07_20MY_BMW_Maintenance_FINAL_Print_withCover_042220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 2042684,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2020 Warranty booklet (2469754_20MY_BMW_X7_Warranty_FINAL_Print_withCover_111819.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2020/2469754_20MY_BMW_X7_Warranty_FINAL_Print_withCover_111819.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": null,
+   "verify_note": "HTTP 200 + %PDF (server ignored Range)"
+  },
+  {
+   "line": "x7",
+   "year": 2021,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2021 Maintenance booklet (5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC92_21MY_BMW_Maintenance_FINAL_Print_withCover_111220.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1346051,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2021 Warranty booklet (5A1BC90_21MY_BMW_X7_Warranty_FINAL_Print_withCover_111120.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2021/5A1BC90_21MY_BMW_X7_Warranty_FINAL_Print_withCover_111120.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1836951,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2022,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2022 Maintenance booklet (BMW_2022_All_Models_Maintenance_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_All_Models_Maintenance_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 921173,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X7_Warranty_ADA (1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X7_Warranty_ADA%20(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 803549,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2022 Warranty booklet (BMW_2022_X7_Warranty_ADA_(1).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2022/BMW_2022_X7_Warranty_ADA_(1).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1973258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2023,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2023 Maintenance booklet (BMW-MY-2023-All-Models-Maintenance-(On-line).pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/BMW-MY-2023-All-Models-Maintenance-(On-line).pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 836848,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2023 Warranty booklet (1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2023/1741-0-3_10_BMW_New_Vehicle_Warranty_PC0322_2023_3C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 901919,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2024,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2024 Maintenance booklet (BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY_2024_All_Models_Maintenance_with_BEVs_PC2_4C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 445964,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2024 Warranty booklet (BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2024/BMW_MY24_New_Vehicle_Warranty_PC3_2024-07-09_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1857270,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2025,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2025 Maintenance booklet (BMW_MY25_Maintenance_with_BEVs.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_Maintenance_with_BEVs.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 633540,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2025 Warranty booklet (BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2025/BMW_MY25_NewVehicleWarranty_EN_PC3_2025-03-10_2C.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 497258,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2026,
+   "doc_type": "maintenance_guide",
+   "title": "BMW USA MY2026 Maintenance booklet (BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_All_Models_Maintenance_with_BEVs_2025-09-25_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 947562,
+   "verify_note": "HTTP 206 + %PDF"
+  },
+  {
+   "line": "x7",
+   "year": 2026,
+   "doc_type": "warranty_maintenance",
+   "title": "BMW USA MY2026 Warranty booklet (BMW_MY26_NWLW Post_2025-09-11_ADA.pdf)",
+   "url": "https://www.bmwusa.com/content/dam/bmw/marketUS/common/warranty-books/2026/BMW_MY26_NWLW%20Post_2025-09-11_ADA.pdf",
+   "page_url": "https://www.bmwusa.com/explore/bmw-value/bmw-ultimate-service/service-and-warranty-books.html",
+   "verified": true,
+   "how": "api",
+   "size_bytes": 1100828,
+   "verify_note": "HTTP 206 + %PDF"
+  }
+ ],
+ "not_found": [
+  {
+   "line": "3-series",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "3-series",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "5-series",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "7-series",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x7",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m3",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "m5",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com; no service/warranty booklet listed for this series+year in the bmwusa.com selector (bin/services/warranty-books)"
+  },
+  {
+   "line": "x5-m",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com; no service/warranty booklet listed for this series+year in the bmwusa.com selector (bin/services/warranty-books)"
+  },
+  {
+   "line": "x5-m",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x5-m",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2014,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2015,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2016,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com; no service/warranty booklet listed for this series+year in the bmwusa.com selector (bin/services/warranty-books)"
+  },
+  {
+   "line": "x6-m",
+   "year": 2017,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2018,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com; no service/warranty booklet listed for this series+year in the bmwusa.com selector (bin/services/warranty-books)"
+  },
+  {
+   "line": "x6-m",
+   "year": 2019,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2020,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2021,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2022,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2023,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2024,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2025,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  },
+  {
+   "line": "x6-m",
+   "year": 2026,
+   "reason": "owners_manual: not public - BMW USA Digital Owner's Manual requires a 17-digit VIN (bmwusa.com/owners-manuals.html); no VIN-free PDF links found on bmwusa.com"
+  }
+ ]
+}

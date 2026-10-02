@@ -1,0 +1,820 @@
+{
+ "make": "Lexus",
+ "portal": "https://www.lexus.com/My-Lexus/resources (Manuals & Resources -> Select new vehicle -> Select by year and model; no login needed in principle). Old secure.drivers.lexus.com no longer resolves.",
+ "checked_at": "2026-10-02",
+ "access": "geo_blocked",
+ "notes": "Owner's manuals, Navigation/Multimedia manuals and Warranty & Services Guides are listed by the page's call to https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual (needs an anonymous Azure AD token from https://oauth.orc.lexus.com/eos plus a reCAPTCHA token). From this network (Azerbaijan, CloudFront POP SOF50) that API answers 403 'FORBIDDEN ACCESS' even to a CORS preflight, so the browser shows 'There was a problem with displaying your manuals'. The documents themselves live on assets.sia.toyota.com/publications/en/{om-s|omnav-s|omms-s}/<CODE>/pdf/<CODE>.pdf (a different host from Toyota's assets.sipb.toyota.com, which returns the CloudFront country-block page); assets.sia.toyota.com returns S3 'AccessDenied' (403) for every URL tried, including URLs indexed by search, so it is treated as blocked/unverifiable. Nothing was bypassed (no proxy/VPN, no captcha solving). Owner's manual codes found by search (e.g. GX460: OM60J63U, OM60M73U; RX: OM0E041U, OM48C02U) carry no model year in their titles and were NOT mapped. Warranty and Services Guide URLs (L-MMS-<yy><model>) whose search titles state year+model are listed with verified=false. What IS reachable from here: www.lexus.com/rest/lexusdrivers/vehicledocs?year=Y&model=ES|RX|NX|GX (same-site REST used by the page; robots.txt allows) which returns Lexus Personalized Settings (LPS) forms and the multi-model Technology Quick Guide on www.lexus.com/content/dam/lexus/drivers/... - these are listed (verified, how=api) but are not owner's manuals; 204 = no docs for that model-year. Two LPS URLs returned by the API are dead (404): 2014 ES 350 and 2019 ES 350. To obtain the owner's manuals, run the same portal from a US network (or obtain the files manually) - out of scope here.",
+ "documents": [
+  {
+   "line": "es",
+   "year": 2014,
+   "doc_type": "quick_reference",
+   "title": "2014 ES350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2015,
+   "doc_type": "other",
+   "title": "2015 ES350 - Lexus Personalized Settings (LPS) customer form: 2015 ES 350 Customer LPS Forms.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2015/2015%20ES%20350%20Customer%20LPS%20Forms.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2015,
+   "doc_type": "quick_reference",
+   "title": "2015 ES350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2016,
+   "doc_type": "other",
+   "title": "2016 ES350 - Lexus Personalized Settings (LPS) customer form: 2016 ES 350 Customer LPS Forms.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2016/2016%20ES%20350%20Customer%20LPS%20Forms.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2016,
+   "doc_type": "quick_reference",
+   "title": "2016 ES350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2017,
+   "doc_type": "other",
+   "title": "2017 ES350 - Lexus Personalized Settings (LPS) customer form: 2017 ES 350 Customer LPS Forms.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2017/2017%20ES%20350%20Customer%20LPS%20Forms.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2017,
+   "doc_type": "quick_reference",
+   "title": "2017 ES350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2018,
+   "doc_type": "other",
+   "title": "2018 ES350 - Lexus Personalized Settings (LPS) customer form: 2018 ES Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2018/2018%20ES%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Lexus ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-18ES350/pdf/L-MMS-18ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2019,
+   "doc_type": "warranty_maintenance",
+   "title": "2019 Lexus ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-19ES350/pdf/L-MMS-19ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2020,
+   "doc_type": "other",
+   "title": "2020 ES350 - Lexus Personalized Settings (LPS) customer form: 2020 ES 350 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2020/2020%20ES%20350%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2020,
+   "doc_type": "warranty_maintenance",
+   "title": "2020 Lexus ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-20ES350/pdf/L-MMS-20ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2021,
+   "doc_type": "other",
+   "title": "2021 ES350 - Lexus Personalized Settings (LPS) customer form: 2021 ES 350 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2021/2021%20ES%20350%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Lexus ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-21ES350/pdf/L-MMS-21ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2022,
+   "doc_type": "other",
+   "title": "2022 ES350 - Lexus Personalized Settings (LPS) customer form: 22_ES_350.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2022/22_ES_350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2022,
+   "doc_type": "quick_reference",
+   "title": "2022 ES350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2023,
+   "doc_type": "other",
+   "title": "2023 ES250_350 - Lexus Personalized Settings (LPS) customer form: 23_ES_LPS_CST.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2023/23_ES_LPS_CST.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2023,
+   "doc_type": "quick_reference",
+   "title": "2023 ES250_350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Lexus ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-23ES350/pdf/L-MMS-23ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2024,
+   "doc_type": "other",
+   "title": "2024 ES350 - Lexus Personalized Settings (LPS) customer form: 24_ES_LPS_CST.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2024/24_ES_LPS_CST.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "es",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Lexus ES250ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-24ES250ES350/pdf/L-MMS-24ES250ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "es",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Lexus ES250ES350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-25ES250ES350/pdf/L-MMS-25ES250ES350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "gx",
+   "year": 2016,
+   "doc_type": "other",
+   "title": "2016 GX460 - Lexus Personalized Settings (LPS) customer form: MY16-Lexus-GX460-With-Navigation-Display.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2016/MY16-Lexus-GX460-With-Navigation-Display.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2017,
+   "doc_type": "other",
+   "title": "2017 GX460 - Lexus Personalized Settings (LPS) customer form: GX_with_nav__LPS.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2017/GX_with_nav__LPS.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2018,
+   "doc_type": "other",
+   "title": "2018 GX460 - Lexus Personalized Settings (LPS) customer form: 2018 GX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2018/2018%20GX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2019,
+   "doc_type": "other",
+   "title": "2019 GX460 - Lexus Personalized Settings (LPS) customer form: 2019 GX Customer LPS Form t.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2019/2019%20GX%20Customer%20LPS%20Form%20t.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2020,
+   "doc_type": "other",
+   "title": "2020 GX460 - Lexus Personalized Settings (LPS) customer form: 2020 GX 450 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2020/2020%20GX%20450%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2020,
+   "doc_type": "quick_reference",
+   "title": "2020 GX460 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2021,
+   "doc_type": "other",
+   "title": "2021 GX460 - Lexus Personalized Settings (LPS) customer form: 2021 GX 460 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2021/2021%20GX%20460%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2021,
+   "doc_type": "quick_reference",
+   "title": "2021 GX460 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Lexus GX460 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-21GX460/pdf/L-MMS-21GX460.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "gx",
+   "year": 2022,
+   "doc_type": "other",
+   "title": "2022 GX460 - Lexus Personalized Settings (LPS) customer form: 22_GX_LPS_CST.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2022/22_GX_LPS_CST.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2022,
+   "doc_type": "quick_reference",
+   "title": "2022 GX460 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "gx",
+   "year": 2022,
+   "doc_type": "warranty_maintenance",
+   "title": "2022 Lexus GX460 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-22GX460/pdf/L-MMS-22GX460.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "gx",
+   "year": 2023,
+   "doc_type": "warranty_maintenance",
+   "title": "2023 Lexus GX460 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-23GX460/pdf/L-MMS-23GX460.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "gx",
+   "year": 2025,
+   "doc_type": "warranty_maintenance",
+   "title": "2025 Lexus GX550 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-25GX550/pdf/L-MMS-25GX550.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "nx",
+   "year": 2018,
+   "doc_type": "other",
+   "title": "2018 NX300 - Lexus Personalized Settings (LPS) customer form: 2018 NX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2018/2018%20NX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2019,
+   "doc_type": "other",
+   "title": "2019 NX300 - Lexus Personalized Settings (LPS) customer form: 2019 NX Customer LPS Form t.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2019/2019%20NX%20Customer%20LPS%20Form%20t.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2020,
+   "doc_type": "other",
+   "title": "2020 NX - Lexus Personalized Settings (LPS) customer form: 2020 NX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2020/2020%20NX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2021,
+   "doc_type": "other",
+   "title": "2021 NX300 - Lexus Personalized Settings (LPS) customer form: 2021 NX 300 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2021/2021%20NX%20300%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2021,
+   "doc_type": "warranty_maintenance",
+   "title": "2021 Lexus NX300H Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-21NX300H/pdf/L-MMS-21NX300H.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "nx",
+   "year": 2022,
+   "doc_type": "other",
+   "title": "2022 NX350_250 - Lexus Personalized Settings (LPS) customer form: 22_NX_LPS_CST_rev.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2022/22_NX_LPS_CST_rev.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2022,
+   "doc_type": "quick_reference",
+   "title": "2022 NX350_250 - Lexus Technology Quick Guide (multi-model): NX_Technolgy Quick Guide_2_22_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/NX_Technolgy%20Quick%20Guide_2_22_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2024,
+   "doc_type": "other",
+   "title": "2024 NX250_350 - Lexus Personalized Settings (LPS) customer form: 24 NX350-250 LPS_CST_rev.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2024/24%20NX350-250%20LPS_CST_rev.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "nx",
+   "year": 2024,
+   "doc_type": "warranty_maintenance",
+   "title": "2024 Lexus NX450h Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-24NX450h/pdf/L-MMS-24NX450h.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "rx",
+   "year": 2017,
+   "doc_type": "other",
+   "title": "2017 RX350 - Lexus Personalized Settings (LPS) customer form: 2017 RX 350 Customer LPS Forms.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2017/2017%20RX%20350%20Customer%20LPS%20Forms.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2018,
+   "doc_type": "other",
+   "title": "2018 RX350 - Lexus Personalized Settings (LPS) customer form: 2018 RX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2018/2018%20RX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2018,
+   "doc_type": "warranty_maintenance",
+   "title": "2018 Lexus RX350 Warranty and Services Guide (title per search index)",
+   "url": "https://assets.sia.toyota.com/publications/en/omms-s/L-MMS-18RX350/pdf/L-MMS-18RX350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": false,
+   "how": "site_search",
+   "verify_result": "HTTP 403 AccessDenied (S3 via CloudFront) from AZ network"
+  },
+  {
+   "line": "rx",
+   "year": 2019,
+   "doc_type": "other",
+   "title": "2019 RX350 - Lexus Personalized Settings (LPS) customer form: 2019 RX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2019/2019%20RX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2020,
+   "doc_type": "other",
+   "title": "2020 RX350 - Lexus Personalized Settings (LPS) customer form: 2020 RX Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2020/2020%20RX%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2021,
+   "doc_type": "other",
+   "title": "2021 RX350 - Lexus Personalized Settings (LPS) customer form: 2021 RX 350 Customer LPS Form.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2021/2021%20RX%20350%20Customer%20LPS%20Form.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2022,
+   "doc_type": "other",
+   "title": "2022 RX350 - Lexus Personalized Settings (LPS) customer form: 22_RX_350.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2022/22_RX_350.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2022,
+   "doc_type": "quick_reference",
+   "title": "2022 RX350 - Lexus Technology Quick Guide (multi-model): IS, ES, RC, RCF, LS, LC, UX, RX, GX _Technology Quick Guide_9_21_lr.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/technology-quick-guides/IS%2C%20ES%2C%20RC%2C%20RCF%2C%20LS%2C%20LC%2C%20UX%2C%20RX%2C%20GX%20_Technology%20Quick%20Guide_9_21_lr.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  },
+  {
+   "line": "rx",
+   "year": 2023,
+   "doc_type": "other",
+   "title": "2023 RX350 - Lexus Personalized Settings (LPS) customer form: 23 RX LPS_CST.pdf",
+   "url": "https://www.lexus.com/content/dam/lexus/drivers/documents/lps/2023/23%20RX%20LPS_CST.pdf",
+   "page_url": "https://www.lexus.com/My-Lexus/resources",
+   "verified": true,
+   "how": "api"
+  }
+ ],
+ "not_found": [
+  {
+   "line": "es",
+   "year": 2014,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2015,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2016,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2017,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2018,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2019,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2020,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2021,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2022,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2023,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2024,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2025,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "es",
+   "year": 2026,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2014,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2015,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2016,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2017,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2018,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2019,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2020,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2021,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2022,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2023,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2024,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2025,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "rx",
+   "year": 2026,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2015,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2016,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2017,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2018,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2019,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2020,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2021,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2022,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2023,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2024,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2025,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "nx",
+   "year": 2026,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2014,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2015,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2016,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2017,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2018,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2019,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2020,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2021,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2022,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2023,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2024,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2025,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  },
+  {
+   "line": "gx",
+   "year": 2026,
+   "reason": "owners_manual: geo_blocked - the My Lexus manuals list API (POST https://vehicle-maintenance.orc.lexus.com/v2/vehicle/manual, reCAPTCHA-token gated) returns API Gateway 403 'FORBIDDEN ACCESS' from this network (page shows 'There was a problem with displaying your manuals'), and the PDF host assets.sia.toyota.com answers 403 AccessDenied to every manual URL tried; not bypassed."
+  }
+ ]
+}

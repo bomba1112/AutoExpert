@@ -1,0 +1,4269 @@
+{
+ "make": "BMW",
+ "line": "M3",
+ "line_key": "bmw/m3",
+ "db_models": [
+  "M3"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-bmw-2018": {
+   "key": "vpic-ca-bmw-2018",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2018.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2018&make=BMW&model=&units=Metric&format=json",
+   "sha256": "8c3fa382fe0a51d8be4d4de2900f93170b861bc9120071752c1daee13d920992",
+   "retrieved_at": "2026-10-02T08:30:43+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2018 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "vpic-ca-bmw-2015": {
+   "key": "vpic-ca-bmw-2015",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2015.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2015&make=BMW&model=&units=Metric&format=json",
+   "sha256": "bdfa1449c178b0cc195801bb35b94d46d7fccf1d4b2cbe2d8e701eaccc67764c",
+   "retrieved_at": "2026-10-02T08:30:26+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2015 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "vpic-ca-bmw-2016": {
+   "key": "vpic-ca-bmw-2016",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2016.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2016&make=BMW&model=&units=Metric&format=json",
+   "sha256": "62a30c9ee098574d4a7b050b7ed85217cc2a52410b7fa6eb924831f4605601e8",
+   "retrieved_at": "2026-10-02T08:30:31+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2016 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "vpic-ca-bmw-2017": {
+   "key": "vpic-ca-bmw-2017",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2017.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2017&make=BMW&model=&units=Metric&format=json",
+   "sha256": "1efa5ad2198e8446334fed7fb824c1b5004cf775b433d3cb500dfcf21f501d0d",
+   "retrieved_at": "2026-10-02T08:30:36+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2017 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "vpic-ca-bmw-2021": {
+   "key": "vpic-ca-bmw-2021",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2021.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2021&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f11433424cac2da5a108faeb69bd78cacd6b134ecb21e53381d66fd2d35b2f28",
+   "retrieved_at": "2026-10-02T08:30:58+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2021 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "vpic-ca-bmw-2022": {
+   "key": "vpic-ca-bmw-2022",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2022.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2022&make=BMW&model=&units=Metric&format=json",
+   "sha256": "df7693783c80e5c470bfe7736b6dc736b495dbefdb077f42c51cd20a8057fbcb",
+   "retrieved_at": "2026-10-02T08:31:03+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2022 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "vpic-ca-bmw-2023": {
+   "key": "vpic-ca-bmw-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=BMW&model=&units=Metric&format=json",
+   "sha256": "7a6ce71bb2a0a8d7af783fb3a9b164637269ed94485746e66c73510eeaffb0ce",
+   "retrieved_at": "2026-10-02T08:31:08+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-bmw-2024": {
+   "key": "vpic-ca-bmw-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
+   "retrieved_at": "2026-10-02T08:31:13+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-bmw-2025": {
+   "key": "vpic-ca-bmw-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=BMW&model=&units=Metric&format=json",
+   "sha256": "2e185ac4936f63e8a14df8d4dd915357537b234c52521ae3f66e3ce0bbb9b726",
+   "retrieved_at": "2026-10-02T08:31:19+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "vpic-ca-bmw-2026": {
+   "key": "vpic-ca-bmw-2026",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2026.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2026&make=BMW&model=&units=Metric&format=json",
+   "sha256": "c6a01d7b312f51e147bd371cdfd9f341894ce35f6e009d57485e21806e1d845b",
+   "retrieved_at": "2026-10-02T08:31:25+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2026 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-recalls-m3-2015": {
+   "key": "nhtsa-recalls-m3-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2015.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2015",
+   "sha256": "86c7bce9a37a8755420ab50cee790365daa0454f59e0436f00bf726270eefa38",
+   "retrieved_at": "2026-10-02T09:23:06+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-recalls-m3-2016": {
+   "key": "nhtsa-recalls-m3-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2016",
+   "sha256": "e53b2b951523d1b3efacc60529d810c5ef0fdfaa954866510c2d03f00433d603",
+   "retrieved_at": "2026-10-02T09:25:22+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-m3-2017": {
+   "key": "nhtsa-recalls-m3-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2017",
+   "sha256": "0390b6e3075574c7277e74023ede24ca5bc4f3ad292e1c105f0eeec844b3435f",
+   "retrieved_at": "2026-10-02T09:26:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-m3-2018": {
+   "key": "nhtsa-recalls-m3-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:26:59+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-m3-2021": {
+   "key": "nhtsa-recalls-m3-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2021",
+   "sha256": "732ead21f819404f9ae8f5dc4d683e08b0792017cdb9ab508f4efed6681c5f4b",
+   "retrieved_at": "2026-10-02T09:29:05+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-m3-2022": {
+   "key": "nhtsa-recalls-m3-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:30:05+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-m3-sedan-2023": {
+   "key": "nhtsa-recalls-m3-sedan-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3-sedan_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3+SEDAN&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:31:00+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 SEDAN 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-m3-2025": {
+   "key": "nhtsa-recalls-m3-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/m3_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=M3&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:32:17+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls M3 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-complaints-m3-2015": {
+   "key": "nhtsa-complaints-m3-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2015.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2015",
+   "sha256": "322ddc5546dfac0caa0c5ef464c908afc07fdd13c99a47000a465a30149c104c",
+   "retrieved_at": "2026-10-02T09:24:18+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-complaints-m3-2016": {
+   "key": "nhtsa-complaints-m3-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2016",
+   "sha256": "3fa56c6918747b1a21e4b16e87e6a50fab0ff3ccc64dc2739bd32f7f6cf721b6",
+   "retrieved_at": "2026-10-02T09:25:54+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-m3-2017": {
+   "key": "nhtsa-complaints-m3-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2017",
+   "sha256": "36eb006c543eef5208443c167b6c5446aee9b41b329b3a355c80208f3293b499",
+   "retrieved_at": "2026-10-02T09:26:41+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-m3-2018": {
+   "key": "nhtsa-complaints-m3-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2018",
+   "sha256": "504a359a52441eb68211732c0af00c51066468f31c0fe3d0fe35df0320b18953",
+   "retrieved_at": "2026-10-02T09:27:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-m3-2021": {
+   "key": "nhtsa-complaints-m3-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2021",
+   "sha256": "4b0781876e54596b787ca3a7536286f67d0a196498529342a41246d62000d932",
+   "retrieved_at": "2026-10-02T09:29:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-m3-2022": {
+   "key": "nhtsa-complaints-m3-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2022",
+   "sha256": "0cd0cf6f6ce1816ed5e56450e6fdb34f5a1136287cd7318388162f4d473365a8",
+   "retrieved_at": "2026-10-02T09:30:32+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-m3-sedan-2023": {
+   "key": "nhtsa-complaints-m3-sedan-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3-sedan_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3+SEDAN&modelYear=2023",
+   "sha256": "17979f700fd90cc09e0bd1948a991403114aebce184cac990ab4483ca18f7c79",
+   "retrieved_at": "2026-10-02T09:31:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 SEDAN 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-m3-2025": {
+   "key": "nhtsa-complaints-m3-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/m3_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=M3&modelYear=2025",
+   "sha256": "a99c4431f5285e962a91811f5b52fc45ec5e3046b2f247a3923909215cce7f74",
+   "retrieved_at": "2026-10-02T09:32:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints M3 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "US2015-2018",
+   "name": "M3 (US, through 2018)",
+   "db_model": "M3",
+   "existing_id": null,
+   "start_year": 2015,
+   "end_year": 2018,
+   "open_ended": false,
+   "start_known": true,
+   "end_known": true,
+   "boundary_evidence": [
+    "first US model year of the line in EPA vehicles.csv: 2015"
+   ],
+   "evidence_tier": "B"
+  },
+  {
+   "code": "US2021+",
+   "name": "M3 2021+ (US)",
+   "db_model": "M3",
+   "existing_id": null,
+   "start_year": 2021,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "vPIC Canadian specifications: wheelbase 281 cm (MY2018) -> 286 cm (MY2021)",
+    "vPIC Canadian specifications: overall length 467 -> 479 cm (MY2018 -> MY2021; a change of 6 cm or more)",
+    "mycarusermanual.com generation page starts at 2020 (m3/4-door/2020-2025), corroborated by vPIC overall length 467 -> 479 cm, overall width 188 -> 190 cm, overall height 143 -> 144 cm, front track 158 -> 162 cm, rear track 160 -> 161 cm (MY2018 -> MY2021)"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "bmw-m3-us-2015-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "year": 2015,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (AM-S7)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "34978",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 24,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2015-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2015,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "34977",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 26,
+     "combined_mpg": 20,
+     "combined_l_100km": "11.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2016-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "year": 2016,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (AM-S7)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36726",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 24,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2016-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2016,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36725",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 26,
+     "combined_mpg": 20,
+     "combined_l_100km": "11.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2017-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "year": 2017,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (AM-S7)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37761",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 24,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2017-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2017,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37760",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 26,
+     "combined_mpg": 20,
+     "combined_l_100km": "11.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2018-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "year": 2018,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (AM-S7)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38975",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 24,
+     "combined_mpg": 20,
+     "combined_l_100km": "11.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "40037",
+     "epa_model": "M3 CS",
+     "city_mpg": 16,
+     "highway_mpg": 22,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2018-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2018,
+   "generation": "US2015-2018",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38974",
+     "epa_model": "M3",
+     "city_mpg": 17,
+     "highway_mpg": 25,
+     "combined_mpg": 20,
+     "combined_l_100km": "11.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2021-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2021,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43563",
+     "epa_model": "M3 Competition",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2021-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2021,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43562",
+     "epa_model": "M3",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "year": 2022,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44286",
+     "epa_model": "M3 Competition M xDrive Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 22,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2022,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44184",
+     "epa_model": "M3 Competition Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2022,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44183",
+     "epa_model": "M3 Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "year": 2023,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45496",
+     "epa_model": "M3 Competition M xDrive Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 22,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2023,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45495",
+     "epa_model": "M3 Competition Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2023,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45494",
+     "epa_model": "M3 Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "year": 2024,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46567",
+     "epa_model": "M3 CS Sedan",
+     "city_mpg": 15,
+     "highway_mpg": 22,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "46660",
+     "epa_model": "M3 Competition M xDrive Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 22,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2024,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46659",
+     "epa_model": "M3 Competition Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2024,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46658",
+     "epa_model": "M3 Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "year": 2025,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47978",
+     "epa_model": "M3 Competition M xDrive Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2025,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47977",
+     "epa_model": "M3 Competition Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2025,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47976",
+     "epa_model": "M3 Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "year": 2026,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49239",
+     "epa_model": "M3 Competition M xDrive Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 18,
+     "combined_l_100km": "13.1",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "year": 2026,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49238",
+     "epa_model": "M3 Competition Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "year": 2026,
+   "generation": "US2021+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "RWD",
+   "epa_trany": "Manual 6-spd",
+   "displacement_l": "3.0",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49237",
+     "epa_model": "M3 Sedan",
+     "city_mpg": 16,
+     "highway_mpg": 23,
+     "combined_mpg": 19,
+     "combined_l_100km": "12.4",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-curb_weight_kg-2018",
+   "generation": "US2015-2018",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 1595,
+   "unit": "kg",
+   "original": "CW = 1595 (kg, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1595",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-height_mm-2018",
+   "generation": "US2015-2018",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 1430,
+   "unit": "mm",
+   "original": "OH = 143 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "143",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-length_mm-2018",
+   "generation": "US2015-2018",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 4670,
+   "unit": "mm",
+   "original": "OL = 467 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "467",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-track_front_mm-2018",
+   "generation": "US2015-2018",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWF = 158 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-track_rear_mm-2018",
+   "generation": "US2015-2018",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 1600,
+   "unit": "mm",
+   "original": "TWR = 160 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "160",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-weight_distribution_front_rear_pct-2018",
+   "generation": "US2015-2018",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-wheelbase_mm-2018",
+   "generation": "US2015-2018",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 2810,
+   "unit": "mm",
+   "original": "WB = 281 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "281",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-width_mm-2018",
+   "generation": "US2015-2018",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2018,
+    2018
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OW = 188 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-curb_weight_kg-2015",
+   "generation": "US2015-2018",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 1606,
+   "unit": "kg",
+   "original": "CW = 1606 (kg, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "CW",
+     "raw_value": "1606",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "CW",
+     "raw_value": "1606",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "CW",
+     "raw_value": "1606",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-height_mm-2015",
+   "generation": "US2015-2018",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 1430,
+   "unit": "mm",
+   "original": "OH = 143 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OH",
+     "raw_value": "143",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OH",
+     "raw_value": "143",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OH",
+     "raw_value": "143",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-length_mm-2015",
+   "generation": "US2015-2018",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 4670,
+   "unit": "mm",
+   "original": "OL = 467 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OL",
+     "raw_value": "467",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OL",
+     "raw_value": "467",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OL",
+     "raw_value": "467",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-track_front_mm-2015",
+   "generation": "US2015-2018",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWF = 158 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-track_rear_mm-2015",
+   "generation": "US2015-2018",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 1600,
+   "unit": "mm",
+   "original": "TWR = 160 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWR",
+     "raw_value": "160",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWR",
+     "raw_value": "160",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "TWR",
+     "raw_value": "160",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-weight_distribution_front_rear_pct-2015",
+   "generation": "US2015-2018",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-wheelbase_mm-2015",
+   "generation": "US2015-2018",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 2810,
+   "unit": "mm",
+   "original": "WB = 281 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WB",
+     "raw_value": "281",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WB",
+     "raw_value": "281",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "WB",
+     "raw_value": "281",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2015-2018-vpic-m3-4dr-sedan-rwd-width_mm-2015",
+   "generation": "US2015-2018",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2015,
+    2017
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OW = 188 (cm, Canadian specification row 'M3 4DR SEDAN RWD')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN RWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2015",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2016",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "M3 4DR SEDAN RWD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2015"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-curb_weight_kg-2021",
+   "generation": "US2021+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 1705,
+   "unit": "kg",
+   "original": "CW = 1705 (kg, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1705",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-height_mm-2021",
+   "generation": "US2021+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 1440,
+   "unit": "mm",
+   "original": "OH = 144 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "144",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-length_mm-2021",
+   "generation": "US2021+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 4790,
+   "unit": "mm",
+   "original": "OL = 479 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "479",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-track_front_mm-2021",
+   "generation": "US2021+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 1620,
+   "unit": "mm",
+   "original": "TWF = 162 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "162",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-track_rear_mm-2021",
+   "generation": "US2021+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWR = 161 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-weight_distribution_front_rear_pct-2022",
+   "generation": "US2021+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2022,
+    2026
+   ],
+   "value": "54/46",
+   "unit": "%",
+   "original": "WD = 54/46 (front/rear %, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2022"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-wheelbase_mm-2021",
+   "generation": "US2021+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 2860,
+   "unit": "mm",
+   "original": "WB = 286 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "286",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  },
+  {
+   "id": "m3-US2021+-vpic-m3-4dr-sedan-width_mm-2021",
+   "generation": "US2021+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2021,
+    2026
+   ],
+   "value": 1900,
+   "unit": "mm",
+   "original": "OW = 190 (cm, Canadian specification row 'M3 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M3 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M3 4DR SEDAN",
+     "field": "OW",
+     "raw_value": "190",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2021"
+  }
+ ],
+ "recalls": [
+  {
+   "campaign_number": "15V782000",
+   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2015-2016 M3 Sedan vehicles manufactured May 30, 2015, to September 2, 2015, 2016 M4 Coupe vehicles manufactured July 3, 2015, to September 11, 2015, and 2015-2016 M4 Convertible vehicles manufactured May 29, 2015, to August 4, 2015. The affected vehicles have a driveshaft with a slip-joint that may not have been filled with grease.  As a result, the slip-joint may fail over time.",
+   "consequence": "If the slip-joint fails, there would be a loss of power to the rear axle and therefore the vehicle would stop moving, increasing the risk of a crash.",
+   "remedy": "BMW will notify owners, and dealers will inspect the driveshaft, replacing it as necessary, free of charge.  The recall began on January 14, 2016.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "23/11/2015",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2015-2018",
+   "model_years": [
+    2015,
+    2016
+   ],
+   "years": [
+    2015,
+    2016
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2015",
+   "sources": [
+    "nhtsa-recalls-m3-2015",
+    "nhtsa-recalls-m3-2016"
+   ]
+  },
+  {
+   "campaign_number": "16V653000",
+   "component": "STRUCTURE:FRAME AND MEMBERS",
+   "summary": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen.",
+   "consequence": "Loose rear sub-frame bolts may adversely affect vehicle handling and control, increasing the risk of a crash.",
+   "remedy": "BMW will notify owners, and dealers will replace the rear sub-frame bolts with new bolts, free of charge.  The recall began on November 3, 2016.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "09/09/2016",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2015-2018",
+   "model_years": [
+    2015,
+    2016,
+    2017
+   ],
+   "years": [
+    2015,
+    2017
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2015",
+   "sources": [
+    "nhtsa-recalls-m3-2015",
+    "nhtsa-recalls-m3-2016",
+    "nhtsa-recalls-m3-2017"
+   ]
+  },
+  {
+   "campaign_number": "24V288000",
+   "component": "AIR BAGS:SIDE/WINDOW",
+   "summary": "BMW of North America, LLC (BMW) is recalling certain 2014-2015 2 Series Coupe (228i, 228i xDrive, M235i), 3 Series Sedan (320i, 320i xDrive, 328i, 328i xDrive, 335i, 335i xDrive, M3, 328d, 328d xDrive), 4 Series Coupe (428i, 428i xDrive, 435i, 435i xDrive, M4), and 2015 4 Series Gran Coupe (428i, 428i xDrive, 435i, 435i xDrive) vehicles.  The head air bag inflator may fail at the weld joint, which can cause gas to leak from the inflator or result in an inflator rupture.",
+   "consequence": "An inflator that ruptures may cause sharp metal fragments to enter or exit the vehicle, increasing the risk of injury.  Additionally, an inflator that leaks gas may only partially inflate during a crash, increasing the risk of injury.",
+   "remedy": "Dealers will replace the head air bags, free of charge.  Owner notification letters were mailed November 4, 2024.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "24/04/2024",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2015-2018",
+   "model_years": [
+    2015
+   ],
+   "years": [
+    2015,
+    2015
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2015",
+   "sources": [
+    "nhtsa-recalls-m3-2015"
+   ]
+  },
+  {
+   "campaign_number": "18V713000",
+   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "summary": "BMW of North America, LLC  (BMW) is recalling certain 2016-2017 BMW M3 Sedans, 2016-2017 BMW M4 and M4 GTS Coupes and 2017 BMW M4 Convertible vehicles.  The connection between the driveshaft and the flange may fail resulting in a loss of propulsion.",
+   "consequence": "A loss of vehicle propulsion can increase the risk of a crash.",
+   "remedy": "BMW will notify vehicle owners, and dealers will replace the driveshaft, free of charge.  The recall began April 9, 2019.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "11/10/2018",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2015-2018",
+   "model_years": [
+    2016,
+    2017
+   ],
+   "years": [
+    2016,
+    2017
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2016",
+   "sources": [
+    "nhtsa-recalls-m3-2016",
+    "nhtsa-recalls-m3-2017"
+   ]
+  },
+  {
+   "campaign_number": "21V062000",
+   "component": "SERVICE BRAKES, HYDRAULIC",
+   "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 8 Series Coupe, Grand Coupe and convertible 840i, 840i xDrive, M850i xDrive, M8 and 740 Li, 740 Li xDrive, 750 Li xDrive, M760 Li xDrive, X6 sDrive40i, X6 xDrive40i, X6 xdrive50i, X6 M50i, X6M, and 2019-2021 X5 sDrive40i, X5 xDrive40i, X5 xDrive50i, X5 M50i, X5M, X7 xDrive40i, X7 xDrive50i, X7 M50i, and 2021 M3, M3 Competition, M4 Coupe, M4 Competition Coupe, X5 xDrive45e, 745 Le xDrive.  The rotor and shaft within the integrated brake system may not have been welded properly and could separate during a hard braking event, possibly resulting in a loss of the Antilock Brake System (ABS) and braking assistance.",
+   "consequence": "A loss of ABS and a reduction in braking assistance can increase the risk of a crash.",
+   "remedy": "BMW will notify owners, and dealers will replace the integrated brake system, free of charge.  Owner notification letters were mailed on May 25, 2021.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "10/02/2021",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2021+",
+   "model_years": [
+    2021
+   ],
+   "years": [
+    2021,
+    2021
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2021",
+   "sources": [
+    "nhtsa-recalls-m3-2021"
+   ]
+  },
+  {
+   "campaign_number": "21V298000",
+   "component": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+   "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 330i, 330i xDrive, M340i, M3, and 330e xDrive vehicles.   The bolt securing the seat belt assembly to the frame was not tightened to specification.",
+   "consequence": "An improperly installed seat belt assembly may not restrain an occupant as expected, increasing the risk of injury.",
+   "remedy": "BMW will notify owners, and dealers will inspect the front seat belt buckle assembly connection and, if necessary, replace it, free of charge.  Owner notification letters were mailed on June 25, 2021.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "report_received_date": "28/04/2021",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2021+",
+   "model_years": [
+    2021
+   ],
+   "years": [
+    2021,
+    2021
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2021",
+   "sources": [
+    "nhtsa-recalls-m3-2021"
+   ]
+  },
+  {
+   "campaign_number": "21V554000",
+   "component": "SEAT BELTS",
+   "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M3 Competition, 530i, 530i xDrive, 540i, 540i xDrive, MINI Hardtop 2 Door (Cooper, CooperS, JCW), X2 sDrive28i, X2 xDrive28i, X2 M35i, Z4 sDrive30i, Z4 M40i, MINI Hardtop 2 Door (Cooper SE), MINI Convertible (Cooper, Cooper S, JCW), MINI Clubman (Cooper S, Cooper S All4, JCW), MINI Countryman (Cooper, Cooper All4, Cooper S, Cooper S All4, JCW All4), Rolls Royce Ghost, MINI Countryman (Cooper S E All4), Rolls Royce Phantom, Rolls Royce Cullinan, and Toyota Supra vehicles.  The passenger seat belt Automatic Locking Retractor (ALR) may deactivate early, before the webbing fully retracts.  As such, these assemblies fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\"",
+   "consequence": "During a crash, a seat belt retractor that does not function as intended increases the risk of injury.",
+   "remedy": "Dealers will inspect the seat belt retractors (including the seat belts) and, if necessary, replace the retractors, free of charge.   Owner notification letters were mailed on September 3, 2021.  Owners may contact BMW customer service at 1-800-525-7417; 1-866-825-1525 (MINI); 1-877-877-3735 (Rolls Royce); and 1-888-270-9371 (Toyota).",
+   "report_received_date": "21/07/2021",
+   "manufacturer": "BMW of North America, LLC",
+   "generation": "US2021+",
+   "model_years": [
+    2021
+   ],
+   "years": [
+    2021,
+    2021
+   ],
+   "nhtsa_models": [
+    "M3"
+   ],
+   "source": "nhtsa-recalls-m3-2021",
+   "sources": [
+    "nhtsa-recalls-m3-2021"
+   ]
+  }
+ ],
+ "complaint_patterns": [
+  {
+   "generation": "US2015-2018",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 8,
+   "by_year": {
+    "2015": 2,
+    "2018": 6
+   },
+   "sample_odi": [
+    11464603,
+    11464617,
+    11608984,
+    11597225,
+    11550627,
+    11550617,
+    11537054,
+    11534711
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "ENGINE",
+   "count": 6,
+   "by_year": {
+    "2015": 1,
+    "2016": 3,
+    "2018": 2
+   },
+   "sample_odi": [
+    11289890,
+    11290215,
+    11289880,
+    11289964,
+    11759039,
+    11289976
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "UNKNOWN OR OTHER",
+   "count": 4,
+   "by_year": {
+    "2015": 1,
+    "2016": 1,
+    "2018": 2
+   },
+   "sample_odi": [
+    11341883,
+    11099977,
+    11597225,
+    11193822
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "POWER TRAIN",
+   "count": 3,
+   "by_year": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1
+   },
+   "sample_odi": [
+    11232137,
+    11440045,
+    11289976
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2017": 1,
+    "2018": 1
+   },
+   "sample_odi": [
+    11301469,
+    11759039
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "POWER TRAIN",
+   "count": 2,
+   "by_year": {
+    "2022": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11714063,
+    11669571
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 2,
+   "by_year": {
+    "2021": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11728419,
+    11733289
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "FUEL SYSTEM",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11605001
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "GASOLINE",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11605001
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "STRUCTURE",
+   "count": 1,
+   "by_year": {
+    "2016": 1
+   },
+   "sample_odi": [
+    11232137
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015-2018",
+   "component": "SUSPENSION",
+   "count": 1,
+   "by_year": {
+    "2016": 1
+   },
+   "sample_odi": [
+    11232137
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "AIR BAGS",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11611304
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "LANE DEPARTURE",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11636084
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "SEAT BELTS",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11611304
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "STEERING",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11678030
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2021+",
+   "component": "SUSPENSION",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11678030
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "US2015-2018|engine-failure": {
+   "key": "US2015-2018|engine-failure",
+   "label": "engine failure / knocking / seizure",
+   "count": 1,
+   "by_year": {
+    "2015": 1
+   },
+   "sample_odi": [
+    11289890
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-m3-2015"
+  },
+  "US2015-2018|overheating": {
+   "key": "US2015-2018|overheating",
+   "label": "overheating",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11759039
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-m3-2018"
+  },
+  "US2015-2018|fuel-leak": {
+   "key": "US2015-2018|fuel-leak",
+   "label": "fuel leak / fuel odor",
+   "count": 2,
+   "by_year": {
+    "2018": 2
+   },
+   "sample_odi": [
+    11608984,
+    11534711
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-m3-2018"
+  },
+  "US2015-2018|transmission-failure": {
+   "key": "US2015-2018|transmission-failure",
+   "label": "transmission failure / slipping",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11534711
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-m3-2018"
+  },
+  "US2021+|transmission-failure": {
+   "key": "US2021+|transmission-failure",
+   "label": "transmission failure / slipping",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11714063
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-m3-2022"
+  }
+ },
+ "issues": [
+  {
+   "id": "m3-US2015-2018-recall-15V782000",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "title": "NHTSA recall 15V782000: POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC (BMW) is recalling certain model year 2015-2016 M3 Sedan vehicles manufactured May 30, 2015, to September 2, 2015, 2016 M4 Coupe vehicles manufactured July 3, 2015, to September 11, 2015, and 2015-2016 M4 Convertible vehicles manufactured May 29, 2015, to August 4, 2015. The affected vehicles have a driveshaft with a slip-joint that may not have been filled with grease.  As a result, the slip-joint may fail over time.",
+   "consequences": "If the slip-joint fails, there would be a loss of power to the rear axle and therefore the vehicle would stop moving, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 15V782000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "BMW will notify owners, and dealers will inspect the driveshaft, replacing it as necessary, free of charge.  The recall began on January 14, 2016.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "15V782000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2015-2018-recall-16V653000",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "STRUCTURE:FRAME AND MEMBERS",
+   "title": "NHTSA recall 16V653000: STRUCTURE:FRAME AND MEMBERS",
+   "symptoms": [],
+   "cause": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen.",
+   "consequences": "Loose rear sub-frame bolts may adversely affect vehicle handling and control, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 16V653000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "BMW will notify owners, and dealers will replace the rear sub-frame bolts with new bolts, free of charge.  The recall began on November 3, 2016.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "16V653000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2015-2018-recall-24V288000",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS:SIDE/WINDOW",
+   "title": "NHTSA recall 24V288000: AIR BAGS:SIDE/WINDOW",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC (BMW) is recalling certain 2014-2015 2 Series Coupe (228i, 228i xDrive, M235i), 3 Series Sedan (320i, 320i xDrive, 328i, 328i xDrive, 335i, 335i xDrive, M3, 328d, 328d xDrive), 4 Series Coupe (428i, 428i xDrive, 435i, 435i xDrive, M4), and 2015 4 Series Gran Coupe (428i, 428i xDrive, 435i, 435i xDrive) vehicles.  The head air bag inflator may fail at the weld joint, which can cause gas to leak from the inflator or result in an inflator rupture.",
+   "consequences": "An inflator that ruptures may cause sharp metal fragments to enter or exit the vehicle, increasing the risk of injury.  Additionally, an inflator that leaks gas may only partially inflate during a crash, increasing the risk of injury.",
+   "inspection": "Check that NHTSA recall 24V288000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Dealers will replace the head air bags, free of charge.  Owner notification letters were mailed November 4, 2024.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "24V288000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2015-2018-recall-18V713000",
+   "generation": "US2015-2018",
+   "years": [
+    2016,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "title": "NHTSA recall 18V713000: POWER TRAIN:DRIVELINE:DRIVESHAFT",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC  (BMW) is recalling certain 2016-2017 BMW M3 Sedans, 2016-2017 BMW M4 and M4 GTS Coupes and 2017 BMW M4 Convertible vehicles.  The connection between the driveshaft and the flange may fail resulting in a loss of propulsion.",
+   "consequences": "A loss of vehicle propulsion can increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 18V713000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "BMW will notify vehicle owners, and dealers will replace the driveshaft, free of charge.  The recall began April 9, 2019.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "18V713000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2021+-recall-21V062000",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "component": "SERVICE BRAKES, HYDRAULIC",
+   "title": "NHTSA recall 21V062000: SERVICE BRAKES, HYDRAULIC",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 8 Series Coupe, Grand Coupe and convertible 840i, 840i xDrive, M850i xDrive, M8 and 740 Li, 740 Li xDrive, 750 Li xDrive, M760 Li xDrive, X6 sDrive40i, X6 xDrive40i, X6 xdrive50i, X6 M50i, X6M, and 2019-2021 X5 sDrive40i, X5 xDrive40i, X5 xDrive50i, X5 M50i, X5M, X7 xDrive40i, X7 xDrive50i, X7 M50i, and 2021 M3, M3 Competition, M4 Coupe, M4 Competition Coupe, X5 xDrive45e, 745 Le xDrive.  The rotor and shaft within the integrated brake system may not have been welded properly and could separate during a hard braking event, possibly resulting in a loss of the Antilock Brake System (ABS) and braking assistance.",
+   "consequences": "A loss of ABS and a reduction in braking assistance can increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 21V062000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "BMW will notify owners, and dealers will replace the integrated brake system, free of charge.  Owner notification letters were mailed on May 25, 2021.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "21V062000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2021+-recall-21V298000",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "component": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+   "title": "NHTSA recall 21V298000: SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC (BMW) is recalling certain 2021 330i, 330i xDrive, M340i, M3, and 330e xDrive vehicles.   The bolt securing the seat belt assembly to the frame was not tightened to specification.",
+   "consequences": "An improperly installed seat belt assembly may not restrain an occupant as expected, increasing the risk of injury.",
+   "inspection": "Check that NHTSA recall 21V298000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "BMW will notify owners, and dealers will inspect the front seat belt buckle assembly connection and, if necessary, replace it, free of charge.  Owner notification letters were mailed on June 25, 2021.  Owners may contact BMW customer service at 1-800-525-7417.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "21V298000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2021+-recall-21V554000",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "component": "SEAT BELTS",
+   "title": "NHTSA recall 21V554000: SEAT BELTS",
+   "symptoms": [],
+   "cause": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M3 Competition, 530i, 530i xDrive, 540i, 540i xDrive, MINI Hardtop 2 Door (Cooper, CooperS, JCW), X2 sDrive28i, X2 xDrive28i, X2 M35i, Z4 sDrive30i, Z4 M40i, MINI Hardtop 2 Door (Cooper SE), MINI Convertible (Cooper, Cooper S, JCW), MINI Clubman (Cooper S, Cooper S All4, JCW), MINI Countryman (Cooper, Cooper All4, Cooper S, Cooper S All4, JCW All4), Rolls Royce Ghost, MINI Countryman (Cooper S E All4), Rolls Royce Phantom, Rolls Royce Cullinan, and Toyota Supra vehicles.  The passenger seat belt Automatic Locking Retractor (ALR) may deactivate early, before the webbing fully retracts.  As such, these assemblies fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\"",
+   "consequences": "During a crash, a seat belt retractor that does not function as intended increases the risk of injury.",
+   "inspection": "Check that NHTSA recall 21V554000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Dealers will inspect the seat belt retractors (including the seat belts) and, if necessary, replace the retractors, free of charge.   Owner notification letters were mailed on September 3, 2021.  Owners may contact BMW customer service at 1-800-525-7417; 1-866-825-1525 (MINI); 1-877-877-3735 (Rolls Royce); and 1-888-270-9371 (Toyota).",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "21V554000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-battery-drain",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "CUSTOMER MAY COMPLAIN ABOUT ENGINE NO-START CONDITION, ENGINE JERKING/BUCKING, AND REDUCED ENGINE PERFORMANCE WHEN DRIVING DUE TO ELECTRIC FUEL PUMP CONTROL MODULE. | NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or | ?AUDIO VOLUME NOT RESTORED AFTER MSA STOP, ENTRY HEAD UNIT. Volume of audio system (when set to near maximum) is reduced when Auto Start-Stop (MSA) stop occurs and is not restored upon automatic engine restart. This is normal system behavior - serves to protect the head unit, battery drain and avoidance of incremental leaps in the loudness. The loudness is reduced to 2/3 of maximum and is not restored. Note: Air conditioning output is also reduced upon MSA stop and is not restored for similar reasons.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10059007, 10143565, 10146902, 10147193 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10059007, 10143565, 10146902, 10147193",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10059007",
+     "10143565",
+     "10146902",
+     "10147193"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-dct-clutch",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Manufacturer communication: dual-clutch transmission",
+   "symptoms": [
+    "dual-clutch transmission"
+   ],
+   "cause": "DCT Transmission: Oil Leakage Diagnosis. INFORMATION Incorrect diagnosis of DCT (Double-clutch Transmission) oil leaks may lead to unnecessary part replacements and repeat customer repair visits. When diagnosing complaints related to DCT fluid leaks, please use the attached diagnostic procedure. WARRANTY INFORMATION Not applicable. ATTACHMENTS View PDF attachment B280114_DCT_Oil_Leak_Diagnosis. [ Copyright (c)2014 BMW of North America, Inc. ] https://www.bmwtis.net/tiscode/cgi-bin/bulletin.aspx?sie_path=/tsb/bulletins/htm_store/16672.2.B28011... 12/24/2014",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10149361 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10149361",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10149361"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-fuel-pump-stall",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM",
+   "title": "Manufacturer communication: fuel pump / stalling",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "CUSTOMER MAY COMPLAIN ABOUT ENGINE NO-START CONDITION, ENGINE JERKING/BUCKING, AND REDUCED ENGINE PERFORMANCE WHEN DRIVING DUE TO ELECTRIC FUEL PUMP CONTROL MODULE. | \"FC 481B05: EKP, Pump Insufficient Speed. The customer may complain about any of the following: ? Reduced engine performance when driving ? Engine jerking/bucking ? Engine no-start condition The Check Control messages \"\"Fuel pump/drive with care\"\" and \"\"Engine fault/reduced power\"\" are displayed in the CC. The fault code 481B05 (Pump speed/fuel pump control insufficient) is stored in the EKP module. CAUSE Electric fuel pump control module (EKP)\"",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10059007, 10147193 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10059007, 10147193",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10059007",
+     "10147193"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-infotainment",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "BLUETOOTH AND USB AUDIO PLAYBACK FUNCTIONS MISSING - IPHONE: Playlists, song titles, etc. from iPhone do not display on Head Unit Basic 2. | ENTRY EVO HEAD UNIT WILL NOT PLAY MP3 FORMATTED CD's: Data CDs (encoded as MP3s) can NOT be played. | NBT Head Unit High (HU-H) Resets Intermittently or Permanently",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10135998, 10136738, 10136739, 10138411, 10142940 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10135998, 10136738, 10136739, 10138411, 10142940",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10135998",
+     "10136738",
+     "10136739",
+     "10138411",
+     "10142940",
+     "10143570",
+     "10146603",
+     "10146657",
+     "10146794",
+     "10146902",
+     "10147211",
+     "10151196",
+     "10151197",
+     "10151269",
+     "10238090"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-loss-of-power",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "\"FC 481B05: EKP, Pump Insufficient Speed. The customer may complain about any of the following: ? Reduced engine performance when driving ? Engine jerking/bucking ? Engine no-start condition The Check Control messages \"\"Fuel pump/drive with care\"\" and \"\"Engine fault/reduced power\"\" are displayed in the CC. The fault code 481B05 (Pump speed/fuel pump control insufficient) is stored in the EKP module. CAUSE Electric fuel pump control module (EKP)\" | DIAGNOSTIC HINT: CATALYTIC CONVERTER INSPECTION AFTER LOSS OF CRANKSHAFT SIGNAL. In certain situations when the crankshaft position signal is lost while driving the malfunction indicator lamp (MIL) and an engine malfunction check control message (CCM #29) may be displayed. The engine may run roughly or with reduced power.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10147193, 10163995 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10147193, 10163995",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10147193",
+     "10163995"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-steering-noise",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "Service Information June 2019 General Electrical Systems B61 08 19 Technical Service WINDSHIELD WIPERS SWITCH ON BY THEMSELVES. The windshield wipers switch on by themselves and can no longer be switched off despite activation of the switch. An internal software error in the SZL (steering column switch cluster).",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10163049 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10163049",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10163049"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-suspension",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Front Suspension Ride Height Has Dropped: The front suspension ride height has dropped on one or both sides due to overload. This is caused by driving over obstacles (e.g. potholes) or an impact severe enough for the front spring strut damper to slip through the clamp of the steering knuckle. | With the vehicle is on a lift and the front struts are in the extended position, there may be a cracking and orclicking type noise when turning the steering wheel left/right. See attached video V31 01 24.  The sound can reoccur when the vehicle is lowered, and the wheels are once again under load. The noise might also be heard for a short time while driving.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10166229, 10249016 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10166229, 10249016",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10166229",
+     "10249016"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2015-2018-tsb-water-leak",
+   "generation": "US2015-2018",
+   "years": [
+    2015,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "BODY",
+   "title": "Manufacturer communication: water leak into cabin",
+   "symptoms": [
+    "water leak into cabin"
+   ],
+   "cause": "SOS MALFUNCTION DISPLAYED. An SOS malfunction is seen in the Kombi. When pressing the E-Call/SOS button in the overhead console, nothing happens. Fault code B7F33C (internal ECU error) is stored in the Telematics control unit (ATM/TCB2). There are 2 known causes for this failure. They are as follows: Software file missing from the ATM/TCB2 control module Water leak at shark-fin leading to corrosion in the ATM/TCB2 control module | SOS MALFUNCTION DISPLAYED This Service Information Bulletin (Revision 1) replaces SI B84 04 16 dated September 2016. One or all the following may be experienced in the vehicle: An SOS malfunction is seen in the Kombi (aka instrument cluster) When pressing the E-Call/SOS button in the overhead console nothing happens Fault code B7F33C (internal ECU error) is stored in the Telematics control unit (ATM/TCB2) There are 2 known causes for this failure. They are as follows: Software file missing from the ATM/TCB2 control module Water leak at the \"shark fin\" roof antenna (aka roof aerial) leading to corrosion in the ATM/TCB2 control module.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10146848, 10171504 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10146848, 10171504",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10146848",
+     "10171504"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2021+-tsb-airbag",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently. One of the following fault codes is stored in the ACSM (air bag control unit):   930949 - Knee airbag, driver: short circuit to negative terminal 93094F - Knee airbag, front passenger: short circuit to negative terminal 93094C - Knee airbag driver's side: Resistance too great 930952 - Knee airbag, front passenger: Resistance too great.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10227929 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10227929",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10227929"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2021+-tsb-infotainment",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "HU-H3 MGU RESETS DUE TO BLUETOOTH CONNECTION WITH SAMSUNG ANDROID 11 : The head unit resets when using various apps (e.g., YouTube, Spotify, etc) on the connected mobile phone.   This affects Samsung mobile phones (e.g., Galaxy S20 / S21) with the Android 11 operating system. | Central Information Display (CID) in the vehicle is black or only displays BMW. The head unit (HU-H5) is not responding in ISTA. Additionally, the Receiver Audio Module (RAM), Instrument Cluster (KOMBI) and Telematic Module 4 (TCB4) may not be responding in ISTA.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10200482, 11022856 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10200482, 11022856",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10200482",
+     "11022856"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2021+-tsb-steering-noise",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column. | REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column. | Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10186895, 10200484, 10204661, 10206690 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10186895, 10200484, 10204661, 10206690",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10186895",
+     "10200484",
+     "10204661",
+     "10206690"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m3-US2021+-tsb-suspension",
+   "generation": "US2021+",
+   "years": [
+    2021,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "With the vehicle is on a lift and the front struts are in the extended position, there may be a cracking and orclicking type noise when turning the steering wheel left/right. See attached video V31 01 24.  The sound can reoccur when the vehicle is lowered, and the wheels are once again under load. The noise might also be heard for a short time while driving.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10249016 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10249016",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10249016"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "10059007",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015
+   ],
+   "summary": "CUSTOMER MAY COMPLAIN ABOUT ENGINE NO-START CONDITION, ENGINE JERKING/BUCKING, AND REDUCED ENGINE PERFORMANCE WHEN DRIVING DUE TO ELECTRIC FUEL PUMP CONTROL MODULE. *MA",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10143565",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10146902",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "?AUDIO VOLUME NOT RESTORED AFTER MSA STOP, ENTRY HEAD UNIT. Volume of audio system (when set to near maximum) is reduced when Auto Start-Stop (MSA) stop occurs and is not restored upon automatic engine restart. This is normal system behavior - serves to protect the head unit, battery drain and avoidance of incremental leaps in the loudness. The loudness is reduced to 2/3 of maximum and is not restored. Note: Air conditioning output is also reduced upon MSA stop and is not restored for similar reasons.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10147193",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "\"FC 481B05: EKP, Pump Insufficient Speed. The customer may complain about any of the following: ? Reduced engine performance when driving ? Engine jerking/bucking ? Engine no-start condition The Check Control messages \"\"Fuel pump/drive with care\"\" and \"\"Engine fault/reduced power\"\" are displayed in the CC. The fault code 481B05 (Pump speed/fuel pump control insufficient) is stored in the EKP module. CAUSE Electric fuel pump control module (EKP)\"",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10149361",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2015
+   ],
+   "summary": "DCT Transmission: Oil Leakage Diagnosis. INFORMATION Incorrect diagnosis of DCT (Double-clutch Transmission) oil leaks may lead to unnecessary part replacements and repeat customer repair visits. When diagnosing complaints related to DCT fluid leaks, please use the attached diagnostic procedure. WARRANTY INFORMATION Not applicable. ATTACHMENTS View PDF attachment B280114_DCT_Oil_Leak_Diagnosis. [ Copyright (c)2014 BMW of North America, Inc. ] https://www.bmwtis.net/tiscode/cgi-bin/bulletin.aspx?sie_path=/tsb/bulletins/htm_store/16672.2.B28011... 12/24/2014",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10135998",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2017
+   ],
+   "summary": "BLUETOOTH AND USB AUDIO PLAYBACK FUNCTIONS MISSING - IPHONE: Playlists, song titles, etc. from iPhone do not display on Head Unit Basic 2.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10136739",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2017
+   ],
+   "summary": "ENTRY EVO HEAD UNIT WILL NOT PLAY MP3 FORMATTED CD's: Data CDs (encoded as MP3s) can NOT be played.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10136738",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "NBT Head Unit High (HU-H) Resets Intermittently or Permanently",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10138411",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2017
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10142940",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "NO AUDIO PLAYBACK AFTER REPLACING THE HEAD UNIT HIGH 2 (HU-H2): After replacing the Head Unit High (HU-H2) and performing ISTA4 programming, there is no audio playback.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10143570",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10146603",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "?NBT HEAD UNIT ABORTS IMPORT OF CD Whats New: ? G12 (7 Series) removed  ? I01 (i3) removed ? Warranty Section updated for removal of G12 and I01 . While importing a CD to the internal music collection of an NBT head unit the process aborts. You  will see 'import error' on the radio display when this occurs.  NBT Head Unit software",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10146657",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "\"LIST OF AVAILABLE FM RADIO STATIONS TEMPORARILY NOT AVAILABLE. INFORMATION As of 11/2015, all Entry-NAV/Media head units supplied in new vehicles were upgraded for improved noise characteristics and quality. As a part of this upgrade, the hardware updating the sender lists was changed from an \"update after every diversity reception interruption or maximum of four minutes\" configuration to \"regular interval updates (every four minutes) without regard to diversity reception status\" configuration. This may cause a delay of up to four minutes for updates to the sender list when leaving areas of poor reception.  The last received transmitter, before the entrance into underground car parking or a tunnel, is still received and will show station identification. This fixed interval update does not apply to Traffic Message Channel updates which remain active. This new equipment operation pattern may be noticed by the customer after replacement of their Head unit. All replacement Head units delivered since 01/2016 have the upgraded design. An immediate solution would be for the customer to select one of their stored favorite stations via the menu or favorites buttons. PARTS INFORMATION Parts exchange or a software update are not effective or approved for this situation. WARRANTY INFORMATION Not applicable.\"",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10146794",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "SI B65 09 15 November 2016 Audio, Navigation, Monitors, Alarms,SRS Technical Service NBT Head Unit High (HU-H) Resets Intermittently or Permanently. The Head Unit-High (HU-H) resets intermittently or permanently. 1. The display is inoperative and there is no audio output 2. Automatic system start-up after a couple of seconds Fault Code E1C440 set No Fault Codes set  Software error in the Head Unit High (HU-H)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10147211",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "NAV Road Map Installation Using USB Stick. INFORMATION The Navigation road map can be installed onto the head unit in the vehicle using a USB stick connected to the USB connector in the center console in the vehicle. ? 32GB USB stick is necessary ? Desired NAV road map version can be retrieved from the HDD-Update console PROCEDURE 1. Copy the desired NAV road map from the HDD-Update console onto a 32GB USB stick. Refer to Attachment. 3. When prompted, enter the 20-digit enabling code. 4. Start the NAV road map installation and follow the on-screen instructions. WARRANTY INFORMATION Not applicable. ATTACHMENTS View PDF attachment B651015_Attachment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10151197",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "NBT and Entry Head Unit Software Update for Improved Satellite Radio Reception. Poor Satellite Radio reception CAUSE After this software update there is a slight improvement in Satellite Radio reception for these vehicles when receiving their signal from XM Satellites. This is due to the changeover from Sirius Satellite broadcasting to XM Satellite broadcasting in 2016 (See SI B65 19 15).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10151196",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "NBT Head Unit Aborts Import of CD. While importing a CD to the internal music collection of an NBT head unit the process aborts. You will see 'import error' on the radio display when this occurs. NBT Head Unit software",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10151269",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "Instrument Cluster Resets during Active Navigation. The instrument cluster (MID KOMBI) fails sporadically (all gauges falling briefly to zero, flashing of all indicator lights) and resets. Reset occurs during active route guidance and predictably when passing certain geographical positions. Software error in navigation head unit",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10238090",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "After programming the head unit (HU-H2), activating the FSC (German word Freischaltcode) Enabling Codes repeatedly fails.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10163995",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "DIAGNOSTIC HINT: CATALYTIC CONVERTER INSPECTION AFTER LOSS OF CRANKSHAFT SIGNAL. In certain situations when the crankshaft position signal is lost while driving the malfunction indicator lamp (MIL) and an engine malfunction check control message (CCM #29) may be displayed. The engine may run roughly or with reduced power.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10163049",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "Service Information June 2019 General Electrical Systems B61 08 19 Technical Service WINDSHIELD WIPERS SWITCH ON BY THEMSELVES. The windshield wipers switch on by themselves and can no longer be switched off despite activation of the switch. An internal software error in the SZL (steering column switch cluster).",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10166229",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "Front Suspension Ride Height Has Dropped: The front suspension ride height has dropped on one or both sides due to overload. This is caused by driving over obstacles (e.g. potholes) or an impact severe enough for the front spring strut damper to slip through the clamp of the steering knuckle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10249016",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "With the vehicle is on a lift and the front struts are in the extended position, there may be a cracking and orclicking type noise when turning the steering wheel left/right. See attached video V31 01 24.  The sound can reoccur when the vehicle is lowered, and the wheels are once again under load. The noise might also be heard for a short time while driving.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10146848",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "SOS MALFUNCTION DISPLAYED. An SOS malfunction is seen in the Kombi. When pressing the E-Call/SOS button in the overhead console, nothing happens. Fault code B7F33C (internal ECU error) is stored in the Telematics control unit (ATM/TCB2). There are 2 known causes for this failure. They are as follows: Software file missing from the ATM/TCB2 control module Water leak at shark-fin leading to corrosion in the ATM/TCB2 control module",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10171504",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "SOS MALFUNCTION DISPLAYED This Service Information Bulletin (Revision 1) replaces SI B84 04 16 dated September 2016. One or all the following may be experienced in the vehicle: An SOS malfunction is seen in the Kombi (aka instrument cluster) When pressing the E-Call/SOS button in the overhead console nothing happens Fault code B7F33C (internal ECU error) is stored in the Telematics control unit (ATM/TCB2) There are 2 known causes for this failure. They are as follows: Software file missing from the ATM/TCB2 control module Water leak at the \"shark fin\" roof antenna (aka roof aerial) leading to corrosion in the ATM/TCB2 control module.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10227929",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021,
+    2022
+   ],
+   "summary": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently. One of the following fault codes is stored in the ACSM (air bag control unit):   930949 - Knee airbag, driver: short circuit to negative terminal 93094F - Knee airbag, front passenger: short circuit to negative terminal 93094C - Knee airbag driver's side: Resistance too great 930952 - Knee airbag, front passenger: Resistance too great.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10200482",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021
+   ],
+   "summary": "HU-H3 MGU RESETS DUE TO BLUETOOTH CONNECTION WITH SAMSUNG ANDROID 11 : The head unit resets when using various apps (e.g., YouTube, Spotify, etc) on the connected mobile phone.   This affects Samsung mobile phones (e.g., Galaxy S20 / S21) with the Android 11 operating system.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "11022856",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2025
+   ],
+   "summary": "Central Information Display (CID) in the vehicle is black or only displays BMW. The head unit (HU-H5) is not responding in ISTA. Additionally, the Receiver Audio Module (RAM), Instrument Cluster (KOMBI) and Telematic Module 4 (TCB4) may not be responding in ISTA.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "10186895",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10200484",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021
+   ],
+   "summary": "REMOTE CONTROL IS NOT DETECTED: Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10204661",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021
+   ],
+   "summary": "Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle maynot start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10206690",
+   "make": "BMW",
+   "model": "M3",
+   "years": [
+    2021
+   ],
+   "summary": "Vehicle cannot be opened or closed using comfort access, engine start is not possible, and the vehicle may not start when placing the key against the steering column.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "bmw-m3-us-2015-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2015-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2016-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2016-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2017-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2017-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2018-3.0l-6cyl-turbo-ice-a-am-s7-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2018-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2021-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2021-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2022-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2023-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2024-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2025-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-a-s8-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-m3-us-2026-3.0l-6cyl-turbo-ice-m-6-spd-rwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [
+  "MY2019-2020: no EPA rows, but vPIC lists the line; not a generation boundary"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 2,
+  "configurations": 25,
+  "facts": 24,
+  "recalls": 7,
+  "symptom_patterns": 5,
+  "issues": 19,
+  "issues_by_probability": {
+   "RARE": 7,
+   "OCCASIONAL": 12
+  },
+  "tsbs": 32,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 24
+  }
+ }
+}

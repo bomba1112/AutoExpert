@@ -1,0 +1,3418 @@
+{
+ "make": "BMW",
+ "line": "X5 M",
+ "line_key": "bmw/x5-m",
+ "db_models": [
+  "X5 M"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-bmw-2017": {
+   "key": "vpic-ca-bmw-2017",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2017.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2017&make=BMW&model=&units=Metric&format=json",
+   "sha256": "1efa5ad2198e8446334fed7fb824c1b5004cf775b433d3cb500dfcf21f501d0d",
+   "retrieved_at": "2026-10-02T08:30:36+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2017 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "vpic-ca-bmw-2018": {
+   "key": "vpic-ca-bmw-2018",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2018.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2018&make=BMW&model=&units=Metric&format=json",
+   "sha256": "8c3fa382fe0a51d8be4d4de2900f93170b861bc9120071752c1daee13d920992",
+   "retrieved_at": "2026-10-02T08:30:43+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2018 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "vpic-ca-bmw-2019": {
+   "key": "vpic-ca-bmw-2019",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2019.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2019&make=BMW&model=&units=Metric&format=json",
+   "sha256": "4bed38270826c0563ac5e822533e4e65627e7265916e43f59e8ed175b44dae4f",
+   "retrieved_at": "2026-10-02T08:30:47+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2019 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "vpic-ca-bmw-2020": {
+   "key": "vpic-ca-bmw-2020",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2020.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2020&make=BMW&model=&units=Metric&format=json",
+   "sha256": "bf2ced866853782b6ac93136571e6cc88057a4d3adf32c65a92b2db1c4c7a51a",
+   "retrieved_at": "2026-10-02T08:30:52+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2020 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "vpic-ca-bmw-2021": {
+   "key": "vpic-ca-bmw-2021",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2021.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2021&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f11433424cac2da5a108faeb69bd78cacd6b134ecb21e53381d66fd2d35b2f28",
+   "retrieved_at": "2026-10-02T08:30:58+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2021 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "vpic-ca-bmw-2022": {
+   "key": "vpic-ca-bmw-2022",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2022.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2022&make=BMW&model=&units=Metric&format=json",
+   "sha256": "df7693783c80e5c470bfe7736b6dc736b495dbefdb077f42c51cd20a8057fbcb",
+   "retrieved_at": "2026-10-02T08:31:03+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2022 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "vpic-ca-bmw-2023": {
+   "key": "vpic-ca-bmw-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=BMW&model=&units=Metric&format=json",
+   "sha256": "7a6ce71bb2a0a8d7af783fb3a9b164637269ed94485746e66c73510eeaffb0ce",
+   "retrieved_at": "2026-10-02T08:31:08+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-bmw-2024": {
+   "key": "vpic-ca-bmw-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
+   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
+   "retrieved_at": "2026-10-02T08:31:13+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-bmw-2025": {
+   "key": "vpic-ca-bmw-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=BMW&model=&units=Metric&format=json",
+   "sha256": "2e185ac4936f63e8a14df8d4dd915357537b234c52521ae3f66e3ce0bbb9b726",
+   "retrieved_at": "2026-10-02T08:31:19+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "vpic-ca-bmw-2026": {
+   "key": "vpic-ca-bmw-2026",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/bmw/2026.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2026&make=BMW&model=&units=Metric&format=json",
+   "sha256": "c6a01d7b312f51e147bd371cdfd9f341894ce35f6e009d57485e21806e1d845b",
+   "retrieved_at": "2026-10-02T08:31:25+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications BMW 2026 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-recalls-x5-m-2017": {
+   "key": "nhtsa-recalls-x5-m-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:26:26+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-x5-m-2020": {
+   "key": "nhtsa-recalls-x5-m-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2020",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:28:34+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-x5-m-2021": {
+   "key": "nhtsa-recalls-x5-m-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:29:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-x5-m-2022": {
+   "key": "nhtsa-recalls-x5-m-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:30:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-x5-m-2023": {
+   "key": "nhtsa-recalls-x5-m-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:31:11+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-x5-m-2024": {
+   "key": "nhtsa-recalls-x5-m-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:31:50+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-x5-m-ice-2026": {
+   "key": "nhtsa-recalls-x5-m-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/x5-m-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=X5+M+ICE&modelYear=2026",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:32:49+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls X5 M ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-complaints-x5-m-2017": {
+   "key": "nhtsa-complaints-x5-m-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2017",
+   "sha256": "1fb936a11d7731d7542e8b81aa1f88fd89409693707821f0e5e50f2ff74680c9",
+   "retrieved_at": "2026-10-02T09:26:48+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-x5-m-2020": {
+   "key": "nhtsa-complaints-x5-m-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2020",
+   "sha256": "f8c709472756d1947e8beeabf51dcf49c37fd6203206ea6ee3a05c89720a6ea2",
+   "retrieved_at": "2026-10-02T09:28:55+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-x5-m-2021": {
+   "key": "nhtsa-complaints-x5-m-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2021",
+   "sha256": "198a713de4a9579787ca1d7180352a881da2ea10aa6bc505c7b5adbcd336646f",
+   "retrieved_at": "2026-10-02T09:29:49+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-x5-m-2022": {
+   "key": "nhtsa-complaints-x5-m-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2022",
+   "sha256": "c435c0cf0ad71c0d0c73bc429328833a22000ef9178ad4c85dc3f05bd9b3776c",
+   "retrieved_at": "2026-10-02T09:30:44+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-x5-m-2023": {
+   "key": "nhtsa-complaints-x5-m-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2023",
+   "sha256": "444b8a4f7e3f1b57cb9114b6477e79105b8162f24ceb2f14e81ec406e6deddbb",
+   "retrieved_at": "2026-10-02T09:31:31+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-x5-m-2024": {
+   "key": "nhtsa-complaints-x5-m-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M&modelYear=2024",
+   "sha256": "de38a03a4c6b09b9b1286be7a3c7b561a1b913fcdd084e1ba6a8d2de573a6a09",
+   "retrieved_at": "2026-10-02T09:32:06+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-x5-m-ice-2026": {
+   "key": "nhtsa-complaints-x5-m-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/x5-m-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=X5+M+ICE&modelYear=2026",
+   "sha256": "b9c18c08df230af37cea201f8b08ad0fcc3c9e1fde0202d47424c1619d5b87b5",
+   "retrieved_at": "2026-10-02T09:33:00+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints X5 M ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "US2015+",
+   "name": "X5 M (US, through 2026)",
+   "db_model": "X5 M",
+   "existing_id": null,
+   "start_year": 2015,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "first US model year of the line in EPA vehicles.csv: 2015"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "bmw-x5-m-us-2015-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2015,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36038",
+     "epa_model": "X5 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2016-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2016,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36774",
+     "epa_model": "X5 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2017-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2017,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37998",
+     "epa_model": "X5 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2018-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2018,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39479",
+     "epa_model": "X5 M",
+     "city_mpg": 14,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2020-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2020,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42443",
+     "epa_model": "X5 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "42444",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2021-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2021,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42864",
+     "epa_model": "X5 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "42865",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2022-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2022,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44326",
+     "epa_model": "X5 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "44327",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2023-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "year": 2023,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45574",
+     "epa_model": "X5 M",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    },
+    {
+     "epa_id": "45575",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2024-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2024,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46547",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2025-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2025,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47745",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "bmw-x5-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "year": 2026,
+   "generation": "US2015+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "HEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (S8)",
+   "displacement_l": "4.4",
+   "cylinders": 8,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "49566",
+     "epa_model": "X5 M Competition",
+     "city_mpg": 13,
+     "highway_mpg": 18,
+     "combined_mpg": 15,
+     "combined_l_100km": "15.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI; Mild Hybrid",
+     "ev_motor": "44V Li-Ion",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-curb_weight_kg-2017",
+   "generation": "US2015+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 2350,
+   "unit": "kg",
+   "original": "CW = 2350 (kg, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-height_mm-2017",
+   "generation": "US2015+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1750,
+   "unit": "mm",
+   "original": "OH = 175 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OH",
+     "raw_value": "175",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-length_mm-2017",
+   "generation": "US2015+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 4880,
+   "unit": "mm",
+   "original": "OL = 488 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-track_front_mm-2017",
+   "generation": "US2015+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1670,
+   "unit": "mm",
+   "original": "TWF = 167 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWF",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-track_rear_mm-2017",
+   "generation": "US2015+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1670,
+   "unit": "mm",
+   "original": "TWR = 167 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "TWR",
+     "raw_value": "167",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-weight_distribution_front_rear_pct-2017",
+   "generation": "US2015+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": "50/50",
+   "unit": "%",
+   "original": "WD = 50/50 (front/rear %, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WD",
+     "raw_value": "50/50",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-wheelbase_mm-2017",
+   "generation": "US2015+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 2930,
+   "unit": "mm",
+   "original": "WB = 293 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "WB",
+     "raw_value": "293",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  },
+  {
+   "id": "x5-m-US2015+-vpic-x5m-4dr-suv-width_mm-2017",
+   "generation": "US2015+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1980,
+   "unit": "mm",
+   "original": "OW = 198 (cm, Canadian specification row 'X5M 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "X5M 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2017",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2018",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2019",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2020",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2021",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2022",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2023",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2024",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "X5M 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2017"
+  }
+ ],
+ "recalls": [],
+ "complaint_patterns": [
+  {
+   "generation": "US2015+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 78,
+   "by_year": {
+    "2017": 17,
+    "2020": 1,
+    "2021": 38,
+    "2022": 15,
+    "2024": 2,
+    "2026": 5
+   },
+   "sample_odi": [
+    11712937,
+    11676851,
+    11676273,
+    11664779,
+    11622638,
+    11615165,
+    11609769,
+    11531823,
+    11493786,
+    11457200,
+    11435736,
+    11420147,
+    11192951,
+    11194551,
+    11192376,
+    11078337,
+    11043164,
+    11764210,
+    11766408,
+    11765823,
+    11763905,
+    11762762,
+    11762076,
+    11759048,
+    11755801
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "POWER TRAIN",
+   "count": 68,
+   "by_year": {
+    "2017": 10,
+    "2020": 1,
+    "2021": 29,
+    "2022": 24,
+    "2023": 1,
+    "2024": 1,
+    "2026": 2
+   },
+   "sample_odi": [
+    11766594,
+    11621639,
+    11549625,
+    11531150,
+    11457200,
+    11310424,
+    11192376,
+    11153627,
+    11075351,
+    11004191,
+    11759094,
+    11767455,
+    11766408,
+    11765823,
+    11758372,
+    11756576,
+    11749496,
+    11738996,
+    11738107,
+    11734778,
+    11705036,
+    11701920,
+    11698378,
+    11692077,
+    11690421
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "ENGINE",
+   "count": 59,
+   "by_year": {
+    "2017": 12,
+    "2020": 5,
+    "2021": 25,
+    "2022": 12,
+    "2023": 2,
+    "2026": 3
+   },
+   "sample_odi": [
+    11692092,
+    11676851,
+    11659218,
+    11622638,
+    11549625,
+    11531823,
+    11473146,
+    11375091,
+    11243233,
+    11197046,
+    11078337,
+    11004191,
+    11764210,
+    11763718,
+    11763291,
+    11759850,
+    11759405,
+    11766408,
+    11759048,
+    11756576,
+    11746875,
+    11738795,
+    11738107,
+    11734883,
+    11728431
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 48,
+   "by_year": {
+    "2017": 7,
+    "2020": 1,
+    "2021": 18,
+    "2022": 17,
+    "2024": 2,
+    "2026": 3
+   },
+   "sample_odi": [
+    11655379,
+    11457200,
+    11451168,
+    11419432,
+    11338011,
+    11308108,
+    11043164,
+    11758762,
+    11767455,
+    11753036,
+    11703190,
+    11693718,
+    11667027,
+    11636035,
+    11609974,
+    11596219,
+    11551012,
+    11547734,
+    11545761,
+    11493401,
+    11464092,
+    11456014,
+    11435970,
+    11434671,
+    11427137
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "SERVICE BRAKES",
+   "count": 24,
+   "by_year": {
+    "2017": 7,
+    "2021": 6,
+    "2022": 6,
+    "2024": 3,
+    "2026": 2
+   },
+   "sample_odi": [
+    11712937,
+    11650892,
+    11576438,
+    11452218,
+    11435736,
+    11043164,
+    11010463,
+    11758372,
+    11674398,
+    11545761,
+    11480688,
+    11423701,
+    11422175,
+    11728841,
+    11611734,
+    11582823,
+    11501382,
+    11495003,
+    11467199,
+    11758732,
+    11655269,
+    11600101,
+    11758406,
+    11756626
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 22,
+   "by_year": {
+    "2017": 15,
+    "2021": 3,
+    "2022": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11676851,
+    11655567,
+    11559361,
+    11549625,
+    11531823,
+    11523226,
+    11483526,
+    11469223,
+    11444604,
+    11429454,
+    11375091,
+    11277714,
+    11221686,
+    11170627,
+    11153627,
+    11604703,
+    11414335,
+    11407871,
+    11755843,
+    11729200,
+    11716132,
+    11757606
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 17,
+   "by_year": {
+    "2017": 1,
+    "2021": 5,
+    "2022": 9,
+    "2026": 2
+   },
+   "sample_odi": [
+    11104540,
+    11758372,
+    11674398,
+    11561951,
+    11514660,
+    11493401,
+    11742057,
+    11728841,
+    11582823,
+    11561575,
+    11538183,
+    11535441,
+    11514189,
+    11501382,
+    11444453,
+    11763588,
+    11756589
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "BACK OVER PREVENTION",
+   "count": 16,
+   "by_year": {
+    "2021": 9,
+    "2022": 4,
+    "2026": 3
+   },
+   "sample_odi": [
+    11762076,
+    11603532,
+    11590006,
+    11568493,
+    11561951,
+    11493401,
+    11476224,
+    11434135,
+    11433205,
+    11742057,
+    11604532,
+    11514189,
+    11510245,
+    11767809,
+    11756589,
+    11709535
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 16,
+   "by_year": {
+    "2017": 1,
+    "2021": 4,
+    "2022": 7,
+    "2024": 1,
+    "2026": 3
+   },
+   "sample_odi": [
+    11194551,
+    11698378,
+    11674398,
+    11546846,
+    11449735,
+    11763265,
+    11746659,
+    11644331,
+    11561575,
+    11514189,
+    11507546,
+    11467199,
+    11655269,
+    11767809,
+    11761698,
+    11754180
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "ENGINE AND ENGINE COOLING",
+   "count": 15,
+   "by_year": {
+    "2017": 4,
+    "2020": 1,
+    "2021": 7,
+    "2022": 3
+   },
+   "sample_odi": [
+    11676273,
+    11639684,
+    11615165,
+    11609769,
+    11764757,
+    11759048,
+    11728317,
+    11714543,
+    11695040,
+    11693874,
+    11641690,
+    11634565,
+    11704563,
+    11629090,
+    11611238
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "AIR BAGS",
+   "count": 13,
+   "by_year": {
+    "2017": 5,
+    "2021": 7,
+    "2022": 1
+   },
+   "sample_odi": [
+    11576438,
+    11558307,
+    11501203,
+    11192376,
+    10945481,
+    11736074,
+    11688338,
+    11551979,
+    11519913,
+    11517231,
+    11448346,
+    11429666,
+    11561575
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "STEERING",
+   "count": 12,
+   "by_year": {
+    "2017": 3,
+    "2020": 1,
+    "2021": 3,
+    "2022": 5
+   },
+   "sample_odi": [
+    11559361,
+    11435736,
+    11078337,
+    11764210,
+    11749496,
+    11689259,
+    11671793,
+    11758988,
+    11749966,
+    11563179,
+    11508613,
+    11495003
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "STRUCTURE",
+   "count": 12,
+   "by_year": {
+    "2017": 5,
+    "2021": 4,
+    "2022": 1,
+    "2026": 2
+   },
+   "sample_odi": [
+    11451168,
+    11449841,
+    11420147,
+    11064408,
+    10945481,
+    11517231,
+    11480688,
+    11429142,
+    11413936,
+    11581138,
+    11762046,
+    11752936
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "SEAT BELTS",
+   "count": 10,
+   "by_year": {
+    "2017": 5,
+    "2021": 3,
+    "2022": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11576438,
+    11559361,
+    11501203,
+    11468680,
+    11019027,
+    11688338,
+    11553579,
+    11386420,
+    11695356,
+    11752936
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "SUSPENSION",
+   "count": 10,
+   "by_year": {
+    "2017": 4,
+    "2020": 1,
+    "2021": 2,
+    "2022": 3
+   },
+   "sample_odi": [
+    11501220,
+    11483526,
+    11329377,
+    11140891,
+    11767305,
+    11756576,
+    11704139,
+    11757920,
+    11563179,
+    11457409
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2015+",
+   "component": "LANE DEPARTURE",
+   "count": 7,
+   "by_year": {
+    "2017": 1,
+    "2021": 3,
+    "2022": 3
+   },
+   "sample_odi": [
+    11483526,
+    11734778,
+    11451675,
+    11451300,
+    11742057,
+    11696957,
+    11444453
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "DIESEL",
+   "count": 5,
+   "by_year": {
+    "2017": 5
+   },
+   "sample_odi": [
+    11477562,
+    11448997,
+    11448103,
+    11443277,
+    11434549
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "FUEL SYSTEM",
+   "count": 5,
+   "by_year": {
+    "2017": 5
+   },
+   "sample_odi": [
+    11477562,
+    11448997,
+    11448103,
+    11443277,
+    11434549
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "TIRES",
+   "count": 5,
+   "by_year": {
+    "2017": 3,
+    "2022": 2
+   },
+   "sample_odi": [
+    11508666,
+    11360485,
+    11267136,
+    11726969,
+    11488537
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "SEATS",
+   "count": 4,
+   "by_year": {
+    "2017": 3,
+    "2021": 1
+   },
+   "sample_odi": [
+    11451168,
+    11206263,
+    11019027,
+    11688338
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "VISIBILITY/WIPER",
+   "count": 3,
+   "by_year": {
+    "2021": 2,
+    "2022": 1
+   },
+   "sample_odi": [
+    11656386,
+    11451567,
+    11706187
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "HYDRAULIC",
+   "count": 2,
+   "by_year": {
+    "2017": 1,
+    "2021": 1
+   },
+   "sample_odi": [
+    11650892,
+    11422175
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "VISIBILITY",
+   "count": 2,
+   "by_year": {
+    "2017": 1,
+    "2021": 1
+   },
+   "sample_odi": [
+    11565842,
+    11740008
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "WHEELS",
+   "count": 2,
+   "by_year": {
+    "2022": 2
+   },
+   "sample_odi": [
+    11706977,
+    11563179
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "CHILD SEAT",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11709867
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "EXTERIOR LIGHTING",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11436201
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "Lower Anchor (on car seat or vehicle)",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11436381
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "PARKING BRAKE",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11075351
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2015+",
+   "component": "Tether",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11436381
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "US2015+|parking-brake": {
+   "key": "US2015+|parking-brake",
+   "label": "electronic parking brake",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11712937
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|overheating": {
+   "key": "US2015+|overheating",
+   "label": "overheating",
+   "count": 13,
+   "by_year": {
+    "2017": 6,
+    "2021": 4,
+    "2022": 3
+   },
+   "sample_odi": [
+    11676273,
+    11664779,
+    11655379,
+    11622638,
+    11615165,
+    11609769,
+    11766408,
+    11765823,
+    11738795,
+    11689062,
+    11729200,
+    11721325,
+    11644331
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|fuel-pump-stall": {
+   "key": "US2015+|fuel-pump-stall",
+   "label": "fuel pump / stalling",
+   "count": 13,
+   "by_year": {
+    "2017": 10,
+    "2021": 1,
+    "2022": 2
+   },
+   "sample_odi": [
+    11655567,
+    11639684,
+    11559361,
+    11477562,
+    11444604,
+    11443277,
+    11429454,
+    11277714,
+    11170627,
+    11153627,
+    11435970,
+    11749966,
+    11716132
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|loss-of-power": {
+   "key": "US2015+|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 16,
+   "by_year": {
+    "2017": 6,
+    "2020": 1,
+    "2021": 6,
+    "2022": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11655567,
+    11444604,
+    11277714,
+    11170627,
+    11078337,
+    11043164,
+    11759850,
+    11689062,
+    11551012,
+    11531024,
+    11445005,
+    11423701,
+    11414335,
+    11676845,
+    11631211,
+    11763444
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|engine-failure": {
+   "key": "US2015+|engine-failure",
+   "label": "engine failure / knocking / seizure",
+   "count": 8,
+   "by_year": {
+    "2017": 2,
+    "2020": 2,
+    "2021": 2,
+    "2022": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11639684,
+    11197046,
+    11759850,
+    11759405,
+    11728431,
+    11689062,
+    11758988,
+    11766793
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|coolant-leak": {
+   "key": "US2015+|coolant-leak",
+   "label": "water pump / coolant leak",
+   "count": 18,
+   "by_year": {
+    "2017": 4,
+    "2021": 9,
+    "2022": 4,
+    "2023": 1
+   },
+   "sample_odi": [
+    11622638,
+    11621639,
+    11615165,
+    11609769,
+    11734883,
+    11704139,
+    11693874,
+    11690421,
+    11689062,
+    11667027,
+    11641690,
+    11634565,
+    11609974,
+    11707720,
+    11704563,
+    11644331,
+    11611238,
+    11756061
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|fuel-leak": {
+   "key": "US2015+|fuel-leak",
+   "label": "fuel leak / fuel odor",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11469223
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|water-leak": {
+   "key": "US2015+|water-leak",
+   "label": "water leak into cabin",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11451168
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|seat-belt": {
+   "key": "US2015+|seat-belt",
+   "label": "seat belt",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11436381
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|brake-failure": {
+   "key": "US2015+|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 4,
+   "by_year": {
+    "2017": 2,
+    "2021": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11435736,
+    11010463,
+    11423701,
+    11756626
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|steering-loss": {
+   "key": "US2015+|steering-loss",
+   "label": "power steering loss",
+   "count": 5,
+   "by_year": {
+    "2017": 2,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11435736,
+    11043164,
+    11767305,
+    11689062,
+    11631211
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2017"
+  },
+  "US2015+|suspension": {
+   "key": "US2015+|suspension",
+   "label": "suspension wear (struts, arms, springs)",
+   "count": 2,
+   "by_year": {
+    "2020": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11767305,
+    11563179
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2020"
+  },
+  "US2015+|engine-fire": {
+   "key": "US2015+|engine-fire",
+   "label": "engine compartment fire",
+   "count": 5,
+   "by_year": {
+    "2021": 4,
+    "2026": 1
+   },
+   "sample_odi": [
+    11766408,
+    11765823,
+    11689062,
+    11418033,
+    11766793
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|battery-drain": {
+   "key": "US2015+|battery-drain",
+   "label": "battery drain / no start",
+   "count": 6,
+   "by_year": {
+    "2021": 5,
+    "2026": 1
+   },
+   "sample_odi": [
+    11766408,
+    11765823,
+    11712989,
+    11705036,
+    11624148,
+    11756521
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|hybrid-system": {
+   "key": "US2015+|hybrid-system",
+   "label": "hybrid / high-voltage system",
+   "count": 4,
+   "by_year": {
+    "2021": 1,
+    "2022": 3
+   },
+   "sample_odi": [
+    11762762,
+    11755843,
+    11729200,
+    11716132
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|infotainment": {
+   "key": "US2015+|infotainment",
+   "label": "infotainment / display",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11762076
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|steering-noise": {
+   "key": "US2015+|steering-noise",
+   "label": "steering column / coupler noise",
+   "count": 2,
+   "by_year": {
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11749496,
+    11563179
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|airbag": {
+   "key": "US2015+|airbag",
+   "label": "air bag warning / occupant classification",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11736074
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|brake-assist": {
+   "key": "US2015+|brake-assist",
+   "label": "brake vacuum pump / assist loss",
+   "count": 1,
+   "by_year": {
+    "2021": 1
+   },
+   "sample_odi": [
+    11728431
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|torque-converter": {
+   "key": "US2015+|torque-converter",
+   "label": "torque converter shudder",
+   "count": 10,
+   "by_year": {
+    "2021": 1,
+    "2022": 7,
+    "2023": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11689259,
+    11763265,
+    11757920,
+    11756717,
+    11755151,
+    11746659,
+    11697310,
+    11645644,
+    11767547,
+    11758406
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|false-braking": {
+   "key": "US2015+|false-braking",
+   "label": "pre-collision false braking",
+   "count": 4,
+   "by_year": {
+    "2021": 1,
+    "2022": 2,
+    "2026": 1
+   },
+   "sample_odi": [
+    11674398,
+    11728841,
+    11514189,
+    11756589
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2021"
+  },
+  "US2015+|hesitation": {
+   "key": "US2015+|hesitation",
+   "label": "hesitation / delayed acceleration",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11765962
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2022"
+  },
+  "US2015+|air-conditioning": {
+   "key": "US2015+|air-conditioning",
+   "label": "air conditioning",
+   "count": 2,
+   "by_year": {
+    "2022": 2
+   },
+   "sample_odi": [
+    11729200,
+    11659962
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-x5-m-2022"
+  }
+ },
+ "issues": [
+  {
+   "id": "x5-m-US2015+-tsb-airbag",
+   "generation": "US2015+",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10214266 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10214266",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10214266"
+    ],
+    "complaint_patterns": [
+     "US2015+|airbag"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x5-m-US2015+-tsb-battery-drain",
+   "generation": "US2015+",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or | ENGINE DOES NOT START BELOW FREEZING TEMPERATURES: Engine designation correction Parts availability Warranty. The engine will not start at temperatures below freezing. The starter does not turn and engage.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10143565, 10170572 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10143565, 10170572",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10143565",
+     "10170572"
+    ],
+    "complaint_patterns": [
+     "US2015+|battery-drain"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x5-m-US2015+-tsb-fuel-pump-stall",
+   "generation": "US2015+",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM",
+   "title": "Manufacturer communication: fuel pump / stalling",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "REMOVING FUEL FEED LINE FOR PARKED CAR HEATING FROM REPLACEMENT FUEL PUMP: Modify the universal replacement fuel pump assembly to allow it to be correctly installed in a US market vehicle.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10135029 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10135029",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10135029"
+    ],
+    "complaint_patterns": [
+     "US2015+|fuel-pump-stall"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x5-m-US2015+-tsb-infotainment",
+   "generation": "US2015+",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing. 'Component Protection Active': If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN. | BLUETOOTH AND USB AUDIO PLAYBACK FUNCTIONS MISSING - IPHONE: Playlists, song titles, etc. from iPhone do not display on Head Unit Basic 2. | ENTRY EVO HEAD UNIT WILL NOT PLAY MP3 FORMATTED CD's: Data CDs (encoded as MP3s) can NOT be played.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10135992, 10135998, 10136739, 10138404, 10138411 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10135992, 10135998, 10136739, 10138404, 10138411",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10135992",
+     "10135998",
+     "10136739",
+     "10138404",
+     "10138411",
+     "10142940",
+     "10142941",
+     "10143570",
+     "10145316"
+    ],
+    "complaint_patterns": [
+     "US2015+|infotainment"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x5-m-US2015+-tsb-steering-noise",
+   "generation": "US2015+",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "NOISE WHEN ADJUSTING THE STEERING COLUMN UP OR DOWN: Creaking noise when raising or lowering the steering column position. CAUSE Steering column adjustment.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10170575 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10170575",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10170575"
+    ],
+    "complaint_patterns": [
+     "US2015+|steering-noise"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "x5-m-US2015+-complaints-coolant-leak",
+   "generation": "US2015+",
+   "years": [
+    2017,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "COOLING",
+   "title": "Owners report: water pump / coolant leak",
+   "symptoms": [
+    "water pump / coolant leak"
+   ],
+   "cause": "18 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    18
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "US2015+|coolant-leak"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "x5-m-US2015+-complaints-loss-of-power",
+   "generation": "US2015+",
+   "years": [
+    2017,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Owners report: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "16 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    16
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "US2015+|loss-of-power"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "x5-m-US2015+-complaints-overheating",
+   "generation": "US2015+",
+   "years": [
+    2017,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "COOLING",
+   "title": "Owners report: overheating",
+   "symptoms": [
+    "overheating"
+   ],
+   "cause": "13 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    13
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "US2015+|overheating"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "x5-m-US2015+-complaints-torque-converter",
+   "generation": "US2015+",
+   "years": [
+    2021,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Owners report: torque converter shudder",
+   "symptoms": [
+    "torque converter shudder"
+   ],
+   "cause": "10 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    10
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "US2015+|torque-converter"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "10214266",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "A check control message for the restraint system appears. In the instrument cluster, the red air bag warning light lights up permanently.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10143565",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NAVIGATION PRO (NBT EVO) MAP UPDATE NOT POSSIBLE, NAVIGATION DOES NOT START: Navigation system will not start at all or the: Navigation system starts message is permanently displayed; or",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10170572",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "ENGINE DOES NOT START BELOW FREEZING TEMPERATURES: Engine designation correction Parts availability Warranty. The engine will not start at temperatures below freezing. The starter does not turn and engage.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10135029",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "REMOVING FUEL FEED LINE FOR PARKED CAR HEATING FROM REPLACEMENT FUEL PUMP: Modify the universal replacement fuel pump assembly to allow it to be correctly installed in a US market vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10135992",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing. 'Component Protection Active': If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10135998",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "BLUETOOTH AND USB AUDIO PLAYBACK FUNCTIONS MISSING - IPHONE: Playlists, song titles, etc. from iPhone do not display on Head Unit Basic 2.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10136739",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "ENTRY EVO HEAD UNIT WILL NOT PLAY MP3 FORMATTED CD's: Data CDs (encoded as MP3s) can NOT be played.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10138411",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10138404",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO Head Unit Cannot be Swapped between Vehicles for Testing: If either the NBT-EVO head unit or Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit NBT-EVO to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10142941",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NBT-EVO (NEXT GENERATION NAVIGATION PROFESSIONAL) HEAD UNIT CANNOT BE SWAPPED BETWEEN VEHICLES FOR TESTING. COMPONENT PROTECTION ACTIVE",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10142940",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NO AUDIO PLAYBACK AFTER REPLACING THE HEAD UNIT HIGH 2 (HU-H2): After replacing the Head Unit High (HU-H2) and performing ISTA4 programming, there is no audio playback.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10143570",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "HEAD UNIT HIGH 2 RESET WHILE BLUETOOTH IS CONNECTED: The following event may cause an unexpected reset of the Head Unit High 2 (NBT EVO) when:",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10145316",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "COMPONENT PROTECTION ACTIVE. HEAD UNITS CANNOT BE SWAPPED BETWEEN VEHICLES FOR TESTING.: If either the head unit (NBT-EVO or ENTRY-NAV-EVO) or the Body Domain Controller (BDC) are swapped into a different vehicle they will cause the head unit to enter a locked mode once it recognizes a different VIN.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10170575",
+   "make": "BMW",
+   "model": "X5 M",
+   "years": [
+    2018
+   ],
+   "summary": "NOISE WHEN ADJUSTING THE STEERING COLUMN UP OR DOWN: Creaking noise when raising or lowering the steering column position. CAUSE Steering column adjustment.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "bmw-x5-m-us-2015-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2016-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2017-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2018-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2020-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2021-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2022-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2023-4.4l-8cyl-turbo-ice-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2024-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2025-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw-x5-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [
+  "MY2017: no vPIC body family spans MY2016 and MY2017; compared across all rows",
+  "MY2019-2019: no EPA rows, but vPIC lists the line; not a generation boundary"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 1,
+  "configurations": 11,
+  "facts": 8,
+  "recalls": 0,
+  "symptom_patterns": 23,
+  "issues": 9,
+  "issues_by_probability": {
+   "OCCASIONAL": 9
+  },
+  "tsbs": 14,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 8
+  }
+ }
+}
