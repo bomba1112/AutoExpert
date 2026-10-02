@@ -25,7 +25,18 @@
  "edition_market": "US",
  "status": "ok",
  "engine_codes": [],
- "review": [],
+ "review": [
+  {
+   "page": 5,
+   "row": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395",
+   "reason": "several values on one line without labels: '3,572'"
+  },
+  {
+   "page": 5,
+   "row": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395",
+   "reason": "several values on one line without labels: '3,549'"
+  }
+ ],
  "facts": [
   {
    "key": "engine_description",
@@ -289,33 +300,6 @@
    "row": "Suspension - Front"
   },
   {
-   "key": "rear_suspension",
-   "value": "Multi-link rear suspension with stabilizer bar",
-   "page": 2,
-   "quote": "- Rear Multi-link rear Multi-link rear suspension with suspension with stabilizer bar",
-   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar",
-   "engine_text": "FOUR-CYLINDER",
-   "row": "Suspension - Rear"
-  },
-  {
-   "key": "rear_suspension",
-   "value": "Multi-link rear suspension with stabilizer bar",
-   "page": 2,
-   "quote": "Multi-link rear suspension with suspension with stabilizer bar stabilizer bar",
-   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar",
-   "engine_text": "V6",
-   "row": "Suspension - Rear"
-  },
-  {
-   "key": "rear_suspension",
-   "value": "#Camry",
-   "page": 3,
-   "quote": "#Camry",
-   "original": "Suspension - Rear #Camry",
-   "engine_text": null,
-   "row": "Suspension - Rear"
-  },
-  {
    "key": "steering",
    "value": "Electric Power Steering (EPS): rack-and-pinion with electric power-",
    "page": 3,
@@ -389,11 +373,20 @@
   },
   {
    "key": "front_brakes",
-   "value": "(XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "value": "",
    "page": 3,
-   "quote": "type/diameter (XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
-   "original": "Brakes - Front - type/diameter (XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
-   "engine_text": null,
+   "quote": "type/diameter (XLE/XSE)",
+   "original": "Brakes - Front - type/diameter (XLE/XSE)",
+   "engine_text": "XLE/XSE",
+   "row": "Brakes - Front - type/diameter"
+  },
+  {
+   "key": "front_brakes",
+   "value": "Ventilated disc/12.9 in. with dual piston calipers",
+   "page": 3,
+   "quote": "Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "original": "Brakes - Front - type/diameter Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "engine_text": "TRD",
    "row": "Brakes - Front - type/diameter"
   },
   {
@@ -856,40 +849,13 @@
    "row": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395"
   },
   {
-   "key": "curb_weight_lb",
-   "value": 3572,
-   "page": 5,
-   "quote": "3,572",
-   "original": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395 3,572",
-   "engine_text": "V6",
-   "row": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 3549,
-   "page": 5,
-   "quote": "3,549",
-   "original": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395 3,549",
-   "engine_text": "V6",
-   "row": "Curb Weight (lbs.) 3,241 3,296 3,340 3,395"
-  },
-  {
    "key": "fuel_tank_gal",
    "value": 16,
    "page": 6,
    "quote": "14.5 gal. (L) 16 gal. (XSE, XLE, TRD)",
-   "original": "Fuel Capacity 14.5 gal. (L) 16 gal. (LE, SE, Nightshade, XLE, XSE) 16 gal. (XSE, XLE, TRD)",
+   "original": "Fuel Capacity 14.5 gal. (L) 16 gal. (XSE, XLE, TRD)",
    "engine_text": "V6; XSE, XLE, TRD",
-   "row": "Fuel Capacity 14.5 gal. (L) 16 gal. (LE, SE, Nightshade, XLE, XSE)"
-  },
-  {
-   "key": "fuel_tank_gal",
-   "value": 6,
-   "page": 6,
-   "quote": "With filter L4: 4.8 qt. With filter V6:",
-   "original": "Fuel Capacity With filter L4: 4.8 qt. With filter V6:",
-   "engine_text": "V6",
-   "row": "Fuel Capacity With filter L4: 4.8 qt."
+   "row": "Fuel Capacity 14.5 gal. (L)"
   }
  ]
 }

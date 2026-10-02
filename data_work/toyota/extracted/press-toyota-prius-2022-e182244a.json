@@ -24,15 +24,26 @@
  "pages": 10,
  "edition_market": "US",
  "status": "ok",
- "engine_codes": [],
+ "engine_codes": [
+  "2ZR-FXE"
+ ],
  "review": [
   {
    "page": 3,
    "row": "Ground Clearance",
-   "reason": "several numbers: 'X5.L1E i nA.W (FDW-De) g rades)'"
+   "reason": "no value with unit in: 'X5.L1E i nA.W (FDW-De) g rades)'"
   }
  ],
  "facts": [
+  {
+   "key": "engine_description",
+   "value": "1.8-Liter 4- cylinder aluminum block and head, double overhead cam (DOHC) 16-valve VVT-i",
+   "page": 1,
+   "quote": "1.8-Liter 4- cylinder aluminum block and head, double Type, Materials overhead cam (DOHC) 16-valve VVT-i",
+   "original": "Type, Materials 1.8-Liter 4- cylinder aluminum block and head, double overhead cam (DOHC) 16-valve VVT-i",
+   "engine_text": null,
+   "row": "Type, Materials"
+  },
   {
    "key": "valvetrain",
    "value": "4-valve/cylinder with VVT-i",
@@ -70,8 +81,17 @@
    "row": "Compression Ratio"
   },
   {
-   "key": "system_power_hp",
+   "key": "power_hp",
    "value": 96,
+   "page": 1,
+   "quote": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
+   "original": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
+   "engine_text": null,
+   "row": "Horsepower (SAE Net)"
+  },
+  {
+   "key": "power_rpm",
+   "value": "5,200",
    "page": 1,
    "quote": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
    "original": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
@@ -143,10 +163,10 @@
   },
   {
    "key": "transmission_description",
-   "value": "(eCVT)",
+   "value": "Electronically C ontrolled Continuously Variable Transmission (eCVT)",
    "page": 2,
-   "quote": "(eCVT)",
-   "original": "Transmission Type (eCVT)",
+   "quote": "Electronically C ontrolled Continuously Variable Transmission Transmission Type (eCVT)",
+   "original": "Transmission Type Electronically C ontrolled Continuously Variable Transmission (eCVT)",
    "engine_text": null,
    "row": "Transmission Type"
   },
@@ -340,13 +360,13 @@
    "row": "EPA Passenger Volume"
   },
   {
-   "key": "cargo_max_cu_ft",
+   "key": "cargo_cu_ft",
    "value": 27.4,
    "page": 4,
    "quote": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft. Information",
    "original": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft. Information",
    "engine_text": null,
-   "row": "EPA Cargo Volume (Seats up/seats folded) [up]"
+   "row": "EPA Cargo Volume (Seats up/seats folded) [Seats up]"
   },
   {
    "key": "cargo_max_cu_ft",
@@ -355,7 +375,7 @@
    "quote": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft. Information",
    "original": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft. Information",
    "engine_text": null,
-   "row": "EPA Cargo Volume (Seats up/seats folded) [seats]"
+   "row": "EPA Cargo Volume (Seats up/seats folded) [seats folded]"
   }
  ]
 }

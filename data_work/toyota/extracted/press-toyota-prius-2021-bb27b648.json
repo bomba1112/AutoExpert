@@ -24,30 +24,20 @@
  "pages": 10,
  "edition_market": "US",
  "status": "ok",
- "engine_codes": [],
- "review": [
-  {
-   "page": 2,
-   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition",
-   "reason": "wheel size not readable: '15-in. 5-spoke alloy wheels with full wheel covers and P195/65R15 tires'"
-  },
-  {
-   "page": 2,
-   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition",
-   "reason": "wheel size not readable: '15-in. 5-spoke alloy wheels with two-tone wheel covers and P195/65R15 tires'"
-  },
-  {
-   "page": 2,
-   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition",
-   "reason": "wheel size not readable: '17-in. 5-spoke alloy wheels with titanium-finished wheel inserts and P215/45R17 tires'"
-  },
-  {
-   "page": 2,
-   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition",
-   "reason": "wheel size not readable: '17-in. 5-spoke alloy wheels with black lug nuts, piano-black wheel inserts and P215/45R17 tires'"
-  }
+ "engine_codes": [
+  "2ZR-FXE"
  ],
+ "review": [],
  "facts": [
+  {
+   "key": "engine_description",
+   "value": "1.8-Liter 4- cylinder aluminum block and head, double overhead cam (DOHC) 16-valve VVT-i",
+   "page": 1,
+   "quote": "1.8-Liter 4- cylinder aluminum block and head, double Type, Materials overhead cam (DOHC) 16-valve VVT-i",
+   "original": "Type, Materials 1.8-Liter 4- cylinder aluminum block and head, double overhead cam (DOHC) 16-valve VVT-i",
+   "engine_text": null,
+   "row": "Type, Materials"
+  },
   {
    "key": "valvetrain",
    "value": "4-valve/cylinder with VVT-i",
@@ -85,8 +75,17 @@
    "row": "Compression Ratio"
   },
   {
-   "key": "system_power_hp",
+   "key": "power_hp",
    "value": 96,
+   "page": 1,
+   "quote": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
+   "original": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
+   "engine_text": null,
+   "row": "Horsepower (SAE Net)"
+  },
+  {
+   "key": "power_rpm",
+   "value": "5,200",
    "page": 1,
    "quote": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
    "original": "Horsepower (SAE Net) 96 horsepower @ 5,200 rpm",
@@ -158,10 +157,10 @@
   },
   {
    "key": "transmission_description",
-   "value": "(eCVT)",
+   "value": "Electronically Controlled Continuously Variable Transmission (eCVT)",
    "page": 1,
-   "quote": "(eCVT)",
-   "original": "Transmission Type (eCVT)",
+   "quote": "Electronically Controlled Continuously Variable Transmission Transmission Type (eCVT)",
+   "original": "Transmission Type Electronically Controlled Continuously Variable Transmission (eCVT)",
    "engine_text": null,
    "row": "Transmission Type"
   },
@@ -245,6 +244,42 @@
    "original": "Brakes - Rear Diameter 10.2 in.",
    "engine_text": null,
    "row": "Brakes - Rear Diameter"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 15,
+   "page": 2,
+   "quote": "Wheel Size 15-in. 5-spoke alloy wheels with full wheel covers L ECO, LE and P195/65R15 tires",
+   "original": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition 15-in. 5-spoke alloy wheels with full wheel covers and P195/65R15 tires",
+   "engine_text": null,
+   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 15,
+   "page": 2,
+   "quote": "LE AWD-e, 15-in. 5-spoke alloy wheels with two-tone wheel covers and P195/65R15 tires",
+   "original": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition 15-in. 5-spoke alloy wheels with two-tone wheel covers and P195/65R15 tires",
+   "engine_text": null,
+   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 17,
+   "page": 2,
+   "quote": "17-in. 5-spoke alloy wheels with titanium-finished XLE, Limited wheel inserts and P215/45R17 tires",
+   "original": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition 17-in. 5-spoke alloy wheels with titanium-finished wheel inserts and P215/45R17 tires",
+   "engine_text": null,
+   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 17,
+   "page": 2,
+   "quote": "17-in. 5-spoke alloy wheels with black lug nuts, 2020 Edition piano-black wheel inserts and P215/45R17 tires",
+   "original": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition 17-in. 5-spoke alloy wheels with black lug nuts, piano-black wheel inserts and P215/45R17 tires",
+   "engine_text": null,
+   "row": "Wheel Size L ECO, LE LE AWD-e, XLE AWD-e XLE, Limited 2020 Edition"
   },
   {
    "key": "wheelbase_in",
@@ -364,13 +399,13 @@
    "row": "EPA Passenger Volume"
   },
   {
-   "key": "cargo_max_cu_ft",
+   "key": "cargo_cu_ft",
    "value": 27.4,
    "page": 3,
    "quote": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft.",
    "original": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft.",
    "engine_text": null,
-   "row": "EPA Cargo Volume (Seats up/seats folded) [up]"
+   "row": "EPA Cargo Volume (Seats up/seats folded) [Seats up]"
   },
   {
    "key": "cargo_max_cu_ft",
@@ -379,7 +414,7 @@
    "quote": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft.",
    "original": "EPA Cargo Volume (Seats up/seats folded) 27.4/50.7 cu. ft.",
    "engine_text": null,
-   "row": "EPA Cargo Volume (Seats up/seats folded) [seats]"
+   "row": "EPA Cargo Volume (Seats up/seats folded) [seats folded]"
   },
   {
    "key": "curb_weight_lb",

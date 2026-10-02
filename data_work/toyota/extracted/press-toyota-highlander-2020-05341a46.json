@@ -29,12 +29,7 @@
   {
    "page": 1,
    "row": "Horsepower",
-   "reason": "no hp value: '• Combined net hp 243, includes combustion engine with'"
-  },
-  {
-   "page": 3,
-   "row": "Steering - Turning Circle Radius (ft.)",
-   "reason": "turning radius (not a turning-circle diameter); not converted"
+   "reason": "value not readable with unit from label: '• Combined net hp 243, includes combustion engine with'"
   }
  ],
  "facts": [
@@ -75,11 +70,38 @@
    "row": "Valve train"
   },
   {
+   "key": "engine_displacement_cc",
+   "value": 3456,
+   "page": 1,
+   "quote": "Displacement Gas = 3456cm^3",
+   "original": "Displacement Hybrid = 2487 cm^3 Gas = 3456cm^3",
+   "engine_text": "Gas",
+   "row": "Displacement Hybrid = 2487 cm^3"
+  },
+  {
+   "key": "bore_stroke_mm",
+   "value": "94.0 x 83.0",
+   "page": 1,
+   "quote": "Bore x Stroke Gas = 94.0x83.0 (mm)",
+   "original": "Bore x Stroke Hybrid = 87.5x103.4 (mm) Gas = 94.0x83.0 (mm)",
+   "engine_text": null,
+   "row": "Bore x Stroke Hybrid = 87.5x103.4 (mm)"
+  },
+  {
+   "key": "compression_ratio",
+   "value": "11.8:1",
+   "page": 1,
+   "quote": "Compression Ratio Gas = 11.8:1",
+   "original": "Compression Ratio Hybrid = 14:1 Gas = 11.8:1",
+   "engine_text": "Gas",
+   "row": "Compression Ratio Hybrid = 14:1"
+  },
+  {
    "key": "power_hp",
    "value": 295,
    "page": 1,
-   "quote": "295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
-   "original": "Horsepower 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
+   "quote": "Horsepower • 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
+   "original": "Horsepower • 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
    "engine_text": "L → PLTM FWD/AWD Gas",
    "row": "Horsepower"
   },
@@ -87,8 +109,8 @@
    "key": "power_rpm",
    "value": "6,600",
    "page": 1,
-   "quote": "295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
-   "original": "Horsepower 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
+   "quote": "Horsepower • 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
+   "original": "Horsepower • 295 hp @ 6,600 rpm (L → PLTM FWD/AWD Gas)",
    "engine_text": "L → PLTM FWD/AWD Gas",
    "row": "Horsepower"
   },
@@ -114,8 +136,8 @@
    "key": "torque_lb_ft",
    "value": 263,
    "page": 1,
-   "quote": "263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
-   "original": "Engine Torque 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
+   "quote": "Engine Torque • 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
+   "original": "Engine Torque • 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
    "engine_text": "L → PLTM FWD/AWD Gas",
    "row": "Engine Torque"
   },
@@ -123,8 +145,8 @@
    "key": "torque_rpm",
    "value": "4,700",
    "page": 1,
-   "quote": "263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
-   "original": "Engine Torque 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
+   "quote": "Engine Torque • 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
+   "original": "Engine Torque • 263 lb.-ft. @ 4,700 RPM (L → PLTM FWD/AWD Gas)",
    "engine_text": "L → PLTM FWD/AWD Gas",
    "row": "Engine Torque"
   },
@@ -132,8 +154,8 @@
    "key": "torque_lb_ft",
    "value": 175,
    "page": 1,
-   "quote": "175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
-   "original": "Engine Torque 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "quote": "• 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "original": "Engine Torque • 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
    "engine_text": "LE → PLTM FWD/AWD Hybrid",
    "row": "Engine Torque"
   },
@@ -141,10 +163,19 @@
    "key": "torque_rpm",
    "value": "4400",
    "page": 1,
-   "quote": "175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
-   "original": "Engine Torque 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "quote": "• 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "original": "Engine Torque • 175 lb.-ft @4400 RPM (LE → PLTM FWD/AWD Hybrid)",
    "engine_text": "LE → PLTM FWD/AWD Hybrid",
    "row": "Engine Torque"
+  },
+  {
+   "key": "injection",
+   "value": "D-4S",
+   "page": 1,
+   "quote": "Fuel System D-4S",
+   "original": "Fuel System D-4S",
+   "engine_text": null,
+   "row": "Fuel System"
   },
   {
    "key": "transmission_description",
@@ -201,6 +232,15 @@
    "row": "Steering - Turning Circle Diameter (ft.)"
   },
   {
+   "key": "turning_circle_ft",
+   "value": 36.1,
+   "page": 3,
+   "quote": "- Turning Circle 36.1 ft.",
+   "original": "Steering - Turning Circle 36.1 ft.",
+   "engine_text": null,
+   "row": "Steering - Turning Circle"
+  },
+  {
    "key": "front_brakes",
    "value": "Power-assisted Ventilated disc",
    "page": 3,
@@ -240,8 +280,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 3,
-   "quote": "L/LE (All) = 18-in. Painted Alloy",
-   "original": "Wheel Size L/LE (All) = 18-in. Painted Alloy",
+   "quote": "Wheel Size • L/LE (All) = 18-in. Painted Alloy",
+   "original": "Wheel Size • L/LE (All) = 18-in. Painted Alloy",
    "engine_text": "L/LE (All)",
    "row": "Wheel Size"
   },
@@ -249,8 +289,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 3,
-   "quote": "XLE (All) = 18-in. Machined Alloy",
-   "original": "Wheel Size XLE (All) = 18-in. Machined Alloy",
+   "quote": "• XLE (All) = 18-in. Machined Alloy",
+   "original": "Wheel Size • XLE (All) = 18-in. Machined Alloy",
    "engine_text": "XLE (All)",
    "row": "Wheel Size"
   },
@@ -258,8 +298,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 3,
-   "quote": "LTD (All) = 20-in. Alloy w/ Plastic Cap",
-   "original": "Wheel Size LTD (All) = 20-in. Alloy w/ Plastic Cap",
+   "quote": "• LTD (All) = 20-in. Alloy w/ Plastic Cap",
+   "original": "Wheel Size • LTD (All) = 20-in. Alloy w/ Plastic Cap",
    "engine_text": "LTD (All)",
    "row": "Wheel Size"
   },
@@ -267,8 +307,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 3,
-   "quote": "PLTM (All) = 20-in. Painted Alloy",
-   "original": "Wheel Size PLTM (All) = 20-in. Painted Alloy",
+   "quote": "• PLTM (All) = 20-in. Painted Alloy",
+   "original": "Wheel Size • PLTM (All) = 20-in. Painted Alloy",
    "engine_text": "PLTM (All)",
    "row": "Wheel Size"
   },
@@ -276,8 +316,8 @@
    "key": "tires",
    "value": "P235/65R18",
    "page": 3,
-   "quote": "L → XLE (All) = P235/65R18M",
-   "original": "Tire Size L → XLE (All) = P235/65R18M",
+   "quote": "Tire Size • L → XLE (All) = P235/65R18M",
+   "original": "Tire Size • L → XLE (All) = P235/65R18M",
    "engine_text": "L → XLE (All)",
    "row": "Tire Size"
   },
@@ -285,8 +325,8 @@
    "key": "tires",
    "value": "P235/55R20",
    "page": 3,
-   "quote": "LTD/PLTM (All) = P235/55R20M",
-   "original": "Tire Size LTD/PLTM (All) = P235/55R20M",
+   "quote": "• LTD/PLTM (All) = P235/55R20M",
+   "original": "Tire Size • LTD/PLTM (All) = P235/55R20M",
    "engine_text": "LTD/PLTM (All)",
    "row": "Tire Size"
   },
@@ -357,8 +397,8 @@
    "key": "seats",
    "value": 8,
    "page": 4,
-   "quote": "L (All) = 8",
-   "original": "Seating Capacity (standard/optional) L (All) = 8",
+   "quote": "Seating Capacity (standard/optional) • L (All) = 8",
+   "original": "Seating Capacity (standard/optional) • L (All) = 8",
    "engine_text": "L (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -366,8 +406,8 @@
    "key": "seats",
    "value": 8,
    "page": 4,
-   "quote": "LE (All) = 8",
-   "original": "Seating Capacity (standard/optional) LE (All) = 8",
+   "quote": "• LE (All) = 8",
+   "original": "Seating Capacity (standard/optional) • LE (All) = 8",
    "engine_text": "LE (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -375,8 +415,8 @@
    "key": "seats",
    "value": 7,
    "page": 4,
-   "quote": "XLE (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE (All) = 7/8",
+   "quote": "• XLE (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE (All) = 7/8",
    "engine_text": "XLE (All)",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -384,8 +424,8 @@
    "key": "seats",
    "value": 8,
    "page": 4,
-   "quote": "XLE (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE (All) = 7/8",
+   "quote": "• XLE (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE (All) = 7/8",
    "engine_text": "XLE (All)",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -393,8 +433,8 @@
    "key": "seats",
    "value": 7,
    "page": 4,
-   "quote": "LTD (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) LTD (All) = 7/8",
+   "quote": "• LTD (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • LTD (All) = 7/8",
    "engine_text": "LTD (All)",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -402,8 +442,8 @@
    "key": "seats",
    "value": 8,
    "page": 4,
-   "quote": "LTD (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) LTD (All) = 7/8",
+   "quote": "• LTD (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • LTD (All) = 7/8",
    "engine_text": "LTD (All)",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -411,17 +451,44 @@
    "key": "seats",
    "value": 7,
    "page": 4,
-   "quote": "PLTM (All) = 7",
-   "original": "Seating Capacity (standard/optional) PLTM (All) = 7",
+   "quote": "• PLTM (All) = 7",
+   "original": "Seating Capacity (standard/optional) • PLTM (All) = 7",
    "engine_text": "PLTM (All)",
    "row": "Seating Capacity (standard/optional)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 84.3,
+   "page": 5,
+   "quote": "- Behind front 84.3 cu. ft.",
+   "original": "Cargo Volume - Behind front 84.3 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind front"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 48.4,
+   "page": 5,
+   "quote": "- Behind second row 48.4 cu. ft.",
+   "original": "Cargo Volume - Behind second row 48.4 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind second row"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 16,
+   "page": 5,
+   "quote": "- Behind third row 16 cu. ft.",
+   "original": "Cargo Volume - Behind third row 16 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind third row"
   },
   {
    "key": "passenger_volume_cu_ft",
    "value": 141.3,
    "page": 5,
-   "quote": "141.3 (w/o moonroof)",
-   "original": "Passenger Volume 141.3 (w/o moonroof)",
+   "quote": "Passenger Volume • 141.3 (w/o moonroof)",
+   "original": "Passenger Volume • 141.3 (w/o moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/o moonroof)"
   },
@@ -429,8 +496,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 139.1,
    "page": 5,
-   "quote": "139.1 (w/ moonroof)",
-   "original": "Passenger Volume 139.1 (w/ moonroof)",
+   "quote": "• 139.1 (w/ moonroof)",
+   "original": "Passenger Volume • 139.1 (w/ moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ moonroof)"
   },
@@ -438,10 +505,28 @@
    "key": "passenger_volume_cu_ft",
    "value": 136.1,
    "page": 5,
-   "quote": "136.1 (w/ panoramic)",
-   "original": "Passenger Volume 136.1 (w/ panoramic)",
+   "quote": "• 136.1 (w/ panoramic)",
+   "original": "Passenger Volume • 136.1 (w/ panoramic)",
    "engine_text": null,
    "row": "Passenger Volume (w/ panoramic)"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4145,
+   "page": 5,
+   "quote": "• L 4,145/4,330",
+   "original": "Curb Weight (FWD/AWD) • L 4,145/4,330",
+   "engine_text": "L; FWD",
+   "row": "Curb Weight (FWD/AWD)"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4330,
+   "page": 5,
+   "quote": "• L 4,145/4,330",
+   "original": "Curb Weight (FWD/AWD) • L 4,145/4,330",
+   "engine_text": "L; AWD",
+   "row": "Curb Weight (FWD/AWD)"
   },
   {
    "key": "curb_weight_lb",

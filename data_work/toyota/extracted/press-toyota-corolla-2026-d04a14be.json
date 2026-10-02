@@ -25,13 +25,7 @@
  "edition_market": "US",
  "status": "ok",
  "engine_codes": [],
- "review": [
-  {
-   "page": 2,
-   "row": "Wheel Size",
-   "reason": "wheel size not readable: '16-in. wide vent steel wheels and P205/55R16 tires (LE)'"
-  }
- ],
+ "review": [],
  "facts": [
   {
    "key": "engine_description",
@@ -125,20 +119,29 @@
   },
   {
    "key": "front_suspension",
-   "value": "suspension with stabilizer bar",
+   "value": "Independent MacPherson strut front suspension with stabilizer bar",
    "page": 1,
-   "quote": "suspension with stabilizer bar",
-   "original": "Suspension - Front suspension with stabilizer bar",
+   "quote": "Independent MacPherson strut front Suspension - Front suspension with stabilizer bar",
+   "original": "Suspension - Front Independent MacPherson strut front suspension with stabilizer bar",
    "engine_text": null,
    "row": "Suspension - Front"
   },
   {
    "key": "rear_suspension",
-   "value": "Multi-link with rear stabilizer bar (SE, XSE) Torsion beam rear suspension (LE)",
+   "value": "Multi-link with rear stabilizer bar",
    "page": 1,
-   "quote": "- Rear Multi-link with rear stabilizer bar (SE, XSE) Torsion beam rear suspension (LE)",
-   "original": "Suspension - Rear Multi-link with rear stabilizer bar (SE, XSE) Torsion beam rear suspension (LE)",
-   "engine_text": null,
+   "quote": "- Rear Multi-link with rear stabilizer bar (SE, XSE)",
+   "original": "Suspension - Rear Multi-link with rear stabilizer bar (SE, XSE)",
+   "engine_text": "SE, XSE",
+   "row": "Suspension - Rear"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Torsion beam rear suspension",
+   "page": 1,
+   "quote": "Torsion beam rear suspension (LE)",
+   "original": "Suspension - Rear Torsion beam rear suspension (LE)",
+   "engine_text": "LE",
    "row": "Suspension - Rear"
   },
   {
@@ -152,10 +155,10 @@
   },
   {
    "key": "front_brakes",
-   "value": "Power-assisted Ventilated disc #Corolla",
+   "value": "Power-assisted Ventilated disc",
    "page": 1,
    "quote": "- Front Type Power-assisted Ventilated disc",
-   "original": "Brakes - Front Type Power-assisted Ventilated disc #Corolla",
+   "original": "Brakes - Front Type Power-assisted Ventilated disc",
    "engine_text": null,
    "row": "Brakes - Front Type"
   },
@@ -185,6 +188,15 @@
    "original": "Brakes - Rear Diameter 10.2 in.",
    "engine_text": null,
    "row": "Brakes - Rear Diameter"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 16,
+   "page": 2,
+   "quote": "16-in. wide vent steel wheels and P205/55R16 tires (LE)",
+   "original": "Wheel Size 16-in. wide vent steel wheels and P205/55R16 tires (LE)",
+   "engine_text": "LE",
+   "row": "Wheel Size"
   },
   {
    "key": "wheel_size_in",
@@ -317,7 +329,7 @@
    "value": 13.2,
    "page": 2,
    "quote": "Fuel Capacity 13.2 gal.",
-   "original": "Fuel Capacity 13.2 gal. #Corolla",
+   "original": "Fuel Capacity 13.2 gal.",
    "engine_text": null,
    "row": "Fuel Capacity"
   }

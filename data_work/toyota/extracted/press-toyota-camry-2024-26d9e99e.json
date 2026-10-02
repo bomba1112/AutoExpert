@@ -27,14 +27,14 @@
  "engine_codes": [],
  "review": [
   {
-   "page": 2,
-   "row": "Torque",
-   "reason": "no lb-ft value: '2024 Camry Product Information #Camry'"
+   "page": 7,
+   "row": "Curb Weight (lbs.)",
+   "reason": "several numbers: 'LE – 3,310 lbs. SE – 3,340 lbs. SE NS – 3,350 lbs. XLE – 3,380 lbs. XSE – 3,425 lbs. LE AWD – 3,475 lbs. SE AWD – 3,530 lbs. SE NS AWD – 3,530 lbs. XLE AWD – 3,540 lbs. XSE AWD – 3,580 lbs.'"
   },
   {
-   "page": 5,
-   "row": "Wheel Size",
-   "reason": "wheel size not readable: '2024 Camry Product Information ##CCaammrryy'"
+   "page": 7,
+   "row": "Curb Weight (lbs.)",
+   "reason": "several numbers: 'XLE – 3,595 lbs. XSE – 3,585 lbs. TRD – 3,575 lbs.'"
   }
  ],
  "facts": [
@@ -372,24 +372,6 @@
    "row": "Suspension - Front"
   },
   {
-   "key": "rear_suspension",
-   "value": "Multi-link rear suspension with stabilizer bar",
-   "page": 3,
-   "quote": "- Rear Multi-link rear Multi-link rear suspension with suspension with stabilizer bar",
-   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar",
-   "engine_text": "FOUR-CYLINDER",
-   "row": "Suspension - Rear"
-  },
-  {
-   "key": "rear_suspension",
-   "value": "Multi-link rear suspension with stabilizer bar",
-   "page": 3,
-   "quote": "Multi-link rear suspension with suspension with stabilizer bar stabilizer bar",
-   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar",
-   "engine_text": "V6",
-   "row": "Suspension - Rear"
-  },
-  {
    "key": "steering",
    "value": "Electric Power Steering (EPS): rack-and-pinion with electric power-",
    "page": 3,
@@ -481,11 +463,20 @@
   },
   {
    "key": "front_brakes",
-   "value": "(XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "value": "",
    "page": 4,
-   "quote": "type/diameter (XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
-   "original": "Brakes - Front - type/diameter (XLE/XSE) Ventilated disc/12.9 in. with dual piston calipers (TRD)",
-   "engine_text": null,
+   "quote": "type/diameter (XLE/XSE)",
+   "original": "Brakes - Front - type/diameter (XLE/XSE)",
+   "engine_text": "XLE/XSE",
+   "row": "Brakes - Front - type/diameter"
+  },
+  {
+   "key": "front_brakes",
+   "value": "Ventilated disc/12.9 in. with dual piston calipers",
+   "page": 4,
+   "quote": "Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "original": "Brakes - Front - type/diameter Ventilated disc/12.9 in. with dual piston calipers (TRD)",
+   "engine_text": "TRD",
    "row": "Brakes - Front - type/diameter"
   },
   {
@@ -732,15 +723,6 @@
    "row": "Overall Height"
   },
   {
-   "key": "height_in",
-   "value": 2024,
-   "page": 6,
-   "quote": "2024 Camry Product Information ##CCaammrryy",
-   "original": "Overall Height 2024 Camry Product Information ##CCaammrryy",
-   "engine_text": null,
-   "row": "Overall Height"
-  },
-  {
    "key": "track_front_in",
    "value": 62.6,
    "page": 6,
@@ -975,31 +957,31 @@
    "row": "EPA Cargo Volume"
   },
   {
-   "key": "curb_weight_lb",
-   "value": 3595,
+   "key": "fuel_tank_gal",
+   "value": 15.8,
    "page": 7,
-   "quote": "LE – 3,310 lbs. XLE – 3,595 lbs.",
-   "original": "Curb Weight (lbs.) LE – 3,310 lbs. XLE – 3,595 lbs.",
-   "engine_text": "XLE –",
-   "row": "Curb Weight (lbs.) LE – 3,310 lbs."
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 3585,
-   "page": 7,
-   "quote": "SE – 3,340 lbs. XSE – 3,585 lbs.",
-   "original": "Curb Weight (lbs.) SE – 3,340 lbs. XSE – 3,585 lbs.",
-   "engine_text": "XSE –",
-   "row": "Curb Weight (lbs.) SE – 3,340 lbs."
+   "quote": "Fuel Capacity 15.8 gal. (LE, SE, SE Nightshade, 15.8 gal. XLE, XSE)",
+   "original": "Fuel Capacity 15.8 gal. (LE, SE, SE Nightshade, XLE, XSE)",
+   "engine_text": "FOUR-CYLINDER; LE, SE, SE Nightshade, XLE, XSE",
+   "row": "Fuel Capacity"
   },
   {
    "key": "fuel_tank_gal",
-   "value": 6,
-   "page": 8,
-   "quote": "With filter L4: 4.8 qt. Without With filter V6:",
-   "original": "Fuel Capacity With filter L4: 4.8 qt. Without With filter V6:",
+   "value": 14.4,
+   "page": 7,
+   "quote": "14.4 gal. (LE AWD, SE AWD, SE Nightshade AWD, XLE AWD, XSE AWD)",
+   "original": "Fuel Capacity 14.4 gal. (LE AWD, SE AWD, SE Nightshade AWD, XLE AWD, XSE AWD)",
+   "engine_text": "FOUR-CYLINDER; LE AWD, SE AWD, SE Nightshade AWD, XLE AWD, XSE AWD",
+   "row": "Fuel Capacity"
+  },
+  {
+   "key": "fuel_tank_gal",
+   "value": 15.8,
+   "page": 7,
+   "quote": "15.8 gal.",
+   "original": "Fuel Capacity 15.8 gal.",
    "engine_text": "V6",
-   "row": "Fuel Capacity With filter L4: 4.8 qt. Without"
+   "row": "Fuel Capacity"
   }
  ]
 }

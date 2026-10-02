@@ -89,7 +89,7 @@ def check_fact(fact, sources) -> list[str]:
                     page = pdf.pages[cite["pages"][0] - 1]
                     rebuilt = [r["text"] for col in ROWS(page) for r in col]
                     found = cite["row"] in rebuilt or any(cite["row"][:200] in r for r in rebuilt) \
-                        or any(cite["row"][:120] in t for t in texts)
+                        or any(cite["row"][:120] in t or MNORM(cite["row"])[:120] in MNORM(t) for t in texts)
                     if not found and TABLES is not None:
                         again = [f for table in TABLES[0](page) for f in TABLES[1](cite["pages"][0], table, pages["pages"][cite["pages"][0] - 1])[0]]
                         found = any(f["row"] == cite["row"] for f in again)
@@ -104,6 +104,7 @@ def norm_text(text: str) -> str:
 
 try:  # geometric re-check needs pdfplumber (run through uv); without it only quotes are checked
     from extract_manual_facts import rows_of as ROWS
+    from extract_manual_facts import norm as MNORM
     from extract_manual_facts import ruled_tables, table_facts
 
     TABLES = (ruled_tables, table_facts)

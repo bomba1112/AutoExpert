@@ -1,0 +1,131 @@
+{
+ "make": "toyota",
+ "mode": "live",
+ "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "started_at": "2026-10-02T16:07:22+00:00",
+ "replace_own": [],
+ "lines": {
+  "toyota/corolla": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 107,
+    "source_records_new": 46,
+    "te_existing": 1182,
+    "te_new_GENERATION": 419,
+    "configurations": 59,
+    "configurations_research_only": 57,
+    "configurations_linked": 2,
+    "issues_existing": 43,
+    "issues_updated": 1,
+    "issues_new": 1
+   },
+   "generations": [
+    {
+     "code": "XI",
+     "action": "unchanged"
+    },
+    {
+     "code": "XII",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "toyota/rav4": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 113,
+    "source_records_new": 46,
+    "te_existing": 983,
+    "te_new_GENERATION": 402,
+    "te_new_ENGINE": 10,
+    "configurations": 38,
+    "configurations_research_only": 36,
+    "configurations_linked": 2,
+    "issues_existing": 66,
+    "issues_updated": 5
+   },
+   "generations": [
+    {
+     "code": "IV",
+     "action": "unchanged"
+    },
+    {
+     "code": "V (2019 redesign, TNGA)",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2026+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "toyota/highlander": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 99,
+    "source_records_new": 37,
+    "te_existing": 991,
+    "te_new_GENERATION": 535,
+    "configurations": 49,
+    "configurations_linked": 6,
+    "configurations_research_only": 43,
+    "issues_existing": 64,
+    "issues_updated": 2
+   },
+   "generations": [
+    {
+     "code": "III",
+     "action": "unchanged"
+    },
+    {
+     "code": "IV",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "toyota/prius": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 68,
+    "source_records_new": 24,
+    "te_existing": 524,
+    "te_new_GENERATION": 219,
+    "te_new_ENGINE": 26,
+    "configurations": 21,
+    "configurations_research_only": 21,
+    "issues_existing": 39,
+    "issues_updated": 1
+   },
+   "generations": [
+    {
+     "code": "ZVW30",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2016-2022",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2023+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T16:08:05+00:00"
+}

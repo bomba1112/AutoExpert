@@ -41,7 +41,6 @@ coolant_capacity_l,value 1.4 outside the validator range; not used,toyota/prius 
 fuel_tank_l,value 4.2 outside the validator range; not used,toyota/prius carmans-2020-toyota-prius p.728
 fuel_tank_l,value 3.9 outside the validator range; not used,toyota/prius carmans-2020-toyota-prius p.728
 engine_oil_capacity_drain_refill_l,value 1.5 outside the validator range; not used,toyota/prius carmans-2026-toyota-prius p.420
-fuel_tank_l,value 6.1 outside the validator range; not used,toyota/prius carmans-2026-toyota-prius p.527
 coolant_capacity_l,value 1.6 outside the validator range; not used,toyota/prius carmans-2026-toyota-prius p.527
 fuel_tank_l,value 5.0 outside the validator range; not used,toyota/prius mcum-prius-4-door-2010-2015 p.204
 fuel_tank_l,value 6.5 outside the validator range; not used,toyota/prius mcum-prius-4-door-2010-2015 p.595
@@ -52,9 +51,7 @@ fuel_tank_l,value 6.0 outside the validator range; not used,toyota/prius mcum-pr
 coolant_capacity_l,value 1.4 outside the validator range; not used,toyota/prius mcum-prius-4-door-2016-2022 p.985
 fuel_tank_l,value 6.0 outside the validator range; not used,toyota/prius mcum-prius-4-door-2016-2022 p.1025
 coolant_capacity_l,value 1.4 outside the validator range; not used,toyota/prius mcum-prius-4-door-2016-2022 p.1025
-fuel_tank_l,value 6.1 outside the validator range; not used,toyota/prius mcum-prius-4-door-2023-2026 p.1033
 coolant_capacity_l,value 1.6 outside the validator range; not used,toyota/prius mcum-prius-4-door-2023-2026 p.1033
-fuel_tank_l,value 6.1 outside the validator range; not used,toyota/prius mcum-prius-4-door-2023-2026 p.1068
 coolant_capacity_l,value 1.6 outside the validator range; not used,toyota/prius mcum-prius-4-door-2023-2026 p.1068
 brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/prius MY2019 (carmans-2019-toyota-prius)
 brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/prius MY2020 (carmans-2020-toyota-prius)
@@ -70,32 +67,69 @@ brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/pri
 brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/prius MY2024 (mcum-prius-4-door-2023-2026)
 brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/prius MY2025 (mcum-prius-4-door-2023-2026)
 brake_fluid,"one document gives 2 values: ['""DOT 3""', '""DOT 4""']",toyota/prius MY2026 (mcum-prius-4-door-2023-2026)
-power_hp,no US press specification page for these years,toyota/prius ZVW30
-torque_lb_ft,no US press specification page for these years,toyota/prius ZVW30
-tires,no US press specification page for these years,toyota/prius ZVW30
-front_suspension,no US press specification page for these years,toyota/prius ZVW30
-rear_suspension,no US press specification page for these years,toyota/prius ZVW30
-front_brakes,no US press specification page for these years,toyota/prius ZVW30
-steering,no US press specification page for these years,toyota/prius ZVW30
-ground_clearance,no US press specification page for these years,toyota/prius ZVW30
-cargo_l,no US press specification page for these years,toyota/prius ZVW30
-power_hp,no US press specification page for these years,toyota/prius US2016-2022
-torque_lb_ft,no US press specification page for these years,toyota/prius US2016-2022
-tires,no US press specification page for these years,toyota/prius US2016-2022
-front_suspension,no US press specification page for these years,toyota/prius US2016-2022
-rear_suspension,no US press specification page for these years,toyota/prius US2016-2022
-front_brakes,no US press specification page for these years,toyota/prius US2016-2022
-steering,no US press specification page for these years,toyota/prius US2016-2022
-ground_clearance,no US press specification page for these years,toyota/prius US2016-2022
-cargo_l,no US press specification page for these years,toyota/prius US2016-2022
+electric_motor,"one document gives 4 values: ['""153 lb.-ft.""', '""80 hp/60 kW""', '""DC650V""', '""Permanent Magnet Synchronous Motor""']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Ventilated disc (hydraulic with power assist) with standard Anti- Lock Brake (ABS) system and integrated regenerative brake system""']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+track_front_mm,"one document gives 2 values: ['1514', '1524']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+track_rear_mm,"one document gives 2 values: ['1509', '1519']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+turning_circle_m,"one document gives 2 values: ['10.4', '11.0']",toyota/prius MY2014 (press-toyota-prius-2014-e1f9c967)
+electric_motor,"one document gives 4 values: ['""153 lb.-ft.""', '""80 hp/60 kW""', '""DC650V""', '""Permanent Magnet Synchronous Motor""']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Ventilated disc (hydraulic with power assist) with standard Anti- Lock Brake (ABS) system and integrated regenerative brake system""']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+track_front_mm,"one document gives 2 values: ['1514', '1524']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+track_rear_mm,"one document gives 2 values: ['1509', '1519']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+turning_circle_m,"one document gives 2 values: ['10.4', '11.0']",toyota/prius MY2015 (press-toyota-prius-2015-030b2330)
+electric_motor,"one document gives 4 values: ['""120 lb.-ft.""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet Synchronous Motor""']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Ventilated disc (hydraulic with power assist) with standard Anti- Lock Brake (ABS) system and integrated regenerative brake system""']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+track_front_mm,"one document gives 2 values: ['1509', '1529']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+track_rear_mm,"one document gives 2 values: ['1519', '1539']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+turning_circle_m,"one document gives 2 values: ['10.2', '10.8']",toyota/prius MY2016 (press-toyota-prius-2016-54265b0e)
+electric_motor,"one document gives 4 values: ['""120 lb.-ft.""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet Synchronous Motor""']",toyota/prius MY2017 (press-toyota-prius-2017-54232100)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Ventilated disc (hydraulic with power assist) with standard Anti- Lock Brake (ABS) system and integrated regenerative brake system""']",toyota/prius MY2017 (press-toyota-prius-2017-54232100)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2017 (press-toyota-prius-2017-54232100)
+track_front_mm,"one document gives 2 values: ['1509', '1529']",toyota/prius MY2017 (press-toyota-prius-2017-54232100)
+track_rear_mm,"one document gives 2 values: ['1519', '1539']",toyota/prius MY2017 (press-toyota-prius-2017-54232100)
+electric_motor,"one document gives 4 values: ['""120 lb-ft""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Power-assisted ventilated front disc brakes; solid rear disc with integrated regenerative braking and Star Safety System\\u2122""']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+track_front_mm,"one document gives 2 values: ['1509', '1529']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+track_rear_mm,"one document gives 2 values: ['1519', '1539']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+turning_circle_m,"one document gives 2 values: ['10.2', '10.8']",toyota/prius MY2018 (press-toyota-prius-2018-46f3e2fd)
+electric_motor,"one document gives 4 values: ['""120 lb-ft""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2019 (press-toyota-prius-2019-fb186b39)
+front_brakes,"one document gives 2 values: ['""10.0 in. rotor""', '""Power-assisted ventilated front disc brakes; solid rear disc with integrated regenerative braking and Star Safety System\\u2122""']",toyota/prius MY2019 (press-toyota-prius-2019-fb186b39)
+rear_brakes,"one document gives 2 values: ['""10.2 in. rotor""', '""Solid disc (hydraulic with power assist) with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2019 (press-toyota-prius-2019-fb186b39)
+electric_motor,"one document gives 4 values: ['""120 lb-ft""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2020 (press-toyota-prius-2020-13f8ad0d)
+front_brakes,"one document gives 2 values: ['""Power-assisted ventilated front disc brakes; solid rear disc with integrated regenerative braking and Star Safety""', '""System\\u2122""']",toyota/prius MY2020 (press-toyota-prius-2020-13f8ad0d)
+rear_brakes,"one document gives 2 values: ['""10.0 in. rotor Solid disc (hydraulic with power assist)""', '""with standard Anti-lock Brake System (ABS)""']",toyota/prius MY2020 (press-toyota-prius-2020-13f8ad0d)
+electric_motor,"one document gives 4 values: ['""120 lb-ft""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2021 (press-toyota-prius-2021-bb27b648)
+front_brakes,"one document gives 2 values: ['""10.0 in.""', '""Ventilated disc""']",toyota/prius MY2021 (press-toyota-prius-2021-bb27b648)
+rear_brakes,"one document gives 2 values: ['""10.2 in.""', '""Solid disc""']",toyota/prius MY2021 (press-toyota-prius-2021-bb27b648)
+wheel_size_in,"one document gives 2 values: ['15', '17']",toyota/prius MY2021 (press-toyota-prius-2021-bb27b648)
+electric_motor,"one document gives 4 values: ['""120 lb-ft""', '""71 hp/53 kW""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2022 (press-toyota-prius-2022-e182244a)
+front_brakes,"one document gives 2 values: ['""10.0 in.""', '""Ventilated disc""']",toyota/prius MY2022 (press-toyota-prius-2022-e182244a)
+rear_brakes,"one document gives 2 values: ['""10.2 in.""', '""Solid disc""']",toyota/prius MY2022 (press-toyota-prius-2022-e182244a)
+electric_motor,"one document gives 4 values: ['""111 hp/83 kW""', '""152 lb.-ft.""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2023 (press-toyota-prius-2023-999c3af7)
+front_brakes,"one document gives 2 values: ['""11.1 in. (FWD models); 12.0 in. (AWD)""', '""Ventilated disc""']",toyota/prius MY2023 (press-toyota-prius-2023-999c3af7)
+rear_brakes,"one document gives 2 values: ['""11.0 in. FWD; 11.0 in (AWD)""', '""Solid disc""']",toyota/prius MY2023 (press-toyota-prius-2023-999c3af7)
+wheel_size_in,"one document gives 2 values: ['17', '19']",toyota/prius MY2023 (press-toyota-prius-2023-999c3af7)
+electric_motor,"one document gives 4 values: ['""111 hp/83 kW""', '""152 lb.-ft.""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2024 (press-toyota-prius-2024-714877a0)
+front_brakes,"one document gives 2 values: ['""11.1 in. (FWD models); 12.0 in. (AWD)""', '""Ventilated disc""']",toyota/prius MY2024 (press-toyota-prius-2024-714877a0)
+rear_brakes,"one document gives 2 values: ['""11.0 in. FWD; 11.0 in (AWD)""', '""Solid disc""']",toyota/prius MY2024 (press-toyota-prius-2024-714877a0)
+wheel_size_in,"one document gives 2 values: ['17', '19']",toyota/prius MY2024 (press-toyota-prius-2024-714877a0)
+electric_motor,"one document gives 4 values: ['""111 hp/83 kW""', '""152 lb.-ft.""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2025 (press-toyota-prius-2025-cf77a74a)
+front_brakes,"one document gives 2 values: ['""11.1 in. (FWD models); 12.0 in. (AWD)""', '""Ventilated disc""']",toyota/prius MY2025 (press-toyota-prius-2025-cf77a74a)
+rear_brakes,"one document gives 2 values: ['""11.0 in. FWD; 11.0 in (AWD)""', '""Solid disc""']",toyota/prius MY2025 (press-toyota-prius-2025-cf77a74a)
+wheel_size_in,"one document gives 2 values: ['17', '19']",toyota/prius MY2025 (press-toyota-prius-2025-cf77a74a)
+electric_motor,"one document gives 4 values: ['""111 hp/83 kW""', '""152 lb.-ft.""', '""DC600V""', '""Permanent Magnet AC Synchronous Motor""']",toyota/prius MY2026 (press-toyota-prius-2026-becd1aa6)
+front_brakes,"one document gives 2 values: ['""11.1 in. (FWD models); 12.0 in. (AWD)""', '""Ventilated disc""']",toyota/prius MY2026 (press-toyota-prius-2026-becd1aa6)
+rear_brakes,"one document gives 2 values: ['""11.0 in. FWD; 11.0 in (AWD)""', '""Solid disc""']",toyota/prius MY2026 (press-toyota-prius-2026-becd1aa6)
+wheel_size_in,"one document gives 2 values: ['17', '19']",toyota/prius MY2026 (press-toyota-prius-2026-becd1aa6)
+front_brakes,not found unambiguously in the available US press specification pages,toyota/prius ZVW30
+front_brakes,not found unambiguously in the available US press specification pages,toyota/prius US2016-2022
 transmission_fluid,not found unambiguously in the available US owner's manuals,toyota/prius US2023+
 brake_fluid,not found unambiguously in the available US owner's manuals,toyota/prius US2023+
-power_hp,no US press specification page for these years,toyota/prius US2023+
-torque_lb_ft,no US press specification page for these years,toyota/prius US2023+
-tires,no US press specification page for these years,toyota/prius US2023+
-front_suspension,no US press specification page for these years,toyota/prius US2023+
-rear_suspension,no US press specification page for these years,toyota/prius US2023+
-front_brakes,no US press specification page for these years,toyota/prius US2023+
-steering,no US press specification page for these years,toyota/prius US2023+
-ground_clearance,no US press specification page for these years,toyota/prius US2023+
-cargo_l,no US press specification page for these years,toyota/prius US2023+
+tires,not found unambiguously in the available US press specification pages,toyota/prius US2023+
+front_suspension,not found unambiguously in the available US press specification pages,toyota/prius US2023+
+front_brakes,not found unambiguously in the available US press specification pages,toyota/prius US2023+
+steering,not found unambiguously in the available US press specification pages,toyota/prius US2023+

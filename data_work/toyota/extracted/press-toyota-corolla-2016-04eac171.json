@@ -28,8 +28,43 @@
  "review": [
   {
    "page": 3,
+   "row": "Tread Width - Front",
+   "reason": "several values on one line without labels: '60.3 in.'"
+  },
+  {
+   "page": 3,
+   "row": "Tread Width - Front",
+   "reason": "several values on one line without labels: '59.8 in.'"
+  },
+  {
+   "page": 3,
+   "row": "Tread Width - Rear",
+   "reason": "several values on one line without labels: '60.4 in.'"
+  },
+  {
+   "page": 3,
+   "row": "Tread Width - Rear",
+   "reason": "several values on one line without labels: '59.9 in.'"
+  },
+  {
+   "page": 3,
    "row": "Curb Weight",
-   "reason": "several numbers: '4ECT 2,820lbs. CVTi-S CVTi-S'"
+   "reason": "several values on one line without labels: '6MT'"
+  },
+  {
+   "page": 3,
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: '2,800lbs. --- 4ECT 2,820lbs. CVTi-S'"
+  },
+  {
+   "page": 3,
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: '6MT'"
+  },
+  {
+   "page": 3,
+   "row": "Curb Weight",
+   "reason": "several values on one line without labels: '2,845lbs. CVTi-S'"
   }
  ],
  "facts": [
@@ -214,21 +249,57 @@
    "row": "Fuel System"
   },
   {
-   "key": "front_suspension",
-   "value": "Independent MacPherson Strut Independent MacPherson Strut",
-   "page": 2,
-   "quote": "- Front Independent MacPherson Strut Independent MacPherson Strut",
-   "original": "Suspension - Front Independent MacPherson Strut Independent MacPherson Strut",
+   "key": "transmission_description",
+   "value": "4-speed CVTi-S 6-speed",
+   "page": 1,
+   "quote": "Transmission 4-speed CVTi-S 6-speed",
+   "original": "Transmission 4-speed CVTi-S 6-speed",
    "engine_text": "L/ LE/ S",
+   "row": "Transmission"
+  },
+  {
+   "key": "transmission_description",
+   "value": "CVTi-S",
+   "page": 1,
+   "quote": "CVTi-S",
+   "original": "Transmission CVTi-S",
+   "engine_text": "LE Eco",
+   "row": "Transmission"
+  },
+  {
+   "key": "front_suspension",
+   "value": "Independent MacPherson Strut",
+   "page": 2,
+   "quote": "- Front Independent MacPherson Strut",
+   "original": "Suspension - Front Independent MacPherson Strut",
+   "engine_text": "L/ LE/ LE Eco",
+   "row": "Suspension - Front"
+  },
+  {
+   "key": "front_suspension",
+   "value": "Independent MacPherson Strut",
+   "page": 2,
+   "quote": "Independent MacPherson Strut",
+   "original": "Suspension - Front Independent MacPherson Strut",
+   "engine_text": "S",
    "row": "Suspension - Front"
   },
   {
    "key": "steering",
-   "value": "Electric Power Steering (EPS) Electric Power Steering (EPS)",
+   "value": "Electric Power Steering (EPS)",
    "page": 2,
-   "quote": "- Type Electric Power Steering (EPS) Electric Power Steering (EPS)",
-   "original": "Steering - Type Electric Power Steering (EPS) Electric Power Steering (EPS)",
-   "engine_text": "L/ LE/ S",
+   "quote": "- Type Electric Power Steering (EPS)",
+   "original": "Steering - Type Electric Power Steering (EPS)",
+   "engine_text": "L/ LE/ LE Eco",
+   "row": "Steering - Type"
+  },
+  {
+   "key": "steering",
+   "value": "Electric Power Steering (EPS)",
+   "page": 2,
+   "quote": "Electric Power Steering (EPS)",
+   "original": "Steering - Type Electric Power Steering (EPS)",
+   "engine_text": "S",
    "row": "Steering - Type"
   },
   {
@@ -237,7 +308,7 @@
    "page": 2,
    "quote": "- Turning Circle 35.6 ft.",
    "original": "Steering - Turning Circle Diameter (curb to curb) 35.6 ft.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/ LE/ LE Eco",
    "row": "Steering - Turning Circle Diameter (curb to curb)"
   },
   {
@@ -246,25 +317,43 @@
    "page": 2,
    "quote": "35.6 ft.",
    "original": "Steering - Turning Circle Diameter (curb to curb) 35.6 ft.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Steering - Turning Circle Diameter (curb to curb)"
   },
   {
    "key": "front_brakes",
-   "value": "Ventilated disc/10.8 in. Ventilated disc/10.8 in.",
+   "value": "Ventilated disc/10.8 in.",
    "page": 2,
-   "quote": "- Front - type/diameter Ventilated disc/10.8 in. Ventilated disc/10.8 in.",
-   "original": "Brakes - Front - type/diameter Ventilated disc/10.8 in. Ventilated disc/10.8 in.",
-   "engine_text": "L/ LE/ S",
+   "quote": "- Front - type/diameter Ventilated disc/10.8 in.",
+   "original": "Brakes - Front - type/diameter Ventilated disc/10.8 in.",
+   "engine_text": "L/ LE/ LE Eco",
+   "row": "Brakes - Front - type/diameter"
+  },
+  {
+   "key": "front_brakes",
+   "value": "Ventilated disc/10.8 in.",
+   "page": 2,
+   "quote": "Ventilated disc/10.8 in.",
+   "original": "Brakes - Front - type/diameter Ventilated disc/10.8 in.",
+   "engine_text": "S",
    "row": "Brakes - Front - type/diameter"
   },
   {
    "key": "rear_brakes",
-   "value": "Drum/9.1 in. Solid Disc/ 10.2 in.",
+   "value": "Drum/9.1 in.",
    "page": 2,
-   "quote": "- Rear - type/diameter Drum/9.1 in. Solid Disc/ 10.2 in.",
-   "original": "Brakes - Rear - type/diameter Drum/9.1 in. Solid Disc/ 10.2 in.",
-   "engine_text": "L/ LE/ S",
+   "quote": "- Rear - type/diameter Drum/9.1 in.",
+   "original": "Brakes - Rear - type/diameter Drum/9.1 in.",
+   "engine_text": "L/ LE/ LE Eco",
+   "row": "Brakes - Rear - type/diameter"
+  },
+  {
+   "key": "rear_brakes",
+   "value": "Solid Disc/ 10.2 in.",
+   "page": 2,
+   "quote": "Solid Disc/ 10.2 in.",
+   "original": "Brakes - Rear - type/diameter Solid Disc/ 10.2 in.",
+   "engine_text": "S",
    "row": "Brakes - Rear - type/diameter"
   },
   {
@@ -273,7 +362,16 @@
    "page": 2,
    "quote": "Wheel Size 6.0 x 15 in. (steel for L, LE Eco)",
    "original": "Wheel Size 6.0 x 15 in. (steel for L, LE Eco)",
-   "engine_text": "L/ LE/ S; steel for L, LE Eco",
+   "engine_text": "L/ LE/ LE Eco; steel for L, LE Eco",
+   "row": "Wheel Size"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 16,
+   "page": 2,
+   "quote": "6.5 x 16 in. (steel and available 7.0 x 17 in.(available alloy for S) alloy–LE,LEEco),",
+   "original": "Wheel Size 6.5 x 16 in. (steel and available alloy–LE,LEEco),",
+   "engine_text": "L/ LE/ LE Eco",
    "row": "Wheel Size"
   },
   {
@@ -282,16 +380,16 @@
    "page": 2,
    "quote": "6.5 x 16 in (steel for base S)",
    "original": "Wheel Size 6.5 x 16 in (steel for base S)",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Wheel Size (steel for base S)"
   },
   {
    "key": "wheel_size_in",
-   "value": 16,
+   "value": 17,
    "page": 2,
-   "quote": "6.5 x 16 in. (steel and available 7.0 x 17 in.(available alloy for S)",
-   "original": "Wheel Size 6.5 x 16 in. (steel and available 7.0 x 17 in.(available alloy for S)",
-   "engine_text": "L/ LE/ S; available alloy for S",
+   "quote": "7.0 x 17 in.(available alloy for S)",
+   "original": "Wheel Size 7.0 x 17 in.(available alloy for S)",
+   "engine_text": "S; available alloy for S",
    "row": "Wheel Size"
   },
   {
@@ -300,7 +398,7 @@
    "page": 2,
    "quote": "Tire Size P195/65 R15",
    "original": "Tire Size P195/65 R15",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/ LE/ LE Eco",
    "row": "Tire Size"
   },
   {
@@ -309,7 +407,7 @@
    "page": 2,
    "quote": "P205/55 R16",
    "original": "Tire Size P205/55 R16",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/ LE/ LE Eco",
    "row": "Tire Size"
   },
   {
@@ -318,7 +416,7 @@
    "page": 2,
    "quote": "P205/55 R16",
    "original": "Tire Size P205/55 R16",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Tire Size"
   },
   {
@@ -327,7 +425,7 @@
    "page": 2,
    "quote": "P215/45 R17",
    "original": "Tire Size P215/45 R17",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Tire Size"
   },
   {
@@ -336,7 +434,7 @@
    "page": 3,
    "quote": "Wheelbase 106.3 in.",
    "original": "Wheelbase 106.3 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Wheelbase"
   },
   {
@@ -345,7 +443,7 @@
    "page": 3,
    "quote": "106.3 in.",
    "original": "Wheelbase 106.3 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Wheelbase"
   },
   {
@@ -354,7 +452,7 @@
    "page": 3,
    "quote": "Overall Length 182.6 in.",
    "original": "Overall Length 182.6 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Overall Length"
   },
   {
@@ -363,7 +461,7 @@
    "page": 3,
    "quote": "183.1 in.",
    "original": "Overall Length 183.1 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Overall Length"
   },
   {
@@ -372,7 +470,7 @@
    "page": 3,
    "quote": "Overall Width 69.9 in.",
    "original": "Overall Width 69.9 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Overall Width"
   },
   {
@@ -381,7 +479,7 @@
    "page": 3,
    "quote": "69.9 in.",
    "original": "Overall Width 69.9 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Overall Width"
   },
   {
@@ -390,7 +488,7 @@
    "page": 3,
    "quote": "Overall Height 57.3 in.",
    "original": "Overall Height 57.3 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Overall Height"
   },
   {
@@ -399,44 +497,17 @@
    "page": 3,
    "quote": "57.3in.",
    "original": "Overall Height 57.3in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Overall Height"
   },
   {
    "key": "track_front_in",
-   "value": 60.3,
-   "page": 3,
-   "quote": "- Front 60.3 in.",
-   "original": "Tread Width - Front 60.3 in.",
-   "engine_text": "L/ LE/ S",
-   "row": "Tread Width - Front"
-  },
-  {
-   "key": "track_front_in",
    "value": 59.8,
    "page": 3,
    "quote": "59.8 in.",
    "original": "Tread Width - Front 59.8 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Tread Width - Front"
-  },
-  {
-   "key": "track_front_in",
-   "value": 59.8,
-   "page": 3,
-   "quote": "59.8 in.",
-   "original": "Tread Width - Front 59.8 in.",
-   "engine_text": "L/ LE/ S",
-   "row": "Tread Width - Front"
-  },
-  {
-   "key": "track_rear_in",
-   "value": 60.4,
-   "page": 3,
-   "quote": "- Rear 60.4 in.",
-   "original": "Tread Width - Rear 60.4 in.",
-   "engine_text": "L/ LE/ S",
-   "row": "Tread Width - Rear"
   },
   {
    "key": "track_rear_in",
@@ -444,16 +515,7 @@
    "page": 3,
    "quote": "59.9 in.",
    "original": "Tread Width - Rear 59.9 in.",
-   "engine_text": "L/ LE/ S",
-   "row": "Tread Width - Rear"
-  },
-  {
-   "key": "track_rear_in",
-   "value": 59.9,
-   "page": 3,
-   "quote": "59.9 in.",
-   "original": "Tread Width - Rear 59.9 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Tread Width - Rear"
   },
   {
@@ -462,7 +524,7 @@
    "page": 3,
    "quote": "Ground Clearance 5.5 in.",
    "original": "Ground Clearance 5.5 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Ground Clearance"
   },
   {
@@ -471,7 +533,7 @@
    "page": 3,
    "quote": "5.6 in.",
    "original": "Ground Clearance 5.6 in.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Ground Clearance"
   },
   {
@@ -480,7 +542,7 @@
    "page": 3,
    "quote": "Seating Capacity 5",
    "original": "Seating Capacity 5",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Seating Capacity"
   },
   {
@@ -489,7 +551,7 @@
    "page": 3,
    "quote": "5",
    "original": "Seating Capacity 5",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Seating Capacity"
   },
   {
@@ -498,8 +560,17 @@
    "page": 3,
    "quote": "EPA Passenger Volume 97.5 cu. ft. (w/o moonroof)",
    "original": "EPA Passenger Volume 97.5 cu. ft. (w/o moonroof)",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "EPA Passenger Volume (w/o moonroof)"
+  },
+  {
+   "key": "passenger_volume_cu_ft",
+   "value": 97.11,
+   "page": 3,
+   "quote": "97.11 cu. ft. (with moonroof)",
+   "original": "EPA Passenger Volume 97.11 cu. ft. (with moonroof)",
+   "engine_text": "L/LE/ LE Eco",
+   "row": "EPA Passenger Volume (with moonroof)"
   },
   {
    "key": "passenger_volume_cu_ft",
@@ -507,7 +578,7 @@
    "page": 3,
    "quote": "97.5 cu. ft. (w/o moonroof)",
    "original": "EPA Passenger Volume 97.5 cu. ft. (w/o moonroof)",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "EPA Passenger Volume (w/o moonroof)"
   },
   {
@@ -516,16 +587,7 @@
    "page": 3,
    "quote": "97.11 cu. ft. (with moonroof)",
    "original": "EPA Passenger Volume 97.11 cu. ft. (with moonroof)",
-   "engine_text": "L/ LE/ S",
-   "row": "EPA Passenger Volume (with moonroof)"
-  },
-  {
-   "key": "passenger_volume_cu_ft",
-   "value": 97.11,
-   "page": 3,
-   "quote": "97.11 cu. ft. (with moonroof)",
-   "original": "EPA Passenger Volume 97.11 cu. ft. (with moonroof)",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "EPA Passenger Volume (with moonroof)"
   },
   {
@@ -534,7 +596,7 @@
    "page": 3,
    "quote": "EPA Cargo Volume 13.0 cu. ft.",
    "original": "EPA Cargo Volume 13.0 cu. ft.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "EPA Cargo Volume"
   },
   {
@@ -543,35 +605,8 @@
    "page": 3,
    "quote": "13.0 cu. ft.",
    "original": "EPA Cargo Volume 13.0 cu. ft.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "EPA Cargo Volume"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 6,
-   "page": 3,
-   "quote": "6MT",
-   "original": "Curb Weight 6MT",
-   "engine_text": "L/ LE/ S",
-   "row": "Curb Weight"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 2800,
-   "page": 3,
-   "quote": "2,800lbs. ---",
-   "original": "Curb Weight 2,800lbs. ---",
-   "engine_text": "L/ LE/ S",
-   "row": "Curb Weight"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 6,
-   "page": 3,
-   "quote": "6MT",
-   "original": "Curb Weight 6MT",
-   "engine_text": "L/ LE/ S",
-   "row": "Curb Weight"
   },
   {
    "key": "curb_weight_lb",
@@ -579,16 +614,7 @@
    "page": 3,
    "quote": "2,855lbs.",
    "original": "Curb Weight 2,855lbs.",
-   "engine_text": "L/ LE/ S",
-   "row": "Curb Weight"
-  },
-  {
-   "key": "curb_weight_lb",
-   "value": 2845,
-   "page": 3,
-   "quote": "2,845lbs.",
-   "original": "Curb Weight 2,845lbs.",
-   "engine_text": "LE Eco",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Curb Weight"
   },
   {
@@ -597,7 +623,7 @@
    "page": 3,
    "quote": "2,865 lbs.",
    "original": "Curb Weight 2,865 lbs.",
-   "engine_text": "LE Eco",
+   "engine_text": "S",
    "row": "Curb Weight"
   },
   {
@@ -606,7 +632,7 @@
    "page": 3,
    "quote": "Maximum Towing Weight 0 lbs.",
    "original": "Maximum Towing Weight 0 lbs.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Maximum Towing Weight"
   },
   {
@@ -615,7 +641,7 @@
    "page": 3,
    "quote": "0 lbs.",
    "original": "Maximum Towing Weight 0 lbs.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Maximum Towing Weight"
   },
   {
@@ -624,7 +650,7 @@
    "page": 3,
    "quote": "Fuel Capacity 13.2 gal.",
    "original": "Fuel Capacity 13.2 gal.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "L/LE/ LE Eco",
    "row": "Fuel Capacity"
   },
   {
@@ -633,7 +659,7 @@
    "page": 3,
    "quote": "13.2 gal.",
    "original": "Fuel Capacity 13.2 gal.",
-   "engine_text": "L/ LE/ S",
+   "engine_text": "S",
    "row": "Fuel Capacity"
   }
  ]

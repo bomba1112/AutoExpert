@@ -27,11 +27,6 @@
  "engine_codes": [],
  "review": [
   {
-   "page": 1,
-   "row": "Horsepower",
-   "reason": "no hp value: '6,000 RPM'"
-  },
-  {
    "page": 2,
    "row": "Steering - Turning Circle Radius",
    "reason": "turning radius (not a turning-circle diameter); not converted"
@@ -85,10 +80,19 @@
   },
   {
    "key": "power_hp",
-   "value": 186,
+   "value": 243,
    "page": 1,
-   "quote": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @",
-   "original": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @",
+   "quote": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "engine_text": null,
+   "row": "Horsepower"
+  },
+  {
+   "key": "power_rpm",
+   "value": "6,000",
+   "page": 1,
+   "quote": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower 243 net combined hp, includes combustion engine with 186 hp @ 6,000 RPM",
    "engine_text": null,
    "row": "Horsepower"
   },
@@ -213,8 +217,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "XLE = 18-in. Machine Finish Alloy",
-   "original": "Wheel Size XLE = 18-in. Machine Finish Alloy",
+   "quote": "Wheel Size • XLE = 18-in. Machine Finish Alloy",
+   "original": "Wheel Size • XLE = 18-in. Machine Finish Alloy",
    "engine_text": "XLE",
    "row": "Wheel Size"
   },
@@ -222,8 +226,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "LIMITED = 20-in. Alloy with Chrome Finish",
-   "original": "Wheel Size LIMITED = 20-in. Alloy with Chrome Finish",
+   "quote": "• LIMITED = 20-in. Alloy with Chrome Finish",
+   "original": "Wheel Size • LIMITED = 20-in. Alloy with Chrome Finish",
    "engine_text": "LIMITED",
    "row": "Wheel Size"
   },
@@ -231,8 +235,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "PLATINUM = 20-in. Alloy",
-   "original": "Wheel Size PLATINUM = 20-in. Alloy",
+   "quote": "• PLATINUM = 20-in. Alloy",
+   "original": "Wheel Size • PLATINUM = 20-in. Alloy",
    "engine_text": "PLATINUM",
    "row": "Wheel Size"
   },
@@ -321,8 +325,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE = 7/8",
+   "quote": "Seating Capacity (standard/optional) • XLE = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE = 7/8",
    "engine_text": "XLE",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -330,8 +334,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "XLE = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE = 7/8",
+   "quote": "Seating Capacity (standard/optional) • XLE = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE = 7/8",
    "engine_text": "XLE",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -339,8 +343,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "LIMITED = 7/8",
-   "original": "Seating Capacity (standard/optional) LIMITED = 7/8",
+   "quote": "• LIMITED = 7/8",
+   "original": "Seating Capacity (standard/optional) • LIMITED = 7/8",
    "engine_text": "LIMITED",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -348,8 +352,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "LIMITED = 7/8",
-   "original": "Seating Capacity (standard/optional) LIMITED = 7/8",
+   "quote": "• LIMITED = 7/8",
+   "original": "Seating Capacity (standard/optional) • LIMITED = 7/8",
    "engine_text": "LIMITED",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -357,8 +361,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "PLATINUM = 7",
-   "original": "Seating Capacity (standard/optional) PLATINUM = 7",
+   "quote": "• PLATINUM = 7",
+   "original": "Seating Capacity (standard/optional) • PLATINUM = 7",
    "engine_text": "PLATINUM",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -366,8 +370,8 @@
    "key": "cargo_cu_ft",
    "value": 84.3,
    "page": 3,
-   "quote": "84.3 cu. ft.",
-   "original": "Cargo Volume - Behind front 84.3 cu. ft.",
+   "quote": "- Behind front • 84.3 cu. ft.",
+   "original": "Cargo Volume - Behind front • 84.3 cu. ft.",
    "engine_text": null,
    "row": "Cargo Volume - Behind front"
   },
@@ -375,8 +379,8 @@
    "key": "cargo_cu_ft",
    "value": 48.4,
    "page": 3,
-   "quote": "48.4 cu. ft.",
-   "original": "Cargo Volume - Behind second row 48.4 cu. ft.",
+   "quote": "- Behind second row • 48.4 cu. ft.",
+   "original": "Cargo Volume - Behind second row • 48.4 cu. ft.",
    "engine_text": null,
    "row": "Cargo Volume - Behind second row"
   },
@@ -384,8 +388,8 @@
    "key": "cargo_cu_ft",
    "value": 16,
    "page": 3,
-   "quote": "16 cu. ft.",
-   "original": "Cargo Volume - Behind third row 16 cu. ft.",
+   "quote": "- Behind third row • 16 cu. ft.",
+   "original": "Cargo Volume - Behind third row • 16 cu. ft.",
    "engine_text": null,
    "row": "Cargo Volume - Behind third row"
   },
@@ -393,8 +397,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 139.5,
    "page": 3,
-   "quote": "139.5 (w/ moonroof)",
-   "original": "Passenger Volume 139.5 (w/ moonroof)",
+   "quote": "Passenger Volume • 139.5 (w/ moonroof)",
+   "original": "Passenger Volume • 139.5 (w/ moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ moonroof)"
   },
@@ -402,17 +406,26 @@
    "key": "passenger_volume_cu_ft",
    "value": 136.3,
    "page": 3,
-   "quote": "136.3 (w/ panoramic roof)",
-   "original": "Passenger Volume 136.3 (w/ panoramic roof)",
+   "quote": "• 136.3 (w/ panoramic roof)",
+   "original": "Passenger Volume • 136.3 (w/ panoramic roof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ panoramic roof)"
   },
   {
    "key": "curb_weight_lb",
+   "value": 4515,
+   "page": 4,
+   "quote": "• XLE =: 4,515",
+   "original": "Curb Weight lbs. • XLE =: 4,515",
+   "engine_text": "XLE",
+   "row": "Curb Weight lbs."
+  },
+  {
+   "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "LIMITED = 4,595",
-   "original": "Curb Weight lbs. LIMITED = 4,595",
+   "quote": "Curb Weight lbs. • LIMITED = 4,595",
+   "original": "Curb Weight lbs. • LIMITED = 4,595",
    "engine_text": "LIMITED",
    "row": "Curb Weight lbs."
   },
@@ -420,8 +433,8 @@
    "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "PLATINUM = 4,595",
-   "original": "Curb Weight lbs. PLATINUM = 4,595",
+   "quote": "• PLATINUM = 4,595",
+   "original": "Curb Weight lbs. • PLATINUM = 4,595",
    "engine_text": "PLATINUM",
    "row": "Curb Weight lbs."
   },

@@ -27,11 +27,6 @@
  "engine_codes": [],
  "review": [
   {
-   "page": 1,
-   "row": "Horsepower",
-   "reason": "no hp value: '6,000 RPM'"
-  },
-  {
    "page": 2,
    "row": "Steering - Turning Circle Radius",
    "reason": "turning radius (not a turning-circle diameter); not converted"
@@ -85,10 +80,19 @@
   },
   {
    "key": "power_hp",
-   "value": 186,
+   "value": 243,
    "page": 1,
-   "quote": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @",
-   "original": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @",
+   "quote": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "engine_text": null,
+   "row": "Horsepower"
+  },
+  {
+   "key": "power_rpm",
+   "value": "6,000",
+   "page": 1,
+   "quote": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower 243 combined net hp, includes combustion engine with 186 hp @ 6,000 RPM",
    "engine_text": null,
    "row": "Horsepower"
   },
@@ -213,8 +217,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "XLE = 18-in. Machine Finish Alloy",
-   "original": "Wheel Size XLE = 18-in. Machine Finish Alloy",
+   "quote": "Wheel Size • XLE = 18-in. Machine Finish Alloy",
+   "original": "Wheel Size • XLE = 18-in. Machine Finish Alloy",
    "engine_text": "XLE",
    "row": "Wheel Size"
   },
@@ -222,8 +226,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "XLE NIGHTSHADE = 18-in. Black Alloy",
-   "original": "Wheel Size XLE NIGHTSHADE = 18-in. Black Alloy",
+   "quote": "• XLE NIGHTSHADE = 18-in. Black Alloy",
+   "original": "Wheel Size • XLE NIGHTSHADE = 18-in. Black Alloy",
    "engine_text": "XLE NIGHTSHADE",
    "row": "Wheel Size"
   },
@@ -231,8 +235,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "LIMITED = 20-in. Alloy with Chrome Finish",
-   "original": "Wheel Size LIMITED = 20-in. Alloy with Chrome Finish",
+   "quote": "• LIMITED = 20-in. Alloy with Chrome Finish",
+   "original": "Wheel Size • LIMITED = 20-in. Alloy with Chrome Finish",
    "engine_text": "LIMITED",
    "row": "Wheel Size"
   },
@@ -240,8 +244,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "25th EDITION, PLATINUM = 20-in. Alloy",
-   "original": "Wheel Size 25th EDITION, PLATINUM = 20-in. Alloy",
+   "quote": "• 25th EDITION, PLATINUM = 20-in. Alloy",
+   "original": "Wheel Size • 25th EDITION, PLATINUM = 20-in. Alloy",
    "engine_text": "25th EDITION, PLATINUM",
    "row": "Wheel Size"
   },
@@ -330,8 +334,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE = 7/8",
+   "quote": "Seating Capacity (standard/optional) • XLE = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE = 7/8",
    "engine_text": "XLE",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -339,8 +343,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "XLE = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE = 7/8",
+   "quote": "Seating Capacity (standard/optional) • XLE = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE = 7/8",
    "engine_text": "XLE",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -348,8 +352,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE NIGHTSHADE = 7",
-   "original": "Seating Capacity (standard/optional) XLE NIGHTSHADE = 7",
+   "quote": "• XLE NIGHTSHADE = 7",
+   "original": "Seating Capacity (standard/optional) • XLE NIGHTSHADE = 7",
    "engine_text": "XLE NIGHTSHADE",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -357,8 +361,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "LIMITED/25th Ed. = 7",
-   "original": "Seating Capacity (standard/optional) LIMITED/25th Ed. = 7",
+   "quote": "• LIMITED/25th Ed. = 7",
+   "original": "Seating Capacity (standard/optional) • LIMITED/25th Ed. = 7",
    "engine_text": "LIMITED/25th Ed.",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -366,17 +370,44 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "PLATINUM = 7",
-   "original": "Seating Capacity (standard/optional) PLATINUM = 7",
+   "quote": "• PLATINUM = 7",
+   "original": "Seating Capacity (standard/optional) • PLATINUM = 7",
    "engine_text": "PLATINUM",
    "row": "Seating Capacity (standard/optional)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 84.3,
+   "page": 3,
+   "quote": "- Behind front 84.3 cu. ft.",
+   "original": "Cargo Volume - Behind front 84.3 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind front"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 48.4,
+   "page": 4,
+   "quote": "- Behind second row 48.4 cu. ft.",
+   "original": "Cargo Volume - Behind second row 48.4 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind second row"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 16,
+   "page": 4,
+   "quote": "- Behind third row 16 cu. ft.",
+   "original": "Cargo Volume - Behind third row 16 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind third row"
   },
   {
    "key": "passenger_volume_cu_ft",
    "value": 139.5,
    "page": 4,
-   "quote": "139.5 (w/ moonroof)",
-   "original": "Passenger Volume 139.5 (w/ moonroof)",
+   "quote": "Passenger Volume • 139.5 (w/ moonroof)",
+   "original": "Passenger Volume • 139.5 (w/ moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ moonroof)"
   },
@@ -384,8 +415,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 136.3,
    "page": 4,
-   "quote": "136.3 (w/ panoramic)",
-   "original": "Passenger Volume 136.3 (w/ panoramic)",
+   "quote": "• 136.3 (w/ panoramic)",
+   "original": "Passenger Volume • 136.3 (w/ panoramic)",
    "engine_text": null,
    "row": "Passenger Volume (w/ panoramic)"
   },
@@ -393,8 +424,17 @@
    "key": "curb_weight_lb",
    "value": 4515,
    "page": 4,
-   "quote": "XLE NIGHTSHADE =: 4,515",
-   "original": "Curb Weight lbs. XLE NIGHTSHADE =: 4,515",
+   "quote": "• XLE =: 4,515",
+   "original": "Curb Weight lbs. • XLE =: 4,515",
+   "engine_text": "XLE",
+   "row": "Curb Weight lbs."
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4515,
+   "page": 4,
+   "quote": "Curb Weight lbs. • XLE NIGHTSHADE =: 4,515",
+   "original": "Curb Weight lbs. • XLE NIGHTSHADE =: 4,515",
    "engine_text": "XLE NIGHTSHADE",
    "row": "Curb Weight lbs."
   },
@@ -402,8 +442,8 @@
    "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "LIMITED/25th Ed. = 4,595",
-   "original": "Curb Weight lbs. LIMITED/25th Ed. = 4,595",
+   "quote": "• LIMITED/25th Ed. = 4,595",
+   "original": "Curb Weight lbs. • LIMITED/25th Ed. = 4,595",
    "engine_text": "LIMITED/25th Ed.",
    "row": "Curb Weight lbs."
   },
@@ -411,8 +451,8 @@
    "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "PLATINUM: 4,595",
-   "original": "Curb Weight lbs. PLATINUM: 4,595",
+   "quote": "• PLATINUM: 4,595",
+   "original": "Curb Weight lbs. • PLATINUM: 4,595",
    "engine_text": "PLATINUM",
    "row": "Curb Weight lbs."
   },

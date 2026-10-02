@@ -27,11 +27,6 @@
  "engine_codes": [],
  "review": [
   {
-   "page": 1,
-   "row": "Horsepower",
-   "reason": "no hp value: '6,000 RPM'"
-  },
-  {
    "page": 2,
    "row": "Steering - Turning Circle Radius (ft.)",
    "reason": "turning radius (not a turning-circle diameter); not converted"
@@ -87,8 +82,17 @@
    "key": "power_hp",
    "value": 186,
    "page": 1,
-   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @",
-   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @",
+   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM",
+   "engine_text": "Combined net hp",
+   "row": "Horsepower"
+  },
+  {
+   "key": "power_rpm",
+   "value": "6,000",
+   "page": 1,
+   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM",
+   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM",
    "engine_text": "Combined net hp",
    "row": "Horsepower"
   },
@@ -213,8 +217,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 3,
-   "quote": "LE = 18-in. Painted Alloy",
-   "original": "Wheel Size LE = 18-in. Painted Alloy",
+   "quote": "Wheel Size • LE = 18-in. Painted Alloy",
+   "original": "Wheel Size • LE = 18-in. Painted Alloy",
    "engine_text": "LE",
    "row": "Wheel Size"
   },
@@ -222,8 +226,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 3,
-   "quote": "XLE = 18-in. Machined Alloy",
-   "original": "Wheel Size XLE = 18-in. Machined Alloy",
+   "quote": "• XLE = 18-in. Machined Alloy",
+   "original": "Wheel Size • XLE = 18-in. Machined Alloy",
    "engine_text": "XLE",
    "row": "Wheel Size"
   },
@@ -231,8 +235,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 3,
-   "quote": "Nightshade = 18-in. Black Painted Alloy",
-   "original": "Wheel Size Nightshade = 18-in. Black Painted Alloy",
+   "quote": "• Nightshade = 18-in. Black Painted Alloy",
+   "original": "Wheel Size • Nightshade = 18-in. Black Painted Alloy",
    "engine_text": "Nightshade",
    "row": "Wheel Size"
   },
@@ -240,8 +244,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 3,
-   "quote": "LIMITED = 20-in. Alloy with Chrome Finish",
-   "original": "Wheel Size LIMITED = 20-in. Alloy with Chrome Finish",
+   "quote": "• LIMITED = 20-in. Alloy with Chrome Finish",
+   "original": "Wheel Size • LIMITED = 20-in. Alloy with Chrome Finish",
    "engine_text": "LIMITED",
    "row": "Wheel Size"
   },
@@ -249,8 +253,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 3,
-   "quote": "PLATINUM = 20-in. Painted Alloy",
-   "original": "Wheel Size PLATINUM = 20-in. Painted Alloy",
+   "quote": "• PLATINUM = 20-in. Painted Alloy",
+   "original": "Wheel Size • PLATINUM = 20-in. Painted Alloy",
    "engine_text": "PLATINUM",
    "row": "Wheel Size"
   },
@@ -339,8 +343,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "LE (All) = 8",
-   "original": "Seating Capacity (standard/optional) LE (All) = 8",
+   "quote": "Seating Capacity (standard/optional) • LE (All) = 8",
+   "original": "Seating Capacity (standard/optional) • LE (All) = 8",
    "engine_text": "LE (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -348,8 +352,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "LE NIGHTSHADE (All) = 8",
-   "original": "Seating Capacity (standard/optional) LE NIGHTSHADE (All) = 8",
+   "quote": "• LE NIGHTSHADE (All) = 8",
+   "original": "Seating Capacity (standard/optional) • LE NIGHTSHADE (All) = 8",
    "engine_text": "LE NIGHTSHADE (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -357,8 +361,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE (All) = 7/8",
+   "quote": "• XLE (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE (All) = 7/8",
    "engine_text": "XLE (All)",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -366,8 +370,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "XLE (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE (All) = 7/8",
+   "quote": "• XLE (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE (All) = 7/8",
    "engine_text": "XLE (All)",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -375,8 +379,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE NIGHTSHADE (All) = 7",
-   "original": "Seating Capacity (standard/optional) XLE NIGHTSHADE (All) = 7",
+   "quote": "• XLE NIGHTSHADE (All) = 7",
+   "original": "Seating Capacity (standard/optional) • XLE NIGHTSHADE (All) = 7",
    "engine_text": "XLE NIGHTSHADE (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -384,8 +388,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "LIMITED (All) = 7",
-   "original": "Seating Capacity (standard/optional) LIMITED (All) = 7",
+   "quote": "• LIMITED (All) = 7",
+   "original": "Seating Capacity (standard/optional) • LIMITED (All) = 7",
    "engine_text": "LIMITED (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -393,17 +397,44 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "PLATINUM (All) = 7",
-   "original": "Seating Capacity (standard/optional) PLATINUM (All) = 7",
+   "quote": "• PLATINUM (All) = 7",
+   "original": "Seating Capacity (standard/optional) • PLATINUM (All) = 7",
    "engine_text": "PLATINUM (All)",
    "row": "Seating Capacity (standard/optional)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 84.3,
+   "page": 4,
+   "quote": "- Behind front 84.3 cu. ft.",
+   "original": "Cargo Volume - Behind front 84.3 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind front"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 48.4,
+   "page": 4,
+   "quote": "- Behind second row 48.4 cu. ft.",
+   "original": "Cargo Volume - Behind second row 48.4 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind second row"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 16,
+   "page": 4,
+   "quote": "- Behind third row 16 cu. ft.",
+   "original": "Cargo Volume - Behind third row 16 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind third row"
   },
   {
    "key": "passenger_volume_cu_ft",
    "value": 141.8,
    "page": 4,
-   "quote": "141.8 (w/o moonroof)",
-   "original": "Passenger Volume 141.8 (w/o moonroof)",
+   "quote": "Passenger Volume • 141.8 (w/o moonroof)",
+   "original": "Passenger Volume • 141.8 (w/o moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/o moonroof)"
   },
@@ -411,8 +442,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 139.5,
    "page": 4,
-   "quote": "139.5 (w/ moonroof)",
-   "original": "Passenger Volume 139.5 (w/ moonroof)",
+   "quote": "• 139.5 (w/ moonroof)",
+   "original": "Passenger Volume • 139.5 (w/ moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ moonroof)"
   },
@@ -420,8 +451,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 136.3,
    "page": 4,
-   "quote": "136.3 (w/ panoramic)",
-   "original": "Passenger Volume 136.3 (w/ panoramic)",
+   "quote": "• 136.3 (w/ panoramic)",
+   "original": "Passenger Volume • 136.3 (w/ panoramic)",
    "engine_text": null,
    "row": "Passenger Volume (w/ panoramic)"
   },
@@ -429,8 +460,8 @@
    "key": "curb_weight_lb",
    "value": 4330,
    "page": 4,
-   "quote": "LE = 4,330/4,465",
-   "original": "Curb Weight (FWD/AWD) LE = 4,330/4,465",
+   "quote": "Curb Weight (FWD/AWD) • LE = 4,330/4,465",
+   "original": "Curb Weight (FWD/AWD) • LE = 4,330/4,465",
    "engine_text": "LE; FWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -438,8 +469,8 @@
    "key": "curb_weight_lb",
    "value": 4465,
    "page": 4,
-   "quote": "LE = 4,330/4,465",
-   "original": "Curb Weight (FWD/AWD) LE = 4,330/4,465",
+   "quote": "Curb Weight (FWD/AWD) • LE = 4,330/4,465",
+   "original": "Curb Weight (FWD/AWD) • LE = 4,330/4,465",
    "engine_text": "LE; AWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -465,8 +496,8 @@
    "key": "curb_weight_lb",
    "value": 4365,
    "page": 4,
-   "quote": "XLE =: 4,365/4,515",
-   "original": "Curb Weight (FWD/AWD) XLE =: 4,365/4,515",
+   "quote": "• XLE =: 4,365/4,515",
+   "original": "Curb Weight (FWD/AWD) • XLE =: 4,365/4,515",
    "engine_text": "XLE; FWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -474,8 +505,8 @@
    "key": "curb_weight_lb",
    "value": 4515,
    "page": 4,
-   "quote": "XLE =: 4,365/4,515",
-   "original": "Curb Weight (FWD/AWD) XLE =: 4,365/4,515",
+   "quote": "• XLE =: 4,365/4,515",
+   "original": "Curb Weight (FWD/AWD) • XLE =: 4,365/4,515",
    "engine_text": "XLE; AWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -483,8 +514,8 @@
    "key": "curb_weight_lb",
    "value": 4365,
    "page": 4,
-   "quote": "XLE NIGHTSHADE =: 4,365/4,515",
-   "original": "Curb Weight (FWD/AWD) XLE NIGHTSHADE =: 4,365/4,515",
+   "quote": "• XLE NIGHTSHADE =: 4,365/4,515",
+   "original": "Curb Weight (FWD/AWD) • XLE NIGHTSHADE =: 4,365/4,515",
    "engine_text": "XLE NIGHTSHADE; FWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -492,8 +523,8 @@
    "key": "curb_weight_lb",
    "value": 4515,
    "page": 4,
-   "quote": "XLE NIGHTSHADE =: 4,365/4,515",
-   "original": "Curb Weight (FWD/AWD) XLE NIGHTSHADE =: 4,365/4,515",
+   "quote": "• XLE NIGHTSHADE =: 4,365/4,515",
+   "original": "Curb Weight (FWD/AWD) • XLE NIGHTSHADE =: 4,365/4,515",
    "engine_text": "XLE NIGHTSHADE; AWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -501,8 +532,8 @@
    "key": "curb_weight_lb",
    "value": 4430,
    "page": 4,
-   "quote": "LIMITED = 4,430/4,595",
-   "original": "Curb Weight (FWD/AWD) LIMITED = 4,430/4,595",
+   "quote": "• LIMITED = 4,430/4,595",
+   "original": "Curb Weight (FWD/AWD) • LIMITED = 4,430/4,595",
    "engine_text": "LIMITED; FWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -510,8 +541,8 @@
    "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "LIMITED = 4,430/4,595",
-   "original": "Curb Weight (FWD/AWD) LIMITED = 4,430/4,595",
+   "quote": "• LIMITED = 4,430/4,595",
+   "original": "Curb Weight (FWD/AWD) • LIMITED = 4,430/4,595",
    "engine_text": "LIMITED; AWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -519,8 +550,8 @@
    "key": "curb_weight_lb",
    "value": 4430,
    "page": 4,
-   "quote": "PLATINUM: 4,430/4,595",
-   "original": "Curb Weight (FWD/AWD) PLATINUM: 4,430/4,595",
+   "quote": "• PLATINUM: 4,430/4,595",
+   "original": "Curb Weight (FWD/AWD) • PLATINUM: 4,430/4,595",
    "engine_text": "PLATINUM; FWD",
    "row": "Curb Weight (FWD/AWD)"
   },
@@ -528,10 +559,19 @@
    "key": "curb_weight_lb",
    "value": 4595,
    "page": 4,
-   "quote": "PLATINUM: 4,430/4,595",
-   "original": "Curb Weight (FWD/AWD) PLATINUM: 4,430/4,595",
+   "quote": "• PLATINUM: 4,430/4,595",
+   "original": "Curb Weight (FWD/AWD) • PLATINUM: 4,430/4,595",
    "engine_text": "PLATINUM; AWD",
    "row": "Curb Weight (FWD/AWD)"
+  },
+  {
+   "key": "towing_lb",
+   "value": 6000,
+   "page": 4,
+   "quote": "AWD = 6,000",
+   "original": "Max Towing Capacity AWD = 6,000",
+   "engine_text": "AWD",
+   "row": "Max Towing Capacity"
   },
   {
    "key": "towing_lb",

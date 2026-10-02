@@ -25,14 +25,17 @@
  "edition_market": "US",
  "status": "ok",
  "engine_codes": [],
- "review": [
-  {
-   "page": 1,
-   "row": "Hybrid System Net Horsepower",
-   "reason": "no hp value: '219 combined net hp'"
-  }
- ],
+ "review": [],
  "facts": [
+  {
+   "key": "system_power_hp",
+   "value": 219,
+   "page": 1,
+   "quote": "Hybrid System Net Horsepower 219 combined net hp",
+   "original": "Hybrid System Net Horsepower 219 combined net hp",
+   "engine_text": null,
+   "row": "Hybrid System Net Horsepower"
+  },
   {
    "key": "engine_description",
    "value": "2.5-liter Dynamic Force 4-cylinder, aluminum alloy block with aluminum alloy cylinder head",
@@ -161,11 +164,20 @@
   },
   {
    "key": "rear_suspension",
-   "value": "Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar (SE and XSE HV only) Woodland Edition: Multi-link rear suspension with stabilizer bar (Unique shocks, struts, jounce bumpers)",
+   "value": "Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar",
    "page": 2,
-   "quote": "- Rear Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar (SE and XSE HV only) Woodland Edition: Multi-link rear suspension with stabilizer bar (Unique shocks, struts, jounce bumpers)",
-   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar (SE and XSE HV only) Woodland Edition: Multi-link rear suspension with stabilizer bar (Unique shocks, struts, jounce bumpers)",
-   "engine_text": null,
+   "quote": "- Rear Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar (SE and XSE HV only)",
+   "original": "Suspension - Rear Multi-link rear suspension with stabilizer bar Sport-tuned multi-link rear suspension with stabilizer bar (SE and XSE HV only)",
+   "engine_text": "SE and XSE HV only",
+   "row": "Suspension - Rear"
+  },
+  {
+   "key": "rear_suspension",
+   "value": "Woodland Edition: Multi-link rear suspension with stabilizer bar",
+   "page": 2,
+   "quote": "Woodland Edition: Multi-link rear suspension with stabilizer bar (Unique shocks, struts, jounce bumpers)",
+   "original": "Suspension - Rear Woodland Edition: Multi-link rear suspension with stabilizer bar (Unique shocks, struts, jounce bumpers)",
+   "engine_text": "Unique shocks, struts, jounce bumpers",
    "row": "Suspension - Rear"
   },
   {
@@ -206,10 +218,10 @@
   },
   {
    "key": "rear_brakes",
-   "value": "Solid Disc #Toyota #RAV4",
+   "value": "Solid Disc",
    "page": 2,
    "quote": "- Rear Type Solid Disc",
-   "original": "Brakes - Rear Type Solid Disc #Toyota #RAV4",
+   "original": "Brakes - Rear Type Solid Disc",
    "engine_text": null,
    "row": "Brakes - Rear Type"
   },

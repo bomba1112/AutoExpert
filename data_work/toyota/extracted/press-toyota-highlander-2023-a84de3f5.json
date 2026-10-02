@@ -25,18 +25,7 @@
  "edition_market": "US",
  "status": "ok",
  "engine_codes": [],
- "review": [
-  {
-   "page": 1,
-   "row": "Horsepower",
-   "reason": "no hp value: '6,000 RPM (LE → PLTM FWD/AWD Hybrid)'"
-  },
-  {
-   "page": 2,
-   "row": "Steering - Turning Circle Radius (ft.)",
-   "reason": "turning radius (not a turning-circle diameter); not converted"
-  }
- ],
+ "review": [],
  "facts": [
   {
    "key": "engine_description",
@@ -87,9 +76,18 @@
    "key": "power_hp",
    "value": 186,
    "page": 1,
-   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @",
-   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @",
-   "engine_text": "Combined net hp",
+   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "engine_text": "LE → PLTM FWD/AWD Hybrid",
+   "row": "Horsepower"
+  },
+  {
+   "key": "power_rpm",
+   "value": "6,000",
+   "page": 1,
+   "quote": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "original": "Horsepower Combined net hp 243, includes combustion engine with 186 hp @ 6,000 RPM (LE → PLTM FWD/AWD Hybrid)",
+   "engine_text": "LE → PLTM FWD/AWD Hybrid",
    "row": "Horsepower"
   },
   {
@@ -165,6 +163,15 @@
    "row": "Steering - Turning Circle Diameter (ft.)"
   },
   {
+   "key": "turning_circle_ft",
+   "value": 36.1,
+   "page": 2,
+   "quote": "- Turning Circle 36.1 ft.",
+   "original": "Steering - Turning Circle 36.1 ft.",
+   "engine_text": null,
+   "row": "Steering - Turning Circle"
+  },
+  {
    "key": "front_brakes",
    "value": "Power-assisted Ventilated disc",
    "page": 2,
@@ -204,8 +211,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "LE (All) = 18-in. Painted Alloy",
-   "original": "Wheel Size LE (All) = 18-in. Painted Alloy",
+   "quote": "Wheel Size • LE (All) = 18-in. Painted Alloy",
+   "original": "Wheel Size • LE (All) = 18-in. Painted Alloy",
    "engine_text": "LE (All)",
    "row": "Wheel Size"
   },
@@ -213,8 +220,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "XLE (All) = 18-in. Machined Alloy",
-   "original": "Wheel Size XLE (All) = 18-in. Machined Alloy",
+   "quote": "• XLE (All) = 18-in. Machined Alloy",
+   "original": "Wheel Size • XLE (All) = 18-in. Machined Alloy",
    "engine_text": "XLE (All)",
    "row": "Wheel Size"
   },
@@ -222,8 +229,8 @@
    "key": "wheel_size_in",
    "value": 18,
    "page": 2,
-   "quote": "Bronze Edition = 18-in. bronze-finish alloy wheels",
-   "original": "Wheel Size Bronze Edition = 18-in. bronze-finish alloy wheels",
+   "quote": "• Bronze Edition = 18-in. bronze-finish alloy wheels",
+   "original": "Wheel Size • Bronze Edition = 18-in. bronze-finish alloy wheels",
    "engine_text": "Bronze Edition",
    "row": "Wheel Size"
   },
@@ -231,8 +238,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "LTD (All) = 20-in. Alloy",
-   "original": "Wheel Size LTD (All) = 20-in. Alloy",
+   "quote": "• LTD (All) = 20-in. Alloy",
+   "original": "Wheel Size • LTD (All) = 20-in. Alloy",
    "engine_text": "LTD (All)",
    "row": "Wheel Size"
   },
@@ -240,8 +247,8 @@
    "key": "wheel_size_in",
    "value": 20,
    "page": 2,
-   "quote": "PLTM (All) = 20-in. Painted Alloy",
-   "original": "Wheel Size PLTM (All) = 20-in. Painted Alloy",
+   "quote": "• PLTM (All) = 20-in. Painted Alloy",
+   "original": "Wheel Size • PLTM (All) = 20-in. Painted Alloy",
    "engine_text": "PLTM (All)",
    "row": "Wheel Size"
   },
@@ -330,8 +337,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "LE (All) = 8",
-   "original": "Seating Capacity (standard/optional) LE (All) = 8",
+   "quote": "Seating Capacity (standard/optional) • LE (All) = 8",
+   "original": "Seating Capacity (standard/optional) • LE (All) = 8",
    "engine_text": "LE (All)",
    "row": "Seating Capacity (standard/optional)"
   },
@@ -339,8 +346,8 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
+   "quote": "• XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
    "engine_text": "XLE/BRONZE (All)",
    "row": "Seating Capacity (standard/optional) [standard]"
   },
@@ -348,8 +355,8 @@
    "key": "seats",
    "value": 8,
    "page": 3,
-   "quote": "XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
-   "original": "Seating Capacity (standard/optional) XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
+   "quote": "• XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
+   "original": "Seating Capacity (standard/optional) • XLE/BRONZE (All) = 7/8LTD (All) = 7/8",
    "engine_text": "XLE/BRONZE (All)",
    "row": "Seating Capacity (standard/optional) [optional]"
   },
@@ -357,17 +364,44 @@
    "key": "seats",
    "value": 7,
    "page": 3,
-   "quote": "PLTM (All) = 7",
-   "original": "Seating Capacity (standard/optional) PLTM (All) = 7",
+   "quote": "• PLTM (All) = 7",
+   "original": "Seating Capacity (standard/optional) • PLTM (All) = 7",
    "engine_text": "PLTM (All)",
    "row": "Seating Capacity (standard/optional)"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 84.3,
+   "page": 4,
+   "quote": "- Behind front 84.3 cu. ft.",
+   "original": "Cargo Volume - Behind front 84.3 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind front"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 48.4,
+   "page": 4,
+   "quote": "- Behind second row 48.4 cu. ft.",
+   "original": "Cargo Volume - Behind second row 48.4 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind second row"
+  },
+  {
+   "key": "cargo_cu_ft",
+   "value": 16,
+   "page": 4,
+   "quote": "- Behind third row 16 cu. ft.",
+   "original": "Cargo Volume - Behind third row 16 cu. ft.",
+   "engine_text": null,
+   "row": "Cargo Volume - Behind third row"
   },
   {
    "key": "passenger_volume_cu_ft",
    "value": 141.3,
    "page": 4,
-   "quote": "141.3 (w/o moonroof)",
-   "original": "Passenger Volume 141.3 (w/o moonroof)",
+   "quote": "Passenger Volume • 141.3 (w/o moonroof)",
+   "original": "Passenger Volume • 141.3 (w/o moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/o moonroof)"
   },
@@ -375,8 +409,8 @@
    "key": "passenger_volume_cu_ft",
    "value": 139.1,
    "page": 4,
-   "quote": "139.1 (w/ moonroof)",
-   "original": "Passenger Volume 139.1 (w/ moonroof)",
+   "quote": "• 139.1 (w/ moonroof)",
+   "original": "Passenger Volume • 139.1 (w/ moonroof)",
    "engine_text": null,
    "row": "Passenger Volume (w/ moonroof)"
   },
@@ -384,10 +418,28 @@
    "key": "passenger_volume_cu_ft",
    "value": 136.1,
    "page": 4,
-   "quote": "136.1 (w/ panoramic)",
-   "original": "Passenger Volume 136.1 (w/ panoramic)",
+   "quote": "• 136.1 (w/ panoramic)",
+   "original": "Passenger Volume • 136.1 (w/ panoramic)",
    "engine_text": null,
    "row": "Passenger Volume (w/ panoramic)"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4330,
+   "page": 4,
+   "quote": "• LE HV 4,330/4,465",
+   "original": "Curb Weight (FWD/AWD) • LE HV 4,330/4,465",
+   "engine_text": "LE HV; FWD",
+   "row": "Curb Weight (FWD/AWD)"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 4465,
+   "page": 4,
+   "quote": "• LE HV 4,330/4,465",
+   "original": "Curb Weight (FWD/AWD) • LE HV 4,330/4,465",
+   "engine_text": "LE HV; AWD",
+   "row": "Curb Weight (FWD/AWD)"
   },
   {
    "key": "curb_weight_lb",

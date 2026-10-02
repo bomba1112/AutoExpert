@@ -27,9 +27,9 @@
  "engine_codes": [],
  "review": [
   {
-   "page": 1,
-   "row": "Horsepower",
-   "reason": "no hp value: '300 @ 6,500 RPM'"
+   "page": 2,
+   "row": "Steering - Turning Circle Diameter",
+   "reason": "no value with unit ft: '5.5 m'"
   }
  ],
  "facts": [
@@ -52,13 +52,22 @@
    "row": "Compression Ratio"
   },
   {
-   "key": "transmission_description",
-   "value": "6-speed intelligent Manual Transmission (iMT) with rev- matching",
+   "key": "power_hp",
+   "value": 300,
    "page": 1,
-   "quote": "6-speed intelligent Manual Transmission (iMT) with rev- Transmission Type matching",
-   "original": "Transmission Type 6-speed intelligent Manual Transmission (iMT) with rev- matching",
+   "quote": "Horsepower 300 @ 6,500 RPM",
+   "original": "Horsepower 300 @ 6,500 RPM",
    "engine_text": null,
-   "row": "Transmission Type"
+   "row": "Horsepower"
+  },
+  {
+   "key": "power_rpm",
+   "value": "6,500",
+   "page": 1,
+   "quote": "Horsepower 300 @ 6,500 RPM",
+   "original": "Horsepower 300 @ 6,500 RPM",
+   "engine_text": null,
+   "row": "Horsepower"
   },
   {
    "key": "front_suspension",
@@ -68,15 +77,6 @@
    "original": "Suspension - Front MacPherson-type strut",
    "engine_text": null,
    "row": "Suspension - Front"
-  },
-  {
-   "key": "turning_circle_ft",
-   "value": 5.5,
-   "page": 2,
-   "quote": "- Turning Circle Diameter 5.5 m",
-   "original": "Steering - Turning Circle Diameter 5.5 m",
-   "engine_text": null,
-   "row": "Steering - Turning Circle Diameter"
   },
   {
    "key": "front_brakes",
@@ -167,15 +167,6 @@
    "original": "EPA Passenger Volume (cu. ft.) 84.6 cu.ft.",
    "engine_text": null,
    "row": "EPA Passenger Volume (cu. ft.)"
-  },
-  {
-   "key": "cargo_cu_ft",
-   "value": 17.8,
-   "page": 3,
-   "quote": "EPA Cargo Volume Behind Second Row 17.8 cu.ft.",
-   "original": "EPA Cargo Volume Behind Second Row 3252 lbs. (Core Grade) 17.8 cu.ft.",
-   "engine_text": null,
-   "row": "EPA Cargo Volume Behind Second Row 3252 lbs. (Core Grade)"
   },
   {
    "key": "fuel_tank_gal",

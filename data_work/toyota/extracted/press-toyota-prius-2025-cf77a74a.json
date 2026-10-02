@@ -24,23 +24,10 @@
  "pages": 10,
  "edition_market": "US",
  "status": "ok",
- "engine_codes": [],
+ "engine_codes": [
+  "M20A-FXS"
+ ],
  "review": [
-  {
-   "page": 3,
-   "row": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD)",
-   "reason": "wheel size not readable: '17-in. alloy wheels with cover and 195/60R17 tires'"
-  },
-  {
-   "page": 3,
-   "row": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD)",
-   "reason": "wheel size not readable: '19-in. alloy wheels and 195/50R19 tires'"
-  },
-  {
-   "page": 3,
-   "row": "Tread Width (Front/Rear)",
-   "reason": "front/rear label but one value: '61.7 in. / 61.8 in.'"
-  },
   {
    "page": 4,
    "row": "EPA Cargo Volume (Seats up; Manufacturer Estimated)",
@@ -48,6 +35,15 @@
   }
  ],
  "facts": [
+  {
+   "key": "engine_description",
+   "value": "2.0-Liter 4 -cylinder aluminum block and head, double overhead c am (DOHC) 16-valve VVT-i",
+   "page": 1,
+   "quote": "2.0-Liter 4 -cylinder aluminum block and head, double Type, Materials overhead c am (DOHC) 16-valve VVT-i",
+   "original": "Type, Materials 2.0-Liter 4 -cylinder aluminum block and head, double overhead c am (DOHC) 16-valve VVT-i",
+   "engine_text": null,
+   "row": "Type, Materials"
+  },
   {
    "key": "valvetrain",
    "value": "4-valve/cylinder with VVT-i",
@@ -238,6 +234,24 @@
    "row": "Brakes - Rear Diameter"
   },
   {
+   "key": "wheel_size_in",
+   "value": 17,
+   "page": 3,
+   "quote": "LE (FWD, AWD) 17-in. alloy wheels with cover and 195/60R17 tires",
+   "original": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD) 17-in. alloy wheels with cover and 195/60R17 tires",
+   "engine_text": null,
+   "row": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD)"
+  },
+  {
+   "key": "wheel_size_in",
+   "value": 19,
+   "page": 3,
+   "quote": "19-in. alloy wheels and 195/50R19 tires",
+   "original": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD) 19-in. alloy wheels and 195/50R19 tires",
+   "engine_text": null,
+   "row": "Wheel Size LE (FWD, AWD) XLE/Nightshade/ Limited (FWD, AWD)"
+  },
+  {
    "key": "wheelbase_in",
    "value": 108.3,
    "page": 3,
@@ -301,6 +315,24 @@
    "row": "Ground Clearance"
   },
   {
+   "key": "track_front_in",
+   "value": 61.7,
+   "page": 3,
+   "quote": "Tread Width (Front/Rear) 61.7 in. / 61.8 in.",
+   "original": "Tread Width (Front/Rear) 61.7 in. / 61.8 in.",
+   "engine_text": null,
+   "row": "Tread Width (Front/Rear)"
+  },
+  {
+   "key": "track_rear_in",
+   "value": 61.8,
+   "page": 3,
+   "quote": "Tread Width (Front/Rear) 61.7 in. / 61.8 in.",
+   "original": "Tread Width (Front/Rear) 61.7 in. / 61.8 in.",
+   "engine_text": null,
+   "row": "Tread Width (Front/Rear)"
+  },
+  {
    "key": "seats",
    "value": 5,
    "page": 3,
@@ -326,6 +358,33 @@
    "original": "EPA Cargo Volume (Seats up; Manufacturer Estimated) 23.8 ft.3 (LE grades)",
    "engine_text": "LE grades",
    "row": "EPA Cargo Volume (Seats up; Manufacturer Estimated)"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 3097,
+   "page": 4,
+   "quote": "3097 lbs. (LE)",
+   "original": "Curb Weight 3097 lbs. (LE)",
+   "engine_text": "LE",
+   "row": "Curb Weight"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 3164,
+   "page": 4,
+   "quote": "3164 lbs. (XLE/Nightshade)",
+   "original": "Curb Weight 3164 lbs. (XLE/Nightshade)",
+   "engine_text": "XLE/Nightshade",
+   "row": "Curb Weight"
+  },
+  {
+   "key": "curb_weight_lb",
+   "value": 3219,
+   "page": 4,
+   "quote": "3219 lbs. (Limited)",
+   "original": "Curb Weight 3219 lbs. (Limited)",
+   "engine_text": "Limited",
+   "row": "Curb Weight"
   },
   {
    "key": "curb_weight_lb",
