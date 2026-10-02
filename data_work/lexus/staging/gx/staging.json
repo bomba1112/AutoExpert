@@ -1,0 +1,5304 @@
+{
+ "make": "Lexus",
+ "line": "GX",
+ "line_key": "lexus/gx",
+ "db_models": [
+  "GX"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-lexus-2014": {
+   "key": "vpic-ca-lexus-2014",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2014.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2014&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "a248d557c963c411e66c1638dc95b8cc88d742319460f6a72f52082db3960395",
+   "retrieved_at": "2026-10-02T08:33:57+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2014 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "vpic-ca-lexus-2015": {
+   "key": "vpic-ca-lexus-2015",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2015.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2015&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "cb7c350481802e6e781d014528177127584dcc91f9ff86e3cf920fe9dde54ee9",
+   "retrieved_at": "2026-10-02T08:34:02+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2015 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "vpic-ca-lexus-2016": {
+   "key": "vpic-ca-lexus-2016",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2016.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2016&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "20e612d871a63dd859c0a84a518c3f7b1c16d3d520f6a94a57fb5c172445da97",
+   "retrieved_at": "2026-10-02T08:34:08+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2016 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "vpic-ca-lexus-2017": {
+   "key": "vpic-ca-lexus-2017",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2017.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2017&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "24adf21ae1d75a69529e0bb3cabcb493f80d07c656251b5ed322f4e66d7daf05",
+   "retrieved_at": "2026-10-02T08:34:12+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2017 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "vpic-ca-lexus-2018": {
+   "key": "vpic-ca-lexus-2018",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2018.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2018&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "8d08c831c76a6ad4083ea897c8af9b8c1657e1ad048682a3e2f6e6550c8daab3",
+   "retrieved_at": "2026-10-02T08:34:17+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2018 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "vpic-ca-lexus-2019": {
+   "key": "vpic-ca-lexus-2019",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2019.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2019&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "d03ae218289e14fd8f11011758f43e0b30ee15e34df768a061656fad658b0259",
+   "retrieved_at": "2026-10-02T08:34:24+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2019 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "vpic-ca-lexus-2020": {
+   "key": "vpic-ca-lexus-2020",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2020.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2020&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "d31d5355f555fee49dbd94949d6778da5936cffcad13dbe887b018f62de0a2d0",
+   "retrieved_at": "2026-10-02T08:34:28+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2020 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "vpic-ca-lexus-2021": {
+   "key": "vpic-ca-lexus-2021",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2021.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2021&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "85e517c37bd923980816794539c14417d54a214abfa34038b854718ce92359c3",
+   "retrieved_at": "2026-10-02T08:34:34+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2021 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "vpic-ca-lexus-2022": {
+   "key": "vpic-ca-lexus-2022",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2022.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2022&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "6f181d39f79dd1ca275a14a88e0fec4af8fbf892324ab62d5808d8e93c41057c",
+   "retrieved_at": "2026-10-02T08:34:39+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2022 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "vpic-ca-lexus-2023": {
+   "key": "vpic-ca-lexus-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "909085bc7a8a8283a7b54d3026b5eb306af4ddfd04a81ceed84563268989eda9",
+   "retrieved_at": "2026-10-02T08:34:43+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-lexus-2024": {
+   "key": "vpic-ca-lexus-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "632becb8017627ff94412ff4cc30f89b66d0bb8c4b77f1e4e4c2156d50ec1d46",
+   "retrieved_at": "2026-10-02T08:34:48+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-lexus-2025": {
+   "key": "vpic-ca-lexus-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "076facf73eecf99a941768508b3a00c2ff1093dd3cb0951d988c39ce6f3dd6f1",
+   "retrieved_at": "2026-10-02T08:34:54+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "vpic-ca-lexus-2026": {
+   "key": "vpic-ca-lexus-2026",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/lexus/2026.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2026&make=Lexus&model=&units=Metric&format=json",
+   "sha256": "f64c65c8f33cbf01a6cbdc9f3ca22e1a89321aea81c47db2111035d0ccabfc4d",
+   "retrieved_at": "2026-10-02T08:34:59+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Lexus 2026 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-recalls-gx460-2014": {
+   "key": "nhtsa-recalls-gx460-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2014.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2014",
+   "sha256": "928e28b80199504cfdc123a92622978c164608b9a71189bf6e86d642b261b4c4",
+   "retrieved_at": "2026-10-02T09:38:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-recalls-gx460-2015": {
+   "key": "nhtsa-recalls-gx460-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2015.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2015",
+   "sha256": "44c6b6ccabd96dd021615f8964feeb70601cf96e080c5564c2bec65818ffa49c",
+   "retrieved_at": "2026-10-02T09:39:26+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-recalls-gx460-2016": {
+   "key": "nhtsa-recalls-gx460-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2016",
+   "sha256": "ca16f05befc71b001d87a7fa664ca3633fa350a786fbb914c193209f20bb4544",
+   "retrieved_at": "2026-10-02T09:39:57+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-gx460-2017": {
+   "key": "nhtsa-recalls-gx460-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2017",
+   "sha256": "793e2d9f262c5605933edc1fbd0e096708818fa9ffd60c5eea8c8752444ac856",
+   "retrieved_at": "2026-10-02T09:40:40+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-gx460-2018": {
+   "key": "nhtsa-recalls-gx460-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2018",
+   "sha256": "4704be5b9e8178aed66d22541a5b5013e2c2eac195bed081b48c3e426697cbd1",
+   "retrieved_at": "2026-10-02T09:41:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-gx460-2019": {
+   "key": "nhtsa-recalls-gx460-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx460_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX460&modelYear=2019",
+   "sha256": "5f60f883401ac9ac690e282ddf48bbb1839e696d5fc0371eaffe6f856de15c7d",
+   "retrieved_at": "2026-10-02T09:41:50+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX460 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-gx-460-2020": {
+   "key": "nhtsa-recalls-gx-460-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-460_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+460&modelYear=2020",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:42:28+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 460 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-gx-460-2021": {
+   "key": "nhtsa-recalls-gx-460-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-460_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+460&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:43:06+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 460 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-gx-460-2022": {
+   "key": "nhtsa-recalls-gx-460-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-460_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+460&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:43:37+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 460 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-gx-460-2023": {
+   "key": "nhtsa-recalls-gx-460-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-460_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+460&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:44:18+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 460 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-gx-550-2024": {
+   "key": "nhtsa-recalls-gx-550-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-550_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+550&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:44:52+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 550 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-gx-2024": {
+   "key": "nhtsa-recalls-gx-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX%21&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:44:54+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX! 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-gx-550-2025": {
+   "key": "nhtsa-recalls-gx-550-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-550_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+550&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:45:34+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 550 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-recalls-gx-550-ice-2026": {
+   "key": "nhtsa-recalls-gx-550-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/lexus/gx-550-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=GX+550+ICE&modelYear=2026",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T09:45:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls GX 550 ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-complaints-gx460-2014": {
+   "key": "nhtsa-complaints-gx460-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2014.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2014",
+   "sha256": "33ce3cbf64d1a9e6d8ff14551d958ca4737183d1ac8e1046c907519f1dd73447",
+   "retrieved_at": "2026-10-02T09:39:10+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-complaints-gx460-2015": {
+   "key": "nhtsa-complaints-gx460-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2015.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2015",
+   "sha256": "991aefbf7b925b829534a686f91b41d95cd4bd346a418e1b91c053c2c8e0671b",
+   "retrieved_at": "2026-10-02T09:39:43+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-complaints-gx460-2016": {
+   "key": "nhtsa-complaints-gx460-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2016",
+   "sha256": "1bfeaa9ac6f1b3ac6566f91528e31c23eec9ef91bc27f9ffd6ab5a3135b7b785",
+   "retrieved_at": "2026-10-02T09:40:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-gx460-2017": {
+   "key": "nhtsa-complaints-gx460-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2017",
+   "sha256": "5de6ff16bc06bbf9d0d966d8dccfae93a46637a911831954775e72a207034084",
+   "retrieved_at": "2026-10-02T09:40:57+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-gx460-2018": {
+   "key": "nhtsa-complaints-gx460-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2018",
+   "sha256": "9931db794788a4c113194bd0c287b79eeb00af06f54036720128cb30ba3e545e",
+   "retrieved_at": "2026-10-02T09:41:35+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-gx460-2019": {
+   "key": "nhtsa-complaints-gx460-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx460_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX460&modelYear=2019",
+   "sha256": "1bc48436c990cbda6d70e5c5df6dceec66f53836e39777f7fa93c59f7d742164",
+   "retrieved_at": "2026-10-02T09:42:08+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX460 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-gx-460-2020": {
+   "key": "nhtsa-complaints-gx-460-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-460_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+460&modelYear=2020",
+   "sha256": "6cc465f9f029521186c1e8fa7d719dc7912afe5aa099c55f23470bbb96b4dd58",
+   "retrieved_at": "2026-10-02T09:42:48+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 460 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-gx-460-2021": {
+   "key": "nhtsa-complaints-gx-460-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-460_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+460&modelYear=2021",
+   "sha256": "3bccfe3f711d3c1e7a24785523e9e3dfd2dc9fc5b4756103a829b91473d04014",
+   "retrieved_at": "2026-10-02T09:43:26+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 460 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-gx-460-2022": {
+   "key": "nhtsa-complaints-gx-460-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-460_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+460&modelYear=2022",
+   "sha256": "bb5ec208801c27a12f5de5f7102e5f886d38aa20955f0d83841a8fd7fdabc726",
+   "retrieved_at": "2026-10-02T09:43:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 460 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-gx-460-2023": {
+   "key": "nhtsa-complaints-gx-460-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-460_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+460&modelYear=2023",
+   "sha256": "7d404477305ed17e6d6b8a82fb9a5e2f19de7f1389e73291f886b51700c0a309",
+   "retrieved_at": "2026-10-02T09:44:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 460 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-gx-550-2024": {
+   "key": "nhtsa-complaints-gx-550-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-550_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+550&modelYear=2024",
+   "sha256": "662a1b2adbf8ecb7f93ed0f2a5dc8d625b3dda845fc7c58a0df4ab9340cd21b7",
+   "retrieved_at": "2026-10-02T09:45:15+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 550 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-gx-2024": {
+   "key": "nhtsa-complaints-gx-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX%21&modelYear=2024",
+   "sha256": "93e41f9534b7bcc424f83b85b5b9a4b18532be2e9d4b1119365c0cdc6b609e1d",
+   "retrieved_at": "2026-10-02T09:45:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX! 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-gx-550-2025": {
+   "key": "nhtsa-complaints-gx-550-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-550_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+550&modelYear=2025",
+   "sha256": "611711850fa87f5c929c4f9c09d19d9677d0d0d04f12922bb4d14c16c5beaf9c",
+   "retrieved_at": "2026-10-02T09:45:51+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 550 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-complaints-gx-550-ice-2026": {
+   "key": "nhtsa-complaints-gx-550-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/lexus/gx-550-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LEXUS&model=GX+550+ICE&modelYear=2026",
+   "sha256": "0b2c5bb83029b35f1429ce20d1b2b871bf5e49bbac1d3e43f43143533e7a9c6d",
+   "retrieved_at": "2026-10-02T09:46:01+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints GX 550 ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2010-2014.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "II (2010 redesign)",
+   "name": "II (2010 redesign)",
+   "db_model": "GX",
+   "existing_id": "4ab84efe-6861-4aa0-b7cf-9f36c85250df",
+   "start_year": 2014,
+   "end_year": 2023,
+   "open_ended": false,
+   "start_known": false,
+   "end_known": true,
+   "boundary_evidence": [
+    "scope starts at MY2014; the generation may have begun earlier"
+   ],
+   "evidence_tier": "B"
+  },
+  {
+   "code": "US2024+",
+   "name": "GX 2024+ (US)",
+   "db_model": "GX",
+   "existing_id": null,
+   "start_year": 2024,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "vPIC Canadian specifications: wheelbase 279 cm (MY2023) -> 285 cm (MY2024)",
+    "vPIC Canadian specifications: overall length 488 -> 500 cm, overall width 188 -> 198 cm (MY2023 -> MY2024; a change of 6 cm or more)"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "lexus-gx-us-2014-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2014,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "34459",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2015-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2015,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "35649",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2016-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2016,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36857",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 20,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2017-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2017,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38077",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 18,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2018-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2018,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39406",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 18,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2019-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2019,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40680",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 18,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2020-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2020,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42106",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2021-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2021,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42978",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2022-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2022,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44439",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2023-4.6l-8cyl-ice-a-s6-4wd",
+   "year": 2023,
+   "generation": "II (2010 redesign)",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S6)",
+   "displacement_l": "4.6",
+   "cylinders": 8,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "45852",
+     "epa_model": "GX 460",
+     "city_mpg": 15,
+     "highway_mpg": 19,
+     "combined_mpg": 16,
+     "combined_l_100km": "14.7",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2024-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "year": 2024,
+   "generation": "US2024+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S10)",
+   "displacement_l": "3.4",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47686",
+     "epa_model": "GX 550",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI & PFI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2025-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "year": 2025,
+   "generation": "US2024+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S10)",
+   "displacement_l": "3.4",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "48964",
+     "epa_model": "GX 550",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI & PFI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "lexus-gx-us-2026-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "year": 2026,
+   "generation": "US2024+",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (S10)",
+   "displacement_l": "3.4",
+   "cylinders": 6,
+   "aspiration": "TURBOCHARGED",
+   "epa_vehicles": [
+    {
+     "epa_id": "50167",
+     "epa_model": "GX 550",
+     "city_mpg": 15,
+     "highway_mpg": 21,
+     "combined_mpg": 17,
+     "combined_l_100km": "13.8",
+     "fuel_type": "Premium Gasoline",
+     "eng_dscr": "SIDI & PFI",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-curb_weight_kg-2014",
+   "generation": "II (2010 redesign)",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 2350,
+   "unit": "kg",
+   "original": "CW = 2350 (kg, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-height_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OH = 188 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-length_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 4880,
+   "unit": "mm",
+   "original": "OL = 488 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-track_front_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWF = 158 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-track_rear_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWR = 158 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-weight_distribution_front_rear_pct-2014",
+   "generation": "II (2010 redesign)",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-wheelbase_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 2790,
+   "unit": "mm",
+   "original": "WB = 279 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-II (2010 redesign)-vpic-gx-460-4dr-suv-4wd-width_mm-2014",
+   "generation": "II (2010 redesign)",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2014,
+    2023
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OW = 188 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2014",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2015",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2016",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2017",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2018",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2019",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2020",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2021",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2022",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2023",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2014"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2350,
+   "unit": "kg",
+   "original": "CW = 2350 (kg, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "CW",
+     "raw_value": "2350",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OH = 188 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OH",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 4880,
+   "unit": "mm",
+   "original": "OL = 488 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OL",
+     "raw_value": "488",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWF = 158 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWF",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1580,
+   "unit": "mm",
+   "original": "TWR = 158 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "TWR",
+     "raw_value": "158",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 2790,
+   "unit": "mm",
+   "original": "WB = 279 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "WB",
+     "raw_value": "279",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-460-4dr-suv-4wd-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2024
+   ],
+   "value": 1880,
+   "unit": "mm",
+   "original": "OW = 188 (cm, Canadian specification row 'GX 460 4DR SUV 4WD')",
+   "applicability": {
+    "vpic_ca_model": "GX 460 4DR SUV 4WD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 460 4DR SUV 4WD",
+     "field": "OW",
+     "raw_value": "188",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-curb_weight_kg-2024",
+   "generation": "US2024+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 2570,
+   "unit": "kg",
+   "original": "CW = 2570 (kg, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "CW",
+     "raw_value": "2570",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "CW",
+     "raw_value": "2570",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "CW",
+     "raw_value": "2570",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-height_mm-2024",
+   "generation": "US2024+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 1920,
+   "unit": "mm",
+   "original": "OH = 192 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OH",
+     "raw_value": "192",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OH",
+     "raw_value": "192",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OH",
+     "raw_value": "192",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-length_mm-2024",
+   "generation": "US2024+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 5000,
+   "unit": "mm",
+   "original": "OL = 500 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OL",
+     "raw_value": "500",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OL",
+     "raw_value": "500",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OL",
+     "raw_value": "500",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-track_front_mm-2024",
+   "generation": "US2024+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 1680,
+   "unit": "mm",
+   "original": "TWF = 168 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWF",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWF",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWF",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-track_rear_mm-2024",
+   "generation": "US2024+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 1690,
+   "unit": "mm",
+   "original": "TWR = 169 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWR",
+     "raw_value": "169",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWR",
+     "raw_value": "169",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "TWR",
+     "raw_value": "169",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-weight_distribution_front_rear_pct-2024",
+   "generation": "US2024+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": "52/48",
+   "unit": "%",
+   "original": "WD = 52/48 (front/rear %, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WD",
+     "raw_value": "52/48",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-wheelbase_mm-2024",
+   "generation": "US2024+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 2850,
+   "unit": "mm",
+   "original": "WB = 285 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WB",
+     "raw_value": "285",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WB",
+     "raw_value": "285",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "WB",
+     "raw_value": "285",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  },
+  {
+   "id": "gx-US2024+-vpic-gx-550-4dr-suv-width_mm-2024",
+   "generation": "US2024+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2024,
+    2026
+   ],
+   "value": 1980,
+   "unit": "mm",
+   "original": "OW = 198 (cm, Canadian specification row 'GX 550 4DR SUV')",
+   "applicability": {
+    "vpic_ca_model": "GX 550 4DR SUV",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-lexus-2024",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2025",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-lexus-2026",
+     "pages": null,
+     "quote": "GX 550 4DR SUV",
+     "field": "OW",
+     "raw_value": "198",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-lexus-2024"
+  }
+ ],
+ "recalls": [
+  {
+   "campaign_number": "19V005000",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2014-2016 Toyota 4Runner, 2014-2015 Scion xB, Lexus IS350C, IS250C, 2014 Toyota Sienna, Lexus IS-F, and 2014-2017 Lexus GX460 vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nToyota is also recalling certain 2011-2013 Toyota Corolla, Corolla Matrix, Lexus IS250, IS350, 2011-2016 4Runner, 2011-2015 Scion xB, Lexus IS350C, IS250C, 2011-2014 Toyota Sienna, Lexus IS-F, 2011-2017 Lexus GX460, and 2011-2012 Lexus ES350 vehicles ever registered in the states of Arizona, Arkansas, Delaware, District of Columbia, Illinois, Indiana, Kansas, Kentucky, Maryland, Missouri, Nebraska, Nevada, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Pennsylvania, Tennessee, Virginia, and West Virginia or \"Zone B.\"  \r\n\r\nToyota is also recalling certain 2010-2013 Toyota Corolla, Corolla Matrix, Lexus IS350, 2010-2016 4Runner, 2010-2013 Lexus IS250, 2010-2015 Scion xB, Lexus IS350C, IS250C, 2010-2017 Lexus GX460, 2010-2014 Lexus IS-F, and 2010-2012 Lexus ES350 vehicles ever registered in the states of Alaska, Colorado, Connecticut, Idaho, Iowa, Maine, Massachusetts, Michigan, Minnesota, Montana, New Hampshire, New York, North Dakota, Oregon, Rhode Island, South Dakota, Utah, Vermont, Washington, Wisconsin, and Wyoming or \"Zone C.\"   \r\n\r\nThese vehicles are equipped with air bag inflators assembled as part of the passenger frontal air bag modules, used as original equipment or replacement equipment (such as after a vehicle crash necessitating replacement of the original air bags), that may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, temperature and temperature cycling.",
+   "consequence": "An inflator explosion may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+   "remedy": "Toyota will notify owners.  Depending on the vehicle model, dealers will replace the front passenger air bag inflator, or replace the air bag assembly.  The recall began February 15, 2019.  Owners may contact Toyota customer service at 1-800-331-4331. Toyota's numbers for this recall are \"Zone A\" Toyota: G0P, Lexus: GLG; \"Zone B\" Toyota: G0R, Lexus GLH; \"Zone C\" Toyota: H0A, and Lexus: HLA.",
+   "report_received_date": "09/01/2019",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "years": [
+    2014,
+    2017
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2014",
+   "sources": [
+    "nhtsa-recalls-gx460-2014",
+    "nhtsa-recalls-gx460-2015",
+    "nhtsa-recalls-gx460-2016",
+    "nhtsa-recalls-gx460-2017"
+   ]
+  },
+  {
+   "campaign_number": "19V741000",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2010-2016 4Runner, 2003-2006 Tundra, 2003-2013 Corolla, 2009-2010 Corolla Matrix, 2004-2005 RAV4, 2002-2007 Sequoia, 2011-2013 Sienna, 2008-2012 Scion xB, 2008-2009 Lexus IS-F, 2007-2012 Yaris and Lexus ES350, 2010-2017 Lexus GX460, 2002-2010 Lexus SC430, 2006-2012 Lexus IS250 and IS350 and 2010-2015 Lexus IS250C and IS350C vehicles.\r\n\r\nThese vehicles had their driver or passenger frontal air bag inflators previously replaced under a prior recall using inflators of the same design.  The inflators may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, temperature and temperature cycling.",
+   "consequence": "An inflator explosion may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+   "remedy": "Toyota will notify owners.  Depending on the vehicle model, dealers will replace the front driver inflator, front passenger airbag inflator, the airbag assembly, or the front passenger airbag sub-assembly and inflator.  The recall began November 20, 2019.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Toyota's numbers for this recall are J0A, J0B, and J0C.  Lexus' numbers for this recall are JLI, JLJ, and JLK.",
+   "report_received_date": "17/10/2019",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "years": [
+    2014,
+    2017
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2014",
+   "sources": [
+    "nhtsa-recalls-gx460-2014",
+    "nhtsa-recalls-gx460-2015",
+    "nhtsa-recalls-gx460-2016",
+    "nhtsa-recalls-gx460-2017"
+   ]
+  },
+  {
+   "campaign_number": "20V012000",
+   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) recalled certain 2018-2019 4Runner, Highlander, Camry, Land Cruiser, Sequoia, Sienna, Tacoma and Tundra, and Lexus RC 300, RC 350, GS 350, GX 460, IS 300, LC 500, LS 500, LX 570, RX 350L, and 2019 Toyota Avalon and Corolla, and certain Lexus NX 300, and ES 350 vehicles on January 13, 2020. \r\nOn March 4, 2020, Toyota expanded the recall to include certain 2014-2015 Toyota 4Runner and Land Cruiser, 2018 Avalon, Corolla, 2014 FJ Cruiser, 2017 Sienna and Lexus 2018 ES 350, 2018-2019 GS 300, 2013-2014 GS350, 2014-2015 GX 460, IS 350 and LX 570, 2014 IS F, 2018-2019 IS 350, LC 500H and LS 500H, 2013-2015 LS 460, 2015 NX 200T and RC350, 2017 RC 200T and RX 350.  Toyota also removed the 2018-2019 Toyota 4Runner and Land Cruiser and 2018-2019 Lexus GX 460 and LX 570 and 2019 NX300 from inclusion in this recall.  On March 19, 2020, Toyota expanded the recall to include 2015 Lexus GS350 vehicles.  The low-pressure fuel pump inside the fuel tank may fail.",
+   "consequence": "If the fuel pump fails, the engine can stall while driving, increasing the risk of a crash.",
+   "remedy": "Toyota will notify owners, and dealers will replace the fuel pump, free of charge.  The recall began May 4, 2020.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Toyota's numbers for this recall are 20TB02 and 20TA02 for Toyota vehicles and 20LB01 and 20LA01 for Lexus vehicles.",
+   "report_received_date": "13/01/2020",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2014,
+    2015
+   ],
+   "years": [
+    2014,
+    2015
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2014",
+   "sources": [
+    "nhtsa-recalls-gx460-2014",
+    "nhtsa-recalls-gx460-2015"
+   ]
+  },
+  {
+   "campaign_number": "16V937000",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling one 2016 Toyota 4Runner vehicle manufactured November 1, 2016 and one 2017 Lexus GX460 vehicle manufactured November 16, 2016.  The affected vehicles are equipped with Takata PSPI-LD front passenger air bag inflators that may have been manufactured without ignition booster tablets.  As a result, in the event of a crash, the air bag may not fully inflate during deployment of the primary stage.  As such, these vehicles fail to comply with the requirements of the Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\"",
+   "consequence": "The improper inflation of the passenger air bag may increase the risk of injury in the event of a crash.",
+   "remedy": "Toyota dealers have replaced the passenger side air bag modules, free of charge.  Toyota notified the affected dealers on December 15, 2016.  Owners may contact Toyota customer service at 1-800-331-4331.  Toyota's number for this recall is G06, GLR.",
+   "report_received_date": "21/12/2016",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2017
+   ],
+   "years": [
+    2017,
+    2017
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2017",
+   "sources": [
+    "nhtsa-recalls-gx460-2017"
+   ]
+  },
+  {
+   "campaign_number": "17V831000",
+   "component": "EQUIPMENT:OTHER:LABELS",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2017-2018 Toyota 4Runner and Tundra, 2018 Toyota Highlander, RAV4 and Lexus GX460 and 2017 Toyota Sienna and Tacoma vehicles.  These vehicles may have incorrect load carrying capacity modification labels.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"Tire Selection and Rims.\"",
+   "consequence": "An incorrect load information label can result in the operator overloading the vehicle and increasing the risk of a crash.",
+   "remedy": "Toyota will notify owners and provide them with corrected labels, free of charge.  The recall began on January 23, 2018.  Owners may contact Toyota customer service at 1-800-331-4331.  Toyota's numbers for this recall are H0Z for Toyota vehicles, and HLF for Lexus vehicles.",
+   "report_received_date": "20/12/2017",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2018
+   ],
+   "years": [
+    2018,
+    2018
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2018",
+   "sources": [
+    "nhtsa-recalls-gx460-2018"
+   ]
+  },
+  {
+   "campaign_number": "20V682000",
+   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2018-2019 4Runner, 2019-2020 Avalon, 2019 Corolla Hatchback, 2017-2019 Highlander, 2018-2020 Camry, 2020 Corolla, 2018-2019 Land Cruiser, 2017-2020 Tacoma, 2019-2020 RAV4, 2019-2020 Sequoia, 2017-2020 Sienna, 2019-2020 Tundra, 2018-2020 Lexus ES350, 2017 Lexus GS200t, 2017-2019 Lexus GS350, 2019 Lexus GS300, 2018-2020 Lexus LC500h, 2019-2020 Lexus LS500, 2018-2019 Lexus GX460, 2017 Lexus IS200t, 2019 Lexus IS300, 2019 Lexus IS350, 2018-2020 Lexus LC500, 2018 Lexus LS500, 2019 Lexus LS500h, 2018-2019 Lexus LX570, 2017 Lexus RC200t, 2019 Lexus RC300, RC350, 2017 and 2019-2020 Lexus RX350, 2018-2020 RX350L, 2019 Lexus UX200, 2018-2019 Lexus NX300 vehicles.  The low-pressure fuel pump inside the fuel tank may fail.",
+   "consequence": "If the fuel pump fails, the engine can stall while driving, increasing the risk of a crash.",
+   "remedy": "Toyota will notify owners, and dealers will replace the fuel pump assembly with an improved one, free of charge.  Owners of specific models were notified that remedy parts were available starting January 21, 2021.  Owners of other models will be notified as remedy parts become available.  Remedy parts should be available for all affected vehicles by late March 2021.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Note: This recall is an expansion of recall 20V-012.  Toyota's number for this recall is 20TA02.  Lexus' number for this recall is 20LA01.",
+   "report_received_date": "04/11/2020",
+   "manufacturer": "Toyota Motor Engineering & Manufacturing",
+   "generation": "II (2010 redesign)",
+   "model_years": [
+    2018,
+    2019
+   ],
+   "years": [
+    2018,
+    2019
+   ],
+   "nhtsa_models": [
+    "GX460"
+   ],
+   "source": "nhtsa-recalls-gx460-2018",
+   "sources": [
+    "nhtsa-recalls-gx460-2018",
+    "nhtsa-recalls-gx460-2019"
+   ]
+  }
+ ],
+ "complaint_patterns": [
+  {
+   "generation": "II (2010 redesign)",
+   "component": "SERVICE BRAKES",
+   "count": 17,
+   "by_year": {
+    "2014": 2,
+    "2015": 2,
+    "2016": 4,
+    "2018": 1,
+    "2020": 1,
+    "2022": 5,
+    "2023": 2
+   },
+   "sample_odi": [
+    10967135,
+    10607235,
+    11053727,
+    10778570,
+    11624740,
+    11098502,
+    10927549,
+    10851371,
+    11098791,
+    11561725,
+    11711961,
+    11711785,
+    11543837,
+    11506933,
+    11487484,
+    11578320,
+    11541637
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "SUSPENSION",
+   "count": 15,
+   "by_year": {
+    "2014": 6,
+    "2016": 1,
+    "2017": 3,
+    "2018": 3,
+    "2019": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    10930214,
+    10924038,
+    10680615,
+    10658874,
+    10633801,
+    10607235,
+    10914142,
+    11078451,
+    11065851,
+    11062757,
+    11351964,
+    11160991,
+    11098371,
+    11398793,
+    11490255
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 11,
+   "by_year": {
+    "2014": 4,
+    "2015": 2,
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2022": 2
+   },
+   "sample_odi": [
+    11627564,
+    11615737,
+    11614666,
+    10652949,
+    11607688,
+    11203689,
+    11580117,
+    11702026,
+    11689659,
+    11543837,
+    11487484
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "UNKNOWN OR OTHER",
+   "count": 11,
+   "by_year": {
+    "2014": 1,
+    "2015": 2,
+    "2017": 2,
+    "2018": 1,
+    "2019": 2,
+    "2020": 1,
+    "2021": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    10652949,
+    11646513,
+    11309717,
+    11702026,
+    11062065,
+    11351964,
+    11560005,
+    11230453,
+    11716002,
+    11767323,
+    11687330
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "US2024+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 8,
+   "by_year": {
+    "2024": 5,
+    "2025": 2,
+    "2026": 1
+   },
+   "sample_odi": [
+    11698260,
+    11678649,
+    11649773,
+    11646666,
+    11595294,
+    11744639,
+    11737273,
+    11739560
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "ENGINE",
+   "count": 7,
+   "by_year": {
+    "2024": 5,
+    "2025": 2
+   },
+   "sample_odi": [
+    11761827,
+    11741768,
+    11713159,
+    11647369,
+    11643654,
+    11719701,
+    11709515
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "AIR BAGS",
+   "count": 6,
+   "by_year": {
+    "2014": 1,
+    "2016": 2,
+    "2017": 1,
+    "2018": 2
+   },
+   "sample_odi": [
+    11627861,
+    11436072,
+    11374120,
+    11205153,
+    11689659,
+    11329739
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "ENGINE",
+   "count": 6,
+   "by_year": {
+    "2014": 2,
+    "2016": 1,
+    "2017": 1,
+    "2019": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11586863,
+    11366942,
+    11316227,
+    11760400,
+    11395349,
+    11490255
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "STRUCTURE",
+   "count": 6,
+   "by_year": {
+    "2024": 2,
+    "2025": 4
+   },
+   "sample_odi": [
+    11762494,
+    11656286,
+    11744639,
+    11731451,
+    11728755,
+    11689431
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 5,
+   "by_year": {
+    "2014": 1,
+    "2017": 2,
+    "2020": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11627861,
+    11560908,
+    11416436,
+    11396976,
+    11543837
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 5,
+   "by_year": {
+    "2014": 2,
+    "2017": 1,
+    "2019": 2
+   },
+   "sample_odi": [
+    11350089,
+    11322015,
+    11741070,
+    11389710,
+    11321980
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "SEATS",
+   "count": 5,
+   "by_year": {
+    "2014": 1,
+    "2015": 2,
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    10863522,
+    10898793,
+    10851845,
+    11736803,
+    11715680
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 5,
+   "by_year": {
+    "2024": 5
+   },
+   "sample_odi": [
+    11727524,
+    11705386,
+    11698260,
+    11678649,
+    11677333
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "POWER TRAIN",
+   "count": 5,
+   "by_year": {
+    "2024": 3,
+    "2025": 2
+   },
+   "sample_odi": [
+    11761827,
+    11734533,
+    11647369,
+    11688399,
+    11678409
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "SERVICE BRAKES",
+   "count": 5,
+   "by_year": {
+    "2024": 3,
+    "2025": 2
+   },
+   "sample_odi": [
+    11734533,
+    11674449,
+    11666489,
+    11754032,
+    11734018
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "POWER TRAIN",
+   "count": 4,
+   "by_year": {
+    "2014": 1,
+    "2017": 1,
+    "2018": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11306212,
+    11152425,
+    11299580,
+    11715680
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "STRUCTURE",
+   "count": 4,
+   "by_year": {
+    "2014": 2,
+    "2017": 2
+   },
+   "sample_odi": [
+    10633801,
+    10610666,
+    11565932,
+    11528732
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "VISIBILITY",
+   "count": 4,
+   "by_year": {
+    "2015": 1,
+    "2017": 1,
+    "2019": 1,
+    "2020": 1
+   },
+   "sample_odi": [
+    11712313,
+    11329799,
+    11603766,
+    11643402
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "VISIBILITY/WIPER",
+   "count": 4,
+   "by_year": {
+    "2017": 2,
+    "2019": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11702026,
+    11329799,
+    11230453,
+    11569596
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 3,
+   "by_year": {
+    "2016": 1,
+    "2017": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11098502,
+    11366484,
+    11715680
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "VISIBILITY/WIPER",
+   "count": 3,
+   "by_year": {
+    "2024": 2,
+    "2025": 1
+   },
+   "sample_odi": [
+    11762494,
+    11742192,
+    11689431
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "BACK OVER PREVENTION",
+   "count": 2,
+   "by_year": {
+    "2018": 1,
+    "2020": 1
+   },
+   "sample_odi": [
+    11752819,
+    11396976
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "count": 2,
+   "by_year": {
+    "2017": 2
+   },
+   "sample_odi": [
+    11078451,
+    11065851
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "FUEL SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2014": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11350072,
+    11399116
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "GASOLINE",
+   "count": 2,
+   "by_year": {
+    "2014": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11350072,
+    11399116
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "LANE DEPARTURE",
+   "count": 2,
+   "by_year": {
+    "2014": 1,
+    "2021": 1
+   },
+   "sample_odi": [
+    11627861,
+    11506787
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "SEAT BELTS",
+   "count": 2,
+   "by_year": {
+    "2020": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11762200,
+    11743117
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "STEERING",
+   "count": 2,
+   "by_year": {
+    "2018": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11098371,
+    11564043
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "WHEELS",
+   "count": 2,
+   "by_year": {
+    "2015": 1,
+    "2018": 1
+   },
+   "sample_odi": [
+    10732844,
+    11118446
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "AIR BAGS",
+   "count": 2,
+   "by_year": {
+    "2024": 2
+   },
+   "sample_odi": [
+    11762494,
+    11672962
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "SUSPENSION",
+   "count": 2,
+   "by_year": {
+    "2025": 2
+   },
+   "sample_odi": [
+    11709515,
+    11688399
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11678649,
+    11678717
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "HYDRAULIC",
+   "count": 1,
+   "by_year": {
+    "2016": 1
+   },
+   "sample_odi": [
+    11624740
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "LATCHES/LOCKS/LINKAGES",
+   "count": 1,
+   "by_year": {
+    "2015": 1
+   },
+   "sample_odi": [
+    11328530
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "II (2010 redesign)",
+   "component": "TIRES",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    10732286
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 1,
+   "by_year": {
+    "2024": 1
+   },
+   "sample_odi": [
+    11734533
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "STEERING",
+   "count": 1,
+   "by_year": {
+    "2024": 1
+   },
+   "sample_odi": [
+    11647369
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "TIRES",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11691806
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2024+",
+   "component": "WHEELS",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11688399
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "II (2010 redesign)|infotainment": {
+   "key": "II (2010 redesign)|infotainment",
+   "label": "infotainment / display",
+   "count": 5,
+   "by_year": {
+    "2014": 3,
+    "2015": 1,
+    "2018": 1
+   },
+   "sample_odi": [
+    11627564,
+    11615737,
+    11614666,
+    11712313,
+    11752819
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2014"
+  },
+  "II (2010 redesign)|coolant-leak": {
+   "key": "II (2010 redesign)|coolant-leak",
+   "label": "water pump / coolant leak",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    11586863
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2014"
+  },
+  "II (2010 redesign)|timing-drive": {
+   "key": "II (2010 redesign)|timing-drive",
+   "label": "timing chain / belt",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    11366942
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2014"
+  },
+  "II (2010 redesign)|fuel-pump-stall": {
+   "key": "II (2010 redesign)|fuel-pump-stall",
+   "label": "fuel pump / stalling",
+   "count": 6,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2017": 1,
+    "2019": 2
+   },
+   "sample_odi": [
+    11350089,
+    11646513,
+    11316227,
+    11741070,
+    11395349,
+    11389710
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2014"
+  },
+  "II (2010 redesign)|brake-failure": {
+   "key": "II (2010 redesign)|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 5,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2022": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    10967135,
+    10778570,
+    11624740,
+    11711785,
+    11541637
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-460-2022"
+  },
+  "II (2010 redesign)|loss-of-power": {
+   "key": "II (2010 redesign)|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11760400
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2017"
+  },
+  "II (2010 redesign)|battery-drain": {
+   "key": "II (2010 redesign)|battery-drain",
+   "label": "battery drain / no start",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11741070
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2017"
+  },
+  "II (2010 redesign)|false-braking": {
+   "key": "II (2010 redesign)|false-braking",
+   "label": "pre-collision false braking",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11416436
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2017"
+  },
+  "II (2010 redesign)|water-leak": {
+   "key": "II (2010 redesign)|water-leak",
+   "label": "water leak into cabin",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11689659
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx460-2018"
+  },
+  "II (2010 redesign)|seat-belt": {
+   "key": "II (2010 redesign)|seat-belt",
+   "label": "seat belt",
+   "count": 2,
+   "by_year": {
+    "2020": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11762200,
+    11743117
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-460-2020"
+  },
+  "II (2010 redesign)|hesitation": {
+   "key": "II (2010 redesign)|hesitation",
+   "label": "hesitation / delayed acceleration",
+   "count": 1,
+   "by_year": {
+    "2022": 1
+   },
+   "sample_odi": [
+    11715680
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-460-2022"
+  },
+  "II (2010 redesign)|parking-brake": {
+   "key": "II (2010 redesign)|parking-brake",
+   "label": "electronic parking brake",
+   "count": 1,
+   "by_year": {
+    "2023": 1
+   },
+   "sample_odi": [
+    11541637
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-460-2023"
+  },
+  "US2024+|misfire": {
+   "key": "US2024+|misfire",
+   "label": "misfire / rough running",
+   "count": 2,
+   "by_year": {
+    "2024": 2
+   },
+   "sample_odi": [
+    11761827,
+    11713159
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|harsh-shifting": {
+   "key": "US2024+|harsh-shifting",
+   "label": "harsh / erratic shifting",
+   "count": 2,
+   "by_year": {
+    "2024": 2
+   },
+   "sample_odi": [
+    11761827,
+    11649773
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|engine-failure": {
+   "key": "US2024+|engine-failure",
+   "label": "engine failure / knocking / seizure",
+   "count": 3,
+   "by_year": {
+    "2024": 2,
+    "2025": 1
+   },
+   "sample_odi": [
+    11741768,
+    11647369,
+    11719701
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|brake-failure": {
+   "key": "US2024+|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11678649,
+    11734018
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|timing-drive": {
+   "key": "US2024+|timing-drive",
+   "label": "timing chain / belt",
+   "count": 2,
+   "by_year": {
+    "2024": 2
+   },
+   "sample_odi": [
+    11647369,
+    11643654
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|steering-loss": {
+   "key": "US2024+|steering-loss",
+   "label": "power steering loss",
+   "count": 1,
+   "by_year": {
+    "2024": 1
+   },
+   "sample_odi": [
+    11647369
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2024"
+  },
+  "US2024+|hesitation": {
+   "key": "US2024+|hesitation",
+   "label": "hesitation / delayed acceleration",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11678717
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2025"
+  },
+  "US2024+|loss-of-power": {
+   "key": "US2024+|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11678409
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-gx-550-2025"
+  }
+ },
+ "issues": [
+  {
+   "id": "gx-II (2010 redesign)-recall-19V005000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "title": "NHTSA recall 19V005000: AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "symptoms": [],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2014-2016 Toyota 4Runner, 2014-2015 Scion xB, Lexus IS350C, IS250C, 2014 Toyota Sienna, Lexus IS-F, and 2014-2017 Lexus GX460 vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nToyota is also recalling certain 2011-2013 Toyota Corolla, Corolla Matrix, Lexus IS250, IS350, 2011-2016 4Runner, 2011-2015 Scion xB, Lexus IS350C, IS250C, 2011-2014 Toyota Sienna, Lexus IS-F, 2011-2017 Lexus GX460, and 2011-2012 Lexus ES350 vehicles ever registered in the states of Arizona, Arkansas, Delaware, District of Columbia, Illinois, Indiana, Kansas, Kentucky, Maryland, Missouri, Nebraska, Nevada, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Pennsylvania, Tennessee, Virginia, and West Virginia or \"Zone B.\"  \r\n\r\nToyota is also recalling certain 2010-2013 Toyota Corolla, Corolla Matrix, Lexus IS350, 2010-2016 4Runner, 2010-2013 Lexus IS250, 2010-2015 Scion xB, Lexus IS350C, IS250C, 2010-2017 Lexus GX460, 2010-2014 Lexus IS-F, and 2010-2012 Lexus ES350 vehicles ever registered in the states of Alaska, Colorado, Connecticut, Idaho, Iowa, Maine, Massachusetts, Michigan, Minnesota, Montana, New Hampshire, New York, North Dakota, Oregon, Rhode Island, South Dakota, Utah, Vermont, Washington, Wisconsin, and Wyoming or \"Zone C.\"   \r\n\r\nThese vehicles are equipped with air bag inflators assembled as part of the passenger frontal air bag modules, used as original equipment or replacement equipment (such as after a vehicle crash necessitating replacement of the original air bags), that may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, temperature and temperature cycling.",
+   "consequences": "An inflator explosion may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+   "inspection": "Check that NHTSA recall 19V005000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota will notify owners.  Depending on the vehicle model, dealers will replace the front passenger air bag inflator, or replace the air bag assembly.  The recall began February 15, 2019.  Owners may contact Toyota customer service at 1-800-331-4331. Toyota's numbers for this recall are \"Zone A\" Toyota: G0P, Lexus: GLG; \"Zone B\" Toyota: G0R, Lexus GLH; \"Zone C\" Toyota: H0A, and Lexus: HLA.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "19V005000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-recall-19V741000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "title": "NHTSA recall 19V741000: AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "symptoms": [],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2010-2016 4Runner, 2003-2006 Tundra, 2003-2013 Corolla, 2009-2010 Corolla Matrix, 2004-2005 RAV4, 2002-2007 Sequoia, 2011-2013 Sienna, 2008-2012 Scion xB, 2008-2009 Lexus IS-F, 2007-2012 Yaris and Lexus ES350, 2010-2017 Lexus GX460, 2002-2010 Lexus SC430, 2006-2012 Lexus IS250 and IS350 and 2010-2015 Lexus IS250C and IS350C vehicles.\r\n\r\nThese vehicles had their driver or passenger frontal air bag inflators previously replaced under a prior recall using inflators of the same design.  The inflators may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, temperature and temperature cycling.",
+   "consequences": "An inflator explosion may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+   "inspection": "Check that NHTSA recall 19V741000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota will notify owners.  Depending on the vehicle model, dealers will replace the front driver inflator, front passenger airbag inflator, the airbag assembly, or the front passenger airbag sub-assembly and inflator.  The recall began November 20, 2019.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Toyota's numbers for this recall are J0A, J0B, and J0C.  Lexus' numbers for this recall are JLI, JLJ, and JLK.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "19V741000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-recall-20V012000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "title": "NHTSA recall 20V012000: FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) recalled certain 2018-2019 4Runner, Highlander, Camry, Land Cruiser, Sequoia, Sienna, Tacoma and Tundra, and Lexus RC 300, RC 350, GS 350, GX 460, IS 300, LC 500, LS 500, LX 570, RX 350L, and 2019 Toyota Avalon and Corolla, and certain Lexus NX 300, and ES 350 vehicles on January 13, 2020. \r\nOn March 4, 2020, Toyota expanded the recall to include certain 2014-2015 Toyota 4Runner and Land Cruiser, 2018 Avalon, Corolla, 2014 FJ Cruiser, 2017 Sienna and Lexus 2018 ES 350, 2018-2019 GS 300, 2013-2014 GS350, 2014-2015 GX 460, IS 350 and LX 570, 2014 IS F, 2018-2019 IS 350, LC 500H and LS 500H, 2013-2015 LS 460, 2015 NX 200T and RC350, 2017 RC 200T and RX 350.  Toyota also removed the 2018-2019 Toyota 4Runner and Land Cruiser and 2018-2019 Lexus GX 460 and LX 570 and 2019 NX300 from inclusion in this recall.  On March 19, 2020, Toyota expanded the recall to include 2015 Lexus GS350 vehicles.  The low-pressure fuel pump inside the fuel tank may fail.",
+   "consequences": "If the fuel pump fails, the engine can stall while driving, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 20V012000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota will notify owners, and dealers will replace the fuel pump, free of charge.  The recall began May 4, 2020.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Toyota's numbers for this recall are 20TB02 and 20TA02 for Toyota vehicles and 20LB01 and 20LA01 for Lexus vehicles.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [
+    2
+   ],
+   "evidence": {
+    "recalls": [
+     "20V012000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": [
+     "II (2010 redesign)|fuel-pump-stall"
+    ]
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-recall-16V937000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2017,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "title": "NHTSA recall 16V937000: AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+   "symptoms": [],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling one 2016 Toyota 4Runner vehicle manufactured November 1, 2016 and one 2017 Lexus GX460 vehicle manufactured November 16, 2016.  The affected vehicles are equipped with Takata PSPI-LD front passenger air bag inflators that may have been manufactured without ignition booster tablets.  As a result, in the event of a crash, the air bag may not fully inflate during deployment of the primary stage.  As such, these vehicles fail to comply with the requirements of the Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\"",
+   "consequences": "The improper inflation of the passenger air bag may increase the risk of injury in the event of a crash.",
+   "inspection": "Check that NHTSA recall 16V937000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota dealers have replaced the passenger side air bag modules, free of charge.  Toyota notified the affected dealers on December 15, 2016.  Owners may contact Toyota customer service at 1-800-331-4331.  Toyota's number for this recall is G06, GLR.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "16V937000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-recall-17V831000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "EQUIPMENT:OTHER:LABELS",
+   "title": "NHTSA recall 17V831000: EQUIPMENT:OTHER:LABELS",
+   "symptoms": [],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2017-2018 Toyota 4Runner and Tundra, 2018 Toyota Highlander, RAV4 and Lexus GX460 and 2017 Toyota Sienna and Tacoma vehicles.  These vehicles may have incorrect load carrying capacity modification labels.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"Tire Selection and Rims.\"",
+   "consequences": "An incorrect load information label can result in the operator overloading the vehicle and increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 17V831000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota will notify owners and provide them with corrected labels, free of charge.  The recall began on January 23, 2018.  Owners may contact Toyota customer service at 1-800-331-4331.  Toyota's numbers for this recall are H0Z for Toyota vehicles, and HLF for Lexus vehicles.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "17V831000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-recall-20V682000",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2018,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "title": "NHTSA recall 20V682000: FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2018-2019 4Runner, 2019-2020 Avalon, 2019 Corolla Hatchback, 2017-2019 Highlander, 2018-2020 Camry, 2020 Corolla, 2018-2019 Land Cruiser, 2017-2020 Tacoma, 2019-2020 RAV4, 2019-2020 Sequoia, 2017-2020 Sienna, 2019-2020 Tundra, 2018-2020 Lexus ES350, 2017 Lexus GS200t, 2017-2019 Lexus GS350, 2019 Lexus GS300, 2018-2020 Lexus LC500h, 2019-2020 Lexus LS500, 2018-2019 Lexus GX460, 2017 Lexus IS200t, 2019 Lexus IS300, 2019 Lexus IS350, 2018-2020 Lexus LC500, 2018 Lexus LS500, 2019 Lexus LS500h, 2018-2019 Lexus LX570, 2017 Lexus RC200t, 2019 Lexus RC300, RC350, 2017 and 2019-2020 Lexus RX350, 2018-2020 RX350L, 2019 Lexus UX200, 2018-2019 Lexus NX300 vehicles.  The low-pressure fuel pump inside the fuel tank may fail.",
+   "consequences": "If the fuel pump fails, the engine can stall while driving, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 20V682000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Toyota will notify owners, and dealers will replace the fuel pump assembly with an improved one, free of charge.  Owners of specific models were notified that remedy parts were available starting January 21, 2021.  Owners of other models will be notified as remedy parts become available.  Remedy parts should be available for all affected vehicles by late March 2021.  Owners may contact Toyota customer service at 1-888-270-9371 or Lexus customer service at 1-800-255-3987.  Note: This recall is an expansion of recall 20V-012.  Toyota's number for this recall is 20TA02.  Lexus' number for this recall is 20LA01.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [
+    2
+   ],
+   "evidence": {
+    "recalls": [
+     "20V682000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": [
+     "II (2010 redesign)|fuel-pump-stall"
+    ]
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-air-conditioning",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2016,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "HVAC",
+   "title": "Manufacturer communication: air conditioning",
+   "symptoms": [
+    "air conditioning"
+   ],
+   "cause": "TT: During previous air conditioning service, leakage prevention agent (A/C stop leak) may have been added to the A/C system. Adding stop leak products to the A/C system is not a recommended or approved Lexus repair process. During A/C service, moisture enters the A/C system, and can react with the previously added A/C stop leak, forming a gelatinous substance. The gel substance that forms can cause the A/C compressor to bind and or seize.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10142501 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10142501",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10142501"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-airbag",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "THIS COMMUNICATION IS INFORMING TOYOTA OF A DELAMINATION ISSUE WITHIN AN I.C. PRODUCED BY NXP AND ASSEMBLED INTO AIRBAG SENSOR SUPPLIED BY DENSO INTERNATIONAL AMERICA, INC.  THIS DELAMINATION ISSUE MANIFESTS ITSELF AS AN OPEN CIRCUIT WITHIN THE SENSOR, CAUSING A DTC TO BE SET ON THE VEHICLE ALONG WITH A DECLARING AIRBAG LIGHT.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10092865 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10092865",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10092865"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-battery-drain",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "BATTERY MAINTENANCE DURING PDS.    A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE.  THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD.  BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE. | \"LSB: A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE. THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD. BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE.     AS A MATTER OF POLICY, TOYOTA DOES NOT PROVIDE WARRANTY COVERAGE FOR DISCHARGED AND/OR FAILED BATTERIES DUE TO LACK OF MAINTENANCE. IT IS THE DEALERS RESPONSIBILITY TO MAINTAIN SPECIFIED STATE OF CHARGE (SOC) OF THE VEHICLES BATTERY WHILE IN STOCK AND ASSURE PROPER STATE OF CHARGE (SOC) AT DELIVERY.     TO ELIMINATE CUSTOMER SERVICE CONCERNS DUE TO AN UNDERCHARGED BATTERY DURING THE FIRST FEW WEEKS OF OWNERSHIP, ALL DEALERS SHOULD CHECK BATTERY STATE OF CHARGE (SOC) AND RECHARGE, IF NECESSARY, WITHIN 48 HOURS OF DELIVERY TO CUSTOMERS.   \" | TSB:  A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE. THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD. BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10076255, 10093261, 10106043, 10111153, 10111303 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10076255, 10093261, 10106043, 10111153, 10111303",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    1
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10076255",
+     "10093261",
+     "10106043",
+     "10111153",
+     "10111303",
+     "10134099",
+     "10152236",
+     "10174922",
+     "10181747",
+     "10201345",
+     "10202488",
+     "10207942",
+     "10224131"
+    ],
+    "complaint_patterns": [
+     "II (2010 redesign)|battery-drain"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-hesitation",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: hesitation / delayed acceleration",
+   "symptoms": [
+    "hesitation / delayed acceleration"
+   ],
+   "cause": "LSB: Some 2014 - 2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL \"ON\" condition with Diagnostic Trouble Code (DTC) P006A (MAP - Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition. | LSB: Some 2014 ? 2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL ?ON? condition with Diagnostic Trouble Code (DTC) P006A (MAP ? Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition. | Some 2014  2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL ON condition with Diagnostic Trouble Code (DTC) P006A (MAP  Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10111149, 10111299, 10132547, 10134151, 10177574 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10111149, 10111299, 10132547, 10134151, 10177574",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10111149",
+     "10111299",
+     "10132547",
+     "10134151",
+     "10177574",
+     "10177590",
+     "10179605",
+     "10179701"
+    ],
+    "complaint_patterns": [
+     "II (2010 redesign)|hesitation"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-infotainment",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "LSB: A DOWNLOAD AND INSTALLATION PROCESS IS REQUIRED TO ACTIVATE THE ENFORM SUITE OF APPS & DATA SERVICES BEFORE THEY ARE USED FOR THE FIRST TIME ON NEW VEHICLES. THE DOWNLOAD AND INSTALLATION PROCESS MAY ALSO NEED TO BE PERFORMED UNDER OTHER CIRCUMSTANCES SUCH AS FOLLOWING A HEAD UNIT REPLACEMENT OR AFTER THE CUSTOMER'S PERSONAL SETTINGS ARE ERASED. THE DOWNLOAD AND INSTALLATION PROCESS REQUIRES BETWEEN 3 AND 15 MINUTES TO COMPLETE, DEPENDING ON THE FILE SIZE, CELLULAR CONNECTION SPEED, AND OTHER FACTORS. FOLLOWING THE DOWNLOAD AND INSTALLATION PROCESS, SMALL ENFORM APP UPDATES MAY ALSO OCCUR VIA AN OVER THE AIR UPDATE SYSTEM. FOLLOW THE PROCEDURE BELOW TO PERFORM THE DOWNLOAD AND INSTALLATION PROCESS. | Tech Tip: Head unit does not recognize a Multimedia software update file that has been downloaded to a USB flash drive from a Technical Service Bulletin. | LSB: A download and installation process is required to activate the Enform suite of Apps & Data Services before they are used for the first time on new vehicles. The download and installation process may also need to be performed under other circumstances such as following a head unit replacement or after the customer's personal settings are erased. The download and installation process requires between 3 and 15 minutes to complete, depending on the file size, cellular connection speed, and other factors. Following the download and installation process, small Enform? App updates may also occur via an over the air update system. Follow the procedure below to perform the download and installation process.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10093985, 10109470, 10111505, 10179766, 10230361 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10093985, 10109470, 10111505, 10179766, 10230361",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    5
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10093985",
+     "10109470",
+     "10111505",
+     "10179766",
+     "10230361",
+     "10235224",
+     "10252258",
+     "11018326",
+     "11019329"
+    ],
+    "complaint_patterns": [
+     "II (2010 redesign)|infotainment"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-loss-of-power",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "TSB:  SOME 2014  2016 MODEL YEAR GX 460 VEHICLES MAY EXHIBIT A MIL ON CONDITION WITH DIAGNOSTIC TROUBLE CODE (DTC) P2440 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 1) OR P2442 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 2) AND UNDER SOME CONDITIONS MAY ENTER LIMP MODE (LIMITED THROTTLE INPUT ~ 25MPH). THIS CONDITION CAN BE TRIGGERED BY SUB-FREEZING AMBIENT TEMPERATURES. FOLLOW THE REPAIR PROCEDURE BELOW TO ADDRESS THIS CONDITION. | TSB:  Some 2014 ? 2016 model year GX 460 vehicles may exhibit a MIL ?ON? condition with Diagnostic Trouble Code (DTC) P2440 (Secondary Air Injection System Switching Valve Stuck Open, Bank 1) or P2442 (Secondary Air Injection System Switching Valve Stuck Open, Bank 2) and under some conditions may enter limp mode (limited throttle input ~ 25mph). This condition can be triggered by sub-freezing ambient temperatures. Follow the Repair Procedure below to address this condition.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10086315, 10087803, 10134353 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10086315, 10087803, 10134353",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10086315",
+     "10087803",
+     "10134353"
+    ],
+    "complaint_patterns": [
+     "II (2010 redesign)|loss-of-power"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-paint",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "BODY",
+   "title": "Manufacturer communication: paint peeling",
+   "symptoms": [
+    "paint peeling"
+   ],
+   "cause": "LSB: On some vehicles, when Rapgard is removed, the paint may have a stained appearance. These stains appear to be under the clear coat. The stain patterns are usually under wrinkles in the Rapgard. These wrinkles sometimes trap water and cause the paint to stain from the trapped moisture, especially on horizontal surfaces, such as the hood, roof, and trunk. Stains can be removed by heating the stained surface to remove the trapped moisture. Use the following procedure to address this concern. | TSB: Some 2010 ? 2019 model year Lexus vehicles may exhibit paint stains after the removal of Rapgard?. The paint stains may appear to be under the clear coat but are usually under wrinkles in the Rapgard?. The wrinkles may trap water and cause the paint to stain from the trapped moisture, especially on horizontal surfaces such as the hood, roof, and trunk. Follow the Repair Procedure in this bulletin to address this condition. | TSB: Some 2011 ? 2019 model year Lexus vehicles (including RX350HL, RX450HL, LS460L, and LS600HL) with super chrome wheel finishes may become discolored and/or damaged when aftermarket cleaners, polishes, or brake dust removal products are used on wheels with super chrome finishes. Wheel cleaners and polish that contain acidic substances may damage the clear coat of the wheel, resulting in the undercoating (black) to become visible. See Figures 1 and 2 below for examples of wheel finishes damaged by aftermarket products. NOTE If using a wheel cleaning product, first test it in an area NOT visible to the customer.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10111226, 10111362, 10159695, 10162250 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10111226, 10111362, 10159695, 10162250",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10111226",
+     "10111362",
+     "10159695",
+     "10162250"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-suspension",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "TSB: Some 2014 ? 2020 model year GX460 vehicles may exhibit a leak from the front shock absorbers that has been identified by the customer. Improved front shock absorbers have been made available. Please follow the Repair Procedure in this bulletin to address this condition. NOTE The improved shock absorbers may change the ride characteristics of the vehicle and make suspension stiffness more noticeable. Ensure the customer is made aware of this change prior to replacement. If the customer wishes to retain the current ride characteristics, this bulletin does NOT apply.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10169439 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10169439",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10169439"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-II (2010 redesign)-tsb-torque-converter",
+   "generation": "II (2010 redesign)",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Manufacturer communication: torque converter shudder",
+   "symptoms": [
+    "torque converter shudder"
+   ],
+   "cause": "TSB: The purpose of this service bulletin is to provide information regarding the installation of the correct torque converter bolts during automatic transmission/transaxle assembly replacement. Incorrect torque converter bolts or missing washers can cause damage to the torque converter assembly. Use the information in this bulletin when installing an automatic transmission/transaxle assembly.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10109445 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10109445",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10109445"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-US2024+-tsb-battery-drain",
+   "generation": "US2024+",
+   "years": [
+    2024,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.  As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.  To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should test the auxiliary (12V) battery and recharge, if necessary, no more than 48 hours before delivery to the customer. | TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life. | A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10248820, 10251072, 11014201, 11015925, 11024105 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10248820, 10251072, 11014201, 11015925, 11024105",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10248820",
+     "10251072",
+     "11014201",
+     "11015925",
+     "11024105",
+     "11029886",
+     "11034820"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "gx-US2024+-tsb-infotainment",
+   "generation": "US2024+",
+   "years": [
+    2024,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "Some 2023 model year ES 250, ES 300h, ES 350, and UX 250h vehicles with DCM firmware version earlier than LG-N210ee9999-09 may exhibit a condition in which the vehicle customize settings menu is unavailable in the head unit after connecting to Techstream.  Some 2023 model year ES 250, ES 350, LS 500, LS 500h, RX 350, RX 350h, RX 500h, and RZ 450e vehicles, and 2023 2024 model year ES 300h and UX 250h vehicles with DCM firmware versions earlier than LG-N210jj3333-09, LG-N210nn1212-09, LG-N310kk4646-0I, LG-N310ll4A4A-0I, LG-N310mm8A8A-0I, LG-N310nnBLBM-0I, or LG-N310oo1B1B-0I may exhibit a condition in which remote services are inoperative.  Some 2023 model year ES 250, ES 350, LS 500, LS 500h, and RZ 450e vehicles, 2023  2024 model year RX 350, RX 350h, RX 450h+, and RX 500h vehicles, 2024 model year GX 550, LC 500c, and UX 250h vehicles; and 2023  2025 model year ES 300h vehicles with DCM firmware versions earlier than LG-N210qq####-##, or LG-N310qq####-##, may exhibit a condition in which Apple Music or Amazon Music streaming and/or remote services are inoperative.  A DCM firmware update is now available. | To assist with the early detection and early resolution of audio related concerns you may be asked to recover MMR data from the head unit. The following steps are instructions on how to retrieve the data from the system and are only to be used when requested by FTS and/or FPE. | A new head unit software update is available for 2023  2024 model year ES 250, ES 300h, ES 350, LS 500h, and UX 250h; 2023 model year LS 500; 2024 model year GX 550, LC 500, LC 500c, and LC 500h vehicles equipped with Lexus Multimedia earlier than version 2170 (earlier than 2172 for GX 550). This software update includes the following improvements:  User Profile.  User interface.  Cloud navigation.  Intelligent assistant voice recognition.  Bug fixes.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11010325, 11018325, 11019328, 11024076 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11010325, 11018325, 11019328, 11024076",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11010325",
+     "11018325",
+     "11019328",
+     "11024076"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "10142501",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "TT: During previous air conditioning service, leakage prevention agent (A/C stop leak) may have been added to the A/C system. Adding stop leak products to the A/C system is not a recommended or approved Lexus repair process. During A/C service, moisture enters the A/C system, and can react with the previously added A/C stop leak, forming a gelatinous substance. The gel substance that forms can cause the A/C compressor to bind and or seize.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10092865",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "THIS COMMUNICATION IS INFORMING TOYOTA OF A DELAMINATION ISSUE WITHIN AN I.C. PRODUCED BY NXP AND ASSEMBLED INTO AIRBAG SENSOR SUPPLIED BY DENSO INTERNATIONAL AMERICA, INC.  THIS DELAMINATION ISSUE MANIFESTS ITSELF AS AN OPEN CIRCUIT WITHIN THE SENSOR, CAUSING A DTC TO BE SET ON THE VEHICLE ALONG WITH A DECLARING AIRBAG LIGHT.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10076255",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2016
+   ],
+   "summary": "BATTERY MAINTENANCE DURING PDS.    A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE.  THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD.  BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10093261",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2016
+   ],
+   "summary": "\"LSB: A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE. THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD. BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE.     AS A MATTER OF POLICY, TOYOTA DOES NOT PROVIDE WARRANTY COVERAGE FOR DISCHARGED AND/OR FAILED BATTERIES DUE TO LACK OF MAINTENANCE. IT IS THE DEALERS RESPONSIBILITY TO MAINTAIN SPECIFIED STATE OF CHARGE (SOC) OF THE VEHICLES BATTERY WHILE IN STOCK AND ASSURE PROPER STATE OF CHARGE (SOC) AT DELIVERY.     TO ELIMINATE CUSTOMER SERVICE CONCERNS DUE TO AN UNDERCHARGED BATTERY DURING THE FIRST FEW WEEKS OF OWNERSHIP, ALL DEALERS SHOULD CHECK BATTERY STATE OF CHARGE (SOC) AND RECHARGE, IF NECESSARY, WITHIN 48 HOURS OF DELIVERY TO CUSTOMERS.   \"",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10106043",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2017
+   ],
+   "summary": "TSB:  A BATTERY IN A STORED VEHICLE IS SUBJECT TO CONDITIONS THAT CAN REDUCE ITS PERFORMANCE AND LIFE. THESE CONDITIONS INCLUDE STORAGE PERIOD, TEMPERATURE, PARASITIC DRAIN, AND BATTERY LOAD. BECAUSE OF THESE FACTORS, BATTERY INSPECTION AND MAINTENANCE ARE REQUIRED IN ORDER TO ENSURE PROPER OPERATION AND OPTIMAL BATTERY LIFE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10111153",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "summary": "LSB: While a vehicle is in inventory, the battery is subject to conditions that can reduce its performance and life. Batteries can become discharged due to an extended storage period, temperature, parasitic drain, or while demonstrating vehicle features and benefits in the sales process. Battery inspection and maintenance are required in order to ensure proper operation and optimal battery life. As described in this bulletin, operating the engine for 30 minutes after 60 days in storage and every 30 days thereafter will help to maintain battery State of Charge (SOC). This process supplements other movements of the vehicle as it is staged, and has specific restrictions on how maintenance is to be done. Also described in this bulletin are 2 other approved methods for maintaining battery State of Charge.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10111303",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "summary": "LSB: While a vehicle is in inventory, the battery is subject to conditions that can reduce its performance and life. Batteries can become discharged due to an extended storage period, temperature, parasitic drain, or while demonstrating vehicle features and benefits in the sales process. Battery inspection and maintenance are required in order to ensure proper operation and optimal battery life. As described in this bulletin, operating the engine for 30 minutes after 60 days in storage and every 30 days thereafter will help to maintain battery State of Charge (SOC). This process supplements other movements of the vehicle as it is staged, and has specific restrictions on how maintenance is to be done. Also described in this bulletin are 2 other approved methods for maintaining battery State of Charge.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10134099",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2017
+   ],
+   "summary": "TSB:  A battery in a stored vehicle is subject to conditions that can reduce its performance and life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10152236",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018
+   ],
+   "summary": "TSB:  A battery in a stored vehicle is subject to conditions that can reduce its performance and life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2018
+   ]
+  },
+  {
+   "id": "10174922",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2021
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.  As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.  To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should check battery SOC and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10181747",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2021
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.    As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.    To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should check battery SOC and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10201345",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service  life. These conditions include storage period, temperature, parasitic drain, and battery load.  Because of these factors, battery inspection and maintenance are required in order to ensure  proper operation and optimal battery life.    As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or  failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified  State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10202488",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.    As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.    To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should test the auxiliary (12V) battery and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10207942",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.    As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.    To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should test the auxiliary (12V) battery and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10224131",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2023
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.    As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.    To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should test the auxiliary (12V) battery and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2023
+   ]
+  },
+  {
+   "id": "10111149",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015
+   ],
+   "summary": "LSB: Some 2014 - 2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL \"ON\" condition with Diagnostic Trouble Code (DTC) P006A (MAP - Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10111299",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015
+   ],
+   "summary": "LSB: Some 2014 - 2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL \"ON\" condition with Diagnostic Trouble Code (DTC) P006A (MAP - Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10132547",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015
+   ],
+   "summary": "LSB: Some 2014 ? 2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL ?ON? condition with Diagnostic Trouble Code (DTC) P006A (MAP ? Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10134151",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015
+   ],
+   "summary": "Some 2014  2015 model year GX 460 vehicles equipped with the 1UR-FE engine may exhibit a MIL ON condition with Diagnostic Trouble Code (DTC) P006A (MAP  Mass or Volume Air Flow Correlation Bank 1). Some vehicles may also exhibit the engine running rough and light hesitation under acceleration. The condition may be caused by debris in the EGR assembly. Follow the procedures in this bulletin to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10177574",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "summary": "TT: The Lexus Quality group is looking to better understand our customers expectation regarding vehicle  drivability. Specifically, we are looking at vehicle surge/hesitation condition (inconsistent acceleration)  and would like to recover detailed customer voice and vehicle data.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ]
+  },
+  {
+   "id": "10177590",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "summary": "TT: The Lexus Quality group is looking to better understand our customers expectation regarding vehicle drivability. Specifically, we are looking at vehicle surge/hesitation condition (inconsistent acceleration) and would like to recover detailed customer voice and vehicle data.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ]
+  },
+  {
+   "id": "10179701",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "summary": "TT: The Lexus Quality group is looking to better understand our customers expectation regarding vehicle drivability. Specifically, we are looking at vehicle surge/hesitation condition (inconsistent acceleration) and would like to recover detailed customer voice and vehicle data.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ]
+  },
+  {
+   "id": "10179605",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "summary": "TT: The Lexus Quality group is looking to better understand our customers expectation regarding vehicle drivability. Specifically, we are looking at vehicle surge/hesitation condition (inconsistent acceleration) and would like to recover detailed customer voice and vehicle data.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020,
+    2021
+   ]
+  },
+  {
+   "id": "10093985",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "LSB: A DOWNLOAD AND INSTALLATION PROCESS IS REQUIRED TO ACTIVATE THE ENFORM SUITE OF APPS & DATA SERVICES BEFORE THEY ARE USED FOR THE FIRST TIME ON NEW VEHICLES. THE DOWNLOAD AND INSTALLATION PROCESS MAY ALSO NEED TO BE PERFORMED UNDER OTHER CIRCUMSTANCES SUCH AS FOLLOWING A HEAD UNIT REPLACEMENT OR AFTER THE CUSTOMER'S PERSONAL SETTINGS ARE ERASED. THE DOWNLOAD AND INSTALLATION PROCESS REQUIRES BETWEEN 3 AND 15 MINUTES TO COMPLETE, DEPENDING ON THE FILE SIZE, CELLULAR CONNECTION SPEED, AND OTHER FACTORS. FOLLOWING THE DOWNLOAD AND INSTALLATION PROCESS, SMALL ENFORM APP UPDATES MAY ALSO OCCUR VIA AN OVER THE AIR UPDATE SYSTEM. FOLLOW THE PROCEDURE BELOW TO PERFORM THE DOWNLOAD AND INSTALLATION PROCESS.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10109470",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014
+   ],
+   "summary": "Tech Tip: Head unit does not recognize a Multimedia software update file that has been downloaded to a USB flash drive from a Technical Service Bulletin.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014
+   ]
+  },
+  {
+   "id": "10111505",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "LSB: A download and installation process is required to activate the Enform suite of Apps & Data Services before they are used for the first time on new vehicles. The download and installation process may also need to be performed under other circumstances such as following a head unit replacement or after the customer's personal settings are erased. The download and installation process requires between 3 and 15 minutes to complete, depending on the file size, cellular connection speed, and other factors. Following the download and installation process, small Enform? App updates may also occur via an over the air update system. Follow the procedure below to perform the download and installation process.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10179766",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "TSB: Some 2018 ? 2020 model year Lexus vehicles equipped with the Enform? 2.0 Navigation  System require a Special Service Tool (SST) USB flash drive to update the map, points of  interest, and system software. The SST is used with applicable vehicles to deliver the update;  however, the process for generating license keys differs from previous generations.    Before attempting to perform a map update, the head unit?s expiration date must be checked.  If the expiration date is still valid, a license key may be generated without the use of an activation  card number. Updating the maps without the use of an activation card number is considered an  Embedded Navigation Update (refer to pg. 10) and performing this process does not extend the  duration of telematic map services. If the head unit?s expiration date is expired or will expire within  the next 90 days, it should be recommended to the customer to purchase an activation number.  Utilizing an activation number will initiate a Dynamic Navigation Update (refer to pg. 4). This  Dynamic Navigation Update will perform the Embedded Navigation Update and provide telematic  map services for a period of two years from the day that the Dynamic Navigation Update  is performed.    Activation card numbers are provided in an activation card number pamphlet available through the  normal parts ordering system.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10230361",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: Some 2018 ? 2022 model year Lexus vehicles equipped with the Enform? 2.0 Navigation System, require a Special Service Tool (SST) USB flash drive to update the map, points of interest, and system software. The SST is used with applicable vehicles to deliver the update, however, the process for generating license keys differs from previous generations.    Before attempting to perform a map update, the expiration date of the dynamic subscription (stored in the head unit), must be checked. If the expiration date has not passed, a license key may be generated without the purchase of an activation card number (ACN). Updating the map without the use of an ACN is considered an Embedded Navigation Update (refer to pg. 10) and performing this update does not extend the subscription to dynamic map services. If the subscription period has expired, or is expiring within the next 90 days, it should be recommended to the customer to purchase an ACN. Utilizing an ACN, will initiate the Dynamic Navigation Update (refer to pg. 4). This Dynamic Navigation Update will perform the embedded navigation update and provide dynamic map services for a period of two years from the date that the Dynamic Navigation Update is performed.    ACNs are provided in a pamphlet available through the normal parts ordering system",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10235224",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: Some 2020 ? 2022 model year vehicles equipped with 17CY+ Panasonic Audio (versions less than 1226) and Navigation (versions less than 1225 or 1245 with 20 Teammate) may exhibit one or more of the following conditions: ?Navigation reset while entering a destination. ?Voice command does not recognize Starbucks. ??Unable to establish audio connection? message, and Alexa is unable to resume after Android AutoTM interruption. ?Soft buttons grayed Out during panoramic view monitor transition. ?HVAC fan speed displayed incorrectly. ?Volume cannot be adjusted with the rear seat remote control. ?Multimedia system reboots when iPhone is connected via USB. ?Energy flow information is missing on energy monitor screen. ?Clearance sonar indication on backup camera screen is missing. ?Audio from USB devices intermittently works. ?iPhone ringer continues after answering call. ?Audio titles not displayed. ?Toyota apps screen menu not displayed.     Some 2020 ? 2021 model year vehicles equipped with 17CY+ Panasonic Navigation (version less than 1150) and Audio (version less than 1163) may exhibit one or more of the following conditions: ?Poor map screen touch operation. ?Navigation system reset. ?Climate temperature control difficult to operate. ??Waiting for the Beep? message displayed, voice recognition does not start when pressing the push to talk button. ?Blower motor speed incorrectly displayed. ?White CarPlay screen when connecting iPhone12. ?Navigation sub-screen blank while playing a CD. ?Inoperative rear seat entertainment track controls. ?Abnormal energy flow screen appearance. ?Incorrect FM or SiriusXM genre Information.       A software update is now available to address these conditions. Follow the Software Update Procedure in this bulletin to address these conditions.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "10252258",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2022
+   ],
+   "summary": "TSB: Some 2018 ? 2022 model year Lexus vehicles equipped with the Enform? 2.0 Navigation System, require a Special Service Tool (SST) USB flash drive to update the map, points of interest, and system software. The SST is used with applicable vehicles to deliver the update, however, the process for generating license keys differs from previous generations.    Before attempting to perform a map update, the expiration date of the dynamic subscription (stored in the head unit), must be checked. If the expiration date has not passed, a license key may be generated without the purchase of an activation card number (ACN). Updating the map without the use of an ACN is considered an Embedded Navigation Update (refer to pg. 10) and performing this update does not extend the subscription to dynamic map services. If the subscription period has expired, or is expiring within the next 90 days, it should be recommended to the customer to purchase an ACN. Utilizing an ACN, will initiate the Dynamic Navigation Update (refer to pg. 4). This Dynamic Navigation Update will perform the embedded navigation update and provide dynamic map services for a period of two years from the date that the Dynamic Navigation Update is performed.    ACNs are provided in a pamphlet available through the normal parts ordering system. Follow the process in this bulletin to perform the update.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2022
+   ]
+  },
+  {
+   "id": "11018326",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2022,
+    2023
+   ],
+   "summary": "To assist with the early detection and early resolution of audio related concerns you may be asked to recover MMR data from the head unit. The following steps are instructions on how to retrieve the data from the system and are only to be used when requested by FTS and/or FPE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "11019329",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2022,
+    2023
+   ],
+   "summary": "To assist with the early detection and early resolution of audio related concerns you may be asked to recover MMR data from the head unit. The following steps are instructions on how to retrieve the data from the system and are only to be used when requested by FTS and/or FPE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10086315",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015,
+    2016
+   ],
+   "summary": "TSB:  SOME 2014  2016 MODEL YEAR GX 460 VEHICLES MAY EXHIBIT A MIL ON CONDITION WITH DIAGNOSTIC TROUBLE CODE (DTC) P2440 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 1) OR P2442 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 2) AND UNDER SOME CONDITIONS MAY ENTER LIMP MODE (LIMITED THROTTLE INPUT ~ 25MPH). THIS CONDITION CAN BE TRIGGERED BY SUB-FREEZING AMBIENT TEMPERATURES. FOLLOW THE REPAIR PROCEDURE BELOW TO ADDRESS THIS CONDITION.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10087803",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015,
+    2016
+   ],
+   "summary": "TSB:  SOME 2014  2016 MODEL YEAR GX 460 VEHICLES MAY EXHIBIT A MIL ON CONDITION WITH DIAGNOSTIC TROUBLE CODE (DTC) P2440 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 1) OR P2442 (SECONDARY AIR INJECTION SYSTEM SWITCHING VALVE STUCK OPEN, BANK 2) AND UNDER SOME CONDITIONS MAY ENTER LIMP MODE (LIMITED THROTTLE INPUT ~ 25MPH). THIS CONDITION CAN BE TRIGGERED BY SUB-FREEZING AMBIENT TEMPERATURES. FOLLOW THE REPAIR PROCEDURE BELOW TO ADDRESS THIS CONDITION.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10134353",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015,
+    2016
+   ],
+   "summary": "TSB:  Some 2014 ? 2016 model year GX 460 vehicles may exhibit a MIL ?ON? condition with Diagnostic Trouble Code (DTC) P2440 (Secondary Air Injection System Switching Valve Stuck Open, Bank 1) or P2442 (Secondary Air Injection System Switching Valve Stuck Open, Bank 2) and under some conditions may enter limp mode (limited throttle input ~ 25mph). This condition can be triggered by sub-freezing ambient temperatures. Follow the Repair Procedure below to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016
+   ]
+  },
+  {
+   "id": "10111226",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "LSB: On some vehicles, when Rapgard is removed, the paint may have a stained appearance. These stains appear to be under the clear coat. The stain patterns are usually under wrinkles in the Rapgard. These wrinkles sometimes trap water and cause the paint to stain from the trapped moisture, especially on horizontal surfaces, such as the hood, roof, and trunk. Stains can be removed by heating the stained surface to remove the trapped moisture. Use the following procedure to address this concern.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10111362",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "LSB: On some vehicles, when Rapgard is removed, the paint may have a stained appearance. These stains appear to be under the clear coat. The stain patterns are usually under wrinkles in the Rapgard. These wrinkles sometimes trap water and cause the paint to stain from the trapped moisture, especially on horizontal surfaces, such as the hood, roof, and trunk. Stains can be removed by heating the stained surface to remove the trapped moisture. Use the following procedure to address this concern.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10159695",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "summary": "TSB: Some 2010 ? 2019 model year Lexus vehicles may exhibit paint stains after the removal of Rapgard?. The paint stains may appear to be under the clear coat but are usually under wrinkles in the Rapgard?. The wrinkles may trap water and cause the paint to stain from the trapped moisture, especially on horizontal surfaces such as the hood, roof, and trunk. Follow the Repair Procedure in this bulletin to address this condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014
+   ]
+  },
+  {
+   "id": "10162250",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2014
+   ],
+   "summary": "TSB: Some 2011 ? 2019 model year Lexus vehicles (including RX350HL, RX450HL, LS460L, and LS600HL) with super chrome wheel finishes may become discolored and/or damaged when aftermarket cleaners, polishes, or brake dust removal products are used on wheels with super chrome finishes. Wheel cleaners and polish that contain acidic substances may damage the clear coat of the wheel, resulting in the undercoating (black) to become visible. See Figures 1 and 2 below for examples of wheel finishes damaged by aftermarket products. NOTE If using a wheel cleaning product, first test it in an area NOT visible to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014
+   ]
+  },
+  {
+   "id": "10169439",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "TSB: Some 2014 ? 2020 model year GX460 vehicles may exhibit a leak from the front shock absorbers that has been identified by the customer. Improved front shock absorbers have been made available. Please follow the Repair Procedure in this bulletin to address this condition. NOTE The improved shock absorbers may change the ride characteristics of the vehicle and make suspension stiffness more noticeable. Ensure the customer is made aware of this change prior to replacement. If the customer wishes to retain the current ride characteristics, this bulletin does NOT apply.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10109445",
+   "make": "LEXUS",
+   "model": "GX460",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "TSB: The purpose of this service bulletin is to provide information regarding the installation of the correct torque converter bolts during automatic transmission/transaxle assembly replacement. Incorrect torque converter bolts or missing washers can cause damage to the torque converter assembly. Use the information in this bulletin when installing an automatic transmission/transaxle assembly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10248820",
+   "make": "LEXUS",
+   "model": "GX!",
+   "years": [
+    2024
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.  As a matter of policy, Lexus does not provide battery warranty coverage for discharged and/or failed batteries due to lack of maintenance. It is the dealer?s responsibility to maintain the specified State-Of-Charge (SOC) of the vehicle?s battery while in stock and ensure proper SOC at delivery.  To eliminate customer service concerns due to an undercharged battery during the first few weeks of ownership, ALL dealers should test the auxiliary (12V) battery and recharge, if necessary, no more than 48 hours before delivery to the customer.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "10251072",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2025
+   ],
+   "summary": "TSB: A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "11014201",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2025
+   ],
+   "summary": "A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "11015925",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2026
+   ],
+   "summary": "A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11024105",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2026
+   ],
+   "summary": "A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11029886",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2026
+   ],
+   "summary": "A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11034820",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2026
+   ],
+   "summary": "A battery in a stored vehicle is subject to conditions that can reduce its performance and service life. These conditions include storage period, temperature, parasitic drain, and battery load. Because of these factors, battery inspection and maintenance are required in order to ensure proper operation and optimal battery life.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11010325",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2024
+   ],
+   "summary": "Some 2023 model year ES 250, ES 300h, ES 350, and UX 250h vehicles with DCM firmware version earlier than LG-N210ee9999-09 may exhibit a condition in which the vehicle customize settings menu is unavailable in the head unit after connecting to Techstream.  Some 2023 model year ES 250, ES 350, LS 500, LS 500h, RX 350, RX 350h, RX 500h, and RZ 450e vehicles, and 2023 2024 model year ES 300h and UX 250h vehicles with DCM firmware versions earlier than LG-N210jj3333-09, LG-N210nn1212-09, LG-N310kk4646-0I, LG-N310ll4A4A-0I, LG-N310mm8A8A-0I, LG-N310nnBLBM-0I, or LG-N310oo1B1B-0I may exhibit a condition in which remote services are inoperative.  Some 2023 model year ES 250, ES 350, LS 500, LS 500h, and RZ 450e vehicles, 2023  2024 model year RX 350, RX 350h, RX 450h+, and RX 500h vehicles, 2024 model year GX 550, LC 500c, and UX 250h vehicles; and 2023  2025 model year ES 300h vehicles with DCM firmware versions earlier than LG-N210qq####-##, or LG-N310qq####-##, may exhibit a condition in which Apple Music or Amazon Music streaming and/or remote services are inoperative.  A DCM firmware update is now available.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2024
+   ]
+  },
+  {
+   "id": "11018325",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2024,
+    2025
+   ],
+   "summary": "To assist with the early detection and early resolution of audio related concerns you may be asked to recover MMR data from the head unit. The following steps are instructions on how to retrieve the data from the system and are only to be used when requested by FTS and/or FPE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11019328",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2024,
+    2025
+   ],
+   "summary": "To assist with the early detection and early resolution of audio related concerns you may be asked to recover MMR data from the head unit. The following steps are instructions on how to retrieve the data from the system and are only to be used when requested by FTS and/or FPE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024,
+    2025
+   ]
+  },
+  {
+   "id": "11024076",
+   "make": "LEXUS",
+   "model": "GX",
+   "years": [
+    2024
+   ],
+   "summary": "A new head unit software update is available for 2023  2024 model year ES 250, ES 300h, ES 350, LS 500h, and UX 250h; 2023 model year LS 500; 2024 model year GX 550, LC 500, LC 500c, and LC 500h vehicles equipped with Lexus Multimedia earlier than version 2170 (earlier than 2172 for GX 550). This software update includes the following improvements:  User Profile.  User interface.  Cloud navigation.  Intelligent assistant voice recognition.  Bug fixes.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2024
+   ]
+  }
+ ],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "lexus-gx-us-2014-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2015-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2016-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2017-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2018-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2019-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2020-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2021-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2022-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2023-4.6l-8cyl-ice-a-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2024-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2025-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus-gx-us-2026-3.4l-6cyl-turbo-ice-a-s10-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  }
+ ],
+ "notes": [],
+ "errors": [],
+ "counts": {
+  "generations": 2,
+  "configurations": 13,
+  "facts": 24,
+  "recalls": 6,
+  "symptom_patterns": 20,
+  "issues": 17,
+  "issues_by_probability": {
+   "RARE": 6,
+   "OCCASIONAL": 11
+  },
+  "tsbs": 52,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 24
+  }
+ }
+}
