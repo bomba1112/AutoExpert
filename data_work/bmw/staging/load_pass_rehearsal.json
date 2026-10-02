@@ -1,0 +1,292 @@
+{
+ "make": "bmw",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-02T16:21:11+00:00",
+ "replace_own": [
+  "m5"
+ ],
+ "lines": {
+  "bmw/3-series": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 139,
+    "source_records_new": 18,
+    "te_existing": 1647,
+    "te_new_GENERATION": 738,
+    "te_new_ENGINE": 7,
+    "configurations": 89,
+    "configurations_research_only": 89,
+    "issues_existing": 61
+   },
+   "generations": [
+    {
+     "code": "F30",
+     "action": "unchanged"
+    },
+    {
+     "code": "Seventh generation · US sedan",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/5-series": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 117,
+    "source_records_new": 10,
+    "te_existing": 1639,
+    "te_new_GENERATION": 730,
+    "te_new_ENGINE": 7,
+    "configurations": 87,
+    "configurations_linked": 19,
+    "configurations_research_only": 68,
+    "issues_existing": 66
+   },
+   "generations": [
+    {
+     "code": "F10",
+     "action": "unchanged"
+    },
+    {
+     "code": "G30",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2024+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/7-series": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 97,
+    "source_records_new": 14,
+    "te_existing": 1139,
+    "te_new_GENERATION": 690,
+    "te_new_ENGINE": 7,
+    "configurations": 62,
+    "configurations_research_only": 62,
+    "issues_existing": 52
+   },
+   "generations": [
+    {
+     "code": "US2014-2015",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2016-2022",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2023+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/x5": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 75,
+    "source_records_new": 13,
+    "te_existing": 961,
+    "te_new_GENERATION": 593,
+    "configurations": 51,
+    "configurations_research_only": 44,
+    "configurations_linked": 7,
+    "issues_existing": 76,
+    "issues_updated": 2
+   },
+   "generations": [
+    {
+     "code": "F15",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2019+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/x6": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 51,
+    "source_records_new": 5,
+    "te_existing": 610,
+    "te_new_GENERATION": 205,
+    "te_new_ENGINE": 7,
+    "configurations": 33,
+    "configurations_research_only": 33,
+    "issues_existing": 62
+   },
+   "generations": [
+    {
+     "code": "US2014-2014",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2015-2019",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2020+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/x7": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 34,
+    "source_records_new": 5,
+    "te_existing": 389,
+    "te_new_GENERATION": 101,
+    "configurations": 16,
+    "configurations_research_only": 16,
+    "issues_existing": 42
+   },
+   "generations": [
+    {
+     "code": "US2019+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/m3": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 40,
+    "source_records_new": 10,
+    "te_existing": 352,
+    "te_new_GENERATION": 427,
+    "configurations": 25,
+    "configurations_research_only": 25,
+    "issues_existing": 19
+   },
+   "generations": [
+    {
+     "code": "US2015-2018",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2021+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/m5": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 336,
+    "replaced_own_issues": 34,
+    "raw_documents_seen": 46,
+    "source_records_new": 9,
+    "te_new_GENERATION": 345,
+    "te_new_CONFIGURATION": 186,
+    "configurations": 14,
+    "configurations_research_only": 14,
+    "issues_new": 37
+   },
+   "generations": [
+    {
+     "code": "US2018+",
+     "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
+    },
+    {
+     "code": "US2014-2016",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2018-2023",
+     "action": "created",
+     "start_year": 2018,
+     "end_year": 2023
+    },
+    {
+     "code": "US2025+",
+     "action": "created",
+     "start_year": 2025,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/x5-m": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 32,
+    "source_records_new": 5,
+    "te_existing": 182,
+    "te_new_ENGINE": 14,
+    "te_new_GENERATION": 125,
+    "configurations": 11,
+    "configurations_research_only": 11,
+    "issues_existing": 9
+   },
+   "generations": [
+    {
+     "code": "US2015+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "bmw/x6-m": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 28,
+    "source_records_new": 3,
+    "te_existing": 219,
+    "te_new_GENERATION": 125,
+    "te_new_ENGINE": 14,
+    "configurations": 13,
+    "configurations_research_only": 13,
+    "issues_existing": 8
+   },
+   "generations": [
+    {
+     "code": "US2014-2019",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2020+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T16:22:50+00:00"
+}

@@ -1,14 +1,6 @@
 {
  "generations": [
   {
-   "code": "G30",
-   "action": "corrected end_year 2024 -> 2023 (written by an earlier load of this pipeline)"
-  },
-  {
-   "code": "US2025+",
-   "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
-  },
-  {
    "code": "F10",
    "action": "unchanged"
   },
@@ -18,108 +10,25 @@
   },
   {
    "code": "US2024+",
-   "action": "created",
-   "start_year": 2024,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
- "existing_vs_new": [
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-530i-rwd-8at-RWD-2017",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-530i-xdrive-awd-8at-AWD-2017",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-540i-rwd-8at-RWD-2017",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2017-540i-xdrive-awd-8at-AWD-2017",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530i-rwd-8at-RWD-2018",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530i-xdrive-awd-8at-AWD-2018",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-540i-rwd-8at-RWD-2018",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-540i-xdrive-awd-8at-AWD-2018",
-   "existing": "height_in=58.2",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530e-rwd-8at-RWD-2018",
-   "existing": "height_in=58.4",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  },
-  {
-   "variant": "factory-bmw-us:bmw-5series-g30-us-2017-2018-source07-2018-530e-xdrive-awd-8at-AWD-2018",
-   "existing": "height_in=58.4",
-   "new_values": [
-    1470
-   ],
-   "resolution": "existing catalog fact kept; new scoped fact stored separately"
-  }
- ],
+ "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T10:18:39+00:00",
+ "started_at": "2026-10-02T16:23:36+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
-  "replaced_own_te": 1634,
-  "replaced_own_issues": 62,
-  "raw_documents_seen": 107,
-  "te_new_GENERATION": 634,
-  "te_new_CONFIGURATION": 1005,
+  "raw_documents_seen": 117,
+  "source_records_new": 10,
+  "te_existing": 1639,
+  "te_new_GENERATION": 730,
+  "te_new_ENGINE": 7,
   "configurations": 87,
   "configurations_linked": 19,
   "configurations_research_only": 68,
-  "issues_new": 66
+  "issues_existing": 66
  },
- "finished_at": "2026-10-02T10:18:54+00:00"
+ "finished_at": "2026-10-02T16:23:53+00:00"
 }

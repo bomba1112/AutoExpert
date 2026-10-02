@@ -2,31 +2,63 @@
  "generations": [
   {
    "code": "F15",
-   "action": "filled",
-   "end_year": 2018
+   "action": "unchanged"
   },
   {
    "code": "US2019+",
-   "action": "created",
-   "start_year": 2019,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T09:55:28+00:00",
+ "started_at": "2026-10-02T16:24:08+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "issues_updated": [
+  {
+   "issue": "x5-F15-tsb-battery-drain",
+   "changes": {
+    "evidence_ids": [
+     7,
+     8
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Will Not Start\" (owner reports): MY2015: #3, average cost to fix N/A, average mileage 5,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  },
+  {
+   "issue": "x5-F15-tsb-water-leak",
+   "changes": {
+    "probability": [
+     "OCCASIONAL",
+     "COMMON"
+    ],
+    "evidence_ids": [
+     3,
+     5
+    ],
+    "note": [
+     null,
+     "CarComplaints.com \"Water Leaking Into Interior\" (owner reports): MY2014: #2, average cost to fix N/A, average mileage 35,000 mi | CarComplaints.com \"Sunroof Leak And Noise, Water Entering Cabin\" (owner reports): MY2017: #1, average cost to fix N/A, average mileage 35,000 mi"
+    ]
+   },
+   "resolution": "updated from the current staging (same issue, added evidence)"
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 62,
-  "source_records_new": 44,
-  "te_new_GENERATION": 396,
-  "te_new_CONFIGURATION": 565,
+  "raw_documents_seen": 75,
+  "source_records_new": 13,
+  "te_existing": 961,
+  "te_new_GENERATION": 593,
   "configurations": 51,
   "configurations_research_only": 44,
   "configurations_linked": 7,
-  "issues_new": 76
+  "issues_existing": 76,
+  "issues_updated": 2
  },
- "finished_at": "2026-10-02T09:55:33+00:00"
+ "finished_at": "2026-10-02T16:24:17+00:00"
 }
