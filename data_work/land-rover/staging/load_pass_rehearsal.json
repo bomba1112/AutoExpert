@@ -1,0 +1,129 @@
+{
+ "make": "land-rover",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-02T16:59:01+00:00",
+ "replace_own": [
+  "discovery-sport",
+  "range-rover",
+  "range-rover-evoque",
+  "range-rover-sport"
+ ],
+ "lines": {
+  "land-rover/range-rover": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 1111,
+    "replaced_own_issues": 53,
+    "raw_documents_seen": 70,
+    "source_records_new": 4,
+    "te_new_GENERATION": 600,
+    "te_new_ENGINE": 11,
+    "te_new_CONFIGURATION": 622,
+    "configurations": 38,
+    "configurations_linked": 5,
+    "configurations_research_only": 33,
+    "issues_new": 53
+   },
+   "generations": [
+    {
+     "code": "L405",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2022+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "land-rover/range-rover-sport": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 943,
+    "replaced_own_issues": 59,
+    "raw_documents_seen": 60,
+    "source_records_new": 4,
+    "te_new_GENERATION": 568,
+    "te_new_ENGINE": 11,
+    "te_new_CONFIGURATION": 500,
+    "configurations": 40,
+    "configurations_research_only": 40,
+    "issues_new": 59
+   },
+   "generations": [
+    {
+     "code": "L494",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2023+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "land-rover/range-rover-evoque": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 534,
+    "replaced_own_issues": 39,
+    "raw_documents_seen": 58,
+    "source_records_new": 6,
+    "te_new_GENERATION": 493,
+    "te_new_CONFIGURATION": 200,
+    "configurations": 16,
+    "configurations_research_only": 16,
+    "issues_new": 39
+   },
+   "generations": [
+    {
+     "code": "LV",
+     "action": "unchanged"
+    },
+    {
+     "code": "US2020+",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 1
+  },
+  "land-rover/discovery-sport": {
+   "flag": "--replace-own",
+   "exit": 0,
+   "counts": {
+    "replaced_own_te": 412,
+    "replaced_own_issues": 37,
+    "raw_documents_seen": 56,
+    "source_records_new": 4,
+    "te_new_GENERATION": 318,
+    "te_new_CONFIGURATION": 166,
+    "configurations": 14,
+    "configurations_research_only": 14,
+    "issues_new": 37
+   },
+   "generations": [
+    {
+     "code": "US2014-2014",
+     "action": "unchanged"
+    },
+    {
+     "code": "L550",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T16:59:24+00:00"
+}
