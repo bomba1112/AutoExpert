@@ -1,0 +1,100 @@
+{
+ "make": "tesla",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-02T17:10:05+00:00",
+ "replace_own": [],
+ "lines": {
+  "tesla/model-3": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 33,
+    "source_records_new": 29,
+    "te_new_GENERATION": 200,
+    "te_new_CONFIGURATION": 244,
+    "configurations": 19,
+    "configurations_research_only": 19,
+    "issues_new": 42
+   },
+   "generations": [
+    {
+     "code": "I",
+     "action": "filled",
+     "start_year": 2017
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "tesla/model-y": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 35,
+    "source_records_new": 26,
+    "te_new_GENERATION": 153,
+    "te_new_CONFIGURATION": 156,
+    "configurations": 12,
+    "configurations_research_only": 12,
+    "issues_new": 39
+   },
+   "generations": [
+    {
+     "code": "I",
+     "action": "filled",
+     "start_year": 2020
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "tesla/model-s": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 106,
+    "source_records_new": 92,
+    "te_new_GENERATION": 183,
+    "te_new_CONFIGURATION": 332,
+    "configurations": 18,
+    "configurations_research_only": 18,
+    "issues_new": 40
+   },
+   "generations": [
+    {
+     "code": "I",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "tesla/model-x": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 79,
+    "source_records_new": 64,
+    "te_new_GENERATION": 92,
+    "te_new_CONFIGURATION": 208,
+    "configurations": 11,
+    "configurations_research_only": 11,
+    "issues_new": 11
+   },
+   "generations": [
+    {
+     "code": "I",
+     "action": "filled",
+     "start_year": 2016
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T17:10:21+00:00"
+}

@@ -241,7 +241,7 @@ def crawl(args) -> int:
         return body, years, pages
 
     try:
-        for priority_only in ((True, False) if args.all else (False,)):
+        for priority_only in ((True, False) if args.all else ((True,) if args.priority_only else (False,))):
             for make, model in plan:
                 for gen_url in generations_of(make, model):
                     body, years = gen_url.rsplit("/", 2)[-2:]
@@ -274,6 +274,7 @@ def main(argv=None) -> int:
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--make")
     parser.add_argument("--models")
+    parser.add_argument("--priority-only", action="store_true", help="with --make/--models: specification sections only")
     parser.add_argument("--year-min", type=int, default=2014)
     parser.add_argument("--year-max", type=int, default=2026)
     parser.add_argument("--min-pause", type=float, default=2.0)
