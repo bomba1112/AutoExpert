@@ -68,14 +68,38 @@ def check_fact(fact, sources) -> list[str]:
                 if Decimal(str(fact["value"])) != again:
                     problems.append(f"conversion {raw} {unit_from} -> {again} != {fact['value']}")
         elif item["kind"] == "pdf_pages":
+            pdf_bytes = source_bytes(item)
+            if hashlib.sha256(pdf_bytes).hexdigest() != item["sha256"]:
+                problems.append(f"{cite['source']}: PDF sha256 differs from manifest")
+                continue
             pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{item['sha256']}.json.gz").read_bytes()))
             texts = [" ".join(pages["pages"][p - 1].split()) for p in cite["pages"] or []]
             quote = " ".join(cite["quote"].split())
             if not any(quote in t for t in texts):
-                layout = [" ".join(pages["layout"][p - 1].split()) for p in cite["pages"] or []] if pages.get("layout") else []
-                if not any(quote in t for t in layout):
-                    problems.append(f"{cite['source']}: quote not on page {cite['pages']}")
+                problems.append(f"{cite['source']}: quote not on page {cite['pages']}")
+                continue
+            # the table row is rebuilt again from the PDF word positions: the value must sit
+            # on the same row as when it was extracted (label/value pairing re-checked)
+            if cite.get("row") and ROWS is not None:
+                import pdfplumber
+
+                with pdfplumber.open(raw_path_of(item)) as pdf:
+                    rebuilt = [r["text"] for col in ROWS(pdf.pages[cite["pages"][0] - 1]) for r in col]
+                if cite["row"] not in rebuilt and not any(cite["row"][:200] in r for r in rebuilt):
+                    if not any(cite["row"][:120] in t for t in texts):
+                        problems.append(f"{cite['source']}: row not rebuilt on page {cite['pages'][0]}: {cite['row'][:80]}")
     return problems
+
+
+try:  # geometric re-check needs pdfplumber (run through uv); without it only quotes are checked
+    from extract_manual_facts import rows_of as ROWS
+except Exception:  # noqa: BLE001
+    ROWS = None
+
+
+def raw_path_of(item) -> Path:
+    path = item["path"]
+    return RAW_ROOT / path[len("rawstore:"):] if path.startswith("rawstore:") else ROOT / path
 
 
 def check_configuration(cfg) -> list[str]:
@@ -127,7 +151,8 @@ def main(make: str) -> int:
         bad = [r for r in results if r["problems"]]
         failed += len(bad)
         report[path.parent.name] = {"checked": len(results), "mismatches": len(bad), "details": bad}
-        print(path.parent.name, len(results), "checked,", len(bad), "mismatches", flush=True)
+        print(path.parent.name, len(results), "checked,", len(bad), "mismatches",
+              "(geometry)" if ROWS else "(quotes only)", flush=True)
     out = WORK / make / "staging" / "recheck_10pct.json"
     out.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     return 1 if failed else 0

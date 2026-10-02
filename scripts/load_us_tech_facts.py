@@ -410,6 +410,9 @@ class Loader:
                 fact.get("applicability") or {},
                 "conflict" if fact["display_level"] == "HIDDEN_CONFLICT" else "main",
             )
+            if self.s.get("build") and fact["display_level"] == "HIDDEN_CONFLICT":
+                # batch staging can hide two disagreeing values of one scope
+                scope = (*scope, json.dumps(fact["value"], sort_keys=True))
             self.add_te(
                 natural_key=nkey(*scope),
                 category=CATEGORY.get(

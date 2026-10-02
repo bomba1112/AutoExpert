@@ -1049,7 +1049,8 @@ def validate(st: Staging, gens, facts, issues):
                 st.errors.append({"where": where, "error": f"OUT_OF_RANGE {f['value']} not in {low}-{high}"})
     scopes = Counter(
         json.dumps([f["generation"], f["level"], f.get("engine"), f["key"], f["years"], f.get("applicability") or {},
-                    f["display_level"] == "HIDDEN_CONFLICT"], sort_keys=True)
+                    f["display_level"] == "HIDDEN_CONFLICT",
+                    f["value"] if f["display_level"] == "HIDDEN_CONFLICT" else None], sort_keys=True)
         for f in facts
     )
     for scope, count in scopes.items():
