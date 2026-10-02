@@ -190,23 +190,29 @@ class Section:
     extra_titles: list = field(default_factory=list)  # second column-title line
     extra_checked: bool = False
 
+    kind_override: str | None = None  # an upper-case row title inside the table ("ENGINE")
+
     @property
     def kind(self) -> str:
-        t = self.title.upper()
-        if re.search(r"FEATURES|OPTIONS|PACKAGES?\b|COLORS|WARRANTY|AUDIO|SAFETY|SECURITY|MULTIMEDIA|ACCESSOR|"
-                     r"CONVENIENCE|BY GRADE|PRICING|MSRP|ENTUNE|CONNECTED|APPEARANCE|TRIM LEVELS", t):
-            return "features"
-        if "BATTERY" in t:
-            return "battery"
-        if re.search(r"DRIVETRAIN|TRANSMISSION|DRIVE ?LINE", t):
-            return "drivetrain"
-        if "MOTOR" in t and "ENGINE" not in t:
-            return "motor"
-        if "ENGINE" in t:
-            return "engine"
-        if "HYBRID" in t or re.search(r"SYSTEM$", t):
-            return "hybrid_system"
-        return "other"
+        return self.kind_override or title_kind(self.title)
+
+
+def title_kind(title: str) -> str:
+    t = title.upper()
+    if re.search(r"FEATURES|OPTIONS|PACKAGES?\b|COLORS|WARRANTY|AUDIO|SAFETY|SECURITY|MULTIMEDIA|ACCESSOR|"
+                 r"CONVENIENCE|BY GRADE|PRICING|MSRP|ENTUNE|CONNECTED|APPEARANCE|TRIM LEVELS", t):
+        return "features"
+    if "BATTERY" in t:
+        return "battery"
+    if re.search(r"DRIVETRAIN|TRANSMISSION|DRIVE ?LINE", t):
+        return "drivetrain"
+    if "MOTOR" in t and "ENGINE" not in t:
+        return "motor"
+    if "ENGINE" in t:
+        return "engine"
+    if "HYBRID" in t or re.search(r"SYSTEM$", t):
+        return "hybrid_system"
+    return "other"
 
 
 @dataclass
@@ -255,8 +261,11 @@ def build_sections(lines: list[Line], skip: set[int]) -> list[Section]:
         if not rest or len(ln.segs[0].text.split()) > 5 or re.search(r"\d", ln.segs[0].text):
             return None
         for s in rest:
-            if not re.search(r"[A-Za-z]{2}", s.text) or NON_VALUES.match(s.text) or ":" in s.text or "@" in s.text:
+            if not re.search(r"[A-Za-z]{2}", s.text) or NON_VALUES.match(s.text) or ":" in s.text or "@" in s.text \
+                    or re.match(r"^[\d.,•-]", s.text):  # values ("74.2 in.") are no model titles
                 return None
+        if not any(re.search(r"\d", s.text) for s in rest):
+            return None  # model titles carry model numbers ("RX 350 (FWD/AWD)", "GX 550")
         return tuple(re.sub(r"\s+", "", s.text).lower() for s in rest)
 
     repeated = Counter(k for k in (title_key(ln) for ln in body) if k)
@@ -270,12 +279,20 @@ def build_sections(lines: list[Line], skip: set[int]) -> list[Section]:
             first.x0 <= page_left[ln.page] + 60
             and nxt is not None and nxt.page == ln.page and abs(nxt.segs[0].x0 - first.x0) <= 4
         )
-        rest_ok = all(not re.search(r"[a-z]", s.text) and not re.match(r"^[\d•.,/-]", s.text) for s in ln.segs[1:])
+        # column titles: upper case ("FOUR-CYLINDER", "V6") or short grade names ("L/ LE/ LE Eco", "S")
+        rest_ok = all(not re.match(r"^[\d•.,/-]", s.text) and len(s.text) <= 25
+                      and (not re.search(r"[a-z]", s.text) or not re.search(r"\d", s.text)) for s in ln.segs[1:])
         key = title_key(ln)
         matrix_title = at_margin and key is not None and repeated[key] >= 2
-        if (at_margin and is_header_text(first.text) and rest_ok) or matrix_title:
-            if current is not None and not current.lines and len(ln.segs) == 1 and ln.gi == current.header.gi + 1:
-                current.title = norm(current.title + " " + first.text)  # title wrapped onto two lines
+        features_title = at_margin and len(ln.segs) == 1 and re.match(
+            r"^(?:Standard\s+|Available\s+)?(?:Exterior|Interior|Audio|Multimedia|Safety|Mechanical|Factory|"
+            r"Convenience|Comfort)?\s*(?:Features|Options|Packages|Colors)\b", first.text)
+        if (at_margin and is_header_text(first.text) and rest_ok) or matrix_title or features_title:
+            if current is not None and not current.lines and ln.gi == current.header.gi + 1:
+                # title wrapped onto two lines, or a second (overprinted) title line
+                current.title = norm(current.title + " " + first.text)
+                if len(current.header.segs) == 1 and len(ln.segs) > 1:
+                    current.header = ln
                 continue
             current = Section(first.text, ln)
             sections.append(current)
@@ -288,32 +305,40 @@ def build_sections(lines: list[Line], skip: set[int]) -> list[Section]:
 def layout_section(sec: Section, doc_boundary: float | None) -> None:
     sec.label_x = sec.header.segs[0].x0
     samples = []
+    numeric_at: dict[int, list[bool]] = defaultdict(list)
     for ln in sec.lines:
         s0 = ln.segs[0]
         if abs(s0.x0 - sec.label_x) <= 8 and len(ln.segs) >= 2:
             for s in ln.segs[1:]:
                 if not SUB_LABEL.match(s.text):
                     samples.append(round(s.x0 / 4) * 4)
+                    numeric_at[round(s.x0 / 4) * 4].append(numeric(s.text))
                     break
     counts = Counter(samples)
     boundary = None
+    mode_is_values = False
     if counts:
         value, n = counts.most_common(1)[0]
         if n >= 2 or doc_boundary is None:
             boundary = float(value)
+            flags = numeric_at[value]
+            mode_is_values = sum(flags) >= len(flags) / 2  # numbers, not sub-labels such as "Length (in.)"
     if boundary is None:
         boundary = doc_boundary if doc_boundary is not None else sec.label_x + 150
     # column titles in the header row, kept only when values sit under them
     titles = [s for s in sec.header.segs[1:]]
-    value_segs = [s for ln in sec.lines for s in ln.segs if s.x0 >= min([boundary] + [t.x0 for t in titles]) - 10]
+    value_segs = [s for ln in sec.extra_titles + sec.lines for s in ln.segs
+                  if s.x0 >= min([boundary] + [t.x0 for t in titles]) - 10]
     real = []
     for t in titles:
         if any(abs(v.x0 - t.x0) <= 15 or abs(v.center - t.center) <= 20 for v in value_segs):
             real.append(t)
     if real:
         first_col = min(t.x0 for t in real)
-        if len(real) >= 2 or boundary > first_col:
+        if boundary > first_col or (boundary < first_col - 20 and not mode_is_values):
             boundary = first_col  # the value area starts at the first titled column
+        elif len(real) >= 2 and not (mode_is_values and boundary < first_col):
+            boundary = first_col  # (titles centred over left-aligned numbers keep the number column)
         sec.columns = [Column(t.x0, t.x1, norm(t.text)) for t in real]
         # a second title line ("Premium/Premium+ | Luxury/Luxury+ | Overtrail/Overtrail+")
         while sec.lines and len(sec.columns) >= 2 and not sec.extra_checked:
@@ -360,13 +385,149 @@ def label_continues(text: str, row: Row) -> bool:
     return bool(re.match(r"^[(a-z]", text))
 
 
+def line_mid(ln: Line) -> float:
+    return (min(w["top"] for w in ln.words) + max(w["bottom"] for w in ln.words)) / 2
+
+
+def centred_labels(sec: Section) -> bool:
+    """Tables whose main labels are centred vertically on their value lines: a label alone on its
+    line between two sub-row lines ("Tread" between "Front (in.)" and "Rear (in.)", matrix sheets),
+    or - in tables without row rules - at least two labels centred between two value lines
+    ("Overall Width" between "73.0 in. (All other grades)" and "74.0 in. (Woodland)")."""
+    if sec.boundary - sec.label_x < 80 or sec.kind == "features":
+        return False
+    lines = sec.lines
+    between_values = 0
+
+    def sub_row(p: Line) -> bool:  # "Front (in.) | 65.63 | ..." - an indented label without dash, then values
+        return sec.label_x + 40 < p.segs[0].x0 < sec.boundary - 20 and len(p.segs) >= 2 \
+            and not SUB_LABEL.match(p.segs[0].text) and p.segs[1].x0 >= sec.boundary - 8
+
+    sub_rows = sum(1 for ln in lines if sub_row(ln))
+    for i in range(1, len(lines) - 1):
+        ln = lines[i]
+        prev, nxt = lines[i - 1], lines[i + 1]
+        if not (len(ln.segs) == 1 and abs(ln.segs[0].x0 - sec.label_x) <= 8 and ln.page == prev.page == nxt.page):
+            continue
+        if sub_rows >= 3 and sub_row(prev) and sub_row(nxt):
+            return True
+        if all(p.segs[0].x0 >= sec.boundary - 8 for p in (prev, nxt)) and ln.band is None \
+                and abs(line_mid(ln) - (line_mid(prev) + line_mid(nxt)) / 2) <= 3:
+            between_values += 1
+    if between_values >= 2 and all(ln.band is None for ln in lines):
+        # grade header lines ("LE  SE  XLE") need the line-by-line reader
+        return not any(len([s for s in ln.segs if s.x0 >= sec.boundary - 8]) >= 2
+                       and all(not numeric(s.text) for s in ln.segs if s.x0 >= sec.boundary - 8) for ln in lines)
+    return False
+
+
+def build_rows_centred(sec: Section) -> list[Row]:
+    """Rows of a table with centred main labels. Value lines form units (an indented sub-label with
+    its values plus following label-less value lines; without sub-labels every value line is a unit);
+    main-label pieces form label blocks (a label-only piece joins the next piece when the gap is a
+    single line); then each label block gets a contiguous run of units whose vertical centre is
+    closest to the label (dynamic programming; a label block may stay empty at a cost). A unit printed
+    on the same line as a label piece stays with that label. Positions are measured along the reading
+    order, a page break counting as one line."""
+    tol = 8.0
+    units: list[dict] = []
+    pieces: list[tuple[Seg, bool, float]] = []  # (main-column segment, line has values, virtual y)
+    vy, prev_ln = 0.0, None
+    for ln in sec.lines:
+        if ln.text.startswith("*") and len(ln.segs) == 1:
+            continue
+        if prev_ln is not None:
+            vy += min(line_mid(ln) - line_mid(prev_ln), 20.0) if ln.page == prev_ln.page else 15.0
+        prev_ln = ln
+        main_segs = [s for s in ln.segs if abs(s.x0 - sec.label_x) <= 8 and s.x0 < sec.boundary - tol]
+        sub_segs = [s for s in ln.segs if all(s is not m for m in main_segs) and s.x0 < sec.boundary - tol]
+        vsegs = [s for s in ln.segs if s.x0 >= sec.boundary - tol]
+        for s in main_segs:
+            pieces.append((s, bool(vsegs or sub_segs), vy))
+        if sub_segs or (vsegs and (main_segs or not units or not units[-1]["sub"])):
+            units.append({"y": vy, "sub": sub_segs, "lines": [(ln, vsegs)] if vsegs else [],
+                          "piece": main_segs[0] if main_segs else None})
+        elif vsegs and units:
+            units[-1]["lines"].append((ln, vsegs))
+    if not units or not pieces:
+        return []
+    blocks: list[list[Seg]] = []
+    block_ys: list[list[float]] = []
+    for i, (seg, has_values, y) in enumerate(pieces):
+        prev_text = blocks[-1][-1].text if blocks else ""
+        if blocks and not pieces[i - 1][1] and y - block_ys[-1][-1] <= 13.5 \
+                and (re.match(r"^[(a-z]", seg.text) or not prev_text.endswith((")", ":"))):
+            blocks[-1].append(seg)  # "Manufacturer" / "Estimated Fuel" / "Consumption MPG"; "Curb Weight" / "(FMVSS)"
+            block_ys[-1].append(y)
+        elif blocks and label_continues(seg.text, Row(sec, blocks[-1])) and not has_values:
+            blocks[-1].append(seg)
+            block_ys[-1].append(y)
+        else:
+            blocks.append([seg])
+            block_ys.append([y])
+    block_of_piece = {id(s): b for b, segs in enumerate(blocks) for s in segs}
+    block_y = [sum(ys) / len(ys) for ys in block_ys]
+    unit_y = [u["y"] for u in units]
+    n, m = len(units), len(blocks)
+    if n * n * m > 3_000_000:
+        return []
+    owner = [block_of_piece[id(u["piece"])] if u["piece"] is not None else -1 for u in units]
+    inf = float("inf")
+    best = [[inf] * (m + 1) for _ in range(n + 1)]
+    back = [[0] * (m + 1) for _ in range(n + 1)]
+    best[0][0] = 0.0
+    for j in range(1, m + 1):
+        for i in range(0, n + 1):
+            for k in range(i, -1, -1):  # units k..i-1 -> block j-1 (none: a legend line such as "Moon Roof (MR)")
+                if k < i and owner[k] not in (-1, j - 1):
+                    break  # the run would take a unit printed beside another label
+                if best[k][j - 1] == inf:
+                    continue
+                if k == i:
+                    cost = best[k][j - 1] + 8.0
+                else:
+                    cost = best[k][j - 1] + abs((unit_y[k] + unit_y[i - 1]) / 2 - block_y[j - 1])
+                if cost < best[i][j]:
+                    best[i][j], back[i][j] = cost, k
+    if best[n][m] == inf:
+        return []
+    spans, i = [], n
+    for j in range(m, 0, -1):
+        k = back[i][j]
+        spans.append((k, i))
+        i = k
+    spans.reverse()
+    rows: list[Row] = []
+    for b, (k, i) in enumerate(spans):
+        main = Row(sec, list(blocks[b]))
+        rows.append(main)
+        for u in units[k:i]:
+            row = Row(sec, list(u["sub"]), parent=main) if u["sub"] else main
+            if row is not main:
+                rows.append(row)
+            for ln, vsegs in u["lines"]:
+                for s in vsegs:
+                    col = column_of(sec, s)
+                    if len(sec.columns) >= 2 and len(vsegs) == 1 and all(abs(s.x0 - c.x0) > 6 for c in sec.columns) and abs(s.x0 - sec.boundary) > 6:
+                        col = -1
+                    row.cells.append(Cell(s, col))
+    return rows
+
+
 def build_rows(sec: Section) -> list[Row]:
+    if centred_labels(sec):
+        rows = build_rows_centred(sec)
+        if rows:
+            return rows
     rows: list[Row] = []
     main: Row | None = None
     cur: Row | None = None
     lines = sec.lines
     sub_header: tuple[Row, list[Seg]] | None = None
     pending: list[tuple[Line, list[Seg]]] = []  # value lines that belong to a later table row band
+    consumed: set[int] = set()  # second lines of grade titles
+    upcoming_header: tuple | None = None  # grade titles printed above the next label
+    orphans: list[tuple[Line, list[Seg]]] = []
     tol = 8.0
 
     def zone(ln: Line, boundary: float | None = None) -> tuple[list[Seg], list[Seg]]:
@@ -394,29 +555,30 @@ def build_rows(sec: Section) -> list[Row]:
             sub, sub_seg = None, None
             if sub_header is not None and sub_header[0] is (row.parent or row) and numeric(s.text):
                 h = min(sub_header[1], key=lambda h: abs(h.center - s.center))
-                if abs(h.center - s.center) <= 18:
-                    sub, sub_seg = norm(h.text), h
+                if abs(h.center - s.center) <= 18 or abs(h.x0 - s.x0) <= 10:
+                    sub, sub_seg = norm(sub_header[3].get(id(h), h.text)), h
             col = column_of(sec, s)
-            if len(sec.columns) >= 2 and len(vsegs) == 1 and all(abs(s.x0 - c.x0) > 6 for c in sec.columns):
+            if len(sec.columns) >= 2 and len(vsegs) == 1 and all(abs(s.x0 - c.x0) > 6 for c in sec.columns) and abs(s.x0 - sec.boundary) > 6:
                 col = -1  # one value centred over several titled columns: a merged cell valid for all of them
             row.cells.append(Cell(s, col, sub, sub_seg))
 
     def flush(new_band) -> None:
+        """Pending value lines of the band of the row that starts now stay pending (the caller
+        attaches them to it); the others belong to the current row."""
         nonlocal pending
-        if pending:
-            target = None
-            if new_band is not None and pending[0][0].band == new_band:
-                return  # attached by the caller to the new row
-            target = cur
-            if target is not None:
-                for pl, ps in pending:
-                    add_values(target, pl, ps)
-            pending = []
+        keep = [(pl, ps) for pl, ps in pending if new_band is not None and pl.band == new_band]
+        if cur is not None:
+            for pl, ps in pending:
+                if new_band is None or pl.band != new_band:
+                    add_values(cur, pl, ps)
+        pending = keep
 
     for idx, ln in enumerate(lines):
         if ln.text.startswith("*") and len(ln.segs) == 1:
             continue  # footnote
         lsegs, vsegs = zone(ln)
+        carry_cells: list[Cell] = []  # values above a centred label go to the row the line ends in
+        carry_lines: list[tuple[Line, list[Seg]]] = []
         for s in lsegs:
             text = s.text
             if abs(s.x0 - sec.label_x) <= 8:
@@ -433,14 +595,34 @@ def build_rows(sec: Section) -> list[Row]:
                     main.labels.append(s)  # "Min. Running Ground" / "Clearance" (wrapped main label)
                 else:
                     flush(ln.band)
+                    old = cur
                     main = cur = Row(sec, [s], band=ln.band)
                     rows.append(cur)
-                    if pending and pending[0][0].band == ln.band:
-                        for pl, ps in pending:
-                            add_values(cur, pl, ps)
+                    # a label centred between two value lines (no table rules): the line above is its first value
+                    prev_ln = lines[idx - 1] if idx > 0 else None
+                    if old is not None and not vsegs and len(ln.segs) == 1 and ln.band is None and nxt is not None \
+                            and prev_ln is not None and prev_ln.page == ln.page == nxt.page \
+                            and prev_ln.segs[0].x0 >= sec.boundary - tol and nxt.segs[0].x0 >= sec.boundary - tol \
+                            and abs(line_mid(ln) - (line_mid(prev_ln) + line_mid(nxt)) / 2) <= 3:
+                        moved = [c for c in old.cells if c.seg.line is prev_ln]
+                        if moved and len(moved) < len(old.cells):
+                            old.cells = [c for c in old.cells if c.seg.line is not prev_ln]
+                            carry_cells.extend(moved)
+                    carry_lines.extend(pending)  # value lines printed above the label inside its row band
                     pending = []
+                    if orphans and old is None:
+                        last = orphans[-1][0]
+                        centred = nxt is not None and prev_ln is last and last.page == ln.page == nxt.page \
+                            and abs(line_mid(ln) - (line_mid(last) + line_mid(nxt)) / 2) <= 3
+                        if centred or (ln.band is not None and last.band == ln.band):
+                            carry_lines.extend((pl, ps) for pl, ps in orphans if pl.band == last.band and pl.page == ln.page)
+                    orphans = []
                     if sub_header and sub_header[0] is not main:
                         sub_header = None
+                    if upcoming_header is not None:
+                        heads, relaxed_b = upcoming_header
+                        sub_header = (main, heads, relaxed_b, {id(h): h.text for h in heads})
+                        upcoming_header = None
             else:
                 if SUB_LABEL.match(text) and main is not None:
                     flush(None)
@@ -450,6 +632,13 @@ def build_rows(sec: Section) -> list[Row]:
                 elif cur is None:
                     main = cur = Row(sec, [s], band=ln.band)
                     rows.append(cur)
+                elif main is not None and main.dash_children and vsegs and cur is not main and cur.cells \
+                        and not label_continues(text, cur) and text.count("(") <= text.count(")") \
+                        and not text.endswith("-") and lsegs[0] is s:
+                    flush(None)
+                    # "- Behind 1st row seat" / "Behind 2nd row seat": a sibling printed without its dash
+                    cur = Row(sec, [s], parent=main, band=ln.band)
+                    rows.append(cur)
                 elif main is not None and not main.dash_children and vsegs and not label_continues(text, cur) \
                         and (cur is not main or not cur.cells or len(sec.columns) >= 2 or re.match(r"^\S+$", text)):
                     flush(None)
@@ -458,23 +647,54 @@ def build_rows(sec: Section) -> list[Row]:
                     rows.append(cur)
                 else:
                     cur.labels.append(s)
+        if cur is not None and (carry_cells or carry_lines):
+            cur.cells.extend(carry_cells)
+            for pl, ps in carry_lines:
+                add_values(cur, pl, ps)
         if not vsegs:
             continue
+        if not lsegs and len(vsegs) >= 2 and all(not numeric(s.text) and len(s.text) <= 25 and len(s.text.split()) <= 4
+                                                and not NON_VALUES.match(s.text) for s in vsegs)                 and idx + 2 < len(lines) and zone(lines[idx + 1])[0] and not zone(lines[idx + 1])[1]:
+            # "LE | SE | XLE" printed above the label line "Curb Weight (lbs.)" and its numbers
+            nv = number_words(zone(lines[idx + 2])[1])
+            if len(nv) >= 2 and all(numeric(x.text) for x in nv) and not zone(lines[idx + 2])[0] \
+                    and all(any(abs(n.center - h.center) <= 18 or abs(n.x0 - h.x0) <= 10 for h in vsegs) for n in nv):
+                upcoming_header = (vsegs, min(sec.boundary, min(h.x0 for h in vsegs) - 15))
+                continue
         if cur is None:
+            orphans.append((ln, vsegs))  # value lines above the first label of the section
             continue
         if not lsegs and ln.band is not None and cur.band is not None and ln.band != cur.band:
             pending.append((ln, vsegs))
             continue
+        if ln.gi in consumed:
+            continue
         # grade header line inside a row: >= 2 short non-numeric cells over numbers
-        if len(vsegs) >= 2 and all(not numeric(s.text) and len(s.text) <= 15 and len(s.text.split()) <= 3
+        if len(vsegs) >= 2 and all(not numeric(s.text) and len(s.text) <= 25 and len(s.text.split()) <= 4
                                    and not NON_VALUES.match(s.text) for s in vsegs):
             relaxed = min(sec.boundary, min(h.x0 for h in vsegs) - 15)
-            nxt = next((l2 for l2 in lines[idx + 1 : idx + 3] if zone(l2, relaxed)[1]), None)
+            j, extra = idx + 1, []
+            while j < len(lines) and j <= idx + 3:  # "SE AWD," / "Nightshade AWD": a title wrapped onto a 2nd line
+                nl2, nv2 = zone(lines[j], relaxed)
+                if nv2 and not nl2 and all(not numeric(x.text) for x in nv2):
+                    extra.append(lines[j])
+                    j += 1
+                    continue
+                break
+            nxt = lines[j] if j < len(lines) and j <= idx + 3 else None
             if nxt is not None:
                 nl, nv = zone(nxt, relaxed)
                 nv = number_words(nv)
-                if (not nl or (lsegs and all(SUB_LABEL.match(x.text) for x in nl))) and len(nv) >= 2                         and all(numeric(s.text) for s in nv)                         and all(any(abs(n.center - h.center) <= 18 for h in vsegs) for n in nv):
-                    sub_header = (main, vsegs, relaxed)
+                if (not nl or (lsegs and all(SUB_LABEL.match(x.text) or x.x0 > sec.label_x + 15 for x in nl))) and len(nv) >= 2 \
+                        and all(numeric(s.text) for s in nv) \
+                        and all(any(abs(n.center - h.center) <= 18 or abs(n.x0 - h.x0) <= 10 for h in vsegs) for n in nv):
+                    texts = {id(h): h.text for h in vsegs}
+                    for el in extra:
+                        for x in zone(el, relaxed)[1]:
+                            h = min(vsegs, key=lambda h: abs(h.center - x.center))
+                            texts[id(h)] += " " + x.text
+                        consumed.add(el.gi)
+                    sub_header = (main, vsegs, relaxed, texts)
                     continue
         add_values(cur, ln, vsegs)
     flush(None)
@@ -518,6 +738,23 @@ def key_for(label: str, sec: Section, own: str = "") -> str | None:
         return "electric_motor"
     if re.search(r"^Curb\s+Weight", lab, re.I) and re.search(r"\b(?:Front|Rear)\b", lab, re.I):
         return None  # axle weights
+    if re.search(r"(?:height|width|le\s?ngth)\s*/\s*(?:height|width|le\s?ngth)", lab, re.I):
+        return None  # "Overall height/width/length": several dimensions in one cell
+    # a unit named in the label must fit the key ("... Total (lb.)" is no cargo volume)
+    units = set()
+    for unit, pattern in (("lb", r"\(\s*lbs?\.?\s*\)|\blbs?\.(?!\s*-?\s*ft)|\bpounds\b"), ("in", r"\(\s*in\.?\s*\)|\binches\b"),
+                          ("cuft", r"cu\.?\s*ft|cubic\s+feet"), ("gal", r"\bgal(?:lons?|\.)"), ("ft", r"\(\s*ft\.?\s*\)")):
+        if re.search(pattern, label, re.I):
+            units.add(unit)
+    expected = {"length": "in", "width": "in", "height": "in", "wheelbase": "in", "track": "in", "ground": "in",
+                "curb": "lb", "towing": "lb", "cargo": "cuft", "passenger": "cuft", "fuel": "gal", "turning": "ft"}
+    first_word = {"length": r"Length", "width": r"Width", "height": r"Height", "wheelbase": r"Wheelbase",
+                  "track": r"Tread|Track", "ground": r"Ground\s+Clearance", "curb": r"Curb\s+Weight", "towing": r"Towing",
+                  "cargo": r"Cargo", "passenger": r"Passenger\s+Volume", "fuel": r"Fuel\s+(?:Tank|Capacity)",
+                  "turning": r"Turning"}
+    for name, pattern in first_word.items():
+        if units and re.search(pattern, lab, re.I) and expected[name] not in units:
+            return None
     if re.search(r"Towing", lab, re.I) and re.search(r"without\s+brake|unbraked", lab, re.I):
         return None
     if re.search(r"\bswept\b|\bthickness only\b|stabilizer|\bratio\b|\bturns\b|lock to lock|lock-to-", lab, re.I) \
@@ -597,7 +834,8 @@ def key_for(label: str, sec: Section, own: str = "") -> str | None:
         return "passenger_volume_cu_ft"
     if re.search(r"^Fuel\s+(?:Tank\s+)?Capacity|^Fuel\s+Tank\b", lab, re.I):
         return "fuel_tank_gal"
-    if re.search(r"^Seating(?:\s+Capacity)?\b|^Passenger\s+Capacity", lab, re.I):
+    if re.search(r"^Seating(?:\s+Capacity)?\b|^Passenger\s+Capacity", lab, re.I) \
+            and not re.search(r"\(\s*in\.?\s*\)|\bin\.|\bFront\b|\bRear\b|\bMiddle\b", label, re.I):
         return "seats"
     if re.search(r"Towing", lab, re.I) and not re.search(r"tongue|hitch|package", lab, re.I):
         return "towing_lb"
@@ -611,7 +849,7 @@ NUM = r"(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?|\.\d+)"
 CONDITION = re.compile(
     r"\bw/o\b|\bw/|\b(?:with|without|mirrors?|antenna|wheels?|moonroof|sunroof|roof|seats?|folded|up|down|standard|"
     r"optional|option|stand-alone|package|row|behind|shade|cargo|third|second|first|max(?:imum)?|panoramic|"
-    r"min(?:imum)?|est(?:imated)?|approx\.?|unloaded|loaded|base|run[- ]flat|spare|tire|tires)\b|\d+\s*(?:-?in\.?|”|\")",
+    r"min(?:imum)?|under|deck|floor|est(?:imated)?|approx\.?|unloaded|loaded|base|run[- ]flat|spare|tire|tires)\b|\d+\s*(?:-?in\.?|”|\")",
     re.I,
 )
 UNIT_ALT = re.compile(
@@ -644,6 +882,7 @@ def to_number(text: str):
 @dataclass
 class Item:
     cells: list  # Cells (one per line)
+    alt: bool = False  # one of several alternatives of a text cell, each ending in its grades
 
     @property
     def text(self) -> str:
@@ -658,11 +897,21 @@ def split_items(cells: list[Cell], key: str) -> list[Item]:
         bullet = bool(re.match(r"^[•●▪]", t))
         if not items:
             items.append(Item([c]))
-        elif items[-1].text.count("(") > items[-1].text.count(")") and c.col == items[-1].cells[-1].col:
-            items[-1].cells.append(c)  # "62.9 (62.5 in. w/18” or" / "19” wheels)"
+        elif re.fullmatch(r"[•●▪]", items[-1].text) and c.seg.line is items[-1].cells[-1].seg.line:
+            items[-1].cells.append(c)  # "•" printed apart from its text
+        elif (items[-1].text.count("(") > items[-1].text.count(")") or items[-1].text.endswith(("@", "-", "–", "/")))\
+                and c.col == items[-1].cells[-1].col:
+            items[-1].cells.append(c)  # "62.9 (62.5 in. w/18” or" / "19” wheels)"; "243 hp @" / "6,000 RPM"
         elif text_key:
+            tail = re.search(r"\(([^()]*)\)$", items[-1].text)
             if bullet or re.match(r"^(?:Front|Rear)\s*:", t):
                 items.append(Item([c]))
+            elif tail and re.match(r"^[A-Z]", t) and classify_qualifier(tail.group(1))[0] \
+                    and re.search(r"\b(?:[A-Z]{1,4}|grades?|Limited|Platinum|Premium|Sport|Nightshade|Woodland)\b", tail.group(1)) \
+                    and not UNIT_ALT.match(tail.group(1)):
+                # "Multi-link ... (SE, XSE)" / "Torsion beam rear suspension (LE)": alternatives per grade
+                items[-1].alt = True
+                items.append(Item([c], alt=True))
             else:
                 items[-1].cells.append(c)
         elif bullet or NUMERIC_START.match(t) or " = " in t or c.sub != items[-1].cells[-1].sub \
@@ -688,6 +937,9 @@ def qualifier(text: str) -> tuple[str, str | None]:
     found = re.search(r"\(([^()]*)\)\s*\.?\s*$", t)
     if found and not UNIT_ALT.match(found.group(1)) and re.search(r"[A-Za-z]", found.group(1)):
         return t[: found.start()].strip(), found.group(1).strip()
+    dash = re.match(r"^((?:" + NUM + r")\s*[A-Za-z. ]{0,10}?)\s+[–—-]\s*([A-Za-z].*)$", t)  # "0.57 cu. ft. – Under deck board"
+    if dash:
+        return dash.group(1).strip(), dash.group(2).strip()
     colon = re.match(r"^([^:@]{1,40}?)\*{0,2}\s*:\s*((?:" + NUM + r").*)$", t)  # "FWD: 8.19", "3rd Row Folded: 40.2"
     if colon and re.search(r"[A-Za-z]", colon.group(1)):
         return colon.group(2).strip(), colon.group(1).strip().rstrip("*")
@@ -707,6 +959,11 @@ def classify_qualifier(q: str | None) -> tuple[str | None, str | None]:
 
 
 def label_pair(label: str) -> tuple[str, str] | None:
+    """The two names of a "a/b" value pair in the label: "(FWD/AWD)", "(Seats up/seats folded)", "Front/Rear"."""
+    for inner in re.findall(r"\(([^()]*/[^()]*)\)", label):
+        parts = [x.strip() for x in inner.split("/")]
+        if len(parts) == 2 and all(parts) and not re.search(r"lb|ft|cu|\bin\b|mpg|hwy", inner, re.I):
+            return parts[0], parts[1]
     found = re.search(r"\b([A-Za-z0-9]+)\s*/\s*([A-Za-z0-9]+)\b", label)
     if found and not re.search(r"lb|ft|cu|in|mpg|hwy", found.group(0), re.I):
         return found.group(1), found.group(2)
@@ -716,18 +973,35 @@ def label_pair(label: str) -> tuple[str, str] | None:
 def parse_number_with_unit(value: str, unit: str) -> list[str]:
     """Numbers of `value` that carry the expected unit (or no unit); [] when another unit."""
     out = []
-    for m in re.finditer(r"(" + NUM + r")\s*(" + UNITS[unit] + r")", value):
-        after = value[m.end() : m.end() + 6]
-        if re.match(r"\s*(?:mm|cm|kg|L\b|liters?|km|kW|Nm|mph|sec|%|x\b|×)", after, re.I):
+    for m in re.finditer(r"(?<![\w.,/])(" + NUM + r")(?![\d,])\s*(" + UNITS[unit] + r")", value):
+        if not m.group(2) and re.match(r"[A-Za-z]", value[m.end(1) : m.end(1) + 1]):
+            continue  # "6MT", "4ECT": a number glued to a word is no value
+        if re.search(r"\b[A-Z]{2}\s?$", value[max(0, m.start(1) - 4) : m.start(1)]):
+            continue  # "NX 250": a model name
+        after = value[m.end() : m.end() + 8]
+        if re.match(r"\s*(?:mm|cm|m\b|m3|kg|L\b|liters?|qt|quarts?|km|kW|Nm|mph|sec|%|x\b|×|rpm|psi)", after, re.I):
             continue
         out.append(m.group(1))
     return out
 
 
 def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> tuple[list[dict], list[str]]:
-    """Facts (without quote/page) and review reasons for one value item."""
+    """Facts (without quote/page) and review reasons for one value item. A cell that holds
+    several "<value> (<grades>)" groups ("37.4 ft. (LE) 38.0 ft. (SE, XLE)") is read group by group."""
     text = item.text
-    sub = item.cells[0].sub
+    if key in KEY_UNIT or key in ("power_hp", "system_power_hp", "torque_lb_ft", "wheel_size_in", "tires"):
+        parts = re.split(r"(?<=\))[\s,;]+(?=(?:P|LT)?\d)", text)
+        if len(parts) > 1:
+            facts, reasons = [], []
+            for part in parts:
+                f, r = facts_from_text(key, label, part)
+                facts += f
+                reasons += r
+            return facts, reasons
+    return facts_from_text(key, label, text, item.alt)
+
+
+def facts_from_text(key: str, label: str, text: str, alt: bool = False) -> tuple[list[dict], list[str]]:
     facts: list[dict] = []
     reasons: list[str] = []
     value_text, qual = qualifier(text)
@@ -742,8 +1016,8 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
                "rear_suspension", "front_brakes", "rear_brakes", "steering", "electric_motor", "engine_code"):
         value = norm(re.sub(r"^[•●▪]\s*", "", text))
         trim = None
-        if qual and "=" in text and norm(value_text) != value:
-            value, trim = norm(value_text), qual  # "L → PLTM (FWD/AWD) = Solid Disc"
+        if qual and ("=" in text or alt) and norm(value_text) != value:
+            value, trim = norm(value_text), qual  # "L → PLTM (FWD/AWD) = Solid Disc"; "Torsion beam ... (LE)"
         if NON_VALUES.match(value) and key not in ("front_brakes", "rear_brakes"):
             return [], []
         facts.append({"key": key, "value": value, "trim": trim, "cond": None})
@@ -752,7 +1026,9 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
         if re.search(r"\d", text) and key not in ("seats",):
             reasons.append(f"no number in value part: {text!r}")
         return [], reasons
-    rpm_tail = r"(?:\s*@\s*(" + NUM + r"(?:\s*[-–]\s*" + NUM + r")?))?\s*$"
+    rpm_tail = r"(?:\s*@\s*(" + NUM + r"(?:\s*[-–]\s*" + NUM + r")?)\s*(?:[Rr][Pp][Mm]\.?)?)?\s*$"
+    if key in ("power_hp", "system_power_hp", "torque_lb_ft") and re.search(r"@\s*rpm", unit_label) and "@" not in value_text:
+        return [], [f"value without '@ rpm' under a '... @ rpm' label: {text!r}"]  # a wrapped fragment
     if key in ("power_hp", "system_power_hp") and re.search(r"\bhp\b|horsepower", unit_label) \
             and not re.search(r"hp|horsepower", value_text, re.I):
         m = re.match(r"^\s*(" + NUM + r")" + rpm_tail, value_text)  # unit in the label: "Output hp @ rpm | 275 @ 6,000"
@@ -771,7 +1047,7 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
             facts.append({"key": "torque_rpm", "value": norm(m.group(2)), "trim": trim, "cond": cond})
         return facts, reasons
     if key == "power_hp" or key == "system_power_hp":
-        m = re.search(r"(" + NUM + r")\s*(?:hp|horsepower|HP)\b", value_text)
+        m = re.search(r"(" + NUM + r")\s*(?:[A-Za-z]+\s+){0,3}(?:hp|horsepower|HP)\b", value_text)
         if not m:
             if re.search(r"\bkW\b", value_text) and not re.search(r"hp|horsepower", value_text, re.I):
                 return [], []
@@ -813,7 +1089,7 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
                 tail = text[m.end() : m.end() + 8]
                 unit = "mm" if re.match(r"\s*\(?mm", tail) else ("in" if re.match(r"\s*\(?in", tail) else "")
             if unit not in ("mm", "in"):  # unit given in the label: "Bore x Stroke (in.)" / "Bore x Stroke in."
-                lab_unit = re.search(r"\(\s*(mm|in)\.?\s*\)|\b(mm|in)\.?\s*$", unit_label)
+                lab_unit = re.search(r"\(\s*(mm|in)\.?\s*\)|\b(mm|in)(?:\.|ches)?\s*$", unit_label)
                 unit = (lab_unit.group(1) or lab_unit.group(2)) if lab_unit else ""
             if unit in ("mm", "in"):
                 facts.append({"key": f"bore_stroke_{unit}", "value": f"{m.group(1)} x {m.group(3)}", "trim": None,
@@ -827,7 +1103,7 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
             facts.append({"key": key, "value": f"{m.group(1)}:1", "trim": trim, "cond": cond})
         return facts, reasons
     if key == "tires":
-        sizes = re.findall(r"\b(?:P|LT)?\d{3}/\d{2}\s?Z?R\s?F?\d{2}(?:\s+\d{2,3}[A-Z]{1,2}\b)?", value_text)
+        sizes = re.findall(r"\b(?:P|LT)?\d{3}/\d{2}\s?[A-Z]?R\s?F?\d{2}(?:\s+\d{2,3}[A-Z]{1,2}\b)?", value_text)
         if not sizes:
             reasons.append(f"no tire size: {text!r}")
         for size in sizes:
@@ -870,8 +1146,8 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
         if len(nums) > 1:
             reasons.append(f"several numbers: {text!r}")
             return [], reasons
-        if key == "seats" and not re.fullmatch(r"\d+", nums[0]):
-            reasons.append(f"seating not an integer: {text!r}")
+        if key == "seats" and not (re.fullmatch(r"\d+", nums[0]) and 1 <= int(nums[0]) <= 12):
+            reasons.append(f"seating not a small integer: {text!r}")
             return [], reasons
         facts.append({"key": key, "value": to_number(nums[0]), "trim": trim, "cond": cond})
         return facts, reasons
@@ -880,6 +1156,8 @@ def facts_from_item(key: str, label: str, item: Item, col_title: str | None) -> 
 
 def cargo_key(label: str, cond: str | None) -> str:
     text = f"{label} {cond or ''}"
+    if re.search(r"\bno\s+seats?\s+folded|seats?\s+up\b", text, re.I):
+        return "cargo_cu_ft"
     if re.search(r"fold|behind\s+(?:front|1st|first)\s+row|\bmax", text, re.I):
         return "cargo_max_cu_ft"
     return "cargo_cu_ft"
@@ -916,6 +1194,18 @@ def parse_pdf(path: Path, page_texts: list[str]) -> dict:
         layout_section(sec, doc_boundary)
         multi = len(sec.columns) > 1
         for row in build_rows(sec):
+            if row.parent is None and not row.cells and is_header_text(row.own) and len(row.own) <= 30:
+                sec.kind_override = title_kind(row.own)  # "ENGINE" / "ELECTRIC MOTOR" rows open a sub-table
+            elif row.parent is None and is_header_text(row.own) and len(row.own) <= 30 \
+                    and title_kind(row.own) in ("engine", "motor", "battery"):
+                sec.kind_override = title_kind(row.own)  # "ENGINE  2ZR-FXE (Atkinson cycle)"
+            elif row.parent is None and sec.kind in ("hybrid_system", "engine", "motor", "other") \
+                    and re.fullmatch(r"(?:Gas(?:oline)?\s+)?Engine|(?:Electric\s+)?Motor(?:\s+Generator)?", row.own, re.I):
+                # "Engine | 2ZR-FXE (Atkinson cycle)" opens the engine rows of a hybrid table
+                sec.kind_override = title_kind(row.own)
+                code = re.match(r"^([0-9A-Z]{1,4}[A-Z0-9]*-[A-Z0-9]{2,6})\b", row.cells[0].seg.text) if row.cells else None
+                if code and title_kind(row.own) == "engine" and code.group(1) not in codes:
+                    codes.append(code.group(1))
             key = key_for(row.label, sec, row.own if row.parent else "")
             if key is None or not row.cells:
                 continue
@@ -928,12 +1218,19 @@ def parse_pdf(path: Path, page_texts: list[str]) -> dict:
                 by_col[(c.col, None)].append(c)
             for (col, _), cells in by_col.items():
                 col_title = sec.columns[col].title if multi and col >= 0 else None
-                for item in split_items(cells, key):
+                items = split_items(cells, key)
+                per_line = Counter(it.cells[0].seg.line.gi for it in items if it.cells[0].sub is None)
+                for item in items:
+                    if key in KEY_UNIT and item.cells[0].sub is None and per_line[item.cells[0].seg.line.gi] > 1 \
+                            and not qualifier(item.text)[1]:
+                        review.append({"page": item.cells[0].seg.line.page, "row": row.label,
+                                       "reason": f"several values on one line without labels: {item.text!r}"})
+                        continue
                     found, reasons = facts_from_item(key, row.label, item, col_title)
                     if key in ("front_brakes", "front_suspension") and re.search(r"Front\s*/\s*Rear", row.label, re.I):
                         # one cell for "Brake Type Front/Rear": the value is published for both axles
                         found += [{**f, "key": f["key"].replace("front_", "rear_")} for f in found]
-                    first, last = item.cells[0].seg, item.cells[-1].seg
+                    first = item.cells[0].seg
                     page = first.line.page
                     for reason in reasons:
                         review.append({"page": page, "row": row.label, "reason": reason})
@@ -950,7 +1247,7 @@ def parse_pdf(path: Path, page_texts: list[str]) -> dict:
                         else:
                             facts.append(fact)
     return {"facts": facts, "review": review, "engine_codes": codes, "pages": npages,
-            "sections": [s.title for s in sections]}
+            "sections": [s.title for s in sections], "matrix": any(len(s.columns) >= 2 for s in sections)}
 
 
 def make_fact(f: dict, row: Row, item: Item, col_title: str | None, lines: list[Line], norm_pages: list[str]) -> dict | None:
@@ -988,7 +1285,7 @@ def make_fact(f: dict, row: Row, item: Item, col_title: str | None, lines: list[
         row_text += f" [{f['pair']}]"
     key = f["key"]
     if key == "cargo":
-        key = cargo_key(row.label + (" " + f["pair"] if f.get("pair") else ""), f.get("cond"))
+        key = cargo_key(f["pair"] if f.get("pair") else row.label, f.get("cond"))
     original = norm(" ".join(p for p in (row.label, item.cells[0].sub, item.text) if p))
     if key == "electric_motor" and not re.search(r"motor", row.label, re.I):
         row_text = f"{row.section.title}: {row_text}"
@@ -1037,6 +1334,9 @@ def run(hosts: list[str], only: str | None = None) -> None:
 
     summary = Counter()
     per_key = Counter()
+    if not only:  # outputs of earlier runs are rebuilt (keys change when a document's year is corrected)
+        for old in written_docs(hosts):
+            old.unlink()
     for doc in manifest_docs(hosts):
         rows = sorted(doc["rows"], key=lambda r: (r["year"], r["url"]))
         main = rows[0]
@@ -1076,6 +1376,17 @@ def run(hosts: list[str], only: str | None = None) -> None:
                                    f"({head[:80]}), outside the line years; linked for {linked}"})
             if year is None:
                 review.append({"page": 1, "row": "", "reason": f"model year not found in document title: {head[:100]}"})
+                if result.get("matrix") and re.search(r"\b2 ?0 ?[12] ?\d\b", head) and not re.search(r"\b20[12]\d\b", head):
+                    # letter-spaced text layer ("2 02 6 NX Specificati") in a matrix sheet: words are broken and
+                    # labels sit off the value lines, so no pairing is trusted; the rows are kept for review only
+                    status = "layout_unreliable"
+                    for f in result["facts"]:
+                        review.append({"page": f["page"], "row": f["row"],
+                                       "reason": f"letter-spaced text layer, pairing not trusted: {f['original']!r}"})
+                    result["facts"] = []
+            if not result["facts"]:
+                review.append({"page": 1, "row": "", "reason": "no specification table rows recognised "
+                               f"(sections: {', '.join(result['sections'][:8]) or 'none'})"})
             if (named and named not in lines_keys) or TITLE_EXCLUDE.search(head):
                 status = "line_mismatch"
                 review.append({"page": 1, "row": "", "reason": f"document title names another model ({head[:80]}), "
@@ -1115,7 +1426,7 @@ def run(hosts: list[str], only: str | None = None) -> None:
         summary[(host, status)] += 1
         for f in out["facts"]:
             per_key[(host, f["key"])] += 1
-        print(f"{key}: status={status} facts={len(out['facts'])} review={len(review)}")
+        print(f"{key}: status={status} facts={len(out['facts'])} review={len(review)}", flush=True)
     print("\nstatus:", dict(summary))
     for host in hosts:
         print(host, {k: v for (h, k), v in sorted(per_key.items()) if h == host})
@@ -1173,4 +1484,17 @@ def main() -> None:
     ap.add_argument("--host", action="append", choices=sorted(HOSTS))
     ap.add_argument("--only", help="sha256 prefix of one document")
     ap.add_argument("--verify", action="store_true")
-    ap.add_argument("--
+    ap.add_argument("--spot", type=int, default=0)
+    ap.add_argument("--seed", type=int, default=1)
+    args = ap.parse_args()
+    hosts = args.host or list(HOSTS)
+    if args.verify:
+        sys.exit(1 if verify(hosts) else 0)
+    if args.spot:
+        spot(hosts, args.spot, args.seed)
+        return
+    run(hosts, args.only)
+
+
+if __name__ == "__main__":
+    main()

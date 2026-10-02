@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 584,
  "edition_market": "US",
  "edition_markers": {
@@ -53,6 +53,19 @@
    "engine_text": null
   },
   {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.0,
+   "unit": "L",
+   "page": 571,
+   "quote": "4.0 l (4.23 US qt.)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | MPI/GDI engine | 4.0 l(4.23 US qt.) | API Service SM*3, ILSAC GF-4 or above*4",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "MPI/GDI engine",
+   "source_layout": "ruled_table",
+   "original": "4.0 l(4.23 US qt.)",
+   "approx_in_source": false
+  },
+  {
    "key": "engine_oil_specification",
    "value": "API Service SM",
    "unit": null,
@@ -73,6 +86,19 @@
    "label": "engine oil specification",
    "engine_text": "MPI/GDI engine",
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.5,
+   "unit": "L",
+   "page": 571,
+   "quote": "4.5 l (4.8 US qt.)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Turbo GDI engine | 4.5 l(4.8 US qt.) | ILSAC GF-5 or above APISN or above ACEA A5 above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "4.5 l(4.8 US qt.)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -108,6 +134,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 7.1,
+   "unit": "L",
+   "page": 571,
+   "quote": "7.1 l (7.5 US qt.)",
+   "row": "Automatic transaxle fluid | 7.1 l(7.5 US qt.) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV or other brands meeting the above specification approved by Kia Motors Corp.",
+   "label": "transmission fluid capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.1 l(7.5 US qt.)",
+   "approx_in_source": false
+  },
+  {
    "key": "transmission_fluid",
    "value": "SP-IV",
    "unit": null,
@@ -130,17 +169,18 @@
    "source_layout": "ruled_table"
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 2.0,
+   "key": "coolant_capacity_l",
+   "value": 6.0,
    "unit": "L",
-   "page": 571,
-   "quote": "2.0 l (2.01 ~ 2.11 US qt.)",
-   "row": "Dual clutch transmission fluid | 1.9 ~ 2.0 l (2.01 ~ 2.11 US qt.) | SAE 70W, API GL-4 HK SYN DCTF 70W (SK) SPIRAX S6 GHME 70W DCTF (H.K.SHELL) GS DCTF HD (GS CALTEX)",
-   "label": "transmission fluid capacity l",
-   "engine_text": null,
+   "page": 572,
+   "quote": "6.0 l (6.34 US qt.)",
+   "row": "Coolant | MPI/GDI engine | M/T | 6.0 l(6.34 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "MPI/GDI engine",
    "source_layout": "ruled_table",
-   "original": "2.0 l (2.01 ~ 2.11 US qt.)",
-   "approx_in_source": false
+   "original": "6.0 l(6.34 US qt.)",
+   "approx_in_source": false,
+   "variant": "M/T"
   },
   {
    "key": "coolant_description",
@@ -154,8 +194,50 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.9,
+   "unit": "L",
+   "page": 572,
+   "quote": "5.9 l (6.23 US qt.)",
+   "row": "Coolant | MPI/GDI engine | A/T | 5.9 l(6.23 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "MPI/GDI engine",
+   "source_layout": "ruled_table",
+   "original": "5.9 l(6.23 US qt.)",
+   "approx_in_source": false,
+   "variant": "A/T"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.1,
+   "unit": "L",
+   "page": 572,
+   "quote": "6.1 l (6.45 US qt.)",
+   "row": "Coolant | Turbo GDI engine | M/T | 6.1 l(6.45 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.1 l(6.45 US qt.)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 572,
+   "quote": "6.7 l (7.1 US qt)",
+   "row": "Coolant | Turbo GDI engine | DCT | 6.7 l(7.1 US qt) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.7 l(7.1 US qt)",
+   "approx_in_source": false,
+   "variant": "DCT"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 572,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -163,74 +245,81 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 50.0,
+   "unit": "L",
+   "page": 572,
+   "quote": "50 l (13.2 US gal.)",
+   "row": "Fuel | 50 l(13.2 US gal.) | Unleaded gasoline",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "50 l(13.2 US gal.)",
+   "approx_in_source": false
   }
  ],
  "review": [
   {
    "page": 571,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | MPI/GDI engine | 4.0 l(4.23 US qt.) | API Service SM*3, ILSAC GF-4 or above*4",
-   "reason": "quote not in page text",
-   "quote": "4.0 l(4.23 US qt.)"
-  },
-  {
-   "page": 571,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | Turbo GDI engine | 4.5 l(4.8 US qt.) | ILSAC GF-5 or above APISN or above ACEA A5 above",
-   "reason": "quote not in page text",
-   "quote": "4.5 l(4.8 US qt.)"
-  },
-  {
-   "page": 571,
    "key": "transmission_fluid_capacity_l",
    "row": "Manual transaxle fluid | MPI engine | 1.7 ~ 1.8 l (1.8 ~ 1.9 US qt.) | SAE 70W, API GL-4, TGO-9 HK SYN MTF 70W (SK) SPIRAX S6 GHME 70W MTF (H.K.SHELL) GS MTF HD 70W (GS CALTEX)",
-   "reason": "quote not in page text",
-   "quote": "1.8 l (1.8 ~ 1.9 US qt.)"
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 571,
    "key": "transmission_fluid_capacity_l",
    "row": "Manual transaxle fluid | Turbo GDI engine | 1.7 ~ 1.8 l (1.8 ~ 1.9 US qt.) | SAE 70W, API GL-4, TGO-9 HK SYN MTF 70W (SK) SPIRAX S6 GHME 70W MTF (H.K.SHELL) GS MTF HD 70W (GS CALTEX)",
-   "reason": "quote not in page text",
-   "quote": "1.8 l (1.8 ~ 1.9 US qt.)"
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 571,
    "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 7.1 l(7.5 US qt.) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV or other brands meeting the above specification approved by Kia Motors Corp.",
-   "reason": "quote not in page text",
-   "quote": "7.1 l(7.5 US qt.)"
+   "row": "Dual clutch transmission fluid | 1.9 ~ 2.0 l (2.01 ~ 2.11 US qt.) | SAE 70W, API GL-4 HK SYN DCTF 70W (SK) SPIRAX S6 GHME 70W DCTF (H.K.SHELL) GS DCTF HD (GS CALTEX)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 571,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "MPI engine SAE 70W, API GL-4, TGO-9 1.7 ~ 1.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 571,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "HK SYN MTF 70W (SK) (1.8 ~ 1.9 US qt. )",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 571,
+   "key": "transmission_fluid_capacity_l",
+   "row": "SPIRAX S6 GHME 70W MTF (H.K.SHELL) 1.7 ~ 1.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 571,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Turbo GDI engine GS MTF HD 70W (GS CALTEX) (1.8 ~ 1.9 US qt. )",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 571,
+   "key": "transmission_fluid_capacity_l",
+   "row": "(2.01 ~ 2.11 US qt.) SPIRAX S6 GHME 70W DCTF (H.K.SHELL)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 572,
    "key": "coolant_capacity_l",
-   "row": "Coolant | MPI/GDI engine | M/T | 6.0 l(6.34 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "Brake/clutch fluid FMVSS116 DOT-3 or DOT-4 0.7~0.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 572,
    "key": "coolant_capacity_l",
-   "row": "Coolant | MPI/GDI engine | A/T | 5.9 l(6.23 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 572,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | Turbo GDI engine | M/T | 6.1 l(6.45 US qt.) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 572,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | Turbo GDI engine | DCT | 6.7 l(7.1 US qt) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 572,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 50 l(13.2 US gal.) | Unleaded gasoline",
-   "reason": "quote not in page text",
-   "quote": "50 l(13.2 US gal.)"
+   "row": "(0.7~0.8 US qt. )",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

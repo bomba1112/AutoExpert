@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 532,
  "edition_market": "US",
  "edition_markers": {
@@ -218,19 +218,6 @@
    "approx_in_source": false
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 2.0,
-   "unit": "L",
-   "page": 508,
-   "quote": "2.11 US qt.",
-   "row": "Dual clutch transmission fluid | 2.01~2.11 US qt.(1.9~2.0l) | - SAE 70W, API GL-4 HK SYN DCTF 70W (SK) SPIRAX S6 GHME 70W DCTF (H.K.SHELL) GS DCTF HD 70W (GS CALTEX)",
-   "label": "transmission fluid capacity l",
-   "engine_text": null,
-   "source_layout": "ruled_table",
-   "original": "2.11 US qt.",
-   "approx_in_source": false
-  },
-  {
    "key": "engine_oil_specification_alternative",
    "value": "API SM",
    "unit": null,
@@ -296,6 +283,19 @@
   },
   {
    "key": "coolant_capacity_l",
+   "value": 7.5,
+   "unit": "L",
+   "page": 509,
+   "quote": "7.92 US qt. (7.5 l)",
+   "row": "Coolant | 2.0 T-GDI | 7.92 US qt.(7.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "2.0 T-GDI",
+   "source_layout": "ruled_table",
+   "original": "7.92 US qt.(7.5 l)",
+   "approx_in_source": false
+  },
+  {
+   "key": "coolant_capacity_l",
    "value": 7.2,
    "unit": "L",
    "page": 509,
@@ -309,7 +309,7 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 509,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -334,11 +334,16 @@
  ],
  "review": [
   {
-   "page": 509,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | 2.0 T-GDI | 7.92 US qt.(7.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "quote not in page text",
-   "quote": "7.92 US qt.(7.5 l)"
+   "page": 508,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid | 2.01~2.11 US qt.(1.9~2.0l) | - SAE 70W, API GL-4 HK SYN DCTF 70W (SK) SPIRAX S6 GHME 70W DCTF (H.K.SHELL) GS DCTF HD 70W (GS CALTEX)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 508,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid 2.01~2.11 US qt.(1.9~2.0 l)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

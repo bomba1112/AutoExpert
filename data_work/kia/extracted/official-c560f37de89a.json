@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 640,
  "edition_market": "US",
  "edition_markers": {
@@ -147,6 +147,34 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 1.9,
+   "unit": "L",
+   "page": 615,
+   "quote": "2.01 US qt.(1.9 L)",
+   "row": "Coolant (Inverter)*3 | HEV | 2.01 US qt.(1.9 L) | An Phosphate based ethylene glycol based coolant",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "2.01 US qt.(1.9 L)",
+   "approx_in_source": false,
+   "variant": "HEV"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.8,
+   "unit": "L",
+   "page": 615,
+   "quote": "7.19 US qt.(6.8 L)",
+   "row": "Coolant (Inverter)*3 | PHEV | 7.19 US qt.(6.8 L) | Contact an authorized Kia dealer",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.19 US qt.(6.8 L)",
+   "approx_in_source": false,
+   "variant": "PHEV"
+  },
+  {
    "key": "brake_fluid",
    "value": "DOT 4",
    "unit": null,
@@ -156,34 +184,37 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
-  }
- ],
- "review": [
-  {
-   "page": 615,
-   "key": "coolant_capacity_l",
-   "row": "Coolant (Inverter)*3 | HEV | 2.01 US qt.(1.9 L) | An Phosphate based ethylene glycol based coolant",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
   },
   {
-   "page": 615,
-   "key": "coolant_capacity_l",
-   "row": "Coolant (Inverter)*3 | PHEV | 7.19 US qt.(6.8 L) | Contact an authorized Kia dealer",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 615,
    "key": "fuel_tank_l",
+   "value": 67.0,
+   "unit": "L",
+   "page": 615,
+   "quote": "17.7 US gal (67 L)",
    "row": "Fuel | HEV | 17.7 US gal (67 L) | Gasoline",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "17.7 US gal (67 L)",
+   "approx_in_source": false,
+   "variant": "HEV"
   },
   {
-   "page": 615,
    "key": "fuel_tank_l",
+   "value": 47.0,
+   "unit": "L",
+   "page": 615,
+   "quote": "12.4 US gal (47 L)",
    "row": "Fuel | PHEV | 12.4 US gal (47 L) | Gasoline",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "12.4 US gal (47 L)",
+   "approx_in_source": false,
+   "variant": "PHEV"
   }
  ],
+ "review": [],
  "engine_codes": [],
  "candidate_pages": [
   231,

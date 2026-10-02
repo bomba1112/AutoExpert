@@ -24,7 +24,7 @@
   "authenticity": "REVIEWED_MIRROR",
   "generation_range": true
  },
- "extractor": "manual-geometry-6+mcum",
+ "extractor": "manual-geometry-14+mcum",
  "pages": 790,
  "edition_market": "US",
  "edition_markers": {
@@ -110,6 +110,17 @@
    "section_url": "https://www.mycarusermanual.com/hyundai/kona/suv/2023-2026/vehicle-information-consumer-information-and-reporting-safety-defects--recommended-lubricants-and-capacities"
   },
   {
+   "key": "transmission_fluid",
+   "value": "SP-CVT1",
+   "unit": null,
+   "page": 783,
+   "quote": "SP-CVT1",
+   "row": "Smartstream | MICHANG CVTF SP-CVT1, | 6.9 US qt.",
+   "label": "transmission fluid",
+   "engine_text": null,
+   "section_url": "https://www.mycarusermanual.com/hyundai/kona/suv/2023-2026/vehicle-information-consumer-information-and-reporting-safety-defects--recommended-lubricants-and-capacities"
+  },
+  {
    "key": "transmission_fluid_capacity_l",
    "value": 6.7,
    "unit": "L",
@@ -191,22 +202,8 @@
    "section_url": "https://www.mycarusermanual.com/hyundai/kona/suv/2023-2026/vehicle-information-consumer-information-and-reporting-safety-defects--recommended-lubricants-and-capacities"
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 783,
-   "quote": "0.5 ℓ)",
-   "row": "qt. (0.4-0.5 ℓ) HYPOID GEAR OIL API GL-5,",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "0.5 ℓ)",
-   "drive": null,
-   "approx_in_source": false,
-   "section_url": "https://www.mycarusermanual.com/hyundai/kona/suv/2023-2026/vehicle-information-consumer-information-and-reporting-safety-defects--recommended-lubricants-and-capacities"
-  },
-  {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 783,
    "quote": "DOT-4",
@@ -288,7 +285,14 @@
    "section_url": "https://www.mycarusermanual.com/hyundai/kona/suv/2023-2026/vehicle-information-consumer-information-and-reporting-safety-defects--recommended-lubricants-and-capacities"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 783,
+   "key": "coolant_capacity_l",
+   "row": "qt. (0.4-0.5 ℓ) HYPOID GEAR OIL API GL-5,",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  }
+ ],
  "engine_codes": [],
  "status": "ok"
 }

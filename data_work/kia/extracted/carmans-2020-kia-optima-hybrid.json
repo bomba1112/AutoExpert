@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 597,
  "edition_market": "US",
  "edition_markers": {
@@ -33,16 +33,16 @@
  },
  "facts": [
   {
-   "key": "fuel_tank_l",
-   "value": 2.0,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.1,
    "unit": "L",
-   "page": 67,
-   "quote": "2.0 L",
-   "row": "■■ Gasoline Engine (Nu 2.0 L - GDI)",
-   "label": "fuel_tank_l",
+   "page": 576,
+   "quote": "4.33 US qt. (4.1 l)",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | SAE 5W-20 / API Latest (ILSAC Latest)",
+   "label": "engine oil capacity drain refill l",
    "engine_text": null,
-   "original": "2.0 L",
-   "drive": null,
+   "source_layout": "ruled_table",
+   "original": "4.33 US qt.(4.1 l)",
    "approx_in_source": false
   },
   {
@@ -55,6 +55,19 @@
    "label": "engine oil viscosity",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.0,
+   "unit": "L",
+   "page": 576,
+   "quote": "6.34 US qt. (6.0 l)",
+   "row": "Automatic transmission fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
+   "label": "transmission fluid capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "6.34 US qt.(6.0 l)",
+   "approx_in_source": false
   },
   {
    "key": "transmission_fluid",
@@ -79,6 +92,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 576,
+   "quote": "7.12 US qt. (6.74 l)",
+   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum parts)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.12 US qt.(6.74 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum par",
    "unit": null,
@@ -99,43 +125,37 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
-  }
- ],
- "review": [
-  {
-   "page": 576,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | SAE 5W-20 / API Latest (ILSAC Latest)",
-   "reason": "quote not in page text",
-   "quote": "4.33 US qt.(4.1 l)"
   },
   {
-   "page": 576,
-   "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transmission fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
-   "reason": "quote not in page text",
-   "quote": "6.34 US qt.(6.0 l)"
-  },
-  {
-   "page": 576,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum parts)",
-   "reason": "quote not in page text",
-   "quote": "7.12 US qt.(6.74 l)"
-  },
-  {
-   "page": 576,
    "key": "fuel_tank_l",
+   "value": 65.0,
+   "unit": "L",
+   "page": 576,
+   "quote": "17.17 US gal. (65 l)",
    "row": "Fuel | Hybrid | 17.17 US gal.(65 l) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "17.17 US gal.(65 l)",
+   "approx_in_source": false,
+   "variant": "Hybrid"
   },
   {
-   "page": 576,
    "key": "fuel_tank_l",
+   "value": 55.0,
+   "unit": "L",
+   "page": 576,
+   "quote": "14.52 US gal. (55 l)",
    "row": "Fuel | Plug-in hybrid | 14.52 US gal.(55 l) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "14.52 US gal.(55 l)",
+   "approx_in_source": false,
+   "variant": "Plug-in hybrid"
   }
  ],
+ "review": [],
  "engine_codes": [],
  "candidate_pages": [
   66,

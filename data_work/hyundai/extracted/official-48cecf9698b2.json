@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 581,
  "edition_market": "US",
  "edition_markers": {
@@ -33,19 +33,6 @@
   "middle_east": 0
  },
  "facts": [
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.0,
-   "unit": "L",
-   "page": 88,
-   "quote": "1.06 US qt. (0.6~1.0 ℓ)",
-   "row": ": about 0.63~1.06 US qt. (0.6~1.0 ℓ)) Use",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1.06 US qt. (0.6~1.0 ℓ)",
-   "drive": null,
-   "approx_in_source": true
-  },
   {
    "key": "engine_oil_specification",
    "value": "API SN PLUS",
@@ -163,10 +150,10 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 559,
-   "quote": "DOT-4",
+   "quote": "SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO4925 CLASS-6",
    "row": "Brake fluid | As required | SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO4925 CLASS-6",
    "label": "brake fluid",
    "engine_text": null,
@@ -182,21 +169,25 @@
    "label": "fuel tank l",
    "engine_text": null,
    "source_layout": "ruled_table",
-   "original": "14.27 US gal. (54ℓ",
+   "original": "14.27 US gal. (54 ℓ",
    "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_specification",
-   "value": "API SN PLUS",
-   "unit": null,
-   "page": 559,
-   "quote": "API SN PLUS",
-   "row": " *2 : Requires <API SN PLUS (or above) Full synthetic> grade engine oil",
-   "label": "oil grade",
-   "engine_text": null
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 88,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": ": about 0.63~1.06 US qt. (0.6~1.0 ℓ)) Use",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 559,
+   "key": "coolant_description",
+   "row": "Coolant | (Ethylene glycol base coolant for | 10.04 US qt.",
+   "reason": "quote not in page text",
+   "quote": "Ethylene glycol base coolant for 10"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   87,

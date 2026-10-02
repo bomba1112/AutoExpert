@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 620,
  "edition_market": "US",
  "edition_markers": {
@@ -126,6 +126,34 @@
    "approx_in_source": false
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 1.7,
+   "unit": "L",
+   "page": 598,
+   "quote": "1.8 US qt. (1.7 L)",
+   "row": "Coolant (Inverter)*3 | HEV | 1.8 US qt. (1.7 L) | A Phosphate based ethylene glycol based cool- ant",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "1.8 US qt. (1.7 L)",
+   "approx_in_source": false,
+   "variant": "HEV"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.4,
+   "unit": "L",
+   "page": 598,
+   "quote": "6.76 US qt. (6.4 L)",
+   "row": "Coolant (Inverter)*3 | PHEV | 6.76 US qt. (6.4 L) | Contact an authorized Kia dealer",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "6.76 US qt. (6.4 L)",
+   "approx_in_source": false,
+   "variant": "PHEV"
+  },
+  {
    "key": "brake_fluid",
    "value": "DOT 4",
    "unit": null,
@@ -135,6 +163,34 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 52.0,
+   "unit": "L",
+   "page": 598,
+   "quote": "13.7 US gal (52 L)",
+   "row": "Fuel | HEV | 13.7 US gal (52 L) | Gasoline",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "13.7 US gal (52 L)",
+   "approx_in_source": false,
+   "variant": "HEV"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 42.0,
+   "unit": "L",
+   "page": 598,
+   "quote": "11.1 US gal (42 L)",
+   "row": "Fuel | PHEV | 11.1 US gal (42 L) | Gasoline",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "11.1 US gal (42 L)",
+   "approx_in_source": false,
+   "variant": "PHEV"
   }
  ],
  "review": [
@@ -147,12 +203,6 @@
   },
   {
    "page": 598,
-   "key": "coolant_capacity_l",
-   "row": "Coolant (Inverter)*3 | HEV | 1.8 US qt. (1.7 L) | A Phosphate based ethylene glycol based cool- ant",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 598,
    "key": "coolant_description",
    "row": "Coolant (Inverter)*3 | HEV | 1.8 US qt. (1.7 L) | A Phosphate based ethylene glycol based cool- ant",
    "reason": "quote not in page text",
@@ -160,21 +210,22 @@
   },
   {
    "page": 598,
+   "key": "coolant_description",
+   "row": "A Phosphate based ethylene glycol based cool-",
+   "reason": "quote not in page text",
+   "quote": "Phosphate based ethylene glycol based cool-"
+  },
+  {
+   "page": 598,
    "key": "coolant_capacity_l",
-   "row": "Coolant (Inverter)*3 | PHEV | 6.76 US qt. (6.4 L) | Contact an authorized Kia dealer",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "Transfer case oil (AWD) HYPOID GEAR OIL API GL-5, SAE 75W/85 (Rec- 0.65-0.71 US qt. (0.62-",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 598,
-   "key": "fuel_tank_l",
-   "row": "Fuel | HEV | 13.7 US gal (52 L) | Gasoline",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 598,
-   "key": "fuel_tank_l",
-   "row": "Fuel | PHEV | 11.1 US gal (42 L) | Gasoline",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "key": "coolant_capacity_l",
+   "row": "0.56-0.67 US qt. (0.53- equivalent)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

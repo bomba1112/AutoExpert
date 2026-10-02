@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 398,
  "edition_market": "US",
  "edition_markers": {
@@ -78,6 +78,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 7.3,
+   "unit": "L",
+   "page": 385,
+   "quote": "7.3 l (7.71 US qt.)",
+   "row": "Automatic transaxle fluid | 1.6 Engine | 7.3 l(7.71 US qt.) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV",
+   "label": "transmission fluid capacity l",
+   "engine_text": "1.6 Engine",
+   "source_layout": "ruled_table",
+   "original": "7.3 l(7.71 US qt.)",
+   "approx_in_source": false
+  },
+  {
    "key": "transmission_fluid",
    "value": "SP-IV",
    "unit": null,
@@ -100,6 +113,20 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "unit": "L",
+   "page": 385,
+   "quote": "5.5 l (5.6 US qt.)",
+   "row": "Coolant | Automatic transaxle | 5.5 l(5.6 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "5.5 l(5.6 US qt.)",
+   "approx_in_source": false,
+   "variant": "Automatic transaxle"
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -111,8 +138,22 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.3,
+   "unit": "L",
+   "page": 385,
+   "quote": "5.3 l (5.8 US qt.)",
+   "row": "Coolant | Manual transaxle | 5.3 l(5.8 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "5.3 l(5.8 US qt.)",
+   "approx_in_source": false,
+   "variant": "Manual transaxle"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 385,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -120,6 +161,19 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 43.0,
+   "unit": "L",
+   "page": 385,
+   "quote": "43 l (11.3 US gal.)",
+   "row": "Fuel | 43 l(11.3 US gal.) | Refer to \"Fuel requirements\"in section 1",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "43 l(11.3 US gal.)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -157,34 +211,31 @@
    "page": 385,
    "key": "transmission_fluid_capacity_l",
    "row": "Manual transaxle fluid | 1.8 ~ 1.9 l (1.9 ~ 2.01 US qt.) | API GL-4, SAE 75W/85 approved by Kia Motors Corp.",
-   "reason": "quote not in page text",
-   "quote": "1.9 l (1.9 ~ 2.01 US qt.)"
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 385,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "1.8 ~ 1.9 l API GL-4, SAE 75W/85",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 385,
    "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 1.6 Engine | 7.3 l(7.71 US qt.) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV",
-   "reason": "quote not in page text",
-   "quote": "7.3 l(7.71 US qt.)"
+   "row": "(1.9 ~ 2.01 US qt.) approved by Kia Motors Corp.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 385,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Automatic transaxle | 5.5 l(5.6 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "Brake/Clutch fluid FMVSS116 DOT-3 or DOT-4 0.7~0.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 385,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Manual transaxle | 5.3 l(5.8 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 385,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 43 l(11.3 US gal.) | Refer to \"Fuel requirements\"in section 1",
-   "reason": "quote not in page text",
-   "quote": "43 l(11.3 US gal.)"
+   "row": "(0.7~0.8 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

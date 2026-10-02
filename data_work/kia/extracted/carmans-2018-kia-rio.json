@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 492,
  "edition_market": "US",
  "edition_markers": {
@@ -32,6 +32,19 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 3.5,
+   "unit": "L",
+   "page": 469,
+   "quote": "3.7 US qt. (3.5 l)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | GDI engine | 3.7 US qt.(3.5 l) | API Service SM *3, ILSAC GF-4 or above *4",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "GDI engine",
+   "source_layout": "ruled_table",
+   "original": "3.7 US qt.(3.5 l)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_specification",
    "value": "API Service SM",
@@ -53,19 +66,6 @@
    "label": "engine oil specification",
    "engine_text": "GDI engine",
    "source_layout": "ruled_table"
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 1.7,
-   "unit": "L",
-   "page": 469,
-   "quote": "1.6 US qt. (1.6~1.7 l)",
-   "row": "Manual transaxle fluid | GDI engine | 1.5 ~ 1.6 US qt. (1.6~1.7 l) | API Service GL-4 SAE 70W - HK SYN MTF 70W - SPIRAX S6 GHME 70W MTF - GS MTF HD 70W",
-   "label": "transmission fluid capacity l",
-   "engine_text": "GDI engine",
-   "source_layout": "ruled_table",
-   "original": "1.6 US qt. (1.6~1.7 l)",
-   "approx_in_source": false
   },
   {
    "key": "transmission_fluid_capacity_l",
@@ -103,8 +103,22 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.4,
+   "unit": "L",
+   "page": 470,
+   "quote": "5.70 US qt.(5.4 l)",
+   "row": "Coolant | GDI engine | M/T | 5.70 US qt.(5.4 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "GDI engine",
+   "source_layout": "ruled_table",
+   "original": "5.70 US qt.(5.4 l)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 470,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -220,16 +234,21 @@
  "review": [
   {
    "page": 469,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Manual transaxle fluid | GDI engine | 1.5 ~ 1.6 US qt. (1.6~1.7 l) | API Service GL-4 SAE 70W - HK SYN MTF 70W - SPIRAX S6 GHME 70W MTF - GS MTF HD 70W",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 469,
    "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | GDI engine | 3.7 US qt.(3.5 l) | API Service SM *3, ILSAC GF-4 or above *4",
-   "reason": "quote not in page text",
-   "quote": "3.7 US qt.(3.5 l)"
+   "row": "1.5 ~ 1.6 US qt. - HK SYN MTF 70W",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
-   "page": 470,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | GDI engine | M/T | 5.70 US qt.(5.4 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "page": 469,
+   "key": "transmission_fluid_capacity_l",
+   "row": "(1.6~1.7 l) - SPIRAX S6 GHME 70W MTF",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 470,
@@ -242,7 +261,8 @@
    "page": 470,
    "key": "coolant_capacity_l",
    "row": "Coolant | GDI engine | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "reason": "quote not in page text",
+   "quote": "5.81 US qt.(5.5 l)"
   },
   {
    "page": 470,
@@ -250,6 +270,25 @@
    "row": "Coolant | GDI engine | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "reason": "quote not in page text",
    "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  },
+  {
+   "page": 470,
+   "key": "coolant_capacity_l",
+   "row": "A/T | 5.81 US qt.(5.5 l) | based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "5.81 US qt.(5.5 l)"
+  },
+  {
+   "page": 470,
+   "key": "coolant_capacity_l",
+   "row": "Brake/clutch fluid FMVSS116 DOT-3 or DOT-4 0.7~0.8 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 470,
+   "key": "coolant_capacity_l",
+   "row": "(0.7~0.8 l)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

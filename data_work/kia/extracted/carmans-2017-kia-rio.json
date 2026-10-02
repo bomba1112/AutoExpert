@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 449,
  "edition_market": "US",
  "edition_markers": {
@@ -41,6 +41,19 @@
    "row": "tected by an ethylene-glycol-based",
    "label": "coolant description",
    "engine_text": null
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 3.6,
+   "unit": "L",
+   "page": 437,
+   "quote": "3.6 l (3.8 US qt.)",
+   "row": "Engine oil *1*2 (drain and refill) Recommended (or equivalent) | 3.6 l(3.8 US qt.) | API Service SM*3,ILSAC GF-4 or above, ACEA A5 or above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "3.6 l(3.8 US qt.)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -77,15 +90,15 @@
   },
   {
    "key": "transmission_fluid_capacity_l",
-   "value": 1.7,
+   "value": 7.3,
    "unit": "L",
    "page": 437,
-   "quote": "1.7 l (1.7 ~ 1.8 US qt.)",
-   "row": "Manual transaxle fluid | 1.6 ~ 1.7 l (1.7 ~ 1.8 US qt.) | API GL-4, SAE 70W approved by Kia Motors Corp.",
+   "quote": "7.3 l (7.71 US qt.)",
+   "row": "Automatic transaxle fluid | 1.6 Engine | 7.3 l(7.71 US qt.) | ATF SP-IV (Recommended MICHANG, SK, NOCA, Kia genuine)",
    "label": "transmission fluid capacity l",
-   "engine_text": null,
+   "engine_text": "1.6 Engine",
    "source_layout": "ruled_table",
-   "original": "1.7 l (1.7 ~ 1.8 US qt.)",
+   "original": "7.3 l(7.71 US qt.)",
    "approx_in_source": false
   },
   {
@@ -100,6 +113,20 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "unit": "L",
+   "page": 437,
+   "quote": "5.5 l (5.6 US qt.)",
+   "row": "Coolant | Automatic transaxle | 5.5 l(5.6 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "5.5 l(5.6 US qt.)",
+   "approx_in_source": false,
+   "variant": "Automatic transaxle"
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -111,8 +138,22 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.3,
+   "unit": "L",
+   "page": 437,
+   "quote": "5.3 l (5.8 US qt.)",
+   "row": "Coolant | Manual transaxle | 5.3 l(5.8 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "5.3 l(5.8 US qt.)",
+   "approx_in_source": false,
+   "variant": "Manual transaxle"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 437,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -120,6 +161,19 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 43.0,
+   "unit": "L",
+   "page": 437,
+   "quote": "43 l (11.4 US gal.)",
+   "row": "Fuel | 43 l(11.4 US gal.) | Refer to \"Fuel requirements\"in section 1",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "43 l(11.4 US gal.)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -155,36 +209,33 @@
  "review": [
   {
    "page": 437,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2 (drain and refill) Recommended (or equivalent) | 3.6 l(3.8 US qt.) | API Service SM*3,ILSAC GF-4 or above, ACEA A5 or above",
-   "reason": "quote not in page text",
-   "quote": "3.6 l(3.8 US qt.)"
+   "key": "transmission_fluid_capacity_l",
+   "row": "Manual transaxle fluid | 1.6 ~ 1.7 l (1.7 ~ 1.8 US qt.) | API GL-4, SAE 70W approved by Kia Motors Corp.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 437,
    "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 1.6 Engine | 7.3 l(7.71 US qt.) | ATF SP-IV (Recommended MICHANG, SK, NOCA, Kia genuine)",
-   "reason": "quote not in page text",
-   "quote": "7.3 l(7.71 US qt.)"
+   "row": "Manual transaxle fluid API GL-4, SAE 70W approved by Kia Motors Corp. 1.6 ~ 1.7 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 437,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "(1.7 ~ 1.8 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 437,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Automatic transaxle | 5.5 l(5.6 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "Brake/Clutch fluid FMVSS116 DOT-3 or DOT-4 0.7~0.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 437,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Manual transaxle | 5.3 l(5.8 US qt.) | Mixture of antifreeze and distilled water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 437,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 43 l(11.4 US gal.) | Refer to \"Fuel requirements\"in section 1",
-   "reason": "quote not in page text",
-   "quote": "43 l(11.4 US gal.)"
+   "row": "(0.7~0.8 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

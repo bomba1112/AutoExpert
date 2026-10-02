@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 522,
  "edition_market": "US",
  "edition_markers": {
@@ -168,32 +168,6 @@
    "approx_in_source": false
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 3.4,
-   "unit": "L",
-   "page": 501,
-   "quote": "3.59 US qt. (3.3~3.4 L)",
-   "row": "Dual clutch transmission fluid (Gear oil) *3 | Smartstream G2.5 T-GDi | 3.48~3.59 US qt. (3.3~3.4 L) | WET DCTF 75W or WET DCT FLUID",
-   "label": "transmission fluid capacity l",
-   "engine_text": "Smartstream G2.5 T-GDi",
-   "source_layout": "ruled_table",
-   "original": "3.59 US qt. (3.3~3.4 L)",
-   "approx_in_source": false
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 2.5,
-   "unit": "L",
-   "page": 501,
-   "quote": "2.64 US qt. (2.45~2.5 L)",
-   "row": "Dual clutch transmission fluid (Control oil) *3 | 2.59~2.64 US qt. (2.45~2.5 L) | WETDCT HYDRAULIC OIL or WET DCT HYDRAULIC CONTROL OIL",
-   "label": "transmission fluid capacity l",
-   "engine_text": null,
-   "source_layout": "ruled_table",
-   "original": "2.64 US qt. (2.45~2.5 L)",
-   "approx_in_source": false
-  },
-  {
    "key": "coolant_capacity_l",
    "value": 8.0,
    "unit": "L",
@@ -220,17 +194,6 @@
    "approx_in_source": false
   },
   {
-   "key": "brake_fluid",
-   "value": "DOT-4",
-   "unit": null,
-   "page": 501,
-   "quote": "DOT-4",
-   "row": "Brake fluid *4 | AT | 395±20 cc | SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4",
-   "label": "brake fluid",
-   "engine_text": null,
-   "source_layout": "ruled_table"
-  },
-  {
    "key": "fuel_tank_l",
    "value": 60.0,
    "unit": "L",
@@ -242,9 +205,31 @@
    "source_layout": "ruled_table",
    "original": "15.85 US gal. (60 L)",
    "approx_in_source": false
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 4",
+   "unit": null,
+   "page": 501,
+   "quote": "DOT-4",
+   "row": "DCT | 414±20 cc | FMVSS116 DOT-4",
+   "label": "brake fluid",
+   "engine_text": null
   }
  ],
  "review": [
+  {
+   "page": 501,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid (Gear oil) *3 | Smartstream G2.5 T-GDi | 3.48~3.59 US qt. (3.3~3.4 L) | WET DCTF 75W or WET DCT FLUID",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 501,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid (Control oil) *3 | 2.59~2.64 US qt. (2.45~2.5 L) | WETDCT HYDRAULIC OIL or WET DCT HYDRAULIC CONTROL OIL",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
   {
    "page": 501,
    "key": "coolant_description",
@@ -258,6 +243,20 @@
    "row": "Coolant | Smartstream G2.5 T-GDi | 9.29 US qt. (8.8 L) | Mixture of antifreeze and water (Ethylene-gly- col with phosphate-based coolant for cooling device)",
    "reason": "quote not in page text",
    "quote": "phosphate-based coolant for cooling device"
+  },
+  {
+   "page": 501,
+   "key": "brake_fluid",
+   "row": "Brake fluid *4 | AT | 395±20 cc | SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4",
+   "reason": "quote not in page text",
+   "quote": "SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4"
+  },
+  {
+   "page": 501,
+   "key": "brake_fluid",
+   "row": "Brake fluid *4 | DCT | 414±20 cc | SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4",
+   "reason": "quote not in page text",
+   "quote": "SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4"
   }
  ],
  "engine_codes": [],

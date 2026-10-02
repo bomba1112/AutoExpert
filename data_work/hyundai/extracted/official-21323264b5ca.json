@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 506,
  "edition_market": "US",
  "edition_markers": {
@@ -39,7 +39,7 @@
    "unit": "L",
    "page": 25,
    "quote": "5.49 US qt. (5.2 ℓ)",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | 5.49 US qt. (5.2 ℓ)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | SAE 0W-30 API SN PLUS/SP or ILSAC GF-6 *3 | 5.49 US qt. (5.2 ℓ)",
    "label": "engine oil capacity drain refill l",
    "engine_text": null,
    "source_layout": "ruled_table",
@@ -52,7 +52,7 @@
    "unit": "L",
    "page": 25,
    "quote": "8.12 US qt. (7.68 ℓ)",
-   "row": "Coolant | 8.12 US qt. (7.68 ℓ)",
+   "row": "Coolant | Mixture of antifreeze and water (Phosphate-based Ethylene glycol coolant for aluminum radiator) | 8.12 US qt. (7.68 ℓ)",
    "label": "coolant capacity l",
    "engine_text": null,
    "source_layout": "ruled_table",
@@ -65,12 +65,42 @@
    "unit": "L",
    "page": 25,
    "quote": "12.42 US gal. (47 ℓ)",
-   "row": "Fuel | 12.42 US gal. (47 ℓ)",
+   "row": "Fuel | Refer to \"Fuel requirements\" in the chapter 1. | 12.42 US gal. (47 ℓ)",
    "label": "fuel tank l",
    "engine_text": null,
    "source_layout": "ruled_table",
    "original": "12.42 US gal. (47 ℓ)",
    "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "API SN PLUS/SP",
+   "unit": null,
+   "page": 25,
+   "quote": "API SN PLUS/SP",
+   "row": "5.49 US qt. | SAE 0W-30 API SN PLUS/SP or",
+   "label": "oil grade",
+   "engine_text": null
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "ILSAC GF-6",
+   "unit": null,
+   "page": 25,
+   "quote": "ILSAC GF-6",
+   "row": "(5.2 ℓ) | ILSAC GF-6 *3",
+   "label": "oil grade",
+   "engine_text": null
+  },
+  {
+   "key": "brake_fluid",
+   "value": "DOT 4",
+   "unit": null,
+   "page": 25,
+   "quote": "DOT-4",
+   "row": "Brake/clutch fluid *4 | DOT-4 | 0.74 ~ 0.85 US qt.",
+   "label": "brake fluid",
+   "engine_text": null
   },
   {
    "key": "engine_oil_specification",
@@ -137,14 +167,38 @@
   {
    "page": 25,
    "key": "transmission_fluid_capacity_l",
-   "row": "Dual clutch transmission fluid | Gear oil | 3.4 ~ 3.6 US qt. (3.3 ~ 3.4 ℓ)",
+   "row": "Dual clutch transmission fluid | Gear oil | GS WDCTF HD G (WET DCT FLUID) | 3.4 ~ 3.6 US qt. (3.3 ~ 3.4 ℓ)",
    "reason": "sub-divided row (e.g. DCT gear/control oil)"
   },
   {
    "page": 25,
    "key": "transmission_fluid_capacity_l",
-   "row": "Dual clutch transmission fluid | Control oil | 2.58 ~ 2.64 US qt. (2.45 ~ 2.5 ℓ)",
+   "row": "Dual clutch transmission fluid | Control oil | GS WDCTF HD H (WET DCT HYDRAULIC CONTROL OIL) | 2.58 ~ 2.64 US qt. (2.45 ~ 2.5 ℓ)",
    "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 25,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "SPIRAX S6 GHME 70W MTF 1.9 ~ 2.0 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 25,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "(1.8 ~ 1.9 ℓ)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 25,
+   "key": "coolant_capacity_l",
+   "row": "Brake/clutch fluid *4 DOT-4 0.74 ~ 0.85 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 25,
+   "key": "coolant_capacity_l",
+   "row": "(0.7 ~ 0.8 ℓ)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

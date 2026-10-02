@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 474,
  "edition_market": "US",
  "edition_markers": {
@@ -32,6 +32,19 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.8,
+   "unit": "L",
+   "page": 462,
+   "quote": "4.8 l (5.07 US qt.)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommended (or equivalent) | 4.8 l(5.07 US qt.) | API Service SM*3, ILSAC GF-4 or above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "4.8 l(5.07 US qt.)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_specification",
    "value": "API Service SM",
@@ -55,6 +68,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.6,
+   "unit": "L",
+   "page": 462,
+   "quote": "6.6 l (6.98 US qt.)",
+   "row": "Automatic transaxle fluid | 6.6 l(6.98 US qt.) | ATF SP-IV",
+   "label": "transmission fluid capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "6.6 l(6.98 US qt.)",
+   "approx_in_source": false
+  },
+  {
    "key": "transmission_fluid",
    "value": "SP-IV",
    "unit": null,
@@ -64,19 +90,6 @@
    "label": "transmission fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 6.9,
-   "unit": "L",
-   "page": 462,
-   "quote": "6.9 l (6.97~7.29 US qt.)",
-   "row": "Coolant | 6.6~6.9 l (6.97~7.29 US qt.) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "label": "coolant capacity l",
-   "engine_text": null,
-   "source_layout": "ruled_table",
-   "original": "6.9 l (6.97~7.29 US qt.)",
-   "approx_in_source": false
   },
   {
    "key": "coolant_description",
@@ -91,7 +104,7 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 462,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -99,6 +112,19 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 65.0,
+   "unit": "L",
+   "page": 462,
+   "quote": "65 l (17.2 US gal.)",
+   "row": "Fuel | 65 l(17.2 US gal.) | Refer to \"Fuel requirements\" in chapter 1.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "65 l(17.2 US gal.)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -184,24 +210,33 @@
  "review": [
   {
    "page": 462,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | 6.6~6.9 l (6.97~7.29 US qt.) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 462,
    "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommended (or equivalent) | 4.8 l(5.07 US qt.) | API Service SM*3, ILSAC GF-4 or above",
-   "reason": "quote not in page text",
-   "quote": "4.8 l(5.07 US qt.)"
+   "row": "6.6~6.9 l Mixture of antifreeze and water",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 462,
-   "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 6.6 l(6.98 US qt.) | ATF SP-IV",
-   "reason": "quote not in page text",
-   "quote": "6.6 l(6.98 US qt.)"
+   "key": "coolant_capacity_l",
+   "row": "(6.97~7.29 US qt.) (Ethylene glycol base coolant for aluminum radiator)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 462,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 65 l(17.2 US gal.) | Refer to \"Fuel requirements\" in chapter 1.",
-   "reason": "quote not in page text",
-   "quote": "65 l(17.2 US gal.)"
+   "key": "coolant_capacity_l",
+   "row": "Brake fluid FMVSS116 DOT-3 or DOT-4 0.7~0.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 462,
+   "key": "coolant_capacity_l",
+   "row": "(0.7~0.8 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 550,
  "edition_market": "US",
  "edition_markers": {
@@ -54,6 +54,19 @@
    "engine_text": null
   },
   {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.0,
+   "unit": "L",
+   "page": 529,
+   "quote": "4.23 US qt. (4.0 l)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | MPI/GDI engine | 4.23 US qt.(4.0 l) | API Service SM, ILSAC GF-4 or above*3",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "MPI/GDI engine",
+   "source_layout": "ruled_table",
+   "original": "4.23 US qt.(4.0 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "engine_oil_specification",
    "value": "API Service SM",
    "unit": null,
@@ -76,6 +89,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.5,
+   "unit": "L",
+   "page": 529,
+   "quote": "4.8 US qt. (4.5 l)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Turbo GDI engine | 4.8 US qt.(4.5 l) | ACEA A5 or above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "4.8 US qt.(4.5 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "engine_oil_specification",
    "value": "ACEA A5 or above",
    "unit": null,
@@ -88,28 +114,15 @@
   },
   {
    "key": "transmission_fluid_capacity_l",
-   "value": 1.8,
+   "value": 7.1,
    "unit": "L",
    "page": 529,
-   "quote": "1.9 US qt. (1.7 ~ 1.8 l)",
-   "row": "Manual transaxle fluid | MPI/GDI engine | 1.8 ~ 1.9 US qt. (1.7 ~ 1.8 l) | API GL-4, SAE 75W/85 or SAE 70W fill for-life or other brands meeting the GL-4 specification approved by Kia Motors Corp.",
+   "quote": "7.5 US qt. (7.1 l)",
+   "row": "Automatic transaxle fluid | 7.5 US qt.(7.1 l) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV or other brands meeting the above specification approved by Kia Motors Corp.",
    "label": "transmission fluid capacity l",
-   "engine_text": "MPI/GDI engine",
+   "engine_text": null,
    "source_layout": "ruled_table",
-   "original": "1.9 US qt. (1.7 ~ 1.8 l)",
-   "approx_in_source": false
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 1.8,
-   "unit": "L",
-   "page": 529,
-   "quote": "1.9 US qt. (1.7 ~ 1.8 l)",
-   "row": "Manual transaxle fluid | Turbo GDI engine | 1.8 ~ 1.9 US qt. (1.7 ~ 1.8 l) | API GL-4, SAE 75W/85 or SAE 70W fill for-life or other brands meeting the GL-4 specification approved by Kia Motors Corp.",
-   "label": "transmission fluid capacity l",
-   "engine_text": "Turbo GDI engine",
-   "source_layout": "ruled_table",
-   "original": "1.9 US qt. (1.7 ~ 1.8 l)",
+   "original": "7.5 US qt.(7.1 l)",
    "approx_in_source": false
   },
   {
@@ -135,6 +148,20 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 6.0,
+   "unit": "L",
+   "page": 529,
+   "quote": "6.34 US qt. (6.0 l)",
+   "row": "Coolant | MPI/GDI engine | M/T | 6.34 US qt.(6.0 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "MPI/GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.34 US qt.(6.0 l)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene-glycol with phosphate based coolant for cooling device",
    "unit": null,
@@ -146,8 +173,50 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.9,
+   "unit": "L",
+   "page": 529,
+   "quote": "6.23 US qt. (5.9 l)",
+   "row": "Coolant | MPI/GDI engine | A/T | 6.23 US qt.(5.9 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "MPI/GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.23 US qt.(5.9 l)",
+   "approx_in_source": false,
+   "variant": "A/T"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.1,
+   "unit": "L",
+   "page": 529,
+   "quote": "6.45 US qt. (6.1 l)",
+   "row": "Coolant | Turbo GDI engine | M/T | 6.45 US qt.(6.1 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.45 US qt.(6.1 l)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 5.7,
+   "unit": "L",
+   "page": 529,
+   "quote": "6.02 US qt. (5.7 l)",
+   "row": "Coolant | Turbo GDI engine | A/T | 6.02 US qt.(5.7 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Turbo GDI engine",
+   "source_layout": "ruled_table",
+   "original": "6.02 US qt.(5.7 l)",
+   "approx_in_source": false,
+   "variant": "A/T"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 530,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -155,6 +224,19 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 50.0,
+   "unit": "L",
+   "page": 530,
+   "quote": "13.2 US gal. (50 l)",
+   "row": "Fuel | 13.2 US gal.(50 l) | Unleaded gasoline",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "13.2 US gal.(50 l)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification",
@@ -230,55 +312,39 @@
  "review": [
   {
    "page": 529,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | MPI/GDI engine | 4.23 US qt.(4.0 l) | API Service SM, ILSAC GF-4 or above*3",
-   "reason": "quote not in page text",
-   "quote": "4.23 US qt.(4.0 l)"
-  },
-  {
-   "page": 529,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | Turbo GDI engine | 4.8 US qt.(4.5 l) | ACEA A5 or above",
-   "reason": "quote not in page text",
-   "quote": "4.8 US qt.(4.5 l)"
+   "key": "transmission_fluid_capacity_l",
+   "row": "Manual transaxle fluid | MPI/GDI engine | 1.8 ~ 1.9 US qt. (1.7 ~ 1.8 l) | API GL-4, SAE 75W/85 or SAE 70W fill for-life or other brands meeting the GL-4 specification approved by Kia Motors Corp.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 529,
    "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 7.5 US qt.(7.1 l) | MICHANG ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV or other brands meeting the above specification approved by Kia Motors Corp.",
-   "reason": "quote not in page text",
-   "quote": "7.5 US qt.(7.1 l)"
+   "row": "Manual transaxle fluid | Turbo GDI engine | 1.8 ~ 1.9 US qt. (1.7 ~ 1.8 l) | API GL-4, SAE 75W/85 or SAE 70W fill for-life or other brands meeting the GL-4 specification approved by Kia Motors Corp.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 529,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | MPI/GDI engine | M/T | 6.34 US qt.(6.0 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "MPI/GDI engine 1.8 ~ 1.9 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 529,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | MPI/GDI engine | A/T | 6.23 US qt.(5.9 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "(1.7 ~ 1.8 l) API GL-4, SAE 75W/85 or SAE 70W fill for-life or",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 529,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | Turbo GDI engine | M/T | 6.45 US qt.(6.1 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "key": "transmission_fluid_capacity_l",
+   "row": "1.8 ~ 1.9 US qt. approved by Kia Motors Corp.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 529,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | Turbo GDI engine | A/T | 6.02 US qt.(5.7 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 530,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 13.2 US gal.(50 l) | Unleaded gasoline",
-   "reason": "quote not in page text",
-   "quote": "13.2 US gal.(50 l)"
+   "key": "transmission_fluid_capacity_l",
+   "row": "Turbo GDI engine (1.7 ~ 1.8 l)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

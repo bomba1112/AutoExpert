@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 534,
  "edition_market": "US",
  "edition_markers": {
@@ -32,6 +32,19 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 3.8,
+   "unit": "L",
+   "page": 513,
+   "quote": "4.0 US qt. (3.8 l)",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Smartstream G1.6 | 4.0 US qt.(3.8 l) | API SN PLUS/SP or ILSAC GF-6",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Smartstream G1.6",
+   "source_layout": "ruled_table",
+   "original": "4.0 US qt.(3.8 l)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_specification",
    "value": "API SN PLUS/SP",
@@ -55,6 +68,44 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.5,
+   "unit": "L",
+   "page": 513,
+   "quote": "6.87 US qt. (6.5 l)",
+   "row": "Intelligent variable transmission | Smartstream G1.6 | 6.87 US qt.(6.5 l) | SP-CVT1*3",
+   "label": "transmission fluid capacity l",
+   "engine_text": "Smartstream G1.6",
+   "source_layout": "ruled_table",
+   "original": "6.87 US qt.(6.5 l)",
+   "approx_in_source": false
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "SP-CVT1",
+   "unit": null,
+   "page": 513,
+   "quote": "SP-CVT1",
+   "row": "Intelligent variable transmission | Smartstream G1.6 | 6.87 US qt.(6.5 l) | SP-CVT1*3",
+   "label": "transmission fluid",
+   "engine_text": null,
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "unit": "L",
+   "page": 513,
+   "quote": "5.81 US qt. (5.5 l)",
+   "row": "Coolant | Smartstream G1.6 | M/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Smartstream G1.6",
+   "source_layout": "ruled_table",
+   "original": "5.81 US qt.(5.5 l)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene-glycol with phosphate based coolant for cooling device",
    "unit": null,
@@ -66,8 +117,22 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "unit": "L",
+   "page": 513,
+   "quote": "5.81 US qt. (5.5 l)",
+   "row": "Coolant | Smartstream G1.6 | IVT | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Smartstream G1.6",
+   "source_layout": "ruled_table",
+   "original": "5.81 US qt.(5.5 l)",
+   "approx_in_source": false,
+   "variant": "IVT"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 513,
    "quote": "DOT-4",
@@ -134,21 +199,26 @@
   {
    "page": 513,
    "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 *2 (drain and refill) Recommends | Smartstream G1.6 | 4.0 US qt.(3.8 l) | API SN PLUS/SP or ILSAC GF-6",
-   "reason": "quote not in page text",
-   "quote": "4.0 US qt.(3.8 l)"
+   "row": "1.4 ~ 1.5 US qt. - SK HK MTF 70W",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 513,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "(1.5 ~ 1.6 l) - SHELL SPIRAX S6 GHME 70W",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 513,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Smartstream G1.6 | M/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "Brake/clutch fluid FMVSS116 DOT-4 0.7~0.8 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 513,
    "key": "coolant_capacity_l",
-   "row": "Coolant | Smartstream G1.6 | IVT | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "(0.7~0.8 l)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

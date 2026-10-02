@@ -31,7 +31,8 @@ Hosts (US newsrooms only, see data_work/_shared/press/FORMAT.md):
 For every line of make volkswagen/audi/jeep/land-rover in scripts/us_tech_lines.py and every
 model year 2014-2026 within Line.years the collector lists the spec documents found, downloads
 them and stores their page text. Line-years without a spec document get one row with
-status=not_found whose url is the model page on the site with "#<year>".
+status=not_found whose url is the model page on the site with "#<year>" (status=resolved when a
+later run finds a document for it).
 
 Files (FORMAT.md):
   data_work/_shared/manifest_press/<host>.csv          manifest (resumable: ok URLs are reused)
@@ -683,6 +684,13 @@ class Host:
             rows.append(row)
         return rows
 
+    def resolved(self, line: str, year: int, url: str, found_urls: list[str]) -> None:
+        """A line-year recorded as not_found by an earlier run has a spec document now."""
+        if self.manifest.rows.get(url, {}).get("status") == "not_found":
+            self.manifest.add({"make": self.make, "line": line, "year": year, "doc_type": "press_specifications",
+                               "title": "", "url": url, "retrieved_at": now(), "status": "resolved",
+                               "note": "spec document found by a later run: " + " ".join(found_urls)[:500]})
+
     def not_found(self, line: str, year: int, url: str, note: str) -> None:
         row = self.manifest.rows.get(url)
         if row and row.get("status") == "not_found" and row.get("note") == note:
@@ -877,6 +885,7 @@ def collect_newspress(host: Host) -> dict:
     for key, reg in host.lines.items():
         for year in range(max(YEARS[0], reg.years[0]), min(YEARS[1], reg.years[1]) + 1):
             if (key, year) in found:
+                host.resolved(key, year, f"{host.base}/models/{first_slug.get(key, '')}#{year}", found[(key, year)])
                 continue
             kits = kits_by_line_year.get((key, year), [])
             note = ("press kits of that year without a spec document: " + "; ".join(sorted(set(kits)))
@@ -957,7 +966,9 @@ def collect_jlr(host: Host) -> dict:
                     log(f"  {row.get('status'):>9} {line} {year} {title} {row.get('url', '')[-60:]}")
     for key, reg in host.lines.items():
         for year in range(max(YEARS[0], reg.years[0]), min(YEARS[1], reg.years[1]) + 1):
-            if (key, year) not in found:
+            if (key, year) in found:
+                host.resolved(key, year, f"{host.base}{JLR_LINE_PAGES[key]}#{year}", found[(key, year)])
+            else:
                 host.not_found(key, year, f"{host.base}{JLR_LINE_PAGES[key]}#{year}",
                                "no US tech-spec item or spec press kit of that model year on the "
                                "/en-us tech-specs and press-kit pages")

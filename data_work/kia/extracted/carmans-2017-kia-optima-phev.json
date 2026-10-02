@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 646,
  "edition_market": "US",
  "edition_markers": {
@@ -32,6 +32,19 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.1,
+   "unit": "L",
+   "page": 633,
+   "quote": "4.1 l (4.33 US qt.)",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.1 l(4.33 US qt.) | API Service SM or above *³ / ILSAC GF-4 or above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "4.1 l(4.33 US qt.)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_specification",
    "value": "API Service SM or above",
@@ -79,6 +92,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 633,
+   "quote": "6.74 l (7.12 US qt.)",
+   "row": "Coolant | 6.74 l(7.12 US qt.) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "6.74 l(7.12 US qt.)",
+   "approx_in_source": false
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -99,6 +125,34 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 65.0,
+   "unit": "L",
+   "page": 633,
+   "quote": "65 l (17.17 US gal.)",
+   "row": "Fuel | Hybrid | 65 l(17.17 US gal.) | Refer to Fuel requirements in chapter 1.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "65 l(17.17 US gal.)",
+   "approx_in_source": false,
+   "variant": "Hybrid"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 55.0,
+   "unit": "L",
+   "page": 633,
+   "quote": "55 l (14.52 US gal.)",
+   "row": "Fuel | Plug-in hybrid | 55 l(14.52 US gal.) | Refer to Fuel requirements in chapter 1.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "55 l(14.52 US gal.)",
+   "approx_in_source": false,
+   "variant": "Plug-in hybrid"
   },
   {
    "key": "engine_oil_specification",
@@ -131,34 +185,7 @@
    "engine_text": null
   }
  ],
- "review": [
-  {
-   "page": 633,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.1 l(4.33 US qt.) | API Service SM or above *³ / ILSAC GF-4 or above",
-   "reason": "quote not in page text",
-   "quote": "4.1 l(4.33 US qt.)"
-  },
-  {
-   "page": 633,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | 6.74 l(7.12 US qt.) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "quote not in page text",
-   "quote": "6.74 l(7.12 US qt.)"
-  },
-  {
-   "page": 633,
-   "key": "fuel_tank_l",
-   "row": "Fuel | Hybrid | 65 l(17.17 US gal.) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 633,
-   "key": "fuel_tank_l",
-   "row": "Fuel | Plug-in hybrid | 55 l(14.52 US gal.) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  }
- ],
+ "review": [],
  "engine_codes": [],
  "candidate_pages": [
   183,

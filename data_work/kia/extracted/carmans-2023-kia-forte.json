@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 536,
  "edition_market": "US",
  "edition_markers": {
@@ -92,6 +92,44 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 514,
+   "quote": "7.1 US qt. (6.7 L)",
+   "row": "Intelligent Vari- able Transmission (IVT) fluid | (Gasoline) 2.0 MPI | 7.1 US qt. (6.7 L) | Kia Genuine SP-CVT1*2",
+   "label": "transmission fluid capacity l",
+   "engine_text": "(Gasoline) 2.0 MPI",
+   "source_layout": "ruled_table",
+   "original": "7.1 US qt. (6.7 L)",
+   "approx_in_source": false
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "SP-CVT1",
+   "unit": null,
+   "page": 514,
+   "quote": "SP-CVT1",
+   "row": "Intelligent Vari- able Transmission (IVT) fluid | (Gasoline) 2.0 MPI | 7.1 US qt. (6.7 L) | Kia Genuine SP-CVT1*2",
+   "label": "transmission fluid",
+   "engine_text": null,
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 5.6,
+   "unit": "L",
+   "page": 514,
+   "quote": "5.9 US qt. 5.6 L)",
+   "row": "Coolant | (Gasoline) 2.0 MPI | M/T | 5.9 US qt. 5.6 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": "(Gasoline) 2.0 MPI",
+   "source_layout": "ruled_table",
+   "original": "5.9 US qt. 5.6 L)",
+   "approx_in_source": false,
+   "variant": "M/T"
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -103,11 +141,25 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.6,
+   "unit": "L",
+   "page": 514,
+   "quote": "5.9 US qt. (5.6 L)",
+   "row": "Coolant | (Gasoline) 2.0 MPI | IVT | 5.9 US qt. (5.6 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": "(Gasoline) 2.0 MPI",
+   "source_layout": "ruled_table",
+   "original": "5.9 US qt. (5.6 L)",
+   "approx_in_source": false,
+   "variant": "IVT"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 514,
-   "quote": "DOT-4",
+   "quote": "SAE J1704 DOT-4 LV, ISO4925 CLASS-6,FMVSS116 DOT-4",
    "row": "Brake / clutch fluid *3 | 0.7 ~ 0.8 US qt. (0.7~0.8 L) | SAE J1704 DOT-4 LV, ISO4925 CLASS-6,FMVSS116 DOT-4",
    "label": "brake fluid",
    "engine_text": null,
@@ -131,26 +183,16 @@
   {
    "page": 514,
    "key": "coolant_capacity_l",
-   "row": "Coolant | (Gasoline) 2.0 MPI | M/T | 5.9 US qt. 5.6 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 514,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | (Gasoline) 2.0 MPI | IVT | 5.9 US qt. (5.6 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 514,
-   "key": "coolant_capacity_l",
    "row": "Coolant | (Gasoline) 1.6 T-GDi | M/T | 7.3 US qt. (6.9 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "reason": "quote not in page text",
+   "quote": "7.3 US qt. (6.9 L)"
   },
   {
    "page": 514,
    "key": "coolant_capacity_l",
    "row": "Coolant | (Gasoline) 1.6 T-GDi | DCT | 7.3 US qt. (6.9 L) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "reason": "quote not in page text",
+   "quote": "7.3 US qt. (6.9 L)"
   }
  ],
  "engine_codes": [],

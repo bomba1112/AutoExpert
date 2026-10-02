@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 544,
  "edition_market": "US",
  "edition_markers": {
@@ -56,21 +56,8 @@
    "source_layout": "ruled_table"
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 1.7,
-   "unit": "L",
-   "page": 40,
-   "quote": "1.8 US qt.",
-   "row": "Dual clutch transmission fluid | 1.7~1.8 US qt. (cid:11)(cid:20)(cid:17)(cid:25)(cid:97)(cid:20)(cid:17)(cid:26)(cid:3)(cid:354)(cid:12)(cid:3) | API GL-4, SAE 70W, HK D DCTF TGO-10 PLUS (SK), SPIRAX S6 GHDE 70W DCTF PLUS (H.K.SHELL)",
-   "label": "transmission fluid capacity l",
-   "engine_text": null,
-   "source_layout": "ruled_table",
-   "original": "1.8 US qt.",
-   "approx_in_source": false
-  },
-  {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 40,
    "quote": "DOT-4",
@@ -103,15 +90,9 @@
  "review": [
   {
    "page": 40,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1 (drain and refill) | (cid:23)(cid:17)(cid:19)(cid:21)(cid:3)(cid:56)(cid:54)(cid:3)(cid:84)(cid:87)(cid:17)(cid:3)(cid:11)(cid:22)(cid:17)(cid:27)(cid:3)(cid:354)(cid:12) | 0W-20 API SN PLUS",
-   "reason": "no volume"
-  },
-  {
-   "page": 40,
-   "key": "coolant_capacity_l",
-   "row": "Engine coolant | (cid:25)(cid:17)(cid:21)(cid:22)(cid:3)(cid:56)(cid:54)(cid:3)(cid:84)(cid:87)(cid:17)(cid:3)(cid:11)(cid:24)(cid:17)(cid:28)(cid:3)(cid:354)(cid:12) | Mixture of antifreeze and water (Phosphate-based Ethylene glycol coolant for aluminum radiator)",
-   "reason": "no volume"
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid | 1.7~1.8 US qt. (cid:11)(cid:20)(cid:17)(cid:25)(cid:97)(cid:20)(cid:17)(cid:26)(cid:3)(cid:354)(cid:12)(cid:3) | API GL-4, SAE 70W, HK D DCTF TGO-10 PLUS (SK), SPIRAX S6 GHDE 70W DCTF PLUS (H.K.SHELL)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 40,
@@ -122,9 +103,9 @@
   },
   {
    "page": 40,
-   "key": "fuel_tank_l",
-   "row": "Fuel | (cid:23)(cid:23)(cid:17)(cid:22)(cid:27)(cid:3)(cid:56)(cid:54)(cid:3)(cid:84)(cid:87)(cid:17)(cid:3)(cid:11)(cid:23)(cid:21)(cid:3)(cid:354)(cid:12) | Refer to \"Fuel requirements\" in the Foreword chapter.",
-   "reason": "no volume"
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "1.7~1.8 US qt. TGO-10 PLUS (SK), SPIRAX",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

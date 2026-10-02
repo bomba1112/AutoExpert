@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 482,
  "edition_market": "US",
  "edition_markers": {
@@ -105,7 +105,7 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT4",
+   "value": "DOT 4",
    "unit": null,
    "page": 24,
    "quote": "DOT4",
@@ -131,16 +131,6 @@
    "key": "engine_oil_specification",
    "value": "API SN PLUS",
    "unit": null,
-   "page": 24,
-   "quote": "API SN PLUS",
-   "row": " *4 : Requires < API SN PLUS (or above) Full synthetic> grade engine oil",
-   "label": "oil grade",
-   "engine_text": null
-  },
-  {
-   "key": "engine_oil_specification",
-   "value": "API SN PLUS",
-   "unit": null,
    "page": 404,
    "quote": "API SN PLUS",
    "row": " D, H, I, L Air cleaner filter I Inspect more frequently depending on the condition C, E Spark plugs R Replace more frequently depending on the condition A, B, F, G, H, I, K Steering gear rack, linkage and boots I Inspect more frequently depending on the condition C, D, E, F, G Disc brakes and pads,",
@@ -160,6 +150,18 @@
    "key": "transmission_fluid_capacity_l",
    "row": "Dual clutch transmission fluid | Control oil | 2.58 US qt. (2.45 ℓ) | GS WDCTF HD H (WET DCT HYDRAULIC CONTROL OIL)",
    "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 24,
+   "key": "coolant_capacity_l",
+   "row": "Brake fluid DOT4 0.74 ~ 0.85 US qt",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 24,
+   "key": "coolant_capacity_l",
+   "row": "(0.7 ~ 0.8 ℓ)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

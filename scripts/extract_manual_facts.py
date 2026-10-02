@@ -43,7 +43,7 @@ from us_tech_lines import BY_KEY, LINES, carmans_line  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
 from app.services.tech_units import convert  # noqa: E402
 
-EXTRACTOR = "manual-geometry-6"
+EXTRACTOR = "manual-geometry-14"
 NORMALIZE = ((chr(0xF0B4), chr(0x00D7)), (chr(0xF0B0), chr(0x00B0)), (chr(0x00A0), " "),
              (chr(0x2019), "'"), (chr(0x201C), '"'), (chr(0x201D), '"'), (chr(0x00AD), ""))
 
@@ -261,7 +261,7 @@ QT = NUM + r"\s?(?:US\s)?(?:qt|qts|quarts?)\b\.?"
 # a displacement ("1.5L L4", "2.5 L 4-cylinder") is never read as a volume
 LITRE = r"(\d+(?:\.\d+)?)(?:\s(?:L|l|liters?|litres?|Liters?)\b|\s?\u2113)(?!\s?(?:L4|I4|V6|V8|4-cyl|\d-cyl|engine|Engine|DOHC|turbo|Turbo|EcoBoost|GDI|T-GDI|MPI|per\b|/))"
 CC = r"(\d+(?:\.\d+)?)\s?cc\b"
-GAL = r"(\d+(?:\.\d+)?)\s?(?:US\s)?(?:gal|gallons?)\b\.?"
+GAL = NUM + r"\s?(?:US\s)?(?:gal|gallons?)\b\.?"
 APPROX = re.compile(r"\b(approx\w*|about|around|approximately)\b|\bca\.", re.I)
 
 
@@ -272,6 +272,20 @@ def fraction(text: str) -> Decimal:
     return Decimal(text)
 
 
+RANGE = re.compile(r"\d+(?:\.\d+)?\s*(?:~|–|-|to)\s*\d+(?:\.\d+)?\s*(?:l\b|L\b|\u2113|qt|US|liters?|litres?|gal)", re.I)
+
+
+def imperial_ok(figure, litre, litres_per_unit: Decimal) -> bool:
+    if not litre:
+        return False
+    try:
+        number = fraction(figure if isinstance(figure, str) else figure[0])
+        stated = Decimal(litre.group(1))
+    except (InvalidOperation, ValueError, ArithmeticError):
+        return False
+    return abs(number * litres_per_unit - stated) <= Decimal("0.15") + stated * Decimal("0.03")
+
+
 def volume(text: str) -> dict | None:
     """Litres from a row: the stated litre figure, checked against the quart/gallon figure."""
     litre = re.search(LITRE, text)
@@ -279,8 +293,16 @@ def volume(text: str) -> dict | None:
     gal = re.search(GAL, text, re.I)
     if not litre and not qt and not gal:
         return None
-    if len(re.findall(LITRE, text)) > 1 or len(re.findall(QT, text, re.I)) > 1 or len(re.findall(GAL, text, re.I)) > 1:
+    if RANGE.search(text):
+        return {"error": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"}
+    if len(re.findall(LITRE, text)) > 1:
         return {"error": "several volumes on one row"}
+    # Nissan/Infiniti tables give "5.1 L | 5-3/8 qt | 4-1/2 qt" (US and Imperial columns): a second
+    # quart/gallon figure is accepted only when it is the Imperial equivalent of the litre figure
+    for unit_re, imp_l in ((QT, Decimal("1.1365225")), (GAL, Decimal("4.54609"))):
+        found = re.findall(unit_re, text, re.I)
+        if len(found) > 2 or (len(found) == 2 and not imperial_ok(found[1], litre, imp_l)):
+            return {"error": "several volumes on one row"}
     value = None
     try:
         if litre:
@@ -292,7 +314,7 @@ def volume(text: str) -> dict | None:
             elif abs(from_qt - value) > Decimal("0.15") + value * Decimal("0.03"):
                 return {"error": f"quart and litre figures disagree ({qt.group(0)} vs {litre.group(0)})"}
         elif gal:
-            from_gal = convert(Decimal(gal.group(1)), "gal", "L")
+            from_gal = convert(fraction(gal.group(1)), "gal", "L")
             if value is None:
                 value = from_gal
             elif abs(from_gal - value) > Decimal("0.6") + value * Decimal("0.03"):
@@ -335,13 +357,13 @@ LABELS = [  # (key, pattern) tried in order on a row; the first match names the 
     ("engine_oil_capacity_l", re.compile(r"(?:engine )?oil (?:capacity )?(?:\(?with|including|incl\.?) (?:oil )?filter|^\W*with (?:oil )?filter|including (?:oil )?filter|with oil filter change|oil and filter change", re.I)),
     ("engine_oil_capacity_drain_refill_l", re.compile(r"^\W*engine oil\b|^\W*oil capacity\b|^\W*motor oil\b", re.I)),
     ("coolant_capacity_l", re.compile(r"^\W*(?:engine )?coolant\b|cooling system|^\W*antifreeze", re.I)),
-    ("transmission_fluid_capacity_l", re.compile(r"automatic transmission|automatic transaxle|transaxle fluid|\bCVT\b|continuously variable|transmission fluid|^\W*ATF\b", re.I)),
+    ("transmission_fluid_capacity_l", re.compile(r"automatic transmission|automatic transaxle|transaxle fluid|\bCVT\b|\bIVT\b|intelligent variable transmission|continuously variable|transmission fluid|^\W*ATF\b", re.I)),
     ("fuel_tank_l", re.compile(r"fuel tank|fuel capacity|^\W*fuel\b", re.I)),
 ]
 IN_ROW = {  # fluid named anywhere on a value row
     "coolant_capacity_l": re.compile(r"\bcoolant\b|antifreeze", re.I),
     "transmission_fluid_capacity_l": re.compile(r"transmission fluid|transaxle fluid|\bATF\b|\bCVT fluid", re.I),
-    "fuel_tank_l": re.compile(r"fuel tank|gasoline|unleaded", re.I),
+    "fuel_tank_l": re.compile(r"fuel tank|gasoline(?!\s*engine)|unleaded", re.I),
 }
 SKIP_ROW = re.compile(
     r"manual transmission|\bMTF\b|differential|transfer case|power steering|washer|refrigerant|brake fluid|clutch fluid"
@@ -358,6 +380,10 @@ OEM_APPROVALS = re.compile(
     r"|VW\s?50[2-9]\s?00|VW\s?508\s?00|WSS-M2C\d{3}-[A-Z]\d|MS-\d{4,5}|Chrysler\s?MS-\d{4,5}|STJLR\.\d{2}\.\d{4}",
     re.I,
 )
+def dot_value(text: str) -> str:
+    return re.sub(r"DOT[\s-]?", "DOT ", norm(text))
+
+
 def std_value(text: str) -> str:
     """One spelling of an oil standard: "API SN PLUS/ SP" = "API SN PLUS/SP"."""
     return re.sub(r"\s*/\s*", "/", norm(text))
@@ -376,7 +402,7 @@ COOLANT_TYPE = re.compile(
 COOLANT_DESCRIPTION = re.compile(r"(ethylene[- ]glycol[^.,;•()]{0,60}|phosphate[- ]based[^.,;•()]{0,40}|silicate[- ]free[^.,;•()]{0,40})", re.I)
 ATF_TYPE = re.compile(
     r"(Toyota Genuine ATF\s?WS|ATF\s?WS\b|Toyota Genuine CVT Fluid FE|CVT Fluid FE|Toyota Genuine ATF\s?FE|Honda ATF DW-1|Honda (?:Genuine )?CVT Fluid HCF-2|Honda HCF-2|Honda DCT Fluid|Genuine NISSAN (?:CVT|Matic)[^.,;]{0,25}"
-    r"|NS-[23]|Matic[- ]S|DEXRON[- ]?(?:VI|HP|ULV)\w*|MERCON[- ]?(?:LV|ULV|SP)\w*|SP-?IV(?:-RR|M)?\b|ATF\+4|ZF\s?Lifeguard\s?\w+|Shell ATF[^.,;]{0,20}|SK ATF SP-IV|MOPAR[^.,;]{0,40}ATF[^.,;]{0,20})",
+    r"|NS-[23]|SP-?CVT\d?|Matic[- ]S|DEXRON[- ]?(?:VI|HP|ULV)\w*|MERCON[- ]?(?:LV|ULV|SP)\w*|SP-?IV(?:-RR|M)?\b|ATF\+4|ZF\s?Lifeguard\s?\w+|Shell ATF[^.,;]{0,20}|SK ATF SP-IV|MOPAR[^.,;]{0,40}ATF[^.,;]{0,20})",
     re.I,
 )
 BRAKE_FLUID = re.compile(r"\b(DOT[\s-]?[345](?:\.1)?)\b")
@@ -480,15 +506,17 @@ def extract_page(page_number: int, columns: list[list[dict]], text: str, state: 
                 found += [("transmission_fluid", a.group(0)) for a in ATF_TYPE.finditer(t)]
             if context["brake"]:
                 dots = [b.group(1) for b in BRAKE_FLUID.finditer(t)]
+                # value spelled one way ("DOT-4", "DOT4" -> "DOT 4"); the quote stays as printed
                 if dots:
-                    joined = " or ".join(dict.fromkeys(norm(d) for d in dots))
+                    joined = " or ".join(dict.fromkeys(dot_value(d) for d in dots))
                     quote = t[t.find(dots[0]): t.rfind(dots[-1]) + len(dots[-1])]
-                    found.append(("brake_fluid", quote if norm(quote) in flat else dots[0]))
-            for key, value in found:
+                    found.append(("brake_fluid", joined, quote if norm(quote) in flat else dots[0]))
+            for item in found:
+                key, value, quote = item if len(item) == 3 else (item[0], item[1], item[1])
                 if (key, norm(value)) in seen:
                     continue
                 seen.add((key, norm(value)))
-                emit(key, norm(value), None, value, r["text"], key.replace("_", " "))
+                emit(key, norm(value), None, quote, r["text"], key.replace("_", " "))
             for m in OCTANE_AKI.finditer(t):
                 number = m.group(1) or m.group(2)
                 if number and 85 <= int(number) <= 94:
@@ -531,6 +559,20 @@ def cell(text) -> str:
     return norm(" ".join((text or "").split()))
 
 
+def locate(quote: str, flat: str) -> str | None:
+    """The quote as the page text spells it: table cells and the page text can differ only in
+    spacing ("4.8 l(5.07 US qt.)" / "4.8 l (5.07 US qt.)")."""
+    q = norm(quote)
+    if q in flat:
+        return q
+    # pdfplumber can render the litre sign as "l"; words can be hyphenated at a line end
+    chars = ["[lℓ]" if c in "lℓ" else re.escape(c) for c in q if not c.isspace()]
+    if not chars:
+        return None
+    found = re.search(r"(?:\s|-\s)*".join(chars), flat)
+    return found.group(0) if found else None
+
+
 def ruled_tables(page) -> list[list[list]]:
     out = []
     for table in page.extract_tables(TABLE_SETTINGS):
@@ -542,7 +584,7 @@ def ruled_tables(page) -> list[list[list]]:
     return out
 
 
-def table_facts(page_number: int, table: list[list], text: str) -> tuple[list[dict], list[dict]]:
+def table_facts(page_number: int, table: list[list], text: str, covered: set | None = None) -> tuple[list[dict], list[dict]]:
     facts, review = [], []
     flat = norm(text)
     head = [cell(c) for c in table[0]]
@@ -551,12 +593,15 @@ def table_facts(page_number: int, table: list[list], text: str) -> tuple[list[di
     carried = [None] * len(head)
 
     def emit(key, value, unit, quote, row, engine=None, extra=None):
-        if quote and norm(quote) not in flat:
+        found = locate(quote, flat) if quote else quote
+        if quote and found is None:
             review.append({"page": page_number, "key": key, "row": row, "reason": "quote not in page text", "quote": quote})
             return
-        if (key, json.dumps(value), engine) in seen:
+        quote = found
+        marker = (key, json.dumps(value), engine, (extra or {}).get("variant"))
+        if marker in seen:
             return
-        seen.add((key, json.dumps(value), engine))
+        seen.add(marker)
         facts.append({"key": key, "value": value, "unit": unit, "page": page_number, "quote": norm(quote),
                       "row": row, "label": key.replace("_", " "), "engine_text": engine, "source_layout": "ruled_table",
                       **(extra or {})})
@@ -577,27 +622,46 @@ def table_facts(page_number: int, table: list[list], text: str) -> tuple[list[di
                 row.append(cell(c))
                 carried[i] = cell(c)
         label = row[0] or ""
-        middle = [c for c in row[1:vol_col] if c]
-        volume_text = row[vol_col] or ""
+        # the "Volume" heading can span several columns (engine name | volume): the volume is the
+        # cell with a unit, the engine the cell with an engine name and no unit
+        inner = [c for c in row[1:class_col if class_col is not None else len(row)] if c]
+        volume_text = pick_volume(inner)
+        middle = [c for c in inner if c is not volume_text]
         classification = row[class_col] if class_col is not None else ""
         if not volume_text and not classification:
             continue
         line = " | ".join(x for x in (label, *middle, volume_text, classification) if x)
         key = next((k for k, pattern in LABELS if pattern.search(label)), None)
+        if covered is not None and key:
+            covered.add(key)
+            if key.startswith("engine_oil"):
+                covered |= {"engine_oil_capacity_l", "engine_oil_capacity_drain_refill_l", "engine_oil_capacity_without_filter_l"}
+            if key == "coolant_capacity_l":
+                covered.add("coolant_description")
         if SKIP_ROW.search(label) and not re.search(r"automatic transmission|\bCVT\b|\bATF\b", label, re.I):
             key = None
         brake = re.search(r"\bbrake", label, re.I)
-        sub_label = [c for c in middle if not ENGINE_WORD.search(c)]
+        # a sub-row is a part of the item (DCT gear/control oil, inverter coolant, transfer case);
+        # group labels such as "Gasoline Engine" are neither an engine name nor a sub-row
+        sub_label = [c for c in middle if not ENGINE_WORD.search(c) and SUB_ROW.search(c)]
         engine = next((c for c in middle if ENGINE_WORD.search(c)), None)
+        if engine is None:
+            # "2.0 T-GDI / Automatic transaxle fluid": the engine printed in the label cell
+            in_label = LABEL_ENGINE.match(label)
+            engine = in_label.group(1).strip() if in_label else None
+        # a powertrain label in the row ("Hybrid", "Plug-in hybrid", "Gasoline Engine") is the
+        # value's variant: one document then gives one value per variant, not two for one scope
+        variant = next((c for c in middle if POWERTRAIN_LABEL.fullmatch(c.strip())), None)
+        extra_variant = {"variant": variant} if variant else {}
         if key and volume_text:
-            vol = volume(volume_text)
+            vol = volume(re.sub(r"(\d)(L|\u2113)\b", r"\1 \2", volume_text))
             if sub_label or (vol and "error" in vol) or vol is None:
                 review.append({"page": page_number, "key": key, "row": line,
                                "reason": "sub-divided row (e.g. DCT gear/control oil)" if sub_label
                                else (vol or {}).get("error", "no volume")})
             else:
                 emit(key, vol["litres"], "L", vol["original"], line, engine if key != "fuel_tank_l" else None,
-                     {"original": vol["original"], "approx_in_source": vol["approx"]})
+                     {"original": vol["original"], "approx_in_source": vol["approx"], **extra_variant})
         if not classification:
             continue
         if key and key.startswith("engine_oil"):
@@ -617,13 +681,40 @@ def table_facts(page_number: int, table: list[list], text: str) -> tuple[list[di
             for m in ATF_TYPE.finditer(classification):
                 emit("transmission_fluid", norm(m.group(0)), None, m.group(0), line)
         elif brake:
-            dots = list(dict.fromkeys(norm(b.group(1)) for b in BRAKE_FLUID.finditer(classification)))
+            raw = [b.group(1) for b in BRAKE_FLUID.finditer(classification)]
+            dots = list(dict.fromkeys(dot_value(r) for r in raw))  # value: "DOT 4"; quote: as printed
             if dots:
-                emit("brake_fluid", " or ".join(dots), None, dots[0] if len(dots) == 1 else classification, line)
+                emit("brake_fluid", " or ".join(dots), None, raw[0] if len(raw) == 1 else classification, line)
     return facts, review
 
 
 # engine names in table cells: "Smartstream G2.5 GDi", "Gamma 1.6 T-GDI", "Theta II 2.4 GDI", "2.0L MPI"
+POWERTRAIN_LABEL = re.compile(
+    r"(?:gasoline|diesel)?\s*engine|gasoline|diesel|hybrid|plug-in hybrid|plug-in|phev|hev|electric|ev"
+    r"|MT|AT|M/T|A/T|IVT|CVT|DCT|(?:automatic|manual)\s+trans(?:axle|mission)|dual clutch transmission",
+    re.I,
+)
+ENGINE_NAME_WORD = re.compile(r"smartstream|gamma|theta|lambda|\bnu\b|kappa|GDI|GDi|MPI|MPi|T-GDI|engine", re.I)
+
+
+def pick_volume(cells: list[str]) -> str:
+    """The volume cell of a table row: a cell with a unit (qt, gal, US, litre sign, cc) first,
+    then a bare "55L"; a "2.4L" inside an engine name ("Theta II 2.4L GDI") is not a volume."""
+    for c in cells:
+        if re.search(r"\d\s?(?:qt|gal|ℓ|cc\b)|\bUS\b", c, re.I):
+            return c
+    for c in cells:
+        if re.fullmatch(r"\s*\d+(?:\.\d+)?\s?[lL]\s*", c):
+            return c
+    for c in cells:
+        if re.search(r"\d\s[lL]\b", c) and not ENGINE_NAME_WORD.search(c):
+            return c
+    return ""
+
+
+VOLUME_HINT = re.compile(r"\d\s?(?:l\b|L\b|\u2113|qt|gal|US\s|cc\b)", re.I)
+LABEL_ENGINE = re.compile(r"^((?:[A-Za-z]+\s){0,2}\d\.\d\s?L?\s?(?:T-?GDI|GDI|MPI|T-?GDi|GDi|MPi)?)\s", re.I)
+SUB_ROW = re.compile(r"gear oil|control oil|inverter|reduction|transfer|differential|front|rear|motor|\bPTU\b|\bLDC\b|\bEV\b", re.I)
 ENGINE_WORD = re.compile(r"\d\.\d|smartstream|gamma|theta|lambda|\bnu\b|kappa|\bGDi\b|\bMPi\b|T-?GDi", re.I)
 
 
@@ -663,16 +754,21 @@ def process(doc: dict) -> dict:
         for index in candidates:
             try:
                 tables = ruled_tables(pdf.pages[index])
-                columns = [] if tables else rows_of(pdf.pages[index])
+                columns = rows_of(pdf.pages[index])
             except Exception as exc:  # a damaged page must not stop the document
                 result["review"].append({"page": index + 1, "reason": f"page unreadable: {type(exc).__name__}"})
                 continue
+            from_table = set()
             for table in tables:
-                facts, review = table_facts(index + 1, table, pages[index])
+                facts, review = table_facts(index + 1, table, pages[index], from_table)
                 result["facts"] += facts
                 result["review"] += review
-            # with a ruled table the cells are authoritative; only the sentence rules still run
+                from_table |= {f["key"] for f in facts}
+            # the cells of a ruled table are authoritative for every field the table has a row
+            # for (a cell that cannot be read goes to review, never to a guess from the row
+            # pass); the row pass adds only fields the table does not list
             facts, review = extract_page(index + 1, columns, pages[index], state)
+            facts = [f for f in facts if f["key"] not in from_table]
             result["facts"] += facts
             result["review"] += review
     result["candidate_pages"] = [i + 1 for i in candidates]

@@ -1,0 +1,98 @@
+{
+ "made_at": "2026-10-02T15:54:43+00:00",
+ "reason": "rows written by this pipeline replaced after a parser correction (scripts/extract_manual_facts.py)",
+ "value_changes": [
+  {
+   "what": "technical_evidence 91e9592f8c54 coolant_description",
+   "existing": "Ethylene glycol base coolant",
+   "new": "Ethylene glycol base coolant for aluminum radiator",
+   "resolution": "existing kept"
+  },
+  {
+   "what": "technical_evidence 39382c12bf8c coolant_description",
+   "existing": "Ethylene-glycol with phosphate; phosphate based coolant to",
+   "new": "Ethylene-glycol with phosphate based coolant for cooling device; phosphate based coolant to",
+   "resolution": "existing kept"
+  },
+  {
+   "what": "technical_evidence e16403ada6b1 coolant_description",
+   "existing": "Ethylene-glycol with phosphate based coolant for",
+   "new": "Ethylene-glycol with phosphate based coolant for cooling device",
+   "resolution": "existing kept"
+  }
+ ],
+ "removed": [
+  {
+   "id": "3756ca15-a84a-4c18-b586-04b4ff573de6",
+   "fact_key": "engine_oil_capacity_drain_refill_l",
+   "value": 4,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "57437577-32a1-46d1-a77c-3cb8e4d8ea65",
+   "fact_key": "coolant_capacity_l",
+   "value": 6.6,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "5e7aeeee-9357-415a-b3cc-7f071eedc1de",
+   "fact_key": "coolant_description",
+   "value": "Ethylene-glycol with phosphate based coolant for",
+   "years": [
+    2019,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "52dc5a7d-be70-4a8f-801a-68c544097bc6",
+   "fact_key": "coolant_description",
+   "value": "Ethylene glycol base coolant for",
+   "years": [
+    2022,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "f3606165-2eea-4103-8d19-c03bfceb5602",
+   "fact_key": "coolant_capacity_l",
+   "value": 5.6,
+   "years": [
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "01228a1e-6b95-4807-86d2-bba6407981a9",
+   "fact_key": "coolant_capacity_l",
+   "value": 6.6,
+   "years": [
+    2019,
+    2019
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ]
+}

@@ -215,7 +215,7 @@ RULES = [
          and not re.search(r"p\.? ?cyl|per cyl", l, re.I), "text", ["valvetrain"]),
     Rule("injection", _l(r"fuel (system|injection|delivery|induction)|^injection|mixture (formation|preparation)"),
          "text", ["injection"]),
-    Rule("system_power", _l(r"(system|combined|total)\s*(output|power|horsepower|hp)"), "power", ["system_power_hp"],
+    Rule("system_power", _l(r"(system|combined|total)\s*(output|power|horsepower|hp)|(power|output).*\(cumul"), "power", ["system_power_hp"],
          unit_bad=r"\bkw\b"),
     Rule("electric_motor", _l(r"electric motor|e-?motor|e-engine|electric (drive|machine)|\bisg\b|eq boost|"
                               r"integrated starter"),
@@ -223,7 +223,8 @@ RULES = [
     Rule("performance", _l(r"^performance$"), "perf", ["power_hp"]),
     Rule("combustion_power", _l(r"^(combustion |internal combustion )?engine (output|power|horsepower)"), "power",
          ["power_hp"], unit_bad=KW_ONLY),
-    Rule("combustion_torque", _l(r"^(combustion |internal combustion )?engine torque"), "torque", ["torque_lb_ft"],
+    Rule("combustion_torque", lambda l, s: bool(re.match(r"^(combustion |internal combustion )?engine torque", l, re.I))
+         and not re.search(r"cumul|system|combined", l, re.I), "torque", ["torque_lb_ft"],
          unit_bad=NM_ONLY),
     Rule("power", lambda l, s: bool(re.match(r"^(horsepower|(max(imum)?|rated|peak|engine|net) (output|power|horsepower)|"
                                              r"output|power|net power|hp)\b", l, re.I))
@@ -231,7 +232,7 @@ RULES = [
                            r"specific", l, re.I), "power", ["power_hp"],
          unit_bad=KW_ONLY),
     Rule("torque", lambda l, s: bool(re.match(r"^((max(imum)?|peak|engine|net) )?torque\b", l, re.I))
-         and not re.search(r"electric|system|combined|split|distribution|vectoring|converter", l, re.I), "torque",
+         and not re.search(r"electric|system|combined|cumul|split|distribution|vectoring|converter", l, re.I), "torque",
          ["torque_lb_ft"], unit_bad=NM_ONLY),
     Rule("transmission", lambda l, s: bool(re.match(r"^(transmission( type)?|type of transmission|gearbox)$", l, re.I))
          or (bool(re.match(r"^transmission", s, re.I)) and bool(re.match(r"^(type|transmission type)$", l, re.I))),
@@ -674,8 +675,9 @@ def parse_html_tables(rows, page_text: str, skip_column: re.Pattern | None = Non
     return facts, review
 
 
-METRIC_UNIT = re.compile(r"^(mm|kg|l|ltr|liters?|litres?|m|kw|nm|approx\.? ltr|appr\.? l|km/h|cm³|cm3)$", re.I)
-US_UNIT = re.compile(r"^(in|in\.|inch|inches|ft|ft\.|feet|lbs?\.?|pounds|gal|gal\.|gallons|hp|lb-?ft|lbs?-ft|mph|"
+# dimension / weight / volume units: a table giving these in metric only is European technical data
+METRIC_UNIT = re.compile(r"^(mm|kg|l|ltr|liters?|litres?|m|approx\.? ltr|appr\.? l|approx\.? l)$", re.I)
+US_UNIT = re.compile(r"^(in|in\.|inch|inches|ft|ft\.|feet|lbs?\.?|pounds|gal|gal\.|gallons|"
                      r"cu\.? ?ft\.?|ft³|ft3)$", re.I)
 
 
@@ -793,7 +795,7 @@ def split_label_text(text: str) -> tuple[str, str]:
     """(label, unit) of the label part of a row ("Veh. length mm / inch", "Engine power hp@rpm")."""
     text = norm(text)
     m = LABEL_SPLIT.match(text)
-    if m and not re.search(r"\d", m.group("unit")):
+    if m and (not re.search(r"\d", m.group("unit")) or m.group("unit").strip() == ":1"):
         return m.group("label").strip(), m.group("unit").strip()
     m = re.match(r"^(?P<label>.+?\b(?:diameter|ratio))\s*/?\s*(?P<unit>inch|in|mm|:1)$", text, re.I)
     if m:
@@ -1162,6 +1164,13 @@ def bmw_wanted_units(rule) -> tuple[str, ...]:
 def bmw_pick_unit(rule, unit: str, cell: str) -> str | None:
     """With a dual unit ("mm / inch", "Kg / lbs"), keep the part of the value in the key's unit."""
     parts = [p.strip() for p in re.split(r"\s*/\s*", unit)] if unit else []
+    if len(parts) == 2 and rule.kind in ("power", "torque"):
+        group = {"power": ("kw", "hp", "ps", "bhp"), "torque": ("nm", "lb-ft", "lbs-ft", "lb ft", "ft lbs")}[rule.kind]
+        if all(p.lower() in group for p in parts):
+            wanted = ("hp", "bhp") if rule.kind == "power" else ("lb-ft", "lbs-ft", "lb ft", "ft lbs")
+            idx = [i for i, p in enumerate(parts) if p.lower() in wanted]
+            values = [v.strip() for v in re.split(r"\s*/\s*", cell)]
+            return values[idx[0]] if len(idx) == 1 and len(values) == 2 else None
     if len(parts) != 2 or rule.kind not in ("num",):
         return cell
     wanted = bmw_wanted_units(rule)

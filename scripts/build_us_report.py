@@ -1,0 +1,424 @@
+"""Final report of the US technical database batch (prompt section 10), built from data only.
+
+Reads the staging of every line (what was loaded), the load reports, the 10% rechecks, the
+live database and a pre-batch backup (rows before/after), the generation evidence, the
+manifests (sources, blocked hosts), the library and git. Writes:
+  data_work/REPORT.md              all makes
+  data_work/<make>/REPORT.md       one make
+Nothing in the report is typed by hand: every number is counted here.
+
+  .venv/Scripts/python.exe scripts/build_us_report.py
+"""
+
+from __future__ import annotations
+
+import csv
+import json
+import re
+import sqlite3
+import subprocess
+import sys
+from collections import Counter, defaultdict
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+WORK = ROOT / "data_work"
+sys.path.insert(0, str(ROOT / "scripts"))
+from us_tech_lines import MAKE_ORDER, MAKES, lines_for  # noqa: E402
+
+LIVE = ROOT / "autoexpert.db"
+BEFORE_BATCH = Path(r"C:\AutoExpertBackups\autoexpert.db.backup_20261002_1308_pre_batch_hyundai")
+BEFORE_ALL = ROOT / "autoexpert.db.backup_20261002_0959"
+TABLES = ["vehicle_makes", "vehicle_models", "vehicle_generations", "vehicle_variants", "technical_evidence",
+          "known_issues", "maintenance_schedule_items", "source_records", "raw_documents", "knowledge_sources"]
+BASELINE_COMMIT = "0ff74ff"
+MARK = {"full": "●", "part": "◐", "none": "○", "na": "—"}
+
+FIELDS = [
+    ("1 Идентификация", ["body", "seats"]),
+    ("2 Двигатель", None),
+    ("3 Коробка", None),
+    ("4 Привод", None),
+    ("5 Мощность/момент", ["power_hp", "torque_lb_ft"]),
+    ("6 Топливо/бак", ["octane_aki|octane_ron|fuel_type", "fuel_tank_l"]),
+    ("7 Масло", ["engine_oil_viscosity", "engine_oil_specification|engine_oil_oem_approval",
+                 "engine_oil_capacity_l|engine_oil_capacity_drain_refill_l"]),
+    ("8 Жидкости", ["coolant|coolant_description", "transmission_fluid", "brake_fluid"]),
+    ("9 ТО", None),
+    ("10 Шины", ["tires", "tire_pressure_front_kpa"]),
+    ("11 Размеры", ["length_mm", "width_mm", "height_mm", "wheelbase_mm", "ground_clearance", "cargo_l", "curb_weight_kg"]),
+    ("12 Узлы", ["front_suspension", "rear_suspension", "front_brakes", "rear_brakes", "steering"]),
+    ("13 Отзывы", None),
+    ("14 Проблемы", None),
+    ("15 Источники", None),
+]
+
+
+def git(*args) -> str:
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8").stdout
+
+
+def read_json(path: Path, default=None):
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+
+
+def read_csv(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def counts(db: Path) -> dict:
+    if not db.exists():
+        return {}
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    out = {}
+    for table in TABLES:
+        try:
+            out[table] = con.execute(f"select count(*) from {table}").fetchone()[0]
+        except sqlite3.Error:
+            out[table] = None
+    out["by_make"] = {}
+    for table in ("technical_evidence", "known_issues", "maintenance_schedule_items"):
+        try:
+            rows = con.execute(
+                f"select m.name, count(*) from {table} t join vehicle_makes m on m.id = t.make_id group by m.name"
+                if table != "maintenance_schedule_items" else
+                "select m.name, count(*) from maintenance_schedule_items t join vehicle_generations g on g.id = t.generation_id "
+                "join vehicle_models mo on mo.id = g.model_id join vehicle_makes m on m.id = mo.make_id group by m.name"
+            ).fetchall()
+        except sqlite3.Error:
+            rows = []
+        for name, n in rows:
+            out["by_make"].setdefault(name, {})[table] = n
+    con.close()
+    return out
+
+
+def generation_status(staging: dict, gen: dict) -> list[str]:
+    code = gen["code"]
+    years = set(range(gen["start_year"], (gen.get("end_year") or gen["start_year"]) + 1))
+    facts = [f for f in staging.get("facts", []) if f.get("generation") == code and f.get("display_level") != "HIDDEN_CONFLICT"]
+    keys = {f["key"] for f in facts}
+    cfgs = [c for c in staging.get("configurations", []) if c.get("generation") == code]
+    bev = bool(cfgs) and all(c.get("powertrain") in ("BEV", "FCEV") for c in cfgs)
+    out = []
+    for name, need in FIELDS:
+        n = name.split()[0]
+        if n == "1":
+            # generation and its model years are always there; seats/body complete it
+            out.append("full" if keys & {"seats", "body"} else "part")
+        elif n == "6":
+            epa_fuel = any(v.get("fuel_type") for c in cfgs for v in c.get("epa_vehicles", []))
+            hits = [epa_fuel, bool(keys & {"octane_aki", "octane_ron", "fuel_type"}), "fuel_tank_l" in keys]
+            if bev:
+                hits = hits[:1]
+            out.append("full" if all(hits) else "part" if any(hits) else "none")
+        elif n == "2":
+            if not cfgs:
+                out.append("none")
+            elif all(c.get("engine_family_key") for c in cfgs):
+                out.append("full")
+            else:
+                out.append("part")
+        elif n == "3":
+            out.append("none" if not cfgs else "full" if all(c.get("epa_trany") for c in cfgs) else "part")
+        elif n == "4":
+            out.append("none" if not cfgs else "full" if all(c.get("drivetrain") for c in cfgs) else "part")
+        elif n == "9":
+            items = [i for i in staging.get("maintenance", []) if i.get("generation") == code]
+            out.append("full" if any(i["job"] == "engine_oil_and_filter" for i in items) else "part" if items else "none")
+        elif n == "13":
+            out.append("full" if any(s.get("source_type") == "NHTSA_RECALLS_API" or str(k).startswith("nhtsa-recalls")
+                                     for k, s in staging.get("sources", {}).items()) else "none")
+        elif n == "14":
+            out.append("full" if any(i.get("generation") == code for i in staging.get("issues", [])) else "none")
+        elif n == "15":
+            out.append("full" if all(f.get("cites") for f in facts) else "part")
+        else:
+            if bev and n in ("7",):
+                out.append("na")
+                continue
+            hits = [any(k in keys for k in alt.split("|")) for alt in need]
+            if bev and n == "6":
+                hits = hits[:1]
+            if bev and n == "5":
+                hits = [("power_hp" in keys) or ("system_power_hp" in keys) or ("electric_motor" in keys)]
+            out.append("full" if all(hits) else "part" if any(hits) else "none")
+    _ = years
+    return out
+
+
+def make_data(make: str) -> dict:
+    data = {"make": make, "lines": []}
+    for line in lines_for(make, include_done=True):
+        path = WORK / make / "staging" / line.slug / "staging.json"
+        staging = read_json(path)
+        if staging is None:
+            data["lines"].append({"key": line.key, "name": line.name, "missing": True})
+            continue
+        load = read_json(path.parent / "load_report.json", {})
+        data["lines"].append({"key": line.key, "name": line.name, "staging": staging, "load": load, "batch": bool(staging.get("build"))})
+    data["recheck"] = read_json(WORK / make / "staging" / "recheck_10pct.json", {})
+    data["pass_live"] = read_json(WORK / make / "staging" / "load_pass_live.json", {})
+    return data
+
+
+def matrix(data: dict) -> list[str]:
+    head = "| Линейка | Поколение | Годы | " + " | ".join(n.split(" ", 1)[0] for n, _ in FIELDS) + " |"
+    out = [head, "|" + "---|" * (3 + len(FIELDS))]
+    totals = Counter()
+    for line in data["lines"]:
+        if line.get("missing"):
+            out.append(f"| {line['name']} | — | — | " + " | ".join("○" for _ in FIELDS) + " |")
+            continue
+        for gen in line["staging"].get("generations", []):
+            status = generation_status(line["staging"], gen)
+            totals.update(status)
+            years = f"{gen['start_year']}–{gen.get('end_year') or ''}"
+            out.append(f"| {line['name']} | {gen['code']} | {years} | " + " | ".join(MARK[s] for s in status) + " |")
+    out.append("")
+    out.append(f"Итого ячеек: заполнено {totals['full']}, частично {totals['part']}, нет {totals['none']}, неприменимо {totals['na']}.")
+    return out
+
+
+def gaps_section(data: dict, detail: bool) -> list[str]:
+    by = Counter()
+    examples = defaultdict(list)
+    for line in data["lines"]:
+        for g in (line.get("staging") or {}).get("gaps", []):
+            reason = re.sub(r"\d+(\.\d+)?", "N", g["reason"])[:110]
+            by[(g["field"], reason)] += 1
+            if len(examples[(g["field"], reason)]) < 3:
+                examples[(g["field"], reason)].append(g["scope"])
+    out = [f"Записей в журнале пробелов: {sum(by.values())} (по полю и причине):", "",
+           "| Поле | Причина | Записей | Примеры |", "|---|---|---|---|"]
+    for (field, reason), n in by.most_common(None if detail else 40):
+        out.append(f"| {field} | {reason} | {n} | {'; '.join(examples[(field, reason)])} |")
+    return out
+
+
+def conflicts_section(data: dict, detail: bool) -> list[str]:
+    rows = []
+    for line in data["lines"]:
+        st = line.get("staging") or {}
+        for c in st.get("conflicts", []):
+            rows.append((line["name"], c.get("scope", ""), c.get("key", ""), str(c.get("kept_value")), str(c.get("other_values"))[:80], c.get("resolution", "")))
+        for c in (line.get("load") or {}).get("conflicts", []) if isinstance((line.get("load") or {}).get("conflicts"), list) else []:
+            rows.append((line["name"], "загрузка", c.get("what", ""), str(c.get("existing"))[:40], str(c.get("new"))[:40], c.get("resolution", "")))
+    res = Counter(r[5][:70] for r in rows)
+    out = [f"Конфликтов: {len(rows)}. По решениям:", ""] + [f"- {k}: {v}" for k, v in res.most_common()]
+    if detail and rows:
+        out += ["", "| Линейка | Область | Поле | Оставлено | Другие значения | Решение |", "|---|---|---|---|---|---|"]
+        out += [f"| {a} | {b} | {c} | {d} | {e} | {f} |" for a, b, c, d, e, f in rows[:400]]
+        if len(rows) > 400:
+            out.append(f"(ещё {len(rows) - 400} строк — в staging.json линеек, поле conflicts)")
+    return out
+
+
+def recheck_section(data: dict) -> list[str]:
+    rc = data["recheck"] or {}
+    checked = sum(v.get("checked", 0) for v in rc.values())
+    bad = sum(v.get("mismatches", 0) for v in rc.values())
+    out = [f"Проверено {checked} записей (10% каждой линейки), расхождений {bad}."]
+    for line, v in sorted(rc.items()):
+        out.append(f"- {line}: {v.get('checked')} проверено, {v.get('mismatches')} расхождений")
+    return out
+
+
+def notes_section(data: dict) -> list[str]:
+    out = []
+    for line in data["lines"]:
+        st = line.get("staging") or {}
+        media = [n for n in st.get("notes", []) if "media" in n or "dropped" in n or "moved" in n]
+        for g in st.get("generations", []):
+            ev = [e for e in g.get("boundary_evidence", []) if "[media:" in e]
+            if ev:
+                out.append(f"- {line['name']} {g['code']} ({g['start_year']}–{g.get('end_year') or ''}): {ev[0][:300]}")
+        for n in media:
+            out.append(f"- {line['name']}: {n[:300]}")
+    return out or ["- нет"]
+
+
+def report_make(make: str, data: dict, live: dict, before: dict) -> list[str]:
+    name = MAKES[make]["epa"]
+    out = [f"# {name} — отчёт по базе технических данных US", "",
+           f"Сформировано {datetime.now(UTC).isoformat(timespec='seconds')} скриптом scripts/build_us_report.py.", "",
+           "## 1. Матрица покрытия", "", "Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль).", ""]
+    out += matrix(data)
+    te_b = before.get("by_make", {}).get(name, {})
+    te_a = live.get("by_make", {}).get(name, {})
+    out += ["", "## 2. Строки до и после", "",
+            "| Таблица | До пакета | После |", "|---|---|---|"]
+    for t in ("technical_evidence", "known_issues", "maintenance_schedule_items"):
+        out.append(f"| {t} | {te_b.get(t, 0)} | {te_a.get(t, 0)} |")
+    out += ["", "## 3. Журнал пробелов", ""] + gaps_section(data, True)
+    out += ["", "## 4. Конфликты источников", ""] + conflicts_section(data, True)
+    out += ["", "## 5. Выборочная перепроверка", ""] + recheck_section(data)
+    out += ["", "## Поколения: свидетельства прессы и решения детектора", ""] + notes_section(data)
+    corrections = []
+    for line in data["lines"]:
+        for s in (line.get("load") or {}).get("stale", []) if isinstance((line.get("load") or {}).get("stale"), list) else []:
+            corrections.append(f"- {line['name']}: {s.get('fact_key')} = {s.get('value')} (MY{s.get('years')}) — {s.get('action')}")
+        for u in (line.get("load") or {}).get("issues_updated", []):
+            corrections.append(f"- {line['name']}: проблема {u.get('issue')} обновлена {json.dumps(u.get('changes'), ensure_ascii=False)[:160]}")
+    out += ["", "## Изменения ранее записанных строк (последняя загрузка)", ""] + (corrections or ["- нет"])
+    live_pass = data.get("pass_live") or {}
+    if live_pass:
+        out += ["", "## Загрузка", "", f"Режим: {live_pass.get('mode')}, quick_check: {live_pass.get('quick_check')}, "
+                f"нарушений FK: {live_pass.get('foreign_key_violations')}, полностью перезагружены: {live_pass.get('replace_own')}"]
+        for key, v in live_pass.get("lines", {}).items():
+            out.append(f"- {key}: {v.get('flag')}, код {v.get('exit')}, {json.dumps(v.get('counts') or {}, ensure_ascii=False)}")
+    return out
+
+
+def blocked_hosts() -> list[str]:
+    out = []
+    for path in sorted((WORK / "_shared" / "manifest_press").glob("*.csv")) + sorted((WORK / "_shared" / "manifest_official").glob("*.csv")):
+        rows = read_csv(path)
+        st = Counter(r.get("status") for r in rows)
+        notes = {r.get("note") for r in rows if r.get("status") in ("blocked", "skipped") and r.get("note")}
+        if st.get("blocked") or st.get("skipped"):
+            out.append(f"- {path.stem}: {dict(st)}; {'; '.join(sorted(n for n in notes if n))[:200]}")
+    return out
+
+
+def library_section() -> list[str]:
+    rows = read_csv(WORK / "_library" / "manifest.csv")
+    by = Counter((r["market"], r["make"]) for r in rows)
+    out = [f"Материалов в библиотеке (data_work/_library/manifest.csv): {len(rows)}.", "",
+           "| Рынок | Марка | Материалов |", "|---|---|---|"]
+    out += [f"| {m} | {mk} | {n} |" for (m, mk), n in sorted(by.items())]
+    other = Counter()
+    for make in MAKE_ORDER:
+        for path in (WORK / make / "extracted").glob("*.json"):
+            d = read_json(path, {})
+            if d.get("status") == "other_market":
+                other[(d.get("edition_market") or "UNKNOWN", make)] += 1
+    out += ["", f"Скачанные руководства не US-издания (не использованы, помечены other_market): {sum(other.values())}.", "",
+            "| Рынок | Марка | Документов |", "|---|---|---|"]
+    out += [f"| {m} | {mk} | {n} |" for (m, mk), n in sorted(other.items())]
+    return out
+
+
+def vin_samples(all_data: dict) -> list[str]:
+    out = []
+    for make in ("bmw", "volkswagen", "audi"):
+        for line in all_data[make]["lines"]:
+            st = line.get("staging") or {}
+            years = sorted({c["year"] for c in st.get("configurations", [])})
+            covered = {s.get("model_year") for s in st.get("sources", {}).values()
+                       if s.get("source_type") in ("OWNER_MANUAL_OFFICIAL", "OWNER_MANUAL_COPY")}
+            missing = [y for y in years if y not in covered]
+            if missing:
+                out.append(f"- {line['name']}: {', '.join(map(str, missing))}")
+    return out
+
+
+def models_outside() -> list[str]:
+    out = []
+    for make in MAKE_ORDER:
+        for line in lines_for(make, include_done=True):
+            st = read_json(WORK / make / "staging" / line.slug / "staging.json", {})
+            if st and not st.get("configurations"):
+                out.append(f"- {line.name} ({MAKES[make]['epa']}): нет строк EPA за 2014–2026 — в США под этим именем не продавалась; в базу не добавлялась.")
+    unmapped = read_json(WORK / "_shared" / "nhtsa_unmapped_models.json", {})
+    out += ["", "Модели этих марок, которые NHTSA перечисляет для США, но которых нет в списке линеек (предложения, в базу не добавлялись):", ""]
+    for make in MAKE_ORDER:
+        names = unmapped.get(make) or []
+        if names:
+            out.append(f"- {MAKES[make]['epa']}: {', '.join(names)}")
+    return out
+
+
+def tests_section() -> list[str]:
+    out = []
+    for label, path in (("baseline backend", WORK / "toyota" / "baseline_backend_pytest.txt"),
+                        ("baseline flutter", WORK / "toyota" / "baseline_flutter_tests.txt"),
+                        ("baseline web", WORK / "toyota" / "baseline_web_tests.txt"),
+                        ("final backend", WORK / "_batch" / "final_backend_pytest.txt"),
+                        ("final flutter", WORK / "_batch" / "final_flutter_tests.txt"),
+                        ("final web", WORK / "_batch" / "final_web_tests.txt")):
+        if not path.exists():
+            out.append(f"- {label}: нет файла {path.relative_to(ROOT)}")
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        summary = re.findall(r"\d+ (?:passed|failed)[^\n]*|All tests passed!|Some tests failed\.|ℹ (?:pass|fail) \d+", text)
+        out.append(f"- {label}: {'; '.join(summary[-3:]) or 'итог не найден'} ({path.relative_to(ROOT)})")
+    return out
+
+
+def main() -> int:
+    live, before, first = counts(LIVE), counts(BEFORE_BATCH), counts(BEFORE_ALL)
+    all_data = {make: make_data(make) for make in MAKE_ORDER}
+    dry = "--dry" in sys.argv
+    for make, data in all_data.items():
+        text = "\n".join(report_make(make, data, live, before)) + "\n"
+        if dry:
+            print(make, len(text.splitlines()), "lines")
+            continue
+        target = WORK / make / "REPORT.md"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists() and "scripts/build_us_report.py" not in target.read_text(encoding="utf-8"):
+            # a hand-written report (the accepted Camry report) is kept under its own name
+            keep = target.with_name("REPORT_CAMRY.md" if make == "toyota" else "REPORT_previous.md")
+            if keep.exists():
+                raise SystemExit(f"{target} is hand-written and {keep.name} exists; not overwriting")
+            target.rename(keep)
+        target.write_text(text, encoding="utf-8")
+    out = ["# Итоговый отчёт: база технических данных US (все марки Приложения A)", "",
+           f"Сформировано {datetime.now(UTC).isoformat(timespec='seconds')} скриптом scripts/build_us_report.py; "
+           "отчёты по маркам — data_work/<марка>/REPORT.md.", "",
+           "## 1. Матрица покрытия", "", "Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль). "
+           "Поля по разделу 4 промта.", ""]
+    for make in MAKE_ORDER:
+        out += [f"### {MAKES[make]['epa']}", ""] + matrix(all_data[make]) + [""]
+    out += ["## 2. Строки по таблицам: до и после", "",
+            "| Таблица | До f087 (бэкап 0959) | До пакета (бэкап 1308) | Сейчас |", "|---|---|---|---|"]
+    for t in TABLES:
+        out.append(f"| {t} | {first.get(t)} | {before.get(t)} | {live.get(t)} |")
+    out += ["", "По маркам (technical_evidence / known_issues / maintenance_schedule_items):", "",
+            "| Марка | До пакета | Сейчас |", "|---|---|---|"]
+    for make in MAKE_ORDER:
+        n = MAKES[make]["epa"]
+        b, a = before.get("by_make", {}).get(n, {}), live.get("by_make", {}).get(n, {})
+        fmt = lambda d: f"{d.get('technical_evidence', 0)} / {d.get('known_issues', 0)} / {d.get('maintenance_schedule_items', 0)}"  # noqa: E731
+        out.append(f"| {n} | {fmt(b)} | {fmt(a)} |")
+    out += ["", "## 3. Журнал пробелов", ""]
+    for make in MAKE_ORDER:
+        out += [f"### {MAKES[make]['epa']}", ""] + gaps_section(all_data[make], False)[:14] + [""]
+    out += ["Закрытые и заблокированные источники (manifest):", ""] + blocked_hosts()
+    out += ["", "## 4. Конфликты источников и решения", ""]
+    for make in MAKE_ORDER:
+        out += [f"### {MAKES[make]['epa']}", ""] + conflicts_section(all_data[make], False) + [""]
+    out += ["## 5. Выборочная перепроверка (10%)", ""]
+    for make in MAKE_ORDER:
+        out += [f"### {MAKES[make]['epa']}", ""] + recheck_section(all_data[make])[:1] + [""]
+    migrations = [p for p in git("diff", "--name-only", BASELINE_COMMIT, "HEAD", "--", "backend/alembic/versions").split() if p]
+    out += ["## 6. Изменения схемы", ""] + ([f"- {m}" for m in migrations] or ["- нет"])
+    out += ["", "## 7. Тесты: baseline и финал", ""] + tests_section()
+    out += ["", "## 8. Модели, которых нет в США, и предложения", ""] + models_outside()
+    out += ["", "## 9. Нужны VIN-образцы (руководство выдаётся только по VIN: BMW, VW, Audi)", "",
+            "Линейка и модельные годы без US-руководства в собранных источниках:", ""] + (vin_samples(all_data) or ["- нет"])
+    out += ["", "## 10. Vehicle Databases", "", "VDB = нет; запросов к VDB: 0."]
+    out += ["", "## 11. Git-коммиты", ""] + [f"- {l}" for l in git("log", "--oneline", f"{BASELINE_COMMIT}..HEAD").splitlines()]
+    out += ["", "## 12. Библиотека других рынков", ""] + library_section()
+    out += ["", "## Поколения: свидетельства прессы", "",
+            "Источник: data_work/_shared/generation_evidence.json (cars.com, consumerreports.org; Car and Driver, "
+            "Edmunds, KBB и MotorTrend недоступны для автоматического чтения). Используются только цитаты, сверенные со страницей.", ""]
+    for make in MAKE_ORDER:
+        notes = notes_section(all_data[make])
+        if notes != ["- нет"]:
+            out += [f"### {MAKES[make]['epa']}", ""] + notes[:60] + [""]
+    if dry:
+        print("\n".join(out[:80]))
+        return 0
+    (WORK / "REPORT.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    print("written", WORK / "REPORT.md")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

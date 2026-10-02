@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 647,
  "edition_market": "US",
  "edition_markers": {
@@ -140,10 +140,10 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 27,
-   "quote": "DOT-4",
+   "quote": "SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO4925 CLASS-6",
    "row": "Brake fluid | As required | SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO4925 CLASS-6",
    "label": "brake fluid",
    "engine_text": null,
@@ -159,7 +159,7 @@
    "label": "fuel tank l",
    "engine_text": null,
    "source_layout": "ruled_table",
-   "original": "14.27 US gal. (54ℓ",
+   "original": "14.27 US gal. (54 ℓ",
    "approx_in_source": false
   },
   {
@@ -183,7 +183,15 @@
    "engine_text": null
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 27,
+   "key": "coolant_description",
+   "row": "Coolant | (Ethylene glycol base coolant for | 10.11 US qt.",
+   "reason": "quote not in page text",
+   "quote": "Ethylene glycol base coolant for 10"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   26,

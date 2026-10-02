@@ -579,6 +579,15 @@ def bmw_pdf_year(pages: list[str]) -> int | None:
     return int(m.group(1) or m.group(2))
 
 
+def bmw_pdf_is_us(pages: list[str]) -> bool:
+    """US edition: a U.S. press/media information sheet or US units (in, lbs, gal, mph, lb-ft).
+    BMW AG global technical data (mm, kg, l, kW/hp, Nm only) is not used."""
+    text = "\n".join(pages)
+    if re.search(r"U\.S\. (Press|Media) Information", "\n".join(pages[:1])):
+        return True
+    return len(re.findall(r"\b(inch|inches|lbs?|gal|gallons|mph|lbs?-ft|lb-ft)\b", text, re.I)) >= 2
+
+
 def bmw_pdf_is_spec(pages: list[str]) -> bool:
     text = "\n".join(pages[:2])
     return len({m.lower()[:6] for m in BMW_PDF_SPEC_LABELS.findall(text)}) >= 4
@@ -759,8 +768,15 @@ def run_bmw(limit: int | None = None, max_pages: int = 400) -> None:
         if year is not None and not any(in_years(k, year) for k in lines):
             entry["decision"] = "out of years"
             continue
-        if h.manifest.ok(url):
+        stored = h.manifest.ok(url)
+        if stored:
             entry["decision"] = "stored"
+            path = RAW_ROOT / stored["path"]
+            if path.suffix == ".pdf" and path.exists() and not bmw_pdf_is_us(pdf_pages_text(path.read_bytes())):
+                h.manifest.add({**stored, "status": "not_us_edition",
+                                "note": f"{stored.get('note', '')}; BMW AG global technical data (metric only)"})
+                entry["decision"] = "not a US edition"
+                h.log("not a US edition:", title)
             continue
         cached = h.discovery.ok(url)
         if cached and cached.get("path") and (RAW_ROOT / cached["path"]).exists():
@@ -807,8 +823,10 @@ def run_bmw(limit: int | None = None, max_pages: int = 400) -> None:
                             note += "; model year from release text"
         entry["year"] = year or ""
         in_range = year is not None and any(in_years(k, year) for k in lines)
-        if not bmw_pdf_is_spec(pages) or not in_range:
+        is_us = bmw_pdf_is_us(pages)
+        if not bmw_pdf_is_spec(pages) or not in_range or not is_us:
             reason = "not a specification sheet" if not bmw_pdf_is_spec(pages) else (
+                "BMW AG global technical data, not a US edition" if not is_us else
                 "model year not stated" if year is None else "model year out of range")
             entry["decision"] = reason
             if cached is None:

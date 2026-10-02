@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 560,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,32 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 434.0,
+   "unit": "L",
+   "page": 534,
+   "quote": "434 l",
+   "row": "SAE | 434 l (15.3 cu ft)",
+   "label": "transmission_fluid_capacity_l",
+   "engine_text": null,
+   "original": "434 l",
+   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.0,
+   "unit": "L",
+   "page": 535,
+   "quote": "4.2 US qt. (4.0 l)",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "4.2 US qt.(4.0 l)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_viscosity",
    "value": "SAE 5W-20",
@@ -52,6 +78,30 @@
    "quote": "ACEA A5",
    "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
    "label": "engine oil specification",
+   "engine_text": null,
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 535,
+   "quote": "7.1 US qt. (6.7 l)",
+   "row": "Intelligent Variable Transmission (IVT) | 7.1 US qt.(6.7 l) | IVTF SP-CVT1",
+   "label": "transmission fluid capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.1 US qt.(6.7 l)",
+   "approx_in_source": false
+  },
+  {
+   "key": "transmission_fluid",
+   "value": "SP-CVT1",
+   "unit": null,
+   "page": 535,
+   "quote": "SP-CVT1",
+   "row": "Intelligent Variable Transmission (IVT) | 7.1 US qt.(6.7 l) | IVTF SP-CVT1",
+   "label": "transmission fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
   },
@@ -96,8 +146,36 @@
    "engine_text": null
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 5.6,
+   "unit": "L",
+   "page": 536,
+   "quote": "5.9 US qt. (5.6 l)",
+   "row": "Coolant | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "5.9 US qt.(5.6 l)",
+   "approx_in_source": false,
+   "variant": "MT"
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 6.6,
+   "unit": "L",
+   "page": 536,
+   "quote": "7.0 US qt. (6.6 l)",
+   "row": "Coolant | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.0 US qt.(6.6 l)",
+   "approx_in_source": false,
+   "variant": "IVT"
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 536,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -105,21 +183,40 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 53.0,
+   "unit": "L",
+   "page": 536,
+   "quote": "14 US gal. (53 l)",
+   "row": "Fuel | 14 US gal.(53 l) | Unleaded gasoline",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "14 US gal.(53 l)",
+   "approx_in_source": false
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.6,
+   "unit": "L",
+   "page": 536,
+   "quote": "7.0 US qt. (6.6 l)",
+   "row": "IVT | 7.0 US qt. (6.6 l)",
+   "label": "transmission_fluid_capacity_l",
+   "engine_text": null,
+   "original": "7.0 US qt. (6.6 l)",
+   "drive": null,
+   "approx_in_source": false
   }
  ],
  "review": [
   {
    "page": 535,
    "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
-   "reason": "quote not in page text",
-   "quote": "4.2 US qt.(4.0 l)"
-  },
-  {
-   "page": 536,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+   "row": "1.6 ~ 1.7 US qt. - HK SYN MTF 70W",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 536,
@@ -130,23 +227,10 @@
   },
   {
    "page": 536,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 536,
    "key": "coolant_description",
    "row": "Coolant | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "reason": "quote not in page text",
    "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
-  },
-  {
-   "page": 536,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 14 US gal.(53 l) | Unleaded gasoline",
-   "reason": "quote not in page text",
-   "quote": "14 US gal.(53 l)"
   }
  ],
  "engine_codes": [],

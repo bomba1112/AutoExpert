@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 510,
  "edition_market": "US",
  "edition_markers": {
@@ -54,6 +54,19 @@
    "engine_text": null
   },
   {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.0,
+   "unit": "L",
+   "page": 495,
+   "quote": "4.23 US qt. (4.0 l)",
+   "row": "Engine oil *1*2(drain and refill) Recommends | Gamma 1.6 T-GDI | 4.23 US qt.(4.0 l) | API Latest (ILSAC Latest) or ACEA A5/B5 *4",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Gamma 1.6 T-GDI",
+   "source_layout": "ruled_table",
+   "original": "4.23 US qt.(4.0 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "engine_oil_specification",
    "value": "ACEA A5/B5",
    "unit": null,
@@ -65,6 +78,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.0,
+   "unit": "L",
+   "page": 495,
+   "quote": "4.23 US qt. (4.0 l)",
+   "row": "Engine oil *1*2(drain and refill) Recommends | Nu 2.0 MPI | 4.23 US qt.(4.0 l) | SAE 5W-20/API Latest (ILSAC Latest)",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Nu 2.0 MPI",
+   "source_layout": "ruled_table",
+   "original": "4.23 US qt.(4.0 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "engine_oil_viscosity",
    "value": "SAE 5W-20",
    "unit": null,
@@ -74,6 +100,19 @@
    "label": "engine oil viscosity",
    "engine_text": "Nu 2.0 MPI",
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 495,
+   "quote": "7.08 US qt. (6.7 l)",
+   "row": "Automatic transmission fluid | Nu 2.0 MPI | 7.08 US qt.(6.7 l) | MICHANG ATF SP-IV, SK ATF SP-IV, NOCA ATF SP-IV, HYUNDAI genuine ATF SP-IV or other brands meeting the above specification approved by HYUNDAI Motor Co.",
+   "label": "transmission fluid capacity l",
+   "engine_text": "Nu 2.0 MPI",
+   "source_layout": "ruled_table",
+   "original": "7.08 US qt.(6.7 l)",
+   "approx_in_source": false
   },
   {
    "key": "transmission_fluid",
@@ -98,15 +137,41 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 7.1,
+   "unit": "L",
+   "page": 496,
+   "quote": "7.5 US qt. (7.1 l)",
+   "row": "Coolant | Gamma 1.6 T-GDI | 7.5 US qt.(7.1 l) | Mixture of antifreeze and water (Phosphate-based Ethylene glycol coolant for alu- minum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": "Gamma 1.6 T-GDI",
+   "source_layout": "ruled_table",
+   "original": "7.5 US qt.(7.1 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 496,
-   "quote": "DOT-4",
+   "quote": "SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO 4925 CLASS-6",
    "row": "Brake fluid | 0.74~0.85 US qt. (0.7 ~ 0.8 l) | SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO 4925 CLASS-6",
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 50.0,
+   "unit": "L",
+   "page": 496,
+   "quote": "13.2 US gal. (50 l)",
+   "row": "Fuel | 13.2 US gal.(50 l) | Refer to \"Fuel requirements\" in the Foreword chapter.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "13.2 US gal.(50 l)",
+   "approx_in_source": false
   },
   {
    "key": "engine_oil_specification_alternative",
@@ -252,38 +317,15 @@
  "review": [
   {
    "page": 495,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2(drain and refill) Recommends | Gamma 1.6 T-GDI | 4.23 US qt.(4.0 l) | API Latest (ILSAC Latest) or ACEA A5/B5 *4",
-   "reason": "quote not in page text",
-   "quote": "4.23 US qt.(4.0 l)"
-  },
-  {
-   "page": 495,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2(drain and refill) Recommends | Nu 2.0 MPI | 4.23 US qt.(4.0 l) | SAE 5W-20/API Latest (ILSAC Latest)",
-   "reason": "quote not in page text",
-   "quote": "4.23 US qt.(4.0 l)"
-  },
-  {
-   "page": 495,
-   "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transmission fluid | Nu 2.0 MPI | 7.08 US qt.(6.7 l) | MICHANG ATF SP-IV, SK ATF SP-IV, NOCA ATF SP-IV, HYUNDAI genuine ATF SP-IV or other brands meeting the above specification approved by HYUNDAI Motor Co.",
-   "reason": "quote not in page text",
-   "quote": "7.08 US qt.(6.7 l)"
-  },
-  {
-   "page": 495,
    "key": "transmission_fluid_capacity_l",
    "row": "Dual clutch transmission fluid | Gamma 1.6 T-GDI | 2.01~2.11 US qt.(1.9~2.0 l) | HK DCTF 70W (SK) SPIRAX S6 GHME 70W DCTF (H.K.SHELL) GS DCTF HD 70W (GS CALTEX) (API GL-4, SAE 70W)",
-   "reason": "quote not in page text",
-   "quote": "2.11 US qt.(1.9~2.0 l)"
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
-   "page": 496,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | Gamma 1.6 T-GDI | 7.5 US qt.(7.1 l) | Mixture of antifreeze and water (Phosphate-based Ethylene glycol coolant for alu- minum radiator)",
-   "reason": "quote not in page text",
-   "quote": "7.5 US qt.(7.1 l)"
+   "page": 495,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid 2.01~2.11 US qt. (1.9~2.0 l) (H.K.SHELL) defects",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   },
   {
    "page": 496,
@@ -308,10 +350,29 @@
   },
   {
    "page": 496,
-   "key": "fuel_tank_l",
-   "row": "Fuel | 13.2 US gal.(50 l) | Refer to \"Fuel requirements\" in the Foreword chapter.",
+   "key": "coolant_description",
+   "row": "Coolant | (Phosphate-based Ethylene glycol coolant for alu-",
    "reason": "quote not in page text",
-   "quote": "13.2 US gal.(50 l)"
+   "quote": "Phosphate-based Ethylene glycol coolant for alu-"
+  },
+  {
+   "page": 496,
+   "key": "coolant_capacity_l",
+   "row": "Nu 2.0 MPI | 6.8 US qt. (6.5 l) | minum radiator)",
+   "reason": "quote not in page text",
+   "quote": "6.8 US qt. (6.5 l)"
+  },
+  {
+   "page": 496,
+   "key": "coolant_capacity_l",
+   "row": "SAE J1704 DOT-4 LV, 0.74~0.85 US qt.",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 496,
+   "key": "coolant_capacity_l",
+   "row": "Brake fluid FMVSS 116 DOT-4, (0.7 ~ 0.8 l)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

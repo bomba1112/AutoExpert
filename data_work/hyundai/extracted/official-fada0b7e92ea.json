@@ -20,7 +20,7 @@
   "publisher": "hyundai (manufacturer domain ownersmanual.hyundai.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 559,
  "edition_market": "US",
  "edition_markers": {
@@ -69,19 +69,6 @@
    "source_layout": "ruled_table"
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 1.7,
-   "unit": "L",
-   "page": 42,
-   "quote": "1.8 US qt. (1.6~1.7 ℓ)",
-   "row": "Dual clutch transmission fluid | 1.7~1.8 US qt. (1.6~1.7 ℓ) | API GL-4, SAE 70W, HK D DCTF TGO-10 PLUS (SK), SPIRAX S6 GHDE 70W DCTF PLUS (H.K.SHELL)",
-   "label": "transmission fluid capacity l",
-   "engine_text": null,
-   "source_layout": "ruled_table",
-   "original": "1.8 US qt. (1.6~1.7 ℓ)",
-   "approx_in_source": false
-  },
-  {
    "key": "coolant_capacity_l",
    "value": 5.9,
    "unit": "L",
@@ -96,7 +83,7 @@
   },
   {
    "key": "brake_fluid",
-   "value": "DOT-4",
+   "value": "DOT 4",
    "unit": null,
    "page": 42,
    "quote": "DOT-4",
@@ -129,6 +116,12 @@
  "review": [
   {
    "page": 42,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Dual clutch transmission fluid | 1.7~1.8 US qt. (1.6~1.7 ℓ) | API GL-4, SAE 70W, HK D DCTF TGO-10 PLUS (SK), SPIRAX S6 GHDE 70W DCTF PLUS (H.K.SHELL)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 42,
    "key": "coolant_description",
    "row": "Engine coolant | 6.23 US qt. (5.9 ℓ) | Mixture of antifreeze and water (Phosphate-based Ethylene glycol coolant for aluminum radiator)",
    "reason": "quote not in page text",
@@ -138,6 +131,24 @@
    "page": 42,
    "key": "fuel_tank_l",
    "row": "Fuel | 11. 09 US gal (42 ℓ) | Refer to \"Fuel requirements\" in the Foreword chapter.",
+   "reason": "gallon and litre figures disagree (09 US gal vs 42 ℓ)"
+  },
+  {
+   "page": 42,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "1.7~1.8 US qt. TGO-10 PLUS (SK), SPIRAX",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 42,
+   "key": "transmission_fluid_capacity_l",
+   "row": "(1.6~1.7 ℓ) S6 GHDE 70W DCTF PLUS",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 42,
+   "key": "fuel_tank_l",
+   "row": "Fuel 11. 09 US gal (42 ℓ)",
    "reason": "gallon and litre figures disagree (09 US gal vs 42 ℓ)"
   }
  ],

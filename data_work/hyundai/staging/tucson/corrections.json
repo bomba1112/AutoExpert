@@ -1,0 +1,50 @@
+{
+ "made_at": "2026-10-02T15:54:43+00:00",
+ "reason": "rows written by this pipeline replaced after a parser correction (scripts/extract_manual_facts.py)",
+ "value_changes": [
+  {
+   "what": "technical_evidence 6dfb1f50a77e brake_fluid",
+   "existing": "DOT-4",
+   "new": "DOT 4",
+   "resolution": "existing kept"
+  }
+ ],
+ "removed": [
+  {
+   "id": "a4c84f50-ad85-4cee-817a-9f0f9426cd4a",
+   "fact_key": "brake_fluid",
+   "value": "DOT-4",
+   "years": [
+    2022,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "ac4a563d-2076-43d3-94ed-e911c8b099d6",
+   "fact_key": "brake_fluid",
+   "value": "DOT 4",
+   "years": [
+    2025,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "e4caa061-5b5e-46e3-8491-d454ae577143",
+   "fact_key": "fuel_tank_l",
+   "value": 54,
+   "years": [
+    2022,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ]
+}

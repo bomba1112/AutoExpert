@@ -81,6 +81,29 @@ def build(make: str) -> int:
     return 1 if errors else 0
 
 
+def stale_without_replacement(make: str, mode: str) -> list[dict]:
+    """Rows this load deleted as stale whose field and value are not in the new staging for the
+    same years: to be reviewed (a correction or a loss) before the live load."""
+    out = []
+    name = "load_report.json" if mode == "live" else "load_report_rehearsal.json"
+    for line in lines_for(make):
+        base = ROOT / f"data_work/{make}/staging/{line.slug}"
+        report, staging = base / name, base / "staging.json"
+        if not report.exists() or not staging.exists():
+            continue
+        stale = json.loads(report.read_text(encoding="utf-8")).get("stale", [])
+        facts = [f for f in json.loads(staging.read_text(encoding="utf-8"))["facts"] if f["display_level"] != "HIDDEN_CONFLICT"]
+        for s in stale:
+            y0, y1 = s["years"]
+            overlap = [f for f in facts if f["key"] == s["fact_key"] and f["years"][0] <= y1 and y0 <= f["years"][1]]
+            same = [f for f in overlap if str(f["value"]).replace(".0", "") == str(s["value"]).replace(".0", "")]
+            if not same:
+                out.append({"line": line.key, "key": s["fact_key"], "value": s["value"], "years": s["years"],
+                            "now": sorted({json.dumps(f["value"], ensure_ascii=False)[:50] for f in overlap})[:5],
+                            "action": s.get("action")})
+    return out
+
+
 def parse_summary(text: str) -> dict:
     """The loader prints its summary as an indented JSON object last; find its opening line."""
     lines = text.splitlines()
@@ -102,11 +125,34 @@ def backup_live() -> None:
     print("backup", BACKUP)
 
 
-def load(make: str, mode: str) -> int:
+def save_corrections(make: str) -> int:
+    """Before a full replacement: keep, per line, the old -> new pairs that a normal reload
+    reported as conflicts ("existing kept"): rows of this pipeline corrected by a better parse."""
+    total = 0
+    for line in lines_for(make):
+        base = ROOT / f"data_work/{make}/staging/{line.slug}"
+        report = base / "load_report_rehearsal.json"
+        if not report.exists():
+            continue
+        data = json.loads(report.read_text(encoding="utf-8"))
+        rows = data.get("conflicts", [])
+        stale = data.get("stale", [])
+        (base / "corrections.json").write_text(json.dumps(
+            {"made_at": datetime.now(UTC).isoformat(timespec="seconds"),
+             "reason": "rows written by this pipeline replaced after a parser correction (scripts/extract_manual_facts.py)",
+             "value_changes": rows, "removed": stale}, ensure_ascii=False, indent=1), encoding="utf-8")
+        total += len(rows) + len(stale)
+    print(make, "corrections saved:", total)
+    return total
+
+
+def load(make: str, mode: str, replace_all: bool = False) -> int:
     db = LIVE if mode == "live" else REHEARSAL
     if mode == "live":
         backup_live()
     replace = changed_generations(make)
+    if replace_all:
+        replace = {line.slug for line in lines_for(make)}
     summary = {"make": make, "mode": mode, "db": str(db), "started_at": datetime.now(UTC).isoformat(timespec="seconds"),
                "replace_own": sorted(replace), "lines": {}}
     logs = Path(r"C:\AutoExpertData\logs")
@@ -124,6 +170,10 @@ def load(make: str, mode: str) -> int:
         if code:
             summary["stopped_at"] = line.key
             break
+    summary["stale_without_same_value"] = stale_without_replacement(make, mode)
+    print("stale rows without the same value still present:", len(summary["stale_without_same_value"]))
+    for item in summary["stale_without_same_value"][:60]:
+        print("   ", item)
     with sqlite3.connect(db) as con:
         summary["quick_check"] = con.execute("pragma quick_check").fetchone()[0]
         summary["foreign_key_violations"] = len(con.execute("pragma foreign_key_check").fetchall())
@@ -138,8 +188,11 @@ def main(argv) -> int:
     make, step = argv[0], argv[1]
     if step == "build":
         return build(make)
+    if step == "corrections":
+        save_corrections(make)
+        return 0
     if step in ("rehearse", "live"):
-        return load(make, "live" if step == "live" else "rehearsal")
+        return load(make, "live" if step == "live" else "rehearsal", "--replace-all" in argv)
     raise SystemExit(f"unknown step {step}")
 
 

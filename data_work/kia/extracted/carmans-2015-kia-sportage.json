@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 499,
  "edition_market": "US",
  "edition_markers": {
@@ -74,58 +74,6 @@
    "row": "recommended | 4.8 l (5.1 US qt.) | API Service SM*3, ILSAC GF-4 or above",
    "label": "oil grade",
    "engine_text": null
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.9,
-   "unit": "L",
-   "page": 488,
-   "quote": "1.9 l",
-   "row": "GDI | 1.8~1.9 l",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1.9 l",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 1.9,
-   "unit": "L",
-   "page": 488,
-   "quote": "2.01 US qt.)",
-   "row": "Manual transaxle fluid | API GL-4, SAE 75W/85 | (1.90~2.01 US qt.)",
-   "label": "transmission_fluid_capacity_l",
-   "engine_text": null,
-   "original": "2.01 US qt.)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 2.2,
-   "unit": "L",
-   "page": 488,
-   "quote": "2.2 l",
-   "row": "T-GDI | 2.1~2.2 l",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "2.2 l",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 2.2,
-   "unit": "L",
-   "page": 488,
-   "quote": "2.32 US qt.)",
-   "row": "(2.20~2.32 US qt.)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "2.32 US qt.)",
-   "drive": null,
-   "approx_in_source": false
   },
   {
    "key": "transmission_fluid",
@@ -187,19 +135,6 @@
    "approx_in_source": false
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 6.8,
-   "unit": "L",
-   "page": 488,
-   "quote": "6.8 l",
-   "row": "AT | (Ethylene glycol base coolant for aluminum radiator) | 6.7~6.8 l",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "6.8 l",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -210,21 +145,8 @@
    "engine_text": null
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 6.8,
-   "unit": "L",
-   "page": 488,
-   "quote": "7.19 US qt.)",
-   "row": "T-GDI | (7.08~7.19 US qt.)",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "7.19 US qt.)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
    "key": "brake_fluid",
-   "value": "DOT-3 or DOT-4",
+   "value": "DOT 3 or DOT 4",
    "unit": null,
    "page": 489,
    "quote": "FMVSS116 DOT-3 or DOT-4",
@@ -284,6 +206,42 @@
    "row": "protected by an ethylene-glycol-",
    "reason": "quote not in page text",
    "quote": "ethylene-glycol-"
+  },
+  {
+   "page": 488,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "GDI 1.8~1.9 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 488,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Manual transaxle fluid API GL-4, SAE 75W/85 (1.90~2.01 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 488,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "T-GDI 2.1~2.2 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 488,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "(2.20~2.32 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 488,
+   "key": "coolant_capacity_l",
+   "row": "AT (Ethylene glycol base coolant for aluminum radiator) 6.7~6.8 l",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
+  },
+  {
+   "page": 488,
+   "key": "coolant_capacity_l",
+   "row": "T-GDI (7.08~7.19 US qt.)",
+   "reason": "range in the source (e.g. 6.5 ~ 6.6 l); not a single value"
   }
  ],
  "engine_codes": [],

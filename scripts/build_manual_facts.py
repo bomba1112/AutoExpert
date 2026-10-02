@@ -189,12 +189,39 @@ def combine(values: list[str]) -> str:
     return "; ".join(sorted(unique))
 
 
+_CONFIRMED: dict[str, bool] = {}
+
+
+def edition_confirmed(meta: dict) -> bool:
+    """Does the document's text itself speak of a hybrid / plug-in / electric powertrain?"""
+    if meta.get("doc_type") == "press_specifications":
+        return True  # the manufacturer's own spec sheet for that edition
+    title = f"{meta['key']} {meta.get('title', '')}".lower()
+    claim = (r"plug-in|\bPHEV\b" if re.search(r"plug-in|phev|energi|prime", title)
+             else r"hybrid" if re.search(r"hybrid|\bhev\b", title)
+             else r"\bEV\b|electric vehicle|high[- ]voltage battery")
+    sha = meta.get("sha256") or ""
+    key = f"{sha}|{claim}"
+    if key not in _CONFIRMED:
+        try:
+            with gzip.open(RAW_ROOT / "pagetext" / f"{sha}.json.gz", "rt", encoding="utf-8") as handle:
+                text = " ".join(json.load(handle)["pages"])
+            _CONFIRMED[key] = len(re.findall(claim, text, re.I)) >= 3
+        except (FileNotFoundError, OSError, ValueError):
+            _CONFIRMED[key] = True  # no page text to check: the title is kept
+    return _CONFIRMED[key]
+
+
 def doc_powertrain(meta: dict, staging: dict, year: int) -> str | None:
     """Powertrain a document covers when it is specific (hybrid/PHEV/EV edition, or the gas
     edition of a line that also has hybrids that year)."""
     text = f"{meta['key']} {meta.get('title', '')}".lower()
     if "incl-hybrid" in text or "incl hybrid" in text:
         return None
+    if re.search(r"hybrid|\bhev\b|plug-in|phev|energi|prime|electric|\bev\b|e-tron", text) and not edition_confirmed(meta):
+        # the file name says hybrid/EV but the manual's own text never does (carmans.net
+        # "2015-kia-optima-hybrid.pdf" is the regular Optima manual): treated as the regular edition
+        text = re.sub(r"hybrid|\bhev\b|plug-in|phev|energi|prime|electric|\bev\b|e-tron", " ", text)
     if re.search(r"plug-in|phev|energi|prime", text) and re.search(r"hybrid|hev", text.replace("plug-in hybrid", "")):
         return "HEV/PHEV"
     if re.search(r"plug-in|phev|energi|prime", text):
@@ -300,6 +327,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                         continue
                 elif press and key in VARIANT_KEYS and fact.get("engine_text"):
                     applicability["variant"] = " ".join(fact["engine_text"].split())
+                if fact.get("variant"):
+                    applicability["variant"] = " ".join(fact["variant"].split())
                 if fact.get("drive"):
                     applicability["drive"] = fact["drive"]
                 powertrain = doc_powertrain(meta, staging, year)

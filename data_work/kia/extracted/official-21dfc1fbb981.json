@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-6",
+ "extractor": "manual-geometry-14",
  "pages": 547,
  "edition_market": "US",
  "edition_markers": {
@@ -33,6 +33,19 @@
   "middle_east": 0
  },
  "facts": [
+  {
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 4.1,
+   "unit": "L",
+   "page": 523,
+   "quote": "4.33 US qt. (4.1 l)",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | API SM or above*3, ILSAC GF-4 or above*4, ACEA-A5 or above",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "4.33 US qt.(4.1 l)",
+   "approx_in_source": false
+  },
   {
    "key": "engine_oil_specification",
    "value": "API SM or above",
@@ -67,6 +80,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.0,
+   "unit": "L",
+   "page": 523,
+   "quote": "6.34 US qt. (6.0 l)",
+   "row": "Automatic transaxle fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
+   "label": "transmission fluid capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "6.34 US qt.(6.0 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "transmission_fluid",
    "value": "SP-IV",
    "unit": null,
@@ -89,6 +115,19 @@
    "source_layout": "ruled_table"
   },
   {
+   "key": "coolant_capacity_l",
+   "value": 6.7,
+   "unit": "L",
+   "page": 523,
+   "quote": "7.12 US qt. (6.74 l)",
+   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "7.12 US qt.(6.74 l)",
+   "approx_in_source": false
+  },
+  {
    "key": "coolant_description",
    "value": "Ethylene glycol base coolant for aluminum radiator",
    "unit": null,
@@ -109,6 +148,34 @@
    "label": "brake fluid",
    "engine_text": null,
    "source_layout": "ruled_table"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 65.0,
+   "unit": "L",
+   "page": 523,
+   "quote": "17.17 US gal. (65 l)",
+   "row": "Fuel | Hybrid | 17.17 US gal.(65 l) | Refer to Fuel requirements in chapter 1.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "17.17 US gal.(65 l)",
+   "approx_in_source": false,
+   "variant": "Hybrid"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 55.0,
+   "unit": "L",
+   "page": 523,
+   "quote": "14.52 US gal. (55 l)",
+   "row": "Fuel | Plug-in hybrid | 14.52 US gal.(55 l) | Refer to Fuel requirements in chapter 1.",
+   "label": "fuel tank l",
+   "engine_text": null,
+   "source_layout": "ruled_table",
+   "original": "14.52 US gal.(55 l)",
+   "approx_in_source": false,
+   "variant": "Plug-in hybrid"
   },
   {
    "key": "engine_oil_specification_alternative",
@@ -151,41 +218,7 @@
    "engine_text": null
   }
  ],
- "review": [
-  {
-   "page": 523,
-   "key": "engine_oil_capacity_drain_refill_l",
-   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | API SM or above*3, ILSAC GF-4 or above*4, ACEA-A5 or above",
-   "reason": "quote not in page text",
-   "quote": "4.33 US qt.(4.1 l)"
-  },
-  {
-   "page": 523,
-   "key": "transmission_fluid_capacity_l",
-   "row": "Automatic transaxle fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
-   "reason": "quote not in page text",
-   "quote": "6.34 US qt.(6.0 l)"
-  },
-  {
-   "page": 523,
-   "key": "coolant_capacity_l",
-   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol base coolant for aluminum radiator)",
-   "reason": "quote not in page text",
-   "quote": "7.12 US qt.(6.74 l)"
-  },
-  {
-   "page": 523,
-   "key": "fuel_tank_l",
-   "row": "Fuel | Hybrid | 17.17 US gal.(65 l) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  },
-  {
-   "page": 523,
-   "key": "fuel_tank_l",
-   "row": "Fuel | Plug-in hybrid | 14.52 US gal.(55 l) | Refer to Fuel requirements in chapter 1.",
-   "reason": "sub-divided row (e.g. DCT gear/control oil)"
-  }
- ],
+ "review": [],
  "engine_codes": [],
  "candidate_pages": [
   184,
