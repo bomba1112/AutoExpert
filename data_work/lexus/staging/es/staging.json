@@ -1195,6 +1195,51 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-es-2016-d5d54a": {
+   "key": "carcomplaints-es-2016-d5d54a",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/lexus/ES_300h/2016.html.gz",
+   "url": "https://www.carcomplaints.com/Lexus/ES_300h/2016/",
+   "sha256": "8f574304f1891086404daa680147efb03785267bc48f6d9a367f570e6f57ba0b",
+   "retrieved_at": "2026-10-02T11:28:34+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com lexus/es 2016 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2016
+  },
+  "carcomplaints-es-2015-44b519": {
+   "key": "carcomplaints-es-2015-44b519",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/lexus/ES_350/2015.html.gz",
+   "url": "https://www.carcomplaints.com/Lexus/ES_350/2015/",
+   "sha256": "965ae7fa6c259efba088a11fd41235b7c93bb30a45b0e57aef99bb76fa66c90c",
+   "retrieved_at": "2026-10-02T11:29:15+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com lexus/es 2015 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2015
+  },
+  "carcomplaints-es-2016-c2701e": {
+   "key": "carcomplaints-es-2016-c2701e",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/lexus/ES_350/2016.html.gz",
+   "url": "https://www.carcomplaints.com/Lexus/ES_350/2016/",
+   "sha256": "3c3dd31fbba3b21ed63df833ec4e2e458d5d640065d32f0e61eacdf77514c618",
+   "retrieved_at": "2026-10-02T11:29:19+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com lexus/es 2016 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2016
   }
  },
  "generations": [
@@ -1225,7 +1270,8 @@
    "end_known": true,
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 282 cm (MY2018) -> 287 cm (MY2019)",
-    "vPIC Canadian specifications: overall length 490 -> 498 cm (MY2018 -> MY2019; a change of 6 cm or more)"
+    "vPIC Canadian specifications: overall length 490 -> 498 cm (MY2018 -> MY2019; a change of 6 cm or more)",
+    "consumerreports.org: \"The seventh generation Lexus ES retains its comfortable, quiet demeanor\" (https://www.consumerreports.org/cars/lexus/es/); cars.com: \"The redesigned 2019 ES kicked off the model's seventh generation on an all-new platform.\" (https://www.cars.com/research/lexus-es_350/) [media: generation starts MY2019]"
    ],
    "evidence_tier": "B"
   },
@@ -1241,7 +1287,8 @@
    "end_known": false,
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 287 cm (MY2025) -> 295 cm (MY2026)",
-    "vPIC Canadian specifications: overall length 498 -> 514 cm, overall height 145 -> 156 cm (MY2025 -> MY2026; a change of 6 cm or more)"
+    "vPIC Canadian specifications: overall length 498 -> 514 cm, overall height 145 -> 156 cm (MY2025 -> MY2026; a change of 6 cm or more)",
+    "consumerreports.org: \"2026 Model Redesign Year\" (https://www.consumerreports.org/cars/lexus/es/); cars.com: \"The all-new 2026 ES will be available either as a hybrid or a pure electric vehicle.\" (https://www.cars.com/articles/all-new-2026-lexus-es-offers-stepped-electrification-with-phev-and-ev-powertrains-507829/) [quote read once] [media: generation starts MY2026]"
    ],
    "evidence_tier": "B"
   }
@@ -8572,7 +8619,7 @@
    "inspection": "Ask a dealer whether manufacturer communications 10093985, 10111505, 10152224, 10159726, 10179722 apply to this VIN and were performed.",
    "typical_fix": "per manufacturer communication 10093985, 10111505, 10152224, 10159726, 10179722",
    "severity": "LOW",
-   "probability": "OCCASIONAL",
+   "probability": "COMMON",
    "complaints_in_years": [
     1
    ],
@@ -8589,9 +8636,14 @@
     ],
     "complaint_patterns": [
      "VI|infotainment"
+    ],
+    "carcomplaints": [
+     "VI|infotainment_software_bugs"
     ]
    },
-   "rule": "TSB"
+   "rule": "TSB + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Infotainment Software Bugs\" (owner reports): MY2016: #2, average cost to fix N/A, average mileage 0 mi"
   },
   {
    "id": "es-VI-tsb-overheating",
@@ -8696,6 +8748,102 @@
     ]
    },
    "rule": "TSB"
+  },
+  {
+   "id": "es-VI-cc-unintended_acceleration",
+   "generation": "VI",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "UNKNOWN",
+   "title": "Owners report (CarComplaints.com): Unintended Acceleration",
+   "symptoms": [
+    "Unintended Acceleration"
+   ],
+   "cause": "CarComplaints.com \"Unintended Acceleration\" (owner reports): MY2015: #1, average cost to fix $14,000, average mileage 25,000 mi; MY2016: #1, average cost to fix N/A, average mileage 0 mi",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported problem during inspection.",
+   "typical_fix": "",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [],
+    "carcomplaints": [
+     "VI|unintended_acceleration"
+    ]
+   },
+   "rule": "CarComplaints only, recurring (owner reports; SECONDARY)",
+   "note": "по отзывам владельцев (CarComplaints.com)"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "VI|infotainment_software_bugs",
+   "generation": "VI",
+   "problem": "Infotainment Software Bugs",
+   "category": "",
+   "symptoms": [
+    "infotainment"
+   ],
+   "by_year": {
+    "2016": {
+     "rank": 2,
+     "avg_cost": "N/A",
+     "avg_mileage": "0 mi",
+     "quote": "#2: Infotainment Software Bugs Average Cost to Fix: N/A Average Mileage: 0 mi",
+     "url": "https://www.carcomplaints.com/Lexus/ES_300h/2016/",
+     "problem_url": null
+    }
+   },
+   "site_model": "ES 300h",
+   "years": [
+    2016,
+    2016
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-es-2016-d5d54a"
+   ]
+  },
+  {
+   "key": "VI|unintended_acceleration",
+   "generation": "VI",
+   "problem": "Unintended Acceleration",
+   "category": "",
+   "symptoms": [],
+   "by_year": {
+    "2015": {
+     "rank": 1,
+     "avg_cost": "$14,000",
+     "avg_mileage": "25,000 mi",
+     "quote": "#1: Unintended Acceleration Average Cost to Fix: $14,000 Average Mileage: 25,000 mi",
+     "url": "https://www.carcomplaints.com/Lexus/ES_350/2015/",
+     "problem_url": null
+    },
+    "2016": {
+     "rank": 1,
+     "avg_cost": "N/A",
+     "avg_mileage": "0 mi",
+     "quote": "#1: Unintended Acceleration Average Cost to Fix: N/A Average Mileage: 0 mi",
+     "url": "https://www.carcomplaints.com/Lexus/ES_350/2016/",
+     "problem_url": null
+    }
+   },
+   "site_model": "ES 350",
+   "years": [
+    2015,
+    2016
+   ],
+   "recurring": true,
+   "sources": [
+    "carcomplaints-es-2015-44b519",
+    "carcomplaints-es-2016-c2701e"
+   ]
   }
  ],
  "tsbs": [
@@ -10760,6 +10908,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -10926,6 +11075,231 @@
    "scope": "lexus-es-us-2026-2.5l-4cyl-hev-a-av-s6-fwd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es VI",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2019-2025",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/es US2026+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -10938,13 +11312,15 @@
   "facts": 61,
   "recalls": 6,
   "symptom_patterns": 29,
-  "issues": 27,
+  "issues": 28,
   "issues_by_probability": {
    "RARE": 6,
    "OCCASIONAL": 20,
-   "COMMON": 1
+   "COMMON": 2
   },
+  "cc_problems": 2,
   "tsbs": 128,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 61

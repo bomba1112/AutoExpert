@@ -104,7 +104,7 @@ class Blocked(RuntimeError):
 class Fetcher:
     """One host, one request at a time, polite pauses, bounded retries."""
 
-    def __init__(self, pause=(2.0, 5.0), timeout=90, max_blocks=3, headers=None):
+    def __init__(self, pause=(2.0, 5.0), timeout=90, max_blocks=3, headers=None, attempts=4):
         self.client = httpx.Client(
             headers={"User-Agent": UA, **(headers or {})},
             timeout=timeout,
@@ -112,13 +112,14 @@ class Fetcher:
             verify=ssl.create_default_context(),  # system roots, as backend providers do
         )
         self.pause = pause
+        self.attempts = attempts
         self.max_blocks = max_blocks
         self.blocks = 0
         self.requests = 0
 
     def get(self, url: str, params=None, headers=None) -> httpx.Response | None:
         extra = 0.0
-        for attempt in range(4):
+        for attempt in range(self.attempts):
             time.sleep(random.uniform(*self.pause) + extra)
             self.requests += 1
             try:

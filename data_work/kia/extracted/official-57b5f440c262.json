@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 560,
  "edition_market": "US",
  "edition_markers": {
@@ -34,17 +34,26 @@
  },
  "facts": [
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 4.0,
-   "unit": "L",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-20",
+   "unit": null,
    "page": 535,
-   "quote": "4.2 US qt. (4.0 l)",
-   "row": "Recommends | 4.2 US qt. (4.0 l)",
-   "label": "engine_oil_capacity_drain_refill_l",
+   "quote": "SAE 5W20",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
+   "label": "engine oil viscosity",
    "engine_text": null,
-   "original": "4.2 US qt. (4.0 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "ACEA A5",
+   "unit": null,
+   "page": 535,
+   "quote": "ACEA A5",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
+   "label": "engine oil specification",
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "engine_oil_specification_alternative",
@@ -87,43 +96,59 @@
    "engine_text": null
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 6.6,
-   "unit": "L",
-   "page": 536,
-   "quote": "7.0 US qt. (6.6 l)",
-   "row": "IVT | 7.0 US qt. (6.6 l)",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "7.0 US qt. (6.6 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "fuel_tank_l",
-   "value": 53.0,
-   "unit": "L",
-   "page": 536,
-   "quote": "14 US gal. (53 l)",
-   "row": "Fuel | 14 US gal. (53 l)",
-   "label": "fuel_tank_l",
-   "engine_text": null,
-   "original": "14 US gal. (53 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate based coolant for",
+   "key": "brake_fluid",
+   "value": "DOT-3 or DOT-4",
    "unit": null,
    "page": 536,
-   "quote": "Ethylene-glycol with phosphate based coolant for",
-   "row": "(Ethylene-glycol with phosphate based coolant for",
-   "label": "coolant description",
-   "engine_text": null
+   "quote": "FMVSS116 DOT-3 or DOT-4",
+   "row": "Brake fluid | 0.7 ~ 0.8 US qt. (0.7 ~ 0.8 l) | FMVSS116 DOT-3 or DOT-4",
+   "label": "brake fluid",
+   "engine_text": null,
+   "source_layout": "ruled_table"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 535,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest) *4 ACEA A5 (or ABOVE) / 5W 20 *4",
+   "reason": "quote not in page text",
+   "quote": "4.2 US qt.(4.0 l)"
+  },
+  {
+   "page": 536,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 536,
+   "key": "coolant_description",
+   "row": "Coolant | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  },
+  {
+   "page": 536,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 536,
+   "key": "coolant_description",
+   "row": "Coolant | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  },
+  {
+   "page": 536,
+   "key": "fuel_tank_l",
+   "row": "Fuel | 14 US gal.(53 l) | Unleaded gasoline",
+   "reason": "quote not in page text",
+   "quote": "14 US gal.(53 l)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   447,

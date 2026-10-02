@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import sqlite3
@@ -400,6 +401,7 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
             st.notes.append(f"MY{year}: no vPIC body family spans MY{prev} and MY{year}; compared across all rows")
         if not changed_wb and len({r["wheelbase_cm"] for r in ca if r["year"] == year}) > 1:
             st.notes.append(f"MY{year}: several wheelbases in vPIC Canadian rows (mixed body/generation year)")
+    apply_media_evidence(st, years, boundaries)
     # Two boundaries one model year apart: the second is the Canadian data dropping the old
     # rows a year after the new body was listed (BMW 5 Series 2024/2025); keep the first.
     for year in sorted(boundaries):
@@ -487,6 +489,160 @@ def detect_generations(st: Staging, epa: list[dict], ca: list[dict], dbgens: lis
 
 
 DIMENSION_STEP_CM = 6  # facelifts in the data change length/height by up to 5 cm
+
+# Preferred order when two sites give different years for one start: Consumer Reports pages
+# were checked against the raw HTML; cars.com quotes through a second, decoy-tested read.
+MEDIA_SITES = ["consumerreports.org", "cars.com", "caranddriver.com", "edmunds.com", "motortrend.com", "kbb.com"]
+MEDIA_CHECKED = {"raw_html_exact", "webfetch_reverified"}  # quotes read only once are not used
+REDESIGN = re.compile(r"redesign|all-new|all new|new generation|next[- ]generation|\b\w+-generation\b|generation\b|debut", re.I)
+NOT_NEW = re.compile(r"renam|nomenclature|formerly|freshen|refresh|facelift|name change|changed the \w+ name", re.I)
+_MEDIA: dict | None = None
+
+
+def media_evidence(line: Line) -> dict:
+    """Generation starts and refreshes that automotive media state for the line, each with a
+    verbatim quote and URL (data_work/_shared/generation_evidence.json).
+    - A quote counts when it was checked against the page (raw HTML match, or a second
+      decoy-tested read); a quote read only once may only confirm another site.
+    - A start is strong when a checked quote for that year speaks of a redesign / new
+      generation, or both sites list it; one site whose own entry is marked disputed is weak.
+    - A start whose texts call it a rename or refresh (and no checked quote says redesign)
+      is rejected; such years, and weak ones, never veto a boundary the data show.
+    Starts one year apart are one start: the year more sites give, else the preferred site's."""
+    global _MEDIA
+    if _MEDIA is None:
+        path = WORK / "_shared" / "generation_evidence.json"
+        _MEDIA = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"lines": {}}
+    entry = _MEDIA.get("lines", {}).get(line.key) or {}
+
+    def site_rank(item):
+        site = (item.get("site") or "").removeprefix("www.")
+        return MEDIA_SITES.index(site) if site in MEDIA_SITES else len(MEDIA_SITES)
+
+    def checked(item):
+        return item.get("quote_check", "raw_html_exact") in MEDIA_CHECKED
+
+    raw = [g for g in entry.get("generations", [])
+           if isinstance(g.get("first_us_model_year"), int) and g.get("quote") and g.get("url")]
+    refreshes = defaultdict(list)
+    for item in entry.get("refreshes", []):
+        if isinstance(item.get("model_year"), int) and item.get("quote") and item.get("url") and checked(item):
+            refreshes[item["model_year"]].append(item)
+    clusters = []
+    for item in sorted(raw, key=lambda g: g["first_us_model_year"]):
+        if clusters and item["first_us_model_year"] - clusters[-1][-1]["first_us_model_year"] <= 1:
+            clusters[-1].append(item)
+        else:
+            clusters.append([item])
+    starts, weak, disagreements, rejected = {}, {}, [], []
+    for cluster in clusters:
+        cluster = [i for i in cluster if checked(i)] + [i for i in cluster if not checked(i)]
+        by_year = defaultdict(list)
+        for item in cluster:
+            by_year[item["first_us_model_year"]].append(item)
+        candidates = [y for y in by_year if any(checked(i) for i in by_year[y])]
+        if not candidates:
+            continue  # only quotes read once: not evidence on their own
+        year = max(candidates, key=lambda y: (len(by_year[y]), -min(site_rank(i) for i in by_year[y]), y))
+        items = sorted(by_year[year], key=lambda i: (not checked(i), site_rank(i)))
+        if len(by_year) > 1:
+            disagreements.append((year, sorted(by_year)))
+        checked_quotes = " ".join(i["quote"] for i in items if checked(i))
+        texts = " ".join(f"{i['quote']} {i.get('listing_quote') or ''} {i.get('note') or ''}" for i in items)
+        texts += " " + " ".join(r["quote"] for r in refreshes.get(year, []))
+        sites = {i.get("site") for i in items}
+        explicit = re.search(r"redesign|all-new|all new|new generation|next[- ]generation|third generation|fourth generation|fifth generation", checked_quotes, re.I)
+        if NOT_NEW.search(texts) and not explicit:
+            rejected.append((year, items))
+        elif len(sites) >= 2 or (REDESIGN.search(checked_quotes) and not all(i.get("agreement") == "disputed" for i in items)):
+            starts[year] = items
+        else:
+            weak[year] = items
+    ends = {}
+    for item in raw:
+        last = item.get("last_us_model_year")
+        if isinstance(last, int) and checked(item) and (starts or weak):
+            pool = {**weak, **starts}
+            first = min(pool, key=lambda y: abs(y - item["first_us_model_year"]))
+            ends[first] = max(ends.get(first, last), last)
+    return {"starts": starts, "weak": weak, "ends": ends, "refreshes": dict(refreshes),
+            "disagreements": disagreements, "rejected": rejected}
+
+
+def media_reason(items: list[dict], what: str) -> str:
+    return "; ".join(
+        f'{i.get("site")}: "{i["quote"]}" ({i["url"]})'
+        + ("" if i.get("quote_check", "raw_html_exact") in MEDIA_CHECKED else " [quote read once]")
+        for i in items[:2]
+    ) + f" [{what}]"
+
+
+def apply_media_evidence(st: Staging, years: list[int], boundaries: dict[int, list[str]]) -> None:
+    """Media-stated generation starts become boundaries (or move an adjacent detected one to
+    the stated US model year); a detected boundary that falls inside a generation the media
+    bound on both sides, or in a year they call a refresh, is dropped. Boundaries backed by
+    existing DB generation codes are never moved or dropped by media evidence."""
+    media = media_evidence(st.line)
+    if not media["starts"] and not media["refreshes"] and not media["weak"]:
+        return
+    for year, sites in media["disagreements"]:
+        st.notes.append(f"media give different first model years {sites} for one generation; MY{year} used")
+    for year, items in media["rejected"]:
+        st.notes.append(f"MY{year}: media list a new block, but their own text calls it a rename/refresh; not a generation start ({media_reason(items, 'media: not a start')})")
+    for year, items in sorted(media["weak"].items()):
+        # a weak start (one site, listing or badge only) only confirms a boundary the data shows
+        near = [y for y in (year, year - 1, year + 1) if y in boundaries]
+        if near:
+            media["starts"][year] = items
+        else:
+            st.notes.append(f"MY{year}: one site lists a new generation without redesign wording and the data show no boundary; not used ({media_reason(items, 'media: weak')})")
+
+    def db_backed(year):
+        return any("existing DB generation codes" in r for r in boundaries.get(year, []))
+
+    for start, items in sorted(media["starts"].items()):
+        reason = media_reason(items, f"media: generation starts MY{start}")
+        if start <= years[0]:
+            continue
+        # the first EPA model year from the stated start on (the line can skip a year)
+        year = next((y for y in years if y >= start), None)
+        if year is None:
+            continue
+        if year in boundaries:
+            boundaries[year].append(reason)
+            continue
+        near = [y for y in (year - 1, year + 1) if y in boundaries]
+        movable = [y for y in near if not db_backed(y)]
+        if near and not movable:
+            st.notes.append(f"MY{year}: media state a generation start, but the DB generation codes place it at MY{near[0]}; DB kept ({reason})")
+            continue
+        if movable:
+            src = movable[0]
+            boundaries[year] = boundaries.pop(src) + [reason]
+            st.notes.append(f"boundary moved from MY{src} to the media-stated MY{year}")
+        else:
+            boundaries[year] = [reason]
+    starts = sorted(media["starts"])
+    contested = {y for y, _ in media["rejected"]} | (set(media["weak"]) - set(media["starts"]))
+    for year in sorted(boundaries):
+        if db_backed(year) or any("[media:" in r for r in boundaries[year]):
+            continue
+        if year in contested:
+            st.notes.append(f"MY{year}: media disagree whether a generation starts here; the data boundary is kept")
+            continue
+        inside = [
+            s for s in starts
+            if s < year and (any(n > year for n in starts) or media["ends"].get(s, 0) >= year)
+        ]
+        refresh = media["refreshes"].get(year)
+        if refresh or inside:
+            why = (
+                media_reason(refresh, f"media: refresh MY{year}") if refresh
+                else media_reason(media["starts"][inside[-1]], f"media: generation started MY{inside[-1]}")
+                + (f", next starts MY{min(n for n in starts if n > year)}" if any(n > year for n in starts) else "")
+            )
+            st.notes.append(f"MY{year}: detected boundary ({'; '.join(boundaries[year])}) dropped; {why}")
+            del boundaries[year]
 
 
 def mcum_generation_starts(line: Line) -> dict[int, str]:
@@ -944,6 +1100,185 @@ def build_issues(st: Staging, recalls, symptom_patterns, tsb_rows, gens):
     return issues, list(used_tsbs.values())
 
 
+# ---- vPIC (Canadian, SECONDARY) against official values (prompt section 5.2) --------------------
+VPIC_TOLERANCE = {"length_mm": 10, "width_mm": 10, "height_mm": 10, "wheelbase_mm": 10,
+                  "track_front_mm": 10, "track_rear_mm": 10, "curb_weight_kg": 0.03}
+
+
+def cross_check_vpic(st: Staging, facts: list[dict]) -> None:
+    """A vPIC dimension that falls inside the range of the official (tier A) values for the same
+    generation and model year (plus rounding tolerance) is recorded as corroborated; one outside
+    it is a conflict: the official value is the main one, the Canadian value stays a note."""
+    official = defaultdict(list)
+    for f in facts:
+        if f["key"] in VPIC_TOLERANCE and f["display_level"] == "FACT" and not str(f["primary_source"]).startswith("vpic-"):
+            for year in range(f["years"][0], f["years"][1] + 1):
+                official[(f["key"], f["generation"], year)].append(f)
+    for f in facts:
+        if f["key"] not in VPIC_TOLERANCE or not str(f["primary_source"]).startswith("vpic-"):
+            continue
+        for year in range(f["years"][0], f["years"][1] + 1):
+            others = official.get((f["key"], f["generation"], year))
+            if not others:
+                continue
+            values = [float(o["value"]) for o in others]
+            tol = VPIC_TOLERANCE[f["key"]]
+            tol = tol * max(values) if tol < 1 else tol
+            if min(values) - tol <= float(f["value"]) <= max(values) + tol:
+                f.setdefault("corroborated_by", [])
+                f["corroborated_by"] = sorted(set(f["corroborated_by"]) | {o["id"] for o in others})
+            else:
+                st.conflicts.append({
+                    "scope": f"{st.line.key} {f['generation']} MY{year}", "key": f["key"],
+                    "applicability": f.get("applicability"), "kept_value": sorted(set(values)),
+                    "kept_from": sorted({o["primary_source"] for o in others}),
+                    "other_values": [f["value"]], "other_sources": [f["primary_source"]],
+                    "resolution": "official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2)",
+                })
+
+
+# ---- CarComplaints (owner reports, prompt sections 5 and 7) -----------------------------------
+CC_RECURRING_YEARS = 2  # a CarComplaints-only problem must be in the "worst" list of 2+ model years
+STEP_UP = {"RARE": "OCCASIONAL", "OCCASIONAL": "COMMON", "COMMON": "COMMON"}
+CC_COMPONENT = {
+    "engine": "ENGINE", "transmission": "TRANSMISSION", "brakes": "BRAKES", "steering": "STEERING",
+    "suspension": "SUSPENSION", "electrical": "ELECTRICAL", "fuel_system": "FUEL SYSTEM",
+    "cooling_system": "COOLING", "ac_heater": "HVAC", "body_paint": "BODY", "windows_windshield": "BODY",
+    "interior_accessories": "BODY", "exterior_accessories": "BODY", "lights": "ELECTRICAL",
+    "seat_belts_air_bags": "AIR BAGS", "wheels_hubs": "SUSPENSION", "exhaust_system": "EXHAUST",
+    "drivetrain": "POWERTRAIN", "accessories_interior": "BODY", "accessories_exterior": "BODY",
+}
+_CC: dict[str, dict] = {}
+
+
+def carcomplaints_for_line(line: Line) -> dict:
+    """Parsed CarComplaints model-year pages of the line (scripts/collect_carcomplaints.py)."""
+    if line.make not in _CC:
+        path = WORK / "_shared" / "carcomplaints" / f"{line.make}.json"
+        _CC[line.make] = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    return _CC[line.make].get(line.key) or {}
+
+
+def build_cc_problems(st: Staging, gens: list[dict]) -> dict:
+    """Problems from the "Worst <year> <model> Problems" lists, grouped per generation and
+    problem page (the site's own problem slug), with the site's average repair cost and
+    mileage per model year."""
+    data = carcomplaints_for_line(st.line)
+    if data.get("status") != "ok":
+        if data:
+            st.notes.append(f"CarComplaints: {data.get('status')}")
+        return {}
+    problems = {}
+    for site_model, by_year in data["models"].items():
+        for year_text, page in by_year.items():
+            year = int(year_text)
+            gen = generation_for(year, gens)
+            if gen is None:
+                continue
+            for item in page["worst"]:
+                slug = (item.get("problem_url") or "").rstrip("/").rsplit("/", 1)[-1].removesuffix(".shtml")
+                slug = slug or re.sub(r"[^a-z0-9]+", "_", item["problem"].lower()).strip("_")
+                key = f"{gen}|{slug}"
+                entry = problems.setdefault(key, {
+                    "key": key, "generation": gen, "problem": item["problem"], "category": item.get("category", "").replace("-", "_"),
+                    "symptoms": symptom_keys(item["problem"]), "by_year": {}, "site_model": site_model,
+                })
+                entry["by_year"][str(year)] = {
+                    "rank": item["rank"], "avg_cost": item["avg_cost"], "avg_mileage": item["avg_mileage"],
+                    "quote": item["quote"], "url": page["url"], "problem_url": item.get("problem_url"),
+                }
+    for entry in problems.values():
+        years = sorted(int(y) for y in entry["by_year"])
+        entry["years"] = [years[0], years[-1]]
+        entry["recurring"] = len(years) >= CC_RECURRING_YEARS
+    return problems
+
+
+_CC_MANIFEST: dict[str, dict] = {}
+
+
+def cc_source(st: Staging, url: str) -> str | None:
+    if not _CC_MANIFEST:
+        _CC_MANIFEST.update({r["url"]: r for r in read_csv(WORK / "_shared" / "manifest_carcomplaints.csv") if r["status"] == "ok"})
+    row = _CC_MANIFEST.get(url)
+    if row is None:
+        return None
+    return st.add_source(
+        f"carcomplaints-{row['line'].split('/')[-1]}-{row['year']}-{hashlib.sha1(url.encode()).hexdigest()[:6]}",
+        kind="html_gz",
+        path="rawstore:" + row["path"],
+        url=url,
+        sha256=row["sha256"],
+        retrieved_at=row["retrieved_at"],
+        tier="C",
+        source_type="OWNER_COMPLAINTS_SITE",
+        registry="carcomplaints",
+        title=f"CarComplaints.com {row['line']} {row['year']} problems page",
+        publisher="CarComplaints.com (owner reports)",
+        authenticity="OWNER_REPORTS",
+        model_year=int(row["year"]),
+    )
+
+
+def cc_summary(entry: dict) -> str:
+    parts = [f"MY{y}: #{v['rank']}, average cost to fix {v['avg_cost']}, average mileage {v['avg_mileage']}"
+             for y, v in sorted(entry["by_year"].items())]
+    return f"CarComplaints.com \"{entry['problem']}\" (owner reports): " + "; ".join(parts)
+
+
+def apply_carcomplaints(st: Staging, issues: list[dict], problems: dict) -> list[dict]:
+    """Section 7: a CarComplaints problem on the same component/symptom and years as an issue
+    raises its probability one step and adds the site's cost and mileage (marked as owner
+    reports); a recurring problem found only there becomes an owner-report issue, severity at
+    most MEDIUM. A one-year CarComplaints-only entry is not written."""
+    used = set()
+    for issue in issues:
+        symptom_keys_of_issue = {k for k, (label, _, _, _) in SYMPTOMS.items() if label in issue["symptoms"]}
+        matched = [
+            e for e in problems.values()
+            if e["generation"] == issue["generation"] and set(e["symptoms"]) & symptom_keys_of_issue
+            and e["years"][0] <= issue["years"][1] and issue["years"][0] <= e["years"][1]
+        ]
+        if not matched:
+            continue
+        issue["probability_before_carcomplaints"] = issue["probability"]
+        issue["probability"] = STEP_UP[issue["probability"]]
+        issue["evidence"]["carcomplaints"] = sorted(e["key"] for e in matched)
+        issue["rule"] += " + CarComplaints (probability +1)"
+        issue["note"] = " | ".join(cc_summary(e) for e in matched)
+        used.update(e["key"] for e in matched)
+    for key, entry in sorted(problems.items()):
+        if key in used or not entry["recurring"]:
+            continue
+        label = SYMPTOMS[entry["symptoms"][0]][0] if entry["symptoms"] else entry["problem"]
+        severity = SYMPTOMS[entry["symptoms"][0]][3] if entry["symptoms"] else "MEDIUM"
+        component = SYMPTOMS[entry["symptoms"][0]][2] if entry["symptoms"] else CC_COMPONENT.get(entry["category"], entry["category"].upper() or "UNKNOWN")
+        issues.append({
+            "id": f"{st.line.slug}-{entry['generation']}-cc-{key.split('|', 1)[1][:60]}",
+            "generation": entry["generation"],
+            "years": entry["years"],
+            "scope_level": "GENERATION",
+            "component": component,
+            "title": f"Owners report (CarComplaints.com): {entry['problem']}",
+            "symptoms": [label],
+            "cause": cc_summary(entry),
+            "consequences": "",
+            "inspection": "Ask for service records and test for the reported problem during inspection.",
+            "typical_fix": "",
+            "severity": "MEDIUM" if severity == "HIGH" else severity,
+            "probability": "OCCASIONAL",
+            "complaints_in_years": [],
+            "evidence": {"recalls": [], "tsbs": [], "complaint_patterns": [], "carcomplaints": [key]},
+            "rule": "CarComplaints only, recurring (owner reports; SECONDARY)",
+            "note": "по отзывам владельцев (CarComplaints.com)",
+        })
+        used.add(key)
+    for key in sorted(used):
+        entry = problems[key]
+        entry["sources"] = sorted({s for v in entry["by_year"].values() if (s := cc_source(st, v["url"]))})
+    return [problems[k] for k in sorted(used)]
+
+
 # ---- build ------------------------------------------------------------------------------------
 def build_line(db, line: Line) -> dict:
     st = Staging(line)
@@ -977,6 +1312,7 @@ def build_line(db, line: Line) -> dict:
             authenticity="OFFICIAL_PUBLISHER",
         )
     issues, tsbs = build_issues(st, recalls, symptom_patterns, tsb_rows, gens) if gens else ([], [])
+    cc_problems = apply_carcomplaints(st, issues, build_cc_problems(st, gens)) if gens else []
     manual = WORK / line.make / "staging" / line.slug / "manual_facts.json"
     if manual.exists():
         extra = json.loads(manual.read_text(encoding="utf-8"))
@@ -985,6 +1321,15 @@ def build_line(db, line: Line) -> dict:
             st.sources.setdefault(key, item)
         st.gaps += extra.get("gaps", [])
         st.conflicts += extra.get("conflicts", [])
+    cross_check_vpic(st, facts)
+    maintenance = []
+    path = WORK / line.make / "staging" / line.slug / "maintenance.json"
+    if path.exists():
+        extra = json.loads(path.read_text(encoding="utf-8"))
+        maintenance = [i for i in extra.get("items", []) if i["generation"] in {g["code"] for g in gens}]
+        for key, item in extra.get("sources", {}).items():
+            st.sources.setdefault(key, item)
+        st.gaps += extra.get("gaps", [])
     validate(st, gens, facts, issues)
     return {
         "make": MAKES[line.make]["epa"],
@@ -1001,7 +1346,9 @@ def build_line(db, line: Line) -> dict:
         "complaint_patterns": patterns,
         "symptom_patterns": symptom_patterns,
         "issues": issues,
+        "cc_problems": cc_problems,
         "tsbs": tsbs,
+        "maintenance": maintenance,
         "conflicts": st.conflicts,
         "gaps": st.gaps,
         "notes": st.notes,
@@ -1014,7 +1361,9 @@ def build_line(db, line: Line) -> dict:
             "symptom_patterns": len(symptom_patterns),
             "issues": len(issues),
             "issues_by_probability": dict(Counter(i["probability"] for i in issues)),
+            "cc_problems": len(cc_problems),
             "tsbs": len(tsbs),
+            "maintenance": len(maintenance),
             "errors": len(st.errors),
             "display_levels": dict(Counter(f["display_level"] for f in facts)),
         },

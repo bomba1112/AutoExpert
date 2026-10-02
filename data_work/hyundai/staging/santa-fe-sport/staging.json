@@ -264,6 +264,81 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-santa-fe-sport-2016-027b4d": {
+   "key": "carcomplaints-santa-fe-sport-2016-027b4d",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Santa_Fe_Sport/2016.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2016/",
+   "sha256": "14f7e3101e691921150328e812db86cafe2abf8c5ec5bb03f4b79c0f04ac4397",
+   "retrieved_at": "2026-10-02T11:07:30+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/santa-fe-sport 2016 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2016
+  },
+  "carcomplaints-santa-fe-sport-2015-70293b": {
+   "key": "carcomplaints-santa-fe-sport-2015-70293b",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Santa_Fe_Sport/2015.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2015/",
+   "sha256": "fcda8d0a3e8721fcf7d8ffdd170238c975d44c4c76fe8f51dfdb9ae89372be03",
+   "retrieved_at": "2026-10-02T11:07:25+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/santa-fe-sport 2015 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2015
+  },
+  "carcomplaints-santa-fe-sport-2014-56d4d2": {
+   "key": "carcomplaints-santa-fe-sport-2014-56d4d2",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Santa_Fe_Sport/2014.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2014/",
+   "sha256": "f0b286393c237b3e0801ef2884e4df90e5769bd3c06c748203983e9ad5963c2a",
+   "retrieved_at": "2026-10-02T11:07:20+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/santa-fe-sport 2014 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2014
+  },
+  "carcomplaints-santa-fe-sport-2017-87c221": {
+   "key": "carcomplaints-santa-fe-sport-2017-87c221",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Santa_Fe_Sport/2017.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/",
+   "sha256": "c983731f3da75110df8d120faa3dd8c02fb23a0cb02fa41284616ec66671c39c",
+   "retrieved_at": "2026-10-02T11:07:36+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/santa-fe-sport 2017 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2017
+  },
+  "carcomplaints-santa-fe-sport-2018-8f4638": {
+   "key": "carcomplaints-santa-fe-sport-2018-8f4638",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Santa_Fe_Sport/2018.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2018/",
+   "sha256": "20fef5e954587dd43928efee547049a1b61c9d9ec7639436aff491bf7c326a2d",
+   "retrieved_at": "2026-10-02T11:07:41+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/santa-fe-sport 2018 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2018
   }
  },
  "generations": [
@@ -4836,9 +4911,16 @@
     ],
     "complaint_patterns": [
      "AN|engine-failure"
+    ],
+    "carcomplaints": [
+     "AN|engine_failed",
+     "AN|engine_failure",
+     "AN|engine_seized"
     ]
    },
-   "rule": "TSB + complaint pattern"
+   "rule": "TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Engine Seized\" (owner reports): MY2014: #1, average cost to fix $3,700, average mileage 97,000 mi | CarComplaints.com \"Engine Failure\" (owner reports): MY2015: #1, average cost to fix $3,500, average mileage 95,000 mi | CarComplaints.com \"Engine Failed\" (owner reports): MY2016: #2, average cost to fix N/A, average mileage 53,000 mi"
   },
   {
    "id": "santa-fe-sport-AN-tsb-fuel-pump-stall",
@@ -4869,9 +4951,14 @@
     ],
     "complaint_patterns": [
      "AN|fuel-pump-stall"
+    ],
+    "carcomplaints": [
+     "AN|stalled_while_driving"
     ]
    },
-   "rule": "TSB + complaint pattern"
+   "rule": "TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Stalled While Driving\" (owner reports): MY2015: #3, average cost to fix N/A, average mileage 61,000 mi"
   },
   {
    "id": "santa-fe-sport-AN-tsb-harsh-shifting",
@@ -4981,9 +5068,14 @@
     ],
     "complaint_patterns": [
      "AN|loss-of-power"
+    ],
+    "carcomplaints": [
+     "AN|loss_of_power_while_accelerating"
     ]
    },
-   "rule": "TSB + complaint pattern"
+   "rule": "TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Loss Of Power While Accelerating\" (owner reports): MY2017: #3, average cost to fix N/A, average mileage 75,000 mi"
   },
   {
    "id": "santa-fe-sport-AN-tsb-misfire",
@@ -5104,7 +5196,7 @@
    "inspection": "Ask a dealer whether manufacturer communications 10163279, 10170511, 10170899 apply to this VIN and were performed.",
    "typical_fix": "per manufacturer communication 10163279, 10170511, 10170899",
    "severity": "HIGH",
-   "probability": "OCCASIONAL",
+   "probability": "COMMON",
    "complaints_in_years": [
     6
    ],
@@ -5117,9 +5209,14 @@
     ],
     "complaint_patterns": [
      "AN|transmission-failure"
+    ],
+    "carcomplaints": [
+     "AN|transmission_slips_when_accelerating"
     ]
    },
-   "rule": "TSB"
+   "rule": "TSB + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Transmission Slips When Accelerating\" (owner reports): MY2017: #2, average cost to fix N/A, average mileage 1,000 mi"
   },
   {
    "id": "santa-fe-sport-AN-complaints-brake-failure",
@@ -5232,7 +5329,7 @@
    "inspection": "Ask for service records and test for the reported symptom during inspection.",
    "typical_fix": "",
    "severity": "HIGH",
-   "probability": "OCCASIONAL",
+   "probability": "COMMON",
    "complaints_in_years": [
     181
    ],
@@ -5241,9 +5338,241 @@
     "tsbs": [],
     "complaint_patterns": [
      "AN|oil-consumption"
+    ],
+    "carcomplaints": [
+     "AN|excessive_oil_consumption",
+     "AN|oil_consumption"
     ]
    },
-   "rule": "complaint pattern only (owner reports)"
+   "rule": "complaint pattern only (owner reports) + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Excessive Oil Consumption\" (owner reports): MY2017: #1, average cost to fix $300, average mileage 78,000 mi | CarComplaints.com \"Oil Consumption\" (owner reports): MY2018: #2, average cost to fix $5,100, average mileage 55,000 mi"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "AN|engine_failed",
+   "generation": "AN",
+   "problem": "Engine Failed",
+   "category": "engine",
+   "symptoms": [
+    "engine-failure"
+   ],
+   "by_year": {
+    "2016": {
+     "rank": 2,
+     "avg_cost": "N/A",
+     "avg_mileage": "53,000 mi",
+     "quote": "#2: Engine Failed Average Cost to Fix: N/A Average Mileage: 53,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2016/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2016/engine/engine_failed.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2016,
+    2016
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2016-027b4d"
+   ]
+  },
+  {
+   "key": "AN|engine_failure",
+   "generation": "AN",
+   "problem": "Engine Failure",
+   "category": "engine",
+   "symptoms": [
+    "engine-failure"
+   ],
+   "by_year": {
+    "2015": {
+     "rank": 1,
+     "avg_cost": "$3,500",
+     "avg_mileage": "95,000 mi",
+     "quote": "#1: Engine Failure Average Cost to Fix: $3,500 Average Mileage: 95,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2015/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2015/engine/engine_failure.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2015,
+    2015
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2015-70293b"
+   ]
+  },
+  {
+   "key": "AN|engine_seized",
+   "generation": "AN",
+   "problem": "Engine Seized",
+   "category": "engine",
+   "symptoms": [
+    "engine-failure"
+   ],
+   "by_year": {
+    "2014": {
+     "rank": 1,
+     "avg_cost": "$3,700",
+     "avg_mileage": "97,000 mi",
+     "quote": "#1: Engine Seized Average Cost to Fix: $3,700 Average Mileage: 97,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2014/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2014/engine/engine_seized.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2014,
+    2014
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2014-56d4d2"
+   ]
+  },
+  {
+   "key": "AN|excessive_oil_consumption",
+   "generation": "AN",
+   "problem": "Excessive Oil Consumption",
+   "category": "engine",
+   "symptoms": [
+    "oil-consumption"
+   ],
+   "by_year": {
+    "2017": {
+     "rank": 1,
+     "avg_cost": "$300",
+     "avg_mileage": "78,000 mi",
+     "quote": "#1: Excessive Oil Consumption Average Cost to Fix: $300 Average Mileage: 78,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/engine/excessive_oil_consumption.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2017,
+    2017
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2017-87c221"
+   ]
+  },
+  {
+   "key": "AN|loss_of_power_while_accelerating",
+   "generation": "AN",
+   "problem": "Loss Of Power While Accelerating",
+   "category": "engine",
+   "symptoms": [
+    "loss-of-power"
+   ],
+   "by_year": {
+    "2017": {
+     "rank": 3,
+     "avg_cost": "N/A",
+     "avg_mileage": "75,000 mi",
+     "quote": "#3: Loss Of Power While Accelerating Average Cost to Fix: N/A Average Mileage: 75,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/engine/loss_of_power_while_accelerating.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2017,
+    2017
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2017-87c221"
+   ]
+  },
+  {
+   "key": "AN|oil_consumption",
+   "generation": "AN",
+   "problem": "Oil Consumption",
+   "category": "engine",
+   "symptoms": [
+    "oil-consumption"
+   ],
+   "by_year": {
+    "2018": {
+     "rank": 2,
+     "avg_cost": "$5,100",
+     "avg_mileage": "55,000 mi",
+     "quote": "#2: Oil Consumption Average Cost to Fix: $5,100 Average Mileage: 55,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2018/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2018/engine/oil_consumption.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2018,
+    2018
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2018-8f4638"
+   ]
+  },
+  {
+   "key": "AN|stalled_while_driving",
+   "generation": "AN",
+   "problem": "Stalled While Driving",
+   "category": "engine",
+   "symptoms": [
+    "fuel-pump-stall"
+   ],
+   "by_year": {
+    "2015": {
+     "rank": 3,
+     "avg_cost": "N/A",
+     "avg_mileage": "61,000 mi",
+     "quote": "#3: Stalled While Driving Average Cost to Fix: N/A Average Mileage: 61,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2015/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2015/engine/stalled_while_driving.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2015,
+    2015
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2015-70293b"
+   ]
+  },
+  {
+   "key": "AN|transmission_slips_when_accelerating",
+   "generation": "AN",
+   "problem": "Transmission Slips When Accelerating",
+   "category": "transmission",
+   "symptoms": [
+    "transmission-failure"
+   ],
+   "by_year": {
+    "2017": {
+     "rank": 2,
+     "avg_cost": "N/A",
+     "avg_mileage": "1,000 mi",
+     "quote": "#2: Transmission Slips When Accelerating Average Cost to Fix: N/A Average Mileage: 1,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Santa_Fe_Sport/2017/transmission/transmission_slips_when_accelerating.shtml"
+    }
+   },
+   "site_model": "Santa Fe Sport",
+   "years": [
+    2017,
+    2017
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-santa-fe-sport-2017-87c221"
+   ]
   }
  ],
  "tsbs": [
@@ -6052,6 +6381,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -6153,10 +6483,87 @@
    "scope": "hyundai-santa-fe-sport-us-2018-2.4l-4cyl-ice-a-s6-fwd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/santa-fe-sport AN",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
   "MY2016: no vPIC body family spans MY2015 and MY2016; compared across all rows",
+  "media give different first model years [2013, 2014] for one generation; MY2013 used",
+  "MY2013: one site lists a new generation without redesign wording and the data show no boundary; not used (consumerreports.org: \"2013 Model Redesign Year\" (https://www.consumerreports.org/cars/hyundai/santa-fe-sport/) [media: weak])",
   "generation AN: existing DB variants also cover MY[2013] outside the detected block"
  ],
  "errors": [],
@@ -6169,10 +6576,12 @@
   "issues": 26,
   "issues_by_probability": {
    "RARE": 10,
-   "COMMON": 5,
-   "OCCASIONAL": 11
+   "COMMON": 7,
+   "OCCASIONAL": 9
   },
+  "cc_problems": 8,
   "tsbs": 39,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 41

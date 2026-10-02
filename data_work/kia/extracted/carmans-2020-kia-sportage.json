@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 624,
  "edition_market": "US",
  "edition_markers": {
@@ -38,12 +38,23 @@
    "unit": "L",
    "page": 603,
    "quote": "5.07 US qt.",
-   "row": "(drain and refill) | Theta II 2.4L GDI | 5.07 US qt. (4.8L) | SAE 5W-20 / API Latest(ILSAC Latest)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": "2.4L GDI",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.4L GDI | 5.07 US qt.(4.8L) | SAE 5W-20 / API Latest(ILSAC Latest)",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Theta II 2.4L GDI",
+   "source_layout": "ruled_table",
    "original": "5.07 US qt.",
-   "drive": null,
    "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-20",
+   "unit": null,
+   "page": 603,
+   "quote": "SAE 5W-20",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.4L GDI | 5.07 US qt.(4.8L) | SAE 5W-20 / API Latest(ILSAC Latest)",
+   "label": "engine oil viscosity",
+   "engine_text": "Theta II 2.4L GDI",
+   "source_layout": "ruled_table"
   },
   {
    "key": "engine_oil_capacity_drain_refill_l",
@@ -51,11 +62,68 @@
    "unit": "L",
    "page": 603,
    "quote": "5.07 US qt.",
-   "row": "Theta II 2.0L T-GDI | 5.07 US qt. (4.8L)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": "2.0L T-GDI",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.0L T-GDI | 5.07 US qt.(4.8L) | SAE 5W-30 ACEA A5 or SAE 0W-30 ACEA C2 / API Latest (ILSAC Latetst)",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table",
    "original": "5.07 US qt.",
-   "drive": null,
+   "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "unit": null,
+   "page": 603,
+   "quote": "SAE 5W-30",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.0L T-GDI | 5.07 US qt.(4.8L) | SAE 5W-30 ACEA A5 or SAE 0W-30 ACEA C2 / API Latest (ILSAC Latetst)",
+   "label": "engine oil viscosity",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_viscosity",
+   "value": "SAE 0W-30",
+   "unit": null,
+   "page": 603,
+   "quote": "SAE 0W-30",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.0L T-GDI | 5.07 US qt.(4.8L) | SAE 5W-30 ACEA A5 or SAE 0W-30 ACEA C2 / API Latest (ILSAC Latetst)",
+   "label": "engine oil viscosity",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "ACEA A5",
+   "unit": null,
+   "page": 603,
+   "quote": "ACEA A5",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.0L T-GDI | 5.07 US qt.(4.8L) | SAE 5W-30 ACEA A5 or SAE 0W-30 ACEA C2 / API Latest (ILSAC Latetst)",
+   "label": "engine oil specification",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "ACEA C2",
+   "unit": null,
+   "page": 603,
+   "quote": "ACEA C2",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | Theta II 2.0L T-GDI | 5.07 US qt.(4.8L) | SAE 5W-30 ACEA A5 or SAE 0W-30 ACEA C2 / API Latest (ILSAC Latetst)",
+   "label": "engine oil specification",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 6.6,
+   "unit": "L",
+   "page": 603,
+   "quote": "7.01 US qt.",
+   "row": "Automatic transmission fluid | Theta II 2.4L GDI | 7.01 US qt.(6.7L) | - ATF SP-IV • The list of transmission fluid approved by KIA:SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV",
+   "label": "transmission fluid capacity l",
+   "engine_text": "Theta II 2.4L GDI",
+   "source_layout": "ruled_table",
+   "original": "7.01 US qt.",
    "approx_in_source": false
   },
   {
@@ -64,22 +132,21 @@
    "unit": null,
    "page": 603,
    "quote": "SP-IV",
-   "row": "- ATF SP-IV",
+   "row": "Automatic transmission fluid | Theta II 2.4L GDI | 7.01 US qt.(6.7L) | - ATF SP-IV • The list of transmission fluid approved by KIA:SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV",
    "label": "transmission fluid",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 6.6,
-   "unit": "L",
+   "key": "transmission_fluid",
+   "value": "SK ATF SP-IV",
+   "unit": null,
    "page": 603,
-   "quote": "7.01 US qt.",
-   "row": "Theta II 2.4L GDI | 7.01 US qt. (6.7L) | • The list of transmission fluid approved by KIA: SK ATF",
-   "label": "transmission_fluid_capacity_l",
-   "engine_text": "2.4L GDI",
-   "original": "7.01 US qt.",
-   "drive": null,
-   "approx_in_source": false
+   "quote": "SK ATF SP-IV",
+   "row": "Automatic transmission fluid | Theta II 2.4L GDI | 7.01 US qt.(6.7L) | - ATF SP-IV • The list of transmission fluid approved by KIA:SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV",
+   "label": "transmission fluid",
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "transmission_fluid_capacity_l",
@@ -87,11 +154,11 @@
    "unit": "L",
    "page": 603,
    "quote": "8.24 US qt.",
-   "row": "Theta II 2.0L T-GDI | 8.24 US qt. (7.8L) | (cid:129) The list of transmission fluid approved by KIA: SK ATF",
-   "label": "transmission_fluid_capacity_l",
-   "engine_text": "2.0L T-GDI",
+   "row": "Automatic transmission fluid | Theta II 2.0L T-GDI | 8.24 US qt.(7.8L) | - ATF SP-IV (cid:129) The list of transmission fluid approved by KIA:SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV",
+   "label": "transmission fluid capacity l",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table",
    "original": "8.24 US qt.",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -100,22 +167,12 @@
    "unit": "L",
    "page": 603,
    "quote": "8.24 US qt.",
-   "row": "Theta II 2.4L GDI | 8.24 US qt. (7.8L) | Mixture of antifreeze and water",
-   "label": "coolant_capacity_l",
-   "engine_text": "2.4L GDI",
+   "row": "Coolant | Theta II 2.4L GDI | 8.24 US qt.(7.8L) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Theta II 2.4L GDI",
+   "source_layout": "ruled_table",
    "original": "8.24 US qt.",
-   "drive": null,
    "approx_in_source": false
-  },
-  {
-   "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate based coolant for cooling",
-   "unit": null,
-   "page": 603,
-   "quote": "Ethylene-glycol with phosphate based coolant for cooling",
-   "row": "Coolant | (Ethylene-glycol with phosphate based coolant for cooling",
-   "label": "coolant description",
-   "engine_text": null
   },
   {
    "key": "coolant_capacity_l",
@@ -123,11 +180,11 @@
    "unit": "L",
    "page": 603,
    "quote": "7.61 US qt.",
-   "row": "Theta II 2.0L T-GDI | 7.61 US qt. (7.2L) | device)",
-   "label": "coolant_capacity_l",
-   "engine_text": "2.0L T-GDI",
+   "row": "Coolant | Theta II 2.0L T-GDI | 7.61 US qt.(7.2L) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "label": "coolant capacity l",
+   "engine_text": "Theta II 2.0L T-GDI",
+   "source_layout": "ruled_table",
    "original": "7.61 US qt.",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -136,9 +193,10 @@
    "unit": null,
    "page": 603,
    "quote": "DOT 3 or DOT 4",
-   "row": "Brake fluid | DOT 3 or DOT 4 | 0.401 ± 0.021 US qt.",
+   "row": "Brake fluid | 0.401 ± 0.021 US qt. (385 ± 20 cc) | DOT 3 or DOT 4",
    "label": "brake fluid",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "fuel_tank_l",
@@ -146,15 +204,30 @@
    "unit": "L",
    "page": 604,
    "quote": "65.53 US qt.",
-   "row": "Fuel | 65.53 US qt. (62L) Unleaded gasoline",
-   "label": "fuel_tank_l",
+   "row": "Fuel | 65.53 US qt.(62L) | Unleaded gasoline",
+   "label": "fuel tank l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "65.53 US qt.",
-   "drive": null,
    "approx_in_source": false
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 603,
+   "key": "coolant_description",
+   "row": "Coolant | Theta II 2.4L GDI | 8.24 US qt.(7.8L) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  },
+  {
+   "page": 603,
+   "key": "coolant_description",
+   "row": "Coolant | Theta II 2.0L T-GDI | 7.61 US qt.(7.2L) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   516,

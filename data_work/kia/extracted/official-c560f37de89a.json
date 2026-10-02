@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 640,
  "edition_market": "US",
  "edition_markers": {
@@ -69,12 +69,34 @@
    "unit": "L",
    "page": 615,
    "quote": "5.07 US qt.(4.8 L)",
-   "row": "GDi HEV/PHEV | SN PLUS/ SP or ILSAC GF-6 | 5.07 US qt.(4.8 L)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
+   "row": "Engine oil (drain and refill) Recommends*1 | Smart stream G1.6 T- GDi HEV/PHEV | 5.07 US qt.(4.8 L) | Full synthetic SAE 0W-20, API SN PLUS/ SP or ILSAC GF-6",
+   "label": "engine oil capacity drain refill l",
+   "engine_text": "Smart stream G1.6 T- GDi HEV/PHEV",
+   "source_layout": "ruled_table",
    "original": "5.07 US qt.(4.8 L)",
-   "drive": null,
    "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_viscosity",
+   "value": "SAE 0W-20",
+   "unit": null,
+   "page": 615,
+   "quote": "SAE 0W-20",
+   "row": "Engine oil (drain and refill) Recommends*1 | Smart stream G1.6 T- GDi HEV/PHEV | 5.07 US qt.(4.8 L) | Full synthetic SAE 0W-20, API SN PLUS/ SP or ILSAC GF-6",
+   "label": "engine oil viscosity",
+   "engine_text": "Smart stream G1.6 T- GDi HEV/PHEV",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "API SN PLUS/SP",
+   "unit": null,
+   "page": 615,
+   "quote": "API SN PLUS/ SP",
+   "row": "Engine oil (drain and refill) Recommends*1 | Smart stream G1.6 T- GDi HEV/PHEV | 5.07 US qt.(4.8 L) | Full synthetic SAE 0W-20, API SN PLUS/ SP or ILSAC GF-6",
+   "label": "engine oil specification",
+   "engine_text": "Smart stream G1.6 T- GDi HEV/PHEV",
+   "source_layout": "ruled_table"
   },
   {
    "key": "engine_oil_specification",
@@ -82,9 +104,10 @@
    "unit": null,
    "page": 615,
    "quote": "ILSAC GF-6",
-   "row": "GDi HEV/PHEV | SN PLUS/ SP or ILSAC GF-6 | 5.07 US qt.(4.8 L)",
-   "label": "oil grade",
-   "engine_text": null
+   "row": "Engine oil (drain and refill) Recommends*1 | Smart stream G1.6 T- GDi HEV/PHEV | 5.07 US qt.(4.8 L) | Full synthetic SAE 0W-20, API SN PLUS/ SP or ILSAC GF-6",
+   "label": "engine oil specification",
+   "engine_text": "Smart stream G1.6 T- GDi HEV/PHEV",
+   "source_layout": "ruled_table"
   },
   {
    "key": "transmission_fluid_capacity_l",
@@ -92,11 +115,11 @@
    "unit": "L",
    "page": 615,
    "quote": "6.34 US qt.(6 L)",
-   "row": "Automatic transmission (AT) fluid*2 | 6.34 US qt.(6 L) | SP4M-1, S-OIL ATF SP4M-1, Kia",
-   "label": "transmission_fluid_capacity_l",
+   "row": "Automatic transmission (AT) fluid*2 | 6.34 US qt.(6 L) | SK ATF SP4M-1, MICHANG ATF SP4M-1, S-OIL ATF SP4M-1, Kia Genuine ATF SP4M-1",
+   "label": "transmission fluid capacity l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "6.34 US qt.(6 L)",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -105,35 +128,23 @@
    "unit": "L",
    "page": 615,
    "quote": "8.35 US qt.(7.9 L)",
-   "row": "Coolant (Engine)*3 | 8.35 US qt.(7.9 L)",
-   "label": "coolant_capacity_l",
+   "row": "Coolant (Engine)*3 | 8.35 US qt.(7.9 L) | An Phosphate based ethylene glycol based coolant",
+   "label": "coolant capacity l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "8.35 US qt.(7.9 L)",
-   "drive": null,
    "approx_in_source": false
   },
   {
    "key": "coolant_description",
-   "value": "Phosphate based ethylene",
+   "value": "Phosphate based ethylene glycol based coolant",
    "unit": null,
    "page": 615,
-   "quote": "Phosphate based ethylene",
-   "row": "An Phosphate based ethylene",
+   "quote": "Phosphate based ethylene glycol based coolant",
+   "row": "Coolant (Engine)*3 | 8.35 US qt.(7.9 L) | An Phosphate based ethylene glycol based coolant",
    "label": "coolant description",
-   "engine_text": null
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 6.8,
-   "unit": "L",
-   "page": 615,
-   "quote": "7.19 US qt.(6.8 L)",
-   "row": "PHEV | 7.19 US qt.(6.8 L)",
-   "label": "coolant_capacity_l",
    "engine_text": null,
-   "original": "7.19 US qt.(6.8 L)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "brake_fluid",
@@ -141,25 +152,38 @@
    "unit": null,
    "page": 615,
    "quote": "DOT 4",
-   "row": "Brake fluid | DOT 4 | 0.48 ± 0.02 US qt. (452.8 ±",
+   "row": "Brake fluid | As required (Reservoir tank volume: 0.48 ± 0.02 US qt. (452.8 ± 20.0 cc)) | DOT 4",
    "label": "brake fluid",
-   "engine_text": null
-  },
-  {
-   "key": "fuel_tank_l",
-   "value": 47.0,
-   "unit": "L",
-   "page": 615,
-   "quote": "12.4 US gal (47 L)",
-   "row": "PHEV | 12.4 US gal (47 L)",
-   "label": "fuel_tank_l",
    "engine_text": null,
-   "original": "12.4 US gal (47 L)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 615,
+   "key": "coolant_capacity_l",
+   "row": "Coolant (Inverter)*3 | HEV | 2.01 US qt.(1.9 L) | An Phosphate based ethylene glycol based coolant",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 615,
+   "key": "coolant_capacity_l",
+   "row": "Coolant (Inverter)*3 | PHEV | 7.19 US qt.(6.8 L) | Contact an authorized Kia dealer",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 615,
+   "key": "fuel_tank_l",
+   "row": "Fuel | HEV | 17.7 US gal (67 L) | Gasoline",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 615,
+   "key": "fuel_tank_l",
+   "row": "Fuel | PHEV | 12.4 US gal (47 L) | Gasoline",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   231,

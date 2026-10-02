@@ -1,0 +1,42 @@
+........................................................................ [ 13%]
+........................................................................ [ 26%]
+........................................................................ [ 39%]
+........................................................................ [ 53%]
+........................................................................ [ 66%]
+........................................................................ [ 79%]
+...........................F............................................ [ 93%]
+.....................................                                    [100%]
+================================== FAILURES ===================================
+_______________ test_generation_years_cover_scope_without_gaps ________________
+
+    def test_generation_years_cover_scope_without_gaps():
+        for staging in _staging():
+            covered = set()
+            for gen in staging["generations"]:
+                covered.update(range(gen["start_year"], gen["end_year"] + 1))
+            model_years = {cfg["year"] for cfg in staging["configurations"]}
+            if staging.get("build"):
+                # Batch lines: every EPA model year of the line, contiguously, inside 2014-2026.
+                if model_years:
+>                   assert set(range(min(model_years), max(model_years) + 1)) <= covered, staging["line"]
+E                   AssertionError: M3
+E                   assert {2015, 2016, ...19, 2020, ...} <= {2015, 2016, ...21, 2022, ...}
+E                     
+E                     Extra items in the left set:
+E                     2019
+E                     2020
+
+backend\tests\test_us_tech_database.py:89: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\jalil\OneDrive\Desktop\AUTO_EXPERT\STAGE6_1\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv\Lib\site-packages\starlette\testclient.py:53
+  C:\Users\jalil\OneDrive\Desktop\AUTO_EXPERT\STAGE6_1\.venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED backend/tests/test_us_tech_database.py::test_generation_years_cover_scope_without_gaps
+1 failed, 540 passed, 2 warnings in 180.42s (0:03:00)

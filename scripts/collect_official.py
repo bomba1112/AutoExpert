@@ -109,10 +109,10 @@ def file_name(url: str, body: bytes) -> str:
     return stem if stem.lower().endswith(ext) else stem + ext
 
 
-def download_host(host: str, items: list[dict]) -> int:
+def download_host(host: str, items: list[dict], attempts: int = 4, skip_errors: bool = False) -> int:
     # one manifest per host: the hosts run as parallel processes
     manifest = Manifest(WORK / "_shared" / "manifest_official" / f"{host}.csv", FIELDS)
-    fetcher = Fetcher(pause=(2.0, 5.0), timeout=300)
+    fetcher = Fetcher(pause=(2.0, 5.0), timeout=300, attempts=attempts)
     done = failed = skipped = 0
     for item in sorted(items, key=lambda i: (i["make"], i["url"])):
         meta = {"make": item["make"], "lines": ";".join(sorted(x for x in item["lines"] if x)),
@@ -120,6 +120,9 @@ def download_host(host: str, items: list[dict]) -> int:
                 "doc_type": item["doc_type"], "title": item["title"][:200], "url": item["url"]}
         if manifest.ok(item["url"]):
             continue
+        previous = manifest.rows.get(item["url"])
+        if skip_errors and previous and previous.get("status") == "error":
+            continue  # failed in an earlier run (e.g. www.mbusa.com gateway 502 after 60 s)
         if host in CLOSED:
             manifest.add({**meta, "retrieved_at": now(), "status": "skipped", "note": CLOSED[host]})
             skipped += 1
@@ -158,13 +161,15 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--host")
+    parser.add_argument("--attempts", type=int, default=4, help="requests per file on timeouts/5xx")
+    parser.add_argument("--skip-errors", action="store_true", help="do not retry files that failed before")
     args = parser.parse_args(argv)
     hosts = plan()
     if args.list or not args.host:
         for host, items in sorted(hosts.items(), key=lambda kv: -len(kv[1])):
             print(f"{host}\t{len(items)}\t{'CLOSED: ' + CLOSED[host] if host in CLOSED else ''}")
         return 0
-    return download_host(args.host, hosts.get(args.host, []))
+    return download_host(args.host, hosts.get(args.host, []), args.attempts, args.skip_errors)
 
 
 if __name__ == "__main__":

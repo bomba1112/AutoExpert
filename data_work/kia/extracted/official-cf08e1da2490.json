@@ -20,7 +20,7 @@
   "publisher": "kia (manufacturer domain ownersmanual.kia.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 597,
  "edition_market": "US",
  "edition_markers": {
@@ -47,17 +47,15 @@
    "approx_in_source": false
   },
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 4.1,
-   "unit": "L",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-20",
+   "unit": null,
    "page": 576,
-   "quote": "4.33 US qt. (4.1 l)",
-   "row": "4.33 US qt. (4.1 l) | SAE 5W-20 / API Latest (ILSAC Latest)",
-   "label": "engine_oil_capacity_drain_refill_l",
+   "quote": "SAE 5W-20",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | SAE 5W-20 / API Latest (ILSAC Latest)",
+   "label": "engine oil viscosity",
    "engine_text": null,
-   "original": "4.33 US qt. (4.1 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "transmission_fluid",
@@ -65,22 +63,10 @@
    "unit": null,
    "page": 576,
    "quote": "SP-IV",
-   "row": "- ATF SP-IV",
+   "row": "Automatic transmission fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
    "label": "transmission fluid",
-   "engine_text": null
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 6.0,
-   "unit": "L",
-   "page": 576,
-   "quote": "6.34 US qt. (6.0 l)",
-   "row": "Automatic transmission fluid | 6.34 US qt. (6.0 l) | (Recommended SK ATF SP-IV,",
-   "label": "transmission_fluid_capacity_l",
    "engine_text": null,
-   "original": "6.34 US qt. (6.0 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "transmission_fluid",
@@ -88,55 +74,21 @@
    "unit": null,
    "page": 576,
    "quote": "SK ATF SP-IV",
-   "row": "Automatic transmission fluid | 6.34 US qt. (6.0 l) | (Recommended SK ATF SP-IV,",
+   "row": "Automatic transmission fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
    "label": "transmission fluid",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "coolant_description",
-   "value": "Ethylene glycol by phosphate-based",
+   "value": "Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum par",
    "unit": null,
    "page": 576,
-   "quote": "Ethylene glycol by phosphate-based",
-   "row": "Mixture of antifreeze and water (Ethylene glycol by phosphate-based",
+   "quote": "Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum par",
+   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum parts)",
    "label": "coolant description",
-   "engine_text": null
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 6.7,
-   "unit": "L",
-   "page": 576,
-   "quote": "7.12 US qt. (6.74 l)",
-   "row": "Coolant | 7.12 US qt. (6.74 l)",
-   "label": "coolant_capacity_l",
    "engine_text": null,
-   "original": "7.12 US qt. (6.74 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "coolant_description",
-   "value": "ethylene glycol coolant for aluminum parts)",
-   "unit": null,
-   "page": 576,
-   "quote": "ethylene glycol coolant for aluminum parts)",
-   "row": "ethylene glycol coolant for aluminum parts)",
-   "label": "coolant description",
-   "engine_text": null
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 3.1,
-   "unit": "L",
-   "page": 576,
-   "quote": "3.30 US qt. (3.13 l)",
-   "row": "Inverter coolant | 3.30 US qt. (3.13 l)",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "3.30 US qt. (3.13 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "brake_fluid",
@@ -144,25 +96,47 @@
    "unit": null,
    "page": 576,
    "quote": "DOT 3 or DOT 4",
-   "row": "Brake | DOT 3 or DOT 4 | 0.52 ± 0.02 US qt.",
+   "row": "Brake | 0.52 ± 0.02 US qt. (0.49 ± 0.02 L) | DOT 3 or DOT 4",
    "label": "brake fluid",
-   "engine_text": null
-  },
-  {
-   "key": "fuel_tank_l",
-   "value": 55.0,
-   "unit": "L",
-   "page": 576,
-   "quote": "14.52 US gal. (55 l)",
-   "row": "Plug-in hybrid | 14.52 US gal. (55 l)",
-   "label": "fuel_tank_l",
    "engine_text": null,
-   "original": "14.52 US gal. (55 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 576,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1*2 (drain and refill) Recommends | 4.33 US qt.(4.1 l) | SAE 5W-20 / API Latest (ILSAC Latest)",
+   "reason": "quote not in page text",
+   "quote": "4.33 US qt.(4.1 l)"
+  },
+  {
+   "page": 576,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Automatic transmission fluid | 6.34 US qt.(6.0 l) | - ATF SP-IV (Recommended SK ATF SP-IV, MICHANG ATF SP-IV, NOCA ATF SP-IV)",
+   "reason": "quote not in page text",
+   "quote": "6.34 US qt.(6.0 l)"
+  },
+  {
+   "page": 576,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | 7.12 US qt.(6.74 l) | Mixture of antifreeze and water (Ethylene glycol by phosphate-based ethylene glycol coolant for aluminum parts)",
+   "reason": "quote not in page text",
+   "quote": "7.12 US qt.(6.74 l)"
+  },
+  {
+   "page": 576,
+   "key": "fuel_tank_l",
+   "row": "Fuel | Hybrid | 17.17 US gal.(65 l) | Refer to Fuel requirements in chapter 1.",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 576,
+   "key": "fuel_tank_l",
+   "row": "Fuel | Plug-in hybrid | 14.52 US gal.(55 l) | Refer to Fuel requirements in chapter 1.",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   66,

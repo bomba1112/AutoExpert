@@ -3138,6 +3138,7 @@
    "rule": "complaint pattern only (owner reports)"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10214266",
@@ -3336,6 +3337,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -3392,11 +3394,89 @@
    "scope": "bmw-x5-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5-m US2015+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
   "MY2017: no vPIC body family spans MY2016 and MY2017; compared across all rows",
-  "MY2019-2019: no EPA rows, no dimension change in vPIC; not a generation boundary"
+  "MY2019-2019: no EPA rows, no dimension change in vPIC; not a generation boundary",
+  "MY2015: one site lists a new generation without redesign wording and the data show no boundary; not used (cars.com: \"2015-2018 X5 M\" (https://www.cars.com/research/bmw-x5_m/) [media: weak])",
+  "MY2020: one site lists a new generation without redesign wording and the data show no boundary; not used (cars.com: \"2020-2026 X5 M\" (https://www.cars.com/research/bmw-x5_m/) [media: weak])",
+  "CarComplaints: not_on_site"
  ],
  "errors": [],
  "counts": {
@@ -3409,7 +3489,9 @@
   "issues_by_probability": {
    "OCCASIONAL": 9
   },
+  "cc_problems": 0,
   "tsbs": 14,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 8

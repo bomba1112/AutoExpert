@@ -57,7 +57,8 @@ def test_every_technical_fact_has_evidence():
             assert fact["display_level"] in DISPLAY
         for issue in staging["issues"]:
             assert any(
-                issue["evidence"].get(k) for k in ("recalls", "tsbs", "complaint_patterns")
+                issue["evidence"].get(k)
+                for k in ("recalls", "tsbs", "complaint_patterns", "carcomplaints")
             ), issue["id"]
 
 
@@ -123,8 +124,41 @@ def test_issue_probability_follows_the_rule():
             )
             tsb = bool(issue["evidence"].get("tsbs"))
             expected = "COMMON" if pattern and tsb else "OCCASIONAL" if pattern or tsb else "RARE"
+            cc = issue["evidence"].get("carcomplaints")
+            only_cc = cc and not any(
+                issue["evidence"].get(k) for k in ("recalls", "tsbs", "complaint_patterns")
+            )
+            if only_cc:
+                # owner reports only: SECONDARY, severity at most MEDIUM (prompt section 7)
+                expected = "OCCASIONAL"
+                assert issue["severity"] in {"LOW", "MEDIUM"}, issue["id"]
+            elif cc:
+                # a CarComplaints match raises the probability one step
+                expected = {"RARE": "OCCASIONAL", "OCCASIONAL": "COMMON", "COMMON": "COMMON"}[expected]
             assert issue["probability"] == expected, issue["id"]
             assert issue["severity"] in {"LOW", "MEDIUM", "HIGH"}
+
+
+def test_carcomplaints_evidence_is_quoted_and_recurring():
+    for staging in _staging():
+        problems = {p["key"]: p for p in staging.get("cc_problems", [])}
+        for issue in staging["issues"]:
+            for key in issue["evidence"].get("carcomplaints", []):
+                problem = problems[key]
+                assert problem["sources"] and all(s in staging["sources"] for s in problem["sources"]), key
+                for entry in problem["by_year"].values():
+                    assert entry["quote"].startswith("#") and entry["url"].startswith("https://www.carcomplaints.com/"), key
+            if issue["id"].split("-cc-")[0] != issue["id"]:
+                (key,) = issue["evidence"]["carcomplaints"]
+                assert len(problems[key]["by_year"]) >= batch.CC_RECURRING_YEARS, issue["id"]
+
+
+def test_media_generation_evidence_is_quoted():
+    for staging in _staging():
+        for gen in staging["generations"]:
+            for reason in gen.get("boundary_evidence", []):
+                if "[media:" in reason:
+                    assert '"' in reason and "(https://" in reason, (staging["line"], gen["code"])
 
 
 def _synthetic_staging(tmp_path):
@@ -309,3 +343,30 @@ def test_prune_stale_never_touches_rows_of_other_lines(db_session, tmp_path, mon
     keys = set(db_session.scalars(select(TechnicalEvidence.natural_key)))
     assert {"untagged-camry-row", "tagged-camry-row"} <= keys
     assert "stale-own-row" not in keys
+
+
+def test_maintenance_items_are_structured_and_sourced():
+    systems = {"FIXED_INTERVAL", "OIL_LIFE_MONITOR", "MAINTENANCE_MINDER", "CBS", "SERVICE_A_B"}
+    for staging in _staging():
+        for item in staging.get("maintenance", []):
+            assert item["cites"] and item["primary_source"] in staging["sources"], item["id"]
+            assert item["schedule_system"] in systems, item["id"]
+            assert item["action"] in {"REPLACE", "INSPECT", "ROTATE", "ADJUST", "CLEAN"}, item["id"]
+            assert item["condition"] in {"NORMAL", "SEVERE"}, item["id"]
+            assert item["occurrence"] in {"EVERY", "FIRST", "SUBSEQUENT"}, item["id"]
+            # a fixed schedule needs a distance or a time; a monitor-driven item may have none
+            if item["schedule_system"] == "FIXED_INTERVAL":
+                assert item.get("interval_km") or item.get("interval_months"), item["id"]
+            if item.get("interval_km"):
+                assert 1000 <= item["interval_km"] <= 400000, item["id"]
+
+
+def test_manual_facts_cite_a_us_edition_page():
+    for staging in _staging():
+        for fact in staging["facts"]:
+            for cite in fact["cites"]:
+                item = staging["sources"][cite["source"]]
+                if item.get("kind") == "pdf_pages":
+                    assert item.get("edition") == "US", cite["source"]
+                    assert cite.get("pages"), fact["id"]
+                    assert str(cite["pages"][0]) in json.loads(item["extract"])["pages"], fact["id"]

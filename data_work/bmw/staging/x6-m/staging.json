@@ -353,7 +353,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 293 cm (MY2019) -> 297 cm (MY2020)"
+    "vPIC Canadian specifications: wheelbase 293 cm (MY2019) -> 297 cm (MY2020)",
+    "cars.com: \"2020-2027 X6 M\" (https://www.cars.com/research/bmw-x6_m/) [media: generation starts MY2020]"
    ],
    "evidence_tier": "B"
   }
@@ -2778,6 +2779,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10214266",
@@ -3268,6 +3270,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -3334,10 +3337,163 @@
    "scope": "bmw-x6-m-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2014-2019",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x6-m US2020+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
-  "MY2015: vPIC dimension change without a generation signal (overall length 489 -> 491, overall width 198 -> 199, front track 165 -> 164, rear track 164 -> 170); treated as a facelift"
+  "MY2015: vPIC dimension change without a generation signal (overall length 489 -> 491, overall width 198 -> 199, front track 165 -> 164, rear track 164 -> 170); treated as a facelift",
+  "MY2010: one site lists a new generation without redesign wording and the data show no boundary; not used (cars.com: \"2010-2014\" (https://www.cars.com/research/bmw-x6_m/) [media: weak])",
+  "MY2015: one site lists a new generation without redesign wording and the data show no boundary; not used (cars.com: \"2015-2019 X6 M\" (https://www.cars.com/research/bmw-x6_m/) [media: weak])",
+  "CarComplaints: not_on_site"
  ],
  "errors": [],
  "counts": {
@@ -3350,7 +3506,9 @@
   "issues_by_probability": {
    "OCCASIONAL": 8
   },
+  "cc_problems": 0,
   "tsbs": 34,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 22

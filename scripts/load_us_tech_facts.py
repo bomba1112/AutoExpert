@@ -679,6 +679,37 @@ class Loader:
                 },
             )
 
+    def load_cc_problems(self):
+        """CarComplaints.com "worst problems" entries used by an issue (owner reports, tier C)."""
+        for p in self.s.get("cc_problems", []):
+            if not p.get("sources"):
+                continue
+            years = p["years"]
+            self.add_te(
+                natural_key=nkey("ccproblem", self.s["line"], p["key"]),
+                category="OTHER",
+                title=f"CarComplaints.com: {p['problem']}"[:240],
+                fact_key="carcomplaints_problem",
+                statement=" | ".join(
+                    f"MY{y}: {v['quote']}" for y, v in sorted(p["by_year"].items())
+                ),
+                scope_level="GENERATION",
+                value=p["problem"],
+                generation=p["generation"],
+                years=years,
+                display_level="OWNER_REPORTS",
+                confidence="LOW",
+                source_key=p["sources"][0],
+                locator=next(iter(sorted(p["by_year"].items())))[1]["url"],
+                conditions={
+                    "category": p["category"],
+                    "symptoms": p["symptoms"],
+                    "by_year": p["by_year"],
+                    "recurring": p["recurring"],
+                    "note": "по отзывам владельцев (CarComplaints.com)",
+                },
+            )
+
     def load_issues(self):
         from app.models.enums import (
             ConfidenceLevel,
@@ -701,9 +732,7 @@ class Loader:
             )
         for issue in self.s["issues"]:
             key = nkey("issue", self.s["line"], issue["id"])
-            if self.db.scalar(select(KnownIssue).where(KnownIssue.natural_key == key)):
-                self.counts["issues_existing"] += 1
-                continue
+            existing = self.db.scalar(select(KnownIssue).where(KnownIssue.natural_key == key))
             ev = issue["evidence"]
             evidence_ids = [i for n in ev.get("recalls", []) for i in recall_ids.get(n, [])]
             evidence_ids += [
@@ -716,7 +745,36 @@ class Loader:
                 self.te_by_key[nkey("cmplpattern", self.s["line"], k)]
                 for k in ev.get("complaint_patterns", [])
             ]
+            evidence_ids += [
+                self.te_by_key[nkey("ccproblem", self.s["line"], k)]
+                for k in ev.get("carcomplaints", [])
+                if nkey("ccproblem", self.s["line"], k) in self.te_by_key
+            ]
             manufacturer_backed = bool(ev.get("recalls") or ev.get("tsbs"))
+            if existing is not None:
+                self.counts["issues_existing"] += 1
+                # Same issue id, new evidence (e.g. CarComplaints raised the probability): the row
+                # is updated and every changed field is written to the load report.
+                changes = {}
+                if str(existing.probability) != issue["probability"]:
+                    changes["probability"] = [str(existing.probability), issue["probability"]]
+                if sorted(existing.evidence_ids or []) != sorted(evidence_ids):
+                    changes["evidence_ids"] = [len(existing.evidence_ids or []), len(evidence_ids)]
+                if (existing.conditions or {}).get("evidence") != ev:
+                    changes["evidence"] = [(existing.conditions or {}).get("evidence"), ev]
+                if (existing.conditions or {}).get("note") != issue.get("note"):
+                    changes["note"] = [(existing.conditions or {}).get("note"), issue.get("note")]
+                if changes:
+                    existing.probability = IssueProbability(issue["probability"])
+                    existing.evidence_ids = evidence_ids
+                    existing.source_count = len(evidence_ids)
+                    existing.conditions = {**(existing.conditions or {}), "evidence": ev, "note": issue.get("note")}
+                    self.report.setdefault("issues_updated", []).append(
+                        {"issue": issue["id"], "changes": {k: v for k, v in changes.items() if k != "evidence"},
+                         "resolution": "updated from the current staging (same issue, added evidence)"}
+                    )
+                    self.counts["issues_updated"] += 1
+                continue
             row = KnownIssue(
                 vehicle_variant_id=None,
                 component=issue["component"],
@@ -776,6 +834,16 @@ class Loader:
         from app.models.vehicle_knowledge import vehicle_profile_evidence
         from sqlalchemy import func, select
 
+        from app.models.evidence import MaintenanceScheduleItem
+
+        for row in self.db.scalars(
+            select(MaintenanceScheduleItem).where(
+                MaintenanceScheduleItem.make_id == self.make.id,
+                MaintenanceScheduleItem.notes.like(f"load={LOAD_VERSION}; line={self.s['line']};%"),
+            )
+        ):
+            self.db.delete(row)
+            self.counts["replaced_own_maintenance"] += 1
         own = lambda model: (  # noqa: E731
             model.make_id == self.make.id,
             func.json_extract(model.conditions, "$.load") == LOAD_VERSION,
@@ -799,6 +867,93 @@ class Loader:
         self.db.flush()
         self.counts["replaced_own_te"] = len(te_ids)
         self.counts["replaced_own_issues"] = len(issues)
+
+    def load_maintenance(self, prune: bool):
+        """maintenance_schedule_items, one row per job/action/condition/occurrence and scope.
+        Rows carry 'load=<version>; line=<line>' in notes so that a later run can prune its own
+        rows that the staging no longer has; existing keys are never overwritten."""
+        from app.models.catalog import VehicleGeneration
+        from app.models.enums import (
+            ConfidenceLevel,
+            DataOrigin,
+            DisplayLevel,
+            EvidenceStatus,
+            MaintenanceAction,
+            MaintenanceCondition,
+            MaintenanceOccurrence,
+            MaintenanceSystem,
+        )
+        from app.models.evidence import MaintenanceScheduleItem
+        from sqlalchemy import select
+
+        tag = f"load={LOAD_VERSION}; line={self.s['line']}"
+        keys = set()
+        for item in self.s.get("maintenance", []):
+            scope = ("mnt", self.s["make"], self.s["line"], item["generation"], item["job"], item["action"],
+                     item["condition"], item["occurrence"], item["years"], item.get("applicability") or {},
+                     item.get("engine"))
+            key = nkey(*scope)
+            keys.add(key)
+            existing = self.db.scalar(select(MaintenanceScheduleItem).where(MaintenanceScheduleItem.natural_key == key))
+            if existing:
+                if (existing.interval_km, existing.interval_months) != (item.get("interval_km"), item.get("interval_months")):
+                    self.report["conflicts"].append({
+                        "what": f"maintenance {item['job']} {item['occurrence']} {item['years']}",
+                        "existing": [existing.interval_km, existing.interval_months],
+                        "new": [item.get("interval_km"), item.get("interval_months")],
+                        "resolution": "existing kept",
+                    })
+                self.counts["maintenance_existing"] += 1
+                continue
+            generation_id = self.gen_ids.get(item["generation"])
+            generation = self.db.get(VehicleGeneration, generation_id) if generation_id else None
+            primary = next(c for c in item["cites"] if c["source"] == item["primary_source"])
+            row = MaintenanceScheduleItem(
+                market="US",
+                make_id=self.make.id,
+                model_id=generation.model_id if generation else None,
+                generation_id=generation_id,
+                engine_family_key=item.get("engine"),
+                transmission_key=None,
+                year_from=item["years"][0],
+                year_to=item["years"][1],
+                applicability=item.get("applicability") or {},
+                schedule_system=MaintenanceSystem(item["schedule_system"]),
+                job=item["job"][:40],
+                action=MaintenanceAction(item["action"]),
+                condition=MaintenanceCondition(item["condition"]),
+                occurrence=MaintenanceOccurrence(item["occurrence"]),
+                interval_km=item.get("interval_km"),
+                interval_months=item.get("interval_months"),
+                interval_miles_original=item.get("interval_miles_original"),
+                rule=item.get("rule"),
+                max_interval_km=item.get("max_interval_km"),
+                max_interval_months=item.get("max_interval_months"),
+                source_id=self.source_ids[item["primary_source"]],
+                raw_document_id=self.raw_ids.get(item["primary_source"]),
+                locator=(primary.get("locator") or primary["quote"])[:500],
+                confidence=ConfidenceLevel(item["confidence"]),
+                status=EvidenceStatus.CONFIRMED,
+                display_level=DisplayLevel(item["display_level"]),
+                notes=f"{tag}; quote: {primary['quote'][:400]}" + (f"; note: {item['note']}" if item.get("note") else ""),
+                natural_key=key,
+                is_demo=False,
+                data_origin=DataOrigin.REAL,
+            )
+            self.db.add(row)
+            self.counts["maintenance_new"] += 1
+        self.db.flush()
+        if prune:
+            for row in self.db.scalars(
+                select(MaintenanceScheduleItem).where(
+                    MaintenanceScheduleItem.make_id == self.make.id,
+                    MaintenanceScheduleItem.notes.like(f"{tag};%"),
+                )
+            ):
+                if row.natural_key not in keys:
+                    self.db.delete(row)
+                    self.counts["maintenance_stale_deleted"] += 1
+            self.db.flush()
 
     def reconcile_own_generations(self, previous: dict | None):
         """Correct generation years and rows that THIS pipeline wrote in an earlier load when the
@@ -1019,7 +1174,9 @@ def main(argv=None):
         loader.load_recalls()
         loader.load_tsbs(staging["generations"])
         loader.load_symptom_patterns()
+        loader.load_cc_problems()
         loader.load_issues()
+        loader.load_maintenance(args.prune_stale)
         loader.stale_rows(args.prune_stale)
         if args.prune_stale:
             loader.reconcile_own_generations(previous)  # removes generations emptied by the prune

@@ -534,6 +534,21 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-accent-2016-545ef4": {
+   "key": "carcomplaints-accent-2016-545ef4",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/hyundai/Accent/2016.html.gz",
+   "url": "https://www.carcomplaints.com/Hyundai/Accent/2016/",
+   "sha256": "3a23b860875ea3fc46e7c4bc46dc40cbf2849215dbf8973d178502106bbcfa87",
+   "retrieved_at": "2026-10-02T11:08:03+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com hyundai/accent 2016 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2016
   }
  },
  "generations": [
@@ -563,7 +578,8 @@
    "start_known": true,
    "end_known": true,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 257 cm (MY2017) -> 258 cm (MY2018), with rear track 150 -> 153 cm"
+    "vPIC Canadian specifications: wheelbase 257 cm (MY2017) -> 258 cm (MY2018), with rear track 150 -> 153 cm",
+    "consumerreports.org: \"This generation of Accent comes only as a sedan.\" (https://www.consumerreports.org/cars/hyundai/accent/); cars.com: \"Redesigned for 2018\" (https://www.cars.com/research/hyundai-accent/) [media: generation starts MY2018]"
    ],
    "evidence_tier": "B"
   }
@@ -8401,7 +8417,7 @@
    "inspection": "Ask for service records and test for the reported symptom during inspection.",
    "typical_fix": "",
    "severity": "HIGH",
-   "probability": "OCCASIONAL",
+   "probability": "COMMON",
    "complaints_in_years": [
     13
    ],
@@ -8410,9 +8426,44 @@
     "tsbs": [],
     "complaint_patterns": [
      "RB|oil-consumption"
+    ],
+    "carcomplaints": [
+     "RB|excessive_oil_consumption"
     ]
    },
-   "rule": "complaint pattern only (owner reports)"
+   "rule": "complaint pattern only (owner reports) + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Excessive Oil Consumption\" (owner reports): MY2016: #1, average cost to fix $5,200, average mileage 111,000 mi"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "RB|excessive_oil_consumption",
+   "generation": "RB",
+   "problem": "Excessive Oil Consumption",
+   "category": "engine",
+   "symptoms": [
+    "oil-consumption"
+   ],
+   "by_year": {
+    "2016": {
+     "rank": 1,
+     "avg_cost": "$5,200",
+     "avg_mileage": "111,000 mi",
+     "quote": "#1: Excessive Oil Consumption Average Cost to Fix: $5,200 Average Mileage: 111,000 mi",
+     "url": "https://www.carcomplaints.com/Hyundai/Accent/2016/",
+     "problem_url": "https://www.carcomplaints.com/Hyundai/Accent/2016/engine/excessive_oil_consumption.shtml"
+    }
+   },
+   "site_model": "Accent",
+   "years": [
+    2016,
+    2016
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-accent-2016-545ef4"
+   ]
   }
  ],
  "tsbs": [
@@ -8753,6 +8804,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -8839,6 +8891,156 @@
    "scope": "hyundai-accent-us-2022-1.6l-4cyl-ice-a-av-s1-fwd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent RB",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "hyundai/accent US2018-2022",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -8854,10 +9056,12 @@
   "issues": 25,
   "issues_by_probability": {
    "RARE": 7,
-   "OCCASIONAL": 17,
-   "COMMON": 1
+   "OCCASIONAL": 16,
+   "COMMON": 2
   },
+  "cc_problems": 1,
   "tsbs": 18,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 123

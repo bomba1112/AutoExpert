@@ -1345,6 +1345,21 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-rx-2019-f13e5e": {
+   "key": "carcomplaints-rx-2019-f13e5e",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/lexus/RX_350/2019.html.gz",
+   "url": "https://www.carcomplaints.com/Lexus/RX_350/2019/",
+   "sha256": "37ac0530b2f810419a05fd988f98df2a003d5029a1362e10b4e0cec21d601b88",
+   "retrieved_at": "2026-10-02T11:30:32+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com lexus/rx 2019 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2019
   }
  },
  "generations": [
@@ -1376,7 +1391,8 @@
    "boundary_evidence": [
     "existing DB generation codes ['III'] (MY2015) -> ['AL20'] (MY2016)",
     "vPIC Canadian specifications: wheelbase 274 cm (MY2015) -> 279 cm (MY2016)",
-    "vPIC Canadian specifications: overall length 477 -> 489 cm (MY2015 -> MY2016; a change of 6 cm or more)"
+    "vPIC Canadian specifications: overall length 477 -> 489 cm (MY2015 -> MY2016; a change of 6 cm or more)",
+    "consumerreports.org: \"The RX got a 2016 makeover, with avant-garde exterior styling and advanced safety features.\" (https://www.consumerreports.org/cars/lexus/rx/); cars.com: \"One of the best-selling luxury vehicles on the market is redesigned for 2016.\" (https://www.cars.com/articles/2016-lexus-rx-first-look-1420680158886/) [quote read once] [media: generation starts MY2016]"
    ],
    "evidence_tier": "B"
   },
@@ -1391,7 +1407,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 279 cm (MY2022) -> 285 cm (MY2023)"
+    "vPIC Canadian specifications: wheelbase 279 cm (MY2022) -> 285 cm (MY2023)",
+    "consumerreports.org: \"The redesigned 2023 RX is powered by a 2.4-liter turbocharged four-cylinder engine\" (https://www.consumerreports.org/cars/lexus/rx/); cars.com: \"Redesigned for 2023\" (https://www.cars.com/research/lexus-rx_350/) [quote read once] [media: generation starts MY2023]"
    ],
    "evidence_tier": "B"
   }
@@ -11391,9 +11408,14 @@
     ],
     "complaint_patterns": [
      "AL20|fuel-pump-stall"
+    ],
+    "carcomplaints": [
+     "AL20|stalling"
     ]
    },
-   "rule": "recall + TSB + complaint pattern"
+   "rule": "recall + TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Stalling\" (owner reports): MY2019: #1, average cost to fix N/A, average mileage 7,000 mi"
   },
   {
    "id": "rx-AL20-recall-20V682000",
@@ -11428,9 +11450,14 @@
     ],
     "complaint_patterns": [
      "AL20|fuel-pump-stall"
+    ],
+    "carcomplaints": [
+     "AL20|stalling"
     ]
    },
-   "rule": "recall + TSB + complaint pattern"
+   "rule": "recall + TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Stalling\" (owner reports): MY2019: #1, average cost to fix N/A, average mileage 7,000 mi"
   },
   {
    "id": "rx-AL20-recall-21V043000",
@@ -12241,6 +12268,36 @@
     ]
    },
    "rule": "complaint pattern only (owner reports)"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "AL20|stalling",
+   "generation": "AL20",
+   "problem": "Stalling",
+   "category": "",
+   "symptoms": [
+    "fuel-pump-stall"
+   ],
+   "by_year": {
+    "2019": {
+     "rank": 1,
+     "avg_cost": "N/A",
+     "avg_mileage": "7,000 mi",
+     "quote": "#1: Stalling Average Cost to Fix: N/A Average Mileage: 7,000 mi",
+     "url": "https://www.carcomplaints.com/Lexus/RX_350/2019/",
+     "problem_url": null
+    }
+   },
+   "site_model": "RX 350",
+   "years": [
+    2019,
+    2019
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-rx-2019-f13e5e"
+   ]
   }
  ],
  "tsbs": [
@@ -13713,6 +13770,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -13959,6 +14017,231 @@
    "scope": "lexus-rx-us-2026-2.5l-4cyl-hev-a-av-s6-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx III",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx AL20",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/rx US2023+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -13978,7 +14261,9 @@
    "OCCASIONAL": 22,
    "COMMON": 3
   },
+  "cc_problems": 1,
   "tsbs": 91,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 104

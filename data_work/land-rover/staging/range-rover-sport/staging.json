@@ -502,6 +502,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2026
   },
+  "nhtsa-recalls-land-rover-range-rover-sport-2025": {
+   "key": "nhtsa-recalls-land-rover-range-rover-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/land-rover/land-rover-range-rover-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER+SPORT&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls LAND ROVER RANGE ROVER SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-complaints-range-rover-sport-5-seat-2014": {
    "key": "nhtsa-complaints-range-rover-sport-5-seat-2014",
    "kind": "json_gz",
@@ -787,6 +802,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2026
   },
+  "nhtsa-complaints-land-rover-range-rover-sport-2025": {
+   "key": "nhtsa-complaints-land-rover-range-rover-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/land-rover/land-rover-range-rover-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER+SPORT&modelYear=2025",
+   "sha256": "93f721081d529adacf1d855b2b9786a47ea2175e0f94731fc29c49d965d5b71a",
+   "retrieved_at": "2026-10-02T10:53:21+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints LAND ROVER RANGE ROVER SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -834,7 +864,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 292 cm (MY2022) -> 300 cm (MY2023)"
+    "vPIC Canadian specifications: wheelbase 292 cm (MY2022) -> 300 cm (MY2023)",
+    "consumerreports.org: \"this redesigned Range Rover Sport narrows the gap compared to the Range Rover in terms of luxury and refinement.\" (https://www.consumerreports.org/cars/land-rover/range-rover-sport/); cars.com: \"Redesigned for 2023\" (https://www.cars.com/research/land_rover-range_rover_sport/) [quote read once] [media: generation starts MY2023]"
    ],
    "evidence_tier": "B"
   }
@@ -6961,10 +6992,11 @@
   {
    "generation": "US2023+",
    "component": "ELECTRICAL SYSTEM",
-   "count": 20,
+   "count": 21,
    "by_year": {
     "2023": 13,
-    "2024": 7
+    "2024": 7,
+    "2025": 1
    },
    "sample_odi": [
     11727657,
@@ -6986,7 +7018,8 @@
     11746624,
     11745745,
     11745201,
-    11715094
+    11715094,
+    11720597
    ],
    "above_threshold": true
   },
@@ -7085,10 +7118,11 @@
   {
    "generation": "US2023+",
    "component": "ENGINE",
-   "count": 12,
+   "count": 14,
    "by_year": {
     "2023": 10,
-    "2024": 2
+    "2024": 2,
+    "2025": 2
    },
    "sample_odi": [
     11742049,
@@ -7102,7 +7136,9 @@
     11672663,
     11570978,
     11677325,
-    11607049
+    11607049,
+    11762620,
+    11762167
    ],
    "above_threshold": true
   },
@@ -7228,11 +7264,33 @@
   },
   {
    "generation": "US2023+",
+   "component": "SERVICE BRAKES",
+   "count": 8,
+   "by_year": {
+    "2023": 4,
+    "2024": 2,
+    "2025": 2
+   },
+   "sample_odi": [
+    11753987,
+    11751560,
+    11716249,
+    11560930,
+    11745745,
+    11692045,
+    11741061,
+    11712492
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
    "component": "STEERING",
-   "count": 7,
+   "count": 8,
    "by_year": {
     "2023": 5,
-    "2024": 2
+    "2024": 2,
+    "2025": 1
    },
    "sample_odi": [
     11717362,
@@ -7241,7 +7299,29 @@
     11590920,
     11578199,
     11745745,
-    11607049
+    11607049,
+    11711441
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 7,
+   "by_year": {
+    "2023": 2,
+    "2024": 1,
+    "2025": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11725817,
+    11570978,
+    11692045,
+    11754706,
+    11760895,
+    11751953,
+    11712492
    ],
    "above_threshold": false
   },
@@ -7266,24 +7346,6 @@
    "above_threshold": false
   },
   {
-   "generation": "US2023+",
-   "component": "SERVICE BRAKES",
-   "count": 6,
-   "by_year": {
-    "2023": 4,
-    "2024": 2
-   },
-   "sample_odi": [
-    11753987,
-    11751560,
-    11716249,
-    11560930,
-    11745745,
-    11692045
-   ],
-   "above_threshold": false
-  },
-  {
    "generation": "L494",
    "component": "EXTERIOR LIGHTING",
    "count": 5,
@@ -7300,6 +7362,24 @@
     10980570,
     11457433,
     11734166
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
+   "component": "VISIBILITY/WIPER",
+   "count": 5,
+   "by_year": {
+    "2023": 1,
+    "2024": 2,
+    "2025": 2
+   },
+   "sample_odi": [
+    11621873,
+    11714948,
+    11654806,
+    11720597,
+    11640453
    ],
    "above_threshold": false
   },
@@ -7358,6 +7438,23 @@
   },
   {
    "generation": "US2023+",
+   "component": "LANE DEPARTURE",
+   "count": 4,
+   "by_year": {
+    "2023": 2,
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11578199,
+    11494643,
+    11697650,
+    11711441
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
    "component": "POWER TRAIN",
    "count": 4,
    "by_year": {
@@ -7369,23 +7466,6 @@
     11756976,
     11607049,
     11605832
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2023+",
-   "component": "UNKNOWN OR OTHER",
-   "count": 4,
-   "by_year": {
-    "2023": 2,
-    "2024": 1,
-    "2026": 1
-   },
-   "sample_odi": [
-    11725817,
-    11570978,
-    11692045,
-    11754706
    ],
    "above_threshold": false
   },
@@ -7405,36 +7485,6 @@
    "above_threshold": false
   },
   {
-   "generation": "US2023+",
-   "component": "LANE DEPARTURE",
-   "count": 3,
-   "by_year": {
-    "2023": 2,
-    "2024": 1
-   },
-   "sample_odi": [
-    11578199,
-    11494643,
-    11697650
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2023+",
-   "component": "VISIBILITY/WIPER",
-   "count": 3,
-   "by_year": {
-    "2023": 1,
-    "2024": 2
-   },
-   "sample_odi": [
-    11621873,
-    11714948,
-    11654806
-   ],
-   "above_threshold": false
-  },
-  {
    "generation": "L494",
    "component": "DIESEL",
    "count": 2,
@@ -7450,6 +7500,19 @@
   },
   {
    "generation": "US2023+",
+   "component": "BACK OVER PREVENTION",
+   "count": 2,
+   "by_year": {
+    "2025": 2
+   },
+   "sample_odi": [
+    11760895,
+    11665288
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
    "component": "FORWARD COLLISION AVOIDANCE",
    "count": 2,
    "by_year": {
@@ -7459,6 +7522,34 @@
    "sample_odi": [
     11494643,
     11697650
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
+   "component": "SEAT BELTS",
+   "count": 2,
+   "by_year": {
+    "2024": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11671106,
+    11701675
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
+   "component": "SUSPENSION",
+   "count": 2,
+   "by_year": {
+    "2023": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11721406,
+    11762167
    ],
    "above_threshold": false
   },
@@ -7512,6 +7603,30 @@
   },
   {
    "generation": "US2023+",
+   "component": "EXTERIOR LIGHTING",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11640453
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11756499
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2023+",
    "component": "LATCHES/LOCKS/LINKAGES",
    "count": 1,
    "by_year": {
@@ -7524,13 +7639,13 @@
   },
   {
    "generation": "US2023+",
-   "component": "SEAT BELTS",
+   "component": "SEATS",
    "count": 1,
    "by_year": {
-    "2024": 1
+    "2025": 1
    },
    "sample_odi": [
-    11671106
+    11726525
    ],
    "above_threshold": false
   },
@@ -7543,18 +7658,6 @@
    },
    "sample_odi": [
     11654807
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2023+",
-   "component": "SUSPENSION",
-   "count": 1,
-   "by_year": {
-    "2023": 1
-   },
-   "sample_odi": [
-    11721406
    ],
    "above_threshold": false
   },
@@ -8137,16 +8240,18 @@
   "US2023+|coolant-leak": {
    "key": "US2023+|coolant-leak",
    "label": "water pump / coolant leak",
-   "count": 1,
+   "count": 2,
    "by_year": {
-    "2023": 1
+    "2023": 1,
+    "2025": 1
    },
    "sample_odi": [
-    11742049
+    11742049,
+    11762620
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-sport-2023"
+   "source": "nhtsa-complaints-land-rover-range-rover-sport-2025"
   },
   "US2023+|engine-failure": {
    "key": "US2023+|engine-failure",
@@ -8193,17 +8298,20 @@
   "US2023+|loss-of-power": {
    "key": "US2023+|loss-of-power",
    "label": "loss of power / limp mode",
-   "count": 2,
+   "count": 4,
    "by_year": {
-    "2024": 2
+    "2024": 2,
+    "2025": 2
    },
    "sample_odi": [
     11761771,
-    11745745
+    11745745,
+    11762620,
+    11741061
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-sport-2024"
+   "source": "nhtsa-complaints-land-rover-range-rover-sport-2025"
   },
   "US2023+|infotainment": {
    "key": "US2023+|infotainment",
@@ -8237,16 +8345,18 @@
   "US2023+|overheating": {
    "key": "US2023+|overheating",
    "label": "overheating",
-   "count": 1,
+   "count": 2,
    "by_year": {
-    "2024": 1
+    "2024": 1,
+    "2025": 1
    },
    "sample_odi": [
-    11677325
+    11677325,
+    11762620
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-sport-2024"
+   "source": "nhtsa-complaints-land-rover-range-rover-sport-2025"
   }
  },
  "issues": [
@@ -9923,7 +10033,7 @@
    "severity": "MEDIUM",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
-    1
+    2
    ],
    "evidence": {
     "recalls": [],
@@ -10324,6 +10434,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10227338",
@@ -15491,6 +15602,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -15692,6 +15804,156 @@
    "scope": "land-rover-range-rover-sport-us-2026-4.4l-8cyl-turbo-hev-a-s8-4wd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport L494",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-sport US2023+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -15712,7 +15974,9 @@
    "OCCASIONAL": 32,
    "COMMON": 4
   },
+  "cc_problems": 0,
   "tsbs": 302,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 69

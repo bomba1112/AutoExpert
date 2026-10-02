@@ -472,6 +472,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2024
   },
+  "nhtsa-recalls-land-rover-range-rover-evoque-2025": {
+   "key": "nhtsa-recalls-land-rover-range-rover-evoque-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/land-rover/land-rover-range-rover-evoque_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER+EVOQUE&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:17+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls LAND ROVER RANGE ROVER EVOQUE 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-complaints-range-rover-evoque-5-door-2014": {
    "key": "nhtsa-complaints-range-rover-evoque-5-door-2014",
    "kind": "json_gz",
@@ -727,6 +742,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2024
   },
+  "nhtsa-complaints-land-rover-range-rover-evoque-2025": {
+   "key": "nhtsa-complaints-land-rover-range-rover-evoque-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/land-rover/land-rover-range-rover-evoque_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER+EVOQUE&modelYear=2025",
+   "sha256": "06a8dd8ad16b1b4f5eb470389309be6b06fdb57796379b18b15094e388eb29a3",
+   "retrieved_at": "2026-10-02T10:53:26+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints LAND ROVER RANGE ROVER EVOQUE 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -774,7 +804,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "mycarusermanual.com generation page starts at 2020 (evoque/suv/2020), corroborated by vPIC new body family EVOQUE|4DRSUV wheelbase 268 cm (MY2019 -> MY2020)"
+    "mycarusermanual.com generation page starts at 2020 (evoque/suv/2020), corroborated by vPIC new body family EVOQUE|4DRSUV wheelbase 268 cm (MY2019 -> MY2020)",
+    "consumerreports.org: \"2020 Model Redesign Year\" (https://www.consumerreports.org/cars/land-rover/range-rover-evoque/); cars.com: \"Redesigned for 2020\" (https://www.cars.com/research/land_rover-range_rover_evoque/) [quote read once] [media: generation starts MY2020]"
    ],
    "evidence_tier": "B"
   }
@@ -5402,11 +5433,12 @@
   {
    "generation": "US2020+",
    "component": "ELECTRICAL SYSTEM",
-   "count": 22,
+   "count": 23,
    "by_year": {
     "2020": 19,
     "2021": 1,
-    "2022": 2
+    "2022": 2,
+    "2025": 1
    },
    "sample_odi": [
     11767005,
@@ -5430,7 +5462,8 @@
     11351275,
     11757015,
     11754122,
-    11510831
+    11510831,
+    11707813
    ],
    "above_threshold": true
   },
@@ -5473,13 +5506,14 @@
   {
    "generation": "US2020+",
    "component": "AIR BAGS",
-   "count": 16,
+   "count": 17,
    "by_year": {
     "2020": 2,
     "2021": 2,
     "2022": 3,
     "2023": 5,
-    "2024": 4
+    "2024": 4,
+    "2025": 1
    },
    "sample_odi": [
     11566172,
@@ -5497,7 +5531,8 @@
     11720358,
     11719109,
     11697721,
-    11696430
+    11696430,
+    11707813
    ],
    "above_threshold": true
   },
@@ -6758,6 +6793,20 @@
    "above_threshold": false,
    "engine_specific": false,
    "source": "nhtsa-complaints-range-rover-evoque-5-door-l551-2021"
+  },
+  "US2020+|overheating": {
+   "key": "US2020+|overheating",
+   "label": "overheating",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11707813
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-land-rover-range-rover-evoque-2025"
   }
  },
  "issues": [
@@ -6931,7 +6980,9 @@
      "24V678000"
     ],
     "tsbs": [],
-    "complaint_patterns": []
+    "complaint_patterns": [
+     "US2020+|overheating"
+    ]
    },
    "rule": "recall"
   },
@@ -8188,6 +8239,7 @@
    "rule": "complaint pattern only (owner reports)"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "11028600",
@@ -11435,6 +11487,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -11516,6 +11569,156 @@
    "scope": "land-rover-range-rover-evoque-us-2026-2.0l-4cyl-turbo-ice-a-s9-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque LV",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover-evoque US2020+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -11533,14 +11736,16 @@
   "configurations": 16,
   "facts": 72,
   "recalls": 6,
-  "symptom_patterns": 33,
+  "symptom_patterns": 34,
   "issues": 39,
   "issues_by_probability": {
    "OCCASIONAL": 32,
    "RARE": 5,
    "COMMON": 2
   },
+  "cc_problems": 0,
   "tsbs": 180,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 72

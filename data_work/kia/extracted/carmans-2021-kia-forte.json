@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 690,
  "edition_market": "US",
  "edition_markers": {
@@ -33,66 +33,72 @@
  },
  "facts": [
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 4.0,
-   "unit": "L",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-20",
+   "unit": null,
    "page": 669,
-   "quote": "4.2 US qt. (4.0 l)",
-   "row": "4.2 US qt. (4.0 l) | SAE 5W20 / API Latest (ILSAC Latest)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": "2.0 MPI",
-   "original": "4.2 US qt. (4.0 l)",
-   "drive": null,
-   "approx_in_source": false
+   "quote": "SAE 5W20",
+   "row": "Engine oil *1 (drain and refill) Recommends | (Gasoline engine) 2.0 MPI | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest)",
+   "label": "engine oil viscosity",
+   "engine_text": "(Gasoline engine) 2.0 MPI",
+   "source_layout": "ruled_table"
   },
   {
-   "key": "fuel_tank_l",
-   "value": 4.5,
-   "unit": "L",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "unit": null,
    "page": 669,
-   "quote": "4.75 US qt. (4.5 l)",
-   "row": "(Gasoline engine) | SAE 5W-30 / API Latest (ILSAC Latest) or | 4.75 US qt. (4.5 l)",
-   "label": "fuel_tank_l",
-   "engine_text": null,
-   "original": "4.75 US qt. (4.5 l)",
-   "drive": null,
-   "approx_in_source": false
+   "quote": "SAE 5W-30",
+   "row": "Engine oil *1 (drain and refill) Recommends | (Gasoline engine) 1.6 T-GDi | 4.75 US qt.(4.5 l) | SAE 5W-30 / API Latest (ILSAC Latest) or ACEA A5/B5",
+   "label": "engine oil viscosity",
+   "engine_text": "(Gasoline engine) 1.6 T-GDi",
+   "source_layout": "ruled_table"
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 6.6,
+   "key": "engine_oil_specification",
+   "value": "ACEA A5/B5",
+   "unit": null,
+   "page": 669,
+   "quote": "ACEA A5/B5",
+   "row": "Engine oil *1 (drain and refill) Recommends | (Gasoline engine) 1.6 T-GDi | 4.75 US qt.(4.5 l) | SAE 5W-30 / API Latest (ILSAC Latest) or ACEA A5/B5",
+   "label": "engine oil specification",
+   "engine_text": "(Gasoline engine) 1.6 T-GDi",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 2.0,
    "unit": "L",
    "page": 670,
-   "quote": "7.0 US qt. (6.6 l)",
-   "row": "IVT | 7.0 US qt. (6.6 l) | (Ethylene-glycol with phosphate based coolant for",
-   "label": "coolant_capacity_l",
+   "quote": "1.9 US qt. (1.9~2.0 l)",
+   "row": "Dual clutch Transmission fluid | 1.6L T-GDI | 1.8~1.9 US qt. (1.9~2.0 l) | API GL-4, SAE 70W HK D DCTF TGO-10 (SK) SPIRAX S6 GHDE 70W DCTF (H.K.SHELL) 7 DCTF HKM (S-OIL)",
+   "label": "transmission fluid capacity l",
    "engine_text": "1.6L T-GDI",
-   "original": "7.0 US qt. (6.6 l)",
-   "drive": null,
+   "source_layout": "ruled_table",
+   "original": "1.9 US qt. (1.9~2.0 l)",
    "approx_in_source": false
   },
   {
    "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate based coolant for",
+   "value": "Ethylene-glycol with phosphate based coolant for cooling device",
    "unit": null,
    "page": 670,
-   "quote": "Ethylene-glycol with phosphate based coolant for",
-   "row": "IVT | 7.0 US qt. (6.6 l) | (Ethylene-glycol with phosphate based coolant for",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device",
+   "row": "Coolant | (Gasoline engine) 2.0 MPI | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "label": "coolant description",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
-   "key": "fuel_tank_l",
-   "value": 53.0,
-   "unit": "L",
+   "key": "brake_fluid",
+   "value": "DOT-3 or DOT-4",
+   "unit": null,
    "page": 670,
-   "quote": "14 US gal. (53 l)",
-   "row": "14 US gal. (53 l) | Unleaded gasoline",
-   "label": "fuel_tank_l",
+   "quote": "FMVSS116 DOT-3 or DOT-4",
+   "row": "Brake fluid | 0.7 ~ 0.8 US qt. (0.7 ~ 0.8 l) | FMVSS116 DOT-3 or DOT-4",
+   "label": "brake fluid",
    "engine_text": null,
-   "original": "14 US gal. (53 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "engine_oil_viscosity",
@@ -135,7 +141,47 @@
    "engine_text": "2.0 MPI"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 669,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1 (drain and refill) Recommends | (Gasoline engine) 2.0 MPI | 4.2 US qt.(4.0 l) | SAE 5W20 / API Latest (ILSAC Latest)",
+   "reason": "quote not in page text",
+   "quote": "4.2 US qt.(4.0 l)"
+  },
+  {
+   "page": 669,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1 (drain and refill) Recommends | (Gasoline engine) 1.6 T-GDi | 4.75 US qt.(4.5 l) | SAE 5W-30 / API Latest (ILSAC Latest) or ACEA A5/B5",
+   "reason": "quote not in page text",
+   "quote": "4.75 US qt.(4.5 l)"
+  },
+  {
+   "page": 670,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | (Gasoline engine) 2.0 MPI | MT | 5.9 US qt.(5.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 670,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | (Gasoline engine) 2.0 MPI | IVT | 7.0 US qt.(6.6 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 670,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | (Gasoline engine) 1.6 T-GDi | DCT | 7.3 US qt.(6.9 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 670,
+   "key": "fuel_tank_l",
+   "row": "Fuel | 14 US gal.(53 l) | Unleaded gasoline",
+   "reason": "quote not in page text",
+   "quote": "14 US gal.(53 l)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   458,

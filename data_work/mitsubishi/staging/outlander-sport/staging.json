@@ -1,0 +1,5749 @@
+{
+ "make": "Mitsubishi",
+ "line": "Outlander Sport",
+ "line_key": "mitsubishi/outlander-sport",
+ "db_models": [
+  "Outlander Sport"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "nhtsa-recalls-outlander-sport-2014": {
+   "key": "nhtsa-recalls-outlander-sport-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2014.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2014",
+   "sha256": "e28172fbb903a43bd33c4ec29a0bb4cf32a8f17dd20c377f558c8bcc0f287cef",
+   "retrieved_at": "2026-10-02T10:30:02+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-recalls-outlander-sport-2015": {
+   "key": "nhtsa-recalls-outlander-sport-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2015.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2015",
+   "sha256": "7c8fec31bc6bcc5303ae9c54af85861f6717a29bb758261782be92fbb8e6fabf",
+   "retrieved_at": "2026-10-02T10:30:10+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-recalls-outlander-sport-2016": {
+   "key": "nhtsa-recalls-outlander-sport-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2016",
+   "sha256": "0a222774cbc3e744d2eb7169f1ec93ce4ef8d3f4708edb1ae514734f8dad961c",
+   "retrieved_at": "2026-10-02T10:30:18+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-outlander-sport-2017": {
+   "key": "nhtsa-recalls-outlander-sport-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:30:27+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-outlander-sport-2018": {
+   "key": "nhtsa-recalls-outlander-sport-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2018",
+   "sha256": "7ed80e4d4a2f0a31ecb5124cf502c5781f15c994e269d027cd5f675fd07d159d",
+   "retrieved_at": "2026-10-02T10:30:34+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-outlander-sport-2019": {
+   "key": "nhtsa-recalls-outlander-sport-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2019",
+   "sha256": "da6eac3945ad9bae6b8336671876592fd501cfbe61a4e2325bc0b579f81e8951",
+   "retrieved_at": "2026-10-02T10:30:45+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-outlander-sport-2020": {
+   "key": "nhtsa-recalls-outlander-sport-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2020",
+   "sha256": "3e205846a588f07b5e7d3c5a7bfbc7f49961629bc69f2d3a6cdf2c4c34b2797a",
+   "retrieved_at": "2026-10-02T10:30:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-outlander-sport-2021": {
+   "key": "nhtsa-recalls-outlander-sport-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2021",
+   "sha256": "ad488942928b91a37d8c715c0076a9247db90260471804ec3715de114167acf1",
+   "retrieved_at": "2026-10-02T10:31:03+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-outlander-sport-2022": {
+   "key": "nhtsa-recalls-outlander-sport-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2022",
+   "sha256": "f2900cebf5c583bbabc1181f653e43383b3260093d4c0a014dc8141fa70549f5",
+   "retrieved_at": "2026-10-02T10:31:08+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-outlander-sport-2023": {
+   "key": "nhtsa-recalls-outlander-sport-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:31:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-outlander-sport-2024": {
+   "key": "nhtsa-recalls-outlander-sport-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:31:30+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-outlander-sport-2025": {
+   "key": "nhtsa-recalls-outlander-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:31:38+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-recalls-outlander-sport-ice-2026": {
+   "key": "nhtsa-recalls-outlander-sport-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mitsubishi/outlander-sport-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT+ICE&modelYear=2026",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:31:49+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls OUTLANDER SPORT ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-complaints-outlander-sport-2014": {
+   "key": "nhtsa-complaints-outlander-sport-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2014.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2014",
+   "sha256": "1a7b27c1af3bbd4c10ec650e961890d1016d5fcf162d3be4a0a1638624b27097",
+   "retrieved_at": "2026-10-02T10:30:06+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
+  "nhtsa-complaints-outlander-sport-2015": {
+   "key": "nhtsa-complaints-outlander-sport-2015",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2015.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2015",
+   "sha256": "d2f647f0b4686f2105e9e5a0422876dcc9a2347f18cfb0034d06d323046bcfda",
+   "retrieved_at": "2026-10-02T10:30:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2015",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2015
+  },
+  "nhtsa-complaints-outlander-sport-2016": {
+   "key": "nhtsa-complaints-outlander-sport-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2016",
+   "sha256": "0b1772ccc9c24bbdeddef3ba0e1e442b0e80ff0d50a3ce136d560302e0370655",
+   "retrieved_at": "2026-10-02T10:30:23+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-outlander-sport-2017": {
+   "key": "nhtsa-complaints-outlander-sport-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2017",
+   "sha256": "8d12e42dc73711e0648e42bc507b7c60c39a7371bb4ace4ee85fc57d20b2ab02",
+   "retrieved_at": "2026-10-02T10:30:30+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-outlander-sport-2018": {
+   "key": "nhtsa-complaints-outlander-sport-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2018",
+   "sha256": "b9d27da74eae38874151ae13d5b34e899609a9685a7442cf7f3705b98ce2e045",
+   "retrieved_at": "2026-10-02T10:30:40+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-outlander-sport-2019": {
+   "key": "nhtsa-complaints-outlander-sport-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2019",
+   "sha256": "7229a5d54ac28203e0afedb06ffa6f42d4ca68c8862b05d67c255a419e6649dd",
+   "retrieved_at": "2026-10-02T10:30:50+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-outlander-sport-2020": {
+   "key": "nhtsa-complaints-outlander-sport-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2020",
+   "sha256": "2f71a86e6c7870a88cc001be72bf18d5e6c39e3d41ad1190e12a817c5acefb75",
+   "retrieved_at": "2026-10-02T10:30:59+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-outlander-sport-2021": {
+   "key": "nhtsa-complaints-outlander-sport-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2021",
+   "sha256": "6369ee2ef3130f1fc937f890017a1db8a85f0d1a6ae77406acc044756ad208f7",
+   "retrieved_at": "2026-10-02T10:31:04+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-outlander-sport-2022": {
+   "key": "nhtsa-complaints-outlander-sport-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2022",
+   "sha256": "054e20584ca31b5cf5584a4c0427bb40b315903bf6eddf0da1d8e838cab3b5df",
+   "retrieved_at": "2026-10-02T10:31:15+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-outlander-sport-2023": {
+   "key": "nhtsa-complaints-outlander-sport-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2023",
+   "sha256": "d43b70ac8588b7fdaa433385a30000c9dc26be51c16221714d52e23ab946cce9",
+   "retrieved_at": "2026-10-02T10:31:25+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-outlander-sport-2024": {
+   "key": "nhtsa-complaints-outlander-sport-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2024",
+   "sha256": "54a70a16e6a6fa6dad03f012225f09f85ef6f716a112c281def12876b8db4982",
+   "retrieved_at": "2026-10-02T10:31:34+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-outlander-sport-2025": {
+   "key": "nhtsa-complaints-outlander-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT&modelYear=2025",
+   "sha256": "fb002cfb9c3f3c7f8813055ad302fa22448182bcd1d91c7c613835160159018c",
+   "retrieved_at": "2026-10-02T10:31:43+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-complaints-outlander-sport-ice-2026": {
+   "key": "nhtsa-complaints-outlander-sport-ice-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mitsubishi/outlander-sport-ice_2026.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=OUTLANDER+SPORT+ICE&modelYear=2026",
+   "sha256": "db32db13651ad39fcd5d77cd0fe9d7b226fe976bc6bb52b01119011f06947ec0",
+   "retrieved_at": "2026-10-02T10:31:53+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints OUTLANDER SPORT ICE 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-outlander-sport-2017-0572a8": {
+   "key": "carcomplaints-outlander-sport-2017-0572a8",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/mitsubishi/Outlander_Sport/2017.html.gz",
+   "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2017/",
+   "sha256": "bceb14988e173a93bdde57d5ddbc34bbc9584d892d3c629013ee2eff8ce3daf3",
+   "retrieved_at": "2026-10-02T12:05:43+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com mitsubishi/outlander-sport 2017 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2017
+  },
+  "carcomplaints-outlander-sport-2015-528846": {
+   "key": "carcomplaints-outlander-sport-2015-528846",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/mitsubishi/Outlander_Sport/2015.html.gz",
+   "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2015/",
+   "sha256": "17f9cc26d147aa7731089ac4776343c4ac4c7558e0d78d414ec0f076f46eb17a",
+   "retrieved_at": "2026-10-02T12:05:32+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com mitsubishi/outlander-sport 2015 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2015
+  },
+  "carcomplaints-outlander-sport-2014-544260": {
+   "key": "carcomplaints-outlander-sport-2014-544260",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/mitsubishi/Outlander_Sport/2014.html.gz",
+   "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2014/",
+   "sha256": "e43779de637f4ec92b8b6cd3db5af1f3337fb72422511ddcca8390a9275b573b",
+   "retrieved_at": "2026-10-02T12:05:28+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com mitsubishi/outlander-sport 2014 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2014
+  }
+ },
+ "generations": [
+  {
+   "code": "I-US-2011",
+   "name": "I-US-2011",
+   "db_model": "Outlander Sport",
+   "existing_id": "0973ff89-44e7-4ff8-b107-bbf860b97896",
+   "start_year": 2014,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": false,
+   "end_known": false,
+   "boundary_evidence": [
+    "scope starts at MY2014; the generation may have begun earlier"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2014,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "33973",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 24,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2014,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "33965",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2014,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "33964",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2015,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "35245",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2015,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "35239",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 25,
+     "highway_mpg": 32,
+     "combined_mpg": 28,
+     "combined_l_100km": "8.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2015,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "35238",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2015-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2015,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36051",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 22,
+     "highway_mpg": 26,
+     "combined_mpg": 24,
+     "combined_l_100km": "9.8",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2015-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2015,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "36050",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2016,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37259",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2016,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37257",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2016,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37256",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2016-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2016,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37260",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 22,
+     "highway_mpg": 27,
+     "combined_mpg": 24,
+     "combined_l_100km": "9.8",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2016-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2016,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "37258",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2017,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38290",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2017,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38283",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2017,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38282",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2017-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2017,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38548",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 22,
+     "highway_mpg": 27,
+     "combined_mpg": 24,
+     "combined_l_100km": "9.8",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2017-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2017,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "38547",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2018,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39689",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2018,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39678",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2018,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39677",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2018-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2018,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39690",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2018-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2018,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "39679",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2019,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40753",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2019,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40743",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-m-5-spd-fwd",
+   "year": 2019,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Manual 5-spd",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40742",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2019-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2019,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40754",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2019-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2019,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "40744",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2020-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2020,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "41768",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2020-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2020,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "41756",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2020-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2020,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42048",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2020-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2020,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "42040",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2021-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2021,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43477",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2021-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2021,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43473",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2021-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2021,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43478",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2021-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2021,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "43474",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2022-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2022,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44320",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2022-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2022,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44309",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2022-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2022,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44321",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2022-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2022,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "44310",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2023-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2023,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46153",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2023-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2023,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46144",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2023-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2023,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "46154",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2023-2.4l-4cyl-ice-a-av-s6-fwd",
+   "year": 2023,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47517",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2024-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2024,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47154",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2024-2.0l-4cyl-ice-a-av-s6-fwd",
+   "year": 2024,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "FWD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47138",
+     "epa_model": "Outlander Sport 2WD",
+     "city_mpg": 24,
+     "highway_mpg": 30,
+     "combined_mpg": 27,
+     "combined_l_100km": "8.7",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2024-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2024,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "47155",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2025-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2025,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "48926",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2025-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2025,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "48927",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2026-2.0l-4cyl-ice-a-av-s6-4wd",
+   "year": 2026,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.0",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "50128",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 29,
+     "combined_mpg": 26,
+     "combined_l_100km": "9.0",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "mitsubishi-outlander-sport-us-2026-2.4l-4cyl-ice-a-av-s6-4wd",
+   "year": 2026,
+   "generation": "I-US-2011",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "ICE",
+   "drivetrain": "4WD",
+   "epa_trany": "Automatic (AV-S6)",
+   "displacement_l": "2.4",
+   "cylinders": 4,
+   "aspiration": "NATURALLY_ASPIRATED",
+   "epa_vehicles": [
+    {
+     "epa_id": "50129",
+     "epa_model": "Outlander Sport 4WD",
+     "city_mpg": 23,
+     "highway_mpg": 28,
+     "combined_mpg": 25,
+     "combined_l_100km": "9.4",
+     "fuel_type": "Regular Gasoline",
+     "eng_dscr": "",
+     "ev_motor": "",
+     "range_mi": "0"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [],
+ "recalls": [
+  {
+   "campaign_number": "14V744000",
+   "component": "SEAT BELTS",
+   "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2013-2015 Outlander Sport vehicles manufactured July 20, 2012, to July 23, 2014.  In the affected vehicles, the front passenger seat belt lap end attachment fastener may not be torqued to specification, and the fastener may loosen with time.",
+   "consequence": "A loosened and weakened fastener may not be capable of withstanding the load forces associated with a vehicle crash, leaving the seat occupant insufficiently restrained and increasing the risk of injury.",
+   "remedy": "Mitsubishi will notify owners, and dealers will inspect and replace the seat belt lap end attachment fastener, free of charge.  The recall began on December 1, 2014.  Owners may contact Mitsubishi customer service at 1-714-372-6000.  Mitsubishi's number for this recall is SR-14-011.",
+   "report_received_date": "21/11/2014",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015
+   ],
+   "years": [
+    2014,
+    2015
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015"
+   ]
+  },
+  {
+   "campaign_number": "16V792000",
+   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2011-2015 Outlander Sport vehicles manufactured August 26, 2010, to January 5, 2015.  In the affected vehicles, water may drop between the hood and the windshield and leak into the wiper motor breathing hole.  The water may cause internal corrosion of the windshield wiper motor and the possible failure of the motor.",
+   "consequence": "Failure of the wiper motor can cause a loss of visibility, increasing the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will replace the wiper motor, free of charge.  The manufacturer has begun the recall, but parts are not yet available; a second notice will be sent when parts are available.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-010.",
+   "report_received_date": "31/10/2016",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015
+   ],
+   "years": [
+    2014,
+    2015
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015"
+   ]
+  },
+  {
+   "campaign_number": "18V070000",
+   "component": "PARKING BRAKE",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2014-2016 Outlander and 2013-2016 Outlander Sport vehicles.  Water may enter the rear brake calipers causing the parking brake actuator shafts to corrode and possibly bind.",
+   "consequence": "If the parking brake actuator shaft binds, the parking brake may not engage or disengage fully.  If the parking brake does not engage properly, the vehicle may move unexpectedly if it is parked on a slope, increasing the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will inspect the rear brake calipers and replace the parking brake boot and lever or the brake caliper body, as necessary.  Dealers will also replace the piston assembly of the rear brake caliper.  These repairs will be performed free of charge.  The recall is expected to begin March 27, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-002.",
+   "report_received_date": "26/01/2018",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015,
+    2016
+   ],
+   "years": [
+    2014,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015",
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "18V103000",
+   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2011-2016 Outlander Sport vehicles.  Water may enter between the hood and windshield and cause the front wiper link ball joint to corrode, possibly resulting in the wiper link separating and the wipers becoming inoperative.",
+   "consequence": "Loss of wiper function can reduce visibility and increase the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will replace the rod of the wiper link and the wiper motor crank arm, free of charge.  The recall is expected to begin April 10, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-004.",
+   "report_received_date": "09/02/2018",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015,
+    2016
+   ],
+   "years": [
+    2014,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015",
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "20V279000",
+   "component": "STRUCTURE:FRAME AND MEMBERS",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2008-2010 Lancer, 2009-2010 Lancer Sportback, 2008-2013 Outlander, and 2011-2016 Outlander Sport vehicles originally sold in, or ever registered in, Connecticut, Delaware, the District of Columbia, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, Virginia, West Virginia, and Wisconsin.  The front lower control arms may detach due to the front cross member corroding from salt water exposure such as from road salt use.",
+   "consequence": "A detached front control arm can result in a loss of vehicle control, increasing the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will inspect the front cross members.  Depending on the level of existing corrosion, either a sealing/anti-corrosion agent will be applied or the front cross member will be replaced with a new one.  These repairs will be performed free of charge.  The recall began August 7, 2020.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-20-003.",
+   "report_received_date": "18/05/2020",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015,
+    2016
+   ],
+   "years": [
+    2014,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015",
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "21V144000",
+   "component": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2013-2015 Outlander Sport vehicles originally sold, or ever registered, in Connecticut, Delaware, the District of Columbia, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, Virginia, West Virginia, and Wisconsin.  The front lower control arms may detach due to the front cross member corroding from salt water exposure, such as from road salt use.",
+   "consequence": "A detached front control arm can result in a loss of vehicle control, increasing the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will inspect the front cross members. Depending on the level of existing corrosion, either a sealing/anti-corrosion agent will be applied, or the front cross member will be replaced with a new one, free of charge. Owners may contact MMNA customer service at 1-888-648-7820. MMNA's number for this recall is SR-21-001. This recall is an expansion of NHTSA recall number 20V-279. Owners not previously notified under 20V-279 were notified on March 22, 2021.",
+   "report_received_date": "05/03/2021",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2014,
+    2015
+   ],
+   "years": [
+    2014,
+    2015
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2014",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2014",
+    "nhtsa-recalls-outlander-sport-2015"
+   ]
+  },
+  {
+   "campaign_number": "16V548000",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:COOLING UNIT AND LINES",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2015 Mitsubishi Outlander Sport vehicles manufactured June 25, 2014, through November 25, 2015 and equipped with a 2.0L engine and a continuously variable transmission (CVT).  During assembly, a clamp for a CVT hose may not have been properly secured, allowing the hose to detach and leak transmission fluid.",
+   "consequence": "If enough transmission fluid leaks out, the transmission may not function properly and the vehicle may become inoperable, increasing the risk of a crash.  Additionally, if leaking transmission fluid contacts an a hot surface there is an increased risk of a fire.",
+   "remedy": "Mitsubishi will notify owners, and dealers will inspect the hose clamps, correcting their installation, as necessary, free of charge. The recall began on August 15, 2016.  Owners may contact Mitsubishi customer service at 1-888-648-7820.  Mitsubishi's number for this recall is SR-16-005.",
+   "report_received_date": "22/07/2016",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2015
+   ],
+   "years": [
+    2015,
+    2015
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2015",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2015"
+   ]
+  },
+  {
+   "campaign_number": "16V563000",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2015-2016 Outlander Sport vehicles and 2016 Outlander and Lancer vehicles.  The affected vehicles are equipped with a constant velocity transmission (CVT) that, in certain driving conditions, may cause a delay in the vehicle accelerating.",
+   "consequence": "A hesitation during acceleration can increase the risk of a crash.",
+   "remedy": "MMNA has notified owners, and dealers will reprogram the CVT control unit with modified software, free of charge.  The recall began on August 15, 2016.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-006.",
+   "report_received_date": "28/07/2016",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2015,
+    2016
+   ],
+   "years": [
+    2015,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2015",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2015",
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "17V609000",
+   "component": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2015-2017 Outlander, 2015-2016 Lancer and Outlander Sport, and 2015 Lancer Evolution vehicles.  These vehicles may have defective relays that can result in an engine stall, reduced engine power or the engine overheating.",
+   "consequence": "If the engine stalls, there is an increased the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will replace the affected relays, free of charge.  The recall began October 24, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-17-005.",
+   "report_received_date": "29/09/2017",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2015,
+    2016
+   ],
+   "years": [
+    2015,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2015",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2015",
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "16V867000",
+   "component": "STRUCTURE:BODY:HATCHBACK/LIFTGATE:HINGE AND ATTACHMENTS",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2011-2012 Outlander Sport vehicles manufactured August 26, 2010, to June 1, 2012, and 2016 Outlander Sport vehicles manufactured January 11, 2016, to July 8, 2016.  The lift gate support outer tube on the affected vehicles may have insufficient anti-corrosion treatment that can allow the outer tube to corrode due to salt and water penetration.",
+   "consequence": "If the outer tube corrodes, there may be a rapid loss of the gas used to provide lift assistance, causing the lift gate to fall suddenly, increasing the risk of injury.",
+   "remedy": "MMNA will notify owners, and dealers will replace the lift gate supports, free of charge.  The recall began on January 20, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-011.",
+   "report_received_date": "02/12/2016",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2016
+   ],
+   "years": [
+    2016,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2016",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "17V233000",
+   "component": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2016 Outlander and Outlander Sport vehicles.  The inside door latch mechanisms may not latch securely in high temperatures, allowing the doors to open while vehicle is in motion.",
+   "consequence": "If a door opens while the vehicle is being driven, it can increase the risk of injury.",
+   "remedy": "MMNA will notify owners, and dealers will replace the door latches, free of charge.  The recall began August 25, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-17-002.",
+   "report_received_date": "06/04/2017",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2016
+   ],
+   "years": [
+    2016,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2016",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "20V741000",
+   "component": "PARKING BRAKE",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2016 Outlander and Outlander Sport vehicles.  The rust prevention coating on the rear brake operating shafts could have been peeled off during the assembly process.  As a result, water entering the rear brake caliper boot may cause the parking brake operating shafts to corrode and possibly bind.",
+   "consequence": "If the parking brake operating shafts bind, the parking brakes may not engage or disengage fully.  If the parking brakes do not engage properly, the vehicle could rollaway, increasing the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will replace the rear brake caliper assemblies, free of charge.  Owner letters were mailed May 4, 2021.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-20-005.",
+   "report_received_date": "30/11/2020",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2016
+   ],
+   "years": [
+    2016,
+    2016
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2016",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2016"
+   ]
+  },
+  {
+   "campaign_number": "18V620000",
+   "component": "ELECTRICAL SYSTEM:SOFTWARE",
+   "summary": "Mitsubishi Motors North America (MMNA) is recalling certain 2018 Mitsubishi Outlander PHEV, Outlander Sport, 2018-2019 Eclipse Cross, and 2017-2018 Outlander vehicles equipped with a Forward Collision Mitigation (FCM) system that detects pedestrians.   Due to incorrect software, the FCM-ECU (Electronic Control Unit) may apply braking for longer than needed, even after a pedestrian is no longer detected.",
+   "consequence": "If the FCM-ECU software activates the brake for longer than necessary, the driver may react by applying additional braking.  The resulting rapid deceleration of the vehicle can increase the risk of a rear-end collision.",
+   "remedy": "MMNA will notify owners, and dealers will reprogram the FCM-ECU software with updated software, free of charge.  The recall is began October 16, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-007.",
+   "report_received_date": "14/09/2018",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2018
+   ],
+   "years": [
+    2018,
+    2018
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2018",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2018"
+   ]
+  },
+  {
+   "campaign_number": "18V621000",
+   "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2018 Mitsubishi Outlander Sport vehicles equipped with a Forward Collision Mitigation (FCM) system and 2018 Mitsubishi Outlander PHEV and Eclipse Cross vehicles and 2017-2018 Outlander vehicles equipped with an Adaptive Cruise Control (ACC) system and/or an Electric Parking Brake (EPB) system.  The software for the Hydraulic Unit Electronic Control Unit (ECU) may be incorrect, possibly preventing the intervention of a safety system such as automatic emergency braking, Anti-lock Braking (ABS), Electronic Stability Control (ESC), or the Brake Auto Hold (BAH) function when any of these systems are in use.",
+   "consequence": "If the safety systems do not function as intended, it can increase the risk of a crash.",
+   "remedy": "MMNA will notify owners, and dealers will update the Hydraulic Unit-ECU software, free of charge.  The recall began October 16, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-008.",
+   "report_received_date": "14/09/2018",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2018
+   ],
+   "years": [
+    2018,
+    2018
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2018",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2018"
+   ]
+  },
+  {
+   "campaign_number": "22V563000",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+   "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2019-2022 Outlander Sport vehicles equipped with continuously variable transmissions and mechanical key ignition systems.  A software error in the transmission control unit (CVT-ECU) may incorrectly reduce the transmission gear ratio at high speeds, which can result in an engine stall.",
+   "consequence": "An engine stall can increase the risk of a crash.",
+   "remedy": "Dealers will update the CVT-ECU software, free of charge.  Owner notification letters were mailed August 24, 2022.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-22-004.",
+   "report_received_date": "02/08/2022",
+   "manufacturer": "Mitsubishi Motors North America, Inc.",
+   "generation": "I-US-2011",
+   "model_years": [
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "years": [
+    2019,
+    2022
+   ],
+   "nhtsa_models": [
+    "OUTLANDER SPORT"
+   ],
+   "source": "nhtsa-recalls-outlander-sport-2019",
+   "sources": [
+    "nhtsa-recalls-outlander-sport-2019",
+    "nhtsa-recalls-outlander-sport-2020",
+    "nhtsa-recalls-outlander-sport-2021",
+    "nhtsa-recalls-outlander-sport-2022"
+   ]
+  }
+ ],
+ "complaint_patterns": [
+  {
+   "generation": "I-US-2011",
+   "component": "POWER TRAIN",
+   "count": 270,
+   "by_year": {
+    "2014": 21,
+    "2015": 142,
+    "2016": 65,
+    "2017": 12,
+    "2018": 5,
+    "2019": 10,
+    "2020": 6,
+    "2021": 3,
+    "2022": 4,
+    "2023": 1,
+    "2024": 1
+   },
+   "sample_odi": [
+    11758853,
+    11561112,
+    11530705,
+    11499147,
+    11491195,
+    11413289,
+    11404381,
+    11364470,
+    11322793,
+    11320185,
+    11270460,
+    11242779,
+    11223130,
+    11220937,
+    11220947,
+    11184754,
+    10948165,
+    10897555,
+    10807645,
+    10786132,
+    10638179,
+    11748513,
+    11747268,
+    11721989,
+    11716839
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "ENGINE",
+   "count": 111,
+   "by_year": {
+    "2014": 4,
+    "2015": 46,
+    "2016": 27,
+    "2017": 12,
+    "2018": 1,
+    "2019": 7,
+    "2020": 8,
+    "2021": 5,
+    "2022": 1
+   },
+   "sample_odi": [
+    11561112,
+    11184754,
+    10948165,
+    10807645,
+    11721989,
+    11716839,
+    11590523,
+    11580590,
+    11558145,
+    11557190,
+    11536490,
+    11533603,
+    11520288,
+    11500236,
+    11493717,
+    11478802,
+    11471551,
+    11470286,
+    11466877,
+    11416554,
+    11404740,
+    11325744,
+    11322252,
+    11291687,
+    11256329
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 98,
+   "by_year": {
+    "2014": 8,
+    "2015": 25,
+    "2016": 16,
+    "2017": 18,
+    "2018": 7,
+    "2019": 7,
+    "2020": 5,
+    "2021": 6,
+    "2022": 3,
+    "2023": 3
+   },
+   "sample_odi": [
+    11530705,
+    11132199,
+    10903386,
+    10810482,
+    10747847,
+    10694332,
+    10640414,
+    10622322,
+    11568979,
+    11550925,
+    11506215,
+    11500236,
+    11474500,
+    11419604,
+    11404740,
+    11396397,
+    11322252,
+    11306965,
+    11301129,
+    11278620,
+    11230222,
+    11097642,
+    11089895,
+    11088831,
+    11071836
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "UNKNOWN OR OTHER",
+   "count": 88,
+   "by_year": {
+    "2014": 8,
+    "2015": 26,
+    "2016": 18,
+    "2017": 8,
+    "2018": 3,
+    "2019": 8,
+    "2020": 7,
+    "2021": 4,
+    "2022": 4,
+    "2023": 2
+   },
+   "sample_odi": [
+    11717682,
+    11415284,
+    11384988,
+    11367099,
+    11320952,
+    11207131,
+    11066565,
+    11019423,
+    11641901,
+    11637459,
+    11629794,
+    11544656,
+    11502066,
+    11481126,
+    11404124,
+    11395409,
+    11349888,
+    11337940,
+    11337522,
+    11288265,
+    11246114,
+    11206442,
+    10894269,
+    10876585,
+    10874226
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "SERVICE BRAKES",
+   "count": 80,
+   "by_year": {
+    "2014": 11,
+    "2015": 16,
+    "2016": 19,
+    "2017": 14,
+    "2018": 3,
+    "2019": 12,
+    "2020": 1,
+    "2023": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11614327,
+    11341781,
+    11317142,
+    11297896,
+    11138749,
+    11084803,
+    11083141,
+    11078478,
+    10897555,
+    10839267,
+    10747847,
+    11518565,
+    11412959,
+    11402547,
+    11396397,
+    11384061,
+    11349888,
+    11328990,
+    11288819,
+    11206360,
+    11114604,
+    11112747,
+    11096627,
+    11088831,
+    10909512
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "AIR BAGS",
+   "count": 65,
+   "by_year": {
+    "2014": 15,
+    "2015": 10,
+    "2016": 9,
+    "2017": 13,
+    "2018": 6,
+    "2019": 10,
+    "2020": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11614327,
+    11587749,
+    11466658,
+    11067003,
+    11044817,
+    11020503,
+    11019423,
+    10991635,
+    10910032,
+    10884547,
+    10795044,
+    10794493,
+    10713190,
+    10695270,
+    10622322,
+    11751527,
+    11652857,
+    11544656,
+    11433881,
+    11427191,
+    11324223,
+    11071836,
+    11034107,
+    10897180,
+    10680382
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 65,
+   "by_year": {
+    "2014": 8,
+    "2015": 31,
+    "2016": 12,
+    "2017": 3,
+    "2018": 1,
+    "2019": 4,
+    "2020": 1,
+    "2021": 3,
+    "2022": 1,
+    "2024": 1
+   },
+   "sample_odi": [
+    11660798,
+    11413289,
+    11184754,
+    10927373,
+    10898578,
+    10807645,
+    10747847,
+    10654676,
+    11747268,
+    11721989,
+    11619231,
+    11559941,
+    11558145,
+    11557190,
+    11520288,
+    11482026,
+    11466877,
+    11419601,
+    11416554,
+    11412959,
+    11365499,
+    11291687,
+    11256329,
+    11206442,
+    11172342
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 30,
+   "by_year": {
+    "2014": 1,
+    "2015": 18,
+    "2016": 4,
+    "2017": 2,
+    "2019": 3,
+    "2020": 1,
+    "2021": 1
+   },
+   "sample_odi": [
+    11542080,
+    11716839,
+    11580590,
+    11493717,
+    11438828,
+    11419604,
+    11337940,
+    11325744,
+    11156710,
+    10929785,
+    10909512,
+    10870205,
+    10851363,
+    10825531,
+    10819691,
+    10816284,
+    10807893,
+    10807273,
+    10735394,
+    11266118,
+    11234515,
+    10905886,
+    10903707,
+    11166296,
+    11131753
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "STRUCTURE",
+   "count": 30,
+   "by_year": {
+    "2014": 6,
+    "2015": 3,
+    "2016": 14,
+    "2017": 3,
+    "2018": 1,
+    "2019": 3
+   },
+   "sample_odi": [
+    11717682,
+    11320952,
+    10668577,
+    10654676,
+    10633545,
+    10584666,
+    11506215,
+    11355552,
+    11010712,
+    11408174,
+    11399083,
+    11353626,
+    11255456,
+    11206146,
+    11194467,
+    11119719,
+    11066890,
+    11032758,
+    11030459,
+    10995064,
+    10924542,
+    10903707,
+    10822687,
+    11413535,
+    11307249
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "SEAT BELTS",
+   "count": 29,
+   "by_year": {
+    "2014": 10,
+    "2015": 3,
+    "2016": 2,
+    "2017": 5,
+    "2018": 2,
+    "2019": 3,
+    "2020": 3,
+    "2021": 1
+   },
+   "sample_odi": [
+    11433858,
+    11416116,
+    11221910,
+    11164986,
+    11066565,
+    11020503,
+    10807647,
+    10794493,
+    10615889,
+    10522059,
+    11524927,
+    10971511,
+    10903797,
+    11525307,
+    11474072,
+    11446736,
+    11307249,
+    11204515,
+    11166296,
+    11083282,
+    11722776,
+    11722558,
+    11533912,
+    11414012,
+    11290032
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "VISIBILITY/WIPER",
+   "count": 27,
+   "by_year": {
+    "2014": 8,
+    "2015": 8,
+    "2016": 3,
+    "2017": 5,
+    "2019": 2,
+    "2023": 1
+   },
+   "sample_odi": [
+    11655431,
+    11229524,
+    11145312,
+    11111122,
+    11067003,
+    11043956,
+    10948391,
+    10556431,
+    11396397,
+    11288819,
+    11144394,
+    11096627,
+    11090127,
+    11088831,
+    11066917,
+    10939063,
+    11565968,
+    11395911,
+    11113547,
+    11543226,
+    11418458,
+    11403468,
+    11386842,
+    11090827,
+    11744573
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "EXTERIOR LIGHTING",
+   "count": 22,
+   "by_year": {
+    "2014": 1,
+    "2015": 3,
+    "2016": 13,
+    "2017": 3,
+    "2018": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11004317,
+    11544656,
+    11233860,
+    10780227,
+    11566762,
+    11459504,
+    11385543,
+    11344297,
+    11343517,
+    11318114,
+    11307633,
+    11288038,
+    11270053,
+    11268116,
+    11163200,
+    11096821,
+    11003651,
+    11352229,
+    11300468,
+    11229797,
+    11479737,
+    11286459
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "STEERING",
+   "count": 21,
+   "by_year": {
+    "2014": 2,
+    "2015": 5,
+    "2016": 8,
+    "2017": 2,
+    "2018": 1,
+    "2019": 2,
+    "2022": 1
+   },
+   "sample_odi": [
+    11758853,
+    11349238,
+    11420806,
+    11419601,
+    11342557,
+    10870205,
+    10824490,
+    11637509,
+    11424843,
+    11112137,
+    11112196,
+    11066890,
+    11012308,
+    10946987,
+    10897581,
+    11492095,
+    11300468,
+    11529355,
+    11385536,
+    11363127,
+    11582220
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 16,
+   "by_year": {
+    "2016": 3,
+    "2017": 2,
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 3,
+    "2022": 4,
+    "2023": 1
+   },
+   "sample_odi": [
+    11517972,
+    11485066,
+    11397037,
+    11625635,
+    11526117,
+    11553663,
+    11385561,
+    11375931,
+    11641459,
+    11561895,
+    11488453,
+    11545416,
+    11526155,
+    11507135,
+    11484047,
+    11517036
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "SUSPENSION",
+   "count": 13,
+   "by_year": {
+    "2014": 3,
+    "2015": 5,
+    "2016": 2,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11758853,
+    11340434,
+    11297896,
+    11470286,
+    11402547,
+    11390849,
+    11337940,
+    11191765,
+    11640158,
+    11408174,
+    11469872,
+    11142562,
+    11385536
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "count": 12,
+   "by_year": {
+    "2014": 2,
+    "2015": 3,
+    "2016": 2,
+    "2017": 4,
+    "2018": 1
+   },
+   "sample_odi": [
+    10695270,
+    10654676,
+    11230222,
+    11118159,
+    11080090,
+    11349581,
+    11180065,
+    11351016,
+    11280723,
+    11254608,
+    11022245,
+    11323200
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "LATCHES/LOCKS/LINKAGES",
+   "count": 12,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 8,
+    "2017": 2
+   },
+   "sample_odi": [
+    10640414,
+    11568979,
+    11046535,
+    11031966,
+    11031569,
+    11021080,
+    11013755,
+    11012560,
+    11010179,
+    11002030,
+    11279030,
+    11021454
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "PARKING BRAKE",
+   "count": 10,
+   "by_year": {
+    "2014": 1,
+    "2015": 4,
+    "2016": 5
+   },
+   "sample_odi": [
+    11084803,
+    11291526,
+    11152043,
+    11090127,
+    11088831,
+    11474072,
+    11408431,
+    11408174,
+    11394488,
+    11113547
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "SEATS",
+   "count": 10,
+   "by_year": {
+    "2014": 2,
+    "2016": 2,
+    "2017": 4,
+    "2018": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    10807647,
+    10640405,
+    11194807,
+    11192196,
+    11348828,
+    11329406,
+    11115575,
+    11020869,
+    11641330,
+    11287142
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "WHEELS",
+   "count": 8,
+   "by_year": {
+    "2014": 1,
+    "2015": 2,
+    "2016": 2,
+    "2017": 1,
+    "2019": 2
+   },
+   "sample_odi": [
+    11297896,
+    11120433,
+    10824490,
+    11626750,
+    10946962,
+    11518626,
+    11363127,
+    11338572
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "VISIBILITY",
+   "count": 7,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2017": 3,
+    "2018": 1
+   },
+   "sample_odi": [
+    11104267,
+    11478603,
+    11075199,
+    11452107,
+    11282297,
+    11090085,
+    11618718
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "BACK OVER PREVENTION",
+   "count": 5,
+   "by_year": {
+    "2021": 1,
+    "2023": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11630096,
+    11741040,
+    11595999,
+    11553178,
+    11738098
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "ENGINE AND ENGINE COOLING",
+   "count": 5,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    10702330,
+    11489529,
+    11564632,
+    11588728,
+    11575739
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "HYDRAULIC",
+   "count": 5,
+   "by_year": {
+    "2015": 1,
+    "2016": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11402547,
+    11521982,
+    11470822,
+    11154074,
+    11742951
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "LANE DEPARTURE",
+   "count": 5,
+   "by_year": {
+    "2017": 1,
+    "2018": 1,
+    "2021": 2,
+    "2022": 1
+   },
+   "sample_odi": [
+    11543226,
+    11553663,
+    11698038,
+    11561895,
+    11526155
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "EQUIPMENT ADAPTIVE/MOBILITY",
+   "count": 2,
+   "by_year": {
+    "2014": 2
+   },
+   "sample_odi": [
+    10640414,
+    10622322
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "FUEL SYSTEM",
+   "count": 2,
+   "by_year": {
+    "2016": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11194467,
+    11575739
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "GASOLINE",
+   "count": 2,
+   "by_year": {
+    "2016": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11194467,
+    11575739
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "TIRES",
+   "count": 2,
+   "by_year": {
+    "2015": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11120433,
+    11338572
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "AIR",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11425949
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I-US-2011",
+   "component": "EQUIPMENT",
+   "count": 1,
+   "by_year": {
+    "2014": 1
+   },
+   "sample_odi": [
+    10849723
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "I-US-2011|suspension": {
+   "key": "I-US-2011|suspension",
+   "label": "suspension wear (struts, arms, springs)",
+   "count": 6,
+   "by_year": {
+    "2014": 1,
+    "2015": 3,
+    "2016": 2
+   },
+   "sample_odi": [
+    11758853,
+    11390849,
+    11337940,
+    11096627,
+    11119719,
+    10905886
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|loss-of-power": {
+   "key": "I-US-2011|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 20,
+   "by_year": {
+    "2014": 2,
+    "2015": 7,
+    "2016": 4,
+    "2017": 2,
+    "2019": 2,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11561112,
+    11499147,
+    11748513,
+    11615618,
+    11590523,
+    11579137,
+    11470286,
+    10849616,
+    10816195,
+    11587366,
+    11474566,
+    11343517,
+    11064432,
+    11664692,
+    11636737,
+    11546623,
+    11472055,
+    11701428,
+    11726925,
+    11575739
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|hesitation": {
+   "key": "I-US-2011|hesitation",
+   "label": "hesitation / delayed acceleration",
+   "count": 94,
+   "by_year": {
+    "2014": 2,
+    "2015": 58,
+    "2016": 26,
+    "2017": 3,
+    "2019": 1,
+    "2020": 2,
+    "2022": 2
+   },
+   "sample_odi": [
+    11530705,
+    10786132,
+    11721989,
+    11679170,
+    11678718,
+    11602462,
+    11591043,
+    11580590,
+    11558933,
+    11550524,
+    11544656,
+    11535895,
+    11523822,
+    11521737,
+    11520288,
+    11493717,
+    11489529,
+    11464389,
+    11461768,
+    11438140,
+    11422258,
+    11422157,
+    11419601,
+    11412790,
+    11404740
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|battery-drain": {
+   "key": "I-US-2011|battery-drain",
+   "label": "battery drain / no start",
+   "count": 6,
+   "by_year": {
+    "2014": 1,
+    "2015": 2,
+    "2017": 2,
+    "2020": 1
+   },
+   "sample_odi": [
+    11530705,
+    11097642,
+    10748287,
+    11351016,
+    11320184,
+    11576700
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|seat-belt": {
+   "key": "I-US-2011|seat-belt",
+   "label": "seat belt",
+   "count": 6,
+   "by_year": {
+    "2014": 2,
+    "2016": 1,
+    "2018": 1,
+    "2019": 2
+   },
+   "sample_odi": [
+    11466658,
+    11020503,
+    11525307,
+    11722558,
+    11592741,
+    11533912
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|overheating": {
+   "key": "I-US-2011|overheating",
+   "label": "overheating",
+   "count": 9,
+   "by_year": {
+    "2014": 3,
+    "2015": 2,
+    "2016": 1,
+    "2019": 2,
+    "2023": 1
+   },
+   "sample_odi": [
+    11384988,
+    11270460,
+    11223130,
+    11489529,
+    11039938,
+    11394488,
+    11587016,
+    11546623,
+    11738062
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|cvt": {
+   "key": "I-US-2011|cvt",
+   "label": "CVT problems",
+   "count": 54,
+   "by_year": {
+    "2014": 1,
+    "2015": 22,
+    "2016": 18,
+    "2017": 7,
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11270460,
+    11748513,
+    11671396,
+    11579137,
+    11558933,
+    11558145,
+    11555379,
+    11521737,
+    11520337,
+    11446707,
+    11435751,
+    11422157,
+    11360851,
+    11323589,
+    11311805,
+    11246114,
+    11172342,
+    11093651,
+    11039938,
+    10935320,
+    10929787,
+    10749933,
+    10735394,
+    11665436,
+    11626750
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|infotainment": {
+   "key": "I-US-2011|infotainment",
+   "label": "infotainment / display",
+   "count": 8,
+   "by_year": {
+    "2014": 1,
+    "2015": 1,
+    "2020": 2,
+    "2021": 3,
+    "2022": 1
+   },
+   "sample_odi": [
+    11132199,
+    11629794,
+    11699963,
+    11513600,
+    11710012,
+    11630096,
+    11599268,
+    11683120
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|airbag": {
+   "key": "I-US-2011|airbag",
+   "label": "air bag warning / occupant classification",
+   "count": 9,
+   "by_year": {
+    "2014": 2,
+    "2015": 1,
+    "2016": 2,
+    "2017": 2,
+    "2018": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11019423,
+    10713190,
+    11433881,
+    11390935,
+    11349581,
+    11207399,
+    11104577,
+    11641815,
+    11355073
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|air-conditioning": {
+   "key": "I-US-2011|air-conditioning",
+   "label": "air conditioning",
+   "count": 3,
+   "by_year": {
+    "2014": 2,
+    "2015": 1
+   },
+   "sample_odi": [
+    10794493,
+    10702330,
+    11337522
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|fuel-pump-stall": {
+   "key": "I-US-2011|fuel-pump-stall",
+   "label": "fuel pump / stalling",
+   "count": 68,
+   "by_year": {
+    "2014": 1,
+    "2015": 25,
+    "2016": 16,
+    "2017": 6,
+    "2018": 1,
+    "2019": 6,
+    "2020": 5,
+    "2021": 7,
+    "2023": 1
+   },
+   "sample_odi": [
+    10786132,
+    11721989,
+    11558145,
+    11535895,
+    11520288,
+    11489529,
+    11481944,
+    11478802,
+    11471551,
+    11438140,
+    11418828,
+    11416554,
+    11404740,
+    11343196,
+    11321670,
+    11311805,
+    11306965,
+    11291526,
+    11278620,
+    11080090,
+    11024566,
+    10971498,
+    10874226,
+    10870205,
+    10819691
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2014"
+  },
+  "I-US-2011|transmission-failure": {
+   "key": "I-US-2011|transmission-failure",
+   "label": "transmission failure / slipping",
+   "count": 33,
+   "by_year": {
+    "2015": 16,
+    "2016": 14,
+    "2017": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11747268,
+    11615618,
+    11597586,
+    11591043,
+    11580590,
+    11535306,
+    11521737,
+    11474500,
+    11416554,
+    11395409,
+    11360851,
+    11252338,
+    11191180,
+    11172342,
+    10816195,
+    10775951,
+    11665436,
+    11626750,
+    11531420,
+    11494434,
+    11486936,
+    11486938,
+    11485066,
+    11483311,
+    11475994
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|torque-converter": {
+   "key": "I-US-2011|torque-converter",
+   "label": "torque converter shudder",
+   "count": 23,
+   "by_year": {
+    "2015": 12,
+    "2016": 8,
+    "2017": 1,
+    "2019": 1,
+    "2020": 1
+   },
+   "sample_odi": [
+    11520288,
+    11502066,
+    11466877,
+    11435751,
+    11343196,
+    11311805,
+    11192926,
+    11149842,
+    11099862,
+    11097121,
+    11092690,
+    10763669,
+    11595066,
+    11510713,
+    11474566,
+    11449901,
+    11429026,
+    11427234,
+    11364710,
+    10873585,
+    11386842,
+    11714737,
+    11365861
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|misfire": {
+   "key": "I-US-2011|misfire",
+   "label": "misfire / rough running",
+   "count": 6,
+   "by_year": {
+    "2015": 3,
+    "2020": 1,
+    "2021": 2
+   },
+   "sample_odi": [
+    11478802,
+    11404740,
+    11130724,
+    11701428,
+    11606093,
+    11488905
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|harsh-shifting": {
+   "key": "I-US-2011|harsh-shifting",
+   "label": "harsh / erratic shifting",
+   "count": 5,
+   "by_year": {
+    "2015": 4,
+    "2017": 1
+   },
+   "sample_odi": [
+    11478802,
+    11255397,
+    11230246,
+    10822989,
+    11646872
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|brake-failure": {
+   "key": "I-US-2011|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 4,
+   "by_year": {
+    "2015": 2,
+    "2016": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11291526,
+    10680382,
+    11012308,
+    11286459
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|parking-brake": {
+   "key": "I-US-2011|parking-brake",
+   "label": "electronic parking brake",
+   "count": 2,
+   "by_year": {
+    "2015": 1,
+    "2019": 1
+   },
+   "sample_odi": [
+    11291526,
+    11385561
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|engine-failure": {
+   "key": "I-US-2011|engine-failure",
+   "label": "engine failure / knocking / seizure",
+   "count": 2,
+   "by_year": {
+    "2015": 2
+   },
+   "sample_odi": [
+    11192926,
+    11024566
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|oil-consumption": {
+   "key": "I-US-2011|oil-consumption",
+   "label": "excessive oil consumption",
+   "count": 3,
+   "by_year": {
+    "2015": 2,
+    "2017": 1
+   },
+   "sample_odi": [
+    11080090,
+    11024566,
+    11385512
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|timing-drive": {
+   "key": "I-US-2011|timing-drive",
+   "label": "timing chain / belt",
+   "count": 4,
+   "by_year": {
+    "2015": 1,
+    "2017": 1,
+    "2019": 1,
+    "2020": 1
+   },
+   "sample_odi": [
+    11080090,
+    11518626,
+    11639533,
+    11569636
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2015"
+  },
+  "I-US-2011|steering-noise": {
+   "key": "I-US-2011|steering-noise",
+   "label": "steering column / coupler noise",
+   "count": 2,
+   "by_year": {
+    "2016": 2
+   },
+   "sample_odi": [
+    11640158,
+    11424843
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2016"
+  },
+  "I-US-2011|water-leak": {
+   "key": "I-US-2011|water-leak",
+   "label": "water leak into cabin",
+   "count": 2,
+   "by_year": {
+    "2016": 2
+   },
+   "sample_odi": [
+    11113547,
+    11032758
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2016"
+  },
+  "I-US-2011|paint": {
+   "key": "I-US-2011|paint",
+   "label": "paint peeling",
+   "count": 1,
+   "by_year": {
+    "2016": 1
+   },
+   "sample_odi": [
+    10822687
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2016"
+  },
+  "I-US-2011|door-latch": {
+   "key": "I-US-2011|door-latch",
+   "label": "door lock / latch",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11439056
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-outlander-sport-2017"
+  }
+ },
+ "issues": [
+  {
+   "id": "outlander-sport-I-US-2011-recall-14V744000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "SEAT BELTS",
+   "title": "NHTSA recall 14V744000: SEAT BELTS",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2013-2015 Outlander Sport vehicles manufactured July 20, 2012, to July 23, 2014.  In the affected vehicles, the front passenger seat belt lap end attachment fastener may not be torqued to specification, and the fastener may loosen with time.",
+   "consequences": "A loosened and weakened fastener may not be capable of withstanding the load forces associated with a vehicle crash, leaving the seat occupant insufficiently restrained and increasing the risk of injury.",
+   "inspection": "Check that NHTSA recall 14V744000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Mitsubishi will notify owners, and dealers will inspect and replace the seat belt lap end attachment fastener, free of charge.  The recall began on December 1, 2014.  Owners may contact Mitsubishi customer service at 1-714-372-6000.  Mitsubishi's number for this recall is SR-14-011.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "14V744000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-16V792000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+   "title": "NHTSA recall 16V792000: VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2011-2015 Outlander Sport vehicles manufactured August 26, 2010, to January 5, 2015.  In the affected vehicles, water may drop between the hood and the windshield and leak into the wiper motor breathing hole.  The water may cause internal corrosion of the windshield wiper motor and the possible failure of the motor.",
+   "consequences": "Failure of the wiper motor can cause a loss of visibility, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 16V792000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the wiper motor, free of charge.  The manufacturer has begun the recall, but parts are not yet available; a second notice will be sent when parts are available.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-010.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "16V792000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-18V070000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "PARKING BRAKE",
+   "title": "NHTSA recall 18V070000: PARKING BRAKE",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2014-2016 Outlander and 2013-2016 Outlander Sport vehicles.  Water may enter the rear brake calipers causing the parking brake actuator shafts to corrode and possibly bind.",
+   "consequences": "If the parking brake actuator shaft binds, the parking brake may not engage or disengage fully.  If the parking brake does not engage properly, the vehicle may move unexpectedly if it is parked on a slope, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 18V070000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will inspect the rear brake calipers and replace the parking brake boot and lever or the brake caliper body, as necessary.  Dealers will also replace the piston assembly of the rear brake caliper.  These repairs will be performed free of charge.  The recall is expected to begin March 27, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-002.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "18V070000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-18V103000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+   "title": "NHTSA recall 18V103000: VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2011-2016 Outlander Sport vehicles.  Water may enter between the hood and windshield and cause the front wiper link ball joint to corrode, possibly resulting in the wiper link separating and the wipers becoming inoperative.",
+   "consequences": "Loss of wiper function can reduce visibility and increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 18V103000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the rod of the wiper link and the wiper motor crank arm, free of charge.  The recall is expected to begin April 10, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-004.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "18V103000"
+    ],
+    "tsbs": [
+     "10152963",
+     "10152964",
+     "10159644",
+     "10159663"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|suspension"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-20V279000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "STRUCTURE:FRAME AND MEMBERS",
+   "title": "NHTSA recall 20V279000: STRUCTURE:FRAME AND MEMBERS",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2008-2010 Lancer, 2009-2010 Lancer Sportback, 2008-2013 Outlander, and 2011-2016 Outlander Sport vehicles originally sold in, or ever registered in, Connecticut, Delaware, the District of Columbia, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, Virginia, West Virginia, and Wisconsin.  The front lower control arms may detach due to the front cross member corroding from salt water exposure such as from road salt use.",
+   "consequences": "A detached front control arm can result in a loss of vehicle control, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 20V279000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will inspect the front cross members.  Depending on the level of existing corrosion, either a sealing/anti-corrosion agent will be applied or the front cross member will be replaced with a new one.  These repairs will be performed free of charge.  The recall began August 7, 2020.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-20-003.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [
+     "20V279000"
+    ],
+    "tsbs": [
+     "10152963",
+     "10152964",
+     "10159644",
+     "10159663"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|suspension"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-21V144000",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+   "title": "NHTSA recall 21V144000: SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2013-2015 Outlander Sport vehicles originally sold, or ever registered, in Connecticut, Delaware, the District of Columbia, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, Virginia, West Virginia, and Wisconsin.  The front lower control arms may detach due to the front cross member corroding from salt water exposure, such as from road salt use.",
+   "consequences": "A detached front control arm can result in a loss of vehicle control, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 21V144000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will inspect the front cross members. Depending on the level of existing corrosion, either a sealing/anti-corrosion agent will be applied, or the front cross member will be replaced with a new one, free of charge. Owners may contact MMNA customer service at 1-888-648-7820. MMNA's number for this recall is SR-21-001. This recall is an expansion of NHTSA recall number 20V-279. Owners not previously notified under 20V-279 were notified on March 22, 2021.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    4
+   ],
+   "evidence": {
+    "recalls": [
+     "21V144000"
+    ],
+    "tsbs": [
+     "10152963",
+     "10152964",
+     "10159644",
+     "10159663"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|suspension"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-16V548000",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:COOLING UNIT AND LINES",
+   "title": "NHTSA recall 16V548000: POWER TRAIN:AUTOMATIC TRANSMISSION:COOLING UNIT AND LINES",
+   "symptoms": [
+    "CVT problems"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2015 Mitsubishi Outlander Sport vehicles manufactured June 25, 2014, through November 25, 2015 and equipped with a 2.0L engine and a continuously variable transmission (CVT).  During assembly, a clamp for a CVT hose may not have been properly secured, allowing the hose to detach and leak transmission fluid.",
+   "consequences": "If enough transmission fluid leaks out, the transmission may not function properly and the vehicle may become inoperable, increasing the risk of a crash.  Additionally, if leaking transmission fluid contacts an a hot surface there is an increased risk of a fire.",
+   "inspection": "Check that NHTSA recall 16V548000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Mitsubishi will notify owners, and dealers will inspect the hose clamps, correcting their installation, as necessary, free of charge. The recall began on August 15, 2016.  Owners may contact Mitsubishi customer service at 1-888-648-7820.  Mitsubishi's number for this recall is SR-16-005.",
+   "severity": "HIGH",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    22
+   ],
+   "evidence": {
+    "recalls": [
+     "16V548000"
+    ],
+    "tsbs": [
+     "10076260",
+     "10076264",
+     "10098874",
+     "10117841",
+     "10118050",
+     "10152871",
+     "10158407",
+     "10159648",
+     "10159667",
+     "10166281",
+     "10175777",
+     "10182328",
+     "10208827",
+     "10231411",
+     "10250860"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|cvt"
+    ]
+   },
+   "rule": "recall + TSB + complaint pattern"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-16V563000",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+   "title": "NHTSA recall 16V563000: POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+   "symptoms": [
+    "CVT problems"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2015-2016 Outlander Sport vehicles and 2016 Outlander and Lancer vehicles.  The affected vehicles are equipped with a constant velocity transmission (CVT) that, in certain driving conditions, may cause a delay in the vehicle accelerating.",
+   "consequences": "A hesitation during acceleration can increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 16V563000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA has notified owners, and dealers will reprogram the CVT control unit with modified software, free of charge.  The recall began on August 15, 2016.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-006.",
+   "severity": "HIGH",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    40
+   ],
+   "evidence": {
+    "recalls": [
+     "16V563000"
+    ],
+    "tsbs": [
+     "10076260",
+     "10076264",
+     "10098874",
+     "10117841",
+     "10118050",
+     "10152871",
+     "10158407",
+     "10159648",
+     "10159667",
+     "10166281",
+     "10175777",
+     "10182328",
+     "10208827",
+     "10231411",
+     "10250860"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|cvt"
+    ]
+   },
+   "rule": "recall + TSB + complaint pattern"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-17V609000",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+   "title": "NHTSA recall 17V609000: ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2015-2017 Outlander, 2015-2016 Lancer and Outlander Sport, and 2015 Lancer Evolution vehicles.  These vehicles may have defective relays that can result in an engine stall, reduced engine power or the engine overheating.",
+   "consequences": "If the engine stalls, there is an increased the risk of a crash.",
+   "inspection": "Check that NHTSA recall 17V609000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the affected relays, free of charge.  The recall began October 24, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-17-005.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "17V609000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-16V867000",
+   "generation": "I-US-2011",
+   "years": [
+    2016,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "STRUCTURE:BODY:HATCHBACK/LIFTGATE:HINGE AND ATTACHMENTS",
+   "title": "NHTSA recall 16V867000: STRUCTURE:BODY:HATCHBACK/LIFTGATE:HINGE AND ATTACHMENTS",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2011-2012 Outlander Sport vehicles manufactured August 26, 2010, to June 1, 2012, and 2016 Outlander Sport vehicles manufactured January 11, 2016, to July 8, 2016.  The lift gate support outer tube on the affected vehicles may have insufficient anti-corrosion treatment that can allow the outer tube to corrode due to salt and water penetration.",
+   "consequences": "If the outer tube corrodes, there may be a rapid loss of the gas used to provide lift assistance, causing the lift gate to fall suddenly, increasing the risk of injury.",
+   "inspection": "Check that NHTSA recall 16V867000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the lift gate supports, free of charge.  The recall began on January 20, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-16-011.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "16V867000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-17V233000",
+   "generation": "I-US-2011",
+   "years": [
+    2016,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+   "title": "NHTSA recall 17V233000: LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2016 Outlander and Outlander Sport vehicles.  The inside door latch mechanisms may not latch securely in high temperatures, allowing the doors to open while vehicle is in motion.",
+   "consequences": "If a door opens while the vehicle is being driven, it can increase the risk of injury.",
+   "inspection": "Check that NHTSA recall 17V233000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the door latches, free of charge.  The recall began August 25, 2017.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-17-002.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "17V233000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-20V741000",
+   "generation": "I-US-2011",
+   "years": [
+    2016,
+    2016
+   ],
+   "scope_level": "GENERATION",
+   "component": "PARKING BRAKE",
+   "title": "NHTSA recall 20V741000: PARKING BRAKE",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2016 Outlander and Outlander Sport vehicles.  The rust prevention coating on the rear brake operating shafts could have been peeled off during the assembly process.  As a result, water entering the rear brake caliper boot may cause the parking brake operating shafts to corrode and possibly bind.",
+   "consequences": "If the parking brake operating shafts bind, the parking brakes may not engage or disengage fully.  If the parking brakes do not engage properly, the vehicle could rollaway, increasing the risk of a crash.",
+   "inspection": "Check that NHTSA recall 20V741000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will replace the rear brake caliper assemblies, free of charge.  Owner letters were mailed May 4, 2021.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-20-005.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "20V741000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-18V620000",
+   "generation": "I-US-2011",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL SYSTEM:SOFTWARE",
+   "title": "NHTSA recall 18V620000: ELECTRICAL SYSTEM:SOFTWARE",
+   "symptoms": [],
+   "cause": "Mitsubishi Motors North America (MMNA) is recalling certain 2018 Mitsubishi Outlander PHEV, Outlander Sport, 2018-2019 Eclipse Cross, and 2017-2018 Outlander vehicles equipped with a Forward Collision Mitigation (FCM) system that detects pedestrians.   Due to incorrect software, the FCM-ECU (Electronic Control Unit) may apply braking for longer than needed, even after a pedestrian is no longer detected.",
+   "consequences": "If the FCM-ECU software activates the brake for longer than necessary, the driver may react by applying additional braking.  The resulting rapid deceleration of the vehicle can increase the risk of a rear-end collision.",
+   "inspection": "Check that NHTSA recall 18V620000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will reprogram the FCM-ECU software with updated software, free of charge.  The recall is began October 16, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-007.",
+   "severity": "MEDIUM",
+   "probability": "RARE",
+   "complaints_in_years": [],
+   "evidence": {
+    "recalls": [
+     "18V620000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-18V621000",
+   "generation": "I-US-2011",
+   "years": [
+    2018,
+    2018
+   ],
+   "scope_level": "GENERATION",
+   "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+   "title": "NHTSA recall 18V621000: FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+   "symptoms": [
+    "pre-collision false braking"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2018 Mitsubishi Outlander Sport vehicles equipped with a Forward Collision Mitigation (FCM) system and 2018 Mitsubishi Outlander PHEV and Eclipse Cross vehicles and 2017-2018 Outlander vehicles equipped with an Adaptive Cruise Control (ACC) system and/or an Electric Parking Brake (EPB) system.  The software for the Hydraulic Unit Electronic Control Unit (ECU) may be incorrect, possibly preventing the intervention of a safety system such as automatic emergency braking, Anti-lock Braking (ABS), Electronic Stability Control (ESC), or the Brake Auto Hold (BAH) function when any of these systems are in use.",
+   "consequences": "If the safety systems do not function as intended, it can increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 18V621000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "MMNA will notify owners, and dealers will update the Hydraulic Unit-ECU software, free of charge.  The recall began October 16, 2018.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-18-008.",
+   "severity": "HIGH",
+   "probability": "RARE",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [
+     "18V621000"
+    ],
+    "tsbs": [],
+    "complaint_patterns": []
+   },
+   "rule": "recall"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-recall-22V563000",
+   "generation": "I-US-2011",
+   "years": [
+    2019,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+   "title": "NHTSA recall 22V563000: POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+   "symptoms": [
+    "CVT problems"
+   ],
+   "cause": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2019-2022 Outlander Sport vehicles equipped with continuously variable transmissions and mechanical key ignition systems.  A software error in the transmission control unit (CVT-ECU) may incorrectly reduce the transmission gear ratio at high speeds, which can result in an engine stall.",
+   "consequences": "An engine stall can increase the risk of a crash.",
+   "inspection": "Check that NHTSA recall 22V563000 was completed for this VIN (nhtsa.gov/recalls or a dealer).",
+   "typical_fix": "Dealers will update the CVT-ECU software, free of charge.  Owner notification letters were mailed August 24, 2022.  Owners may contact MMNA customer service at 1-888-648-7820.  MMNA's number for this recall is SR-22-004.",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    4
+   ],
+   "evidence": {
+    "recalls": [
+     "22V563000"
+    ],
+    "tsbs": [
+     "10175777",
+     "10208827",
+     "10231411",
+     "10250860"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|cvt"
+    ]
+   },
+   "rule": "recall + TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-air-conditioning",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "HVAC",
+   "title": "Manufacturer communication: air conditioning",
+   "symptoms": [
+    "air conditioning"
+   ],
+   "cause": "MITSUBISHI:  INFORMATION PROVIDED REGARDING VARIOUS ISSUES AS POWER WINDOW ON DRIVER'S DOOR, A/C COMPRESSOR ISSUES, PISTON SCUFF, DAYTIME RUNNING LIGHT OR INTAKE AND EXHAUST SYSTEM OR REPLACEMENT OF REAR AXLE ASSEMBLY.  VARIOUS MODEL YEARS AND VEHICLES.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10058827 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10058827",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    3
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10058827"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|air-conditioning"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-airbag",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "component": "AIR BAGS",
+   "title": "Manufacturer communication: air bag warning / occupant classification",
+   "symptoms": [
+    "air bag warning / occupant classification"
+   ],
+   "cause": "THIS IS A TECHNICAL SERVICE BULLETIN (TSB) SENT TO DEALERS, TO INFORM THEM THAT THIS TSB UPDATES THE INTERIOR SECTION OF THE AFFECTED SERVICE MANUALS TO ADD A WARNING TO CHECK OCCUPANT CLASSIFICATION SENSOR ACCURACY DURING FRONT SEAT REMOVAL AND INSTALLATION.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10091410 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10091410",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    3
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10091410"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|airbag"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-coolant-leak",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "COOLING",
+   "title": "Manufacturer communication: water pump / coolant leak",
+   "symptoms": [
+    "water pump / coolant leak"
+   ],
+   "cause": "This is a Technical Information Notice sent to dealers. The notice informs dealers of some reported coolant leaking from the transmission cooler line hoses at the CVT8 fluid cooler. The notice informs dealers that MMNA is looking to collect 3 complete sets of those CVT8 fluid coolers with the hoses and clamps undisturbed, in order for MMC to perform a duplication test to confirm the area of leakage. | This TSB instructs dealers a condition where the coolant temperature warning light illuminates and a coolant leak is found at the hose connection and to replace the old hose clamp with a countermeasure clamp and to replace the old water hose with a new water hose.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10145511, 10179518, 10179678 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10145511, 10179518, 10179678",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10145511",
+     "10179518",
+     "10179678"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-infotainment",
+   "generation": "I-US-2011",
+   "years": [
+    2017,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "This  is an Advance Technical Information Notice sent to dealers, to inform them of the issues described in TIN-17-54-002 (unresponsive audio system buttons after making a phone call using an iPhone with iOS 11.0 or 11.0.1 and Apple CarPlay?) have now been resolved with iOS 11.1, released by Apple on November 1, 2017. | This Technical Information Notice informs dealers of a warranty extension for an unresponsive touch screen on the SDA2 Audio Unit. | This Technical Service Bulletin informs dealers of a warranty extension for an unresponsive touch screen on the SDA2 Audio Unit.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10127433, 11016677, 11016678, 11024111, 11028350 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10127433, 11016677, 11016678, 11024111, 11028350",
+   "severity": "LOW",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    6
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10127433",
+     "11016677",
+     "11016678",
+     "11024111",
+     "11028350",
+     "11031144"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|infotainment"
+    ],
+    "carcomplaints": [
+     "I-US-2011|android_auto_won_t_connect"
+    ]
+   },
+   "rule": "TSB + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Android Auto Won't Connect\" (owner reports): MY2017: #3, average cost to fix N/A, average mileage 24,000 mi"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-loss-of-power",
+   "generation": "I-US-2011",
+   "years": [
+    2019,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Manufacturer communication: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "This Technical Service Bulletin supersedes TSB-22-16-001REV (\"MIL illumination with  DTC P030X and loss of power due to Fail Safe Mode\") issued August 2023, to update the Affected Vehicle years and provide VIN cut-off information.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10246268 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10246268",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    5
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10246268"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|loss-of-power"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-tsb-torque-converter",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Manufacturer communication: torque converter shudder",
+   "symptoms": [
+    "torque converter shudder"
+   ],
+   "cause": "Certain vehicles with CVT\\8 transmissions may exhibit a shudder condition at low speeds (10 C 40 mph),  or a surge/flare of engine rpm at higher speeds. This may be caused by a malfunctioning of the CVTs  hydraulic pressure control software. In the worst case scenario, with continued driving under these  conditions, the CVT belt may become damaged and cause a warning light to turn on. | Certain vehicles with CVT-8 transmissions may exhibit a shudder condition at low speeds (10  40 mph), or a surge/flare of engine rpm at higher speeds. This may be caused by a malfunctioning of the CVTs hydraulic pressure control software. In the worst case scenario, with continued driving under these conditions, the CVT belt may become damaged and cause a warning light to turn on.  Your local Mitsubishi dealer will reprogram the transmission control module (TCM). This repair will take from 0.3 to 0.6 hours to complete. In extreme cases, the transmission may need to be replaced. This repair will take approximately 6.8 to 8.2 hours. However, the dealer may need your vehicle for a longer period of time due to scheduling. Every effort will be made to minimize your inconvenience. Product improvements will be completed free of charge. | This is a Technical Service Bulletin, sent to dealers, to provide instructions for diagnosing and test driving vehicles with shudder/surge condition and/or DTC.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10076260, 10076264, 10109105, 10161370, 10175777 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10076260, 10076264, 10109105, 10161370, 10175777",
+   "severity": "MEDIUM",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    23
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10076260",
+     "10076264",
+     "10109105",
+     "10161370",
+     "10175777",
+     "10208827"
+    ],
+    "complaint_patterns": [
+     "I-US-2011|torque-converter"
+    ]
+   },
+   "rule": "TSB + complaint pattern"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-complaints-fuel-pump-stall",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "FUEL SYSTEM",
+   "title": "Owners report: fuel pump / stalling",
+   "symptoms": [
+    "fuel pump / stalling"
+   ],
+   "cause": "68 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    68
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I-US-2011|fuel-pump-stall"
+    ],
+    "carcomplaints": [
+     "I-US-2011|stalling",
+     "I-US-2011|stalls_while_driving"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports) + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Stalls While Driving\" (owner reports): MY2014: #3, average cost to fix N/A, average mileage 26,000 mi | CarComplaints.com \"Stalling\" (owner reports): MY2015: #1, average cost to fix N/A, average mileage 1,000 mi"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-complaints-hesitation",
+   "generation": "I-US-2011",
+   "years": [
+    2014,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Owners report: hesitation / delayed acceleration",
+   "symptoms": [
+    "hesitation / delayed acceleration"
+   ],
+   "cause": "94 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    94
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I-US-2011|hesitation"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "outlander-sport-I-US-2011-complaints-transmission-failure",
+   "generation": "I-US-2011",
+   "years": [
+    2015,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Owners report: transmission failure / slipping",
+   "symptoms": [
+    "transmission failure / slipping"
+   ],
+   "cause": "33 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    33
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I-US-2011|transmission-failure"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "I-US-2011|android_auto_won_t_connect",
+   "generation": "I-US-2011",
+   "problem": "Android Auto Won't Connect",
+   "category": "",
+   "symptoms": [
+    "infotainment"
+   ],
+   "by_year": {
+    "2017": {
+     "rank": 3,
+     "avg_cost": "N/A",
+     "avg_mileage": "24,000 mi",
+     "quote": "#3: Android Auto Won't Connect Average Cost to Fix: N/A Average Mileage: 24,000 mi",
+     "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2017/",
+     "problem_url": null
+    }
+   },
+   "site_model": "Outlander Sport",
+   "years": [
+    2017,
+    2017
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-outlander-sport-2017-0572a8"
+   ]
+  },
+  {
+   "key": "I-US-2011|stalling",
+   "generation": "I-US-2011",
+   "problem": "Stalling",
+   "category": "",
+   "symptoms": [
+    "fuel-pump-stall"
+   ],
+   "by_year": {
+    "2015": {
+     "rank": 1,
+     "avg_cost": "N/A",
+     "avg_mileage": "1,000 mi",
+     "quote": "#1: Stalling Average Cost to Fix: N/A Average Mileage: 1,000 mi",
+     "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2015/",
+     "problem_url": null
+    }
+   },
+   "site_model": "Outlander Sport",
+   "years": [
+    2015,
+    2015
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-outlander-sport-2015-528846"
+   ]
+  },
+  {
+   "key": "I-US-2011|stalls_while_driving",
+   "generation": "I-US-2011",
+   "problem": "Stalls While Driving",
+   "category": "",
+   "symptoms": [
+    "fuel-pump-stall"
+   ],
+   "by_year": {
+    "2014": {
+     "rank": 3,
+     "avg_cost": "N/A",
+     "avg_mileage": "26,000 mi",
+     "quote": "#3: Stalls While Driving Average Cost to Fix: N/A Average Mileage: 26,000 mi",
+     "url": "https://www.carcomplaints.com/Mitsubishi/Outlander_Sport/2014/",
+     "problem_url": null
+    }
+   },
+   "site_model": "Outlander Sport",
+   "years": [
+    2014,
+    2014
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-outlander-sport-2014-544260"
+   ]
+  }
+ ],
+ "tsbs": [
+  {
+   "id": "10152963",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin that was sent to dealers. The bulletin updates the Front Suspension section of the affected Service Manuals to update the special service tool used in replacement of the Lower Arm Ball Joint Dust Cover.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10152964",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin that was sent to dealers. The bulletin updates the Front Suspension section of the affected Service Manuals to correct the starting torque of the Lower Arm Ball Joint rotation.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10159644",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. This bulletin updates the Rear Suspension section of the affected Service Manuals, to delete the requirement for an installation direction of the coil spring end of the shock absorber assembly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10159663",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. This bulletin updates the Rear Suspension section of the affected Service Manuals, to delete the requirement for an installation direction of the coil spring end of the shock absorber assembly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10076264",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "Certain vehicles with CVT\\8 transmissions may exhibit a shudder condition at low speeds (10 C 40 mph),  or a surge/flare of engine rpm at higher speeds. This may be caused by a malfunctioning of the CVTs  hydraulic pressure control software. In the worst case scenario, with continued driving under these  conditions, the CVT belt may become damaged and cause a warning light to turn on.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10076260",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "Certain vehicles with CVT-8 transmissions may exhibit a shudder condition at low speeds (10  40 mph), or a surge/flare of engine rpm at higher speeds. This may be caused by a malfunctioning of the CVTs hydraulic pressure control software. In the worst case scenario, with continued driving under these conditions, the CVT belt may become damaged and cause a warning light to turn on.  Your local Mitsubishi dealer will reprogram the transmission control module (TCM). This repair will take from 0.3 to 0.6 hours to complete. In extreme cases, the transmission may need to be replaced. This repair will take approximately 6.8 to 8.2 hours. However, the dealer may need your vehicle for a longer period of time due to scheduling. Every effort will be made to minimize your inconvenience. Product improvements will be completed free of charge.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10098874",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "THIS TECHNICAL SERVICE BULLETIN, PROVIDED TO DEALERS, PROVIDES INSTRUCTIONS FOR ECU INITIALIZATION WHEN THE VALVE BODY, CVT ASSEMBLY OR CVT&#8722;ECU (ECU) IS REPLACED.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10117841",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "This is a Technical Information Notice sent to dealers, to detail the procedures required after replacing a Continuously Variable Transmission.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10118050",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "This is a Technical Information Notice that was sent to dealers to inform them that the CVT-8 Automatic Transaxle Assembly had been placed on \"209\" order restriction.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10152871",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. The bulletin instructs dealers to confirm a list of specific Diagnostic Trouble Codes (DTCs)  if vehicle experiences the following symptoms in cold weather: the check engine light illuminating with a limited vehicle speed (failsafe mode), or the engine does not restart after driving a short distance and stopping the engine for a few minutes. Once symptoms and DTCs are confirmed, dealers should replace the following relays with anti- freezing types: ETV, A/T (CVT), injector, and starter.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10158407",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin that was sent to dealers. The bulletin updates the Automatic Transmission section of the affected Service Manual, to make corrections to the replacement procedures for the CVT assembly and valve body assembly.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10159648",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. The bulletin instructs dealers to confirm a list of specific Diagnostic Trouble Codes (DTCs)  if vehicle experiences the following symptoms in cold weather: the check engine light illuminating with a limited vehicle speed (failsafe mode), or the engine does not restart after driving a short distance and stopping the engine for a few minutes. Once symptoms and DTCs are confirmed, dealers should replace the following relays with anti- freezing types: ETV, A/T (CVT), injector, and starter. This bulletin supersedes TSB-18-13-003, issued December, 2018, to add Eclipse Cross, applicable Canadian models, and countermeasure dates.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10159667",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. The bulletin instructs dealers to confirm a list of specific Diagnostic Trouble Codes (DTCs)  if vehicle experiences the following symptoms in cold weather: the check engine light illuminating with a limited vehicle speed (failsafe mode), or the engine does not restart after driving a short distance and stopping the engine for a few minutes. Once symptoms and DTCs are confirmed, dealers should replace the following relays with anti- freezing types: ETV, A/T (CVT), injector, and starter. This bulletin supersedes TSB-18-13-003, issued December, 2018, to add Eclipse Cross, applicable Canadian models, and countermeasure dates.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10166281",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "This is a Technical Service Bulletin that was sent to dealers, to provide updates to the Automatic Transaxle section of the affected Service Manuals, to correct general information for the CVT lock-up control.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10175777",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Certain vehicles with F1CJC/W1CJC (CVT-8) transmissions may exhibit a shudder or surge condition possibly caused by poor reaction of the hydraulic pressure circuit. With continued driving under these conditions, the CVT belt may slip repeatedly when accelerating, and abrasion powder may enter the hydraulic pressure circuit, causing a warning light to turn on.                                                                                                                                                              This TSB instructs dealers to diagnose and test drive vehicles exhibiting this condition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *This TSB may also apply to later model years with F1CJC/W1CJC (CVT-8) transmissions.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10182328",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "This Technical Service Bulletin instructs dealers to replace the CVT-ECU with a counter-measure part to change the setting of the solenoid valve voltage monitoring circuit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  },
+  {
+   "id": "10208827",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Service Bulletin was sent to dealers directing them to diagnose and test drive customer vehicles with F1CJC/W1CJC (CVT-8) transmissions that may exhibit a shudder or surge condition possibly caused by a poor reaction of the hydraulic pressure circuit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10231411",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This TSB provides the addition of Diagnostic Procedure for CVT Belt Check for vehicles equipped with CVT type F1CJC and W1CJC. (Service Manual Revision)",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10250860",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "summary": "Service Manual Revision - This Technical Service Bulletin provides the procedure for diagnostic trouble code and on-vehicle service for belt & pulley assembly on certain CVT models.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ]
+  },
+  {
+   "id": "10058827",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "MITSUBISHI:  INFORMATION PROVIDED REGARDING VARIOUS ISSUES AS POWER WINDOW ON DRIVER'S DOOR, A/C COMPRESSOR ISSUES, PISTON SCUFF, DAYTIME RUNNING LIGHT OR INTAKE AND EXHAUST SYSTEM OR REPLACEMENT OF REAR AXLE ASSEMBLY.  VARIOUS MODEL YEARS AND VEHICLES.      *PE",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10091410",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "summary": "THIS IS A TECHNICAL SERVICE BULLETIN (TSB) SENT TO DEALERS, TO INFORM THEM THAT THIS TSB UPDATES THE INTERIOR SECTION OF THE AFFECTED SERVICE MANUALS TO ADD A WARNING TO CHECK OCCUPANT CLASSIFICATION SENSOR ACCURACY DURING FRONT SEAT REMOVAL AND INSTALLATION.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2014,
+    2015
+   ]
+  },
+  {
+   "id": "10145511",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "This is a Technical Information Notice sent to dealers. The notice informs dealers of some reported coolant leaking from the transmission cooler line hoses at the CVT8 fluid cooler. The notice informs dealers that MMNA is looking to collect 3 complete sets of those CVT8 fluid coolers with the hoses and clamps undisturbed, in order for MMC to perform a duplication test to confirm the area of leakage.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10179518",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "This TSB instructs dealers a condition where the coolant temperature warning light illuminates and a coolant leak is found at the hose connection and to replace the old hose clamp with a countermeasure clamp and to replace the old water hose with a new water hose.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10179678",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "This TSB instructs dealers a condition where the coolant temperature warning light illuminates and a coolant leak is found at the hose connection and to replace the old hose clamp with a countermeasure clamp and to replace the old water hose with a new water hose.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10127433",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2017,
+    2018
+   ],
+   "summary": "This  is an Advance Technical Information Notice sent to dealers, to inform them of the issues described in TIN-17-54-002 (unresponsive audio system buttons after making a phone call using an iPhone with iOS 11.0 or 11.0.1 and Apple CarPlay?) have now been resolved with iOS 11.1, released by Apple on November 1, 2017.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "11016677",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Information Notice informs dealers of a warranty extension for an unresponsive touch screen on the SDA2 Audio Unit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "11016678",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Service Bulletin informs dealers of a warranty extension for an unresponsive touch screen on the SDA2 Audio Unit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "11024111",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Information Notice informs dealers that the Apple CarPlay and Android Auto icons do not show up on the display when the radio is replaced under Warranty Extension and how to correct the issue..",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "11028350",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Service Bulletin instructs dealers to confirm that the SDA2 Audio Unit touch screen is unresponsive, and if confirmed, to replace the SDA2 Audio Unit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "11031144",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This revised Technical Service Bulletin instructs dealers to confirm that the SDA2 Audio Unit touch screen is unresponsive, and if confirmed, to replace the SDA2 Audio Unit.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10246268",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "summary": "This Technical Service Bulletin supersedes TSB-22-16-001REV (\"MIL illumination with  DTC P030X and loss of power due to Fail Safe Mode\") issued August 2023, to update the Affected Vehicle years and provide VIN cut-off information.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2019,
+    2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10109105",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015
+   ],
+   "summary": "This is a Technical Service Bulletin, sent to dealers, to provide instructions for diagnosing and test driving vehicles with shudder/surge condition and/or DTC.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015
+   ]
+  },
+  {
+   "id": "10161370",
+   "make": "MITSUBISHI",
+   "model": "OUTLANDER SPORT",
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "summary": "This is a Technical Service Bulletin sent to dealers. This bulletin updates the Automatic Transaxle section of the affected Service Manuals, to correct the torque converter pressure in the standard hydraulic pressure table.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2015,
+    2016,
+    2017
+   ]
+  }
+ ],
+ "maintenance": [],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "mitsubishi/outlander-sport",
+   "field": "generation_boundaries",
+   "reason": "no vPIC Canadian specification rows for this line; boundaries from DB codes only"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2014-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2015-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2015-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2015-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2016-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2016-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2016-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2017-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2017-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2017-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2018-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2018-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2018-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2019-2.0l-4cyl-ice-m-5-spd-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2019-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2019-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2020-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2020-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2020-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2020-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2021-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2021-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2021-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2021-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2022-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2022-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2022-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2022-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2023-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2023-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2023-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2023-2.4l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2024-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2024-2.0l-4cyl-ice-a-av-s6-fwd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2024-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2025-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2025-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2026-2.0l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi-outlander-sport-us-2026-2.4l-4cyl-ice-a-av-s6-4wd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mitsubishi/outlander-sport I-US-2011",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  }
+ ],
+ "notes": [
+  "MY2015: one site lists a new generation without redesign wording and the data show no boundary; not used (consumerreports.org: \"This aging small SUV is a shortened version of the previous-generation Outlander\" (https://www.consumerreports.org/cars/mitsubishi/outlander-sport/) [media: weak])"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 1,
+  "configurations": 51,
+  "facts": 0,
+  "recalls": 15,
+  "symptom_patterns": 24,
+  "issues": 24,
+  "issues_by_probability": {
+   "RARE": 9,
+   "OCCASIONAL": 10,
+   "COMMON": 5
+  },
+  "cc_problems": 3,
+  "tsbs": 33,
+  "maintenance": 0,
+  "errors": 0,
+  "display_levels": {}
+ }
+}

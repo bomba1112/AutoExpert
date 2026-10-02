@@ -637,6 +637,36 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2025
   },
+  "nhtsa-recalls-mercedes-maybach-s-class-2022": {
+   "key": "nhtsa-recalls-mercedes-maybach-s-class-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/mercedes-maybach-s-class_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=MERCEDES-MAYBACH+S-CLASS&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:52:56+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MERCEDES-MAYBACH S-CLASS 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-mercedes-maybach-s-class-2023": {
+   "key": "nhtsa-recalls-mercedes-maybach-s-class-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/mercedes-benz/mercedes-maybach-s-class_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=MERCEDES-BENZ&model=MERCEDES-MAYBACH+S-CLASS&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:01+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MERCEDES-MAYBACH S-CLASS 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
   "nhtsa-complaints-s-class-2014": {
    "key": "nhtsa-complaints-s-class-2014",
    "kind": "json_gz",
@@ -1057,6 +1087,36 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2025
   },
+  "nhtsa-complaints-mercedes-maybach-s-class-2022": {
+   "key": "nhtsa-complaints-mercedes-maybach-s-class-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/mercedes-maybach-s-class_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=MERCEDES-MAYBACH+S-CLASS&modelYear=2022",
+   "sha256": "73eef44ffe0c72e1d81e6538dd415dfbc3160ee467d0ffd4ebc1bf096774c371",
+   "retrieved_at": "2026-10-02T10:53:00+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MERCEDES-MAYBACH S-CLASS 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-mercedes-maybach-s-class-2023": {
+   "key": "nhtsa-complaints-mercedes-maybach-s-class-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/mercedes-benz/mercedes-maybach-s-class_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MERCEDES-BENZ&model=MERCEDES-MAYBACH+S-CLASS&modelYear=2023",
+   "sha256": "f2145d17a688d805562c9d88ad8b28cc10f018205bf092590820c57ec297e593",
+   "retrieved_at": "2026-10-02T10:53:03+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MERCEDES-MAYBACH S-CLASS 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -1105,7 +1165,8 @@
    "end_known": false,
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 304/316 cm (MY2020) -> 310/321 cm (MY2021)",
-    "vPIC Canadian specifications: overall length 512/525 -> 521/532 cm (MY2020 -> MY2021; a change of 6 cm or more)"
+    "vPIC Canadian specifications: overall length 512/525 -> 521/532 cm (MY2020 -> MY2021; a change of 6 cm or more)",
+    "consumerreports.org: \"This redesigned flagship sedan continues to deliver a very comfortable ride but the low profile tires mar it.\" (https://www.consumerreports.org/cars/mercedes-benz/s-class/); cars.com: \"Redesigned for 2021\" (https://www.cars.com/research/mercedes_benz-s_class/) [media: generation starts MY2021]"
    ],
    "evidence_tier": "B"
   }
@@ -23054,6 +23115,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10167487",
@@ -25339,6 +25401,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -25625,6 +25688,156 @@
    "scope": "mercedes-benz-s-class-us-2026-6.0l-12cyl-turbo-ice-a-9-spd-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2014-2020",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/s-class US2021+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -25652,7 +25865,9 @@
    "RARE": 2,
    "OCCASIONAL": 29
   },
+  "cc_problems": 0,
   "tsbs": 142,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 359

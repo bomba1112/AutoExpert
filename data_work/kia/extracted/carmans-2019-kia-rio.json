@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 477,
  "edition_market": "US",
  "edition_markers": {
@@ -33,76 +33,37 @@
  },
  "facts": [
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 3.5,
-   "unit": "L",
-   "page": 458,
-   "quote": "3.7 US qt. (3.5 l)",
-   "row": "Gamma 1.6L GDI | 3.7 US qt. (3.5 l) | API Latest (ILSAC Latest)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": "1.6L GDI",
-   "original": "3.7 US qt. (3.5 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
    "key": "transmission_fluid",
    "value": "SP-IV",
    "unit": null,
    "page": 458,
    "quote": "SP-IV",
-   "row": "ATF SP-IV (Recommended MICHANG,",
+   "row": "Automatic transmission fluid | Gamma 1.6L GDI | 7.1 US qt.(6.7 l) | ATF SP-IV (Recommended MICHANG, SK, NOCA, Kia genuine)",
    "label": "transmission fluid",
-   "engine_text": null
-  },
-  {
-   "key": "transmission_fluid_capacity_l",
-   "value": 6.7,
-   "unit": "L",
-   "page": 458,
-   "quote": "7.1 US qt. (6.7 l)",
-   "row": "Automatic transmission fluid | Gamma 1.6L GDI | 7.1 US qt. (6.7 l)",
-   "label": "transmission_fluid_capacity_l",
-   "engine_text": "1.6L GDI",
-   "original": "7.1 US qt. (6.7 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 5.5,
-   "unit": "L",
-   "page": 458,
-   "quote": "5.81 US qt.(5.5 l)",
-   "row": "Coolant | Gamma 1.6L GDI | A/T | 5.81 US qt.(5.5 l) | (Ethylene-glycol with phosphate",
-   "label": "coolant_capacity_l",
-   "engine_text": "1.6L GDI",
-   "original": "5.81 US qt.(5.5 l)",
-   "drive": null,
-   "approx_in_source": false
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate",
+   "value": "Ethylene-glycol with phosphate based coolant for cooling device",
    "unit": null,
    "page": 458,
-   "quote": "Ethylene-glycol with phosphate",
-   "row": "Coolant | Gamma 1.6L GDI | A/T | 5.81 US qt.(5.5 l) | (Ethylene-glycol with phosphate",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device",
+   "row": "Coolant | Gamma 1.6L GDI | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "label": "coolant description",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
-   "key": "transmission_fluid_capacity_l",
-   "value": 0.8,
-   "unit": "L",
+   "key": "brake_fluid",
+   "value": "DOT-3 or DOT-4",
+   "unit": null,
    "page": 458,
-   "quote": "0.8 l)",
-   "row": "(0.7~0.8 l)",
-   "label": "transmission_fluid_capacity_l",
+   "quote": "FMVSS116 DOT-3 or DOT-4",
+   "row": "Brake/clutch fluid | 0.7~0.8 US qt. (0.7~0.8 l) | FMVSS116 DOT-3 or DOT-4",
+   "label": "brake fluid",
    "engine_text": null,
-   "original": "0.8 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "fuel_tank_l",
@@ -111,10 +72,10 @@
    "page": 458,
    "quote": "11.9 US gal (45 l)",
    "row": "Fuel | 11.9 US gal (45 l) | Unleaded gasoline",
-   "label": "fuel_tank_l",
+   "label": "fuel tank l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "11.9 US gal (45 l)",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -128,7 +89,28 @@
    "engine_text": null
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 458,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Gamma 1.6L GDI | 3.7 US qt.(3.5 l) | API Latest (ILSAC Latest)",
+   "reason": "quote not in page text",
+   "quote": "3.7 US qt.(3.5 l)"
+  },
+  {
+   "page": 458,
+   "key": "transmission_fluid_capacity_l",
+   "row": "Automatic transmission fluid | Gamma 1.6L GDI | 7.1 US qt.(6.7 l) | ATF SP-IV (Recommended MICHANG, SK, NOCA, Kia genuine)",
+   "reason": "quote not in page text",
+   "quote": "7.1 US qt.(6.7 l)"
+  },
+  {
+   "page": 458,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | Gamma 1.6L GDI | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   361,

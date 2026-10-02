@@ -1208,7 +1208,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 266 cm (MY2021) -> 269 cm (MY2022)"
+    "vPIC Canadian specifications: wheelbase 266 cm (MY2021) -> 269 cm (MY2022)",
+    "consumerreports.org: \"The redesigned 2022 Lexus NX looks much like the outgoing model, but beneath that familiar design is a raft of improvements.\" (https://www.consumerreports.org/cars/lexus/nx/); cars.com: \"The NX was redesigned for the 2022 model year, and its model lineup was revamped (and expanded).\" (https://www.cars.com/research/lexus-nx_300/) [media: generation starts MY2022]"
    ],
    "evidence_tier": "B"
   }
@@ -9192,6 +9193,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10142501",
@@ -11078,6 +11080,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -11309,6 +11312,156 @@
    "scope": "lexus-nx-us-2026-2.5l-4cyl-hev-a-av-s6-fwd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx I-US-2015",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "lexus/nx US2022+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -11327,7 +11480,9 @@
    "OCCASIONAL": 13,
    "COMMON": 1
   },
+  "cc_problems": 0,
   "tsbs": 116,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 64

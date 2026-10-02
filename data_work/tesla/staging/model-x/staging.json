@@ -1,0 +1,6169 @@
+{
+ "make": "Tesla",
+ "line": "Model X",
+ "line_key": "tesla/model-x",
+ "db_models": [
+  "Model X"
+ ],
+ "market": "US",
+ "build": "us-batch-1",
+ "sources": {
+  "epa": {
+   "key": "epa",
+   "kind": "epa",
+   "path": "data_work/_shared/raw/epa/vehicles.csv.zip",
+   "url": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip",
+   "sha256": "33d32caa0343cdb11c47be631e8a80b7ed7c351ee8503646a4e96485bd67b22f",
+   "retrieved_at": "2026-10-02T06:37:29+00:00",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "epa",
+   "title": "EPA fueleconomy.gov vehicles.csv",
+   "publisher": "U.S. DOE / EPA (fueleconomy.gov)",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "vpic-ca-tesla-2016": {
+   "key": "vpic-ca-tesla-2016",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2016.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2016&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "5818106d03d5231b3a479af85b750efacc0b175ca2d7dfefd9ac4635105c2151",
+   "retrieved_at": "2026-10-02T08:45:49+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2016 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "vpic-ca-tesla-2017": {
+   "key": "vpic-ca-tesla-2017",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2017.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2017&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "91773556813200ed774cbac7ba362ae924e9fbc86fbb6f6a4474287d786d128b",
+   "retrieved_at": "2026-10-02T08:45:54+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2017 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "vpic-ca-tesla-2018": {
+   "key": "vpic-ca-tesla-2018",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2018.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2018&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "9154f0e31fd5af8c1a84b7409769fd69b7624dcad03707e98452bc1776275ead",
+   "retrieved_at": "2026-10-02T08:46:01+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2018 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "vpic-ca-tesla-2019": {
+   "key": "vpic-ca-tesla-2019",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2019.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2019&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "031c522a8e207de64c7e1c550c3aed0ae3b888ba6615a14c4afb2351213fb7c7",
+   "retrieved_at": "2026-10-02T08:46:09+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2019 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "vpic-ca-tesla-2020": {
+   "key": "vpic-ca-tesla-2020",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2020.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2020&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "82015ffa6fc4b388e18942a33e9ac69c95f328c88200aeec224bca737da83864",
+   "retrieved_at": "2026-10-02T08:46:18+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2020 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "vpic-ca-tesla-2021": {
+   "key": "vpic-ca-tesla-2021",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2021.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2021&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "4a85b9189b50f3b6a4a52e07944d4fe2f44f5ecf2f9ab0367d07a620e7680ef7",
+   "retrieved_at": "2026-10-02T08:46:29+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2021 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "vpic-ca-tesla-2022": {
+   "key": "vpic-ca-tesla-2022",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2022.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2022&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "75b1c694c9d808af59a86b71e429c9d7af97fdf1850056472580138a55355545",
+   "retrieved_at": "2026-10-02T08:46:35+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2022 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "vpic-ca-tesla-2023": {
+   "key": "vpic-ca-tesla-2023",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2023.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2023&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "e363e753fb52a56f2f74c242f4b5e53899f8e71a0342a33231611fe3aefdaaa1",
+   "retrieved_at": "2026-10-02T08:46:40+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2023 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "vpic-ca-tesla-2024": {
+   "key": "vpic-ca-tesla-2024",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2024.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "dfb6ccee48267b1338a14e89deb4b0c38fd4a27f2fcd8f15b0692a445861e982",
+   "retrieved_at": "2026-10-02T08:46:44+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2024 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "vpic-ca-tesla-2025": {
+   "key": "vpic-ca-tesla-2025",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2025.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2025&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "c913a85a5ce13a012aecd741e19c602b5d31938dd42d075319efaf1fab3799a5",
+   "retrieved_at": "2026-10-02T08:46:50+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2025 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "vpic-ca-tesla-2026": {
+   "key": "vpic-ca-tesla-2026",
+   "kind": "json_gz",
+   "path": "rawstore:vpic/canada/tesla/2026.json.gz",
+   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2026&make=Tesla&model=&units=Metric&format=json",
+   "sha256": "a27c648a51cadeca5beab47d697a50a553fe1b14f723f0f6fc5b8d67e1320d09",
+   "retrieved_at": "2026-10-02T08:46:54+00:00",
+   "tier": "B",
+   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
+   "registry": "nhtsa-vpic-vehicle-api",
+   "title": "vPIC GetCanadianVehicleSpecifications Tesla 2026 (metric)",
+   "publisher": "NHTSA vPIC (Transport Canada data)",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-recalls-model-x-60d-2016": {
+   "key": "nhtsa-recalls-model-x-60d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-60d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2016",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:32:29+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 60D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-model-x-75d-2016": {
+   "key": "nhtsa-recalls-model-x-75d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-75d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2016",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:32:31+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 75D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-model-x-90d-2016": {
+   "key": "nhtsa-recalls-model-x-90d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-90d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2016",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:32:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 90D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-model-x-p100d-2016": {
+   "key": "nhtsa-recalls-model-x-p100d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p100d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2016",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:32:35+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P100D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-model-x-p90d-2016": {
+   "key": "nhtsa-recalls-model-x-p90d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p90d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2016",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:32:37+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P90D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-recalls-model-x-60d-2017": {
+   "key": "nhtsa-recalls-model-x-60d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-60d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:34:11+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 60D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-model-x-75d-2017": {
+   "key": "nhtsa-recalls-model-x-75d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-75d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:34:12+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 75D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-model-x-90d-2017": {
+   "key": "nhtsa-recalls-model-x-90d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-90d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:34:15+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 90D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-model-x-p100d-2017": {
+   "key": "nhtsa-recalls-model-x-p100d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p100d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:34:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P100D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-model-x-p90d-2017": {
+   "key": "nhtsa-recalls-model-x-p90d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p90d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2017",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:34:18+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P90D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-recalls-model-x-60d-2018": {
+   "key": "nhtsa-recalls-model-x-60d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-60d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:35:11+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 60D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-model-x-75d-2018": {
+   "key": "nhtsa-recalls-model-x-75d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-75d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:35:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 75D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-model-x-90d-2018": {
+   "key": "nhtsa-recalls-model-x-90d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-90d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:35:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 90D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-model-x-p100d-2018": {
+   "key": "nhtsa-recalls-model-x-p100d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p100d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:35:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P100D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-model-x-p90d-2018": {
+   "key": "nhtsa-recalls-model-x-p90d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p90d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2018",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:35:20+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P90D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-recalls-model-x-60d-2019": {
+   "key": "nhtsa-recalls-model-x-60d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-60d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2019",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:00+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 60D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-model-x-75d-2019": {
+   "key": "nhtsa-recalls-model-x-75d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-75d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2019",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:02+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 75D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-model-x-90d-2019": {
+   "key": "nhtsa-recalls-model-x-90d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-90d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2019",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:04+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 90D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-model-x-p100d-2019": {
+   "key": "nhtsa-recalls-model-x-p100d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p100d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2019",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:05+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P100D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-model-x-p90d-2019": {
+   "key": "nhtsa-recalls-model-x-p90d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-p90d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2019",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:07+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X P90D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-recalls-model-x-all-variants-5-seat-2020": {
+   "key": "nhtsa-recalls-model-x-all-variants-5-seat-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants-5-seat_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+5-SEAT%29&modelYear=2020",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:33+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS 5-SEAT) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-model-x-all-variants-6-seat-2020": {
+   "key": "nhtsa-recalls-model-x-all-variants-6-seat-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants-6-seat_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+6-SEAT%29&modelYear=2020",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:36+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS 6-SEAT) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-model-x-all-variants-7psgr-2020": {
+   "key": "nhtsa-recalls-model-x-all-variants-7psgr-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants-7psgr_2020.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+7PSGR%29&modelYear=2020",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:36:38+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS 7PSGR) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-recalls-model-x-5-seat-2021": {
+   "key": "nhtsa-recalls-model-x-5-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-5-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+5-SEAT&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:37:04+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 5-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-model-x-6-seat-2021": {
+   "key": "nhtsa-recalls-model-x-6-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-6-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+6-SEAT&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:37:06+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 6-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-model-x-7-seat-2021": {
+   "key": "nhtsa-recalls-model-x-7-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-7-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+7-SEAT&modelYear=2021",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:37:07+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X 7-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-recalls-model-x-all-variants-2022": {
+   "key": "nhtsa-recalls-model-x-all-variants-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants_2022.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2022",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:37:46+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS) 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-recalls-model-x-all-variants-2023": {
+   "key": "nhtsa-recalls-model-x-all-variants-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:38:10+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS) 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-model-x-all-variants-later-release-2023": {
+   "key": "nhtsa-recalls-model-x-all-variants-later-release-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants-later-release_2023.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29+LATER+RELEASE&modelYear=2023",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:38:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS) LATER RELEASE 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-recalls-model-x-all-variants-2024": {
+   "key": "nhtsa-recalls-model-x-all-variants-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants_2024.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2024",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:38:47+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS) 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-recalls-model-x-all-variants-2025": {
+   "key": "nhtsa-recalls-model-x-all-variants-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-all-variants_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:43:25+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X (ALL VARIANTS) 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-recalls-model-x-bev-2026": {
+   "key": "nhtsa-recalls-model-x-bev-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/tesla/model-x-bev_2026.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL+X+BEV&modelYear=2026",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:43:39+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls MODEL X BEV 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-complaints-model-x-60d-2016": {
+   "key": "nhtsa-complaints-model-x-60d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-60d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2016",
+   "sha256": "3e9e4e7b2d1a6a22566500d6bde6a72f5dbff8f22f100bb4d7c967aa7e3d4d66",
+   "retrieved_at": "2026-10-02T10:33:02+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 60D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-model-x-75d-2016": {
+   "key": "nhtsa-complaints-model-x-75d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-75d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2016",
+   "sha256": "3e9e4e7b2d1a6a22566500d6bde6a72f5dbff8f22f100bb4d7c967aa7e3d4d66",
+   "retrieved_at": "2026-10-02T10:33:05+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 75D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-model-x-90d-2016": {
+   "key": "nhtsa-complaints-model-x-90d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-90d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2016",
+   "sha256": "3e9e4e7b2d1a6a22566500d6bde6a72f5dbff8f22f100bb4d7c967aa7e3d4d66",
+   "retrieved_at": "2026-10-02T10:33:08+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 90D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-model-x-p100d-2016": {
+   "key": "nhtsa-complaints-model-x-p100d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p100d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2016",
+   "sha256": "3e9e4e7b2d1a6a22566500d6bde6a72f5dbff8f22f100bb4d7c967aa7e3d4d66",
+   "retrieved_at": "2026-10-02T10:33:11+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P100D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-model-x-p90d-2016": {
+   "key": "nhtsa-complaints-model-x-p90d-2016",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p90d_2016.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2016",
+   "sha256": "3e9e4e7b2d1a6a22566500d6bde6a72f5dbff8f22f100bb4d7c967aa7e3d4d66",
+   "retrieved_at": "2026-10-02T10:33:14+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P90D 2016",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2016
+  },
+  "nhtsa-complaints-model-x-60d-2017": {
+   "key": "nhtsa-complaints-model-x-60d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-60d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2017",
+   "sha256": "a69fedf80ccd5d0dac4d778b5cc50ed4f20305271a1c374645ab11d6846ede59",
+   "retrieved_at": "2026-10-02T10:34:45+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 60D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-model-x-75d-2017": {
+   "key": "nhtsa-complaints-model-x-75d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-75d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2017",
+   "sha256": "a69fedf80ccd5d0dac4d778b5cc50ed4f20305271a1c374645ab11d6846ede59",
+   "retrieved_at": "2026-10-02T10:34:48+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 75D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-model-x-90d-2017": {
+   "key": "nhtsa-complaints-model-x-90d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-90d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2017",
+   "sha256": "a69fedf80ccd5d0dac4d778b5cc50ed4f20305271a1c374645ab11d6846ede59",
+   "retrieved_at": "2026-10-02T10:34:52+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 90D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-model-x-p100d-2017": {
+   "key": "nhtsa-complaints-model-x-p100d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p100d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2017",
+   "sha256": "a69fedf80ccd5d0dac4d778b5cc50ed4f20305271a1c374645ab11d6846ede59",
+   "retrieved_at": "2026-10-02T10:34:55+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P100D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-model-x-p90d-2017": {
+   "key": "nhtsa-complaints-model-x-p90d-2017",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p90d_2017.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2017",
+   "sha256": "a69fedf80ccd5d0dac4d778b5cc50ed4f20305271a1c374645ab11d6846ede59",
+   "retrieved_at": "2026-10-02T10:34:58+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P90D 2017",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2017
+  },
+  "nhtsa-complaints-model-x-60d-2018": {
+   "key": "nhtsa-complaints-model-x-60d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-60d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2018",
+   "sha256": "5e493a2543e043b1854b576b1313890a36a496813f7e24329c33323f6361f7d5",
+   "retrieved_at": "2026-10-02T10:35:39+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 60D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-model-x-75d-2018": {
+   "key": "nhtsa-complaints-model-x-75d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-75d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2018",
+   "sha256": "5e493a2543e043b1854b576b1313890a36a496813f7e24329c33323f6361f7d5",
+   "retrieved_at": "2026-10-02T10:35:41+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 75D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-model-x-90d-2018": {
+   "key": "nhtsa-complaints-model-x-90d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-90d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2018",
+   "sha256": "5e493a2543e043b1854b576b1313890a36a496813f7e24329c33323f6361f7d5",
+   "retrieved_at": "2026-10-02T10:35:43+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 90D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-model-x-p100d-2018": {
+   "key": "nhtsa-complaints-model-x-p100d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p100d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2018",
+   "sha256": "5e493a2543e043b1854b576b1313890a36a496813f7e24329c33323f6361f7d5",
+   "retrieved_at": "2026-10-02T10:35:46+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P100D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-model-x-p90d-2018": {
+   "key": "nhtsa-complaints-model-x-p90d-2018",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p90d_2018.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2018",
+   "sha256": "5e493a2543e043b1854b576b1313890a36a496813f7e24329c33323f6361f7d5",
+   "retrieved_at": "2026-10-02T10:35:48+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P90D 2018",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2018
+  },
+  "nhtsa-complaints-model-x-60d-2019": {
+   "key": "nhtsa-complaints-model-x-60d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-60d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+60D&modelYear=2019",
+   "sha256": "ad3c3af48ef98bacc232b3d65f6ba1e547b91b53bbc9ddd7b8f3081fe5826dfb",
+   "retrieved_at": "2026-10-02T10:36:22+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 60D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-model-x-75d-2019": {
+   "key": "nhtsa-complaints-model-x-75d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-75d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+75D&modelYear=2019",
+   "sha256": "ad3c3af48ef98bacc232b3d65f6ba1e547b91b53bbc9ddd7b8f3081fe5826dfb",
+   "retrieved_at": "2026-10-02T10:36:25+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 75D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-model-x-90d-2019": {
+   "key": "nhtsa-complaints-model-x-90d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-90d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+90D&modelYear=2019",
+   "sha256": "ad3c3af48ef98bacc232b3d65f6ba1e547b91b53bbc9ddd7b8f3081fe5826dfb",
+   "retrieved_at": "2026-10-02T10:36:27+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 90D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-model-x-p100d-2019": {
+   "key": "nhtsa-complaints-model-x-p100d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p100d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P100D&modelYear=2019",
+   "sha256": "ad3c3af48ef98bacc232b3d65f6ba1e547b91b53bbc9ddd7b8f3081fe5826dfb",
+   "retrieved_at": "2026-10-02T10:36:29+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P100D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-model-x-p90d-2019": {
+   "key": "nhtsa-complaints-model-x-p90d-2019",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-p90d_2019.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+P90D&modelYear=2019",
+   "sha256": "ad3c3af48ef98bacc232b3d65f6ba1e547b91b53bbc9ddd7b8f3081fe5826dfb",
+   "retrieved_at": "2026-10-02T10:36:31+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X P90D 2019",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2019
+  },
+  "nhtsa-complaints-model-x-all-variants-5-seat-2020": {
+   "key": "nhtsa-complaints-model-x-all-variants-5-seat-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants-5-seat_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+5-SEAT%29&modelYear=2020",
+   "sha256": "f26349e5d74acc833a541e16cc6a2d2f33c18ae4eb6cb8d1fb11bc9e81132005",
+   "retrieved_at": "2026-10-02T10:36:45+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS 5-SEAT) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-model-x-all-variants-6-seat-2020": {
+   "key": "nhtsa-complaints-model-x-all-variants-6-seat-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants-6-seat_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+6-SEAT%29&modelYear=2020",
+   "sha256": "f26349e5d74acc833a541e16cc6a2d2f33c18ae4eb6cb8d1fb11bc9e81132005",
+   "retrieved_at": "2026-10-02T10:36:50+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS 6-SEAT) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-model-x-all-variants-7psgr-2020": {
+   "key": "nhtsa-complaints-model-x-all-variants-7psgr-2020",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants-7psgr_2020.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS+7PSGR%29&modelYear=2020",
+   "sha256": "f26349e5d74acc833a541e16cc6a2d2f33c18ae4eb6cb8d1fb11bc9e81132005",
+   "retrieved_at": "2026-10-02T10:36:53+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS 7PSGR) 2020",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2020
+  },
+  "nhtsa-complaints-model-x-5-seat-2021": {
+   "key": "nhtsa-complaints-model-x-5-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-5-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+5-SEAT&modelYear=2021",
+   "sha256": "0df64753ef6b968ae7681ae206c80165c024fdf548b75c3754a96eca798e3e46",
+   "retrieved_at": "2026-10-02T10:37:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 5-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-model-x-6-seat-2021": {
+   "key": "nhtsa-complaints-model-x-6-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-6-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+6-SEAT&modelYear=2021",
+   "sha256": "0df64753ef6b968ae7681ae206c80165c024fdf548b75c3754a96eca798e3e46",
+   "retrieved_at": "2026-10-02T10:37:21+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 6-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-model-x-7-seat-2021": {
+   "key": "nhtsa-complaints-model-x-7-seat-2021",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-7-seat_2021.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+7-SEAT&modelYear=2021",
+   "sha256": "0df64753ef6b968ae7681ae206c80165c024fdf548b75c3754a96eca798e3e46",
+   "retrieved_at": "2026-10-02T10:37:23+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X 7-SEAT 2021",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2021
+  },
+  "nhtsa-complaints-model-x-all-variants-2022": {
+   "key": "nhtsa-complaints-model-x-all-variants-2022",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants_2022.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2022",
+   "sha256": "4d2d41fa80ebe99e31d2f04ee7c0a64ef3cdf15af5b2426e2c0e79dc9200fc9b",
+   "retrieved_at": "2026-10-02T10:38:03+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS) 2022",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2022
+  },
+  "nhtsa-complaints-model-x-all-variants-2023": {
+   "key": "nhtsa-complaints-model-x-all-variants-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2023",
+   "sha256": "ab15a71213a9c6f5535612253f4699c25241946a1faf3713b35ca2d9f62a29c0",
+   "retrieved_at": "2026-10-02T10:38:30+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS) 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-model-x-all-variants-later-release-2023": {
+   "key": "nhtsa-complaints-model-x-all-variants-later-release-2023",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants-later-release_2023.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29+LATER+RELEASE&modelYear=2023",
+   "sha256": "c69ddc93b3f3b6172fe08f568179fd863cd9a9df8259de9df236cf768fbc12e9",
+   "retrieved_at": "2026-10-02T10:38:34+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS) LATER RELEASE 2023",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2023
+  },
+  "nhtsa-complaints-model-x-all-variants-2024": {
+   "key": "nhtsa-complaints-model-x-all-variants-2024",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants_2024.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2024",
+   "sha256": "a61065dbfec743bbea84dcc358f6ad03e7a957fe8230eaa260260847d6bf2f85",
+   "retrieved_at": "2026-10-02T10:43:15+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS) 2024",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2024
+  },
+  "nhtsa-complaints-model-x-all-variants-2025": {
+   "key": "nhtsa-complaints-model-x-all-variants-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-all-variants_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+%28ALL+VARIANTS%29&modelYear=2025",
+   "sha256": "5cb3a80ef2a0102501e52f56d793d9aa078e238901a87983addb2247dc932e77",
+   "retrieved_at": "2026-10-02T10:43:35+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X (ALL VARIANTS) 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
+  "nhtsa-complaints-model-x-bev-2026": {
+   "key": "nhtsa-complaints-model-x-bev-2026",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/tesla/model-x-bev_2026.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=TESLA&model=MODEL+X+BEV&modelYear=2026",
+   "sha256": "564d40db5b4daf5491adc8e8e55d31649bb7f489d744143276639a1774e0349d",
+   "retrieved_at": "2026-10-02T10:43:47+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints MODEL X BEV 2026",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2026
+  },
+  "nhtsa-mfrcomms": {
+   "key": "nhtsa-mfrcomms",
+   "kind": "mfrcomms",
+   "paths": [
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+    "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip"
+   ],
+   "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/",
+   "sha256": "",
+   "retrieved_at": "2026-10-02",
+   "tier": "A",
+   "source_type": "US_FEDERAL_DATASET",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA Manufacturer Communications flat files",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER"
+  }
+ },
+ "generations": [
+  {
+   "code": "I",
+   "name": "First generation, 2015–2020 service cohort",
+   "db_model": "Model X",
+   "existing_id": "60813f76-fd01-4162-a476-ba5ccc126d3e",
+   "start_year": 2016,
+   "end_year": 2026,
+   "open_ended": true,
+   "start_known": true,
+   "end_known": false,
+   "boundary_evidence": [
+    "first US model year of the line in EPA vehicles.csv: 2016"
+   ],
+   "evidence_tier": "B"
+  }
+ ],
+ "configurations": [
+  {
+   "configuration_key": "tesla-model-x-us-2016-ev-bev-a-a1-awd",
+   "year": 2016,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "36979",
+     "epa_model": "Model X AWD - 90D",
+     "city_mpg": 90,
+     "highway_mpg": 94,
+     "combined_mpg": 92,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (90 kW-hr battery pack)",
+     "range_mi": "257"
+    },
+    {
+     "epa_id": "36980",
+     "epa_model": "Model X AWD - P90D",
+     "city_mpg": 89,
+     "highway_mpg": 90,
+     "combined_mpg": 89,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (90 kW-hr battery pack)",
+     "range_mi": "250"
+    },
+    {
+     "epa_id": "37423",
+     "epa_model": "Model X AWD - 75D",
+     "city_mpg": 91,
+     "highway_mpg": 95,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (75 kW-hr battery pack)",
+     "range_mi": "238"
+    },
+    {
+     "epa_id": "38173",
+     "epa_model": "Model X AWD - 60D",
+     "city_mpg": 91,
+     "highway_mpg": 94,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (60 kW-hr battery pack)",
+     "range_mi": "200"
+    },
+    {
+     "epa_id": "38500",
+     "epa_model": "Model X AWD - P100D",
+     "city_mpg": 81,
+     "highway_mpg": 92,
+     "combined_mpg": 86,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (100 kW-hr battery pack)",
+     "range_mi": "289"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2017-ev-bev-a-a1-awd",
+   "year": 2017,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "38526",
+     "epa_model": "Model X AWD - 60D",
+     "city_mpg": 91,
+     "highway_mpg": 94,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (60 kW-hr battery pack)",
+     "range_mi": "200"
+    },
+    {
+     "epa_id": "38527",
+     "epa_model": "Model X AWD - 75D",
+     "city_mpg": 91,
+     "highway_mpg": 95,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (75 kW-hr battery pack)",
+     "range_mi": "238"
+    },
+    {
+     "epa_id": "38528",
+     "epa_model": "Model X AWD - 90D",
+     "city_mpg": 90,
+     "highway_mpg": 94,
+     "combined_mpg": 92,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (90 kW-hr battery pack)",
+     "range_mi": "257"
+    },
+    {
+     "epa_id": "38529",
+     "epa_model": "Model X AWD - P90D",
+     "city_mpg": 89,
+     "highway_mpg": 90,
+     "combined_mpg": 89,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (90 kW-hr battery pack)",
+     "range_mi": "250"
+    },
+    {
+     "epa_id": "38530",
+     "epa_model": "Model X AWD - P100D",
+     "city_mpg": 81,
+     "highway_mpg": 92,
+     "combined_mpg": 86,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (100 kW-hr battery pack)",
+     "range_mi": "289"
+    },
+    {
+     "epa_id": "39831",
+     "epa_model": "Model X AWD - 100D",
+     "city_mpg": 86,
+     "highway_mpg": 89,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (100 kW-hr battery pack)",
+     "range_mi": "295"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2018-ev-bev-a-a1-awd",
+   "year": 2018,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "39841",
+     "epa_model": "Model X 75D",
+     "city_mpg": 91,
+     "highway_mpg": 95,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (75 kW-hr battery pack)",
+     "range_mi": "238"
+    },
+    {
+     "epa_id": "39842",
+     "epa_model": "Model X 100D",
+     "city_mpg": 86,
+     "highway_mpg": 89,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (100 kW-hr battery pack)",
+     "range_mi": "295"
+    },
+    {
+     "epa_id": "39843",
+     "epa_model": "Model X P100D",
+     "city_mpg": 83,
+     "highway_mpg": 89,
+     "combined_mpg": 85,
+     "combined_l_100km": "2.8",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (100 kW-hr battery pack)",
+     "range_mi": "289"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2019-ev-bev-a-a1-awd",
+   "year": 2019,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "41195",
+     "epa_model": "Model X 75D",
+     "city_mpg": 91,
+     "highway_mpg": 95,
+     "combined_mpg": 93,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (75 kW-hr battery pack)",
+     "range_mi": "238"
+    },
+    {
+     "epa_id": "41196",
+     "epa_model": "Model X 100D",
+     "city_mpg": 86,
+     "highway_mpg": 89,
+     "combined_mpg": 87,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 193 (rear) (100 kW-hr battery pack)",
+     "range_mi": "295"
+    },
+    {
+     "epa_id": "41197",
+     "epa_model": "Model X P100D",
+     "city_mpg": 83,
+     "highway_mpg": 89,
+     "combined_mpg": 85,
+     "combined_l_100km": "2.8",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front) 375 (rear) (100 kW-hr battery pack)",
+     "range_mi": "289"
+    },
+    {
+     "epa_id": "41514",
+     "epa_model": "Model X Long Range",
+     "city_mpg": 99,
+     "highway_mpg": 93,
+     "combined_mpg": 96,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front), 205/375 (rear) kW ACPM",
+     "range_mi": "325"
+    },
+    {
+     "epa_id": "41515",
+     "epa_model": "Model X Performance (22in Wheels)",
+     "city_mpg": 80,
+     "highway_mpg": 77,
+     "combined_mpg": 79,
+     "combined_l_100km": "3.0",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 (front), 205/375 (rear) kW ACPM",
+     "range_mi": "270"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2020-ev-bev-a-a1-awd",
+   "year": 2020,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "42286",
+     "epa_model": "Model X Long Range",
+     "city_mpg": 99,
+     "highway_mpg": 93,
+     "combined_mpg": 96,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 and 205 kW AC 3-Phase",
+     "range_mi": "328"
+    },
+    {
+     "epa_id": "42287",
+     "epa_model": "Model X Performance (20in Wheels)",
+     "city_mpg": 90,
+     "highway_mpg": 89,
+     "combined_mpg": 90,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "205 and 375 kW AC 3-Phase",
+     "range_mi": "305"
+    },
+    {
+     "epa_id": "42288",
+     "epa_model": "Model X Performance (22in Wheels)",
+     "city_mpg": 80,
+     "highway_mpg": 77,
+     "combined_mpg": 79,
+     "combined_l_100km": "3.0",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "205 and 375 kW AC 3-Phase",
+     "range_mi": "272"
+    },
+    {
+     "epa_id": "42289",
+     "epa_model": "Model X Standard Range",
+     "city_mpg": 105,
+     "highway_mpg": 98,
+     "combined_mpg": 101,
+     "combined_l_100km": "2.3",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 and 205 kW AC 3-Phase",
+     "range_mi": "258"
+    },
+    {
+     "epa_id": "43413",
+     "epa_model": "Model X Long Range Plus",
+     "city_mpg": 108,
+     "highway_mpg": 101,
+     "combined_mpg": 105,
+     "combined_l_100km": "2.2",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "193 and 205 kW AC 3-Phase",
+     "range_mi": "351"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2021-ev-bev-a-a1-awd",
+   "year": 2021,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "43403",
+     "epa_model": "Model X Long Range Plus",
+     "city_mpg": 109,
+     "highway_mpg": 101,
+     "combined_mpg": 105,
+     "combined_l_100km": "2.2",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "180 and 189 kW AC 3-Phase",
+     "range_mi": "371"
+    },
+    {
+     "epa_id": "43404",
+     "epa_model": "Model X Performance (20in Wheels)",
+     "city_mpg": 100,
+     "highway_mpg": 95,
+     "combined_mpg": 97,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "151 and 273 kW AC 3-Phase",
+     "range_mi": "341"
+    },
+    {
+     "epa_id": "43405",
+     "epa_model": "Model X Performance (22in Wheels)",
+     "city_mpg": 89,
+     "highway_mpg": 83,
+     "combined_mpg": 86,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "151 and 273 kW AC 3-Phase",
+     "range_mi": "300"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2022-ev-bev-a-a1-awd",
+   "year": 2022,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "45020",
+     "epa_model": "Model X",
+     "city_mpg": 107,
+     "highway_mpg": 97,
+     "combined_mpg": 102,
+     "combined_l_100km": "2.3",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "243 and 248 kW AC 3-Phase",
+     "range_mi": "348"
+    },
+    {
+     "epa_id": "45021",
+     "epa_model": "Model X Plaid (20 inch wheels)",
+     "city_mpg": 103,
+     "highway_mpg": 93,
+     "combined_mpg": 98,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW AC 3-Phase",
+     "range_mi": "333"
+    },
+    {
+     "epa_id": "45022",
+     "epa_model": "Model X Plaid (22 inch wheels)",
+     "city_mpg": 94,
+     "highway_mpg": 88,
+     "combined_mpg": 91,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW AC 3-Phase",
+     "range_mi": "311"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2023-ev-bev-a-a1-awd",
+   "year": 2023,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "46208",
+     "epa_model": "Model X",
+     "city_mpg": 107,
+     "highway_mpg": 97,
+     "combined_mpg": 102,
+     "combined_l_100km": "2.3",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "243 and 248 kW AC 3-Phase",
+     "range_mi": "348"
+    },
+    {
+     "epa_id": "46209",
+     "epa_model": "Model X Plaid (20 inch wheels)",
+     "city_mpg": 103,
+     "highway_mpg": 93,
+     "combined_mpg": 98,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW AC 3-Phase",
+     "range_mi": "333"
+    },
+    {
+     "epa_id": "46210",
+     "epa_model": "Model X Plaid (22 inch wheels)",
+     "city_mpg": 94,
+     "highway_mpg": 88,
+     "combined_mpg": 91,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW AC 3-Phase",
+     "range_mi": "311"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2024-ev-bev-a-a1-awd",
+   "year": 2024,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "47915",
+     "epa_model": "Model X",
+     "city_mpg": 104,
+     "highway_mpg": 96,
+     "combined_mpg": 100,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "243 and 243 kW ACPM 3-Phase",
+     "range_mi": "335"
+    },
+    {
+     "epa_id": "47916",
+     "epa_model": "Model X Plaid (20in wheels)",
+     "city_mpg": 102,
+     "highway_mpg": 92,
+     "combined_mpg": 98,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW ACPM 3-Phase",
+     "range_mi": "326"
+    },
+    {
+     "epa_id": "47917",
+     "epa_model": "Model X Plaid (22in wheels)",
+     "city_mpg": 94,
+     "highway_mpg": 86,
+     "combined_mpg": 90,
+     "combined_l_100km": "2.6",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW ACPM 3-Phase",
+     "range_mi": "300"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2025-ev-bev-a-a1-awd",
+   "year": 2025,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "48768",
+     "epa_model": "Model X Plaid (20in wheels)",
+     "city_mpg": 98,
+     "highway_mpg": 89,
+     "combined_mpg": 94,
+     "combined_l_100km": "2.5",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW ACPM 3-Phase",
+     "range_mi": "314"
+    },
+    {
+     "epa_id": "48769",
+     "epa_model": "Model X Plaid (22in wheels)",
+     "city_mpg": 92,
+     "highway_mpg": 84,
+     "combined_mpg": 88,
+     "combined_l_100km": "2.7",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230, 230 and 230 kW ACPM 3-Phase",
+     "range_mi": "294"
+    },
+    {
+     "epa_id": "49125",
+     "epa_model": "Model X",
+     "city_mpg": 103,
+     "highway_mpg": 94,
+     "combined_mpg": 98,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "243 and 248 kW ACPM",
+     "range_mi": "329"
+    }
+   ],
+   "engine_rule_cites": []
+  },
+  {
+   "configuration_key": "tesla-model-x-us-2026-ev-bev-a-a1-awd",
+   "year": 2026,
+   "generation": "I",
+   "engine_family_key": null,
+   "transmission_key": null,
+   "powertrain": "BEV",
+   "drivetrain": "AWD",
+   "epa_trany": "Automatic (A1)",
+   "displacement_l": null,
+   "cylinders": null,
+   "aspiration": null,
+   "epa_vehicles": [
+    {
+     "epa_id": "49745",
+     "epa_model": "Model X",
+     "city_mpg": 110,
+     "highway_mpg": 99,
+     "combined_mpg": 105,
+     "combined_l_100km": "2.2",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "246 and 251 kW ACPM",
+     "range_mi": "352"
+    },
+    {
+     "epa_id": "49746",
+     "epa_model": "Model X Plaid",
+     "city_mpg": 105,
+     "highway_mpg": 94,
+     "combined_mpg": 100,
+     "combined_l_100km": "2.4",
+     "fuel_type": "Electricity",
+     "eng_dscr": "",
+     "ev_motor": "230 kW ACPM 3-Phase",
+     "range_mi": "335"
+    }
+   ],
+   "engine_rule_cites": []
+  }
+ ],
+ "facts": [
+  {
+   "id": "model-x-I-vpic-model-x-curb_weight_kg-2016",
+   "generation": "I",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 2390,
+   "unit": "kg",
+   "original": "CW = 2390 (kg, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-height_mm-2016",
+   "generation": "I",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 1680,
+   "unit": "mm",
+   "original": "OH = 168 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-length_mm-2016",
+   "generation": "I",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 5030,
+   "unit": "mm",
+   "original": "OL = 503 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-track_front_mm-2016",
+   "generation": "I",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 1660,
+   "unit": "mm",
+   "original": "TWF = 166 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-track_rear_mm-2016",
+   "generation": "I",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 1700,
+   "unit": "mm",
+   "original": "TWR = 170 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-weight_distribution_front_rear_pct-2016",
+   "generation": "I",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": "49/51",
+   "unit": "%",
+   "original": "WD = 49/51 (front/rear %, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-wheelbase_mm-2016",
+   "generation": "I",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 2970,
+   "unit": "mm",
+   "original": "WB = 297 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-width_mm-2016",
+   "generation": "I",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2016,
+    2016
+   ],
+   "value": 2010,
+   "unit": "mm",
+   "original": "OW = 201 (cm, Canadian specification row 'MODEL X')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2016",
+     "pages": null,
+     "quote": "MODEL X",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2016"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-curb_weight_kg-2017",
+   "generation": "I",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 2390,
+   "unit": "kg",
+   "original": "CW = 2390 (kg, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "CW",
+     "raw_value": "2390",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-height_mm-2017",
+   "generation": "I",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1680,
+   "unit": "mm",
+   "original": "OH = 168 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OH",
+     "raw_value": "168",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-length_mm-2017",
+   "generation": "I",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 5030,
+   "unit": "mm",
+   "original": "OL = 503 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OL",
+     "raw_value": "503",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-track_front_mm-2017",
+   "generation": "I",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1660,
+   "unit": "mm",
+   "original": "TWF = 166 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWF",
+     "raw_value": "166",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-track_rear_mm-2017",
+   "generation": "I",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 1700,
+   "unit": "mm",
+   "original": "TWR = 170 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "TWR",
+     "raw_value": "170",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-weight_distribution_front_rear_pct-2017",
+   "generation": "I",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": "49/51",
+   "unit": "%",
+   "original": "WD = 49/51 (front/rear %, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WD",
+     "raw_value": "49/51",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-wheelbase_mm-2017",
+   "generation": "I",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 2970,
+   "unit": "mm",
+   "original": "WB = 297 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "WB",
+     "raw_value": "297",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  },
+  {
+   "id": "model-x-I-vpic-model-x-4dr-suv-awd-width_mm-2017",
+   "generation": "I",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2017,
+    2026
+   ],
+   "value": 2010,
+   "unit": "mm",
+   "original": "OW = 201 (cm, Canadian specification row 'MODEL X 4DR SUV AWD')",
+   "applicability": {
+    "vpic_ca_model": "MODEL X 4DR SUV AWD",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-tesla-2017",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2018",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2019",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2020",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2021",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2022",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2023",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2024",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2025",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-tesla-2026",
+     "pages": null,
+     "quote": "MODEL X 4DR SUV AWD",
+     "field": "OW",
+     "raw_value": "201",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-tesla-2017"
+  }
+ ],
+ "recalls": [],
+ "complaint_patterns": [
+  {
+   "generation": "I",
+   "component": "UNKNOWN OR OTHER",
+   "count": 336,
+   "by_year": {
+    "2016": 83,
+    "2017": 47,
+    "2018": 29,
+    "2019": 16,
+    "2020": 22,
+    "2021": 9,
+    "2022": 26,
+    "2023": 90,
+    "2024": 8,
+    "2025": 5,
+    "2026": 1
+   },
+   "sample_odi": [
+    11663286,
+    11630304,
+    11618375,
+    11585933,
+    11542001,
+    11539709,
+    11539103,
+    11524586,
+    11523874,
+    11520241,
+    11517217,
+    11513344,
+    11508060,
+    11499178,
+    11492994,
+    11485773,
+    11480086,
+    11466470,
+    11459950,
+    11458556,
+    11444678,
+    11435662,
+    11428811,
+    11426294,
+    11424880
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "SUSPENSION",
+   "count": 324,
+   "by_year": {
+    "2016": 148,
+    "2017": 57,
+    "2018": 34,
+    "2019": 23,
+    "2020": 37,
+    "2021": 6,
+    "2022": 10,
+    "2023": 5,
+    "2024": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11661421,
+    11651182,
+    11645648,
+    11608596,
+    11605987,
+    11588949,
+    11583309,
+    11579425,
+    11577325,
+    11565500,
+    11562357,
+    11551107,
+    11551108,
+    11522444,
+    11517670,
+    11517259,
+    11512222,
+    11509211,
+    11502496,
+    11500041,
+    11497904,
+    11494287,
+    11493706,
+    11490894,
+    11490221
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 279,
+   "by_year": {
+    "2016": 90,
+    "2017": 68,
+    "2018": 26,
+    "2019": 16,
+    "2020": 28,
+    "2021": 7,
+    "2022": 16,
+    "2023": 21,
+    "2024": 3,
+    "2025": 3,
+    "2026": 1
+   },
+   "sample_odi": [
+    11652101,
+    11632748,
+    11632757,
+    11630304,
+    11593071,
+    11571745,
+    11570179,
+    11523874,
+    11513115,
+    11508156,
+    11507738,
+    11494794,
+    11488719,
+    11485041,
+    11467366,
+    11435662,
+    11434115,
+    11428811,
+    11427258,
+    11423952,
+    11417867,
+    11405708,
+    11396074,
+    11394956,
+    11394241
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "STEERING",
+   "count": 221,
+   "by_year": {
+    "2016": 44,
+    "2017": 36,
+    "2018": 7,
+    "2019": 7,
+    "2020": 18,
+    "2021": 13,
+    "2022": 44,
+    "2023": 46,
+    "2024": 3,
+    "2025": 2,
+    "2026": 1
+   },
+   "sample_odi": [
+    11583309,
+    11517571,
+    11517670,
+    11517217,
+    11515160,
+    11513687,
+    11511353,
+    11503178,
+    11457063,
+    11456847,
+    11442201,
+    11437836,
+    11435662,
+    11423667,
+    11413945,
+    11399024,
+    11394956,
+    11394241,
+    11389869,
+    11389326,
+    11388653,
+    11388394,
+    11376836,
+    11373648,
+    11366251
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 152,
+   "by_year": {
+    "2016": 15,
+    "2017": 24,
+    "2018": 19,
+    "2019": 6,
+    "2020": 24,
+    "2021": 6,
+    "2022": 21,
+    "2023": 20,
+    "2024": 9,
+    "2025": 4,
+    "2026": 4
+   },
+   "sample_odi": [
+    11663286,
+    11579425,
+    11572732,
+    11562218,
+    11562222,
+    11560515,
+    11524586,
+    11491513,
+    11487520,
+    11480086,
+    11474952,
+    11452553,
+    11389257,
+    11388490,
+    11083342,
+    11609414,
+    11587001,
+    11572435,
+    11572174,
+    11538247,
+    11525569,
+    11513784,
+    11505612,
+    11505487,
+    11505488
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "STRUCTURE",
+   "count": 127,
+   "by_year": {
+    "2016": 54,
+    "2017": 9,
+    "2018": 15,
+    "2019": 12,
+    "2020": 11,
+    "2021": 2,
+    "2022": 8,
+    "2023": 12,
+    "2024": 3,
+    "2025": 1
+   },
+   "sample_odi": [
+    11639855,
+    11620711,
+    11586282,
+    11585933,
+    11573077,
+    11562220,
+    11542001,
+    11534326,
+    11527929,
+    11521673,
+    11490448,
+    11487520,
+    11482924,
+    11480605,
+    11459950,
+    11458556,
+    11448152,
+    11445608,
+    11444059,
+    11434103,
+    11403645,
+    11394241,
+    11376896,
+    11355455,
+    11337081
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "VEHICLE SPEED CONTROL",
+   "count": 114,
+   "by_year": {
+    "2016": 33,
+    "2017": 13,
+    "2018": 15,
+    "2019": 8,
+    "2020": 18,
+    "2021": 4,
+    "2022": 13,
+    "2023": 7,
+    "2024": 2,
+    "2026": 1
+   },
+   "sample_odi": [
+    11609053,
+    11524586,
+    11513687,
+    11485773,
+    11467551,
+    11416272,
+    11394956,
+    11342632,
+    11337289,
+    11315719,
+    11306541,
+    11300619,
+    11243812,
+    11230558,
+    11096621,
+    11083342,
+    11021411,
+    10995447,
+    10957394,
+    10939234,
+    10935272,
+    10915633,
+    10910701,
+    10910884,
+    10909588
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "SERVICE BRAKES",
+   "count": 79,
+   "by_year": {
+    "2016": 18,
+    "2017": 12,
+    "2018": 10,
+    "2019": 3,
+    "2020": 8,
+    "2021": 1,
+    "2022": 10,
+    "2023": 12,
+    "2024": 2,
+    "2025": 2,
+    "2026": 1
+   },
+   "sample_odi": [
+    11645449,
+    11632748,
+    11632757,
+    11591676,
+    11562222,
+    11560515,
+    11497553,
+    11494939,
+    11451134,
+    11406844,
+    11337992,
+    11306541,
+    11301362,
+    11118315,
+    10995447,
+    10994294,
+    10915633,
+    10893343,
+    11642663,
+    11619734,
+    11616399,
+    11572435,
+    11513784,
+    11502670,
+    11499776
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "LANE DEPARTURE",
+   "count": 58,
+   "by_year": {
+    "2016": 6,
+    "2017": 12,
+    "2018": 6,
+    "2019": 1,
+    "2020": 11,
+    "2021": 5,
+    "2022": 8,
+    "2023": 8,
+    "2024": 1
+   },
+   "sample_odi": [
+    11580688,
+    11572732,
+    11562218,
+    11503178,
+    11406266,
+    11383361,
+    11590591,
+    11587001,
+    11572174,
+    11538247,
+    11505612,
+    11505488,
+    11505489,
+    11483743,
+    11454772,
+    11437973,
+    11387957,
+    11387970,
+    11670369,
+    11659042,
+    11650036,
+    11554607,
+    11552254,
+    11460294,
+    11425492
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "AIR BAGS",
+   "count": 50,
+   "by_year": {
+    "2016": 9,
+    "2017": 8,
+    "2018": 7,
+    "2019": 3,
+    "2022": 10,
+    "2023": 9,
+    "2024": 2,
+    "2025": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11581978,
+    11513115,
+    11485773,
+    11300366,
+    11002052,
+    10935272,
+    10893066,
+    10888814,
+    10873117,
+    11660843,
+    11660999,
+    11619734,
+    11603637,
+    11427586,
+    11083755,
+    11073274,
+    11057449,
+    11638080,
+    11636400,
+    11633471,
+    11590693,
+    11486869,
+    11448136,
+    11092528,
+    11604199
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "VISIBILITY/WIPER",
+   "count": 49,
+   "by_year": {
+    "2016": 25,
+    "2017": 9,
+    "2018": 3,
+    "2019": 1,
+    "2020": 1,
+    "2021": 2,
+    "2022": 2,
+    "2023": 5,
+    "2025": 1
+   },
+   "sample_odi": [
+    11571745,
+    11394704,
+    11394301,
+    11391079,
+    11390716,
+    11389256,
+    11388350,
+    11388370,
+    11387082,
+    11344074,
+    11342059,
+    11331331,
+    11316880,
+    11157011,
+    11119458,
+    11021409,
+    10994139,
+    10969718,
+    10944367,
+    10918798,
+    10910119,
+    10894344,
+    10891845,
+    10872285,
+    10853937
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "POWER TRAIN",
+   "count": 48,
+   "by_year": {
+    "2016": 13,
+    "2017": 10,
+    "2018": 6,
+    "2019": 2,
+    "2020": 8,
+    "2021": 3,
+    "2022": 4,
+    "2023": 1,
+    "2024": 1
+   },
+   "sample_odi": [
+    11632748,
+    11632757,
+    11631654,
+    11517670,
+    11480426,
+    11467551,
+    11442201,
+    11366765,
+    11330716,
+    11301362,
+    10896739,
+    10910108,
+    10882841,
+    11589795,
+    11566022,
+    11545866,
+    11462499,
+    11452243,
+    11447610,
+    11377028,
+    11241618,
+    11133389,
+    11099462,
+    11654640,
+    11604311
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "WHEELS",
+   "count": 40,
+   "by_year": {
+    "2016": 12,
+    "2017": 4,
+    "2018": 6,
+    "2019": 5,
+    "2020": 5,
+    "2022": 4,
+    "2023": 2,
+    "2024": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11500041,
+    11472874,
+    11456847,
+    11415600,
+    11406844,
+    11389326,
+    11377179,
+    11197184,
+    10947973,
+    10945692,
+    10944389,
+    10909588,
+    11678645,
+    11456804,
+    11424045,
+    11308131,
+    11561686,
+    11383515,
+    11353496,
+    11300248,
+    11300322,
+    11139524,
+    11642871,
+    11578807,
+    11511871
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "EXTERIOR LIGHTING",
+   "count": 39,
+   "by_year": {
+    "2016": 13,
+    "2017": 10,
+    "2018": 1,
+    "2019": 3,
+    "2020": 1,
+    "2021": 1,
+    "2022": 3,
+    "2023": 4,
+    "2024": 2,
+    "2025": 1
+   },
+   "sample_odi": [
+    11523874,
+    11504666,
+    11491511,
+    11480161,
+    11428915,
+    11414183,
+    11407088,
+    11394301,
+    11390716,
+    11387082,
+    11361880,
+    11342632,
+    11337992,
+    11479288,
+    11443615,
+    11443605,
+    11428448,
+    11421063,
+    11416031,
+    11396941,
+    11388124,
+    11374898,
+    11349357,
+    11342008,
+    11503087
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "SEAT BELTS",
+   "count": 38,
+   "by_year": {
+    "2016": 1,
+    "2017": 6,
+    "2018": 8,
+    "2019": 1,
+    "2020": 2,
+    "2022": 7,
+    "2023": 9,
+    "2024": 2,
+    "2025": 2
+   },
+   "sample_odi": [
+    11419743,
+    11667735,
+    11616530,
+    11603637,
+    11559804,
+    11558196,
+    11039468,
+    11638080,
+    11636400,
+    11590693,
+    11580699,
+    11554665,
+    11515172,
+    11486869,
+    11286640,
+    11517117,
+    11762468,
+    11626567,
+    11703661,
+    11590563,
+    11551025,
+    11484970,
+    11471239,
+    11467584,
+    11459186
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "BACK OVER PREVENTION",
+   "count": 35,
+   "by_year": {
+    "2016": 12,
+    "2017": 12,
+    "2019": 2,
+    "2020": 3,
+    "2022": 3,
+    "2023": 3
+   },
+   "sample_odi": [
+    11647280,
+    11640970,
+    11580688,
+    11562222,
+    11562224,
+    11504666,
+    11480161,
+    11428915,
+    11426008,
+    11414183,
+    11407088,
+    11389257,
+    11640046,
+    11631873,
+    11505488,
+    11443615,
+    11443097,
+    11436679,
+    11435109,
+    11421063,
+    11377911,
+    11375674,
+    11374944,
+    11190888,
+    11543337
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "SEATS",
+   "count": 33,
+   "by_year": {
+    "2016": 6,
+    "2017": 3,
+    "2018": 10,
+    "2019": 1,
+    "2020": 4,
+    "2022": 4,
+    "2023": 3,
+    "2024": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11513115,
+    11511353,
+    11496743,
+    11494310,
+    11484456,
+    10850222,
+    11660495,
+    11519372,
+    11074683,
+    11594506,
+    11590693,
+    11554665,
+    11541749,
+    11537050,
+    11486869,
+    11471349,
+    11387354,
+    11342614,
+    11151158,
+    11517117,
+    11478914,
+    11477499,
+    11459779,
+    11417864,
+    11541320
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "ENGINE",
+   "count": 22,
+   "by_year": {
+    "2016": 10,
+    "2017": 5,
+    "2018": 3,
+    "2019": 2,
+    "2020": 2
+   },
+   "sample_odi": [
+    11628663,
+    11467551,
+    11437836,
+    11428811,
+    11413420,
+    11343935,
+    11343258,
+    11339512,
+    11300366,
+    10882841,
+    11513784,
+    11452243,
+    11452295,
+    11447610,
+    11099462,
+    11454981,
+    11364590,
+    11210423,
+    11300754,
+    11241054,
+    11464239,
+    11383955
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "FUEL/PROPULSION SYSTEM",
+   "count": 21,
+   "by_year": {
+    "2016": 5,
+    "2017": 7,
+    "2018": 2,
+    "2019": 2,
+    "2020": 1,
+    "2022": 3,
+    "2024": 1
+   },
+   "sample_odi": [
+    11413420,
+    11343935,
+    11243812,
+    10939234,
+    10898260,
+    11545839,
+    11387108,
+    11375676,
+    11277641,
+    11271201,
+    11241618,
+    11099462,
+    11633947,
+    11217285,
+    11663590,
+    11503087,
+    11736694,
+    11564918,
+    11492714,
+    11456281,
+    11685764
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "count": 18,
+   "by_year": {
+    "2016": 9,
+    "2017": 1,
+    "2018": 2,
+    "2019": 3,
+    "2020": 3
+   },
+   "sample_odi": [
+    11365538,
+    11364797,
+    11344074,
+    11343258,
+    11342046,
+    11301846,
+    11083342,
+    10970822,
+    10888814,
+    11112860,
+    11364590,
+    11161245,
+    11364864,
+    11266551,
+    11241054,
+    11363208,
+    11351368,
+    11337068
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "LATCHES/LOCKS/LINKAGES",
+   "count": 15,
+   "by_year": {
+    "2016": 7,
+    "2018": 2,
+    "2021": 2,
+    "2022": 3,
+    "2023": 1
+   },
+   "sample_odi": [
+    11659202,
+    11652101,
+    11571745,
+    11570179,
+    11562224,
+    11426008,
+    11389012,
+    11651899,
+    11538776,
+    11683268,
+    11629420,
+    11589713,
+    11572610,
+    11556893,
+    11578455
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "VISIBILITY",
+   "count": 12,
+   "by_year": {
+    "2016": 8,
+    "2017": 2,
+    "2022": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11504666,
+    11480161,
+    11428915,
+    11414183,
+    11407088,
+    11338380,
+    11096249,
+    10948599,
+    11443615,
+    11421063,
+    11633240,
+    11527946
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "TIRES",
+   "count": 10,
+   "by_year": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 3,
+    "2020": 1,
+    "2022": 1,
+    "2023": 3
+   },
+   "sample_odi": [
+    11507147,
+    11439444,
+    11420041,
+    11139528,
+    11139524,
+    11482475,
+    11477146,
+    11524945,
+    11524949,
+    11524952
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "I",
+   "component": "EQUIPMENT",
+   "count": 5,
+   "by_year": {
+    "2016": 2,
+    "2017": 2,
+    "2023": 1
+   },
+   "sample_odi": [
+    11330590,
+    11139908,
+    11570871,
+    11464344,
+    11629043
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I",
+   "component": "HYDRAULIC",
+   "count": 2,
+   "by_year": {
+    "2023": 2
+   },
+   "sample_odi": [
+    11561295,
+    11561386
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "I",
+   "component": "COMMUNICATION",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11452541
+   ],
+   "above_threshold": false
+  }
+ ],
+ "symptom_patterns": {
+  "I|false-braking": {
+   "key": "I|false-braking",
+   "label": "pre-collision false braking",
+   "count": 29,
+   "by_year": {
+    "2016": 3,
+    "2017": 5,
+    "2018": 7,
+    "2020": 4,
+    "2022": 4,
+    "2023": 5,
+    "2024": 1
+   },
+   "sample_odi": [
+    11663286,
+    11467551,
+    11452553,
+    11609414,
+    11485960,
+    11483743,
+    11457417,
+    11099462,
+    11579414,
+    11574320,
+    11464907,
+    11463136,
+    11455592,
+    11450297,
+    11300604,
+    11579415,
+    11512898,
+    11473752,
+    11450200,
+    11568882,
+    11558768,
+    11493287,
+    11476635,
+    11766026,
+    11725133
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|suspension": {
+   "key": "I|suspension",
+   "label": "suspension wear (struts, arms, springs)",
+   "count": 93,
+   "by_year": {
+    "2016": 50,
+    "2017": 14,
+    "2018": 4,
+    "2019": 4,
+    "2020": 14,
+    "2021": 4,
+    "2022": 1,
+    "2023": 2
+   },
+   "sample_odi": [
+    11661421,
+    11645648,
+    11605987,
+    11588949,
+    11583309,
+    11579425,
+    11551107,
+    11551108,
+    11520241,
+    11517259,
+    11517217,
+    11511353,
+    11479106,
+    11474083,
+    11472874,
+    11464372,
+    11459397,
+    11456847,
+    11436477,
+    11434103,
+    11425000,
+    11423667,
+    11422922,
+    11415200,
+    11413945
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-5-seat-2021"
+  },
+  "I|engine-fire": {
+   "key": "I|engine-fire",
+   "label": "engine compartment fire",
+   "count": 3,
+   "by_year": {
+    "2016": 2,
+    "2019": 1
+   },
+   "sample_odi": [
+    11652101,
+    10980353,
+    11342185
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|coolant-leak": {
+   "key": "I|coolant-leak",
+   "label": "water pump / coolant leak",
+   "count": 3,
+   "by_year": {
+    "2016": 1,
+    "2020": 2
+   },
+   "sample_odi": [
+    11631654,
+    11464239,
+    11462392
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|hybrid-system": {
+   "key": "I|hybrid-system",
+   "label": "hybrid / high-voltage system",
+   "count": 7,
+   "by_year": {
+    "2016": 3,
+    "2017": 1,
+    "2018": 1,
+    "2020": 1,
+    "2022": 1
+   },
+   "sample_odi": [
+    11631654,
+    11507738,
+    11467551,
+    11452295,
+    11604311,
+    11736694,
+    11492714
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|infotainment": {
+   "key": "I|infotainment",
+   "label": "infotainment / display",
+   "count": 62,
+   "by_year": {
+    "2016": 20,
+    "2017": 25,
+    "2018": 6,
+    "2019": 2,
+    "2020": 2,
+    "2021": 2,
+    "2024": 3,
+    "2025": 1,
+    "2026": 1
+   },
+   "sample_odi": [
+    11630304,
+    11523874,
+    11492994,
+    11480086,
+    11394301,
+    11388366,
+    11387082,
+    11376752,
+    11375401,
+    11373434,
+    11360697,
+    11355262,
+    11344047,
+    11343533,
+    11342649,
+    11342084,
+    11340925,
+    11331037,
+    11330742,
+    11330590,
+    11570871,
+    11507909,
+    11505487,
+    11505489,
+    11492220
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-5-seat-2021"
+  },
+  "I|hesitation": {
+   "key": "I|hesitation",
+   "label": "hesitation / delayed acceleration",
+   "count": 1,
+   "by_year": {
+    "2016": 1
+   },
+   "sample_odi": [
+    11628663
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|brake-failure": {
+   "key": "I|brake-failure",
+   "label": "brake failure / ABS",
+   "count": 6,
+   "by_year": {
+    "2016": 3,
+    "2017": 2,
+    "2018": 1
+   },
+   "sample_odi": [
+    11605987,
+    11591676,
+    10905976,
+    11619734,
+    11350295,
+    11161245
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|steering-noise": {
+   "key": "I|steering-noise",
+   "label": "steering column / coupler noise",
+   "count": 17,
+   "by_year": {
+    "2016": 1,
+    "2017": 5,
+    "2018": 1,
+    "2019": 1,
+    "2020": 3,
+    "2021": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 1
+   },
+   "sample_odi": [
+    11583309,
+    11474810,
+    11469513,
+    11460965,
+    11456810,
+    11279979,
+    11516840,
+    11547722,
+    11571675,
+    11542175,
+    11514062,
+    11668225,
+    11702157,
+    11559521,
+    11603890,
+    11594534,
+    11616937
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-5-seat-2021"
+  },
+  "I|air-conditioning": {
+   "key": "I|air-conditioning",
+   "label": "air conditioning",
+   "count": 4,
+   "by_year": {
+    "2016": 1,
+    "2018": 2,
+    "2022": 1
+   },
+   "sample_odi": [
+    11520241,
+    11604311,
+    11576105,
+    11702157
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|steering-loss": {
+   "key": "I|steering-loss",
+   "label": "power steering loss",
+   "count": 19,
+   "by_year": {
+    "2016": 6,
+    "2017": 4,
+    "2020": 1,
+    "2021": 2,
+    "2022": 6
+   },
+   "sample_odi": [
+    11517571,
+    11466725,
+    11308875,
+    10971041,
+    10970607,
+    10907035,
+    11485960,
+    11443097,
+    11350295,
+    11039462,
+    11571675,
+    11674412,
+    11470730,
+    11757903,
+    11729091,
+    11717677,
+    11714488,
+    11598049,
+    11581259
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-5-seat-2021"
+  },
+  "I|loss-of-power": {
+   "key": "I|loss-of-power",
+   "label": "loss of power / limp mode",
+   "count": 16,
+   "by_year": {
+    "2016": 2,
+    "2017": 3,
+    "2019": 4,
+    "2020": 2,
+    "2021": 2,
+    "2022": 2,
+    "2023": 1
+   },
+   "sample_odi": [
+    11503178,
+    11308875,
+    11485960,
+    11452295,
+    11039462,
+    11663590,
+    11491052,
+    11485311,
+    11480619,
+    11736694,
+    11457244,
+    11470730,
+    11408658,
+    11729091,
+    11581259,
+    11718694
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-5-seat-2021"
+  },
+  "I|torque-converter": {
+   "key": "I|torque-converter",
+   "label": "torque converter shudder",
+   "count": 18,
+   "by_year": {
+    "2016": 3,
+    "2017": 2,
+    "2018": 4,
+    "2019": 2,
+    "2020": 6,
+    "2023": 1
+   },
+   "sample_odi": [
+    11479106,
+    11014094,
+    10907035,
+    11447610,
+    11388533,
+    11505982,
+    11469196,
+    11353496,
+    11217285,
+    11501107,
+    11378408,
+    11701961,
+    11675226,
+    11574640,
+    11542175,
+    11481860,
+    11420762,
+    11747871
+   ],
+   "above_threshold": true,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|fuel-pump-stall": {
+   "key": "I|fuel-pump-stall",
+   "label": "fuel pump / stalling",
+   "count": 8,
+   "by_year": {
+    "2016": 2,
+    "2017": 1,
+    "2018": 2,
+    "2019": 1,
+    "2020": 1,
+    "2023": 1
+   },
+   "sample_odi": [
+    11437836,
+    10873117,
+    11102361,
+    11469196,
+    11454981,
+    11480619,
+    11457244,
+    11594660
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|engine-failure": {
+   "key": "I|engine-failure",
+   "label": "engine failure / knocking / seizure",
+   "count": 2,
+   "by_year": {
+    "2016": 1,
+    "2018": 1
+   },
+   "sample_odi": [
+    11427022,
+    11454981
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|overheating": {
+   "key": "I|overheating",
+   "label": "overheating",
+   "count": 4,
+   "by_year": {
+    "2016": 1,
+    "2017": 2,
+    "2018": 1
+   },
+   "sample_odi": [
+    11355262,
+    11604985,
+    11489183,
+    11473604
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2016"
+  },
+  "I|seat-belt": {
+   "key": "I|seat-belt",
+   "label": "seat belt",
+   "count": 6,
+   "by_year": {
+    "2017": 1,
+    "2018": 2,
+    "2020": 1,
+    "2022": 1,
+    "2025": 1
+   },
+   "sample_odi": [
+    11558196,
+    11580699,
+    11286640,
+    11459836,
+    11590563,
+    11695157
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2017"
+  },
+  "I|battery-drain": {
+   "key": "I|battery-drain",
+   "label": "battery drain / no start",
+   "count": 1,
+   "by_year": {
+    "2017": 1
+   },
+   "sample_odi": [
+    11424425
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2017"
+  },
+  "I|parking-brake": {
+   "key": "I|parking-brake",
+   "label": "electronic parking brake",
+   "count": 1,
+   "by_year": {
+    "2018": 1
+   },
+   "sample_odi": [
+    11161245
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-60d-2018"
+  },
+  "I|transmission-failure": {
+   "key": "I|transmission-failure",
+   "label": "transmission failure / slipping",
+   "count": 1,
+   "by_year": {
+    "2020": 1
+   },
+   "sample_odi": [
+    11394404
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-all-variants-5-seat-2020"
+  },
+  "I|airbag": {
+   "key": "I|airbag",
+   "label": "air bag warning / occupant classification",
+   "count": 3,
+   "by_year": {
+    "2022": 1,
+    "2023": 1,
+    "2024": 1
+   },
+   "sample_odi": [
+    11703661,
+    11703187,
+    11753633
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-model-x-all-variants-2022"
+  }
+ },
+ "issues": [
+  {
+   "id": "model-x-I-tsb-air-conditioning",
+   "generation": "I",
+   "years": [
+    2016,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "HVAC",
+   "title": "Manufacturer communication: air conditioning",
+   "symptoms": [
+    "air conditioning"
+   ],
+   "cause": "ON SOME MODEL X VEHICLES, THE A/C CONDENSER PIPES MIGHT HAVE BEEN INSTALLED ON THE INCORRECT CONDENSER PORTS. THIS MIGHT CAUSE POOR OR NO A/C COOLING PERFORMANCE, SLOW SUPERCHARGING, AND/OR NOISE FROM THE CONDENSER PIPES TOUCHING THE FRONT SUSPENSION SWAY BAR. | Certain Model S and Model X vehicles may require a support bracket retrofit to the A/C compressor pipes.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10081832, 10235964 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10081832, 10235964",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    4
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10081832",
+     "10235964"
+    ],
+    "complaint_patterns": [
+     "I|air-conditioning"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "model-x-I-tsb-battery-drain",
+   "generation": "I",
+   "years": [
+    2017,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: battery drain / no start",
+   "symptoms": [
+    "battery drain / no start"
+   ],
+   "cause": "The 100 kWh HV battery on some Model S and Model X vehicles could lead to a no-start condition.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10110753 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10110753",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    1
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10110753"
+    ],
+    "complaint_patterns": [
+     "I|battery-drain"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "model-x-I-tsb-infotainment",
+   "generation": "I",
+   "years": [
+    2016,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "EARLY FRONT DOOR LATCHES ARE SUSCEPTIBLE TO WATER INGRESS, WHICH MIGHT CAUSE THE TOUCHSCREEN TO SHOW THE DOOR IN THE WRONG POSITION OR PREVENT THE DOOR FROM OPENING AND CLOSING AUTOMATICALLY. THE DOOR CAN STILL BE OPENED WITH THE INSIDE HANDLE. | The button on earlier Mobile Connector or Wall Connector charge handles might not open the charge port door on Model X. The charge port door can still be opened from the touchscreen. | Early front door latches are susceptible to water ingress, which might cause the touchscreen to show the door in the wrong position or prevent the door from opening and closing automatically. The door can still be opened with the inside handle.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10081561, 10110759, 10144255, 10154507, 10184230 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10081561, 10110759, 10144255, 10154507, 10184230",
+   "severity": "LOW",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    60
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10081561",
+     "10110759",
+     "10144255",
+     "10154507",
+     "10184230",
+     "10184231",
+     "10184233",
+     "10186276",
+     "10203345",
+     "10210723",
+     "10238118",
+     "10238120",
+     "10238124",
+     "10240944",
+     "10240950",
+     "10240951",
+     "10247392",
+     "10247395",
+     "10247398",
+     "10247399",
+     "10247833",
+     "10247835",
+     "10247836",
+     "10247842",
+     "10247843",
+     "10250483",
+     "10250484",
+     "10250490",
+     "10251049",
+     "10251050",
+     "10251059",
+     "10251060",
+     "10253660",
+     "10253661",
+     "10253663",
+     "10253664",
+     "10253668",
+     "10253672",
+     "11001924",
+     "11005738",
+     "11005739",
+     "11006911",
+     "11009775",
+     "11012218"
+    ],
+    "complaint_patterns": [
+     "I|infotainment"
+    ]
+   },
+   "rule": "TSB + complaint pattern"
+  },
+  {
+   "id": "model-x-I-tsb-parking-brake",
+   "generation": "I",
+   "years": [
+    2021,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "BRAKES",
+   "title": "Manufacturer communication: electronic parking brake",
+   "symptoms": [
+    "electronic parking brake"
+   ],
+   "cause": "On certain Model S and Model X vehicles, the electrical wires for the Electronic Parking Brake (EPB) may be subject to abrasion caused by long term vibration cycling. Abrasion between the EPB wires and the backshell may strip the EPB wire insulation, resulting in water ingress or an electrical short.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10210729 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10210729",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10210729"
+    ],
+    "complaint_patterns": [
+     "I|parking-brake"
+    ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "model-x-I-tsb-steering-noise",
+   "generation": "I",
+   "years": [
+    2016,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "Some Model S and Model X vehicles might exhibit stiff steering due to corrosion at the lower steering column I-shaft U-joint.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10177030 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10177030",
+   "severity": "MEDIUM",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    11
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10177030"
+    ],
+    "complaint_patterns": [
+     "I|steering-noise"
+    ]
+   },
+   "rule": "TSB + complaint pattern"
+  },
+  {
+   "id": "model-x-I-tsb-suspension",
+   "generation": "I",
+   "years": [
+    2016,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "component": "SUSPENSION",
+   "title": "Manufacturer communication: suspension wear (struts, arms, springs)",
+   "symptoms": [
+    "suspension wear (struts, arms, springs)"
+   ],
+   "cause": "ON SOME MODEL X VEHICLES, THE A/C CONDENSER PIPES MIGHT HAVE BEEN INSTALLED ON THE INCORRECT CONDENSER PORTS. THIS MIGHT CAUSE POOR OR NO A/C COOLING PERFORMANCE, SLOW SUPERCHARGING, AND/OR NOISE FROM THE CONDENSER PIPES TOUCHING THE FRONT SUSPENSION SWAY BAR. | On certain Model X vehicles, the main front body harness might contact the RH front upper control arm. | On certain Model 3, Model Y, and Model X vehicles, there may be a water ingress path to both front upper control arm ball joints that, over time, could possibly lead to surface corrosion of these ball joints. This may result in a creaking sound coming from the front suspension when steering at low speeds and under high loads. This is exclusively an NVH condition only and does not result in premature failure of the ball joints.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 10081832, 10173430, 10174930, 10203341, 10203342 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10081832, 10173430, 10174930, 10203341, 10203342",
+   "severity": "MEDIUM",
+   "probability": "COMMON",
+   "complaints_in_years": [
+    86
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "10081832",
+     "10173430",
+     "10174930",
+     "10203341",
+     "10203342"
+    ],
+    "complaint_patterns": [
+     "I|suspension"
+    ]
+   },
+   "rule": "TSB + complaint pattern"
+  },
+  {
+   "id": "model-x-I-tsb-water-leak",
+   "generation": "I",
+   "years": [
+    2021,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "BODY",
+   "title": "Manufacturer communication: water leak into cabin",
+   "symptoms": [
+    "water leak into cabin"
+   ],
+   "cause": "On certain Model S and Model X vehicles built between approximately January 2021 and September 22, 2022, the High Voltage (HV) battery ports plungers intended for internal water leak egress (also known as flood ports) can be replaced with plungers that are more robust against external ingress due to submersion during flooding or other similar high-severity abuse instances. | On certain Model S and Model X vehicles built between approximately January 2021 and September 22, 2022, the High Voltage (HV) battery ports plungers intended for internal water leak egress (also known as flood ports) can be replaced with plungers that are more robust against external ingress due to submersion during flooding or other similar high-severity abuse instances. Replace all 5 flood port plungers with",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11018848, 11023640 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11018848, 11023640",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11018848",
+     "11023640"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "model-x-I-complaints-false-braking",
+   "generation": "I",
+   "years": [
+    2016,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "component": "BRAKES",
+   "title": "Owners report: pre-collision false braking",
+   "symptoms": [
+    "pre-collision false braking"
+   ],
+   "cause": "29 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    29
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I|false-braking"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "model-x-I-complaints-loss-of-power",
+   "generation": "I",
+   "years": [
+    2016,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "POWERTRAIN",
+   "title": "Owners report: loss of power / limp mode",
+   "symptoms": [
+    "loss of power / limp mode"
+   ],
+   "cause": "16 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    16
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I|loss-of-power"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "model-x-I-complaints-steering-loss",
+   "generation": "I",
+   "years": [
+    2016,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Owners report: power steering loss",
+   "symptoms": [
+    "power steering loss"
+   ],
+   "cause": "19 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    19
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I|steering-loss"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  },
+  {
+   "id": "model-x-I-complaints-torque-converter",
+   "generation": "I",
+   "years": [
+    2016,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "component": "TRANSMISSION",
+   "title": "Owners report: torque converter shudder",
+   "symptoms": [
+    "torque converter shudder"
+   ],
+   "cause": "18 NHTSA owner complaints mention this symptom (keyword pattern); no recall or manufacturer communication found.",
+   "consequences": "",
+   "inspection": "Ask for service records and test for the reported symptom during inspection.",
+   "typical_fix": "",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    18
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [],
+    "complaint_patterns": [
+     "I|torque-converter"
+    ]
+   },
+   "rule": "complaint pattern only (owner reports)"
+  }
+ ],
+ "cc_problems": [],
+ "tsbs": [
+  {
+   "id": "10081832",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2016
+   ],
+   "summary": "ON SOME MODEL X VEHICLES, THE A/C CONDENSER PIPES MIGHT HAVE BEEN INSTALLED ON THE INCORRECT CONDENSER PORTS. THIS MIGHT CAUSE POOR OR NO A/C COOLING PERFORMANCE, SLOW SUPERCHARGING, AND/OR NOISE FROM THE CONDENSER PIPES TOUCHING THE FRONT SUSPENSION SWAY BAR.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10235964",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Certain Model S and Model X vehicles may require a support bracket retrofit to the A/C compressor pipes.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10110753",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2017
+   ],
+   "summary": "The 100 kWh HV battery on some Model S and Model X vehicles could lead to a no-start condition.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2017
+   ]
+  },
+  {
+   "id": "10081561",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2016
+   ],
+   "summary": "EARLY FRONT DOOR LATCHES ARE SUSCEPTIBLE TO WATER INGRESS, WHICH MIGHT CAUSE THE TOUCHSCREEN TO SHOW THE DOOR IN THE WRONG POSITION OR PREVENT THE DOOR FROM OPENING AND CLOSING AUTOMATICALLY. THE DOOR CAN STILL BE OPENED WITH THE INSIDE HANDLE.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10110759",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2016
+   ],
+   "summary": "The button on earlier Mobile Connector or Wall Connector charge handles might not open the charge port door on Model X. The charge port door can still be opened from the touchscreen.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10144255",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2016
+   ],
+   "summary": "Early front door latches are susceptible to water ingress, which might cause the touchscreen to show the door in the wrong position or prevent the door from opening and closing automatically. The door can still be opened with the inside handle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10154507",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2016
+   ],
+   "summary": "Early front door latches are susceptible to water ingress, which might cause the touchscreen to show the door in the wrong position or prevent the door from opening and closing automatically. The door can still be opened with the inside handle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2015-2019.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10184230",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model S and Model X vehicles built before March 2018, an 8GB embedded MultiMediaCard (?8GB eMMC?) in the Media Control Unit (MCU) might malfunction due to accumulated wear. This could result in a blank or intermittently blank touchscreen, or an alert on the touchscreen indicating that a memory storage device has degraded and to contact Service.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10184231",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model S and Model X vehicles built before March 2018, an 8GB embedded MultiMediaCard (?8GB eMMC?) in the Media Control Unit (MCU) might malfunction due to accumulated wear. This could result in a blank or intermittently blank touchscreen, or an alert on the touchscreen indicating that a memory storage device has degraded and to contact Service. R1 updates determine eligibility procedure.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10184233",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model S and Model X vehicles built before March 2018, an 8GB embedded MultiMediaCard (?8GB eMMC?) in the Media Control Unit (MCU) might malfunction due to accumulated wear. This could result in a blank or intermittently blank touchscreen, or an alert on the touchscreen indicating that a memory storage device has degraded and to contact Service. R2 updates first step of determine eligibility procedure.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10186276",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model S and Model X vehicles built before March 2018, an 8GB embedded MultiMediaCard (?8GB eMMC?) in the Media Control Unit (MCU) might malfunction due to accumulated wear. This could result in a blank or intermittently blank touchscreen, or an alert on the touchscreen indicating that a memory storage device has degraded and to contact Service.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10203345",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model X vehicles built before May 2018, should water seep into the printed circuit board of the rear door  cladding sensor, an alert might be displayed on the touchscreen.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10210723",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021
+   ],
+   "summary": "Some Model S Palladium and Model X Palladium vehicles were built without a hydraulic control unit (HCU) wake-up line, and in rare circumstances, braking and stability control related alerts may appear on the instrument cluster and touchscreen during the vehicle power-on process. Such faults can typically be corrected and the affected functionality restored with a vehicle power cycle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "10238118",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10238124",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10238120",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10240951",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10240950",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10240944",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016
+   ],
+   "summary": "Early front door latches are susceptible to water ingress, which might cause the touchscreen to show the door in the wrong position or prevent the door from opening and closing automatically. The door can still be opened with the inside handle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016
+   ]
+  },
+  {
+   "id": "10247392",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10247395",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10247398",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10247399",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10247833",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10247842",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10247843",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10247836",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10247835",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10250490",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10250484",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10250483",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10251050",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10251049",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10251060",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2023 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "id": "10251059",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10253672",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2024 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10253668",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2024 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10253664",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2024 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10253663",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10253661",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2021-2024 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "10253660",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owner?s manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owner?s manual content for 2015-2020 Model X vehicles converted to PDF format, and given the distribution method and NHTSA?s submission format requirements, it is the best available representative copy of owner?s manual content. However, a customer who accesses the owner?s manual via their vehicle?s touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "11001924",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021
+   ],
+   "summary": "On certain Model S and Model X vehicles built before November 1, 2021, the vehicle may lack Bluetooth headphone hardware support for the rear touchscreen audio.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "11005738",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owners manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owners manual content for the vehicle converted to PDF format, and given the distribution method and NHTSAs submission format requirements, it is the best available representative copy of owners manual content. However, a customer who accesses the owners manual via their vehicles touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11005739",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owners manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owners manual content for the vehicle converted to PDF format, and given the distribution method and NHTSAs submission format requirements, it is the best available representative copy of owners manual content. However, a customer who accesses the owners manual via their vehicles touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "11006911",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "summary": "Tesla does not provide physical owner's manual copies. Instead, all available owners manual content is integrated into the vehicle software, and only the content relevant for a given vehicle, based on vehicle configuration and software version installed, is displayed on its touchscreen. This file contains all available owners manual content for the vehicle converted to PDF format, and given the distribution method and NHTSAs submission format requirements, it is the best available representative copy of owners manual content. However, a customer who accesses the owners manual via their vehicles touchscreen would only see the parts of this PDF file that are relevant to their vehicle.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "id": "11009775",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021
+   ],
+   "summary": "On certain Model S and Model X vehicles built before November 1, 2021, the vehicle may lack Bluetooth headphone hardware support for the rear touchscreen audio.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021
+   ]
+  },
+  {
+   "id": "11012218",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "summary": "For some Model X vehicles built before May 2018, should water seep into the printed circuit board of the rear door cladding sensor, an alert might be displayed on the touchscreen.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  {
+   "id": "10210729",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022
+   ],
+   "summary": "On certain Model S and Model X vehicles, the electrical wires for the Electronic Parking Brake (EPB) may be subject to abrasion caused by long term vibration cycling. Abrasion between the EPB wires and the backshell may strip the EPB wire insulation, resulting in water ingress or an electrical short.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "10177030",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "Some Model S and Model X vehicles might exhibit stiff steering due to corrosion at the lower steering column I-shaft U-joint.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10173430",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2017,
+    2018,
+    2019
+   ],
+   "summary": "On certain Model X vehicles, the main front body harness might contact the RH front upper control arm.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  {
+   "id": "10174930",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2017,
+    2018,
+    2019
+   ],
+   "summary": "On certain Model X vehicles, the main front body harness might contact the RH front upper control arm.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  {
+   "id": "10203342",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "On certain Model 3, Model Y, and Model X vehicles, there may be a water ingress path to both front upper control arm ball joints that, over time, could possibly lead to surface corrosion of these ball joints. This may result in a creaking sound coming from the front suspension when steering at low speeds and under high loads. This is exclusively an NVH condition only and does not result in premature failure of the ball joints.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "10203341",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2018,
+    2019,
+    2020
+   ],
+   "summary": "On certain Model 3, Model Y, and Model X vehicles, there may be a water ingress path to both front upper control arm ball joints that, over time, could possibly lead to surface corrosion of these ball joints. This may result in a creaking sound coming from the front suspension when steering at low speeds and under high loads. This is exclusively an NVH condition only and does not result in premature failure of the ball joints.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2020-2024.zip",
+   "gen_years": [
+    2018,
+    2019,
+    2020
+   ]
+  },
+  {
+   "id": "11018848",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022
+   ],
+   "summary": "On certain Model S and Model X vehicles built between approximately January 2021 and September 22, 2022, the High Voltage (HV) battery ports plungers intended for internal water leak egress (also known as flood ports) can be replaced with plungers that are more robust against external ingress due to submersion during flooding or other similar high-severity abuse instances.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2021,
+    2022
+   ]
+  },
+  {
+   "id": "11023640",
+   "make": "TESLA",
+   "model": "MODEL X",
+   "years": [
+    2021,
+    2022
+   ],
+   "summary": "On certain Model S and Model X vehicles built between approximately January 2021 and September 22, 2022, the High Voltage (HV) battery ports plungers intended for internal water leak egress (also known as flood ports) can be replaced with plungers that are more robust against external ingress due to submersion during flooding or other similar high-severity abuse instances. Replace all 5 flood port plungers with updated parts. This new revision, R2, updates the affected Countries/Regions.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2021,
+    2022
+   ]
+  }
+ ],
+ "maintenance": [],
+ "conflicts": [],
+ "gaps": [
+  {
+   "scope": "tesla-model-x-us-2016-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2017-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2018-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2019-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2020-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2021-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2022-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2023-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2024-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2025-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla-model-x-us-2026-ev-bev-a-a1-awd",
+   "field": "engine_family_key",
+   "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "tesla/model-x I",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  }
+ ],
+ "notes": [
+  "MY2017: no vPIC body family spans MY2016 and MY2017; compared across all rows"
+ ],
+ "errors": [],
+ "counts": {
+  "generations": 1,
+  "configurations": 11,
+  "facts": 16,
+  "recalls": 0,
+  "symptom_patterns": 21,
+  "issues": 11,
+  "issues_by_probability": {
+   "OCCASIONAL": 8,
+   "COMMON": 3
+  },
+  "cc_problems": 0,
+  "tsbs": 55,
+  "maintenance": 0,
+  "errors": 0,
+  "display_levels": {
+   "SECONDARY_NOTE": 16
+  }
+ }
+}

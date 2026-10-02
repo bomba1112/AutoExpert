@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 492,
  "edition_market": "US",
  "edition_markers": {
@@ -33,16 +33,38 @@
  },
  "facts": [
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 3.5,
+   "key": "engine_oil_specification",
+   "value": "API Service SM",
+   "unit": null,
+   "page": 469,
+   "quote": "API Service SM",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | GDI engine | 3.7 US qt.(3.5 l) | API Service SM *3, ILSAC GF-4 or above *4",
+   "label": "engine oil specification",
+   "engine_text": "GDI engine",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "engine_oil_specification",
+   "value": "ILSAC GF-4 or above",
+   "unit": null,
+   "page": 469,
+   "quote": "ILSAC GF-4 or above",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | GDI engine | 3.7 US qt.(3.5 l) | API Service SM *3, ILSAC GF-4 or above *4",
+   "label": "engine oil specification",
+   "engine_text": "GDI engine",
+   "source_layout": "ruled_table"
+  },
+  {
+   "key": "transmission_fluid_capacity_l",
+   "value": 1.7,
    "unit": "L",
    "page": 469,
-   "quote": "3.7 US qt. (3.5 l)",
-   "row": "GDI engine | 3.7 US qt. (3.5 l)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "3.7 US qt. (3.5 l)",
-   "drive": null,
+   "quote": "1.6 US qt. (1.6~1.7 l)",
+   "row": "Manual transaxle fluid | GDI engine | 1.5 ~ 1.6 US qt. (1.6~1.7 l) | API Service GL-4 SAE 70W - HK SYN MTF 70W - SPIRAX S6 GHME 70W MTF - GS MTF HD 70W",
+   "label": "transmission fluid capacity l",
+   "engine_text": "GDI engine",
+   "source_layout": "ruled_table",
+   "original": "1.6 US qt. (1.6~1.7 l)",
    "approx_in_source": false
   },
   {
@@ -51,11 +73,11 @@
    "unit": "L",
    "page": 469,
    "quote": "7.1 US qt.",
-   "row": "Michang ATF SP-IV, SK ATF SP-IV | 7.1 US qt.",
-   "label": "transmission_fluid_capacity_l",
+   "row": "Automatic transaxle fluid | 7.1 US qt. (6.7l) | Michang ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV",
+   "label": "transmission fluid capacity l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "7.1 US qt.",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -64,9 +86,10 @@
    "unit": null,
    "page": 469,
    "quote": "SP-IV",
-   "row": "Michang ATF SP-IV, SK ATF SP-IV | 7.1 US qt.",
+   "row": "Automatic transaxle fluid | 7.1 US qt. (6.7l) | Michang ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV",
    "label": "transmission fluid",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
    "key": "transmission_fluid",
@@ -74,45 +97,21 @@
    "unit": null,
    "page": 469,
    "quote": "SK ATF SP-IV",
-   "row": "Michang ATF SP-IV, SK ATF SP-IV | 7.1 US qt.",
+   "row": "Automatic transaxle fluid | 7.1 US qt. (6.7l) | Michang ATF SP-IV, SK ATF SP-IV NOCA ATF SP-IV, Kia genuine ATF SP-IV",
    "label": "transmission fluid",
-   "engine_text": null
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 5.4,
-   "unit": "L",
-   "page": 470,
-   "quote": "5.70 US qt.(5.4 l)",
-   "row": "M/T | 5.70 US qt.(5.4 l) | Mixture of antifreeze and water",
-   "label": "coolant_capacity_l",
    "engine_text": null,
-   "original": "5.70 US qt.(5.4 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
-   "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate",
+   "key": "brake_fluid",
+   "value": "DOT-3 or DOT-4",
    "unit": null,
    "page": 470,
-   "quote": "Ethylene-glycol with phosphate",
-   "row": "Coolant | (Ethylene-glycol with phosphate",
-   "label": "coolant description",
-   "engine_text": null
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 0.8,
-   "unit": "L",
-   "page": 470,
-   "quote": "0.8 l)",
-   "row": "(0.7~0.8 l)",
-   "label": "coolant_capacity_l",
+   "quote": "FMVSS116 DOT-3 or DOT-4",
+   "row": "Brake/clutch fluid | 0.7~0.8 US qt. (0.7~0.8 l) | FMVSS116 DOT-3 or DOT-4",
+   "label": "brake fluid",
    "engine_text": null,
-   "original": "0.8 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "fuel_tank_l",
@@ -121,10 +120,10 @@
    "page": 470,
    "quote": "11.9 US gal (45 l)",
    "row": "Fuel | 11.9 US gal (45 l) | Unleaded gasoline",
-   "label": "fuel_tank_l",
+   "label": "fuel tank l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "11.9 US gal (45 l)",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -220,11 +219,37 @@
  ],
  "review": [
   {
+   "page": 469,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | GDI engine | 3.7 US qt.(3.5 l) | API Service SM *3, ILSAC GF-4 or above *4",
+   "reason": "quote not in page text",
+   "quote": "3.7 US qt.(3.5 l)"
+  },
+  {
    "page": 470,
    "key": "coolant_capacity_l",
-   "row": "A/T | 5.81 US qt.(5.5 l) | based coolant for cooling device)",
+   "row": "Coolant | GDI engine | M/T | 5.70 US qt.(5.4 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 470,
+   "key": "coolant_description",
+   "row": "Coolant | GDI engine | M/T | 5.70 US qt.(5.4 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "reason": "quote not in page text",
-   "quote": "5.81 US qt.(5.5 l)"
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
+  },
+  {
+   "page": 470,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | GDI engine | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 470,
+   "key": "coolant_description",
+   "row": "Coolant | GDI engine | A/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "quote not in page text",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device"
   }
  ],
  "engine_codes": [],

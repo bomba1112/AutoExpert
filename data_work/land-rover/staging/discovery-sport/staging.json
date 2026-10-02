@@ -473,6 +473,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2023
   },
+  "nhtsa-recalls-land-rover-discovery-sport-2025": {
+   "key": "nhtsa-recalls-land-rover-discovery-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/land-rover/land-rover-discovery-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LAND+ROVER&model=LAND+ROVER+DISCOVERY+SPORT&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:16+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls LAND ROVER DISCOVERY SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-complaints-lr2-2014": {
    "key": "nhtsa-complaints-lr2-2014",
    "kind": "json_gz",
@@ -728,6 +743,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2023
   },
+  "nhtsa-complaints-land-rover-discovery-sport-2025": {
+   "key": "nhtsa-complaints-land-rover-discovery-sport-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/land-rover/land-rover-discovery-sport_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LAND+ROVER&model=LAND+ROVER+DISCOVERY+SPORT&modelYear=2025",
+   "sha256": "c22d98d945a5fb64b519b0ac59fe3d3ffcc7f70d6ab321b95758a457e955458e",
+   "retrieved_at": "2026-10-02T10:53:23+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints LAND ROVER DISCOVERY SPORT 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -775,7 +805,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "EPA model name changes (LR2 -> Discovery) and vPIC lists a new body family (DISCOVERY wheelbase 274 cm) from MY2015"
+    "EPA model name changes (LR2 -> Discovery) and vPIC lists a new body family (DISCOVERY wheelbase 274 cm) from MY2015",
+    "consumerreports.org: \"The compact Discovery Sport is based on the Evoque, with seating for five or, with its tiny optional third-row, seven.\" (https://www.consumerreports.org/cars/land-rover/discovery-sport/); cars.com: \"2015-2026 Discovery Sport\" (https://www.cars.com/research/land_rover-discovery_sport/) [quote read once] [media: generation starts MY2015]"
    ],
    "evidence_tier": "B"
   }
@@ -4860,14 +4891,15 @@
   {
    "generation": "L550",
    "component": "STEERING",
-   "count": 72,
+   "count": 73,
    "by_year": {
     "2015": 56,
     "2016": 6,
     "2017": 6,
     "2019": 2,
     "2020": 1,
-    "2021": 1
+    "2021": 1,
+    "2025": 1
    },
    "sample_odi": [
     11743865,
@@ -4901,7 +4933,7 @@
   {
    "generation": "L550",
    "component": "ELECTRICAL SYSTEM",
-   "count": 71,
+   "count": 72,
    "by_year": {
     "2015": 10,
     "2016": 5,
@@ -4911,7 +4943,8 @@
     "2020": 4,
     "2021": 1,
     "2022": 1,
-    "2023": 1
+    "2023": 1,
+    "2025": 1
    },
    "sample_odi": [
     11731724,
@@ -5229,6 +5262,37 @@
   },
   {
    "generation": "L550",
+   "component": "VISIBILITY/WIPER",
+   "count": 17,
+   "by_year": {
+    "2015": 1,
+    "2017": 10,
+    "2019": 5,
+    "2025": 1
+   },
+   "sample_odi": [
+    11099070,
+    11721739,
+    11578990,
+    11570663,
+    11551626,
+    11512554,
+    11496182,
+    11449568,
+    11443588,
+    11440108,
+    11298002,
+    11733761,
+    11706250,
+    11572528,
+    11524786,
+    11308841,
+    11630503
+   ],
+   "above_threshold": true
+  },
+  {
+   "generation": "L550",
    "component": "LATCHES/LOCKS/LINKAGES",
    "count": 16,
    "by_year": {
@@ -5258,35 +5322,6 @@
   },
   {
    "generation": "L550",
-   "component": "VISIBILITY/WIPER",
-   "count": 16,
-   "by_year": {
-    "2015": 1,
-    "2017": 10,
-    "2019": 5
-   },
-   "sample_odi": [
-    11099070,
-    11721739,
-    11578990,
-    11570663,
-    11551626,
-    11512554,
-    11496182,
-    11449568,
-    11443588,
-    11440108,
-    11298002,
-    11733761,
-    11706250,
-    11572528,
-    11524786,
-    11308841
-   ],
-   "above_threshold": true
-  },
-  {
-   "generation": "L550",
    "component": "AIR BAGS",
    "count": 8,
    "by_year": {
@@ -5308,6 +5343,28 @@
   },
   {
    "generation": "L550",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 7,
+   "by_year": {
+    "2015": 1,
+    "2016": 1,
+    "2017": 2,
+    "2019": 1,
+    "2025": 2
+   },
+   "sample_odi": [
+    11420894,
+    11631761,
+    11743797,
+    11731584,
+    11542587,
+    11633711,
+    11630745
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "L550",
    "component": "WHEELS",
    "count": 7,
    "by_year": {
@@ -5324,6 +5381,27 @@
     11559536,
     11457501,
     11554152
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "L550",
+   "component": "LANE DEPARTURE",
+   "count": 6,
+   "by_year": {
+    "2015": 1,
+    "2019": 1,
+    "2020": 1,
+    "2022": 1,
+    "2025": 2
+   },
+   "sample_odi": [
+    11467613,
+    11701322,
+    11476023,
+    11673072,
+    11633711,
+    11630081
    ],
    "above_threshold": false
   },
@@ -5366,25 +5444,6 @@
   },
   {
    "generation": "L550",
-   "component": "FORWARD COLLISION AVOIDANCE",
-   "count": 5,
-   "by_year": {
-    "2015": 1,
-    "2016": 1,
-    "2017": 2,
-    "2019": 1
-   },
-   "sample_odi": [
-    11420894,
-    11631761,
-    11743797,
-    11731584,
-    11542587
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "L550",
    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
    "count": 4,
    "by_year": {
@@ -5413,24 +5472,6 @@
     11447078,
     11075165,
     11058480
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "L550",
-   "component": "LANE DEPARTURE",
-   "count": 4,
-   "by_year": {
-    "2015": 1,
-    "2019": 1,
-    "2020": 1,
-    "2022": 1
-   },
-   "sample_odi": [
-    11467613,
-    11701322,
-    11476023,
-    11673072
    ],
    "above_threshold": false
   },
@@ -5961,11 +6002,12 @@
   "L550|steering-loss": {
    "key": "L550|steering-loss",
    "label": "power steering loss",
-   "count": 6,
+   "count": 7,
    "by_year": {
     "2015": 1,
     "2016": 2,
-    "2017": 3
+    "2017": 3,
+    "2025": 1
    },
    "sample_odi": [
     11618102,
@@ -5973,7 +6015,8 @@
     11189726,
     11723191,
     11663784,
-    11457043
+    11457043,
+    11767860
    ],
    "above_threshold": false,
    "engine_specific": false,
@@ -7445,6 +7488,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "11010266",
@@ -9452,6 +9496,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -9523,6 +9568,156 @@
    "scope": "land-rover-discovery-sport-us-2026-2.0l-4cyl-turbo-ice-a-s9-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport US2014-2014",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/discovery-sport L550",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -9547,7 +9742,9 @@
    "OCCASIONAL": 25,
    "COMMON": 4
   },
+  "cc_problems": 0,
   "tsbs": 110,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 74

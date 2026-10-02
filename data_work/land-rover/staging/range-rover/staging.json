@@ -577,6 +577,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2025
   },
+  "nhtsa-recalls-land-rover-range-rover-2025": {
+   "key": "nhtsa-recalls-land-rover-range-rover-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/land-rover/land-rover-range-rover_2025.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER&modelYear=2025",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:19+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls LAND ROVER RANGE ROVER 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-complaints-range-rover-lwb-2014": {
    "key": "nhtsa-complaints-range-rover-lwb-2014",
    "kind": "json_gz",
@@ -937,6 +952,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2025
   },
+  "nhtsa-complaints-land-rover-range-rover-2025": {
+   "key": "nhtsa-complaints-land-rover-range-rover-2025",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/land-rover/land-rover-range-rover_2025.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=LAND+ROVER&model=LAND+ROVER+RANGE+ROVER&modelYear=2025",
+   "sha256": "f20258a4ab744f8f8836a1a6ed4629548846305920bc7c7376ce5e660172d4a2",
+   "retrieved_at": "2026-10-02T10:53:28+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints LAND ROVER RANGE ROVER 2025",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2025
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -984,7 +1014,8 @@
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "vPIC Canadian specifications: wheelbase 292/312 cm (MY2021) -> 300/320 cm (MY2022)"
+    "vPIC Canadian specifications: wheelbase 292/312 cm (MY2021) -> 300/320 cm (MY2022)",
+    "consumerreports.org: \"The redesigned Range Rover continues its legacy of pushing boundaries, with new tech and an elegant design.\" (https://www.consumerreports.org/cars/land-rover/range-rover/); cars.com: \"A completely redesigned Range Rover debuted for the 2022 model year and, curiously, was sold alongside the previous-generation model (which was also called a 2022) for that one year.\" (https://www.cars.com/research/land_rover-range_rover/) [media: generation starts MY2022]"
    ],
    "evidence_tier": "B"
   }
@@ -8844,6 +8875,45 @@
    "above_threshold": true
   },
   {
+   "generation": "US2022+",
+   "component": "ELECTRICAL SYSTEM",
+   "count": 25,
+   "by_year": {
+    "2022": 11,
+    "2023": 4,
+    "2024": 2,
+    "2025": 8
+   },
+   "sample_odi": [
+    11734683,
+    11734166,
+    11716799,
+    11714160,
+    11712525,
+    11707820,
+    11667837,
+    11665677,
+    11526942,
+    11760071,
+    11720270,
+    11735137,
+    11723295,
+    11718293,
+    11647651,
+    11735982,
+    11603636,
+    11701770,
+    11692512,
+    11764596,
+    11741104,
+    11738808,
+    11736357,
+    11723728,
+    11640655
+   ],
+   "above_threshold": true
+  },
+  {
    "generation": "L405",
    "component": "SERVICE BRAKES",
    "count": 20,
@@ -8877,39 +8947,6 @@
     11631410,
     11601608,
     11500697
-   ],
-   "above_threshold": true
-  },
-  {
-   "generation": "US2022+",
-   "component": "ELECTRICAL SYSTEM",
-   "count": 19,
-   "by_year": {
-    "2022": 11,
-    "2023": 4,
-    "2024": 2,
-    "2025": 2
-   },
-   "sample_odi": [
-    11734683,
-    11734166,
-    11716799,
-    11714160,
-    11712525,
-    11707820,
-    11667837,
-    11665677,
-    11526942,
-    11760071,
-    11720270,
-    11735137,
-    11723295,
-    11718293,
-    11647651,
-    11735982,
-    11603636,
-    11701770,
-    11692512
    ],
    "above_threshold": true
   },
@@ -8981,12 +9018,12 @@
   {
    "generation": "US2022+",
    "component": "ENGINE",
-   "count": 14,
+   "count": 15,
    "by_year": {
     "2022": 7,
     "2023": 3,
     "2024": 3,
-    "2025": 1
+    "2025": 2
    },
    "sample_odi": [
     11712525,
@@ -9002,7 +9039,8 @@
     11712859,
     11712866,
     11603636,
-    11701770
+    11701770,
+    11640655
    ],
    "above_threshold": true
   },
@@ -9037,10 +9075,11 @@
   {
    "generation": "US2022+",
    "component": "SERVICE BRAKES",
-   "count": 11,
+   "count": 13,
    "by_year": {
     "2023": 8,
-    "2024": 3
+    "2024": 3,
+    "2025": 2
    },
    "sample_odi": [
     11731576,
@@ -9053,19 +9092,21 @@
     11551945,
     11689206,
     11632278,
-    11603636
+    11603636,
+    11744050,
+    11723728
    ],
    "above_threshold": true
   },
   {
    "generation": "US2022+",
    "component": "POWER TRAIN",
-   "count": 10,
+   "count": 11,
    "by_year": {
     "2022": 4,
     "2023": 2,
     "2024": 3,
-    "2025": 1
+    "2025": 2
    },
    "sample_odi": [
     11734166,
@@ -9077,7 +9118,8 @@
     11712859,
     11712866,
     11580916,
-    11711889
+    11711889,
+    11744050
    ],
    "above_threshold": true
   },
@@ -9200,6 +9242,24 @@
     10980570,
     11579692,
     11766398
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2022+",
+   "component": "SEATS",
+   "count": 5,
+   "by_year": {
+    "2023": 1,
+    "2024": 1,
+    "2025": 3
+   },
+   "sample_odi": [
+    11640452,
+    11655853,
+    11764596,
+    11751726,
+    11640655
    ],
    "above_threshold": false
   },
@@ -9349,6 +9409,21 @@
    "above_threshold": false
   },
   {
+   "generation": "US2022+",
+   "component": "VISIBILITY/WIPER",
+   "count": 3,
+   "by_year": {
+    "2024": 2,
+    "2025": 1
+   },
+   "sample_odi": [
+    11714392,
+    11695549,
+    11673701
+   ],
+   "above_threshold": false
+  },
+  {
    "generation": "L405",
    "component": "TIRES",
    "count": 2,
@@ -9392,15 +9467,15 @@
   },
   {
    "generation": "US2022+",
-   "component": "SEATS",
+   "component": "STEERING",
    "count": 2,
    "by_year": {
     "2023": 1,
-    "2024": 1
+    "2025": 1
    },
    "sample_odi": [
-    11640452,
-    11655853
+    11723295,
+    11723728
    ],
    "above_threshold": false
   },
@@ -9414,19 +9489,6 @@
    "sample_odi": [
     11723295,
     11621538
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2022+",
-   "component": "VISIBILITY/WIPER",
-   "count": 2,
-   "by_year": {
-    "2024": 2
-   },
-   "sample_odi": [
-    11714392,
-    11695549
    ],
    "above_threshold": false
   },
@@ -9492,13 +9554,13 @@
   },
   {
    "generation": "US2022+",
-   "component": "STEERING",
+   "component": "SEAT BELTS",
    "count": 1,
    "by_year": {
-    "2023": 1
+    "2025": 1
    },
    "sample_odi": [
-    11723295
+    11764596
    ],
    "above_threshold": false
   },
@@ -10005,11 +10067,12 @@
   "US2022+|fuel-pump-stall": {
    "key": "US2022+|fuel-pump-stall",
    "label": "fuel pump / stalling",
-   "count": 6,
+   "count": 7,
    "by_year": {
     "2022": 2,
     "2023": 1,
-    "2024": 3
+    "2024": 3,
+    "2025": 1
    },
    "sample_odi": [
     11665677,
@@ -10017,27 +10080,30 @@
     11684769,
     11712859,
     11712866,
-    11632278
+    11632278,
+    11736357
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-2023"
+   "source": "nhtsa-complaints-land-rover-range-rover-2025"
   },
   "US2022+|overheating": {
    "key": "US2022+|overheating",
    "label": "overheating",
-   "count": 2,
+   "count": 3,
    "by_year": {
     "2022": 1,
-    "2023": 1
+    "2023": 1,
+    "2025": 1
    },
    "sample_odi": [
     11650122,
-    11621538
+    11621538,
+    11741104
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-2023"
+   "source": "nhtsa-complaints-land-rover-range-rover-2025"
   },
   "US2022+|air-conditioning": {
    "key": "US2022+|air-conditioning",
@@ -10131,18 +10197,20 @@
   "US2022+|brake-failure": {
    "key": "US2022+|brake-failure",
    "label": "brake failure / ABS",
-   "count": 2,
+   "count": 3,
    "by_year": {
     "2023": 1,
-    "2024": 1
+    "2024": 1,
+    "2025": 1
    },
    "sample_odi": [
     11601786,
-    11632278
+    11632278,
+    11744050
    ],
    "above_threshold": false,
    "engine_specific": false,
-   "source": "nhtsa-complaints-range-rover-2023"
+   "source": "nhtsa-complaints-land-rover-range-rover-2025"
   },
   "US2022+|fuel-leak": {
    "key": "US2022+|fuel-leak",
@@ -10171,6 +10239,20 @@
    "above_threshold": false,
    "engine_specific": false,
    "source": "nhtsa-complaints-range-rover-2024"
+  },
+  "US2022+|brake-assist": {
+   "key": "US2022+|brake-assist",
+   "label": "brake vacuum pump / assist loss",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11723728
+   ],
+   "above_threshold": false,
+   "engine_specific": false,
+   "source": "nhtsa-complaints-land-rover-range-rover-2025"
   }
  },
  "issues": [
@@ -12088,6 +12170,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10154050",
@@ -17170,6 +17253,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -17361,6 +17445,156 @@
    "scope": "land-rover-range-rover-us-2026-4.4l-8cyl-turbo-hev-a-s8-4wd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover L405",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "land-rover/range-rover US2022+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
@@ -17384,14 +17618,16 @@
   "configurations": 38,
   "facts": 110,
   "recalls": 19,
-  "symptom_patterns": 36,
+  "symptom_patterns": 37,
   "issues": 53,
   "issues_by_probability": {
    "RARE": 18,
    "OCCASIONAL": 32,
    "COMMON": 3
   },
+  "cc_problems": 0,
   "tsbs": 297,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 110

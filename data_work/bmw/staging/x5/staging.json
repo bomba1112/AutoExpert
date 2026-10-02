@@ -895,6 +895,51 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "carcomplaints-x5-2017-f0d130": {
+   "key": "carcomplaints-x5-2017-f0d130",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/bmw/X5/2017.html.gz",
+   "url": "https://www.carcomplaints.com/BMW/X5/2017/",
+   "sha256": "76d4db4b9a8b8a493a5ebdf0b729d5075dd736df8ce5aeebbe195a84b32564b7",
+   "retrieved_at": "2026-10-02T11:21:10+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com bmw/x5 2017 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2017
+  },
+  "carcomplaints-x5-2014-5e3cfd": {
+   "key": "carcomplaints-x5-2014-5e3cfd",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/bmw/X5/2014.html.gz",
+   "url": "https://www.carcomplaints.com/BMW/X5/2014/",
+   "sha256": "44841af9e17a320ad6c46e437a66e79bc1b1fb5e82248f2974333afe17edc8a4",
+   "retrieved_at": "2026-10-02T11:20:52+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com bmw/x5 2014 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2014
+  },
+  "carcomplaints-x5-2015-9037bd": {
+   "key": "carcomplaints-x5-2015-9037bd",
+   "kind": "html_gz",
+   "path": "rawstore:carcomplaints/bmw/X5/2015.html.gz",
+   "url": "https://www.carcomplaints.com/BMW/X5/2015/",
+   "sha256": "c8803345a196099a1dc10cad2ce9cd685bd0c07e66e97e87ece3ca55f3290302",
+   "retrieved_at": "2026-10-02T11:20:57+00:00",
+   "tier": "C",
+   "source_type": "OWNER_COMPLAINTS_SITE",
+   "registry": "carcomplaints",
+   "title": "CarComplaints.com bmw/x5 2015 problems page",
+   "publisher": "CarComplaints.com (owner reports)",
+   "authenticity": "OWNER_REPORTS",
+   "model_year": 2015
   }
  },
  "generations": [
@@ -926,7 +971,8 @@
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 293 cm (MY2018) -> 297 cm (MY2019)",
     "vPIC Canadian specifications: overall width 194 -> 200 cm (MY2018 -> MY2019; a change of 6 cm or more)",
-    "mycarusermanual.com generation page starts at 2019 (x5/suv/2019-2025), corroborated by vPIC overall length 489 -> 493 cm, overall width 194 -> 200 cm, front track 164 -> 167 cm, rear track 165 -> 169 cm (MY2018 -> MY2019)"
+    "mycarusermanual.com generation page starts at 2019 (x5/suv/2019-2025), corroborated by vPIC overall length 489 -> 493 cm, overall width 194 -> 200 cm, front track 164 -> 167 cm, rear track 165 -> 169 cm (MY2018 -> MY2019)",
+    "consumerreports.org: \"The redesigned 2019 X5 is one of the best vehicles we've ever tested.\" (https://www.consumerreports.org/cars/bmw/x5/); cars.com: \"BMW redesigned its mid-size X5 SUV for the 2019 model year, and the fourth generation of the X5 has a little bit more of everything\" (https://www.cars.com/articles/2019-bmw-x5-everything-you-need-to-know-414834/) [quote read once] [media: generation starts MY2019]"
    ],
    "evidence_tier": "B"
   }
@@ -14820,9 +14866,14 @@
     ],
     "complaint_patterns": [
      "F15|battery-drain"
+    ],
+    "carcomplaints": [
+     "F15|will_not_start"
     ]
    },
-   "rule": "TSB + complaint pattern"
+   "rule": "TSB + complaint pattern + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "COMMON",
+   "note": "CarComplaints.com \"Will Not Start\" (owner reports): MY2015: #3, average cost to fix N/A, average mileage 5,000 mi"
   },
   {
    "id": "x5-F15-tsb-brake-failure",
@@ -15313,7 +15364,7 @@
    "inspection": "Ask a dealer whether manufacturer communications 10146962, 10147680 apply to this VIN and were performed.",
    "typical_fix": "per manufacturer communication 10146962, 10147680",
    "severity": "LOW",
-   "probability": "OCCASIONAL",
+   "probability": "COMMON",
    "complaints_in_years": [
     4
    ],
@@ -15325,9 +15376,15 @@
     ],
     "complaint_patterns": [
      "F15|water-leak"
+    ],
+    "carcomplaints": [
+     "F15|sunroof_leak_and_noise_water_entering_cabin",
+     "F15|water_leaking_into_interior"
     ]
    },
-   "rule": "TSB"
+   "rule": "TSB + CarComplaints (probability +1)",
+   "probability_before_carcomplaints": "OCCASIONAL",
+   "note": "CarComplaints.com \"Water Leaking Into Interior\" (owner reports): MY2014: #2, average cost to fix N/A, average mileage 35,000 mi | CarComplaints.com \"Sunroof Leak And Noise, Water Entering Cabin\" (owner reports): MY2017: #1, average cost to fix N/A, average mileage 35,000 mi"
   },
   {
    "id": "x5-US2019+-tsb-battery-drain",
@@ -15778,6 +15835,92 @@
     ]
    },
    "rule": "complaint pattern only (owner reports)"
+  }
+ ],
+ "cc_problems": [
+  {
+   "key": "F15|sunroof_leak_and_noise_water_entering_cabin",
+   "generation": "F15",
+   "problem": "Sunroof Leak And Noise, Water Entering Cabin",
+   "category": "",
+   "symptoms": [
+    "water-leak"
+   ],
+   "by_year": {
+    "2017": {
+     "rank": 1,
+     "avg_cost": "N/A",
+     "avg_mileage": "35,000 mi",
+     "quote": "#1: Sunroof Leak And Noise, Water Entering Cabin Average Cost to Fix: N/A Average Mileage: 35,000 mi",
+     "url": "https://www.carcomplaints.com/BMW/X5/2017/",
+     "problem_url": null
+    }
+   },
+   "site_model": "X5",
+   "years": [
+    2017,
+    2017
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-x5-2017-f0d130"
+   ]
+  },
+  {
+   "key": "F15|water_leaking_into_interior",
+   "generation": "F15",
+   "problem": "Water Leaking Into Interior",
+   "category": "",
+   "symptoms": [
+    "water-leak"
+   ],
+   "by_year": {
+    "2014": {
+     "rank": 2,
+     "avg_cost": "N/A",
+     "avg_mileage": "35,000 mi",
+     "quote": "#2: Water Leaking Into Interior Average Cost to Fix: N/A Average Mileage: 35,000 mi",
+     "url": "https://www.carcomplaints.com/BMW/X5/2014/",
+     "problem_url": null
+    }
+   },
+   "site_model": "X5",
+   "years": [
+    2014,
+    2014
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-x5-2014-5e3cfd"
+   ]
+  },
+  {
+   "key": "F15|will_not_start",
+   "generation": "F15",
+   "problem": "Will Not Start",
+   "category": "",
+   "symptoms": [
+    "battery-drain"
+   ],
+   "by_year": {
+    "2015": {
+     "rank": 3,
+     "avg_cost": "N/A",
+     "avg_mileage": "5,000 mi",
+     "quote": "#3: Will Not Start Average Cost to Fix: N/A Average Mileage: 5,000 mi",
+     "url": "https://www.carcomplaints.com/BMW/X5/2015/",
+     "problem_url": null
+    }
+   },
+   "site_model": "X5",
+   "years": [
+    2015,
+    2015
+   ],
+   "recurring": false,
+   "sources": [
+    "carcomplaints-x5-2015-9037bd"
+   ]
   }
  ],
  "tsbs": [
@@ -18648,6 +18791,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -18904,6 +19048,161 @@
    "scope": "bmw-x5-us-2026-4.4l-8cyl-turbo-hev-a-s8-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw/x5 carmans-2023-bmw-x5 p.390",
+   "field": "coolant_capacity_l",
+   "reason": "value 1.0 outside the validator range; not used"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 F15",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/x5 US2019+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [],
@@ -18917,10 +19216,12 @@
   "issues": 76,
   "issues_by_probability": {
    "RARE": 41,
-   "COMMON": 9,
-   "OCCASIONAL": 26
+   "COMMON": 10,
+   "OCCASIONAL": 25
   },
+  "cc_problems": 3,
   "tsbs": 167,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 129

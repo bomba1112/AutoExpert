@@ -746,7 +746,8 @@
    "end_known": false,
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 308 cm (MY2019) -> 313 cm (MY2020)",
-    "vPIC Canadian specifications: overall length 513 -> 521 cm, overall width 193 -> 203 cm (MY2019 -> MY2020; a change of 6 cm or more)"
+    "vPIC Canadian specifications: overall length 513 -> 521 cm, overall width 193 -> 203 cm (MY2019 -> MY2020; a change of 6 cm or more)",
+    "consumerreports.org: \"The new for 2020 GLS is a very functional three-row SUV that exudes luxury with its gorgeous interior.\" (https://www.consumerreports.org/cars/mercedes-benz/gls/); cars.com: \"The redesigned 2020 Mercedes-Benz GLS-Class debuted at the 2019 New York International Auto Show\" (https://www.cars.com/articles/2020-mercedes-benz-gls-goes-big-in-the-big-apple-400726/) [quote read once] [media: generation starts MY2020]"
    ],
    "evidence_tier": "B"
   }
@@ -9277,6 +9278,7 @@
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "11006550",
@@ -11195,6 +11197,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -11351,12 +11354,163 @@
    "scope": "mercedes-benz-gls-us-2026-4.0l-8cyl-turbo-hev-a-9-spd-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2014-2019",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "mercedes-benz/gls US2020+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
   "MY2015: no vPIC body family spans MY2014 and MY2015; compared across all rows",
   "MY2017: vPIC dimension change without a generation signal (front track 168 -> 166, rear track 170 -> 168); treated as a facelift",
-  "MY2017: no vPIC body family spans MY2016 and MY2017; compared across all rows"
+  "MY2017: no vPIC body family spans MY2016 and MY2017; compared across all rows",
+  "MY2017: media list a new block, but their own text calls it a rename/refresh; not a generation start (consumerreports.org: \"Mercedes' seven-passenger SUV is freshened for the 2017 model year, with revised interior and exterior styling, a nine-speed automatic, an upgraded air suspension\" (https://www.consumerreports.org/cars/mercedes-benz/gls/); cars.com: \"2017-2019 GLS 450\" (https://www.cars.com/research/mercedes_benz-gls_450/) [media: not a start])"
  ],
  "errors": [],
  "counts": {
@@ -11370,7 +11524,9 @@
    "RARE": 1,
    "OCCASIONAL": 29
   },
+  "cc_problems": 0,
   "tsbs": 119,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 82

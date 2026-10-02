@@ -33,6 +33,7 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
 from us_tech_common import RAW_ROOT, WORK  # noqa: E402
 from us_tech_lines import BY_KEY, MAKES, lines_for  # noqa: E402
 
@@ -40,13 +41,93 @@ ENGINE_KEYS = {
     "engine_oil_capacity_l", "engine_oil_capacity_without_filter_l", "engine_oil_capacity_drain_refill_l",
     "engine_oil_viscosity", "engine_oil_specification", "engine_oil_oem_approval",
 }
+# Press specification pages (data_work/_shared/press/FORMAT.md): engine figures are stored
+# per engine family when the page names a factory code, else with the engine as applicability.
+PRESS_ENGINE_KEYS = {
+    "power_hp", "power_rpm", "torque_lb_ft", "torque_rpm", "engine_description", "engine_displacement_cc",
+    "bore_stroke_mm", "bore_stroke_in", "compression_ratio", "valvetrain", "injection",
+}
+ENGINE_KEYS = ENGINE_KEYS | PRESS_ENGINE_KEYS
 ENGINE_DEPENDENT = ENGINE_KEYS | {"coolant_capacity_l", "transmission_fluid_capacity_l"}
+# source unit key -> (stored key, from unit, to unit) via backend tech_units
+PRESS_CONVERT = {
+    "length_in": ("length_mm", "in", "mm"), "width_in": ("width_mm", "in", "mm"), "height_in": ("height_mm", "in", "mm"),
+    "wheelbase_in": ("wheelbase_mm", "in", "mm"), "track_front_in": ("track_front_mm", "in", "mm"),
+    "track_rear_in": ("track_rear_mm", "in", "mm"), "ground_clearance_in": ("ground_clearance", "in", "mm"),
+    "curb_weight_lb": ("curb_weight_kg", "lb", "kg"), "cargo_cu_ft": ("cargo_l", "cu_ft", "L"),
+    "cargo_max_cu_ft": ("cargo_max_l", "cu_ft", "L"), "passenger_volume_cu_ft": ("passenger_volume_l", "cu_ft", "L"),
+    "fuel_tank_gal": ("fuel_tank_l", "gal", "L"), "turning_circle_ft": ("turning_circle_m", "ft", "m"),
+    "towing_lb": ("towing_kg", "lb", "kg"),
+}
+UNITS = {"mm": "mm", "kg": "kg", "_l": "L", "_m": "m"}
+KEY_UNIT = {"ground_clearance": "mm", "power_hp": "hp", "system_power_hp": "hp", "torque_lb_ft": "lb-ft",
+            "wheel_size_in": "in", "engine_displacement_cc": "cm3"}
+# values given per trim/variant on a press page (several on one page are not a conflict)
+VARIANT_KEYS = {
+    "curb_weight_kg", "cargo_l", "cargo_max_l", "passenger_volume_l", "ground_clearance", "height_mm", "length_mm",
+    "width_mm", "track_front_mm", "track_rear_mm", "towing_kg", "turning_circle_m", "wheel_size_in", "fuel_tank_l",
+    "front_brakes", "rear_brakes", "front_suspension", "rear_suspension", "steering", "transmission_description",
+    "seats", "electric_motor", "system_power_hp",
+}
+
+
+def unit_of(key: str) -> str | None:
+    if key in KEY_UNIT:
+        return KEY_UNIT[key]
+    for suffix, unit in UNITS.items():
+        if key.endswith(suffix if suffix.startswith("_") else "_" + suffix):
+            return unit
+    return None
+
+
+def press_value(fact: dict) -> tuple[str, object]:
+    """Stored key and value of a press fact (US units converted with the fixed factors)."""
+    from app.services.tech_units import convert
+
+    key = fact["key"]
+    if key in PRESS_CONVERT:
+        target, source_unit, target_unit = PRESS_CONVERT[key]
+        value = convert(fact["value"], source_unit, target_unit)
+        return target, int(value) if target_unit in ("mm", "kg") else float(value)
+    return key, fact["value"]
+
+
+CYLINDERS = {"three": 3, "four": 4, "five": 5, "six": 6, "eight": 8, "ten": 10, "twelve": 12}
+
+
+def press_engine_label(text: str | None) -> str | None:
+    """One spelling per engine across model years of a press site: displacement, cylinders,
+    turbo/supercharged, hybrid ("2.5-liter 4-cylinder" = "2.5L I-4" = "2.5L I4")."""
+    if not text:
+        return None
+    t = text.replace("\u2011", "-")
+    disp = re.search(r"(\d\.\d)\s?-?\s?(?:L\b|liter|litre)", t, re.I)
+    cyl = re.search(r"\b(?:I|V|H|W|L)-?(\d{1,2})\b|(\d{1,2})[- ]?cyl|\b(three|four|five|six|eight|ten|twelve)[- ]cylinder|\bV(\d{1,2})\b", t, re.I)
+    if not disp:
+        return None
+    parts = [disp.group(1) + "L"]
+    if cyl:
+        n = next(g for g in cyl.groups() if g)
+        parts.append(f"{CYLINDERS.get(n.lower(), n)}cyl")
+    if re.search(r"turbo|T-?GDI|TSI|TFSI|EcoBoost|TwinPower", t, re.I):
+        parts.append("Turbo")
+    if re.search(r"supercharg", t, re.I):
+        parts.append("Supercharged")
+    if re.search(r"hybrid", t, re.I):
+        parts.append("Hybrid")
+    return " ".join(parts)
 SKIP_KEYS = {"engine_oil_viscosity_alternative", "engine_oil_specification_alternative", "engine_oil_oem_approval_alternative"}
 RANGES = {
     "engine_oil_capacity_l": (3, 12), "engine_oil_capacity_without_filter_l": (3, 12),
     "engine_oil_capacity_drain_refill_l": (3, 12), "coolant_capacity_l": (3, 25),
     "transmission_fluid_capacity_l": (0.5, 16), "fuel_tank_l": (20, 160),
     "octane_aki": (85, 94), "octane_ron": (89, 100),
+    # press pages (after conversion)
+    "power_hp": (60, 1100), "system_power_hp": (60, 1200), "torque_lb_ft": (60, 1300),
+    "length_mm": (2500, 6500), "width_mm": (1400, 2300), "height_mm": (1000, 2300), "wheelbase_mm": (2000, 3800),
+    "track_front_mm": (1200, 1900), "track_rear_mm": (1200, 1900), "ground_clearance": (80, 350),
+    "curb_weight_kg": (700, 4500), "cargo_l": (100, 3500), "cargo_max_l": (200, 4000), "passenger_volume_l": (1500, 5500),
+    "turning_circle_m": (8, 16), "towing_kg": (0, 6500), "wheel_size_in": (14, 24), "seats": (2, 9),
 }
 REGISTRY = {
     "mercedes-benz": "factory-mercedes-us", "land-rover": "factory-land-rover-us",
@@ -75,7 +156,7 @@ def engine_scope(text: str | None) -> tuple[str | None, str | None, str | None]:
     return code, label or None, displacement.group(1) if displacement else None
 
 
-LIST_KEYS = {"engine_oil_specification", "engine_oil_oem_approval", "coolant", "coolant_description", "transmission_fluid"}
+LIST_KEYS = {"engine_oil_specification", "engine_oil_oem_approval", "coolant", "coolant_description", "transmission_fluid", "tires"}
 
 
 def combine(values: list[str]) -> str:
@@ -111,9 +192,11 @@ def doc_powertrain(meta: dict, staging: dict, year: int) -> str | None:
 
 def doc_engine_code(doc: dict) -> str | None:
     """The engine family a document's specification chapter states, when it states one."""
-    codes = {c for e in doc.get("engine_codes", []) for c in e["codes"]}
+    codes = {c for e in doc.get("engine_codes", []) for c in ([e] if isinstance(e, str) else e["codes"])}
     if not codes:
         return None
+    if doc["doc"].get("doc_type") == "press_specifications" and len(codes) != 1:
+        return None  # a press page with several engines: each fact carries its own engine text
     return "/".join(sorted(codes))
 
 
@@ -155,7 +238,16 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
         doc_code = doc_engine_code(doc)
         per_doc = defaultdict(set)
         rows = []
+        press = meta.get("doc_type") == "press_specifications"
         for fact in doc["facts"]:
+            if press:
+                try:
+                    key, value = press_value(fact)
+                except (ArithmeticError, ValueError):
+                    gaps.append({"scope": f"{line_key} {meta['key']} p.{fact['page']}", "field": fact["key"],
+                                 "reason": f"value {fact['value']!r} is not a number; not used"})
+                    continue
+                fact = {**fact, "key": key, "value": value}
             key = fact["key"]
             if key in SKIP_KEYS:
                 continue
@@ -164,6 +256,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                              "reason": f"value {fact['value']} outside the validator range; not used"})
                 continue
             code, label, displacement = engine_scope(fact.get("engine_text"))
+            if press:
+                label = press_engine_label(fact.get("engine_text")) or label
             for year in meta["years"]:
                 if not (line.years[0] <= year <= line.years[1]):
                     continue
@@ -185,6 +279,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                     else:
                         ambiguous.add((meta["key"], key, year, "engine not stated; EPA lists several engines"))
                         continue
+                elif press and key in VARIANT_KEYS and fact.get("engine_text"):
+                    applicability["variant"] = " ".join(fact["engine_text"].split())
                 if fact.get("drive"):
                     applicability["drive"] = fact["drive"]
                 powertrain = doc_powertrain(meta, staging, year)
@@ -198,6 +294,7 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                 cite = {
                     "source": meta["key"], "pages": [fact["page"]], "quote": fact["quote"], "row": fact.get("row"),
                     "tier": tier, "publisher": meta["publisher"], "year": year,
+                    "range": bool(meta.get("generation_range")),
                     "approx_in_source": bool(fact.get("approx_in_source")),
                 }
                 per_doc[(scope, year)].add(json.dumps(fact["value"]))
@@ -236,9 +333,15 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                 value_json, cites = next(iter(values.items()))
                 chosen[year] = (value_json, cites, [])
                 continue
-            ranked = sorted(values.items(), key=lambda kv: (min(c["tier"] for c, _ in kv[1]), -len(kv[1])))
-            best_tier = min(c["tier"] for c, _ in ranked[0][1])
-            leaders = [kv for kv in ranked if min(c["tier"] for c, _ in kv[1]) == best_tier]
+            # rank: official before copy; a manual of that model year before a whole-generation
+            # page (mycarusermanual, Appendix E.6); then the value more documents give
+            def rank(kv):
+                cites = [c for c, _ in kv[1]]
+                return (min(c["tier"] for c in cites), all(c["range"] for c in cites), -len(cites))
+
+            ranked = sorted(values.items(), key=rank)
+            best = rank(ranked[0])[:2]
+            leaders = [kv for kv in ranked if rank(kv)[:2] == best]
             if len(leaders) == 1:
                 chosen[year] = (ranked[0][0], ranked[0][1], ranked[1:])
                 conflicts.append({"scope": f"{line_key} {gen} MY{year}", "key": key, "applicability": applicability,
@@ -246,7 +349,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                                   "kept_from": sorted({c["source"] for c, _ in ranked[0][1]}),
                                   "other_values": [json.loads(v) for v, _ in ranked[1:]],
                                   "other_sources": sorted({c["source"] for _, cs in ranked[1:] for c, _ in cs}),
-                                  "resolution": "official document kept over the copy"})
+                                  "resolution": "official document kept over the copy" if rank(ranked[0])[0] != rank(ranked[1])[0]
+                                  else "model-year manual kept over the whole-generation page (Appendix E.6)"})
             else:
                 chosen[year] = (None, [], ranked)
                 conflicts.append({"scope": f"{line_key} {gen} MY{year}", "key": key, "applicability": applicability,
@@ -284,7 +388,7 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                     "gen_bound": True,
                     "years": [run["years"][0], run["years"][-1]],
                     "value": value,
-                    "unit": "L" if key.endswith("_l") else None,
+                    "unit": unit_of(key),
                     "original": first_fact.get("original") or first_fact["quote"],
                     "applicability": {**applicability, **({"approx_in_source": True} if approx else {})},
                     "note": "manufacturer states the figure as approximate/reference" if approx else None,
@@ -313,15 +417,30 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
             "extract": json.dumps(extract, ensure_ascii=False),
         }
     # what no document gave, per generation
-    wanted = ["engine_oil_capacity_l", "engine_oil_viscosity", "coolant", "transmission_fluid", "brake_fluid", "fuel_tank_l"]
+    wanted = {
+        "manual": (["engine_oil_capacity_l", "engine_oil_viscosity", "coolant", "transmission_fluid", "brake_fluid", "fuel_tank_l"],
+                   "US owner's manual"),
+        "press": (["power_hp", "torque_lb_ft", "tires", "front_suspension", "rear_suspension", "front_brakes", "steering",
+                   "ground_clearance", "cargo_l"], "US press specification page"),
+    }
     for gen in gens:
         have = {f["key"] for f in facts if f["generation"] == gen["code"] and f["display_level"] != "HIDDEN_CONFLICT"}
-        docs_for_gen = [s for s in sources.values() if any(gen["start_year"] <= y <= gen["end_year"] for y in s["meta"]["years"])]
-        for key in wanted:
-            if key not in have:
-                gaps.append({"scope": f"{line_key} {gen['code']}", "field": key,
-                             "reason": "no US owner's manual for these years" if not docs_for_gen
-                             else "not found unambiguously in the available US manuals"})
+        for kind, (keys, what) in wanted.items():
+            docs_for_gen = [
+                s for s in sources.values()
+                if any(gen["start_year"] <= y <= gen["end_year"] for y in s["meta"]["years"])
+                and (s["meta"].get("doc_type") == "press_specifications") == (kind == "press")
+            ]
+            for key in keys:
+                if key in ("power_hp", "torque_lb_ft") and all(
+                    c["powertrain"] == "BEV" for c in staging["configurations"]
+                    if gen["start_year"] <= c["year"] <= gen["end_year"]
+                ):
+                    continue
+                if key not in have:
+                    gaps.append({"scope": f"{line_key} {gen['code']}", "field": key,
+                                 "reason": f"no {what} for these years" if not docs_for_gen
+                                 else f"not found unambiguously in the available {what}s"})
     return {"sources": out_sources, "facts": facts, "conflicts": conflicts, "gaps": gaps}
 
 

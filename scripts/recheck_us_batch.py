@@ -68,8 +68,14 @@ def check_fact(fact, sources) -> list[str]:
                 if Decimal(str(fact["value"])) != again:
                     problems.append(f"conversion {raw} {unit_from} -> {again} != {fact['value']}")
         elif item["kind"] == "pdf_pages":
-            pdf_bytes = source_bytes(item)
-            if hashlib.sha256(pdf_bytes).hexdigest() != item["sha256"]:
+            raw_file = raw_path_of(item)
+            if raw_file.is_dir():  # mycarusermanual sections: the pagetext store holds the checked text
+                pdf_bytes = None
+            else:
+                pdf_bytes = source_bytes(item)
+                if item["path"].endswith(".gz"):  # press pages: sha256 of the stored body
+                    pdf_bytes = gzip.decompress(pdf_bytes)
+            if pdf_bytes is not None and hashlib.sha256(pdf_bytes).hexdigest() != item["sha256"]:
                 problems.append(f"{cite['source']}: PDF sha256 differs from manifest")
                 continue
             pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{item['sha256']}.json.gz").read_bytes()))
@@ -145,6 +151,16 @@ def main(make: str) -> int:
             results.append({"kind": "fact", "id": fact["id"], "problems": check_fact(fact, staging["sources"])})
         for cfg in sample(staging["configurations"]):
             results.append({"kind": "configuration", "id": cfg["configuration_key"], "problems": check_configuration(cfg)})
+        for item in sample(staging.get("maintenance", [])):
+            problems = []
+            for cite in item["cites"]:
+                source = staging["sources"][cite["source"]]
+                body = source_bytes(source)
+                if source.get("sha256") and hashlib.sha256(body).hexdigest() != source["sha256"]:
+                    problems.append(f"{cite['source']}: sha256 differs from manifest")
+                elif cite["quote"].split(" ", 6)[-1][:60] not in body.decode("utf-8", errors="ignore"):
+                    problems.append(f"{cite['source']}: service text not found again")
+            results.append({"kind": "maintenance", "id": item["id"], "problems": problems})
         for recall in sample(staging["recalls"]):
             results.append({"kind": "recall", "id": f"{recall['campaign_number']}/{recall['generation']}",
                             "problems": check_recall(recall, staging["sources"])})

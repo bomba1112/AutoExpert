@@ -19,7 +19,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-5",
+ "extractor": "manual-geometry-6",
  "pages": 495,
  "edition_market": "US",
  "edition_markers": {
@@ -33,76 +33,37 @@
  },
  "facts": [
   {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 3.8,
-   "unit": "L",
-   "page": 475,
-   "quote": "3.8 l (4.0 US qt.)",
-   "row": "Gamma II 1.6L MPI | 3.8 l (4.0 US qt.) | API Latest (ILSAC Latest) or ACEA C5",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": "1.6L MPI",
-   "original": "3.8 l (4.0 US qt.)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
    "key": "engine_oil_specification",
    "value": "ACEA C5",
    "unit": null,
    "page": 475,
    "quote": "ACEA C5",
-   "row": "Gamma II 1.6L MPI | 3.8 l (4.0 US qt.) | API Latest (ILSAC Latest) or ACEA C5",
-   "label": "oil grade",
-   "engine_text": "1.6L MPI"
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 5.5,
-   "unit": "L",
-   "page": 475,
-   "quote": "5.81 US qt. (5.5 l)",
-   "row": "M/T | 5.81 US qt. (5.5 l) | Mixture of antifreeze and water",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "5.81 US qt. (5.5 l)",
-   "drive": null,
-   "approx_in_source": false
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Gamma II 1.6L MPI | 3.8 l(4.0 US qt.) | API Latest (ILSAC Latest) or ACEA C5",
+   "label": "engine oil specification",
+   "engine_text": "Gamma II 1.6L MPI",
+   "source_layout": "ruled_table"
   },
   {
    "key": "coolant_description",
-   "value": "Ethylene-glycol with phosphate",
+   "value": "Ethylene-glycol with phosphate based coolant for cooling device",
    "unit": null,
    "page": 475,
-   "quote": "Ethylene-glycol with phosphate",
-   "row": "Coolant | (Ethylene-glycol with phosphate",
+   "quote": "Ethylene-glycol with phosphate based coolant for cooling device",
+   "row": "Coolant | Gamma II 1.6L MPI | M/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
    "label": "coolant description",
-   "engine_text": null
+   "engine_text": null,
+   "source_layout": "ruled_table"
   },
   {
-   "key": "coolant_capacity_l",
-   "value": 5.5,
-   "unit": "L",
+   "key": "brake_fluid",
+   "value": "DOT-3 or DOT-4",
+   "unit": null,
    "page": 475,
-   "quote": "5.81 US qt. (5.5 l)",
-   "row": "IVT | 5.81 US qt. (5.5 l) | based coolant for cooling device)",
-   "label": "coolant_capacity_l",
+   "quote": "FMVSS116 DOT-3 or DOT-4",
+   "row": "Brake/clutch fluid | 0.7~0.8 US qt. (0.7~0.8 l) | FMVSS116 DOT-3 or DOT-4",
+   "label": "brake fluid",
    "engine_text": null,
-   "original": "5.81 US qt. (5.5 l)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 0.8,
-   "unit": "L",
-   "page": 475,
-   "quote": "0.8 l)",
-   "row": "(0.7~0.8 l)",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "0.8 l)",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "ruled_table"
   },
   {
    "key": "fuel_tank_l",
@@ -111,10 +72,10 @@
    "page": 475,
    "quote": "11.9 US gal (45 l)",
    "row": "Fuel | 11.9 US gal (45 l) | Unleaded gasoline",
-   "label": "fuel_tank_l",
+   "label": "fuel tank l",
    "engine_text": null,
+   "source_layout": "ruled_table",
    "original": "11.9 US gal (45 l)",
-   "drive": null,
    "approx_in_source": false
   },
   {
@@ -138,7 +99,27 @@
    "engine_text": null
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 475,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "row": "Engine oil *1 *2 (drain and refill) Recommends | Gamma II 1.6L MPI | 3.8 l(4.0 US qt.) | API Latest (ILSAC Latest) or ACEA C5",
+   "reason": "quote not in page text",
+   "quote": "3.8 l(4.0 US qt.)"
+  },
+  {
+   "page": 475,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | Gamma II 1.6L MPI | M/T | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  },
+  {
+   "page": 475,
+   "key": "coolant_capacity_l",
+   "row": "Coolant | Gamma II 1.6L MPI | IVT | 5.81 US qt.(5.5 l) | Mixture of antifreeze and water (Ethylene-glycol with phosphate based coolant for cooling device)",
+   "reason": "sub-divided row (e.g. DCT gear/control oil)"
+  }
+ ],
  "engine_codes": [],
  "candidate_pages": [
   377,

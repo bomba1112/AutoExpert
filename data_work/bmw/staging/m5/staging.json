@@ -157,21 +157,6 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2023
   },
-  "vpic-ca-bmw-2024": {
-   "key": "vpic-ca-bmw-2024",
-   "kind": "json_gz",
-   "path": "rawstore:vpic/canada/bmw/2024.json.gz",
-   "url": "https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?year=2024&make=BMW&model=&units=Metric&format=json",
-   "sha256": "f2994aa7c49593ee407fca1c3632e728ba29b0ff9c475413e36215d6b283bc97",
-   "retrieved_at": "2026-10-02T08:31:13+00:00",
-   "tier": "B",
-   "source_type": "VPIC_CANADIAN_SPECIFICATIONS",
-   "registry": "nhtsa-vpic-vehicle-api",
-   "title": "vPIC GetCanadianVehicleSpecifications BMW 2024 (metric)",
-   "publisher": "NHTSA vPIC (Transport Canada data)",
-   "authenticity": "OFFICIAL_PUBLISHER",
-   "model_year": 2024
-  },
   "vpic-ca-bmw-2025": {
    "key": "vpic-ca-bmw-2025",
    "kind": "json_gz",
@@ -549,6 +534,24 @@
    "title": "NHTSA Manufacturer Communications flat files",
    "publisher": "NHTSA",
    "authenticity": "OFFICIAL_PUBLISHER"
+  },
+  "mcum-m5-4-door-2024-2026": {
+   "key": "mcum-m5-4-door-2024-2026",
+   "kind": "pdf_pages",
+   "path": "rawstore:_mcum/bmw/m5/4-door_2024-2026",
+   "url": "https://www.mycarusermanual.com/bmw/m5/4-door/2024-2026",
+   "page_url": "",
+   "sha256": "1e4b51be57665a070ce8eb63612f1939210df8bc25c99c501a00dcf997cca951",
+   "retrieved_at": "2026-10-02T09:23:42+00:00",
+   "tier": "B",
+   "source_type": "OWNER_MANUAL_COPY",
+   "registry": "factory-bmw-us",
+   "title": "bmw m5 4-door 2024-2026 owner's manual (mycarusermanual.com copy)",
+   "publisher": "factory owner's manual, copy hosted by mycarusermanual.com",
+   "authenticity": "REVIEWED_MIRROR",
+   "edition": "US",
+   "model_year": 2024,
+   "extract": "{\"pdf_sha256\": \"1e4b51be57665a070ce8eb63612f1939210df8bc25c99c501a00dcf997cca951\", \"url\": \"https://www.mycarusermanual.com/bmw/m5/4-door/2024-2026\", \"pages\": {\"23\": \"Operating fluids MOBILITY Operating fluids Safety information Vehicle features and options This chapter describes model-specific equip- ment, systems, and functions that are currently available, or may become available in the fu- ture, even if they are not present in the vehicle. Caution The use of poor-quality fuels may result in harmful engine deposits or damage. Addi- tionally, problems relating to drivability, start- ing and stalling, especially under certain envi- ronmental conditions such as high ambient temperature and high altitude, may occur. Additional information: Vehicle equipment, refer to page 8. If drivability problems are encountered, we recommend switching to a high quality gaso- line brand and a higher octane grade — AKI number — for a few tank fills. To avoid harm- ful engine deposits, it is highly recommended to purchase gasoline from Top Tier retailers. Fuel recommendation General information Depending on the region, many filling stations sell fuel that has been customized to winter or summer conditions. Fuel that is available in winter, for instance helps make a cold start easier. Failure to comply with these recommenda- tions may result in the need for additional maintenance. Gasoline Warning General information For the best fuel efficiency, the gasoline should be sulfur-free or very low in sulfur content. Even small quantities of the wrong fuel or wrong fuel additives can damage the fuel system and engine. Furthermore, the cata- lytic converter can be permanently damaged. There is a risk of injury and risk of property damage. Do not refuel or add the following in the case of gasoline engines: Fuels that are marked on the gas pump as containing metal must not be used. Fuels with a maximum ethanol content of 10 %, i.e., E10, may be used for refueling. ▷ ▷ Leaded gasoline. The power and consumption specifications re- fer to operating with RON 98 E10 fuel Metallic additives, for instance manga- nese or iron. Knocking noises and driving/acoustic problems may occur when using minimum quality fuel, e.g., 87 AKI, or fuel with an ethanol content of more than 10% to max. 15%. These have no effect on the engine service life. Do not turn on standby after refueling with the wrong fuel. Contact an authorized service center or another qualified service center or repair shop. 358\"}}"
   }
  },
  "generations": [
@@ -568,19 +571,35 @@
    "evidence_tier": "B"
   },
   {
-   "code": "US2018+",
-   "name": "M5 2018+ (US)",
+   "code": "US2018-2023",
+   "name": "M5 2018-2023 (US)",
    "db_model": "M5",
    "existing_id": null,
    "start_year": 2018,
+   "end_year": 2023,
+   "open_ended": false,
+   "start_known": true,
+   "end_known": true,
+   "boundary_evidence": [
+    "EPA vehicles.csv has no rows for MY2017 and vPIC has no Canadian rows for those years (the line returns in MY2018)",
+    "vPIC Canadian specifications: wheelbase 296 cm (MY2016) -> 298 cm (MY2018)",
+    "mycarusermanual.com generation page starts at 2017 (m5/4-door/2017-2023), corroborated by vPIC overall length 491 -> 496 cm (MY2016 -> MY2018)",
+    "cars.com: \"New all-wheel drive with selectable rear-wheel drive\" (https://www.cars.com/research/bmw-m5/) [media: generation starts MY2018]"
+   ],
+   "evidence_tier": "B"
+  },
+  {
+   "code": "US2025+",
+   "name": "M5 2025+ (US)",
+   "db_model": "M5",
+   "existing_id": null,
+   "start_year": 2025,
    "end_year": 2026,
    "open_ended": true,
    "start_known": true,
    "end_known": false,
    "boundary_evidence": [
-    "EPA vehicles.csv has no rows for MY2017 and vPIC has no Canadian rows for those years (the line returns in MY2018)",
-    "vPIC Canadian specifications: wheelbase 296 cm (MY2016) -> 298 cm (MY2018)",
-    "mycarusermanual.com generation page starts at 2017 (m5/4-door/2017-2023), corroborated by vPIC overall length 491 -> 496 cm (MY2016 -> MY2018)"
+    "cars.com: \"Redesigned for 2025\" (https://www.cars.com/research/bmw-m5/) [media: generation starts MY2025]"
    ],
    "evidence_tier": "B"
   }
@@ -757,7 +776,7 @@
   {
    "configuration_key": "bmw-m5-us-2018-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2018,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -785,7 +804,7 @@
   {
    "configuration_key": "bmw-m5-us-2019-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2019,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -825,7 +844,7 @@
   {
    "configuration_key": "bmw-m5-us-2020-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2020,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -865,7 +884,7 @@
   {
    "configuration_key": "bmw-m5-us-2021-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2021,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -905,7 +924,7 @@
   {
    "configuration_key": "bmw-m5-us-2022-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2022,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -957,7 +976,7 @@
   {
    "configuration_key": "bmw-m5-us-2023-4.4l-8cyl-turbo-ice-a-s8-awd",
    "year": 2023,
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "ICE",
@@ -997,7 +1016,7 @@
   {
    "configuration_key": "bmw-m5-us-2025-4.4l-8cyl-turbo-phev-a-s8-awd",
    "year": 2025,
-   "generation": "US2018+",
+   "generation": "US2025+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "PHEV",
@@ -1037,7 +1056,7 @@
   {
    "configuration_key": "bmw-m5-us-2026-4.4l-8cyl-turbo-phev-a-s8-awd",
    "year": 2026,
-   "generation": "US2018+",
+   "generation": "US2025+",
    "engine_family_key": null,
    "transmission_key": null,
    "powertrain": "PHEV",
@@ -1693,15 +1712,15 @@
    "primary_source": "vpic-ca-bmw-2015"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-curb_weight_kg-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-curb_weight_kg-2018",
+   "generation": "US2018-2023",
    "key": "curb_weight_kg",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 1982,
    "unit": "kg",
@@ -1765,33 +1784,6 @@
      "raw_value": "1982",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1982",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1982",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "CW",
-     "raw_value": "1982",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -1799,15 +1791,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-height_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-height_mm-2018",
+   "generation": "US2018-2023",
    "key": "height_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 1470,
    "unit": "mm",
@@ -1871,33 +1863,6 @@
      "raw_value": "147",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OH",
-     "raw_value": "147",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -1905,15 +1870,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-length_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-length_mm-2018",
+   "generation": "US2018-2023",
    "key": "length_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 4960,
    "unit": "mm",
@@ -1977,33 +1942,6 @@
      "raw_value": "496",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "OL",
-     "raw_value": "496",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -2011,15 +1949,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-track_front_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-track_front_mm-2018",
+   "generation": "US2018-2023",
    "key": "track_front_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 1610,
    "unit": "mm",
@@ -2083,33 +2021,6 @@
      "raw_value": "161",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWF",
-     "raw_value": "161",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -2117,15 +2028,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-track_rear_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-track_rear_mm-2018",
+   "generation": "US2018-2023",
    "key": "track_rear_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 1630,
    "unit": "mm",
@@ -2189,33 +2100,6 @@
      "raw_value": "163",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "TWR",
-     "raw_value": "163",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -2223,15 +2107,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-weight_distribution_front_rear_pct-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-weight_distribution_front_rear_pct-2018",
+   "generation": "US2018-2023",
    "key": "weight_distribution_front_rear_pct",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": "54/46",
    "unit": "%",
@@ -2295,33 +2179,6 @@
      "raw_value": "54/46",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "54/46",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "54/46",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WD",
-     "raw_value": "54/46",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -2329,15 +2186,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-wheelbase_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-wheelbase_mm-2018",
+   "generation": "US2018-2023",
    "key": "wheelbase_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 2980,
    "unit": "mm",
@@ -2401,33 +2258,6 @@
      "raw_value": "298",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2024",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2025",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
-    {
-     "source": "vpic-ca-bmw-2026",
-     "pages": null,
-     "quote": "M5 4DR SEDAN",
-     "field": "WB",
-     "raw_value": "298",
-     "tier": "B",
-     "publisher": "NHTSA vPIC (Transport Canada data)"
     }
    ],
    "display_level": "SECONDARY_NOTE",
@@ -2435,15 +2265,15 @@
    "primary_source": "vpic-ca-bmw-2018"
   },
   {
-   "id": "m5-US2018+-vpic-m5-4dr-sedan-width_mm-2018",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-vpic-m5-4dr-sedan-width_mm-2018",
+   "generation": "US2018-2023",
    "key": "width_mm",
    "level": "GENERATION",
    "engine": null,
    "gen_bound": true,
    "years": [
     2018,
-    2026
+    2023
    ],
    "value": 1870,
    "unit": "mm",
@@ -2507,16 +2337,333 @@
      "raw_value": "187",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
-    },
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2018"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-curb_weight_kg-2025",
+   "generation": "US2025+",
+   "key": "curb_weight_kg",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 1982,
+   "unit": "kg",
+   "original": "CW = 1982 (kg, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
     {
-     "source": "vpic-ca-bmw-2024",
+     "source": "vpic-ca-bmw-2025",
      "pages": null,
      "quote": "M5 4DR SEDAN",
-     "field": "OW",
-     "raw_value": "187",
+     "field": "CW",
+     "raw_value": "1982",
      "tier": "B",
      "publisher": "NHTSA vPIC (Transport Canada data)"
     },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "CW",
+     "raw_value": "1982",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-height_mm-2025",
+   "generation": "US2025+",
+   "key": "height_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 1470,
+   "unit": "mm",
+   "original": "OH = 147 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "OH",
+     "raw_value": "147",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-length_mm-2025",
+   "generation": "US2025+",
+   "key": "length_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 4960,
+   "unit": "mm",
+   "original": "OL = 496 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "OL",
+     "raw_value": "496",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-track_front_mm-2025",
+   "generation": "US2025+",
+   "key": "track_front_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 1610,
+   "unit": "mm",
+   "original": "TWF = 161 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "TWF",
+     "raw_value": "161",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-track_rear_mm-2025",
+   "generation": "US2025+",
+   "key": "track_rear_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 1630,
+   "unit": "mm",
+   "original": "TWR = 163 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "TWR",
+     "raw_value": "163",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-weight_distribution_front_rear_pct-2025",
+   "generation": "US2025+",
+   "key": "weight_distribution_front_rear_pct",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": "54/46",
+   "unit": "%",
+   "original": "WD = 54/46 (front/rear %, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "WD",
+     "raw_value": "54/46",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-wheelbase_mm-2025",
+   "generation": "US2025+",
+   "key": "wheelbase_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 2980,
+   "unit": "mm",
+   "original": "WB = 298 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
+    {
+     "source": "vpic-ca-bmw-2025",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    },
+    {
+     "source": "vpic-ca-bmw-2026",
+     "pages": null,
+     "quote": "M5 4DR SEDAN",
+     "field": "WB",
+     "raw_value": "298",
+     "tier": "B",
+     "publisher": "NHTSA vPIC (Transport Canada data)"
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-vpic-m5-4dr-sedan-width_mm-2025",
+   "generation": "US2025+",
+   "key": "width_mm",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 1870,
+   "unit": "mm",
+   "original": "OW = 187 (cm, Canadian specification row 'M5 4DR SEDAN')",
+   "applicability": {
+    "vpic_ca_model": "M5 4DR SEDAN",
+    "market_of_data": "CA"
+   },
+   "note": "Transport Canada dimensions via NHTSA vPIC; US version may differ (SECONDARY). Legend: https://vpic.nhtsa.dot.gov/api/ (GetCanadianVehicleSpecifications: OL/OW/OH/WB/TWF/TWR in cm, CW in kg, WD front/rear %)",
+   "cites": [
     {
      "source": "vpic-ca-bmw-2025",
      "pages": null,
@@ -2538,7 +2685,51 @@
    ],
    "display_level": "SECONDARY_NOTE",
    "confidence": "MEDIUM",
-   "primary_source": "vpic-ca-bmw-2018"
+   "primary_source": "vpic-ca-bmw-2025"
+  },
+  {
+   "id": "m5-US2025+-man-octane_ron-03f64a0d-2025",
+   "generation": "US2025+",
+   "key": "octane_ron",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2025,
+    2026
+   ],
+   "value": 98,
+   "unit": null,
+   "original": "RON 98",
+   "applicability": {},
+   "note": null,
+   "cites": [
+    {
+     "source": "mcum-m5-4-door-2024-2026",
+     "pages": [
+      23
+     ],
+     "quote": "RON 98",
+     "tier": "B",
+     "publisher": "factory owner's manual, copy hosted by mycarusermanual.com",
+     "row": "fer to operating with RON 98 E10 fuel",
+     "year": 2025
+    },
+    {
+     "source": "mcum-m5-4-door-2024-2026",
+     "pages": [
+      23
+     ],
+     "quote": "RON 98",
+     "tier": "B",
+     "publisher": "factory owner's manual, copy hosted by mycarusermanual.com",
+     "row": "fer to operating with RON 98 E10 fuel",
+     "year": 2026
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "mcum-m5-4-door-2024-2026"
   }
  ],
  "recalls": [
@@ -2646,7 +2837,7 @@
    "remedy": "BMW will notify owners, and dealers will update the engine control unit software, free of charge.  The recall began on June 25, 2018.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "16/05/2018",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2018
    ],
@@ -2670,7 +2861,7 @@
    "remedy": "BMW will notify owners, and dealers will secure the in-tank fuel line to keep the fuel line from contacting the fuel level sensor, free of charge.  The recall is expected to begin September 2018.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "17/07/2018",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2018
    ],
@@ -2694,7 +2885,7 @@
    "remedy": "BMW will notify owners, and dealers will update the back-up camera software, free of charge.  The recall began November 8, 2019.  Owners may contact BMW customer service at 1-800-525-7417 or Rolls-Royce at 1-877-877-3735.  Toyota owners may contact Toyota customer service at 1-888-270-9371.",
    "report_received_date": "27/09/2019",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2018,
     2019,
@@ -2722,7 +2913,7 @@
    "remedy": "BMW will notify owners, and dealers will replace the high pressure fuel pumps, free of charge.  The recall began August 27, 2019.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "03/07/2019",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2019
    ],
@@ -2746,7 +2937,7 @@
    "remedy": "BMW will notify owners, and dealers will replace any damaged transmission harnesses.  All harnesses will be rerouted and secured.  These repairs will be performed, free of charge.  The recall is expected to begin February 3, 2020.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "11/12/2019",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2019,
     2020
@@ -2772,7 +2963,7 @@
    "remedy": "BMW will notify owners, and dealers will inspect and, if necessary, program the rearview camera with updated software.  The recall began November 18, 2020.  Owners may contact BMW customer service at 1-800-525-7417.",
    "report_received_date": "30/09/2020",
    "manufacturer": "BMW of North America, LLC",
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "model_years": [
     2020,
     2021
@@ -2793,7 +2984,7 @@
  ],
  "complaint_patterns": [
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "ENGINE",
    "count": 8,
    "by_year": {
@@ -2814,7 +3005,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "POWER TRAIN",
    "count": 5,
    "by_year": {
@@ -2833,22 +3024,20 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "UNKNOWN OR OTHER",
-   "count": 5,
+   "count": 4,
    "by_year": {
     "2018": 1,
     "2019": 1,
     "2022": 1,
-    "2023": 1,
-    "2025": 1
+    "2023": 1
    },
    "sample_odi": [
     11594879,
     11543578,
     11625765,
-    11585838,
-    11661431
+    11585838
    ],
    "above_threshold": false
   },
@@ -2868,7 +3057,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "FUEL/PROPULSION SYSTEM",
    "count": 3,
    "by_year": {
@@ -2884,7 +3073,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "ELECTRICAL SYSTEM",
    "count": 2,
    "by_year": {
@@ -2898,7 +3087,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "ENGINE AND ENGINE COOLING",
    "count": 2,
    "by_year": {
@@ -2983,7 +3172,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "AIR BAGS",
    "count": 1,
    "by_year": {
@@ -2995,7 +3184,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "EXTERIOR LIGHTING",
    "count": 1,
    "by_year": {
@@ -3007,19 +3196,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
-   "component": "FORWARD COLLISION AVOIDANCE",
-   "count": 1,
-   "by_year": {
-    "2025": 1
-   },
-   "sample_odi": [
-    11661431
-   ],
-   "above_threshold": false
-  },
-  {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "SEAT BELTS",
    "count": 1,
    "by_year": {
@@ -3031,7 +3208,7 @@
    "above_threshold": false
   },
   {
-   "generation": "US2018+",
+   "generation": "US2018-2023",
    "component": "STRUCTURE",
    "count": 1,
    "by_year": {
@@ -3039,6 +3216,30 @@
    },
    "sample_odi": [
     11585838
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2025+",
+   "component": "FORWARD COLLISION AVOIDANCE",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11661431
+   ],
+   "above_threshold": false
+  },
+  {
+   "generation": "US2025+",
+   "component": "UNKNOWN OR OTHER",
+   "count": 1,
+   "by_year": {
+    "2025": 1
+   },
+   "sample_odi": [
+    11661431
    ],
    "above_threshold": false
   }
@@ -3072,8 +3273,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2014"
   },
-  "US2018+|coolant-leak": {
-   "key": "US2018+|coolant-leak",
+  "US2018-2023|coolant-leak": {
+   "key": "US2018-2023|coolant-leak",
    "label": "water pump / coolant leak",
    "count": 3,
    "by_year": {
@@ -3089,8 +3290,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2018"
   },
-  "US2018+|fuel-pump-stall": {
-   "key": "US2018+|fuel-pump-stall",
+  "US2018-2023|fuel-pump-stall": {
+   "key": "US2018-2023|fuel-pump-stall",
    "label": "fuel pump / stalling",
    "count": 3,
    "by_year": {
@@ -3107,8 +3308,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2018"
   },
-  "US2018+|loss-of-power": {
-   "key": "US2018+|loss-of-power",
+  "US2018-2023|loss-of-power": {
+   "key": "US2018-2023|loss-of-power",
    "label": "loss of power / limp mode",
    "count": 2,
    "by_year": {
@@ -3123,8 +3324,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2019"
   },
-  "US2018+|engine-failure": {
-   "key": "US2018+|engine-failure",
+  "US2018-2023|engine-failure": {
+   "key": "US2018-2023|engine-failure",
    "label": "engine failure / knocking / seizure",
    "count": 4,
    "by_year": {
@@ -3141,8 +3342,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2019"
   },
-  "US2018+|misfire": {
-   "key": "US2018+|misfire",
+  "US2018-2023|misfire": {
+   "key": "US2018-2023|misfire",
    "label": "misfire / rough running",
    "count": 2,
    "by_year": {
@@ -3157,8 +3358,8 @@
    "engine_specific": false,
    "source": "nhtsa-complaints-m5-2019"
   },
-  "US2018+|torque-converter": {
-   "key": "US2018+|torque-converter",
+  "US2018-2023|torque-converter": {
+   "key": "US2018-2023|torque-converter",
    "label": "torque converter shudder",
    "count": 1,
    "by_year": {
@@ -3282,8 +3483,8 @@
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-18V323000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-18V323000",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2018
@@ -3309,8 +3510,8 @@
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-18V473000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-18V473000",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2018
@@ -3336,8 +3537,8 @@
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-19V684000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-19V684000",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2020
@@ -3363,8 +3564,8 @@
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-19V513000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-19V513000",
+   "generation": "US2018-2023",
    "years": [
     2019,
     2019
@@ -3392,14 +3593,14 @@
     ],
     "tsbs": [],
     "complaint_patterns": [
-     "US2018+|fuel-pump-stall"
+     "US2018-2023|fuel-pump-stall"
     ]
    },
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-19V883000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-19V883000",
+   "generation": "US2018-2023",
    "years": [
     2019,
     2020
@@ -3425,8 +3626,8 @@
    "rule": "recall"
   },
   {
-   "id": "m5-US2018+-recall-20V598000",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-recall-20V598000",
+   "generation": "US2018-2023",
    "years": [
     2020,
     2021
@@ -4020,8 +4221,8 @@
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-airbag",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-airbag",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2022
@@ -4053,8 +4254,8 @@
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-battery-drain",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-battery-drain",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2020
@@ -4086,8 +4287,8 @@
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-coolant-leak",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-coolant-leak",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2022
@@ -4114,17 +4315,17 @@
      "11002676"
     ],
     "complaint_patterns": [
-     "US2018+|coolant-leak"
+     "US2018-2023|coolant-leak"
     ]
    },
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-hybrid-system",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-hybrid-system",
+   "generation": "US2018-2023",
    "years": [
     2022,
-    2026
+    2022
    ],
    "scope_level": "GENERATION",
    "component": "ELECTRICAL",
@@ -4132,10 +4333,10 @@
    "symptoms": [
     "hybrid / high-voltage system"
    ],
-   "cause": "BMW AG is conducting a Voluntary Service Action on certain Model Year 2019-2020 BMW Plug-In HybridElectric (PHEV) vehicles that were produced between March 25, 2019, and October 17, 2020.   Analyses of transmitted teleservice data indicate abnormalities in the \"balancing\" of the cells within one or more of the high-voltage battery cell modules. This could possibly cause a loss of performance of the corresponding modules, such as faster ageing, shorter range, or possible operating failure. | Several complaints are possible: Vehicle does not start Gear cannot be engaged Various Check Control Messages Malfunction indicator lamp (MIL) on Several Check Control messages are possible: It is possible to continue driving. High-voltage system. You can continue driving. Drivetrain. Restart not possible. Drivetrain fault. Call Roadside Assistance. Drivetrain failure. Information: Total error of vehicle. The following fault memory entries are stored in the CCU: D796D9 - Message (- 0x91) not up-to-date, receiver CCU, transmitter EME D796DC - No message (- 0x91), receiver CCU, transmitter EME D796D8 - No message (- 0x91), receiver CCU, transmitter EME Other fault codes below may be stored in the EGS BA09B8  Inverter, Voltage Sensor, 5V HV AUX: Out of range or open connection detected BA0A45  ECU internal: Internal error of the synchronous serial data bus. Additional fault memory entries are possible. Similar fault memory entries indicating a missing EMEmessage (Traction E-Machine Electronic) can also be stored in other control units.",
+   "cause": "BMW AG is conducting a Voluntary Service Action on certain Model Year 2019-2020 BMW Plug-In HybridElectric (PHEV) vehicles that were produced between March 25, 2019, and October 17, 2020.   Analyses of transmitted teleservice data indicate abnormalities in the \"balancing\" of the cells within one or more of the high-voltage battery cell modules. This could possibly cause a loss of performance of the corresponding modules, such as faster ageing, shorter range, or possible operating failure.",
    "consequences": "",
-   "inspection": "Ask a dealer whether manufacturer communications 10214983, 11030054 apply to this VIN and were performed.",
-   "typical_fix": "per manufacturer communication 10214983, 11030054",
+   "inspection": "Ask a dealer whether manufacturer communications 10214983 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 10214983",
    "severity": "HIGH",
    "probability": "OCCASIONAL",
    "complaints_in_years": [
@@ -4144,19 +4345,18 @@
    "evidence": {
     "recalls": [],
     "tsbs": [
-     "10214983",
-     "11030054"
+     "10214983"
     ],
     "complaint_patterns": []
    },
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-infotainment",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-infotainment",
+   "generation": "US2018-2023",
    "years": [
     2018,
-    2025
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "ELECTRICAL",
@@ -4185,19 +4385,18 @@
      "10186230",
      "10186892",
      "10200482",
-     "10249032",
-     "11034467"
+     "10249032"
     ],
     "complaint_patterns": []
    },
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-steering-noise",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-steering-noise",
+   "generation": "US2018-2023",
    "years": [
     2018,
-    2025
+    2023
    ],
    "scope_level": "GENERATION",
    "component": "STEERING",
@@ -4229,16 +4428,15 @@
      "10206690",
      "10230732",
      "10242691",
-     "10249017",
-     "11023248"
+     "10249017"
     ],
     "complaint_patterns": []
    },
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-suspension",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-suspension",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2020
@@ -4268,8 +4466,8 @@
    "rule": "TSB"
   },
   {
-   "id": "m5-US2018+-tsb-torque-converter",
-   "generation": "US2018+",
+   "id": "m5-US2018-2023-tsb-torque-converter",
+   "generation": "US2018-2023",
    "years": [
     2018,
     2020
@@ -4295,12 +4493,106 @@
      "10176367"
     ],
     "complaint_patterns": [
-     "US2018+|torque-converter"
+     "US2018-2023|torque-converter"
     ]
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m5-US2025+-tsb-hybrid-system",
+   "generation": "US2025+",
+   "years": [
+    2026,
+    2026
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: hybrid / high-voltage system",
+   "symptoms": [
+    "hybrid / high-voltage system"
+   ],
+   "cause": "Several complaints are possible: Vehicle does not start Gear cannot be engaged Various Check Control Messages Malfunction indicator lamp (MIL) on Several Check Control messages are possible: It is possible to continue driving. High-voltage system. You can continue driving. Drivetrain. Restart not possible. Drivetrain fault. Call Roadside Assistance. Drivetrain failure. Information: Total error of vehicle. The following fault memory entries are stored in the CCU: D796D9 - Message (- 0x91) not up-to-date, receiver CCU, transmitter EME D796DC - No message (- 0x91), receiver CCU, transmitter EME D796D8 - No message (- 0x91), receiver CCU, transmitter EME Other fault codes below may be stored in the EGS BA09B8  Inverter, Voltage Sensor, 5V HV AUX: Out of range or open connection detected BA0A45  ECU internal: Internal error of the synchronous serial data bus. Additional fault memory entries are possible. Similar fault memory entries indicating a missing EMEmessage (Traction E-Machine Electronic) can also be stored in other control units.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11030054 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11030054",
+   "severity": "HIGH",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11030054"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m5-US2025+-tsb-infotainment",
+   "generation": "US2025+",
+   "years": [
+    2025,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "ELECTRICAL",
+   "title": "Manufacturer communication: infotainment / display",
+   "symptoms": [
+    "infotainment / display"
+   ],
+   "cause": "The vehicle may experience various operational issues with Apple CarPlay Projected Modes such as: Dropped connections No automatic reconnection Display errors",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11034467 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11034467",
+   "severity": "LOW",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11034467"
+    ],
+    "complaint_patterns": []
+   },
+   "rule": "TSB"
+  },
+  {
+   "id": "m5-US2025+-tsb-steering-noise",
+   "generation": "US2025+",
+   "years": [
+    2025,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "component": "STEERING",
+   "title": "Manufacturer communication: steering column / coupler noise",
+   "symptoms": [
+    "steering column / coupler noise"
+   ],
+   "cause": "When the steering column is adjusted inwards towards the instrument cluster, the noise may occur near thelimit position.",
+   "consequences": "",
+   "inspection": "Ask a dealer whether manufacturer communications 11023248 apply to this VIN and were performed.",
+   "typical_fix": "per manufacturer communication 11023248",
+   "severity": "MEDIUM",
+   "probability": "OCCASIONAL",
+   "complaints_in_years": [
+    0
+   ],
+   "evidence": {
+    "recalls": [],
+    "tsbs": [
+     "11023248"
+    ],
+    "complaint_patterns": []
    },
    "rule": "TSB"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10146769",
@@ -5676,20 +5968,6 @@
    ]
   },
   {
-   "id": "11030054",
-   "make": "BMW",
-   "model": "M5",
-   "years": [
-    2026
-   ],
-   "summary": "Several complaints are possible: Vehicle does not start Gear cannot be engaged Various Check Control Messages Malfunction indicator lamp (MIL) on Several Check Control messages are possible: It is possible to continue driving. High-voltage system. You can continue driving. Drivetrain. Restart not possible. Drivetrain fault. Call Roadside Assistance. Drivetrain failure. Information: Total error of vehicle. The following fault memory entries are stored in the CCU: D796D9 - Message (- 0x91) not up-to-date, receiver CCU, transmitter EME D796DC - No message (- 0x91), receiver CCU, transmitter EME D796D8 - No message (- 0x91), receiver CCU, transmitter EME Other fault codes below may be stored in the EGS BA09B8  Inverter, Voltage Sensor, 5V HV AUX: Out of range or open connection detected BA0A45  ECU internal: Internal error of the synchronous serial data bus. Additional fault memory entries are possible. Similar fault memory entries indicating a missing EMEmessage (Traction E-Machine Electronic) can also be stored in other control units.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2026
-   ]
-  },
-  {
    "id": "10163056",
    "make": "BMW",
    "model": "M5",
@@ -5873,20 +6151,6 @@
     2021,
     2022,
     2023
-   ]
-  },
-  {
-   "id": "11034467",
-   "make": "BMW",
-   "model": "M5 SPORTSWAGON",
-   "years": [
-    2025
-   ],
-   "summary": "The vehicle may experience various operational issues with Apple CarPlay Projected Modes such as: Dropped connections No automatic reconnection Display errors",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2025
    ]
   },
   {
@@ -6158,20 +6422,6 @@
    ]
   },
   {
-   "id": "11023248",
-   "make": "BMW",
-   "model": "M5",
-   "years": [
-    2025
-   ],
-   "summary": "When the steering column is adjusted inwards towards the instrument cluster, the noise may occur near thelimit position.",
-   "component": "",
-   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
-   "gen_years": [
-    2025
-   ]
-  },
-  {
    "id": "10170576",
    "make": "BMW",
    "model": "M5",
@@ -6206,8 +6456,51 @@
     2019,
     2020
    ]
+  },
+  {
+   "id": "11030054",
+   "make": "BMW",
+   "model": "M5",
+   "years": [
+    2026
+   ],
+   "summary": "Several complaints are possible: Vehicle does not start Gear cannot be engaged Various Check Control Messages Malfunction indicator lamp (MIL) on Several Check Control messages are possible: It is possible to continue driving. High-voltage system. You can continue driving. Drivetrain. Restart not possible. Drivetrain fault. Call Roadside Assistance. Drivetrain failure. Information: Total error of vehicle. The following fault memory entries are stored in the CCU: D796D9 - Message (- 0x91) not up-to-date, receiver CCU, transmitter EME D796DC - No message (- 0x91), receiver CCU, transmitter EME D796D8 - No message (- 0x91), receiver CCU, transmitter EME Other fault codes below may be stored in the EGS BA09B8  Inverter, Voltage Sensor, 5V HV AUX: Out of range or open connection detected BA0A45  ECU internal: Internal error of the synchronous serial data bus. Additional fault memory entries are possible. Similar fault memory entries indicating a missing EMEmessage (Traction E-Machine Electronic) can also be stored in other control units.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2026
+   ]
+  },
+  {
+   "id": "11034467",
+   "make": "BMW",
+   "model": "M5 SPORTSWAGON",
+   "years": [
+    2025
+   ],
+   "summary": "The vehicle may experience various operational issues with Apple CarPlay Projected Modes such as: Dropped connections No automatic reconnection Display errors",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
+  },
+  {
+   "id": "11023248",
+   "make": "BMW",
+   "model": "M5",
+   "years": [
+    2025
+   ],
+   "summary": "When the steering column is adjusted inwards towards the instrument cluster, the noise may occur near thelimit position.",
+   "component": "",
+   "file": "data_work/_shared/raw/nhtsa_mfrcomms/MFR_COMMS_RECEIVED_2025-2026.zip",
+   "gen_years": [
+    2025
+   ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -6279,27 +6572,265 @@
    "scope": "bmw-m5-us-2026-4.4l-8cyl-turbo-phev-a-s8-awd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw/m5 MY2025 (mcum-m5-4-door-2024-2026)",
+   "field": "octane_aki",
+   "reason": "one document gives 3 values: ['87', '91', '93']"
+  },
+  {
+   "scope": "bmw/m5 MY2026 (mcum-m5-4-door-2024-2026)",
+   "field": "octane_aki",
+   "reason": "one document gives 3 values: ['87', '91', '93']"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2014-2016",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2018-2023",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "engine_oil_capacity_l",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "engine_oil_viscosity",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "coolant",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "transmission_fluid",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "brake_fluid",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "fuel_tank_l",
+   "reason": "not found unambiguously in the available US owner's manuals"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/m5 US2025+",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
-  "MY2024-2024: no EPA rows, no dimension change in vPIC; not a generation boundary"
+  "MY2024-2024: no EPA rows, no dimension change in vPIC; not a generation boundary",
+  "MY2013: one site lists a new generation without redesign wording and the data show no boundary; not used (cars.com: \"2013-2016 M5\" (https://www.cars.com/research/bmw-m5/) [media: weak])"
  ],
  "errors": [],
  "counts": {
-  "generations": 2,
+  "generations": 3,
   "configurations": 14,
-  "facts": 24,
+  "facts": 33,
   "recalls": 10,
   "symptom_patterns": 8,
-  "issues": 34,
+  "issues": 37,
   "issues_by_probability": {
    "RARE": 10,
-   "OCCASIONAL": 24
+   "OCCASIONAL": 27
   },
+  "cc_problems": 0,
   "tsbs": 108,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
-   "SECONDARY_NOTE": 24
+   "SECONDARY_NOTE": 33
   }
  }
 }

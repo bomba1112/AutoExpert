@@ -997,6 +997,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2026
   },
+  "nhtsa-recalls-active-hybrid-3-2014": {
+   "key": "nhtsa-recalls-active-hybrid-3-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/recalls/bmw/active-hybrid-3_2014.json.gz",
+   "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=BMW&model=ACTIVE+HYBRID+3&modelYear=2014",
+   "sha256": "74147c27e8c00a68fa4708025f0aa95a3dbb3bea68b4d5417efb2bef19d1e786",
+   "retrieved_at": "2026-10-02T10:53:05+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_RECALLS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA recalls ACTIVE HYBRID 3 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
   "nhtsa-complaints-335i-xdrive-2014": {
    "key": "nhtsa-complaints-335i-xdrive-2014",
    "kind": "json_gz",
@@ -1777,6 +1792,21 @@
    "authenticity": "OFFICIAL_PUBLISHER",
    "model_year": 2026
   },
+  "nhtsa-complaints-active-hybrid-3-2014": {
+   "key": "nhtsa-complaints-active-hybrid-3-2014",
+   "kind": "json_gz",
+   "path": "rawstore:nhtsa/complaints/bmw/active-hybrid-3_2014.json.gz",
+   "url": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=BMW&model=ACTIVE+HYBRID+3&modelYear=2014",
+   "sha256": "2604f5828e70dc0ab697b7a2d80c8efbaecc16bcc67939f0aa776a8d6ae72731",
+   "retrieved_at": "2026-10-02T10:53:08+00:00",
+   "tier": "A",
+   "source_type": "NHTSA_COMPLAINTS_API",
+   "registry": "nhtsa-safety-batch",
+   "title": "NHTSA complaints ACTIVE HYBRID 3 2014",
+   "publisher": "NHTSA",
+   "authenticity": "OFFICIAL_PUBLISHER",
+   "model_year": 2014
+  },
   "nhtsa-mfrcomms": {
    "key": "nhtsa-mfrcomms",
    "kind": "mfrcomms",
@@ -1825,7 +1855,8 @@
    "boundary_evidence": [
     "vPIC Canadian specifications: wheelbase 281/292 cm (MY2018) -> 285 cm (MY2019)",
     "vPIC Canadian specifications: overall length 463/483 -> 471 cm (MY2018 -> MY2019; a change of 6 cm or more)",
-    "mycarusermanual.com generation page starts at 2019 (3-series/4-door/2019-2025), corroborated by vPIC overall length 463/483 -> 471 cm, front track 153/154 -> 158 cm (MY2018 -> MY2019)"
+    "mycarusermanual.com generation page starts at 2019 (3-series/4-door/2019-2025), corroborated by vPIC overall length 463/483 -> 471 cm, front track 153/154 -> 158 cm (MY2018 -> MY2019)",
+    "consumerreports.org: \"The redesigned 3 Series sedan brings new infotainment tech, standard advanced safety features, improved handling, and better fuel economy.\" (https://www.consumerreports.org/cars/bmw/3-series/); cars.com: \"Redesigned for 2019\" (https://www.cars.com/research/bmw-330/) [media: generation starts MY2019]"
    ],
    "evidence_tier": "B"
   }
@@ -17520,9 +17551,9 @@
   {
    "generation": "F30",
    "component": "UNKNOWN OR OTHER",
-   "count": 128,
+   "count": 129,
    "by_year": {
-    "2014": 50,
+    "2014": 51,
     "2015": 32,
     "2016": 16,
     "2017": 22,
@@ -21864,6 +21895,7 @@
    "rule": "complaint pattern only (owner reports)"
   }
  ],
+ "cc_problems": [],
  "tsbs": [
   {
    "id": "10149582",
@@ -24909,6 +24941,7 @@
    ]
   }
  ],
+ "maintenance": [],
  "conflicts": [],
  "gaps": [
   {
@@ -25355,12 +25388,163 @@
    "scope": "bmw-3-series-us-2026-3.0l-6cyl-turbo-hev-a-s8-rwd",
    "field": "engine_family_key",
    "reason": "factory engine code not in EPA; filled only from a source that names it"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series F30",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "engine_oil_capacity_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "engine_oil_viscosity",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "coolant",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "transmission_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "brake_fluid",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "fuel_tank_l",
+   "reason": "no US owner's manual for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "power_hp",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "torque_lb_ft",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "tires",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "front_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "rear_suspension",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "front_brakes",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "steering",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "ground_clearance",
+   "reason": "no US press specification page for these years"
+  },
+  {
+   "scope": "bmw/3-series Seventh generation · US sedan",
+   "field": "cargo_l",
+   "reason": "no US press specification page for these years"
   }
  ],
  "notes": [
   "MY2015: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
   "MY2017: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
-  "MY2018: several wheelbases in vPIC Canadian rows (mixed body/generation year)"
+  "MY2018: several wheelbases in vPIC Canadian rows (mixed body/generation year)",
+  "CarComplaints: not_on_site"
  ],
  "errors": [],
  "counts": {
@@ -25375,7 +25559,9 @@
    "COMMON": 6,
    "RARE": 21
   },
+  "cc_problems": 0,
   "tsbs": 190,
+  "maintenance": 0,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 248

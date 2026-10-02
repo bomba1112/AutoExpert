@@ -11,6 +11,7 @@ from decimal import ROUND_HALF_UP, Decimal
 
 MM_PER_IN = Decimal("25.4")
 MM_PER_CM = Decimal("10")  # SI definition (vPIC Canadian specifications are in cm)
+M_PER_FT = Decimal("0.3048")
 L_PER_US_GAL = Decimal("3.785411784")
 L_PER_US_QT = Decimal("0.946352946")
 KG_PER_LB = Decimal("0.45359237")
@@ -24,6 +25,7 @@ L100KM_MPG_US = Decimal("235.2145833")  # L/100 km = constant / US mpg
 FACTORS = {
     ("in", "mm"): MM_PER_IN,
     ("cm", "mm"): MM_PER_CM,
+    ("ft", "m"): M_PER_FT,
     ("gal", "L"): L_PER_US_GAL,
     ("qt", "L"): L_PER_US_QT,
     ("lb", "kg"): KG_PER_LB,
@@ -34,7 +36,7 @@ FACTORS = {
     ("psi", "kPa"): KPA_PER_PSI,
 }
 # Decimal places kept after conversion, per target unit.
-PLACES = {"mm": 0, "L": 1, "kg": 0, "km": 0, "kW": 1, "N·m": 0, "kPa": 0, "L/100km": 1}
+PLACES = {"mm": 0, "m": 1, "L": 1, "kg": 0, "km": 0, "kW": 1, "N·m": 0, "kPa": 0, "L/100km": 1}
 
 
 def _round(value: Decimal, unit: str) -> Decimal:
