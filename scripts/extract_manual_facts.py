@@ -131,11 +131,18 @@ def edition_market(pages: list[str], official_us: bool = False) -> tuple[str, di
     # US manuals mention other regions in passing (Ford: "if you are traveling in the Middle
     # East"); the market follows the dominant units and US references.
     us = marks["usa"] >= 3 and (marks["quarts"] + marks["gallons"]) >= 2 and marks["mph"] >= 3
-    if us and not marks["acea_only"]:
+    # (Mercedes US manuals name ACEA next to their own MB 229.x approvals and never API: on the
+    # manufacturer's US site the US markers decide)
+    if us and (not marks["acea_only"] or official_us):
         return "US", marks
     # documents from the manufacturer's US site (warranty and maintenance booklets carry no
     # units) are US editions unless they say otherwise
     if official_us and marks["usa"] >= 1 and not marks["acea_only"] and marks["middle_east"] < 10:
+        return "US", marks
+    # ... and so are short supplements from the US site that never name the country but use
+    # US units throughout (mbusa AMG owner's manuals: quarts, gallons, mph)
+    if (official_us and (marks["quarts"] + marks["gallons"]) >= 2 and marks["mph"] >= 3
+            and not marks["acea_only"] and marks["middle_east"] < 10):
         return "US", marks
     if marks["middle_east"] >= 10 and marks["mph"] < 3:
         return "GCC", marks
@@ -729,6 +736,222 @@ def engine_codes(pages: list[str]) -> list[dict]:
     return found
 
 
+# ---- Mercedes-Benz "Model | Capacity" tables -----------------------------------------------
+# The US operator's manuals list engine oil capacity, coolant capacity and MB approvals per model
+# designation, one row per model group, e.g.
+#   Model Capacity / CLS 400 / CLS 400 4MATIC / 6.9 US qt (6.5 l) / CLS 550 ... / All other models ...
+# Read from the page text (rows can wrap over several lines); each value keeps its row label
+# as printed, so it is never spread to models the row does not name.
+MB_TABLES = "mb-model-table-4"
+MB_CAPACITY_HEAD = re.compile(r"^Model\s*(?:Capacity|Filling quantity|Filling capacity|Quantity)$")  # 2024+ editions: "Filling quantity"
+MB_APPROVAL_HEAD = re.compile(r"^(Model|Gasoline engines?|Diesel engines?)\s*MB-Freigabe or(?:\s*MB.?Approval)?$")
+MB_TOKEN = re.compile(
+    r"^(?:All|other|models?|vehicles|Mercedes[‑-](?:AMG|Benz|Maybach)|Maybach|AMG|[A-Z]{1,3}|\d{2,3}[a-z]?|4MATIC\+?"
+    r"|[a-z]|BlueTEC|BlueEFFICIENCY|Coupe|Coupé|Sedan|Cabriolet|Roadster|Wagon|SUV|Hybrid|hybrid|Plug-in|PLUG-IN"
+    r"|HYBRID|PERFORMANCE|Performance|S-MODEL|4-door|with|and|engine|engines|Edition|Final|Black|Series|[&/,+])$"
+)
+MB_QT = re.compile(r"(?:(Approx\.?)\s*)?(\d+(?:\.\d+)?)\s*US\s*qt\.?")
+MB_LITRES = re.compile(r"\(\s*(\d+(?:\.\d+)?)\s*(?:l|liters?|litres?)\s*\)")
+MB_APPROVAL = re.compile(r"229\.\d{1,2}\*?")
+MB_APPROVAL_MORE = re.compile(r"(?:229\.\d{1,2}(?:\*|\d\))?,?\s*)+")  # a wrapped approval list, footnote marks allowed
+# pdfium page text of some editions: ligature glyphs and a non-character for the soft hyphen
+MB_GLYPHS = (("̯", "fi"), ("̰", "fl"), ("͔", "ft"), ("￾", ""), ("­", ""))
+
+
+def mb_plain(text: str) -> str:
+    for old, new in MB_GLYPHS:
+        text = text.replace(old, new)
+    return text
+
+
+def mb_label_line(line: str) -> bool:
+    line = line.replace("￾", "-").replace("‑", "-")
+    tokens = [t.strip("(),") for t in line.split()]
+    return (0 < len(line) <= 45 and not line.endswith(".") and re.search(r"[A-Za-z]", line) is not None
+            and all(MB_TOKEN.match(t) for t in tokens if t))
+
+
+def mb_join(labels: list[str]) -> str:
+    """Row label lines to one label: a model per line, wrapped parts ('Mercedes-AMG' /
+    'CLA 35 4MATIC' / '(Coupe)', 'Mercedes-AMG' / 'vehicles') joined back."""
+    models = []
+    for line in labels:
+        line = norm(line).replace("‑", "-").replace("￾", "-")
+        if models and (re.match(r"[(+a-z]|4MATIC|4-door|vehicles$|models$|S (?:4-door|4MATIC|E PERFORMANCE|E Performance)", line)
+                       or models[-1] in ("Mercedes-AMG", "Mercedes-Benz", "Mercedes-Maybach")):
+            models[-1] += ("" if line == "+" else " ") + line
+        else:
+            models.append(line)
+    return " / ".join(models)
+
+
+MB_GROUP = re.compile(r"\((?:MERCEDES-AMG VEHI|Mercedes-AMG vehicles|MERCEDES-MAYBACH|Mercedes-Maybach)", re.I)
+MB_TOPIC = {  # plain (not AMG/Maybach) headings that open a topic section
+    "oil": re.compile(r"^(?:ENGINE OIL QUALITY AND|Engine oil quality and|Quality and capacity of engine oil|NOTES ON ENGINE OIL|Notes on engine oil)", re.I),
+    "coolant": re.compile(r"^(?:COOLANT FILLING (?:QUANTITY|CAPACITY)$|Coolant capacity$|NOTES ON COOLANT|Notes on coolant)", re.I),
+}
+
+
+def mb_group(pages: list[str], number: int, i: int, topic: str) -> str | None:
+    """2024+ editions repeat a section for Mercedes-AMG (or Maybach) vehicles, where "All models"
+    means all models of that group: the nearer of such a heading and the plain topic heading wins."""
+    lines = (pages[number - 2].split("\n") if number > 1 else []) + pages[number - 1].split("\n")[:i]
+    for line in reversed(lines[-60:]):
+        line = norm(line).lstrip("▌ ")
+        if MB_GROUP.search(line):
+            return "Mercedes-Maybach vehicles" if "MAYBACH" in line.upper() else "Mercedes-AMG vehicles"
+        if MB_TOPIC[topic].search(line):
+            return None
+    return None
+
+
+# fluid requirements the manuals state for every model (sentences, not tables)
+MB_FLUID_RULES = [
+    ("brake_fluid", "MB-Approval {}", re.compile(
+        r"brake fluid approved by Mercedes.?Benz (?:in accordance with|according to) MB.?Freigabe or\s?MB.?Approval (331\.\d)", re.I)),
+    ("coolant", "MB {}", re.compile(
+        r"(?:Observe the instructions in the Mercedes.?Benz Specifications? for Oper.?\s?ating Fluids"
+        r"|recommends an antifreeze/\s?corrosion inhibitor concentrate in accordance with MB Specifications for Service Products)"
+        r" (3\d\d\.\d)", re.I)),
+]
+
+
+def mb_model_tables(pages: list[str]) -> tuple[list[dict], list[dict]]:
+    facts, review = [], []
+    for number, text in enumerate(pages, start=1):
+        lines = text.split("\n")
+        flat = norm(text)
+        for key, form, pattern in MB_FLUID_RULES:
+            for m in pattern.finditer(flat):
+                facts.append({"key": key, "value": form.format(m.group(1)), "unit": None, "page": number,
+                              "quote": m.group(0), "row": m.group(0), "label": key.replace("_", " "), "engine_text": None,
+                              "source_layout": "mb_model_table", "all_models": True})
+        i = 0
+        while i < len(lines):
+            line = norm(lines[i])
+            capacity, approval = MB_CAPACITY_HEAD.match(line), MB_APPROVAL_HEAD.match(line)
+            if not capacity and not approval:
+                i += 1
+                continue
+            if capacity:
+                # which capacity: the last of "oil" / "coolant" said before the table
+                # a table at the top of a page continues the previous page's section
+                previous = pages[number - 2].split("\n")[-25:] if number > 1 and i < 25 else []
+                before = mb_plain(norm(" ".join(previous + lines[max(0, i - 25):i])))
+                after = mb_plain(norm(" ".join(lines[i:i + 30])))
+                oil = max((m.end() for m in re.finditer(r"oil change|engine oil", before, re.I)), default=-1)
+                coolant = max((m.end() for m in re.finditer(r"coolant|antifreeze", before, re.I)), default=-1)
+                if oil < 0 and coolant < 0:
+                    i += 1
+                    continue
+                key = "engine_oil_capacity_l" if oil > coolant else "coolant_capacity_l"
+                if key == "engine_oil_capacity_l" and not (re.search(r"oil change[^.]{0,40}(?<!without )the oil filter", before, re.I)
+                                                           or re.search(r"oil change[^.]{0,40}(?<!without )the oil filter", after, re.I)):
+                    review.append({"page": number, "key": key, "row": line, "reason": "oil capacity table without 'including the oil filter'"})
+                    i += 1
+                    continue
+            else:
+                key = "engine_oil_oem_approval"
+                section = re.match(r"(Gasoline|Diesel) engines?", line)
+                section = section.group(1).lower() + " engines" if section else None
+                if not re.search(r"Approval$", line) and i + 1 < len(lines) and re.match(r"^MB.?Approval$", norm(lines[i + 1])):
+                    i += 1
+            group = mb_group(pages, number, i, "coolant" if key == "coolant_capacity_l" else "oil")
+            i += 1
+            rows, pending, start, labels_seen = [], [], None, []
+            while i < len(lines):
+                line = norm(lines[i])
+                if key == "engine_oil_oem_approval":
+                    found = MB_APPROVAL.search(line)
+                    label = line[:found.start()].strip(" ,") if found else line
+                    if found and (not label or mb_label_line(label)):
+                        values = MB_APPROVAL.findall(line)
+                        while i + 1 < len(lines) and MB_APPROVAL_MORE.fullmatch(norm(lines[i + 1])):
+                            i += 1
+                            values += MB_APPROVAL.findall(norm(lines[i]))
+                        rows.append((pending + ([label] if label else []), values, None, start if pending else i, i))
+                        pending, start = [], None
+                        i += 1
+                        continue
+                else:
+                    qt = MB_QT.search(line)
+                    label = line[:qt.start()].strip() if qt else line
+                    if qt and (not label or mb_label_line(label)):
+                        value_text = line[qt.start():]
+                        end = i
+                        if not MB_LITRES.search(value_text) and i + 1 < len(lines) and norm(lines[i + 1]).startswith("("):
+                            end = i + 1
+                            value_text += " " + norm(lines[i + 1])
+                        rows.append((pending + ([label] if label else []), value_text, qt, start if pending else i, end))
+                        pending, start = [], None
+                        i = end + 1
+                        continue
+                if (mb_label_line(line) or pending and line == "+") and len(pending) < 6:
+                    if not pending:
+                        start = i
+                    pending.append(lines[i])
+                    i += 1
+                    continue
+                break
+            listed = [m for labels, *_ in rows for m in mb_join(labels).split(" / ") if labels and not re.match(r"All (?:other )?models", m)]
+            for labels, value, qt, first, last in rows:
+                block = norm(" ".join(lines[first:last + 1]))
+                quote = locate(block, flat)
+                if quote is None:
+                    review.append({"page": number, "key": key, "row": block, "reason": "quote not in page text", "quote": block})
+                    continue
+                label = mb_join(labels) if labels else None
+                extra = {"source_layout": "mb_model_table"}
+                if label is None or label == "All models":
+                    extra["all_models"] = True
+                else:
+                    own = label.split(" / ")
+                    rest = [m for m in listed if m not in own]
+                    others = "all other models (not " + "; ".join(rest) + ")" if rest else "all other models"
+                    extra["variant"] = " / ".join(others if m == "All other models" else m for m in own)
+                if key == "engine_oil_oem_approval" and section:
+                    extra["variant"] = f"{section}: {extra.get('variant', 'all models')}"
+                    extra.pop("all_models", None)
+                if group:
+                    extra["group"] = group
+                if key == "engine_oil_oem_approval":
+                    for v in value:
+                        facts.append({"key": key, "value": "MB-Approval " + v.rstrip("*"), "unit": None, "page": number,
+                                      "quote": quote, "row": block, "label": "MB approval", "engine_text": None, **extra})
+                    continue
+                litres = MB_LITRES.search(value)
+                if not litres:
+                    review.append({"page": number, "key": key, "row": block, "reason": "no litre figure in the row"})
+                    continue
+                facts.append({"key": key, "value": float(litres.group(1)), "unit": "L", "page": number, "quote": quote,
+                              "row": block, "label": key.replace("_", " "), "engine_text": None,
+                              "original": norm(value), "approx_in_source": bool(qt.group(1)), **extra})
+    # with a separate Mercedes-AMG / Maybach section for a field, the plain section's "All models"
+    # covers the other models only
+    for key in {f["key"] for f in facts}:
+        groups = sorted({f["group"] for f in facts if f["key"] == key and f.get("group")})
+        if not groups:
+            continue
+        for f in facts:
+            if f["key"] != key:
+                continue
+            if f.get("group"):
+                if re.match(r"Mercedes-(?:AMG|Maybach)", f.get("variant") or ""):
+                    continue  # the row already names the group
+                f["variant"] = f"{f['group']}: {f.get('variant') or 'all models'}"
+            elif f.get("all_models") or (f.get("variant") or "").endswith(": all models"):
+                prefix = f["variant"].rsplit(": ", 1)[0] + ": " if f.get("variant") else ""
+                f["variant"] = f"{prefix}all models except {' and '.join(groups)}"
+            else:
+                continue
+            f.pop("all_models", None)
+    return facts, review
+
+
+def extractor_for(make: str) -> str:
+    return f"{EXTRACTOR}+{MB_TABLES}" if make == "mercedes-benz" else EXTRACTOR
+
+
 def process(doc: dict) -> dict:
     cache = page_cache(doc["sha256"])
     if cache is None:
@@ -737,7 +960,7 @@ def process(doc: dict) -> dict:
     market, marks = edition_market(pages, official_us=doc["tier"] == "A")
     result = {
         "doc": {k: (str(v) if isinstance(v, Path) else v) for k, v in doc.items()},
-        "extractor": EXTRACTOR,
+        "extractor": extractor_for(doc["make"]),
         "pages": len(pages),
         "edition_market": market,
         "edition_markers": marks,
@@ -771,6 +994,22 @@ def process(doc: dict) -> dict:
             facts = [f for f in facts if f["key"] not in from_table]
             result["facts"] += facts
             result["review"] += review
+    if doc["make"] == "mercedes-benz":
+        # a per-model table replaces what the row pass read from the same page for that field
+        facts, review = mb_model_tables(pages)
+        family = {"engine_oil_capacity_l": {"engine_oil_capacity_l", "engine_oil_capacity_drain_refill_l",
+                                            "engine_oil_capacity_without_filter_l"}}
+        covered = {(f["page"], k) for f in facts for k in family.get(f["key"], {f["key"]})
+                   if f["key"] not in ("brake_fluid", "coolant")}  # sentence rules add, never replace
+        # MB sheet 331.x is the brake fluid approval; the row pass can read it under the coolant
+        # heading on the same page
+        result["facts"] = [f for f in result["facts"] if not (f["key"] == "coolant" and re.search(r"\b331\.\d", str(f["value"])))]
+        if any(f["key"] == "coolant" for f in result["facts"]):
+            # the manual names the coolant products (MB 325.0 ...): the operating-fluids sheet
+            # number it also refers to adds nothing
+            facts = [f for f in facts if f["key"] != "coolant"]
+        result["facts"] = [f for f in result["facts"] if (f["page"], f["key"]) not in covered] + facts
+        result["review"] += review
     result["candidate_pages"] = [i + 1 for i in candidates]
     result["status"] = "ok"
     return result
@@ -790,7 +1029,7 @@ def main(argv) -> int:
         target = out_dir / f"{doc['key']}.json"
         if target.exists():
             old = json.loads(target.read_text(encoding="utf-8"))
-            if old.get("extractor") == EXTRACTOR and old["doc"]["sha256"] == doc["sha256"] and "--force" not in argv:
+            if old.get("extractor") == extractor_for(make) and old["doc"]["sha256"] == doc["sha256"] and "--force" not in argv:
                 summary["cached"] += 1
                 continue
         result = process(doc)

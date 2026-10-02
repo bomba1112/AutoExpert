@@ -2,22 +2,25 @@
  "make": "mercedes-benz",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-02T16:16:49+00:00",
- "replace_own": [],
+ "started_at": "2026-10-02T20:05:31+00:00",
+ "replace_own": [
+  "glc"
+ ],
  "lines": {
   "mercedes-benz/c-class": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 114,
-    "source_records_new": 42,
-    "te_existing": 1552,
-    "te_new_GENERATION": 920,
-    "te_new_ENGINE": 12,
+    "raw_documents_seen": 162,
+    "source_records_new": 48,
+    "te_existing": 2483,
+    "te_new_GENERATION": 80,
     "configurations": 59,
     "configurations_research_only": 56,
     "configurations_linked": 3,
-    "issues_existing": 54
+    "issues_existing": 54,
+    "maintenance_new": 36,
+    "te_stale_deleted": 1
    },
    "generations": [
     {
@@ -40,15 +43,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 162,
-    "source_records_new": 72,
-    "te_existing": 1765,
-    "te_new_GENERATION": 1006,
-    "te_new_ENGINE": 25,
+    "raw_documents_seen": 196,
+    "source_records_new": 33,
+    "te_existing": 2796,
+    "te_new_GENERATION": 76,
     "configurations": 71,
     "configurations_research_only": 66,
     "configurations_linked": 5,
-    "issues_existing": 65
+    "issues_existing": 65,
+    "maintenance_new": 36
    },
    "generations": [
     {
@@ -71,14 +74,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 144,
-    "source_records_new": 70,
-    "te_existing": 1364,
-    "te_new_GENERATION": 1154,
-    "te_new_ENGINE": 18,
+    "raw_documents_seen": 167,
+    "source_records_new": 22,
+    "te_existing": 2536,
+    "te_new_GENERATION": 49,
     "configurations": 57,
     "configurations_research_only": 57,
-    "issues_existing": 31
+    "issues_existing": 31,
+    "maintenance_new": 24
    },
    "generations": [
     {
@@ -97,13 +100,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 70,
-    "source_records_new": 19,
-    "te_existing": 505,
-    "te_new_GENERATION": 327,
+    "raw_documents_seen": 73,
+    "source_records_new": 2,
+    "te_existing": 829,
+    "te_new_GENERATION": 13,
     "configurations": 24,
     "configurations_research_only": 24,
-    "issues_existing": 29
+    "issues_existing": 29,
+    "maintenance_new": 24,
+    "te_stale_deleted": 3
    },
    "generations": [
     {
@@ -122,13 +127,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 40,
-    "source_records_new": 9,
-    "te_existing": 297,
-    "te_new_GENERATION": 112,
+    "raw_documents_seen": 43,
+    "source_records_new": 2,
+    "te_existing": 405,
+    "te_new_GENERATION": 14,
     "configurations": 14,
     "configurations_research_only": 14,
-    "issues_existing": 24
+    "issues_existing": 24,
+    "maintenance_new": 12,
+    "te_stale_deleted": 4
    },
    "generations": [
     {
@@ -140,18 +147,21 @@
    "existing_vs_new": 0
   },
   "mercedes-benz/glc": {
-   "flag": "--prune-stale",
+   "flag": "--replace-own",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 116,
-    "source_records_new": 34,
-    "te_existing": 1067,
-    "te_new_GENERATION": 463,
+    "replaced_own_te": 1545,
+    "replaced_own_issues": 52,
+    "raw_documents_seen": 128,
+    "source_records_new": 11,
+    "te_new_GENERATION": 933,
     "te_new_ENGINE": 15,
+    "te_new_CONFIGURATION": 631,
     "configurations": 45,
     "configurations_research_only": 40,
     "configurations_linked": 5,
-    "issues_existing": 52
+    "issues_new": 52,
+    "maintenance_new": 36
    },
    "generations": [
     {
@@ -174,14 +184,16 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 124,
-    "source_records_new": 38,
-    "te_existing": 1295,
-    "te_new_GENERATION": 836,
+    "raw_documents_seen": 147,
+    "source_records_new": 22,
+    "te_existing": 2130,
+    "te_new_GENERATION": 82,
     "configurations": 61,
     "configurations_research_only": 58,
     "configurations_linked": 3,
-    "issues_existing": 35
+    "issues_existing": 35,
+    "maintenance_new": 24,
+    "te_stale_deleted": 1
    },
    "generations": [
     {
@@ -200,13 +212,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 71,
-    "source_records_new": 21,
-    "te_existing": 629,
-    "te_new_GENERATION": 326,
+    "raw_documents_seen": 79,
+    "source_records_new": 7,
+    "te_existing": 955,
+    "te_new_GENERATION": 32,
     "configurations": 31,
     "configurations_research_only": 31,
-    "issues_existing": 30
+    "issues_existing": 30,
+    "maintenance_new": 24
    },
    "generations": [
     {
@@ -225,13 +238,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 71,
-    "source_records_new": 21,
-    "te_existing": 689,
-    "te_new_GENERATION": 355,
+    "raw_documents_seen": 76,
+    "source_records_new": 4,
+    "te_existing": 1039,
+    "te_new_GENERATION": 44,
     "configurations": 35,
     "configurations_research_only": 35,
-    "issues_existing": 45
+    "issues_existing": 45,
+    "maintenance_new": 36,
+    "te_stale_deleted": 5
    },
    "generations": [
     {
@@ -254,13 +269,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 50,
-    "source_records_new": 17,
-    "te_existing": 466,
-    "te_new_GENERATION": 258,
+    "raw_documents_seen": 59,
+    "source_records_new": 8,
+    "te_existing": 720,
+    "te_new_GENERATION": 26,
     "configurations": 31,
     "configurations_research_only": 31,
-    "issues_existing": 34
+    "issues_existing": 34,
+    "maintenance_new": 24,
+    "te_stale_deleted": 4
    },
    "generations": [
     {
@@ -279,13 +296,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 25,
-    "source_records_new": 8,
-    "te_existing": 214,
-    "te_new_GENERATION": 145,
+    "raw_documents_seen": 27,
+    "source_records_new": 1,
+    "te_existing": 359,
+    "te_new_GENERATION": 2,
     "configurations": 6,
     "configurations_research_only": 6,
-    "issues_existing": 8
+    "issues_existing": 8,
+    "maintenance_new": 12
    },
    "generations": [
     {
@@ -300,13 +318,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 22,
-    "source_records_new": 16,
-    "te_new_GENERATION": 143,
-    "te_existing": 240,
+    "raw_documents_seen": 25,
+    "source_records_new": 2,
+    "te_new_GENERATION": 17,
+    "te_existing": 382,
     "configurations": 16,
     "configurations_research_only": 16,
-    "issues_existing": 4
+    "issues_existing": 4,
+    "maintenance_new": 12,
+    "te_stale_deleted": 1
    },
    "generations": [
     {
@@ -322,9 +342,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 17,
-    "source_records_new": 3,
-    "te_existing": 212,
-    "te_new_GENERATION": 22,
+    "te_existing": 234,
     "configurations": 9,
     "configurations_research_only": 9,
     "issues_existing": 11
@@ -342,10 +360,10 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 18,
+    "raw_documents_seen": 20,
     "source_records_new": 2,
-    "te_existing": 130,
-    "te_new_GENERATION": 32,
+    "te_existing": 162,
+    "te_new_GENERATION": 2,
     "configurations": 5,
     "configurations_research_only": 5,
     "issues_existing": 14
@@ -370,8 +388,97 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "stale_without_same_value": [
+  {
+   "line": "mercedes-benz/c-class",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 6,
+   "years": [
+    2025,
+    2025
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/gla",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5.5,
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/glb",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5.5,
+   "years": [
+    2021,
+    2022
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/glb",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5,
+   "years": [
+    2024,
+    2024
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/cla",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5.5,
+   "years": [
+    2022,
+    2022
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/cla",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 5.6,
+   "years": [
+    2015,
+    2015
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/cla",
+   "key": "coolant",
+   "value": "MB Approval 331.0",
+   "years": [
+    2015,
+    2015
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "mercedes-benz/cls",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 8.5,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-02T16:19:05+00:00"
+ "finished_at": "2026-10-02T20:07:14+00:00"
 }

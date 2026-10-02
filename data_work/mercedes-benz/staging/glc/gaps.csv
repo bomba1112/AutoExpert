@@ -44,7 +44,15 @@ engine_family_key,factory engine code not in EPA; filled only from a source that
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-glc-us-2025-2.0l-4cyl-turbo-phev-a-9-spd-awd
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-glc-us-2026-2.0l-4cyl-turbo-hev-a-9-spd-awd
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-glc-us-2026-2.0l-4cyl-turbo-hev-a-9-spd-rwd
+coolant,"value 'MB-Approval 331.0' is the MB brake fluid approval, not a coolant; not used",mercedes-benz/glc mcum-glc-class-suv-2015-2021 p.938
+engine_oil_capacity_drain_refill_l,value 0.8 outside the validator range; not used,mercedes-benz/glc official-04d6c47f5108 p.342
+fuel_tank_l,value 6.8 outside the validator range; not used,mercedes-benz/glc official-04d6c47f5108 p.413
+fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/glc official-04d6c47f5108 p.413
+fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/glc official-068cf930c6ec p.153
+fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/glc official-068cf930c6ec p.366
 fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/glc official-624b3ccfb5cd p.375
+fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/glc official-a3a904dac968 p.499
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/glc official-a3a904dac968 p.538
 fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/glc official-c5b35f70ceb4 p.350
 engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/glc official-c5b35f70ceb4 p.406
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2015 (mcum-glc-class-suv-2015-2021)
@@ -53,13 +61,14 @@ coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/gl
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2019 (mcum-glc-class-suv-2015-2021)
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2020 (mcum-glc-class-suv-2015-2021)
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2021 (mcum-glc-class-suv-2015-2021)
+octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2016 (official-04d6c47f5108)
+coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2017 (official-068cf930c6ec)
+octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2017 (official-068cf930c6ec)
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2018 (official-624b3ccfb5cd)
 engine_oil_viscosity,engine not stated; EPA lists several engines,mercedes-benz/glc MY2018 (official-624b3ccfb5cd)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2018 (official-624b3ccfb5cd)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2020 (official-c5b35f70ceb4)
+octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2019 (official-a3a904dac968)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2020 (official-c5b35f70ceb4)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2021 (official-fdccc69c33b0)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/glc MY2022 (official-fdccc69c33b0)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2021 (official-fdccc69c33b0)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/glc MY2022 (official-fdccc69c33b0)
 bore_stroke_in,engine not stated; EPA lists several engines,mercedes-benz/glc MY2017 (press-mbusa-glc-2017-1562c505)
@@ -296,8 +305,8 @@ width_mm,"one document gives 2 values: ['1930', '2096']",mercedes-benz/glc MY202
 width_mm,"one document gives 2 values: ['1890', '2096']",mercedes-benz/glc MY2024 (press-mbusa-glc-2024-c4d3f878)
 electric_motor,"one document gives 2 values: ['""134 hp""', '""325 lb-ft""']",mercedes-benz/glc MY2025 (press-mbusa-glc-2025-51afbd35)
 width_mm,"one document gives 2 values: ['1890', '2075']",mercedes-benz/glc MY2025 (press-mbusa-glc-2025-51afbd35)
-engine_oil_capacity_l,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
 engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
+coolant,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
 transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
 brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
 fuel_tank_l,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2014-2015
@@ -310,16 +319,13 @@ front_brakes,no US press specification page for these years,mercedes-benz/glc US
 steering,no US press specification page for these years,mercedes-benz/glc US2014-2015
 ground_clearance,no US press specification page for these years,mercedes-benz/glc US2014-2015
 cargo_l,no US press specification page for these years,mercedes-benz/glc US2014-2015
-engine_oil_capacity_l,not found unambiguously in the available US owner's manuals,mercedes-benz/glc X253
 engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/glc X253
 transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc X253
-brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc X253
-engine_oil_capacity_l,no US owner's manual for these years,mercedes-benz/glc US2023+
-engine_oil_viscosity,no US owner's manual for these years,mercedes-benz/glc US2023+
-coolant,no US owner's manual for these years,mercedes-benz/glc US2023+
-transmission_fluid,no US owner's manual for these years,mercedes-benz/glc US2023+
-brake_fluid,no US owner's manual for these years,mercedes-benz/glc US2023+
-fuel_tank_l,no US owner's manual for these years,mercedes-benz/glc US2023+
+engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2023+
+coolant,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2023+
+transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2023+
+brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2023+
+fuel_tank_l,not found unambiguously in the available US owner's manuals,mercedes-benz/glc US2023+
 tires,not found unambiguously in the available US press specification pages,mercedes-benz/glc US2023+
 front_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/glc US2023+
 rear_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/glc US2023+

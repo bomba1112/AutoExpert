@@ -10,6 +10,7 @@ Lines whose generation blocks changed against git HEAD are loaded with --replace
 stops the pass. Summary per line: data_work/<make>/staging/load_pass_<mode>.json.
 
   .venv/Scripts/python.exe scripts/run_make_pass.py hyundai build|rehearse|live
+  ... rehearse|live --replace-own glc   one line replaced (owner decision), the others as usual
 """
 
 from __future__ import annotations
@@ -146,13 +147,14 @@ def save_corrections(make: str) -> int:
     return total
 
 
-def load(make: str, mode: str, replace_all: bool = False) -> int:
+def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozenset = frozenset()) -> int:
     db = LIVE if mode == "live" else REHEARSAL
     if mode == "live":
         backup_live()
     replace = changed_generations(make)
     if replace_all:
         replace = {line.slug for line in lines_for(make)}
+    replace |= set(replace_lines)  # owner-approved replacement of single lines (--replace-own <slug>)
     summary = {"make": make, "mode": mode, "db": str(db), "started_at": datetime.now(UTC).isoformat(timespec="seconds"),
                "replace_own": sorted(replace), "lines": {}}
     logs = Path(r"C:\AutoExpertData\logs")
@@ -192,7 +194,8 @@ def main(argv) -> int:
         save_corrections(make)
         return 0
     if step in ("rehearse", "live"):
-        return load(make, "live" if step == "live" else "rehearsal", "--replace-all" in argv)
+        lines = frozenset(argv[i + 1] for i, a in enumerate(argv) if a == "--replace-own" and i + 1 < len(argv))
+        return load(make, "live" if step == "live" else "rehearsal", "--replace-all" in argv, lines)
     raise SystemExit(f"unknown step {step}")
 
 

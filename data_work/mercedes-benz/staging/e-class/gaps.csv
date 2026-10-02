@@ -75,6 +75,7 @@ engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not us
 engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/e-class official-12e3440f3ffb p.407
 fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/e-class official-7f59c2febd8b p.188
 engine_oil_capacity_drain_refill_l,value 0.8 outside the validator range; not used,mercedes-benz/e-class official-7f59c2febd8b p.350
+fuel_tank_l,value 12.0 outside the validator range; not used,mercedes-benz/e-class official-a1b7128e127b p.38
 fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/e-class official-bf1d698e61aa p.181
 engine_oil_capacity_drain_refill_l,value 0.8 outside the validator range; not used,mercedes-benz/e-class official-bf1d698e61aa p.339
 fuel_tank_l,value 14.0 outside the validator range; not used,mercedes-benz/e-class official-bf1d698e61aa p.421
@@ -84,24 +85,23 @@ coolant_capacity_l,value 38.2 outside the validator range; not used,mercedes-ben
 fuel_tank_l,value 12.0 outside the validator range; not used,mercedes-benz/e-class official-d1dab039e20b p.342
 fuel_tank_l,value 7.0 outside the validator range; not used,mercedes-benz/e-class official-d1dab039e20b p.342
 engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/e-class official-d1dab039e20b p.396
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/e-class official-e25a8c3bd5de p.411
 ground_clearance,value 2337 outside the validator range; not used,mercedes-benz/e-class press-mbusa-e-class-2017-322e83e7 p.1
 ground_clearance,value 2438 outside the validator range; not used,mercedes-benz/e-class press-mbusa-e-class-2017-9b120538 p.1
 ground_clearance,value 2438 outside the validator range; not used,mercedes-benz/e-class press-mbusa-e-class-2017-c203e14d p.1
 curb_weight_kg,value 2 outside the validator range; not used,mercedes-benz/e-class press-mbusa-e-class-2017-d92392d1 p.1
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2018 (official-0b45269868b0)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2018 (official-0b45269868b0)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2021 (official-12e3440f3ffb)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2021 (official-12e3440f3ffb)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2015 (official-7f59c2febd8b)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2016 (official-7f59c2febd8b)
 engine_oil_viscosity,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2015 (official-7f59c2febd8b)
 engine_oil_viscosity,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2016 (official-7f59c2febd8b)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2015 (official-7f59c2febd8b)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2016 (official-7f59c2febd8b)
+engine_oil_viscosity,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2022 (official-a1b7128e127b)
 coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2014 (official-bf1d698e61aa)
 engine_oil_viscosity,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2014 (official-bf1d698e61aa)
-coolant_capacity_l,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2020 (official-d1dab039e20b)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2020 (official-d1dab039e20b)
+coolant_capacity_l,"one document gives 2 values: ['13.0', '5.4']",mercedes-benz/e-class MY2023 (official-e25a8c3bd5de)
+octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/e-class MY2023 (official-e25a8c3bd5de)
 bore_stroke_in,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2017 (press-mbusa-e-class-2017-1718456a)
 bore_stroke_mm,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2017 (press-mbusa-e-class-2017-1718456a)
 compression_ratio,engine not stated; EPA lists several engines,mercedes-benz/e-class MY2017 (press-mbusa-e-class-2017-1718456a)
@@ -579,7 +579,6 @@ system_power_hp,"one document gives 2 values: ['577', '604']",mercedes-benz/e-cl
 width_mm,"one document gives 2 values: ['1902', '2065']",mercedes-benz/e-class MY2025 (press-mbusa-e-class-2025-99c71d8c)
 electric_motor,"one document gives 2 values: ['""161 hp""', '""354 lb-ft""']",mercedes-benz/e-class MY2026 (press-mbusa-e-class-2026-230810b4)
 width_mm,"one document gives 2 values: ['1902', '2065']",mercedes-benz/e-class MY2026 (press-mbusa-e-class-2026-230810b4)
-engine_oil_capacity_l,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class W212
 engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class W212
 transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class W212
 brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class W212
@@ -592,17 +591,13 @@ front_brakes,no US press specification page for these years,mercedes-benz/e-clas
 steering,no US press specification page for these years,mercedes-benz/e-class W212
 ground_clearance,no US press specification page for these years,mercedes-benz/e-class W212
 cargo_l,no US press specification page for these years,mercedes-benz/e-class W212
-engine_oil_capacity_l,no US owner's manual for these years,mercedes-benz/e-class US2017-2023
-engine_oil_viscosity,no US owner's manual for these years,mercedes-benz/e-class US2017-2023
-coolant,no US owner's manual for these years,mercedes-benz/e-class US2017-2023
-transmission_fluid,no US owner's manual for these years,mercedes-benz/e-class US2017-2023
-brake_fluid,no US owner's manual for these years,mercedes-benz/e-class US2017-2023
-engine_oil_capacity_l,no US owner's manual for these years,mercedes-benz/e-class US2024+
-engine_oil_viscosity,no US owner's manual for these years,mercedes-benz/e-class US2024+
-coolant,no US owner's manual for these years,mercedes-benz/e-class US2024+
-transmission_fluid,no US owner's manual for these years,mercedes-benz/e-class US2024+
-brake_fluid,no US owner's manual for these years,mercedes-benz/e-class US2024+
-fuel_tank_l,no US owner's manual for these years,mercedes-benz/e-class US2024+
+engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2017-2023
+transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2017-2023
+engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2024+
+coolant,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2024+
+transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2024+
+brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2024+
+fuel_tank_l,not found unambiguously in the available US owner's manuals,mercedes-benz/e-class US2024+
 tires,not found unambiguously in the available US press specification pages,mercedes-benz/e-class US2024+
 front_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/e-class US2024+
 rear_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/e-class US2024+

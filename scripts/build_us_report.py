@@ -382,12 +382,42 @@ def status_lines() -> list[str]:
 
 def mbusa_failures() -> list[str]:
     rows = read_csv(WORK / "_shared" / "manifest_official" / "www.mbusa.com.csv")
+    manuals = [r for r in rows if r.get("doc_type") == "owners_manual"]
+    first = [r for r in manuals if "alternative" not in (r.get("note") or "")]
+    alt = [r for r in manuals if "alternative" in (r.get("note") or "")]
     last = {}
-    for r in rows:
+    for r in first:
         last[r["url"]] = r
     st = Counter(r["status"] for r in last.values())
-    return [f"- www.mbusa.com (руководства Mercedes-Benz): скачано {st.get('ok', 0)}, недоступно {st.get('error', 0)} "
-            "(шлюз сайта отвечал 502 через 60 с; повторная попытка по 35 файлам — тот же ответ, остановлена)."]
+    ok_years, all_years = set(), set()
+    plan = read_json(WORK / "_shared" / "official_manuals" / "mercedes-benz.json", {})
+    for d in plan.get("documents", []):
+        if d.get("doc_type") == "owners_manual" and "www.mbusa.com" in d.get("url", ""):
+            all_years.add((d["line"], d["year"]))
+    for r in manuals:
+        if r["status"] == "ok":
+            ok_years |= {(line, int(y)) for line in r["lines"].split(";") if line for y in r["years"].split(";") if y}
+    log = read_json(WORK / "_shared" / "manifest_official" / "mbusa_alternatives_log.json", [])
+    tried = sum(1 for x in log if x["tried"])
+    got = sum(1 for x in log if x["downloaded"])
+    none_listed = sum(1 for x in log if not x["alternatives_listed"])
+    missing = sorted(all_years - ok_years)
+    return [
+        f"- www.mbusa.com (руководства Mercedes-Benz), основной проход: скачано {st.get('ok', 0)}, недоступно "
+        f"{st.get('error', 0)} (шлюз сайта отвечал 502). Повтор недоступных файлов с таймаутом 180 с: 0 из 7, "
+        "остановлен по решению владельца.",
+        f"- Альтернативные официальные US-издания тех же модели-годов (другой кузов или другая дата издания, "
+        f"по одному запросу, таймаут 180 с, до 2 попыток на модели-год): модели-годов {len(log)}, с попытками {tried}, "
+        f"скачано {got} ({sum(1 for r in alt if r['status'] == 'ok')} файлов), без альтернатив в каталоге mbusa "
+        f"{none_listed}; запросов с ошибкой {sum(1 for r in alt if r['status'] != 'ok')}.",
+        f"- Модели-годы Mercedes без US-руководства после всех попыток: {len(missing)} из {len(all_years)}: "
+        + ", ".join(f"{line.split('/')[-1]} {year}" for line, year in missing) + ".",
+        "- Копии руководств для Mercedes: mycarusermanual.com — только 4 модели Mercedes в каталоге; carmans.net — "
+        "Mercedes нет; ownersman.com — защита Cloudflare (не обходится); manualslib.com и usermanual.wiki → manuals.plus "
+        "не отвечают.",
+        "- auto-data.net: объём масла и ОЖ собраны (вторичный источник); допуск масла на auto-data.net закрыт входом "
+        "в аккаунт — не собирался.",
+    ]
 
 
 def corrections_section() -> list[str]:
@@ -456,6 +486,103 @@ def cc_maintenance_section(all_data: dict) -> list[str]:
             mnt += len(st.get("maintenance", []))
         out.append(f"| {MAKES[make]['epa']} | {raised} | {owners} | {mnt} |")
     return out
+
+
+MB_FIELDS = [
+    ("Объём масла", ["engine_oil_capacity_l", "engine_oil_capacity_drain_refill_l"]),
+    ("Допуск/стандарт масла", ["engine_oil_oem_approval", "engine_oil_specification"]),
+    ("Вязкость", ["engine_oil_viscosity"]),
+    ("ОЖ", ["coolant", "coolant_description", "coolant_capacity_l"]),
+    ("Жидкость АКПП", ["transmission_fluid", "transmission_fluid_capacity_l"]),
+    ("Тормозная", ["brake_fluid"]),
+]
+MB_BEFORE_COMMIT = "f8a2184"  # Mercedes-Benz load before the gap-closing round
+
+
+def mb_line_years(staging: dict) -> dict:
+    """year -> {field: source kind} for the shown facts; kinds: manual (US owner's manual, official
+    or copy), secondary (auto-data.net), press."""
+    kinds = {}
+    for key, item in (staging.get("sources") or {}).items():
+        st = item.get("source_type", "")
+        kinds[key] = ("secondary" if st == "SECONDARY_SPEC_DATABASE" else "press" if st == "PRESS_RELEASE"
+                      else "manual" if st.startswith("OWNER_MANUAL") else "other")
+    out = defaultdict(dict)
+    whole = defaultdict(set)  # (year, label) with a value for all models, not only named ones
+    rank = {"manual": 0, "press": 1, "secondary": 2, "other": 3}
+    for f in staging.get("facts", []):
+        if f.get("display_level") == "HIDDEN_CONFLICT":
+            continue
+        for label, keys in MB_FIELDS:
+            if f["key"] in keys:
+                kind = kinds.get(f.get("primary_source"), "other")
+                variant = (f.get("applicability") or {}).get("variant") or ""
+                for y in range(f["years"][0], f["years"][1] + 1):
+                    prev = out[y].get(label)
+                    if prev is None or rank[kind] < rank[prev]:
+                        out[y][label] = kind
+                    if not variant or "all models" in variant or "all other models" in variant:
+                        whole[(y, label)].add(kind)
+    for y, fields in out.items():
+        for label, kind in fields.items():
+            if kind not in whole[(y, label)]:
+                fields[label] = kind + "*"
+    for item in staging.get("maintenance", []):
+        for y in range(item["years"][0], item["years"][1] + 1):
+            out[y]["ТО"] = "mbusa A/B" if item.get("primary_source") == "mbusa-service-intervals" else "manual"
+    return out
+
+
+def mercedes_section() -> list[str]:
+    out = ["Поля по модельным годам каждой линейки (EPA-годы). Источник: manual — US-руководство (официальное или копия), "
+           "secondary — auto-data.net (европейская карточка, сопоставленная с US-конфигурацией), press — пресс-материал; "
+           "«*» — значение только для названных в таблице руководства моделей (не для всех конфигураций года); "
+           "mbusa A/B — интервалы Service A/B с официальной страницы mbusa.com (без привязки к модели и году, «approximately» "
+           "в источнике, уровень SECONDARY_NOTE); «—» — нет данных.", ""]
+    labels = [l for l, _ in MB_FIELDS] + ["ТО"]
+    totals = Counter()
+    rows = ["| Линейка | Год | " + " | ".join(labels) + " |", "|---|---|" + "---|" * len(labels)]
+    for line in lines_for("mercedes-benz"):
+        path = f"data_work/mercedes-benz/staging/{line.slug}/staging.json"
+        now_st = read_json(ROOT / path, {})
+        old = subprocess.run(["git", "show", f"{MB_BEFORE_COMMIT}:{path}"], cwd=ROOT, capture_output=True)
+        before = mb_line_years(json.loads(old.stdout)) if old.returncode == 0 else {}
+        after = mb_line_years(now_st)
+        for year in sorted({c["year"] for c in now_st.get("configurations", [])}):
+            cells = []
+            for label in labels:
+                a, b = after.get(year, {}).get(label), before.get(year, {}).get(label)
+                totals[(label, "after" if a else "none")] += 1
+                if a and not b:
+                    totals[(label, "closed")] += 1
+                cells.append((a or "—") + (" (новое)" if a and not b else ""))
+            rows.append(f"| {line.name} | {year} | " + " | ".join(cells) + " |")
+    summary = ["| Поле | Годы с данными | Закрыто в этом раунде | Осталось без данных |", "|---|---|---|---|"]
+    for label in labels:
+        summary.append(f"| {label} | {totals[(label, 'after')]} | {totals[(label, 'closed')]} | {totals[(label, 'none')]} |")
+    why = [
+        "",
+        "Почему не закрыто остальное:",
+        "",
+        "- Модели-годы без US-руководства (см. «Недоступные источники»): объём масла и ОЖ взяты с auto-data.net, "
+        "где карточка однозначно сопоставилась с US-конфигурацией (обозначение, объём, цилиндры, привод, годы); "
+        "если карточки расходятся между собой — значение скрыто как конфликт, не выбирается.",
+        "- Допуск масла (MB 229.x): только из таблиц руководств; на auto-data.net допуск закрыт входом — для годов без "
+        "руководства пусто.",
+        "- Вязкость: US-руководства Mercedes дают таблицу SAE-классов по температуре, а не одно значение; записано "
+        "только там, где руководство прямо ограничивает класс (AMG: «only SAE 0W-40 or 5W-40»).",
+        "- Жидкость АКПП: в US-руководствах Mercedes нет ни спецификации, ни объёма ATF (обслуживание по Service A/B "
+        "у дилера) — пусто.",
+        "- Тормозная жидкость: «MB-Approval 331.0» из руководств; для годов без руководства — пусто.",
+        "- ТО: официальная страница mbusa.com «Service & Maintenance»: Service A — первый визит «approximately» "
+        "10 000 миль или 1 год (что наступит раньше), далее «approximately» каждые 20 000 миль или 2 года; Service B — "
+        "«approximately» 20 000 миль или 1 год после предыдущего визита, далее каждые 20 000 миль или 2 года. Страница не называет модели и годы и сама пишет «approximately» — строки "
+        "записаны как SECONDARY_NOTE с этой оговоркой. Электромобили (EQS, EQB): на странице пакет обслуживания EV без "
+        "интервалов — пусто с причиной в gaps.",
+        "- Значения из таблиц руководств привязаны к строке таблицы (обозначение модели как напечатано, "
+        "«all other models (not …)», «Mercedes-AMG vehicles»), на остальные модели не распространяются.",
+    ]
+    return out + summary + why + [""] + rows
 
 
 def tests_section() -> list[str]:
@@ -542,8 +669,9 @@ def main() -> int:
     out += ["", "## 11. Git-коммиты", ""] + [f"- {l}" for l in git("log", "--oneline", f"{BASELINE_COMMIT}..HEAD").splitlines()]
     out += ["", "## 12. Библиотека других рынков", ""] + library_section()
     out += ["", "## Дополнительно", "", "### Недоступные источники", ""] + blocked_hosts() + mbusa_failures()
-    out += ["", "### Исправления ранее записанных строк (полная замена по решению владельца)", ""] + corrections_section()
+    out += ["", "### Исправления ранее записанных строк (журнал data_work/<марка>/staging/<линейка>/corrections.json)", ""] + corrections_section()
     out += ["", "### Документы, у которых название файла не подтверждено текстом", ""] + unconfirmed_editions()
+    out += ["", "### Mercedes-Benz: масло, жидкости и ТО — что закрыто и что нет", ""] + mercedes_section()
     out += ["", "### Сверка A25A-FKS, 2022 (по запросу владельца)", ""] + a25a_section()
     out += ["", "### Пресс-материалы производителей", ""] + press_section()
     out += ["", "### CarComplaints.com и ТО по маркам (загруженные данные)", ""] + cc_maintenance_section(all_data)

@@ -28,7 +28,7 @@ PY = str(ROOT / ".venv" / "Scripts" / "python.exe")
 UV = ["uv", "run", "--no-project", "--with", "pdfplumber", "--with", "pypdfium2", "--with", "httpx", "--with", "beautifulsoup4", "python"]
 ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
 REHEARSAL = Path(r"C:\AutoExpertData\work\rehearsal_batch.db")
-REGISTER = ["scripts/register_carcomplaints.py", "scripts/register_factory_ford_us.py"]
+REGISTER = ["scripts/register_carcomplaints.py", "scripts/register_factory_ford_us.py", "scripts/register_autodata.py"]
 
 
 def sh(args, env=None, **kw) -> subprocess.CompletedProcess:

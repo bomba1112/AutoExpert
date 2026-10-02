@@ -367,6 +367,13 @@ def test_manual_facts_cite_a_us_edition_page():
             for cite in fact["cites"]:
                 item = staging["sources"][cite["source"]]
                 if item.get("kind") == "pdf_pages":
-                    assert item.get("edition") == "US", cite["source"]
+                    if item.get("source_type") == "SECONDARY_SPEC_DATABASE":
+                        # auto-data.net (owner-approved secondary source): a European listing
+                        # matched to the US configuration, said so, and never shown as a fact
+                        assert item.get("edition") == "EU listing matched to the US configuration", cite["source"]
+                        assert item.get("tier") == "B" and item.get("registry") == "auto-data", cite["source"]
+                        assert fact["display_level"] in {"SECONDARY_NOTE", "HIDDEN_CONFLICT"}, fact["id"]
+                    else:
+                        assert item.get("edition") == "US", cite["source"]
                     assert cite.get("pages"), fact["id"]
                     assert str(cite["pages"][0]) in json.loads(item["extract"])["pages"], fact["id"]

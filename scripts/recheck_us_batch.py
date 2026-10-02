@@ -166,6 +166,8 @@ def main(make: str) -> int:
             for cite in item["cites"]:
                 source = staging["sources"][cite["source"]]
                 body = source_bytes(source)
+                if source["path"].endswith(".gz"):  # stored pages (e.g. mbusa Service A/B) are hashed uncompressed
+                    body = gzip.decompress(body)
                 if source.get("sha256") and hashlib.sha256(body).hexdigest() != source["sha256"]:
                     problems.append(f"{cite['source']}: sha256 differs from manifest")
                 elif source["kind"] == "pdf_pages":

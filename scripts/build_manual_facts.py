@@ -276,9 +276,20 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
     # observations: scope -> year -> list of (value, cite)
     observed = defaultdict(lambda: defaultdict(list))
     ambiguous = set()
+    # years a US owner's manual covers per field: a secondary database (auto-data.net) only
+    # fills a field for model years no US manual gives it for
+    manual_years = defaultdict(set)
     for doc in extracted:
         meta = doc["doc"]
-        if line_key not in meta["lines"] or doc.get("edition_market") != "US":
+        if line_key in meta["lines"] and doc.get("edition_market") == "US" and meta.get("doc_type") != "press_specifications":
+            for fact in doc["facts"]:
+                manual_years[fact["key"]].update(meta["years"])
+    for doc in extracted:
+        meta = doc["doc"]
+        secondary = meta.get("doc_type") == "secondary_specifications"
+        if line_key not in meta["lines"]:
+            continue
+        if doc.get("edition_market") != "US" and not (secondary and doc.get("edition_market") == "EU_MATCHED_TO_US"):
             continue
         tier = meta["tier"]
         doc_code = doc_engine_code(doc)
@@ -297,6 +308,12 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
             key = fact["key"]
             if key in SKIP_KEYS:
                 continue
+            if make == "mercedes-benz" and key == "coolant" and re.search(r"\b331\.\d", str(fact["value"])):
+                # MB sheet 331.x is the brake fluid approval; a row pass can read it under the
+                # coolant heading of the same page (operator's manuals and their copies)
+                gaps.append({"scope": f"{line_key} {meta['key']} p.{fact['page']}", "field": key,
+                             "reason": f"value {fact['value']!r} is the MB brake fluid approval, not a coolant; not used"})
+                continue
             if key in RANGES and not (RANGES[key][0] <= float(fact["value"]) <= RANGES[key][1]):
                 gaps.append({"scope": f"{line_key} {meta['key']} p.{fact['page']}", "field": key,
                              "reason": f"value {fact['value']} outside the validator range; not used"})
@@ -305,6 +322,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
             if press:
                 label = press_engine_label(fact.get("engine_text")) or label
             for year in meta["years"]:
+                if secondary and year in manual_years.get(key, set()):
+                    continue
                 if not (line.years[0] <= year <= line.years[1]):
                     continue
                 gen = generation_for(year, gens)
@@ -319,6 +338,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                         applicability["engine"] = label
                     elif doc_code:
                         engine_key = doc_code
+                    elif fact.get("source_layout") == "mb_model_table" and (fact.get("variant") or fact.get("all_models")):
+                        pass  # Mercedes "Model | Capacity" row: the row names its models (variant) or says "All models"
                     elif len(displacements.get(year, set())) <= 1:
                         if displacements.get(year):
                             applicability["displacement_l"] = sorted(displacements[year])[0]
@@ -449,7 +470,7 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                     "confidence": "HIGH" if display == "FACT" else "LOW" if hidden else "MEDIUM",
                     "primary_source": sorted(cites, key=lambda c: (c["tier"], c["source"]))[0]["source"],
                 })
-    registry = REGISTRY.get(make, f"factory-{make}-us")
+    factory_registry = REGISTRY.get(make, f"factory-{make}-us")
     out_sources = {}
     for key, used in sources.items():
         meta = used["meta"]
@@ -458,9 +479,11 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
         out_sources[key] = {
             "key": key, "kind": "pdf_pages", "path": "rawstore:" + Path(meta["path"]).relative_to(RAW_ROOT).as_posix(),
             "url": meta["url"], "page_url": meta.get("page_url"), "sha256": meta["sha256"], "retrieved_at": meta["retrieved_at"],
-            "tier": meta["tier"], "source_type": meta["source_type"], "registry": registry,
+            "tier": meta["tier"], "source_type": meta["source_type"],
+            "registry": "auto-data" if meta.get("doc_type") == "secondary_specifications" else factory_registry,
             "title": meta.get("title") or f"{MAKES[make]['epa']} owner's manual {meta['years']} ({meta['key']})",
-            "publisher": meta["publisher"], "authenticity": meta["authenticity"], "edition": "US",
+            "publisher": meta["publisher"], "authenticity": meta["authenticity"],
+            "edition": "EU listing matched to the US configuration" if meta.get("doc_type") == "secondary_specifications" else "US",
             "model_year": meta["years"][0] if meta["years"] else None,
             "extract": json.dumps(extract, ensure_ascii=False),
         }

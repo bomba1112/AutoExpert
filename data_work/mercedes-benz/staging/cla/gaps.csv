@@ -34,6 +34,9 @@ engine_family_key,factory engine code not in EPA; filled only from a source that
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-cla-us-2026-2.0l-4cyl-turbo-hev-a-am8-awd
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-cla-us-2026-2.0l-4cyl-turbo-hev-a-am8-fwd
 engine_family_key,factory engine code not in EPA; filled only from a source that names it,mercedes-benz-cla-us-2026-2.0l-4cyl-turbo-ice-a-am8-awd
+engine_oil_capacity_drain_refill_l,value 0.8 outside the validator range; not used,mercedes-benz/cla official-20e4fd02c3f8 p.286
+fuel_tank_l,value 7.9 outside the validator range; not used,mercedes-benz/cla official-20e4fd02c3f8 p.351
+fuel_tank_l,value 8.0 outside the validator range; not used,mercedes-benz/cla official-20e4fd02c3f8 p.351
 fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/cla official-363072225592 p.340
 engine_oil_capacity_drain_refill_l,value 0.9 outside the validator range; not used,mercedes-benz/cla official-363072225592 p.392
 engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-363072225592 p.392
@@ -45,12 +48,22 @@ fuel_tank_l,value 7.9 outside the validator range; not used,mercedes-benz/cla of
 fuel_tank_l,value 8.0 outside the validator range; not used,mercedes-benz/cla official-80eba6a3542f p.313
 fuel_tank_l,value 6.1 outside the validator range; not used,mercedes-benz/cla official-80eba6a3542f p.313
 fuel_tank_l,value 6.0 outside the validator range; not used,mercedes-benz/cla official-80eba6a3542f p.313
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.35
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.561
+fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.716
+fuel_tank_l,value 5.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.717
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.717
+engine_oil_capacity_drain_refill_l,value 0.9 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.774
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.774
+engine_oil_capacity_drain_refill_l,value 1.0 outside the validator range; not used,mercedes-benz/cla official-e4a9d9fa6272 p.775
 cargo_l,value 39.6 outside the validator range; not used,mercedes-benz/cla press-mbusa-cla-2026-7a8d33b1 p.1
 cargo_l,value 39.6 outside the validator range; not used,mercedes-benz/cla press-mbusa-cla-2026-7a8d33b1 p.1
+octane_aki,"one document gives 3 values: ['87', '88', '91']",mercedes-benz/cla MY2014 (official-20e4fd02c3f8)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/cla MY2022 (official-363072225592)
 octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/cla MY2015 (official-5f2459ad2e51)
 engine_oil_viscosity,"one document gives 2 values: ['""SAE 0W-40""', '""SAE 5W-40""']",mercedes-benz/cla MY2017 (official-80eba6a3542f)
 octane_aki,"one document gives 4 values: ['87', '88', '91', '93']",mercedes-benz/cla MY2017 (official-80eba6a3542f)
+octane_aki,"one document gives 2 values: ['87', '91']",mercedes-benz/cla MY2025 (official-e4a9d9fa6272)
 width_mm,"one document gives 2 values: ['1778', '2032']",mercedes-benz/cla MY2017 (press-mbusa-cla-2017-f3961ec0)
 width_mm,"one document gives 2 values: ['1778', '2032']",mercedes-benz/cla MY2018 (press-mbusa-cla-2018-42bcd842)
 width_mm,"one document gives 2 values: ['1778', '2032']",mercedes-benz/cla MY2018 (press-mbusa-cla-2018-de4c8281)
@@ -69,20 +82,14 @@ width_mm,"one document gives 2 values: ['1834', '1999']",mercedes-benz/cla MY202
 width_mm,"one document gives 2 values: ['1829', '1999']",mercedes-benz/cla MY2022 (press-mbusa-cla-2022-af2c728c)
 width_mm,"one document gives 2 values: ['1834', '1999']",mercedes-benz/cla MY2022 (press-mbusa-cla-2022-af2c728c)
 width_mm,"one document gives 2 values: ['1854', '2007']",mercedes-benz/cla MY2026 (press-mbusa-cla-2026-7a8d33b1)
-engine_oil_capacity_l,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2014-2019
 transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2014-2019
-brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2014-2019
-engine_oil_capacity_l,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2020-2025
 engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2020-2025
-coolant,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2020-2025
 transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2020-2025
-brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2020-2025
-engine_oil_capacity_l,no US owner's manual for these years,mercedes-benz/cla US2026+
-engine_oil_viscosity,no US owner's manual for these years,mercedes-benz/cla US2026+
-coolant,no US owner's manual for these years,mercedes-benz/cla US2026+
-transmission_fluid,no US owner's manual for these years,mercedes-benz/cla US2026+
-brake_fluid,no US owner's manual for these years,mercedes-benz/cla US2026+
-fuel_tank_l,no US owner's manual for these years,mercedes-benz/cla US2026+
+engine_oil_viscosity,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2026+
+coolant,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2026+
+transmission_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2026+
+brake_fluid,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2026+
+fuel_tank_l,not found unambiguously in the available US owner's manuals,mercedes-benz/cla US2026+
 tires,not found unambiguously in the available US press specification pages,mercedes-benz/cla US2026+
 front_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/cla US2026+
 rear_suspension,not found unambiguously in the available US press specification pages,mercedes-benz/cla US2026+

@@ -20,7 +20,7 @@
   "publisher": "mercedes-benz (manufacturer domain www.mbusa.com)",
   "authenticity": "OFFICIAL_PUBLISHER"
  },
- "extractor": "manual-geometry-14",
+ "extractor": "manual-geometry-14+mb-model-table-4",
  "pages": 457,
  "edition_market": "US",
  "edition_markers": {
@@ -55,32 +55,6 @@
   },
   {
    "key": "engine_oil_capacity_drain_refill_l",
-   "value": 5.5,
-   "unit": "L",
-   "page": 352,
-   "quote": "5.8 US qt (5.5 liters)",
-   "row": "All models | 5.8 US qt (5.5 liters)",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "5.8 US qt (5.5 liters)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "coolant_capacity_l",
-   "value": 8.9,
-   "unit": "L",
-   "page": 353,
-   "quote": "9.4 US qt (8.9 liters)",
-   "row": "All models | 9.4 US qt (8.9 liters)",
-   "label": "coolant_capacity_l",
-   "engine_text": null,
-   "original": "9.4 US qt (8.9 liters)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
    "value": 0.9,
    "unit": "L",
    "page": 406,
@@ -104,6 +78,70 @@
    "original": "1.1 US qt (1 l)",
    "drive": null,
    "approx_in_source": false
+  },
+  {
+   "key": "engine_oil_oem_approval",
+   "value": "MB-Approval 229.71",
+   "unit": null,
+   "page": 352,
+   "quote": "All models 229.71*",
+   "row": "All models 229.71*",
+   "label": "MB approval",
+   "engine_text": null,
+   "source_layout": "mb_model_table",
+   "variant": "gasoline engines: all models"
+  },
+  {
+   "key": "engine_oil_capacity_l",
+   "value": 5.5,
+   "unit": "L",
+   "page": 352,
+   "quote": "All models 5.8 US qt (5.5 liters)",
+   "row": "All models 5.8 US qt (5.5 liters)",
+   "label": "engine oil capacity l",
+   "engine_text": null,
+   "original": "5.8 US qt (5.5 liters)",
+   "approx_in_source": false,
+   "source_layout": "mb_model_table",
+   "all_models": true
+  },
+  {
+   "key": "brake_fluid",
+   "value": "MB-Approval 331.0",
+   "unit": null,
+   "page": 353,
+   "quote": "brake fluid approved by Mercedes￾Benz according to MB-Freigabe or MB-Approval 331.0",
+   "row": "brake fluid approved by Mercedes￾Benz according to MB-Freigabe or MB-Approval 331.0",
+   "label": "brake fluid",
+   "engine_text": null,
+   "source_layout": "mb_model_table",
+   "all_models": true
+  },
+  {
+   "key": "coolant",
+   "value": "MB 310.1",
+   "unit": null,
+   "page": 353,
+   "quote": "Observe the instructions in the Mercedes-Benz Specifications for Oper‐ ating Fluids 310.1",
+   "row": "Observe the instructions in the Mercedes-Benz Specifications for Oper‐ ating Fluids 310.1",
+   "label": "coolant",
+   "engine_text": null,
+   "source_layout": "mb_model_table",
+   "all_models": true
+  },
+  {
+   "key": "coolant_capacity_l",
+   "value": 8.9,
+   "unit": "L",
+   "page": 353,
+   "quote": "All models 9.4 US qt (8.9 liters)",
+   "row": "All models 9.4 US qt (8.9 liters)",
+   "label": "coolant capacity l",
+   "engine_text": null,
+   "original": "9.4 US qt (8.9 liters)",
+   "approx_in_source": false,
+   "source_layout": "mb_model_table",
+   "all_models": true
   }
  ],
  "review": [],

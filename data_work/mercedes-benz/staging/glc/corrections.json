@@ -1,0 +1,50 @@
+{
+ "made_at": "2026-10-02T20:03:17+00:00",
+ "reason": "rows written by this pipeline replaced after a parser correction (scripts/extract_manual_facts.py)",
+ "value_changes": [
+  {
+   "what": "technical_evidence 64316fa2072e coolant",
+   "existing": "MB-Approval 331.0",
+   "new": "MB 310.1",
+   "resolution": "existing kept"
+  }
+ ],
+ "removed": [
+  {
+   "id": "dd44998c-57ab-487d-9cf7-e947cd65473d",
+   "fact_key": "coolant",
+   "value": "MB-Approval 331.0",
+   "years": [
+    2015,
+    2015
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "96f4dbf6-7b0a-4bdc-b86e-990615233bff",
+   "fact_key": "coolant",
+   "value": "MB-Approval 331.0",
+   "years": [
+    2016,
+    2017
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "bf23e7eb-6721-4455-aa5d-561629b8db8a",
+   "fact_key": "coolant",
+   "value": "MB-Approval 331.0",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ]
+}
