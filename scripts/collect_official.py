@@ -109,10 +109,10 @@ def file_name(url: str, body: bytes) -> str:
     return stem if stem.lower().endswith(ext) else stem + ext
 
 
-def download_host(host: str, items: list[dict], attempts: int = 4, skip_errors: bool = False) -> int:
+def download_host(host: str, items: list[dict], attempts: int = 4, skip_errors: bool = False, timeout: int = 300) -> int:
     # one manifest per host: the hosts run as parallel processes
     manifest = Manifest(WORK / "_shared" / "manifest_official" / f"{host}.csv", FIELDS)
-    fetcher = Fetcher(pause=(2.0, 5.0), timeout=300, attempts=attempts)
+    fetcher = Fetcher(pause=(2.0, 5.0), timeout=timeout, attempts=attempts)
     done = failed = skipped = 0
     for item in sorted(items, key=lambda i: (i["make"], i["url"])):
         meta = {"make": item["make"], "lines": ";".join(sorted(x for x in item["lines"] if x)),
@@ -162,6 +162,7 @@ def main(argv=None) -> int:
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--host")
     parser.add_argument("--attempts", type=int, default=4, help="requests per file on timeouts/5xx")
+    parser.add_argument("--timeout", type=int, default=300, help="seconds per request")
     parser.add_argument("--skip-errors", action="store_true", help="do not retry files that failed before")
     args = parser.parse_args(argv)
     hosts = plan()
@@ -169,7 +170,7 @@ def main(argv=None) -> int:
         for host, items in sorted(hosts.items(), key=lambda kv: -len(kv[1])):
             print(f"{host}\t{len(items)}\t{'CLOSED: ' + CLOSED[host] if host in CLOSED else ''}")
         return 0
-    return download_host(args.host, hosts.get(args.host, []), args.attempts, args.skip_errors)
+    return download_host(args.host, hosts.get(args.host, []), args.attempts, args.skip_errors, args.timeout)
 
 
 if __name__ == "__main__":

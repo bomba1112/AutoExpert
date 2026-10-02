@@ -1,0 +1,167 @@
+{
+ "make": "volkswagen",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-02T17:07:53+00:00",
+ "replace_own": [],
+ "lines": {
+  "volkswagen/jetta": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 113,
+    "source_records_new": 108,
+    "te_new_GENERATION": 1089,
+    "te_new_CONFIGURATION": 754,
+    "configurations": 66,
+    "configurations_research_only": 63,
+    "configurations_linked": 3,
+    "issues_new": 80
+   },
+   "generations": [
+    {
+     "code": "VI",
+     "action": "filled",
+     "end_year": 2018
+    },
+    {
+     "code": "VII",
+     "action": "filled",
+     "start_year": 2019
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "volkswagen/passat": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 41,
+    "source_records_new": 28,
+    "te_new_GENERATION": 462,
+    "te_new_CONFIGURATION": 231,
+    "configurations": 21,
+    "configurations_research_only": 21,
+    "issues_new": 47
+   },
+   "generations": [
+    {
+     "code": "NMS",
+     "action": "filled",
+     "end_year": 2022
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "volkswagen/tiguan": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 71,
+    "source_records_new": 53,
+    "te_new_GENERATION": 975,
+    "te_new_CONFIGURATION": 351,
+    "configurations": 29,
+    "configurations_research_only": 25,
+    "configurations_linked": 4,
+    "issues_new": 80
+   },
+   "generations": [
+    {
+     "code": "5N",
+     "action": "filled",
+     "end_year": 2017
+    },
+    {
+     "code": "II-US-LWB",
+     "action": "filled",
+     "start_year": 2018,
+     "end_year": 2024
+    },
+    {
+     "code": "US2025+",
+     "action": "created",
+     "start_year": 2025,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 18
+  },
+  "volkswagen/atlas": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 47,
+    "source_records_new": 33,
+    "te_new_GENERATION": 686,
+    "te_new_CONFIGURATION": 321,
+    "configurations": 27,
+    "configurations_linked": 6,
+    "configurations_research_only": 21,
+    "issues_new": 66
+   },
+   "generations": [
+    {
+     "code": "I-US-2018",
+     "action": "filled",
+     "start_year": 2018
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 6
+  },
+  "volkswagen/arteon": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 36,
+    "source_records_new": 25,
+    "te_new_GENERATION": 205,
+    "te_new_CONFIGURATION": 121,
+    "configurations": 11,
+    "configurations_research_only": 11,
+    "issues_new": 12
+   },
+   "generations": [
+    {
+     "code": "I",
+     "action": "filled",
+     "start_year": 2019,
+     "end_year": 2024
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "volkswagen/touareg": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 24,
+    "source_records_new": 15,
+    "te_new_GENERATION": 272,
+    "te_new_CONFIGURATION": 99,
+    "configurations": 9,
+    "configurations_research_only": 5,
+    "configurations_linked": 4,
+    "issues_new": 19
+   },
+   "generations": [
+    {
+     "code": "7P",
+     "action": "filled",
+     "end_year": 2017
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-02T17:08:28+00:00"
+}
