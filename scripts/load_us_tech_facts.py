@@ -771,14 +771,14 @@ class Loader:
         from app.models.evidence import KnownIssue, TechnicalEvidence
         from sqlalchemy import func, select
 
+        # Only rows tagged with exactly this line. Rows without a line tag (written before the
+        # tag existed) can belong to any line of the make and are never pruned: on 2026-10-02 a
+        # NULL-tolerant filter let a Corolla run delete untagged Camry rows.
         rows = self.db.scalars(
             select(TechnicalEvidence).where(
                 TechnicalEvidence.make_id == self.make.id,
                 func.json_extract(TechnicalEvidence.conditions, "$.load") == LOAD_VERSION,
-                func.coalesce(
-                    func.json_extract(TechnicalEvidence.conditions, "$.line"), self.s["line"]
-                )
-                == self.s["line"],
+                func.json_extract(TechnicalEvidence.conditions, "$.line") == self.s["line"],
             )
         ).all()
         referenced = {

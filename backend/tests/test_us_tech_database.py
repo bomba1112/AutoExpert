@@ -256,3 +256,52 @@ def test_loader_writes_scoped_rows_once_and_never_overwrites(db_session, tmp_pat
         )
         == 4805
     )
+
+
+def test_prune_stale_never_touches_rows_of_other_lines(db_session, tmp_path, monkeypatch):
+    """Regression (2026-10-02): rows without a line tag must survive another line's prune."""
+    from app.core.config import get_settings
+    from app.models.enums import ConfidenceLevel, EvidenceCategory, EvidenceStatus
+
+    monkeypatch.setattr(loader, "ROOT", tmp_path)
+    monkeypatch.setattr(get_settings(), "knowledge_data_dir", str(tmp_path / "store"))
+    make = VehicleMake(name="Toyota", normalized_name="toyota")
+    db_session.add(make)
+    db_session.flush()
+    db_session.add(VehicleModel(make_id=make.id, name="Camry", normalized_name="camry"))
+    db_session.add(
+        SourceRegistry(id="factory-toyota-us", title="t", config={}, state="LOCAL_RESEARCH")
+    )
+    db_session.flush()
+    staging = {**_synthetic_staging(tmp_path), "line": "Corolla", "facts": [], "generations": []}
+    report = {"generations": [], "conflicts": [], "existing_vs_new": [], "stale": []}
+    run = loader.Loader(db_session, staging, "Camry", report)
+    run.load_sources()
+    source_id = run.source_ids["om-2014"]
+
+    def row(key, conditions):
+        return TechnicalEvidence(
+            category=EvidenceCategory.OTHER,
+            title=key,
+            statement=key,
+            status=EvidenceStatus.CONFIRMED,
+            confidence=ConfidenceLevel.HIGH,
+            market="US",
+            conditions=conditions,
+            scope_level=ScopeLevel.GENERATION,
+            make_id=make.id,
+            fact_key="length_mm",
+            value=1,
+            natural_key=key,
+            source_id=source_id,
+        )
+
+    untagged = row("untagged-camry-row", {"load": loader.LOAD_VERSION})
+    other_line = row("tagged-camry-row", {"load": loader.LOAD_VERSION, "line": "Camry"})
+    own_stale = row("stale-own-row", {"load": loader.LOAD_VERSION, "line": "Corolla"})
+    db_session.add_all([untagged, other_line, own_stale])
+    db_session.flush()
+    run.stale_rows(prune=True)
+    keys = set(db_session.scalars(select(TechnicalEvidence.natural_key)))
+    assert {"untagged-camry-row", "tagged-camry-row"} <= keys
+    assert "stale-own-row" not in keys
