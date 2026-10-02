@@ -1,0 +1,81 @@
+{
+ "generations": [
+  {
+   "code": "8T/8F",
+   "action": "filled",
+   "end_year": 2017
+  },
+  {
+   "code": "US2018-2024",
+   "action": "created",
+   "start_year": 2018,
+   "end_year": 2024
+  },
+  {
+   "code": "US2025+",
+   "action": "created",
+   "start_year": 2025,
+   "end_year": null
+  }
+ ],
+ "conflicts": [],
+ "existing_vs_new": [
+  {
+   "variant": "factory-audi-us:audi-a5-8t-8f-us-coupe-mt-AWD-2016",
+   "existing": "length_in=182.1",
+   "new_values": [
+    4640
+   ],
+   "resolution": "existing catalog fact kept; new scoped fact stored separately"
+  },
+  {
+   "variant": "factory-audi-us:audi-a5-8t-8f-us-coupe-at-AWD-2016",
+   "existing": "length_in=182.1",
+   "new_values": [
+    4640
+   ],
+   "resolution": "existing catalog fact kept; new scoped fact stored separately"
+  },
+  {
+   "variant": "factory-audi-us:audi-a5-8t-8f-us-convertible-at-AWD-2015",
+   "existing": "height_in=54.4",
+   "new_values": [
+    1367,
+    1369,
+    1370,
+    1372
+   ],
+   "resolution": "existing catalog fact kept; new scoped fact stored separately"
+  },
+  {
+   "variant": "factory-audi-us:audi-a5-8t-8f-us-convertible-at-AWD-2016",
+   "existing": "length_in=182.1",
+   "new_values": [
+    4640
+   ],
+   "resolution": "existing catalog fact kept; new scoped fact stored separately"
+  },
+  {
+   "variant": "factory-audi-us:audi-a5-8t-8f-us-convertible-at-AWD-2016",
+   "existing": "height_in=54.4",
+   "new_values": [
+    1370
+   ],
+   "resolution": "existing catalog fact kept; new scoped fact stored separately"
+  }
+ ],
+ "stale": [],
+ "dry_run": false,
+ "started_at": "2026-10-02T17:06:37+00:00",
+ "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "counts": {
+  "raw_documents_seen": 112,
+  "source_records_new": 94,
+  "te_new_GENERATION": 1052,
+  "te_new_CONFIGURATION": 709,
+  "configurations": 47,
+  "configurations_research_only": 47,
+  "issues_new": 61
+ },
+ "finished_at": "2026-10-02T17:06:45+00:00"
+}

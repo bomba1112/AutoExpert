@@ -34,6 +34,15 @@ TABLES = ["vehicle_makes", "vehicle_models", "vehicle_generations", "vehicle_var
           "known_issues", "maintenance_schedule_items", "source_records", "raw_documents", "knowledge_sources"]
 BASELINE_COMMIT = "0ff74ff"
 MARK = {"full": "●", "part": "◐", "none": "○", "na": "—"}
+# owner's decision of 2026-10-02 (evening): of the last seven makes only Audi, Volkswagen and Tesla
+# are loaded; Infiniti had already been loaded when the decision arrived and is kept as it is
+NOT_LOADED = {"cadillac", "jeep", "mitsubishi"}
+STATUS_NOTE = {
+    **{m: ("Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/" + m +
+           "/staging), в рабочей БД строк этого конвейера нет.") for m in NOT_LOADED},
+    "infiniti": ("Загружена до получения решения владельца остановить загрузку этой группы марок "
+                 "(коммит f47df93); по решению владельца оставлена как есть."),
+}
 
 FIELDS = [
     ("1 Идентификация", ["body", "seats"]),
@@ -242,11 +251,32 @@ def notes_section(data: dict) -> list[str]:
     return out or ["- нет"]
 
 
+def prepared_counts(data: dict) -> dict:
+    c = Counter()
+    for line in data["lines"]:
+        st = line.get("staging") or {}
+        c["линеек"] += 1
+        c["поколений"] += len(st.get("generations", []))
+        c["конфигураций"] += len(st.get("configurations", []))
+        c["фактов"] += len(st.get("facts", []))
+        c["отзывов"] += len(st.get("recalls", []))
+        c["проблем"] += len(st.get("issues", []))
+        c["пунктов ТО"] += len(st.get("maintenance", []))
+    return dict(c)
+
+
 def report_make(make: str, data: dict, live: dict, before: dict) -> list[str]:
     name = MAKES[make]["epa"]
     out = [f"# {name} — отчёт по базе технических данных US", "",
-           f"Сформировано {datetime.now(UTC).isoformat(timespec='seconds')} скриптом scripts/build_us_report.py.", "",
-           "## 1. Матрица покрытия", "", "Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль).", ""]
+           f"Сформировано {datetime.now(UTC).isoformat(timespec='seconds')} скриптом scripts/build_us_report.py.", ""]
+    if make in STATUS_NOTE:
+        out += [f"**Статус:** {STATUS_NOTE[make]}", ""]
+    if make in NOT_LOADED:
+        out += ["## Подготовлено, но не записано в БД", ""]
+        out += [f"- {k}: {v}" for k, v in prepared_counts(data).items()]
+        out += ["", "## Журнал пробелов подготовленных данных", ""] + gaps_section(data, False)
+        return out
+    out += ["## 1. Матрица покрытия", "", "Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль).", ""]
     out += matrix(data)
     te_b = before.get("by_make", {}).get(name, {})
     te_a = live.get("by_make", {}).get(name, {})
@@ -333,6 +363,101 @@ def models_outside() -> list[str]:
     return out
 
 
+def status_lines() -> list[str]:
+    out = ["| Марка | Статус | Последний коммит марки |", "|---|---|---|"]
+    for make in MAKE_ORDER:
+        name = MAKES[make]["epa"]
+        commit = git("log", "--format=%h %s", "-n", "1", "--", f"data_work/{make}/staging").strip()
+        if make in NOT_LOADED:
+            status = "не загружена (решение владельца)"
+        elif make == "infiniti":
+            status = "загружена до решения об остановке, оставлена как есть"
+        elif make == "toyota":
+            status = "загружена (Camry — принятая ранее линейка)"
+        else:
+            status = "загружена"
+        out.append(f"| {name} | {status} | {commit[:90]} |")
+    return out
+
+
+def mbusa_failures() -> list[str]:
+    rows = read_csv(WORK / "_shared" / "manifest_official" / "www.mbusa.com.csv")
+    last = {}
+    for r in rows:
+        last[r["url"]] = r
+    st = Counter(r["status"] for r in last.values())
+    return [f"- www.mbusa.com (руководства Mercedes-Benz): скачано {st.get('ok', 0)}, недоступно {st.get('error', 0)} "
+            "(шлюз сайта отвечал 502 через 60 с; повторная попытка по 35 файлам — тот же ответ, остановлена)."]
+
+
+def corrections_section() -> list[str]:
+    out = []
+    for make in MAKE_ORDER:
+        changes = removed = 0
+        examples = []
+        for path in sorted((WORK / make / "staging").glob("*/corrections.json")):
+            data = read_json(path, {})
+            for c in data.get("value_changes", []):
+                changes += 1
+                if isinstance(c.get("existing"), (int, float)) and len(examples) < 8:
+                    examples.append(f"{path.parent.name}: {c.get('what', '').split()[-1]} {c.get('existing')} → {c.get('new')}")
+            removed += len(data.get("removed", []))
+        if changes or removed:
+            out.append(f"- {MAKES[make]['epa']}: значений заменено {changes}, строк удалено как устаревшие {removed}"
+                       + (f"; числовые примеры: {'; '.join(examples)}" if examples else ""))
+    return out or ["- нет"]
+
+
+def unconfirmed_editions() -> list[str]:
+    items = read_json(WORK / "_shared" / "edition_title_not_confirmed.json", [])
+    return [f"- {k} {t}".rstrip() + " — значения использованы как обычное (не гибридное/EV) издание" for k, t in items] or ["- нет"]
+
+
+def a25a_section() -> list[str]:
+    facts = read_json(WORK / "toyota" / "A25A-FKS_2022_check.json", [])
+    out = ["| Поле | Значение | Годы | Уровень | Источник (стр.) |", "|---|---|---|---|---|"]
+    for f in facts:
+        cites = "; ".join(f"{c['source']} p.{','.join(map(str, c.get('pages') or []))}" for c in (f.get("cites") or [])[:3])
+        value = f"{f['value']} {f.get('unit') or ''}".strip()
+        out.append(f"| {f['fact_key']} | {value} | {f['years'][0]}–{f['years'][1]} | {f['display_level']} | {cites} |")
+    return out
+
+
+def press_section() -> list[str]:
+    out = ["| Сайт | Документов скачано | Не найдено | Заблокировано |", "|---|---|---|---|"]
+    for path in sorted((WORK / "_shared" / "manifest_press").glob("*.csv")):
+        rows = [r for r in read_csv(path) if r.get("doc_type", "press_specifications") in ("press_specifications", "")]
+        last = {}
+        for r in rows:
+            last[r.get("url")] = r
+        st = Counter(r.get("status") for r in last.values())
+        out.append(f"| {path.stem} | {st.get('ok', 0)} | {st.get('not_found', 0)} | {st.get('blocked', 0)} |")
+    parsed = Counter()
+    for make in MAKE_ORDER:
+        parsed[make] = len(list((WORK / make / "extracted").glob("press-*.json")))
+    out += ["", "Разобрано пресс-документов по маркам: " + ", ".join(f"{MAKES[m]['epa']} {n}" for m, n in parsed.items() if n)]
+    return out
+
+
+def cc_maintenance_section(all_data: dict) -> list[str]:
+    out = ["| Марка | Проблемы с подтверждением CarComplaints | Только по отзывам владельцев (CarComplaints) | Пунктов ТО |", "|---|---|---|---|"]
+    for make in MAKE_ORDER:
+        if make in NOT_LOADED:
+            continue
+        raised = owners = mnt = 0
+        for line in all_data[make]["lines"]:
+            st = line.get("staging") or {}
+            for i in st.get("issues", []):
+                if i.get("evidence", {}).get("carcomplaints"):
+                    if "-cc-" in i["id"]:
+                        owners += 1
+                    else:
+                        raised += 1
+            mnt += len(st.get("maintenance", []))
+        out.append(f"| {MAKES[make]['epa']} | {raised} | {owners} | {mnt} |")
+    return out
+
+
 def tests_section() -> list[str]:
     out = []
     for label, path in (("baseline backend", WORK / "toyota" / "baseline_backend_pytest.txt"),
@@ -373,8 +498,13 @@ def main() -> int:
            "отчёты по маркам — data_work/<марка>/REPORT.md.", "",
            "## 1. Матрица покрытия", "", "Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль). "
            "Поля по разделу 4 промта.", ""]
+    out += ["Статус марок:", ""] + status_lines() + [""]
     for make in MAKE_ORDER:
-        out += [f"### {MAKES[make]['epa']}", ""] + matrix(all_data[make]) + [""]
+        if make in NOT_LOADED:
+            out += [f"### {MAKES[make]['epa']}", "", f"{STATUS_NOTE[make]}", ""]
+            continue
+        note = [f"_{STATUS_NOTE[make]}_", ""] if make in STATUS_NOTE else []
+        out += [f"### {MAKES[make]['epa']}", ""] + note + matrix(all_data[make]) + [""]
     out += ["## 2. Строки по таблицам: до и после", "",
             "| Таблица | До f087 (бэкап 0959) | До пакета (бэкап 1308) | Сейчас |", "|---|---|---|---|"]
     for t in TABLES:
@@ -388,13 +518,19 @@ def main() -> int:
         out.append(f"| {n} | {fmt(b)} | {fmt(a)} |")
     out += ["", "## 3. Журнал пробелов", ""]
     for make in MAKE_ORDER:
+        if make in NOT_LOADED:
+            continue
         out += [f"### {MAKES[make]['epa']}", ""] + gaps_section(all_data[make], False)[:14] + [""]
     out += ["Закрытые и заблокированные источники (manifest):", ""] + blocked_hosts()
     out += ["", "## 4. Конфликты источников и решения", ""]
     for make in MAKE_ORDER:
+        if make in NOT_LOADED:
+            continue
         out += [f"### {MAKES[make]['epa']}", ""] + conflicts_section(all_data[make], False) + [""]
     out += ["## 5. Выборочная перепроверка (10%)", ""]
     for make in MAKE_ORDER:
+        if make in NOT_LOADED:
+            continue
         out += [f"### {MAKES[make]['epa']}", ""] + recheck_section(all_data[make])[:1] + [""]
     migrations = [p for p in git("diff", "--name-only", BASELINE_COMMIT, "HEAD", "--", "backend/alembic/versions").split() if p]
     out += ["## 6. Изменения схемы", ""] + ([f"- {m}" for m in migrations] or ["- нет"])
@@ -405,6 +541,12 @@ def main() -> int:
     out += ["", "## 10. Vehicle Databases", "", "VDB = нет; запросов к VDB: 0."]
     out += ["", "## 11. Git-коммиты", ""] + [f"- {l}" for l in git("log", "--oneline", f"{BASELINE_COMMIT}..HEAD").splitlines()]
     out += ["", "## 12. Библиотека других рынков", ""] + library_section()
+    out += ["", "## Дополнительно", "", "### Недоступные источники", ""] + blocked_hosts() + mbusa_failures()
+    out += ["", "### Исправления ранее записанных строк (полная замена по решению владельца)", ""] + corrections_section()
+    out += ["", "### Документы, у которых название файла не подтверждено текстом", ""] + unconfirmed_editions()
+    out += ["", "### Сверка A25A-FKS, 2022 (по запросу владельца)", ""] + a25a_section()
+    out += ["", "### Пресс-материалы производителей", ""] + press_section()
+    out += ["", "### CarComplaints.com и ТО по маркам (загруженные данные)", ""] + cc_maintenance_section(all_data)
     out += ["", "## Поколения: свидетельства прессы", "",
             "Источник: data_work/_shared/generation_evidence.json (cars.com, consumerreports.org; Car and Driver, "
             "Edmunds, KBB и MotorTrend недоступны для автоматического чтения). Используются только цитаты, сверенные со страницей.", ""]
