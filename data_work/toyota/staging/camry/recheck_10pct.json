@@ -1,0 +1,538 @@
+{
+ "sampled": 31,
+ "share_of_facts": "10% of 314 (deterministic seed 20261002)",
+ "match": 31,
+ "mismatch": 0,
+ "corrections": [
+  "power_hp/torque_lb_ft A25A-FKS FWD: applicability narrowed for MY2018 (no L grade in the 2018 sheet)"
+ ],
+ "items": [
+  {
+   "id": "camry-VII-40",
+   "key": "cylinders",
+   "value": 4,
+   "unit": null,
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "pi-2015",
+   "path": "data_work/toyota/raw/product_info/2015_Camry_Product_Information.pdf",
+   "page": 1,
+   "quote": "2.5-liter, 4-cylinder, aluminum",
+   "method": "source re-opened, value found in text",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-30",
+   "key": "tires",
+   "value": "P205/65R16 94S",
+   "unit": null,
+   "years": [
+    2014,
+    2014
+   ],
+   "source": "pi-2014",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Product_Information.pdf",
+   "page": 2,
+   "quote": "P205/65 R16 (L, LE)",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-119",
+   "key": "curb_weight_kg",
+   "value": 1520,
+   "unit": "kg",
+   "years": [
+    2018,
+    2019
+   ],
+   "source": "pi-2018",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Product_Information_November_2_2017.pdf",
+   "page": 3,
+   "quote": "3,241 3,296 3,340 3,395 3,351",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-31",
+   "key": "fuel_tank_l",
+   "value": 49.2,
+   "unit": "L",
+   "years": [
+    2018,
+    2018
+   ],
+   "source": "pi-2018-hv",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Hybrid_Product_Information_10_6_2017.pdf",
+   "page": 3,
+   "quote": "Fuel Capacity 13 gal.",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-49",
+   "key": "tires",
+   "value": "235/40R19 92V",
+   "unit": null,
+   "years": [
+    2020,
+    2020
+   ],
+   "source": "om-2020",
+   "path": "data_work/toyota/raw/manuals/2020-toyota-camry.pdf",
+   "page": 547,
+   "quote": "Tire size 235/40R19 92V, T155/70D17 110M",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-22",
+   "key": "track_front_mm",
+   "value": 1580,
+   "unit": "mm",
+   "years": [
+    2021,
+    2023
+   ],
+   "source": "om-2021",
+   "path": "data_work/toyota/raw/manuals/2021-toyota-camry.pdf",
+   "page": 585,
+   "quote": "62.2 in. (1580 mm)*5",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-5",
+   "key": "height_mm",
+   "value": 1470,
+   "unit": "mm",
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "pi-2014",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Product_Information.pdf",
+   "page": 3,
+   "quote": "Overall Height 57.9 in. 57.9 in.",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-97",
+   "key": "transmission_fluid",
+   "value": "Toyota Genuine ATF WS",
+   "unit": null,
+   "years": [
+    2018,
+    2023
+   ],
+   "source": "om-2018",
+   "path": "data_work/toyota/raw/manuals/2018-toyota-camry.pdf",
+   "page": 546,
+   "quote": "Fluid type Toyota Genuine ATF WS",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-4",
+   "key": "length_mm",
+   "value": 4895,
+   "unit": "mm",
+   "years": [
+    2018,
+    2023
+   ],
+   "source": "pi-2018",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Product_Information_November_2_2017.pdf",
+   "page": 3,
+   "quote": "192.7 in. (SE, XSE)",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-97",
+   "key": "curb_weight_kg",
+   "value": 1561,
+   "unit": "kg",
+   "years": [
+    2014,
+    2014
+   ],
+   "source": "pi-2014-hv",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Hybrid_Product_Info.pdf",
+   "page": 3,
+   "quote": "3,417 3,441",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-86",
+   "key": "timing_drive",
+   "value": "CHAIN",
+   "unit": null,
+   "years": [
+    2018,
+    2020
+   ],
+   "source": "support-timing",
+   "path": "data_work/toyota/raw/support_toyota/timing-belt-or-chain-7690.txt",
+   "page": null,
+   "quote": "Camry | 2007-2020 | V6 | Chain",
+   "method": "source re-opened, value found in text",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-94",
+   "key": "curb_weight_kg",
+   "value": 1551,
+   "unit": "kg",
+   "years": [
+    2014,
+    2014
+   ],
+   "source": "pi-2014",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Product_Information.pdf",
+   "page": 3,
+   "quote": "3,420 3,395",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-IX-6",
+   "key": "track_front_rear_in",
+   "value": "63.0/63.6",
+   "unit": "in",
+   "years": [
+    2025,
+    2026
+   ],
+   "source": "pi-2025",
+   "path": "data_work/toyota/raw/product_info/2025_Toyota_Camry_Product_Information-2.pdf",
+   "page": 3,
+   "quote": "63.0/63.6 (LE)",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-72",
+   "key": "power_hp",
+   "value": 203,
+   "unit": "hp",
+   "years": [
+    2018,
+    2024
+   ],
+   "source": "pi-2018",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Product_Information_November_2_2017.pdf",
+   "page": 1,
+   "quote": "203 hp @ 6,600 rpm",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": "2018 sheet lists 203 hp/184 lb-ft for LE, SE, XLE only; L added from 2019 - applicability split into 2018 and 2019-2024 facts"
+  },
+  {
+   "id": "camry-VII-64",
+   "key": "engine_oil_specification",
+   "value": "ILSAC GF-5",
+   "unit": null,
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "om-2014",
+   "path": "data_work/toyota/raw/manuals/2014-toyota-camry.pdf",
+   "page": 556,
+   "quote": "Oil grade: ILSAC GF-5 multigrade engine oil",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-104",
+   "key": "curb_weight_kg",
+   "value": 1499,
+   "unit": "kg",
+   "years": [
+    2016,
+    2016
+   ],
+   "source": "pi-2016",
+   "path": "data_work/toyota/raw/product_info/2016_Camry_Product_Information.pdf",
+   "page": 3,
+   "quote": "3,240 3,300 3,305 3,350 3,340",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-35",
+   "key": "fuel_type",
+   "value": "Unleaded gasoline only",
+   "unit": null,
+   "years": [
+    2018,
+    2023
+   ],
+   "source": "om-2018",
+   "path": "data_work/toyota/raw/manuals/2018-toyota-camry.pdf",
+   "page": 542,
+   "quote": "Fuel type Unleaded gasoline only",
+   "method": "source re-opened, value found in text",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-106",
+   "key": "power_hp",
+   "value": 176,
+   "unit": "hp",
+   "years": [
+    2018,
+    2024
+   ],
+   "source": "pi-2018-hv",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Hybrid_Product_Information_10_6_2017.pdf",
+   "page": 1,
+   "quote": "Horsepower (SAE Net) 176 hp @ 5,700 rpm",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-0",
+   "key": "body",
+   "value": "SEDAN",
+   "unit": null,
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "vpic-ca-2014",
+   "path": "data_work/toyota/raw/vpic_canada/camry_2014.json",
+   "page": null,
+   "quote": "CAMRY LE/SE/XLE 4DR SEDAN",
+   "method": "source re-opened, value found in text",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-104",
+   "key": "compression_ratio",
+   "value": "14.0:1",
+   "unit": null,
+   "years": [
+    2018,
+    2024
+   ],
+   "source": "pi-2018-hv",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Hybrid_Product_Information_10_6_2017.pdf",
+   "page": 1,
+   "quote": "CompressionRatio 14.0:1",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-16",
+   "key": "cargo_l",
+   "value": 436.1,
+   "unit": "L",
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "pi-2014",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Product_Information.pdf",
+   "page": 3,
+   "quote": "EPA Cargo Volume 15.4 cu. ft. 15.4 cu. ft.",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-IX-8",
+   "key": "ground_clearance",
+   "value": 137,
+   "unit": "mm",
+   "years": [
+    2025,
+    2026
+   ],
+   "source": "pi-2025",
+   "path": "data_work/toyota/raw/product_info/2025_Toyota_Camry_Product_Information-2.pdf",
+   "page": 3,
+   "quote": "Ground Clearance 5.4 in.",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-67",
+   "key": "coolant_capacity_l",
+   "value": 9.1,
+   "unit": "L",
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "om-2014",
+   "path": "data_work/toyota/raw/manuals/2014-toyota-camry.pdf",
+   "page": 558,
+   "quote": "9.6 qt. (9.1 L, 8.0 Imp. qt.)",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-14",
+   "key": "track_rear_mm",
+   "value": 1585,
+   "unit": "mm",
+   "years": [
+    2015,
+    2017
+   ],
+   "source": "om-2015",
+   "path": "data_work/toyota/raw/manuals/2015-toyota-camry.pdf",
+   "page": 500,
+   "quote": "62.4 in. (1585 mm)*3",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-23",
+   "key": "rear_suspension",
+   "value": "Independent dual link with stabilizer bar",
+   "unit": null,
+   "years": [
+    2014,
+    2017
+   ],
+   "source": "pi-2014",
+   "path": "data_work/toyota/raw/product_info/2014_Camry_Product_Information.pdf",
+   "page": 2,
+   "quote": "- Rear Independent dual link with",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-14",
+   "key": "wheelbase_mm",
+   "value": 2824,
+   "unit": "mm",
+   "years": [
+    2024,
+    2024
+   ],
+   "source": "pi-2024",
+   "path": "data_work/toyota/raw/product_info/FINAL_2024_Toyota_Camry_Product_Information_1.pdf",
+   "page": 5,
+   "quote": "Wheelbase 111.2 in. 111.2 in.",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-IX-38",
+   "key": "curb_weight_kg",
+   "value": 1630,
+   "unit": "kg",
+   "years": [
+    2025,
+    2026
+   ],
+   "source": "pi-2025",
+   "path": "data_work/toyota/raw/product_info/2025_Toyota_Camry_Product_Information-2.pdf",
+   "page": 4,
+   "quote": "3,594 3,627 3,649 3,682",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-IX-26",
+   "key": "torque_lb_ft",
+   "value": 163,
+   "unit": "lb-ft",
+   "years": [
+    2025,
+    2026
+   ],
+   "source": "pi-2025",
+   "path": "data_work/toyota/raw/product_info/2025_Toyota_Camry_Product_Information-2.pdf",
+   "page": 1,
+   "quote": "Torque 163 lb-ft @ 5,200 rpm",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VII-31",
+   "key": "tires",
+   "value": "P205/65R16 94S",
+   "unit": null,
+   "years": [
+    2015,
+    2017
+   ],
+   "source": "pi-2015",
+   "path": "data_work/toyota/raw/product_info/2015_Camry_Product_Information.pdf",
+   "page": 2,
+   "quote": "Tire Size P205/65 R16 ( LE)",
+   "method": "source re-opened, value found in text",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-74",
+   "key": "power_hp",
+   "value": 202,
+   "unit": "hp",
+   "years": [
+    2021,
+    2024
+   ],
+   "source": "pi-2021",
+   "path": "data_work/toyota/raw/product_info/2021_Toyota_Camry_Product-Information.pdf",
+   "page": 1,
+   "quote": "202 hp @ 6,600 rpm (LE",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  },
+  {
+   "id": "camry-VIII-59",
+   "key": "engine_displacement_cc",
+   "value": 2487,
+   "unit": "cm3",
+   "years": [
+    2018,
+    2023
+   ],
+   "source": "pi-2018",
+   "path": "data_work/toyota/raw/product_info/2018_Toyota_Camry_Product_Information_November_2_2017.pdf",
+   "page": 1,
+   "quote": "Displacement 2,487 cc 3,456 cc",
+   "method": "page image re-rendered and read",
+   "result": "MATCH",
+   "note": null
+  }
+ ]
+}

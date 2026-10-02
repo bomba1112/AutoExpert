@@ -1,0 +1,30 @@
+{
+ "_comment": "Curb weights by trim read from the Product Information tables (header row + value row). Mapping of values to trims follows the column order of each table; every row is validated as a verbatim quote.",
+ "rows": [
+  {"gen": "VII", "years": [2014, 2014], "src": "pi-2014", "powertrain": "ICE", "engine": "2AR-FE", "header": "Curb Weight L LE SE XLE", "row": "3,190 3,190 3,240 3,245", "trims": ["L", "LE", "SE", "XLE"]},
+  {"gen": "VII", "years": [2014, 2014], "src": "pi-2014", "powertrain": "ICE", "engine": "2GR-FE", "header": "SE XLE", "row": "3,420 3,395", "trims": ["SE", "XLE"]},
+  {"gen": "VII", "years": [2014, 2014], "src": "pi-2014-hv", "powertrain": "HEV", "header": "Curb Weight LE XLE", "row": "3,417 3,441", "trims": ["LE", "XLE"]},
+  {"gen": "VII", "years": [2015, 2015], "src": "pi-2015", "powertrain": "ICE", "engine": "2AR-FE", "header": "Curb Weight LE SE XSE XLE", "row": "3,240 3,300 3,350 3,340", "trims": ["LE", "SE", "XSE", "XLE"]},
+  {"gen": "VII", "years": [2016, 2016], "src": "pi-2016", "powertrain": "ICE", "engine": "2AR-FE", "header": "Curb Weight LE SE SP. Ed. XSE XLE", "row": "3,240 3,300 3,305 3,350 3,340", "trims": ["LE", "SE", "Special Edition", "XSE", "XLE"]},
+  {"gen": "VII", "years": [2017, 2017], "src": "pi-2017", "powertrain": "ICE", "engine": "2AR-FE", "header": "Curb Weight LE SE XSE XLE", "row": "3,245 3,300 3,350 3,340", "trims": ["LE", "SE", "XSE", "XLE"]},
+  {"gen": "VII", "years": [2015, 2017], "srcs": ["pi-2015", "pi-2016", "pi-2017"], "powertrain": "ICE", "engine": "2GR-FE", "header": "XSE XLE", "row": "3,480 3,460", "trims": ["XSE", "XLE"]},
+  {"gen": "VII", "years": [2015, 2017], "srcs": ["pi-2015-hv", "pi-2016-hv", "pi-2017-hv"], "powertrain": "HEV", "header": "Curb Weight LE XLE SE", "row": "3,485 3,585 3,565", "trims": ["LE", "XLE", "SE"]},
+  {"gen": "VIII", "years": [2018, 2019], "srcs": ["pi-2018", "pi-2019"], "powertrain": "ICE", "engine": "A25A-FKS", "drivetrain": "FWD", "header": "Curb Weight (lbs.) L LE SE XSE XLE", "row": "3,241 3,296 3,340 3,395 3,351", "trims": ["L", "LE", "SE", "XSE", "XLE"]},
+  {"gen": "VIII", "years": [2020, 2020], "src": "pi-2020", "powertrain": "ICE", "engine": "A25A-FKS", "drivetrain": "FWD", "header": "Curb Weight (lbs.) L LE SE,NS XSE XLE", "row": "3,241 3,296 3,340 3,395 3,351", "trims": ["L", "LE", "SE", "XSE", "XLE"]},
+  {"gen": "VIII", "years": [2018, 2019], "srcs": ["pi-2018", "pi-2019"], "powertrain": "ICE", "engine": "2GR-FKS", "header": "XSE XLE", "row": "3,571 3,549", "trims": ["XSE", "XLE"]},
+  {"gen": "VIII", "years": [2020, 2020], "src": "pi-2020", "powertrain": "ICE", "engine": "2GR-FKS", "header": "XSE, TRD XLE", "row": "3,572 3,549", "trims": ["XSE", "XLE"], "trims_note": "3,572 lb applies to XSE and TRD V6"},
+  {"gen": "VIII", "years": [2018, 2018], "src": "pi-2018-hv", "powertrain": "HEV", "header": "Curb Weight (lbs.) LE SE XLE", "row": "3,472 3,549 3,571", "trims": ["LE", "SE", "XLE"]},
+  {"gen": "VIII", "years": [2020, 2020], "src": "pi-2020-hv", "powertrain": "HEV", "header": "Curb Weight (lbs.) LE SE XLE", "row": "3,472 3,549 3,572", "trims": ["LE", "SE", "XLE"]},
+  {"gen": "VIII", "years": [2021, 2024], "srcs": ["pi-2021-hv", "pi-2022-hv", "pi-2023-hv", "pi-2024-hv"], "powertrain": "HEV", "header": "Curb Weight (lbs.) LE S", "row": "3,480 3,535 3,565 3,580", "trims": ["LE", "SE", "XLE", "XSE"]},
+  {"gen": "IX", "years": [2025, 2026], "srcs": ["pi-2025", "pi-2026"], "powertrain": "HEV", "drivetrain": "FWD", "header": "Curb Weight (lbs.) LE SE XLE XSE", "row": "3,450 3,494 3,516 3,538", "trims": ["LE", "SE", "XLE", "XSE"]},
+  {"gen": "IX", "years": [2025, 2026], "srcs": ["pi-2025", "pi-2026"], "powertrain": "HEV", "drivetrain": "AWD", "header": "LE AWD SE AWD XLE AWD XSE AWD", "row": "3,594 3,627 3,649 3,682", "trims": ["LE", "SE", "XLE", "XSE"]}
+ ],
+ "listed": [
+  {"gen": "VIII", "years": [2021, 2024], "srcs": ["pi-2021", "pi-2022", "pi-2023", "pi-2024"], "powertrain": "ICE", "items": [
+   ["A25A-FKS", "FWD", "LE", "LE – 3,310 lbs.", 3310], ["A25A-FKS", "FWD", "SE", "SE – 3,340 lbs.", 3340], ["A25A-FKS", "FWD", "SE Nightshade", "SE NS – 3,350 lbs.", 3350],
+   ["A25A-FKS", "FWD", "XLE", "XLE – 3,380 lbs.", 3380], ["A25A-FKS", "FWD", "XSE", "XSE – 3,425 lbs.", 3425],
+   ["A25A-FKS", "AWD", "LE", "LE AWD – 3,475 lbs.", 3475], ["A25A-FKS", "AWD", "SE", "SE AWD – 3,530 lbs.", 3530], ["A25A-FKS", "AWD", "SE Nightshade", "SE NS AWD – 3,530 lbs.", 3530],
+   ["A25A-FKS", "AWD", "XLE", "XLE AWD – 3,540 lbs.", 3540], ["A25A-FKS", "AWD", "XSE", "XSE AWD – 3,580 lbs.", 3580],
+   ["2GR-FKS", "FWD", "XLE", "XLE – 3,595 lbs.", 3595], ["2GR-FKS", "FWD", "TRD", "TRD", 3575]]}
+ ]
+}
