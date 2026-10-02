@@ -1,0 +1,123 @@
+# Chevrolet — отчёт по базе технических данных US
+
+Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+
+## 1. Матрица покрытия
+
+Обозначения: ● заполнено, ◐ частично, ○ нет, — неприменимо (электромобиль).
+
+| Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Malibu | VIII | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Malibu | IX | 2016–2025 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Cruze | US2014-2015 | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Cruze | II | 2016–2019 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | 2010 redesign (US) | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | US2018-2024 | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | US2025+ | 2025–2026 | ◐ | ◐ | ● | ● | ● | ◐ | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● |
+| Trax | US2015-2022 | 2015–2022 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Trax | US2024+ | 2024–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+
+Итого ячеек: заполнено 53, частично 49, нет 33, неприменимо 0.
+
+## 2. Строки до и после
+
+| Таблица | До пакета | После |
+|---|---|---|
+| technical_evidence | 0 | 3430 |
+| known_issues | 0 | 253 |
+| maintenance_schedule_items | 0 | 0 |
+
+## 3. Журнал пробелов
+
+Записей в журнале пробелов: 308 (по полю и причине):
+
+| Поле | Причина | Записей | Примеры |
+|---|---|---|---|
+| engine_family_key | factory engine code not in EPA; filled only from a source that names it | 118 | chevrolet-malibu-us-2014-2.0l-4cyl-turbo-ice-a-s6-fwd; chevrolet-malibu-us-2014-2.4l-4cyl-hev-a-s6-fwd; chevrolet-malibu-us-2014-2.5l-4cyl-ice-a-s6-fwd |
+| engine_oil_oem_approval | engine not stated; EPA lists several engines | 30 | chevrolet/malibu MY2022 (official-208c55b3d0b7); chevrolet/malibu MY2021 (official-6582638ee059); chevrolet/malibu MY2014 (official-7461695d71a7) |
+| engine_oil_viscosity | engine not stated; EPA lists several engines | 21 | chevrolet/malibu MY2016 (official-f395cde9a52c); chevrolet/cruze MY2014 (official-1256553bcf46); chevrolet/cruze MY2019 (official-4d52e1c95054) |
+| fuel_tank_l | one document gives N values: ['N', 'N'] | 18 | chevrolet/malibu MY2019 (official-881052775fa3); chevrolet/malibu MY2016 (official-ee9f43223777); chevrolet/malibu MY2018 (official-f212af069990) |
+| transmission_fluid | not found unambiguously in the available US owner's manuals | 9 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| coolant | not found unambiguously in the available US owner's manuals | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| power_hp | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| torque_lb_ft | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| tires | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| front_suspension | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| rear_suspension | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| front_brakes | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| steering | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| ground_clearance | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| cargo_l | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
+| fuel_tank_l | value N outside the validator range; not used | 5 | chevrolet/malibu official-fc38f1d0ac28 p.243; chevrolet/cruze official-1256553bcf46 p.381; chevrolet/cruze official-943cab632404 p.376 |
+| brake_fluid | one document gives N values: ['"DOT N"', '"DOT N"'] | 5 | chevrolet/trax MY2020 (official-2ea79b3a1db0); chevrolet/trax MY2016 (official-60eedef6f4f5); chevrolet/trax MY2017 (official-91f5d2c9ba4d) |
+| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 4 | chevrolet/malibu official-f395cde9a52c p.181; chevrolet/malibu official-fc38f1d0ac28 p.203; chevrolet/trax official-2ea79b3a1db0 p.223 |
+| engine_oil_viscosity | one document gives N values: ['"SAE NW-N"', '"SAE NW-N"'] | 4 | chevrolet/malibu MY2016 (official-ee9f43223777); chevrolet/malibu MY2017 (official-f8c33d570c8c); chevrolet/trax MY2019 (official-9f2b2b3bcf7b) |
+| transmission_fluid_capacity_l | value N outside the validator range; not used | 3 | chevrolet/cruze official-a94f00433954 p.374; chevrolet/cruze official-ecf4531dacd6 p.365; chevrolet/cruze official-ffa4b0c4604c p.340 |
+| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 3 | chevrolet/cruze US2014-2015; chevrolet/cruze II; chevrolet/equinox 2010 redesign (US) |
+| fuel_tank_l | not found unambiguously in the available US owner's manuals | 2 | chevrolet/cruze US2014-2015; chevrolet/equinox 2010 redesign (US) |
+| coolant_capacity_l | value N outside the validator range; not used | 1 | chevrolet/malibu official-881052775fa3 p.343 |
+| fuel_tank_l | one document gives N values: ['N', 'N', 'N'] | 1 | chevrolet/cruze MY2019 (official-4d52e1c95054) |
+| coolant_capacity_l | engine not stated; EPA lists several engines | 1 | chevrolet/cruze MY2016 (official-ffa4b0c4604c) |
+| engine_oil_capacity_l | engine not stated; EPA lists several engines | 1 | chevrolet/cruze MY2016 (official-ffa4b0c4604c) |
+| front_brakes | not found unambiguously in the available US press specification pages | 1 | chevrolet/equinox US2025+ |
+| brake_fluid | one document gives N values: ['"DOT N or DOT N"', '"DOT N"', '"DOT N"'] | 1 | chevrolet/trax MY2015 (official-5423abd06f81) |
+
+## 4. Конфликты источников
+
+Конфликтов: 3. По решениям:
+
+- official document kept over the copy: 2
+- official value is the main value; the vPIC Canadian value stays a SECO: 1
+
+| Линейка | Область | Поле | Оставлено | Другие значения | Решение |
+|---|---|---|---|---|---|
+| Equinox | chevrolet/equinox US2018-2024 MY2021 | engine_oil_oem_approval | dexos1 | ['dexos1; dexos2'] | official document kept over the copy |
+| Equinox | chevrolet/equinox US2018-2024 MY2021 | engine_oil_viscosity | SAE 0W-20 | ['SAE 5W-30'] | official document kept over the copy |
+| Equinox | chevrolet/equinox US2025+ MY2025 | curb_weight_kg | [1555.0] | [1625] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
+
+## 5. Выборочная перепроверка
+
+Проверено 65 записей (10% каждой линейки), расхождений 0.
+- cruze: 13 проверено, 0 расхождений
+- equinox: 27 проверено, 0 расхождений
+- malibu: 15 проверено, 0 расхождений
+- trax: 10 проверено, 0 расхождений
+
+## Поколения: свидетельства прессы и решения детектора
+
+- Malibu IX (2016–2025): consumerreports.org: "Completely redesigned for 2016, the Malibu is much sleeker than the boxy sedan it replaced." (https://www.consumerreports.org/cars/chevrolet/malibu/); cars.com: "A stylish redesign for 2016 made the Malibu one of the better-looking entries in the mid-size sedan category" (https
+- Cruze II (2016–2019): consumerreports.org: "A redesigned Cruze was introduced for 2016." (https://www.consumerreports.org/cars/chevrolet/cruze/); cars.com: "The Cruze was redesigned for 2016, gaining sleeker styling and lots of new tech features" (https://www.cars.com/research/chevrolet-cruze/) [media: generation starts 
+- Equinox US2018-2024 (2018–2024): consumerreports.org: "The new Equinox has tidier dimensions" (https://www.consumerreports.org/cars/chevrolet/equinox/); cars.com: "With SUV sales on the rise, Chevy released a redesigned Equinox for 2018." (https://www.cars.com/research/chevrolet-equinox/) [media: generation starts MY2018]
+- Equinox US2025+ (2025–2026): consumerreports.org: "Redesigned for 2025, the Chevrolet Equinox is similar in size and mechanical details to the SUV it supplants." (https://www.consumerreports.org/cars/chevrolet/equinox/); cars.com: "The Chevrolet Equinox entered a new generation for 2025 with a bold, truck-inspired redesign." (h
+- Trax US2024+ (2024–2026): consumerreports.org: "The redesigned Trax is almost a foot longer than its predecessor." (https://www.consumerreports.org/cars/chevrolet/trax/); cars.com: "Redesigned on larger, FWD-only platform for 2024" (https://www.cars.com/research/chevrolet-trax/) [media: generation starts MY2024]
+
+## Изменения ранее записанных строк (последняя загрузка)
+
+- Malibu: проблема malibu-IX-recall-18V358000 обновлена {"evidence_ids": [19, 20], "note": [null, "CarComplaints.com \"Loses Power, Stalls\" (owner reports): MY2018: #2, average cost to fix N/A, average mileage 37,00
+- Malibu: проблема malibu-IX-tsb-loss-of-power обновлена {"evidence_ids": [48, 49], "note": [null, "CarComplaints.com \"Loss Of Power\" (owner reports): MY2016: #1, average cost to fix $500, average mileage 53,000 mi"
+- Malibu: проблема malibu-IX-complaints-brake-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Brake Failure, Multiple Problems\" (owner reports): MY2016
+- Malibu: проблема malibu-IX-complaints-engine-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Engine Failure\" (owner reports): MY2020: #2, average cost
+- Cruze: проблема cruze-II-tsb-fuel-pump-stall обновлена {"evidence_ids": [26, 27], "note": [null, "CarComplaints.com \"Fuel Pump Failed\" (owner reports): MY2019: #1, average cost to fix $800, average mileage 47,000 
+- Cruze: проблема cruze-II-tsb-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [7, 8], "note": [null, "CarComplaints.com \"Transmission Slips\" (owner reports): MY2018: #1, average 
+- Cruze: проблема cruze-US2014-2015-tsb-coolant-leak обновлена {"evidence_ids": [7, 8], "note": [null, "CarComplaints.com \"Water Pump Stopped Working\" (owner reports): MY2014: #2, average cost to fix $2,800, average milea
+- Cruze: проблема cruze-US2014-2015-tsb-overheating обновлена {"evidence_ids": [4, 5], "note": [null, "CarComplaints.com \"Overheating\" (owner reports): MY2014: #3, average cost to fix $1,600, average mileage 84,000 mi"]}
+- Equinox: проблема equinox-2010 redesign (US)-tsb-oil-consumption обновлена {"evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Excessive Oil Consumption\" (owner reports): MY2014: #1, average cost to fix $2,800, average mileag
+- Equinox: проблема equinox-2010 redesign (US)-tsb-timing-drive обновлена {"evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Timing Chain Loosened Causing Engine Failure\" (owner reports): MY2015: #2, average cost to fix $12
+- Equinox: проблема equinox-US2018-2024-tsb-battery-drain обновлена {"evidence_ids": [52, 54], "note": [null, "CarComplaints.com \"Engine Will Not Start Intermittently (No Turn Over - ...\" (owner reports): MY2023: #1, average c
+- Equinox: проблема equinox-US2018-2024-tsb-brake-assist обновлена {"evidence_ids": [5, 6], "note": [null, "CarComplaints.com \"Service Brake Assist Alert\" (owner reports): MY2020: #2, average cost to fix N/A, average mileage 
+- Equinox: проблема equinox-US2018-2024-tsb-hesitation обновлена {"evidence_ids": [10, 11], "note": [null, "CarComplaints.com \"Engine Hesitation\" (owner reports): MY2020: #1, average cost to fix $5,000, average mileage 44,0
+- Equinox: проблема equinox-US2018-2024-tsb-infotainment обновлена {"evidence_ids": [13, 14], "note": [null, "CarComplaints.com \"Apple Carplay Navigation Errors\" (owner reports): MY2024: #1, average cost to fix N/A, average m
+- Equinox: проблема equinox-US2018-2024-tsb-loss-of-power обновлена {"evidence_ids": [42, 43], "note": [null, "CarComplaints.com \"Loss Of Power/ High Rpm No Acceleration\" (owner reports): MY2023: #3, average cost to fix N/A, a
+- Equinox: проблема equinox-2010 redesign (US)-complaints-engine-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 4], "note": [null, "CarComplaints.com \"Rear Main Seal And Engine Blown\" (owner reports): MY2014:
+- Trax: проблема trax-US2015-2022-tsb-battery-drain обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [37, 38], "note": [null, "CarComplaints.com \"Car Won't Start, Won't Turn Over\" (owner reports): MY20
+- Trax: проблема trax-US2015-2022-tsb-loss-of-power обновлена {"evidence_ids": [9, 10], "note": [null, "CarComplaints.com \"Car Brakes Lock Down, Transmission Goes Into Limp Mode\" (owner reports): MY2020: #2, average cost
+- Trax: проблема trax-US2024+-complaints-engine-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Broken Connecting Rod Knocked A Hole In The Engine Block\"
+
+## Загрузка
+
+Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
+- chevrolet/malibu: --prune-stale, код 0, {"raw_documents_seen": 71, "source_records_new": 18, "te_existing": 774, "te_new_GENERATION": 50, "configurations": 27, "configurations_linked": 5, "configurations_research_only": 22, "issues_existing": 70, "issues_updated": 4}
+- chevrolet/cruze: --prune-stale, код 0, {"raw_documents_seen": 35, "source_records_new": 10, "te_existing": 836, "te_new_GENERATION": 24, "configurations": 28, "configurations_research_only": 26, "configurations_linked": 2, "issues_existing": 63, "issues_updated": 4}
+- chevrolet/equinox: --prune-stale, код 0, {"raw_documents_seen": 77, "source_records_new": 33, "te_existing": 1109, "te_new_GENERATION": 94, "te_new_ENGINE": 2, "configurations": 44, "configurations_research_only": 44, "issues_existing": 74, "issues_updated": 8, "issues_new": 1}
+- chevrolet/trax: --prune-stale, код 0, {"raw_documents_seen": 55, "source_records_new": 17, "te_existing": 512, "te_new_GENERATION": 28, "te_new_ENGINE": 1, "configurations": 19, "configurations_research_only": 19, "issues_existing": 44, "issues_updated": 3, "issues_new": 1}

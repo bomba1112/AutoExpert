@@ -22,7 +22,7 @@ Updated: 2026-10-03. Prompt: `CLAUDE_CODE_US_TECH_DATABASE_PROMPT.md`; the owner
 | Cadillac, Jeep, Mitsubishi | not loaded (owner decision); staging prepared | — |
 
 ## Mercedes-Benz gap-closing round (2026-10-02/03)
-- **www.mbusa.com:** the original pass got 44 manuals; 91 files failed with gateway 502. The retry with a 180 s timeout got 0 of 7 and was stopped by the owner.
+- **www.mbusa.com:** the original pass got 44 documents (35 operator's manuals and 9 warranty/maintenance booklets); 91 manuals failed with gateway 502. The retry with a 180 s timeout got 0 of 7 and was stopped by the owner.
 - **Alternative US editions** for the same line-years (`scripts/collect_mbusa_alternatives.py`, one request at a time, 180 s): 96 line-years, 25 editions downloaded.
 - **Per-model tables** of the operator's manuals ("Model | Capacity / Filling quantity", "MB-Freigabe or MB-Approval"), parsed by `scripts/extract_manual_facts.py`, pass `mb-model-table-4`. Each value is tied to the model row printed in the table. The pass also reads two sentence statements: brake fluid "MB-Approval 331.0" and coolant "MB 310.1/320.1".
 - **auto-data.net (secondary)** fills oil and coolant volume only for line-years without a US manual value (`scripts/collect_autodata.py`, registry `auto-data`). The oil approval there is behind a login and was not collected.

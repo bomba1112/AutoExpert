@@ -389,28 +389,34 @@ def mbusa_failures() -> list[str]:
     for r in first:
         last[r["url"]] = r
     st = Counter(r["status"] for r in last.values())
-    ok_years, all_years = set(), set()
-    plan = read_json(WORK / "_shared" / "official_manuals" / "mercedes-benz.json", {})
-    for d in plan.get("documents", []):
-        if d.get("doc_type") == "owners_manual" and "www.mbusa.com" in d.get("url", ""):
-            all_years.add((d["line"], d["year"]))
-    for r in manuals:
-        if r["status"] == "ok":
-            ok_years |= {(line, int(y)) for line in r["lines"].split(";") if line for y in r["years"].split(";") if y}
+    # line-years (EPA years of the staging) against every US-edition manual extracted for the
+    # make: mbusa downloads, alternative editions and mycarusermanual copies
+    all_years, ok_years = set(), set()
+    for line in lines_for("mercedes-benz"):
+        staging = read_json(WORK / "mercedes-benz" / "staging" / line.slug / "staging.json", {})
+        all_years |= {(line.key, c["year"]) for c in staging.get("configurations", [])}
+    for path in (WORK / "mercedes-benz" / "extracted").glob("*.json"):
+        doc = read_json(path, {})
+        meta = doc.get("doc", {})
+        if (doc.get("edition_market") == "US" and doc.get("status", "ok") == "ok"
+                and meta.get("doc_type") not in ("press_specifications", "secondary_specifications")):
+            ok_years |= {(line, year) for line in meta.get("lines", []) for year in meta.get("years", [])}
     log = read_json(WORK / "_shared" / "manifest_official" / "mbusa_alternatives_log.json", [])
     tried = sum(1 for x in log if x["tried"])
     got = sum(1 for x in log if x["downloaded"])
     none_listed = sum(1 for x in log if not x["alternatives_listed"])
     missing = sorted(all_years - ok_years)
     return [
-        f"- www.mbusa.com (руководства Mercedes-Benz), основной проход: скачано {st.get('ok', 0)}, недоступно "
-        f"{st.get('error', 0)} (шлюз сайта отвечал 502). Повтор недоступных файлов с таймаутом 180 с: 0 из 7, "
-        "остановлен по решению владельца.",
+        f"- www.mbusa.com (руководства Mercedes-Benz), основной проход: скачано {st.get('ok', 0)} руководств "
+        f"(и {sum(1 for r in rows if r.get('doc_type') != 'owners_manual' and r['status'] == 'ok')} гарантийных/сервисных "
+        f"книжек), недоступно {st.get('error', 0)} (шлюз сайта отвечал 502). Повтор недоступных файлов с таймаутом "
+        "180 с: 0 из 7, остановлен по решению владельца.",
         f"- Альтернативные официальные US-издания тех же модели-годов (другой кузов или другая дата издания, "
         f"по одному запросу, таймаут 180 с, до 2 попыток на модели-год): модели-годов {len(log)}, с попытками {tried}, "
         f"скачано {got} ({sum(1 for r in alt if r['status'] == 'ok')} файлов), без альтернатив в каталоге mbusa "
         f"{none_listed}; запросов с ошибкой {sum(1 for r in alt if r['status'] != 'ok')}.",
-        f"- Модели-годы Mercedes без US-руководства после всех попыток: {len(missing)} из {len(all_years)}: "
+        f"- Модели-годы Mercedes (годы EPA) без US-руководства ни в одном источнике (mbusa, альтернативные издания, "
+        f"mycarusermanual) после всех попыток: {len(missing)} из {len(all_years)}: "
         + ", ".join(f"{line.split('/')[-1]} {year}" for line, year in missing) + ".",
         "- Копии руководств для Mercedes: mycarusermanual.com — только 4 модели Mercedes в каталоге; carmans.net — "
         "Mercedes нет; ownersman.com — защита Cloudflare (не обходится); manualslib.com и usermanual.wiki → manuals.plus "
