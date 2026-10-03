@@ -2,28 +2,26 @@
  "make": "infiniti",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-02T17:02:40+00:00",
+ "started_at": "2026-10-03T17:48:31+00:00",
  "replace_own": [],
  "lines": {
   "infiniti/q50": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 60,
-    "source_records_new": 55,
-    "te_new_GENERATION": 416,
-    "te_new_ENGINE": 1,
-    "te_new_CONFIGURATION": 552,
+    "raw_documents_seen": 63,
+    "source_records_new": 3,
+    "te_existing": 969,
     "configurations": 40,
     "configurations_research_only": 28,
     "configurations_linked": 12,
-    "issues_new": 30
+    "issues_existing": 30,
+    "maintenance_new": 169
    },
    "generations": [
     {
      "code": "V37",
-     "action": "filled",
-     "end_year": 2024
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -33,26 +31,23 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 71,
-    "source_records_new": 56,
-    "te_new_GENERATION": 365,
-    "te_new_CONFIGURATION": 352,
+    "raw_documents_seen": 75,
+    "source_records_new": 1,
+    "te_existing": 717,
     "configurations": 32,
     "configurations_research_only": 22,
     "configurations_linked": 10,
-    "issues_new": 38
+    "issues_existing": 38,
+    "maintenance_new": 222
    },
    "generations": [
     {
      "code": "L50",
-     "action": "filled",
-     "end_year": 2020
+     "action": "unchanged"
     },
     {
      "code": "US2022+",
-     "action": "created",
-     "start_year": 2022,
-     "end_year": null
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -62,20 +57,17 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 23,
-    "source_records_new": 14,
-    "te_new_GENERATION": 155,
-    "te_new_CONFIGURATION": 99,
+    "raw_documents_seen": 26,
+    "te_existing": 254,
     "configurations": 9,
     "configurations_research_only": 9,
-    "issues_new": 6
+    "issues_existing": 6,
+    "maintenance_new": 56
    },
    "generations": [
     {
      "code": "US2014-2017",
-     "action": "created",
-     "start_year": null,
-     "end_year": 2017
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -85,5 +77,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-02T17:02:56+00:00"
+ "finished_at": "2026-10-03T17:48:49+00:00"
 }
