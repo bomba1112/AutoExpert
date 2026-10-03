@@ -1,0 +1,79 @@
+{
+ "source": "teoalida/tire_size",
+ "threshold": 0.9,
+ "min_compared": 5,
+ "fields": {
+  "tires": {
+   "compared": 19,
+   "agreed": 15,
+   "differ": 4,
+   "no_official": 34,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2014 320i",
+     "teoalida": "225/45R18; 225/50R17; 255/40R18",
+     "official": "225/45R18; 225/50R17; 255/40R18",
+     "source": "press-bmwgroup-3-series-2014-75739985"
+    },
+    {
+     "where": "bmw/3-series 2014 328d",
+     "teoalida": "225/45R18; 225/50R17; 255/40R18",
+     "official": "225/45R18; 225/50R17; 255/40R18",
+     "source": "press-bmwgroup-3-series-2014-75739985"
+    },
+    {
+     "where": "bmw/3-series 2014 328i",
+     "teoalida": "225/45R18; 225/45R19; 225/50R17; 225/50R18; 225/55R17; 255/40R18; 255/40R19; 255/45R18",
+     "official": "225/45R18; 225/45R19; 225/50R17; 225/50R18; 225/55R17; 255/40R18; 255/40R19; 255/45R18",
+     "source": "press-bmwgroup-3-series-2014-75739985"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2014 335i",
+     "teoalida": "225/40R19; 225/45R18; 225/45R19; 225/50R18; 255/35R19; 255/40R18; 255/40R19; 255/45R18",
+     "official": [
+      "\"225/45R18; 225/50R17\""
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-75739985"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2017 340i",
+     "teoalida": "225/40R19; 225/45R18; 225/45R19; 225/50R18; 255/35R19; 255/40R18; 255/40R19",
+     "official": [
+      "\"225/45R18; 225/50R17; 255/40R18\""
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2019 330i",
+     "teoalida": "225/40R19; 225/45R18; 225/45R19; 225/50R17; 225/50R18; 255/35R19; 255/40R18; 255/40R19; 255/45R18",
+     "official": [
+      "\"225/35R20; 225/40R19; 225/45R18; 225/50R17; 255/30R20; 255/35R19; 255/40R18\""
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2019-d96bbe05"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2019 340i",
+     "teoalida": "225/45R19; 225/50R18; 255/40R19; 255/45R18",
+     "official": [
+      "\"225/35R20; 225/40R19; 225/45R18; 225/50R17; 255/30R20; 255/35R19; 255/40R18\""
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2019-d96bbe05"
+     ]
+    }
+   ],
+   "agreement": 0.789,
+   "verdict": "below 90% - not written",
+   "write": false
+  }
+ },
+ "records": 426
+}
