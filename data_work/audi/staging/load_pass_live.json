@@ -2,7 +2,7 @@
  "make": "audi",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-03T17:44:01+00:00",
+ "started_at": "2026-10-03T17:58:05+00:00",
  "replace_own": [],
  "lines": {
   "audi/a3": {
@@ -10,13 +10,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 89,
-    "source_records_new": 10,
     "te_existing": 1211,
     "configurations": 37,
     "configurations_linked": 4,
     "configurations_research_only": 33,
     "issues_existing": 39,
-    "maintenance_new": 102
+    "maintenance_new": 4,
+    "maintenance_existing": 101,
+    "maintenance_stale_deleted": 1
    },
    "generations": [
     {
@@ -36,13 +37,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 87,
-    "source_records_new": 2,
     "te_existing": 1067,
     "configurations": 38,
     "configurations_research_only": 35,
     "configurations_linked": 3,
     "issues_existing": 45,
-    "maintenance_new": 72
+    "maintenance_new": 4,
+    "maintenance_existing": 71,
+    "maintenance_stale_deleted": 1
    },
    "generations": [
     {
@@ -66,7 +68,9 @@
     "configurations": 47,
     "configurations_research_only": 47,
     "issues_existing": 61,
-    "maintenance_new": 103
+    "maintenance_new": 8,
+    "maintenance_existing": 100,
+    "maintenance_stale_deleted": 3
    },
    "generations": [
     {
@@ -95,8 +99,9 @@
     "configurations_linked": 4,
     "configurations_research_only": 47,
     "issues_existing": 65,
-    "maintenance_new": 105,
-    "maintenance_existing": 1
+    "maintenance_new": 6,
+    "maintenance_existing": 103,
+    "maintenance_stale_deleted": 2
    },
    "generations": [
     {
@@ -112,7 +117,7 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 1,
+   "conflicts": 0,
    "existing_vs_new": 8
   },
   "audi/q3": {
@@ -120,14 +125,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 58,
-    "source_records_new": 1,
-    "te_existing": 524,
-    "te_new_GENERATION": 3,
+    "te_existing": 527,
     "configurations": 16,
     "configurations_linked": 6,
     "configurations_research_only": 10,
     "issues_existing": 39,
-    "maintenance_new": 95
+    "maintenance_new": 4,
+    "maintenance_existing": 94,
+    "maintenance_stale_deleted": 1
    },
    "generations": [
     {
@@ -151,14 +156,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 104,
-    "source_records_new": 1,
-    "te_existing": 1292,
-    "te_new_GENERATION": 3,
+    "te_existing": 1295,
     "configurations": 40,
     "configurations_research_only": 32,
     "configurations_linked": 8,
     "issues_existing": 79,
-    "maintenance_new": 97
+    "maintenance_new": 6,
+    "maintenance_existing": 95,
+    "maintenance_stale_deleted": 2
    },
    "generations": [
     {
@@ -182,14 +187,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 66,
-    "source_records_new": 1,
-    "te_existing": 867,
-    "te_new_GENERATION": 6,
+    "te_existing": 873,
     "configurations": 31,
     "configurations_research_only": 26,
     "configurations_linked": 5,
     "issues_existing": 56,
-    "maintenance_new": 91
+    "maintenance_new": 4,
+    "maintenance_existing": 90,
+    "maintenance_stale_deleted": 1
    },
    "generations": [
     {
@@ -208,5 +213,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T17:44:51+00:00"
+ "finished_at": "2026-10-03T17:58:53+00:00"
 }

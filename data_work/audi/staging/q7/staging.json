@@ -21377,6 +21377,96 @@
  ],
  "maintenance": [
   {
+   "id": "q7-4L-mnt-engine_air_filter-063cf144-2014",
+   "generation": "4L",
+   "years": [
+    2014,
+    2015
+   ],
+   "engine": null,
+   "job": "engine_air_filter",
+   "action": "REPLACE",
+   "condition": "NORMAL",
+   "occurrence": "FIRST",
+   "schedule_system": "FIXED_INTERVAL",
+   "interval_km": 88514,
+   "interval_months": null,
+   "interval_miles_original": 55000,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {
+    "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+   },
+   "note": null,
+   "cites": [
+    {
+     "source": "audi-maintenance-card-2014",
+     "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles",
+     "pages": [
+      3
+     ],
+     "locator": "Additional Maintenance Items"
+    },
+    {
+     "source": "audi-maintenance-card-2015",
+     "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles",
+     "pages": [
+      3
+     ],
+     "locator": "Additional Maintenance Items"
+    }
+   ],
+   "primary_source": "audi-maintenance-card-2014",
+   "display_level": "FACT",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "q7-4L-mnt-engine_air_filter-d3f3ffea-2014",
+   "generation": "4L",
+   "years": [
+    2014,
+    2015
+   ],
+   "engine": null,
+   "job": "engine_air_filter",
+   "action": "REPLACE",
+   "condition": "NORMAL",
+   "occurrence": "SUBSEQUENT",
+   "schedule_system": "FIXED_INTERVAL",
+   "interval_km": 96561,
+   "interval_months": null,
+   "interval_miles_original": 60000,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {
+    "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+   },
+   "note": null,
+   "cites": [
+    {
+     "source": "audi-maintenance-card-2014",
+     "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles",
+     "pages": [
+      3
+     ],
+     "locator": "Additional Maintenance Items"
+    },
+    {
+     "source": "audi-maintenance-card-2015",
+     "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles",
+     "pages": [
+      3
+     ],
+     "locator": "Additional Maintenance Items"
+    }
+   ],
+   "primary_source": "audi-maintenance-card-2014",
+   "display_level": "FACT",
+   "confidence": "HIGH"
+  },
+  {
    "id": "q7-4L-mnt-brakes-c9e4e214-2014",
    "generation": "4L",
    "years": [
@@ -21463,7 +21553,7 @@
    "confidence": "HIGH"
   },
   {
-   "id": "q7-4L-mnt-transmission_fluid-a41e116f-2014",
+   "id": "q7-4L-mnt-transmission_fluid-4054889a-2014",
    "generation": "4L",
    "years": [
     2014,
@@ -21473,7 +21563,50 @@
    "job": "transmission_fluid",
    "action": "REPLACE",
    "condition": "NORMAL",
-   "occurrence": "EVERY",
+   "occurrence": "FIRST",
+   "schedule_system": "FIXED_INTERVAL",
+   "interval_km": 56327,
+   "interval_months": null,
+   "interval_miles_original": 35000,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {},
+   "note": null,
+   "cites": [
+    {
+     "source": "audi-maintenance-card-2014",
+     "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles",
+     "pages": [
+      4
+     ],
+     "locator": "Additional Maintenance Items"
+    },
+    {
+     "source": "audi-maintenance-card-2015",
+     "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles",
+     "pages": [
+      4
+     ],
+     "locator": "Additional Maintenance Items"
+    }
+   ],
+   "primary_source": "audi-maintenance-card-2014",
+   "display_level": "FACT",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "q7-4L-mnt-transmission_fluid-c83ef823-2014",
+   "generation": "4L",
+   "years": [
+    2014,
+    2015
+   ],
+   "engine": null,
+   "job": "transmission_fluid",
+   "action": "REPLACE",
+   "condition": "NORMAL",
+   "occurrence": "SUBSEQUENT",
    "schedule_system": "FIXED_INTERVAL",
    "interval_km": 64374,
    "interval_months": null,
@@ -27164,7 +27297,7 @@
   },
   "cc_problems": 5,
   "tsbs": 232,
-  "maintenance": 91,
+  "maintenance": 94,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 62,

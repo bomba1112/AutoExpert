@@ -1,0 +1,877 @@
+{
+ "date": "2026-10-03",
+ "reason": "own rows of this stage corrected before the report: 'Except RS5, TTS, S6 ...' was read as 'S6 only'; 'First 35,000 miles and thereafter every 40,000 miles' (without 'at') became one EVERY item instead of FIRST + SUBSEQUENT",
+ "how": "rebuilt maintenance_card.json; live load with --prune-stale removes the replaced own rows (load=us-tech-load-1)",
+ "changes": [
+  {
+   "line": "a3",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a3",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a3",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a3",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a3",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a4",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a4",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a4",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a4",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a4",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "removed": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS 5"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 15,000 miles and thereafter every 20,000 miles"
+  },
+  {
+   "line": "a5",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS5 and RS7"
+    }
+   },
+   "quote": "Rear Sport Differential - Change ATF for clutch hydraulics and differential oil First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS 5"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 15,000 miles and thereafter every 20,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS 5"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 15,000 miles and thereafter every 20,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS5 and RS7"
+    }
+   },
+   "quote": "Rear Sport Differential - Change ATF for clutch hydraulics and differential oil First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "RS5 and RS7"
+    }
+   },
+   "quote": "Rear Sport Differential - Change ATF for clutch hydraulics and differential oil First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "removed": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "S6"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "removed": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "S6"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a6",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "S6"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "S6"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "a6",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q3",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q3",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q3",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q3",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q3",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "Q5 Hybrid"
+    }
+   },
+   "quote": "Tiptronic Gear Box - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "Q5 Hybrid"
+    }
+   },
+   "quote": "Tiptronic Gear Box - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q5",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "models": "Q5 Hybrid"
+    }
+   },
+   "quote": "Tiptronic Gear Box - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q7",
+   "removed": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "EVERY",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q7",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 88514,
+    "interval_miles_original": 55000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q7",
+   "added": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "except": "RS5, TTS, S6, S7, RS7, A8 3.0L TFSI, A8 3.0L TDI, A8 4.0 TFSI"
+    }
+   },
+   "quote": "Air Filter - Clean housing and replace filter First 55,000 miles and thereafter every 60,000 miles"
+  },
+  {
+   "line": "q7",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "FIRST",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  },
+  {
+   "line": "q7",
+   "added": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "occurrence": "SUBSEQUENT",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {}
+   },
+   "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+  }
+ ]
+}

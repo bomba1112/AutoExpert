@@ -109,6 +109,11 @@ def card_action(text: str) -> str:
 
 def lines_named(text: str, index: dict, doc_lines: list[str]) -> tuple[list[str], dict]:
     """Our lines an applicability cell names, and per line the names it gives."""
+    # "Except RS5, TTS, S6, S7 ...": every line of the card, with the exception kept as printed
+    leading_except = re.match(r"\s*Except:?\s+(.*)$", text, re.I | re.S)
+    if leading_except:
+        rest = " ".join(leading_except.group(1).split("* Note")[0].split())
+        return list(doc_lines), {slug: {"except": rest} for slug in doc_lines}
     if APPLIES_ALL.search(text):
         excepted = re.search(r"except:?\s*(.*)$", text, re.I | re.S)
         note = {"except": " ".join(excepted.group(1).split())} if excepted and excepted.group(1).strip() else {}
@@ -232,7 +237,7 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
                 first_two = re.search(r"(\d+) years? aft\. registration, then every (\d+) years?\s*-?USA", norm(block), re.I)
                 once = re.search(r"Only once at first ([\d,]+) miles", norm(block), re.I)
                 # "First at 55,000 miles and thereafter every 60,000 miles": a first and a repeating interval
-                first_then = re.search(r"First at ([\d,]+) miles and thereafter every ([\d,]+) miles", norm(head + " " + block), re.I)
+                first_then = re.search(r"First (?:at )?([\d,]+) miles and thereafter every ([\d,]+) miles", norm(head + " " + block), re.I)
                 if re.search(r"Canada", norm(block), re.I) and not re.search(r"USA", norm(block)):
                     continue
                 raw_block = dehyphen(block)
