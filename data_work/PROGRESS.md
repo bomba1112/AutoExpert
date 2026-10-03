@@ -2,6 +2,19 @@
 
 Updated: 2026-10-03. Prompt: `CLAUDE_CODE_US_TECH_DATABASE_PROMPT.md`; the owner revised section 8 on 2026-10-02. The pipeline runs by source, not by vehicle. The batch is complete. The final report is `data_work/REPORT.md`, with per-make reports in `data_work/<make>/REPORT.md`.
 
+## Next stage (started 2026-10-03) — `CLAUDE_CODE_NEXT_STAGE_PROMPT.md`
+Report: `data_work/NEXT_STAGE_REPORT.md` (in Russian). Stages run in order A → B → C.
+
+| Step | Content | Status |
+|---|---|---|
+| 0 | Clean git; baseline tests (backend 545, Flutter 34, web 3) in `data_work/_next_stage/baseline_*`; backup `C:\AutoExpertBackups\autoexpert.db.backup_20261003_pre_next_stage` (TE 358 679, issues 3 648, maintenance 1 346) | done |
+| A | Teoalida samples (`C:\AutoExpertData\raw\teoalida\`): manifest, registry `teoalida` (SECONDARY, research only), Ravenol, Year-Make-Model-Trim specs, TireSize, Year-Make-Model, model lists, Tuning (comparison only), other markets to `data_work/_library/`; accuracy check ≥ 90% per source and field before each write | in progress |
+| A+ | Owner amendment (VW/Audi/BMW): section 9 recounted with mycarusermanual generation editions; from those US editions, separate fields (top-up standards and the 0.5 L limit, oil consumption, tank capacities, tires, maintenance); oil approval and volume for VW/Audi are not printed in the manual — gap reason "не публикуется производителем в руководстве" | pending |
+| B | Maintenance schedules for the 12 makes with 0 items (official documents, then on-board systems, then Ravenol as secondary) | pending |
+| C | App display behind the `show_us_tech_facts` flag (backend service, Flutter + web, tests, screenshots) | pending |
+
+Cadillac, Jeep and Mitsubishi stay unloaded in this stage.
+
 ## Owner decisions in force
 - **Scripts:** loaders and parsers are batch scripts over every line of Appendix A. AI is used only where a script fails. Parallel agents split work by source, at most 2 at a time, with one request stream per site.
 - **New configurations** stay in the research layer and are not published.
