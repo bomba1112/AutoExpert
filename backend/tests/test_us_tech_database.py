@@ -368,11 +368,16 @@ def test_manual_facts_cite_a_us_edition_page():
                 item = staging["sources"][cite["source"]]
                 if item.get("kind") == "pdf_pages":
                     if item.get("source_type") == "SECONDARY_SPEC_DATABASE":
-                        # auto-data.net (owner-approved secondary source): a European listing
-                        # matched to the US configuration, said so, and never shown as a fact
-                        assert item.get("edition") == "EU listing matched to the US configuration", cite["source"]
-                        assert item.get("tier") == "B" and item.get("registry") == "auto-data", cite["source"]
-                        assert fact["display_level"] in {"SECONDARY_NOTE", "HIDDEN_CONFLICT"}, fact["id"]
+                        # owner-approved secondary databases, never shown as a fact on their own:
+                        # auto-data.net (a European listing matched to the US configuration, said
+                        # so) and Teoalida (US databases, written only for fields with >= 90%
+                        # agreement with official values)
+                        assert item.get("tier") == "B", cite["source"]
+                        assert item.get("registry") in {"auto-data", "teoalida"}, cite["source"]
+                        assert item.get("edition") == ("EU listing matched to the US configuration"
+                                                       if item["registry"] == "auto-data" else "US"), cite["source"]
+                        if all(staging["sources"][c["source"]].get("tier") == "B" for c in fact["cites"]):
+                            assert fact["display_level"] in {"SECONDARY_NOTE", "HIDDEN_CONFLICT"}, fact["id"]
                     else:
                         assert item.get("edition") == "US", cite["source"]
                     assert cite.get("pages"), fact["id"]

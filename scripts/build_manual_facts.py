@@ -281,7 +281,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
     manual_years = defaultdict(set)
     for doc in extracted:
         meta = doc["doc"]
-        if line_key in meta["lines"] and doc.get("edition_market") == "US" and meta.get("doc_type") != "press_specifications":
+        if (line_key in meta["lines"] and doc.get("edition_market") == "US"
+                and meta.get("doc_type") not in ("press_specifications", "teoalida_specifications")):
             for fact in doc["facts"]:
                 manual_years[fact["key"]].update(meta["years"])
     for doc in extracted:
@@ -350,6 +351,8 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                     applicability["variant"] = " ".join(fact["engine_text"].split())
                 if fact.get("variant"):
                     applicability["variant"] = " ".join(fact["variant"].split())
+                if fact.get("applicability_extra"):  # database rows (Teoalida): transmission type, part condition
+                    applicability.update(fact["applicability_extra"])
                 if fact.get("drive"):
                     applicability["drive"] = fact["drive"]
                 powertrain = doc_powertrain(meta, staging, year)
@@ -480,10 +483,10 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
             "key": key, "kind": "pdf_pages", "path": "rawstore:" + Path(meta["path"]).relative_to(RAW_ROOT).as_posix(),
             "url": meta["url"], "page_url": meta.get("page_url"), "sha256": meta["sha256"], "retrieved_at": meta["retrieved_at"],
             "tier": meta["tier"], "source_type": meta["source_type"],
-            "registry": "auto-data" if meta.get("doc_type") == "secondary_specifications" else factory_registry,
+            "registry": meta.get("registry") or ("auto-data" if meta.get("doc_type") == "secondary_specifications" else factory_registry),
             "title": meta.get("title") or f"{MAKES[make]['epa']} owner's manual {meta['years']} ({meta['key']})",
             "publisher": meta["publisher"], "authenticity": meta["authenticity"],
-            "edition": "EU listing matched to the US configuration" if meta.get("doc_type") == "secondary_specifications" else "US",
+            "edition": meta.get("edition") or ("EU listing matched to the US configuration" if meta.get("doc_type") == "secondary_specifications" else "US"),
             "model_year": meta["years"][0] if meta["years"] else None,
             "extract": json.dumps(extract, ensure_ascii=False),
         }
@@ -501,6 +504,7 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
                 s for s in sources.values()
                 if any(gen["start_year"] <= y <= gen["end_year"] for y in s["meta"]["years"])
                 and (s["meta"].get("doc_type") == "press_specifications") == (kind == "press")
+                and s["meta"].get("doc_type") != "teoalida_specifications"
             ]
             for key in keys:
                 if key in ("power_hp", "torque_lb_ft") and all(

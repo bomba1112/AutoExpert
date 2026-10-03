@@ -1,0 +1,200 @@
+{
+ "source": "teoalida/ravenol",
+ "threshold": 0.9,
+ "min_compared": 5,
+ "fields": {
+  "coolant_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 6,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "engine_code (family, first 3 characters)": {
+   "compared": 11,
+   "agreed": 11,
+   "differ": 0,
+   "no_official": 109,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2019 330i Gran Turismo xDrive",
+     "teoalida": "B46",
+     "official": "B46",
+     "source": "press-bmwgroup-3-series-2019-d96bbe05"
+    },
+    {
+     "where": "bmw/3-series 2019 330i",
+     "teoalida": "B46",
+     "official": "B46",
+     "source": "press-bmwgroup-3-series-2019-d96bbe05"
+    },
+    {
+     "where": "bmw/3-series 2019 330i xDrive",
+     "teoalida": "B46",
+     "official": "B46",
+     "source": "press-bmwgroup-3-series-2019-d96bbe05"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "engine_oil_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 79,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "front_differential_fluid_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 6,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "interval automatic_transmission_fluid replace": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 2,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "interval brake_fluid replace": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 104,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "interval coolant inspect": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 2,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "interval engine_oil_and_filter replace": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 123,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "interval rear_differential_fluid replace": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 28,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "manual_transmission_fluid_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 33,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "rear_differential_fluid_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 48,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "transfer_case_fluid_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 8,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "transmission_code (gear count vs EPA transmission)": {
+   "compared": 103,
+   "agreed": 103,
+   "differ": 0,
+   "no_official": 0,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2014 328i Gran Turismo xDrive",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2015 328i Gran Turismo xDrive",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2016 328i Gran Turismo xDrive",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "transmission_fluid_capacity_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 71,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  }
+ },
+ "records": 344
+}

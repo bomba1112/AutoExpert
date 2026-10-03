@@ -2,20 +2,17 @@
  "make": "bmw",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-02T16:23:16+00:00",
- "replace_own": [
-  "m5"
- ],
+ "started_at": "2026-10-03T08:07:11+00:00",
+ "replace_own": [],
  "lines": {
   "bmw/3-series": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 139,
-    "source_records_new": 18,
-    "te_existing": 1647,
-    "te_new_GENERATION": 738,
-    "te_new_ENGINE": 7,
+    "raw_documents_seen": 194,
+    "source_records_new": 55,
+    "te_existing": 2392,
+    "te_new_GENERATION": 73,
     "configurations": 89,
     "configurations_research_only": 89,
     "issues_existing": 61
@@ -38,10 +35,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 117,
-    "source_records_new": 10,
-    "te_existing": 1639,
-    "te_new_GENERATION": 730,
-    "te_new_ENGINE": 7,
+    "te_existing": 2376,
     "configurations": 87,
     "configurations_linked": 19,
     "configurations_research_only": 68,
@@ -69,10 +63,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 97,
-    "source_records_new": 14,
-    "te_existing": 1139,
-    "te_new_GENERATION": 690,
-    "te_new_ENGINE": 7,
+    "te_existing": 1836,
     "configurations": 62,
     "configurations_research_only": 62,
     "issues_existing": 52
@@ -99,14 +90,11 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 75,
-    "source_records_new": 13,
-    "te_existing": 961,
-    "te_new_GENERATION": 593,
+    "te_existing": 1554,
     "configurations": 51,
     "configurations_research_only": 44,
     "configurations_linked": 7,
-    "issues_existing": 76,
-    "issues_updated": 2
+    "issues_existing": 76
    },
    "generations": [
     {
@@ -126,10 +114,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 51,
-    "source_records_new": 5,
-    "te_existing": 610,
-    "te_new_GENERATION": 205,
-    "te_new_ENGINE": 7,
+    "te_existing": 822,
     "configurations": 33,
     "configurations_research_only": 33,
     "issues_existing": 62
@@ -156,9 +141,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 34,
-    "source_records_new": 5,
-    "te_existing": 389,
-    "te_new_GENERATION": 101,
+    "te_existing": 490,
     "configurations": 16,
     "configurations_research_only": 16,
     "issues_existing": 42
@@ -176,10 +159,10 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 40,
-    "source_records_new": 10,
-    "te_existing": 352,
-    "te_new_GENERATION": 427,
+    "raw_documents_seen": 46,
+    "source_records_new": 6,
+    "te_existing": 779,
+    "te_new_GENERATION": 7,
     "configurations": 25,
     "configurations_research_only": 25,
     "issues_existing": 19
@@ -198,39 +181,27 @@
    "existing_vs_new": 0
   },
   "bmw/m5": {
-   "flag": "--replace-own",
+   "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "replaced_own_te": 336,
-    "replaced_own_issues": 34,
     "raw_documents_seen": 46,
-    "source_records_new": 9,
-    "te_new_GENERATION": 345,
-    "te_new_CONFIGURATION": 186,
+    "te_existing": 531,
     "configurations": 14,
     "configurations_research_only": 14,
-    "issues_new": 37
+    "issues_existing": 37
    },
    "generations": [
-    {
-     "code": "US2018+",
-     "action": "removed (created by an earlier load; no longer in staging; unreferenced)"
-    },
     {
      "code": "US2014-2016",
      "action": "unchanged"
     },
     {
      "code": "US2018-2023",
-     "action": "created",
-     "start_year": 2018,
-     "end_year": 2023
+     "action": "unchanged"
     },
     {
      "code": "US2025+",
-     "action": "created",
-     "start_year": 2025,
-     "end_year": null
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -241,10 +212,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 32,
-    "source_records_new": 5,
-    "te_existing": 182,
-    "te_new_ENGINE": 14,
-    "te_new_GENERATION": 125,
+    "te_existing": 321,
     "configurations": 11,
     "configurations_research_only": 11,
     "issues_existing": 9
@@ -263,10 +231,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 28,
-    "source_records_new": 3,
-    "te_existing": 219,
-    "te_new_GENERATION": 125,
-    "te_new_ENGINE": 14,
+    "te_existing": 358,
     "configurations": 13,
     "configurations_research_only": 13,
     "issues_existing": 8
@@ -288,5 +253,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-02T16:24:58+00:00"
+ "finished_at": "2026-10-03T08:08:21+00:00"
 }
