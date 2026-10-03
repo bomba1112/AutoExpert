@@ -1,6 +1,6 @@
 # Итоговый отчёт: база технических данных US (все марки Приложения A)
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py; отчёты по маркам — data_work/<марка>/REPORT.md.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py; отчёты по маркам — data_work/<марка>/REPORT.md.
 
 ## 1. Матрица покрытия
 
@@ -11,23 +11,23 @@
 | Марка | Статус | Последний коммит марки |
 |---|---|---|
 | Hyundai | загружена | 0ec3c41 data(us): Hyundai, Kia — table cells read correctly, earlier wrong values replaced |
-| Kia | загружена | 0ec3c41 data(us): Hyundai, Kia — table cells read correctly, earlier wrong values replaced |
-| Toyota | загружена (Camry — принятая ранее линейка) | 2550256 data(us): Toyota — owner's manual fluids and capacities, press specifications (Cor |
+| Kia | загружена | 8e6ce26 data(teoalida): Year-Make-Model, Car Models List — platform codes per generation ( |
+| Toyota | загружена (Camry — принятая ранее линейка) | 296722f data(teoalida): Year-Make-Model-Trim-Specs — BMW 3 Series, M3, Prius trims (second |
 | Mercedes-Benz | загружена | 788fd0d data(us): Mercedes-Benz — oil, fluids and maintenance gaps closed where sources al |
-| BMW | загружена | 40e3af4 data(us): BMW — owner's manual facts, press specifications, CarComplaints (second  |
-| Chevrolet | загружена | f9c8adf data(us): Chevrolet — owner's manual facts, press specifications, CarComplaints (s |
-| Ford | загружена | f070be0 data(us): Ford — owner's manual facts, press specifications, CarComplaints (second |
+| BMW | загружена | b628946 data(us): BMW — Condition Based Service maintenance from the US manual editions (s |
+| Chevrolet | загружена | f2c9e3b data(us): Chevrolet — maintenance from the official GM owner's manuals (stage B) |
+| Ford | загружена | 5174f4e data(us): Ford — Fusion maintenance from the factory owner's manuals (stage B) |
 | Lexus | загружена | db1fbdc data(us): Lexus — owner's manual facts, press specifications, CarComplaints (secon |
-| Honda | загружена | ea5a550 data(us): Honda — owner's manual facts, press specifications, CarComplaints (secon |
-| Nissan | загружена | 653c09b data(us): Nissan — owner's manual facts, press specifications, CarComplaints (seco |
-| Land Rover | загружена | bec9c2d data(us): Land Rover — owner's manual facts, press specifications, CarComplaints ( |
-| Infiniti | загружена до решения об остановке, оставлена как есть | f47df93 data(us): Infiniti — first load: base layer (EPA, vPIC, NHTSA, known issues), manu |
+| Honda | загружена | ac88437 data(us): Honda — Maintenance Minder and fixed items from the US owner's manuals ( |
+| Nissan | загружена | a1bbe2b data(us): Nissan — maintenance from the official US service guides and owner's man |
+| Land Rover | загружена | 93bc408 data(us): Land Rover — maintenance: no schedule on disk (gaps with evidence) |
+| Infiniti | загружена до решения об остановке, оставлена как есть | f014848 data(us): Infiniti — maintenance from the official US service guides and owner's m |
 | Cadillac | не загружена (решение владельца) | a72994d chore(us-batch): prepared extraction and staging for Cadillac, Jeep, Mitsubishi (n |
 | Jeep | не загружена (решение владельца) | 692e7a6 chore(us-batch): scripts and staging snapshot before the next load pass |
-| Audi | загружена | 73fdc49 data(us): Audi — first load: base layer (EPA, vPIC, NHTSA, known issues), manual a |
-| Volkswagen | загружена | e96b2ee data(us): Volkswagen — first load: base layer (EPA, vPIC, NHTSA, known issues), ma |
+| Audi | загружена | dda3a80 fix(us): Audi maintenance — "Except ..." applicability and "First X miles and ther |
+| Volkswagen | загружена | 1d8eadc data(us): Audi — maintenance cards and OCR of the US image editions (Q7, Q3, Q5);  |
 | Mitsubishi | не загружена (решение владельца) | 692e7a6 chore(us-batch): scripts and staging snapshot before the next load pass |
-| Tesla | загружена | 0ac8e0d data(us): Tesla — first load: base layer (EPA, vPIC, NHTSA, known issues), manual  |
+| Tesla | загружена | 4185ccc data(us): Tesla — service intervals from the North American owner's manuals (stage |
 
 ### Hyundai
 
@@ -131,54 +131,54 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 3 Series | F30 | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 3 Series | Seventh generation · US sedan | 2019–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| 5 Series | F10 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 5 Series | G30 | 2017–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| 3 Series | F30 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 3 Series | Seventh generation · US sedan | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+| 5 Series | F10 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 5 Series | G30 | 2017–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | 5 Series | US2024+ | 2024–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| 7 Series | US2014-2015 | 2014–2015 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 7 Series | US2016-2022 | 2016–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| 7 Series | US2014-2015 | 2014–2015 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 7 Series | US2016-2022 | 2016–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | 7 Series | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
 | X5 | F15 | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
 | X5 | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
 | X6 | US2014-2014 | 2014–2014 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| X6 | US2015-2019 | 2015–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
+| X6 | US2015-2019 | 2015–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
 | X6 | US2020+ | 2020–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 | X7 | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ◐ | ○ | ● | ● | ● |
-| M3 | US2015-2018 | 2015–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| M3 | US2021+ | 2021–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| M5 | US2014-2016 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| M5 | US2018-2023 | 2018–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| M3 | US2015-2018 | 2015–2018 | ● | ◐ | ● | ● | ● | ● | ◐ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| M3 | US2021+ | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+| M5 | US2014-2016 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| M5 | US2018-2023 | 2018–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | M5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ◐ | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
 | X5 M | US2015+ | 2015–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 | X6 M | US2014-2019 | 2014–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
 | X6 M | US2020+ | 2020–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 178, частично 79, нет 73, неприменимо 0.
+Итого ячеек: заполнено 193, частично 78, нет 59, неприменимо 0.
 
 ### Chevrolet
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Malibu | VIII | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Malibu | IX | 2016–2025 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Cruze | US2014-2015 | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Cruze | II | 2016–2019 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Equinox | 2010 redesign (US) | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Equinox | US2018-2024 | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Equinox | US2025+ | 2025–2026 | ◐ | ◐ | ● | ● | ● | ◐ | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| Trax | US2015-2022 | 2015–2022 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Trax | US2024+ | 2024–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Malibu | VIII | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Malibu | IX | 2016–2025 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Cruze | US2014-2015 | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Cruze | II | 2016–2019 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | 2010 redesign (US) | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | US2018-2024 | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Equinox | US2025+ | 2025–2026 | ◐ | ◐ | ● | ● | ● | ◐ | ● | ◐ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| Trax | US2015-2022 | 2015–2022 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Trax | US2024+ | 2024–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
 
-Итого ячеек: заполнено 53, частично 49, нет 33, неприменимо 0.
+Итого ячеек: заполнено 62, частично 49, нет 24, неприменимо 0.
 
 ### Ford
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Fusion | US2014-2020 | 2014–2020 | ◐ | ◐ | ● | ● | ○ | ● | ◐ | ● | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Fusion | US2014-2020 | 2014–2020 | ◐ | ◐ | ● | ● | ○ | ● | ◐ | ● | ● | ○ | ◐ | ○ | ● | ● | ● |
 
-Итого ячеек: заполнено 7, частично 4, нет 4, неприменимо 0.
+Итого ячеек: заполнено 8, частично 4, нет 3, неприменимо 0.
 
 ### Lexus
 
@@ -201,33 +201,33 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Accord | IX | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Accord | X | 2018–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Accord | US2023+ | 2023–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
-| Civic | IX Sedan | 2014–2015 | ● | ◐ | ● | ● | ○ | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Civic | 10th | 2016–2021 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Civic | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | IV | 2014–2016 | ● | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | RW | 2017–2022 | ● | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ● | ● | ● | ● |
+| Accord | IX | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Accord | X | 2018–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Accord | US2023+ | 2023–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ● | ● | ● | ● | ● |
+| Civic | IX Sedan | 2014–2015 | ● | ◐ | ● | ● | ○ | ◐ | ○ | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Civic | 10th | 2016–2021 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Civic | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | IV | 2014–2016 | ● | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | RW | 2017–2022 | ● | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 85, частично 33, нет 17, неприменимо 0.
+Итого ячеек: заполнено 94, частично 33, нет 8, неприменимо 0.
 
 ### Nissan
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Altima | L33 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Altima | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | B17 | 2014–2019 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | US2020-2025 | 2020–2025 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ○ | ● |
-| Rogue | T32 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Rogue | T33 | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Pathfinder | R52 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
-| Pathfinder | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
+| Altima | L33 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● | ● |
+| Altima | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | B17 | 2014–2019 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | US2020-2025 | 2020–2025 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ○ | ● |
+| Rogue | T32 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Rogue | T33 | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Pathfinder | R52 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● |
+| Pathfinder | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 89, частично 34, нет 12, неприменимо 0.
+Итого ячеек: заполнено 96, частично 36, нет 3, неприменимо 0.
 
 ### Land Rover
 
@@ -250,12 +250,12 @@ _Загружена до получения решения владельца о
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Q50 | V37 | 2014–2024 | ● | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ● | ● | ● | ● |
-| QX60 (+JX) | L50 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| QX60 (+JX) | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| FX / QX70 | US2014-2017 | 2014–2017 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
+| Q50 | V37 | 2014–2024 | ● | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ● | ● | ● | ● |
+| QX60 (+JX) | L50 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| QX60 (+JX) | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| FX / QX70 | US2014-2017 | 2014–2017 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 43, частично 13, нет 4, неприменимо 0.
+Итого ячеек: заполнено 47, частично 13, нет 0, неприменимо 0.
 
 ### Cadillac
 
@@ -269,42 +269,42 @@ _Загружена до получения решения владельца о
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| A3 | 8V Sedan | 2015–2020 | ◐ | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ○ | ● | ● | ● |
-| A3 | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| A4 | 8K | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A4 | 8W | 2017–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| A5 | 8T/8F | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A5 | US2018-2024 | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| A6 | 4G | 2014–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| A6 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| A6 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q3 | 8U | 2015–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q3 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q3 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q5 | 8R | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q5 | FY | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q7 | 4L | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q7 | 4M | 2017–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
+| A3 | 8V Sedan | 2015–2020 | ◐ | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ○ | ● | ● | ● |
+| A3 | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| A4 | 8K | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ◐ | ○ | ◐ | ◐ | ● | ● | ● |
+| A4 | 8W | 2017–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| A5 | 8T/8F | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● |
+| A5 | US2018-2024 | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● |
+| A5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| A6 | 4G | 2014–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| A6 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| A6 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q3 | 8U | 2015–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q3 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q3 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q5 | 8R | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q5 | FY | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q7 | 4L | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Q7 | 4M | 2017–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
 
-Итого ячеек: заполнено 117, частично 81, нет 72, неприменимо 0.
+Итого ячеек: заполнено 133, частично 83, нет 54, неприменимо 0.
 
 ### Volkswagen
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Jetta | VI | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Jetta | VII | 2019–2026 | ● | ◐ | ● | ● | ○ | ● | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Passat | NMS | 2014–2022 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | 5N | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | II-US-LWB | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Atlas | I-US-2018 | 2018–2026 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Arteon | I | 2019–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Touareg | 7P | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| Jetta | VI | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Jetta | VII | 2019–2026 | ● | ◐ | ● | ● | ○ | ● | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Passat | NMS | 2014–2022 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | 5N | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | II-US-LWB | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Atlas | I-US-2018 | 2018–2026 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Arteon | I | 2019–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Touareg | 7P | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 79, частично 39, нет 17, неприменимо 0.
+Итого ячеек: заполнено 88, частично 39, нет 8, неприменимо 0.
 
 ### Mitsubishi
 
@@ -315,11 +315,11 @@ _Загружена до получения решения владельца о
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Model 3 | I | 2017–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Model Y | I | 2020–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Model S | I | 2014–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Model X | I | 2016–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
+| Model Y | I | 2020–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Model S | I | 2014–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Model X | I | 2016–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
 
-Итого ячеек: заполнено 24, частично 12, нет 20, неприменимо 4.
+Итого ячеек: заполнено 24, частично 15, нет 17, неприменимо 4.
 
 ## 2. Строки по таблицам: до и после
 
@@ -329,35 +329,35 @@ _Загружена до получения решения владельца о
 | vehicle_models | 574 | 573 | 579 |
 | vehicle_generations | 702 | 700 | 787 |
 | vehicle_variants | 15592 | 15589 | 15589 |
-| technical_evidence | 273086 | 274110 | 358679 |
+| technical_evidence | 273086 | 274110 | 359922 |
 | known_issues | 2 | 14 | 3648 |
-| maintenance_schedule_items | None | 0 | 1346 |
-| source_records | 24539 | 24651 | 29761 |
-| raw_documents | 492 | 608 | 5752 |
-| knowledge_sources | 45 | 45 | 48 |
+| maintenance_schedule_items | None | 0 | 4598 |
+| source_records | 24539 | 24651 | 30096 |
+| raw_documents | 492 | 608 | 6109 |
+| knowledge_sources | 45 | 45 | 49 |
 
 По маркам (technical_evidence / known_issues / maintenance_schedule_items):
 
 | Марка | До пакета | Сейчас |
 |---|---|---|
 | Hyundai | 0 / 0 / 0 | 7194 / 381 / 407 |
-| Kia | 0 / 0 / 0 | 4585 / 265 / 639 |
-| Toyota | 1031 / 14 / 0 | 6322 / 227 / 0 |
+| Kia | 0 / 0 / 0 | 4592 / 265 / 639 |
+| Toyota | 1031 / 14 / 0 | 6717 / 227 / 0 |
 | Mercedes-Benz | 0 / 0 / 0 | 17046 / 436 / 300 |
-| BMW | 0 / 0 / 0 | 11459 / 432 / 0 |
-| Chevrolet | 0 / 0 / 0 | 3430 / 253 / 0 |
-| Ford | 0 / 0 / 0 | 799 / 54 / 0 |
+| BMW | 0 / 0 / 0 | 12256 / 432 / 36 |
+| Chevrolet | 0 / 0 / 0 | 3430 / 253 / 341 |
+| Ford | 0 / 0 / 0 | 799 / 54 / 96 |
 | Lexus | 0 / 0 / 0 | 4009 / 95 / 0 |
-| Honda | 0 / 0 / 0 | 5896 / 212 / 0 |
-| Nissan | 0 / 0 / 0 | 4154 / 211 / 0 |
+| Honda | 0 / 0 / 0 | 5896 / 212 / 588 |
+| Nissan | 0 / 0 / 0 | 4154 / 211 / 748 |
 | Land Rover | 0 / 0 / 0 | 3489 / 188 / 0 |
-| Infiniti | 0 / 0 / 0 | 1940 / 74 / 0 |
+| Infiniti | 0 / 0 / 0 | 1940 / 74 / 447 |
 | Cadillac | 0 / 0 / 0 | 0 / 0 / 0 |
 | Jeep | 0 / 0 / 0 | 0 / 0 / 0 |
-| Audi | 0 / 0 / 0 | 8143 / 384 / 0 |
-| Volkswagen | 0 / 0 / 0 | 5566 / 304 / 0 |
+| Audi | 0 / 0 / 0 | 8161 / 384 / 690 |
+| Volkswagen | 0 / 0 / 0 | 5592 / 304 / 274 |
 | Mitsubishi | 0 / 0 / 0 | 0 / 0 / 0 |
-| Tesla | 0 / 0 / 0 | 1568 / 132 / 0 |
+| Tesla | 0 / 0 / 0 | 1568 / 132 / 32 |
 
 ## 3. Журнал пробелов
 
@@ -431,24 +431,24 @@ _Загружена до получения решения владельца о
 
 ### BMW
 
-Записей в журнале пробелов: 850 (по полю и причине):
+Записей в журнале пробелов: 919 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 401 | bmw-3-series-us-2014-2.0l-4cyl-turbo-diesel-a-s8-awd; bmw-3-series-us-2014-2.0l-4cyl-turbo-diesel-a-s8-rwd; bmw-3-series-us-2014-2.0l-4cyl-turbo-ice-a-s8-awd |
 | width_mm | one document gives N values: ['N', 'N'] | 59 | bmw/3-series MY2017 (press-bmwgroup-3-series-2017-69e983f2); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-9ede91b6) |
+| octane_aki | one document gives N values: ['N', 'N'] | 34 | bmw/3-series MY2014 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2015 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2016 (mcum-3-series-4-door-2013-2019) |
 | transmission_description | one document gives N values: ['"automatic transmission"', '"automatic"'] | 21 | bmw/3-series MY2017 (press-bmwgroup-3-series-2017-69e983f2); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-9ede91b6) |
-| octane_aki | one document gives N values: ['N', 'N'] | 16 | bmw/5-series MY2014 (mcum-5-series-4-door-2010-2017); bmw/5-series MY2015 (mcum-5-series-4-door-2010-2017); bmw/5-series MY2016 (mcum-5-series-4-door-2010-2017) |
+| engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| coolant | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| transmission_fluid | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| brake_fluid | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
 | transmission_description | one document gives N values: ['"NHPN"', '"automatic transmission N"'] | 15 | bmw/3-series MY2014 (press-bmwgroup-3-series-2014-e1049003); bmw/3-series MY2014 (press-bmwgroup-3-series-2014-eec89c10); bmw/3-series MY2015 (press-bmwgroup-3-series-2015-0b4f3ad4) |
-| engine_oil_capacity_l | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| engine_oil_viscosity | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| coolant | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| transmission_fluid | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| brake_fluid | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
 
 ### Chevrolet
 
-Записей в журнале пробелов: 308 (по полю и причине):
+Записей в журнале пробелов: 329 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -456,16 +456,16 @@ _Загружена до получения решения владельца о
 | engine_oil_oem_approval | engine not stated; EPA lists several engines | 30 | chevrolet/malibu MY2022 (official-208c55b3d0b7); chevrolet/malibu MY2021 (official-6582638ee059); chevrolet/malibu MY2014 (official-7461695d71a7) |
 | engine_oil_viscosity | engine not stated; EPA lists several engines | 21 | chevrolet/malibu MY2016 (official-f395cde9a52c); chevrolet/cruze MY2014 (official-1256553bcf46); chevrolet/cruze MY2019 (official-4d52e1c95054) |
 | fuel_tank_l | one document gives N values: ['N', 'N'] | 18 | chevrolet/malibu MY2019 (official-881052775fa3); chevrolet/malibu MY2016 (official-ee9f43223777); chevrolet/malibu MY2018 (official-f212af069990) |
+| maintenance:engine_air_filter | p.N: replaced when the Engine Air Filter Life System indicates; no fixed interval printed | 10 | chevrolet/malibu MY2023 (chevrolet-malibu-2023-owner-manual); chevrolet/malibu MY2024 (chevrolet-malibu-2024-owner-manual); chevrolet/malibu MY2025 (chevrolet-malibu-2025-owner-manual) |
 | transmission_fluid | not found unambiguously in the available US owner's manuals | 9 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
 | coolant | not found unambiguously in the available US owner's manuals | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
 | power_hp | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
 | torque_lb_ft | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
 | tires | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
-| front_suspension | no US press specification page for these years | 8 | chevrolet/malibu VIII; chevrolet/malibu IX; chevrolet/cruze US2014-2015 |
 
 ### Ford
 
-Записей в журнале пробелов: 135 (по полю и причине):
+Записей в журнале пробелов: 192 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -473,12 +473,12 @@ _Загружена до получения решения владельца о
 | fuel_tank_l | value N outside the validator range; not used | 19 | ford/fusion carmans-2014-ford-fusion-hybrid p.152; ford/fusion carmans-2014-ford-fusion-hybrid p.220; ford/fusion carmans-2014-ford-fusion-hybrid p.220 |
 | engine_oil_specification | engine not stated; EPA lists several engines | 19 | ford/fusion MY2014 (carmans-2014-ford-fusion); ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid); ford/fusion MY2015 (carmans-2015-ford-fusion) |
 | engine_oil_viscosity | engine not stated; EPA lists several engines | 12 | ford/fusion MY2016 (carmans-2016-ford-fusion); ford/fusion MY2016 (carmans-2016-ford-fusion-hybrid); ford/fusion MY2017 (carmans-2017-ford-fusion) |
+| maintenance:cabin_air_filter | p.N 'Operating in dusty or sandy conditions (such as unpaved or dusty roads)': 'Replace cabin air filter.' has | 8 | ford/fusion MY2014 (carmans-2014-ford-fusion-maintenance); ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid-maintenance); ford/fusion MY2015 (carmans-2015-ford-fusion-maintenance) |
+| maintenance:engine_air_filter | p.N 'Operating in dusty or sandy conditions (such as unpaved or dusty roads)': 'Replace engine air filter.' ha | 8 | ford/fusion MY2014 (carmans-2014-ford-fusion-maintenance); ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid-maintenance); ford/fusion MY2015 (carmans-2015-ford-fusion-maintenance) |
 | fuel_tank_l | one document gives N values: ['N', 'N'] | 7 | ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid); ford/fusion MY2015 (carmans-2015-ford-fusion-hybrid); ford/fusion MY2016 (carmans-2016-ford-fusion-hybrid) |
+| maintenance:cabin_air_filter | p.N 'Extensive idling or low-speed driving for long distances, as in heavy commercial use (such as delivery, t | 7 | ford/fusion MY2014 (carmans-2014-ford-fusion-maintenance); ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid-maintenance); ford/fusion MY2015 (carmans-2015-ford-fusion-maintenance) |
+| maintenance:engine_air_filter | p.N 'Extensive idling or low-speed driving for long distances, as in heavy commercial use (such as delivery, t | 7 | ford/fusion MY2014 (carmans-2014-ford-fusion-maintenance); ford/fusion MY2014 (carmans-2014-ford-fusion-hybrid-maintenance); ford/fusion MY2015 (carmans-2015-ford-fusion-maintenance) |
 | coolant_capacity_l | value N outside the validator range; not used | 6 | ford/fusion carmans-2014-ford-fusion-hybrid p.301; ford/fusion carmans-2015-ford-fusion-hybrid p.320; ford/fusion carmans-2016-ford-fusion-hybrid p.321 |
-| coolant_capacity_l | engine not stated; EPA lists several engines | 6 | ford/fusion MY2015 (carmans-2015-ford-fusion-hybrid); ford/fusion MY2016 (carmans-2016-ford-fusion-hybrid); ford/fusion MY2017 (carmans-2017-ford-fusion-hybrid) |
-| transmission_fluid_capacity_l | engine not stated; EPA lists several engines | 4 | ford/fusion MY2016 (carmans-2016-ford-fusion-hybrid); ford/fusion MY2017 (carmans-2017-ford-fusion-hybrid); ford/fusion MY2018 (carmans-2018-ford-fusion-hybrid) |
-| engine_oil_capacity_l | engine not stated; EPA lists several engines | 3 | ford/fusion MY2017 (carmans-2017-ford-fusion-hybrid); ford/fusion MY2018 (carmans-2018-ford-fusion-hybrid); ford/fusion MY2019 (carmans-2019-ford-fusion-hybrid) |
-| engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 2 | ford/fusion MY2015 (carmans-2015-ford-fusion-hybrid); ford/fusion MY2016 (carmans-2016-ford-fusion-hybrid) |
 
 ### Lexus
 
@@ -499,7 +499,7 @@ _Загружена до получения решения владельца о
 
 ### Honda
 
-Записей в журнале пробелов: 891 (по полю и причине):
+Записей в журнале пробелов: 896 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -516,7 +516,7 @@ _Загружена до получения решения владельца о
 
 ### Nissan
 
-Записей в журнале пробелов: 412 (по полю и причине):
+Записей в журнале пробелов: 464 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -527,9 +527,9 @@ _Загружена до получения решения владельца о
 | engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 19 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
 | engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 17 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2016 (official-d4f834985984) |
 | octane_aki | one document gives N values: ['N', 'N'] | 15 | nissan/sentra MY2017 (carmans-2017-nissan-sentra); nissan/sentra MY2018 (carmans-2018-nissan-sentra); nissan/sentra MY2019 (carmans-2019-nissan-sentra) |
+| maintenance:schedule | the owner's manual prints no maintenance schedule; it refers to the separate "Service and Maintenance Guide" | 14 | nissan/altima MY2014 (official-338af110aa8d); nissan/altima MY2015 (official-003558d62f6d); nissan/altima MY2016 (official-d4f834985984) |
 | engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N'] | 12 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/sentra MY2026 (official-511ec26d6b9d) |
 | engine_oil_capacity_drain_refill_l | one document gives N values: ['N', 'N'] | 11 | nissan/altima MY2023 (carmans-2023-nissan-altima); nissan/altima MY2024 (official-02f7c81d0bf6); nissan/altima MY2026 (official-531628333f60) |
-| engine_oil_capacity_l | one document gives N values: ['N', 'N'] | 10 | nissan/sentra MY2016 (carmans-2016-nissan-sentra); nissan/sentra MY2015 (official-56814c430d7c); nissan/sentra MY2016 (official-b930b0e01a9b) |
 
 ### Land Rover
 
@@ -550,46 +550,46 @@ _Загружена до получения решения владельца о
 
 ### Infiniti
 
-Записей в журнале пробелов: 194 (по полю и причине):
+Записей в журнале пробелов: 223 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 81 | infiniti-q50-us-2014-3.5l-6cyl-hev-a-s7-awd; infiniti-q50-us-2014-3.5l-6cyl-hev-a-s7-rwd; infiniti-q50-us-2014-3.7l-6cyl-ice-a-s7-awd |
 | octane_aki | one document gives N values: ['N', 'N'] | 23 | infiniti/q50 MY2017 (official-6c4f53e95a3b); infiniti/q50 MY2016 (official-8326bed2fcdc); infiniti/q50 MY2018 (official-859f6f6c908a) |
 | fuel_tank_l | value N outside the validator range; not used | 15 | infiniti/qx60 official-0631da7f7255 p.182; infiniti/qx60 official-1d31600339bc p.115; infiniti/qx60 official-273175b7459f p.118 |
+| maintenance:schedule | the owner's manual prints no maintenance schedule; it refers to the separate "Service and Maintenance Guide" | 10 | infiniti/q50 MY2014 (official-b9507bd9e1ec); infiniti/q50 MY2014 (official-a07a1fda2f02); infiniti/q50 MY2016 (official-d2af3b4d6870) |
+| maintenance:suspension | 'Axle & suspension parts' (normal) listed at [N, N, N, N, N, N, N] miles: not a regular interval; not converte | 10 | infiniti/q50 MY2014 (official-da4079961577); infiniti/q50 MY2014 (official-42ba75439b84); infiniti/q50 MY2015 (official-4bcd34582bda) |
 | octane_aki | one document gives N values: ['N', 'N', 'N'] | 8 | infiniti/q50 MY2020 (official-55b3819856e8); infiniti/q50 MY2024 (official-5893c25aeb89); infiniti/q50 MY2017 (official-7ca479957a94) |
 | octane_ron | one document gives N values: ['N', 'N', 'N'] | 7 | infiniti/q50 MY2020 (official-55b3819856e8); infiniti/q50 MY2024 (official-5893c25aeb89); infiniti/q50 MY2018 (official-7ed9946bd145) |
 | engine_oil_capacity_l | engine not stated; EPA lists several engines | 7 | infiniti/q50 MY2018 (official-7ed9946bd145); infiniti/q50 MY2018 (official-859f6f6c908a); infiniti/q50 MY2019 (official-b0b04e7a95d1) |
 | engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 7 | infiniti/q50 MY2018 (official-859f6f6c908a); infiniti/qx60 MY2016 (official-1d31600339bc); infiniti/qx60 MY2015 (official-273175b7459f) |
 | curb_weight_kg | one document gives N values: ['N', 'N', 'N'] | 7 | infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16); infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16); infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16) |
-| engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N', 'N', 'N'] | 4 | infiniti/q50 MY2024 (official-5893c25aeb89); infiniti/q50 MY2022 (official-849f6a8b0c88); infiniti/q50 MY2021 (official-dfddd4dab604) |
-| engine_oil_viscosity | engine not stated; EPA lists several engines | 4 | infiniti/q50 MY2017 (official-7ca479957a94); infiniti/q50 MY2016 (official-8326bed2fcdc); infiniti/q50 MY2016 (official-d2af3b4d6870) |
 
 ### Audi
 
-Записей в журнале пробелов: 646 (по полю и причине):
+Записей в журнале пробелов: 710 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 260 | audi-a3-us-2015-1.8l-4cyl-turbo-ice-a-am-s6-fwd; audi-a3-us-2015-2.0l-4cyl-turbo-diesel-a-am-s6-fwd; audi-a3-us-2015-2.0l-4cyl-turbo-ice-a-am-s6-awd |
 | wheel_size_in | one document gives N values: ['N', 'N'] | 22 | audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce); audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce); audi/a3 MY2026 (press-audiusa-a3-2026-2a9484c7) |
 | wheelbase_mm | one document gives N values: ['N', 'N'] | 18 | audi/a3 MY2015 (press-audiusa-a3-2015-cacf8499); audi/a3 MY2022 (press-audiusa-a3-2022-ae51d2b9); audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce) |
-| engine_oil_capacity_l | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| engine_oil_viscosity | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| coolant | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| transmission_fluid | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| brake_fluid | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| ground_clearance | not found unambiguously in the available US press specification pages | 13 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| front_brakes | not found unambiguously in the available US press specification pages | 10 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
+| maintenance:Standard Maintenance | the card lists the service items but prints no interval for this service (grid only) | 18 | audi/a3 MY2015 (audi-maintenance-card-2015); audi/a3 MY2016 (audi-maintenance-card-2016); audi/a4 MY2014 (audi-maintenance-card-2014) |
+| maintenance:Major Maintenance | the card lists the service items but prints no interval for this service (grid only) | 18 | audi/a3 MY2015 (audi-maintenance-card-2015); audi/a3 MY2016 (audi-maintenance-card-2016); audi/a4 MY2014 (audi-maintenance-card-2014) |
+| engine_oil_capacity_l | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| engine_oil_viscosity | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| coolant | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| transmission_fluid | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| brake_fluid | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
 
 ### Volkswagen
 
-Записей в журнале пробелов: 730 (по полю и причине):
+Записей в журнале пробелов: 756 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 163 | volkswagen-jetta-us-2014-1.4l-4cyl-turbo-hev-a-am-s7-fwd; volkswagen-jetta-us-2014-1.8l-4cyl-turbo-ice-a-s6-fwd; volkswagen-jetta-us-2014-1.8l-4cyl-turbo-ice-m-5-spd-fwd |
-| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 55 | volkswagen/jetta carmans-2019-volkswagen-jetta p.249; volkswagen/jetta carmans-2019-volkswagen-jetta p.250; volkswagen/jetta carmans-2019-volkswagen-jetta p.252 |
+| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 44 | volkswagen/jetta carmans-2019-volkswagen-jetta p.249; volkswagen/jetta carmans-2019-volkswagen-jetta p.250; volkswagen/jetta carmans-2019-volkswagen-jetta p.252 |
 | octane_aki | one document gives N values: ['N', 'N', 'N'] | 42 | volkswagen/jetta MY2014 (mcum-jetta-4-door-2011-2018); volkswagen/jetta MY2015 (mcum-jetta-4-door-2011-2018); volkswagen/jetta MY2016 (mcum-jetta-4-door-2011-2018) |
 | fuel_tank_l | value N outside the validator range; not used | 36 | volkswagen/jetta carmans-2022-volkswagen-jetta p.342; volkswagen/jetta carmans-2023-volkswagen-jetta-2 p.342; volkswagen/jetta mcum-jetta-4-door-2011-2018 p.151 |
 | curb_weight_kg | one document gives N values: ['N', 'N'] | 31 | volkswagen/jetta MY2014 (press-vw-jetta-2014-0fb78ecb); volkswagen/jetta MY2014 (press-vw-jetta-2014-0fb78ecb); volkswagen/jetta MY2014 (press-vw-jetta-2014-2842b69f) |
@@ -601,11 +601,12 @@ _Загружена до получения решения владельца о
 
 ### Tesla
 
-Записей в журнале пробелов: 112 (по полю и причине):
+Записей в журнале пробелов: 127 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 60 | tesla-model-3-us-2017-ev-bev-a-a1-rwd; tesla-model-3-us-2018-ev-bev-a-a1-awd; tesla-model-3-us-2018-ev-bev-a-a1-rwd |
+| maintenance:battery_coolant | no replacement interval: 'does not need to be replaced for the life of your vehicle under most circumstances' | 11 | tesla/model-y MY2020 (carmans-2020-tesla-model-y-maintenance); tesla/model-y MY2021 (carmans-2021-tesla-model-y-maintenance); tesla/model-y MY2022 (carmans-2022-tesla-model-y-maintenance) |
 | engine_oil_capacity_l | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | engine_oil_viscosity | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | coolant | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
@@ -614,7 +615,6 @@ _Загружена до получения решения владельца о
 | fuel_tank_l | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | tires | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | front_suspension | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| rear_suspension | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 
 Закрытые и заблокированные источники (manifest):
 
@@ -669,10 +669,10 @@ _Загружена до получения решения владельца о
 
 ### BMW
 
-Конфликтов: 227. По решениям:
+Конфликтов: 265. По решениям:
 
 - official value is the main value; the vPIC Canadian value stays a SECO: 226
-- sources of the same rank disagree; field not shown: 1
+- sources of the same rank disagree; field not shown: 39
 
 ### Chevrolet
 
@@ -748,11 +748,11 @@ _Загружена до получения решения владельца о
 
 ### Kia
 
-Проверено 182 записей (10% каждой линейки), расхождений 0.
+Проверено 181 записей (10% каждой линейки), расхождений 0.
 
 ### Toyota
 
-Проверено 224 записей (10% каждой линейки), расхождений 0.
+Проверено 263 записей (10% каждой линейки), расхождений 0.
 
 ### Mercedes-Benz
 
@@ -760,7 +760,7 @@ _Загружена до получения решения владельца о
 
 ### BMW
 
-Проверено 559 записей (10% каждой линейки), расхождений 0.
+Проверено 638 записей (10% каждой линейки), расхождений 0.
 
 ### Chevrolet
 
@@ -792,11 +792,11 @@ _Загружена до получения решения владельца о
 
 ### Audi
 
-Проверено 294 записей (10% каждой линейки), расхождений 0.
+Проверено 295 записей (10% каждой линейки), расхождений 0.
 
 ### Volkswagen
 
-Проверено 228 записей (10% каждой линейки), расхождений 0.
+Проверено 231 записей (10% каждой линейки), расхождений 0.
 
 ### Tesla
 
@@ -844,29 +844,26 @@ _Загружена до получения решения владельца о
 
 Линейка и модельные годы без US-руководства в собранных источниках:
 
-- 3 Series: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- 5 Series: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026
-- 7 Series: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026
-- X5: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- X6: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026
-- X7: 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- M3: 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024, 2025, 2026
-- M5: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026
+- 3 Series: 2020, 2021, 2022, 2024, 2025, 2026
+- 5 Series: 2018, 2019, 2020, 2021, 2026
+- 7 Series: 2026
+- X5: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025, 2026
+- X6: 2014, 2026
+- X7: 2026
+- M3: 2026
 - X5 M: 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026
 - X6 M: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- Jetta: 2015, 2016, 2017, 2018, 2024, 2025, 2026
-- Passat: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
-- Tiguan: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2025, 2026
-- Atlas: 2019, 2020, 2022, 2023, 2025, 2026
-- Arteon: 2019, 2020, 2021, 2022, 2023, 2024
+- Jetta: 2026
+- Tiguan: 2017, 2018, 2019, 2020, 2021, 2022, 2026
+- Atlas: 2026
 - Touareg: 2014, 2015, 2016, 2017
 - A3: 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023, 2024, 2025, 2026
 - A4: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
-- A5: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2026
+- A5: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
 - A6: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- Q3: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- Q5: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
-- Q7: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+- Q3: 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026
+- Q5: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026
+- Q7: 2014, 2015, 2026
 
 ## 10. Vehicle Databases
 
@@ -874,6 +871,26 @@ VDB = нет; запросов к VDB: 0.
 
 ## 11. Git-коммиты
 
+- dda3a80 fix(us): Audi maintenance — "Except ..." applicability and "First X miles and thereafter every Y"
+- daa8f76 feat(app): US technical facts in the configuration card behind show_us_tech_facts (stage C)
+- 93bc408 data(us): Land Rover — maintenance: no schedule on disk (gaps with evidence)
+- ac88437 data(us): Honda — Maintenance Minder and fixed items from the US owner's manuals (stage B)
+- f014848 data(us): Infiniti — maintenance from the official US service guides and owner's manuals (stage B)
+- a1bbe2b data(us): Nissan — maintenance from the official US service guides and owner's manuals (stage B)
+- 4185ccc data(us): Tesla — service intervals from the North American owner's manuals (stage B)
+- 5174f4e data(us): Ford — Fusion maintenance from the factory owner's manuals (stage B)
+- f2c9e3b data(us): Chevrolet — maintenance from the official GM owner's manuals (stage B)
+- b628946 data(us): BMW — Condition Based Service maintenance from the US manual editions (stage B)
+- 1d8eadc data(us): Audi — maintenance cards and OCR of the US image editions (Q7, Q3, Q5); VW card citations
+- 6af9634 data(us): Volkswagen — maintenance schedule from the US maintenance cards (stage B)
+- a84ca2b data(us): VW, Audi, BMW — US generation editions (mycarusermanual): top-up, oil consumption, tank; owner's amendment
+- 4830872 data(teoalida): other markets to the library; Tuning compared only (no database writes)
+- 8e6ce26 data(teoalida): Year-Make-Model, Car Models List — platform codes per generation (secondary)
+- 4539cd8 data(teoalida): TireSize — checked, not written (agreement 79% < 90%)
+- 296722f data(teoalida): Year-Make-Model-Trim-Specs — BMW 3 Series, M3, Prius trims (secondary)
+- 5d44626 data(teoalida): Ravenol — registry, manifest, BMW engine and transmission codes (secondary)
+- 653c64d chore(next-stage): step 0 — prompt, baseline tests, backup, progress
+- ddeb93f docs(us): final report for the US tech database batch (all makes of Appendix A)
 - a72994d chore(us-batch): prepared extraction and staging for Cadillac, Jeep, Mitsubishi (not loaded); mycarusermanual crawl report
 - 788fd0d data(us): Mercedes-Benz — oil, fluids and maintenance gaps closed where sources allow
 - 0ac8e0d data(us): Tesla — first load: base layer (EPA, vPIC, NHTSA, known issues), manual and press facts, CarComplaints
@@ -912,17 +929,26 @@ VDB = нет; запросов к VDB: 0.
 
 ## 12. Библиотека других рынков
 
-Материалов в библиотеке (data_work/_library/manifest.csv): 10.
+Материалов в библиотеке (data_work/_library/manifest.csv): 22.
 
 | Рынок | Марка | Материалов |
 |---|---|---|
-| CA | kia | 1 |
+| CN | BMW | 1 |
+| CN | 一汽丰田;华晨宝马;宝马(进口) | 1 |
+| ES | BMW;Toyota | 1 |
+| EU | BMW | 1 |
+| EU | BMW;Tesla;Toyota | 1 |
 | EU | audi | 2 |
-| EU | mercedes | 2 |
-| EU | mitsubishi | 1 |
-| EU | vw | 2 |
+| EU | mercedes | 3 |
+| EU | vw | 3 |
+| GENERAL | bmw | 1 |
+| GENERAL | ford | 1 |
 | GENERAL | honda | 1 |
 | GENERAL | hyundai | 1 |
+| GENERAL | tesla | 1 |
+| IN | BMW;Chevrolet;Tata | 1 |
+| JP | BMW;TESLA;TOYOTA | 2 |
+| UK | BMW;Tesla;Toyota | 1 |
 
 Скачанные руководства не US-издания (не использованы, помечены other_market): 54.
 
@@ -1192,17 +1218,17 @@ VDB = нет; запросов к VDB: 0.
 | Kia | 18 | 0 | 639 |
 | Toyota | 9 | 1 | 0 |
 | Mercedes-Benz | 0 | 0 | 300 |
-| BMW | 2 | 0 | 0 |
-| Chevrolet | 19 | 2 | 0 |
-| Ford | 4 | 0 | 0 |
+| BMW | 2 | 0 | 36 |
+| Chevrolet | 19 | 2 | 341 |
+| Ford | 4 | 0 | 96 |
 | Lexus | 3 | 1 | 0 |
-| Honda | 10 | 2 | 0 |
-| Nissan | 21 | 0 | 0 |
+| Honda | 10 | 2 | 588 |
+| Nissan | 21 | 0 | 748 |
 | Land Rover | 0 | 0 | 0 |
-| Infiniti | 2 | 0 | 0 |
-| Audi | 24 | 1 | 0 |
-| Volkswagen | 18 | 0 | 0 |
-| Tesla | 0 | 0 | 0 |
+| Infiniti | 2 | 0 | 447 |
+| Audi | 24 | 1 | 690 |
+| Volkswagen | 18 | 0 | 274 |
+| Tesla | 0 | 0 | 32 |
 
 ## Поколения: свидетельства прессы
 

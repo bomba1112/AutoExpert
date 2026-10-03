@@ -1,6 +1,6 @@
 # Audi — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -8,53 +8,57 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| A3 | 8V Sedan | 2015–2020 | ◐ | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ○ | ● | ● | ● |
-| A3 | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| A4 | 8K | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A4 | 8W | 2017–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| A5 | 8T/8F | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A5 | US2018-2024 | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● |
-| A5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| A6 | 4G | 2014–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| A6 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| A6 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q3 | 8U | 2015–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q3 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q3 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q5 | 8R | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q5 | FY | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Q7 | 4L | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Q7 | 4M | 2017–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
+| A3 | 8V Sedan | 2015–2020 | ◐ | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ○ | ● | ● | ● |
+| A3 | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| A4 | 8K | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ◐ | ○ | ◐ | ◐ | ● | ● | ● |
+| A4 | 8W | 2017–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| A5 | 8T/8F | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● |
+| A5 | US2018-2024 | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● |
+| A5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| A6 | 4G | 2014–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| A6 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| A6 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q3 | 8U | 2015–2018 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q3 | US2019-2025 | 2019–2025 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q3 | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q5 | 8R | 2014–2017 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q5 | FY | 2018–2024 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Q5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Q7 | 4L | 2014–2015 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Q7 | 4M | 2017–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
 
-Итого ячеек: заполнено 117, частично 81, нет 72, неприменимо 0.
+Итого ячеек: заполнено 133, частично 83, нет 54, неприменимо 0.
 
 ## 2. Строки до и после
 
 | Таблица | До пакета | После |
 |---|---|---|
-| technical_evidence | 0 | 8143 |
+| technical_evidence | 0 | 8161 |
 | known_issues | 0 | 384 |
-| maintenance_schedule_items | 0 | 0 |
+| maintenance_schedule_items | 0 | 690 |
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 646 (по полю и причине):
+Записей в журнале пробелов: 710 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 260 | audi-a3-us-2015-1.8l-4cyl-turbo-ice-a-am-s6-fwd; audi-a3-us-2015-2.0l-4cyl-turbo-diesel-a-am-s6-fwd; audi-a3-us-2015-2.0l-4cyl-turbo-ice-a-am-s6-awd |
 | wheel_size_in | one document gives N values: ['N', 'N'] | 22 | audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce); audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce); audi/a3 MY2026 (press-audiusa-a3-2026-2a9484c7) |
 | wheelbase_mm | one document gives N values: ['N', 'N'] | 18 | audi/a3 MY2015 (press-audiusa-a3-2015-cacf8499); audi/a3 MY2022 (press-audiusa-a3-2022-ae51d2b9); audi/a3 MY2025 (press-audiusa-a3-2025-f4ef9cce) |
-| engine_oil_capacity_l | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| engine_oil_viscosity | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| coolant | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| transmission_fluid | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
-| brake_fluid | no US owner's manual for these years | 17 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| maintenance:Standard Maintenance | the card lists the service items but prints no interval for this service (grid only) | 18 | audi/a3 MY2015 (audi-maintenance-card-2015); audi/a3 MY2016 (audi-maintenance-card-2016); audi/a4 MY2014 (audi-maintenance-card-2014) |
+| maintenance:Major Maintenance | the card lists the service items but prints no interval for this service (grid only) | 18 | audi/a3 MY2015 (audi-maintenance-card-2015); audi/a3 MY2016 (audi-maintenance-card-2016); audi/a4 MY2014 (audi-maintenance-card-2014) |
+| engine_oil_capacity_l | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| engine_oil_viscosity | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| coolant | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| transmission_fluid | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| brake_fluid | no US owner's manual for these years | 14 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
 | ground_clearance | not found unambiguously in the available US press specification pages | 13 | audi/a3 8V Sedan; audi/a3 US2022+; audi/a4 8K |
+| engine_oil_oem_approval | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке и на сайт про | 12 | audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.75); audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.89); audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.90) |
+| engine_oil_capacity_l | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке и на сайт про | 12 | audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.75); audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.89); audi/q3 MY2020-2020 (mcum-q3-suv-2020 p.90) |
 | front_brakes | not found unambiguously in the available US press specification pages | 10 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
 | wheel_size_in | one document gives N values: ['N', 'N', 'N'] | 10 | audi/a4 MY2017 (press-audiusa-a4-2017-267ca685); audi/a6 MY2026 (press-audiusa-a6-2026-2db7b32a); audi/a6 MY2026 (press-audiusa-a6-2026-9e289d44) |
-| fuel_tank_l | no US owner's manual for these years | 9 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
+| fuel_tank_l | no US owner's manual for these years | 8 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
 | front_suspension | not found unambiguously in the available US press specification pages | 8 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
 | rear_suspension | not found unambiguously in the available US press specification pages | 8 | audi/a3 8V Sedan; audi/a4 8K; audi/a4 8W |
 | power_hp | engine not stated; EPA lists several engines | 8 | audi/a4 MY2014 (press-audiusa-a4-2014-e67acc62); audi/a4 MY2015 (press-audiusa-a4-2015-3933e851); audi/a5 MY2015 (press-audiusa-a5-2015-b8d49195) |
@@ -81,6 +85,10 @@
 | steering | no US press specification page for these years | 5 | audi/a6 4G; audi/q3 8U; audi/q5 8R |
 | ground_clearance | no US press specification page for these years | 5 | audi/a6 4G; audi/q3 8U; audi/q5 8R |
 | cargo_l | no US press specification page for these years | 5 | audi/a6 4G; audi/q3 8U; audi/q5 8R |
+| engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 4 | audi/a5 US2025+; audi/q3 US2019-2025; audi/q5 FY |
+| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 4 | audi/a5 US2025+; audi/q3 US2019-2025; audi/q5 FY |
+| coolant | not found unambiguously in the available US owner's manuals | 4 | audi/a5 US2025+; audi/q3 US2019-2025; audi/q5 FY |
+| transmission_fluid | not found unambiguously in the available US owner's manuals | 4 | audi/a5 US2025+; audi/q3 US2019-2025; audi/q5 FY |
 | wheelbase_mm | one document gives N values: ['N', 'N', 'N'] | 4 | audi/a6 MY2020 (press-audiusa-a6-2020-5e62f4f5); audi/a6 MY2021 (press-audiusa-a6-2021-aa3bc5cb); audi/a6 MY2025 (press-audiusa-a6-2025-6ae7417a) |
 | rear_brakes | one document gives N values: ['"Floating caliper with integrated parking brake"', '"single-piston N\\" (Nmm) v | 4 | audi/a6 MY2026 (press-audiusa-a6-2026-77b198eb); audi/a6 MY2026 (press-audiusa-a6-2026-77b198eb); audi/q7 MY2026 (press-audiusa-q7-2026-5d8fcdf9) |
 | bore_stroke_in | engine not stated; EPA lists several engines | 3 | audi/a4 MY2014 (press-audiusa-a4-2014-e67acc62); audi/a4 MY2015 (press-audiusa-a4-2015-3933e851); audi/a5 MY2018 (press-audiusa-a5-2018-923eb4f3) |
@@ -88,11 +96,14 @@
 | curb_weight_kg | one document gives N values: ['N', 'N'] | 3 | audi/a4 MY2017 (press-audiusa-a4-2017-267ca685); audi/a5 MY2018 (press-audiusa-a5-2018-74063df5); audi/q7 MY2020 (press-audiusa-q7-2020-bad8d113) |
 | tires | not found unambiguously in the available US press specification pages | 3 | audi/a4 8K; audi/a5 8T/8F; audi/a5 US2018-2024 |
 | cargo_l | not found unambiguously in the available US press specification pages | 3 | audi/a6 US2019-2025; audi/q3 US2019-2025; audi/q3 US2026+ |
+| brake_fluid | not found unambiguously in the available US owner's manuals | 3 | audi/q3 US2019-2025; audi/q5 FY; audi/q7 4M |
 | cargo_l | one document gives N values: ['N', 'N'] | 2 | audi/a3 MY2015 (press-audiusa-a3-2015-cacf8499); audi/a3 MY2015 (press-audiusa-a3-2015-cacf8499) |
 | steering | not found unambiguously in the available US press specification pages | 2 | audi/a3 8V Sedan; audi/q3 US2026+ |
-| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 2 | audi/a5 mcum-a5-4-door-2025-2026 p.20; audi/a5 mcum-a5-4-door-2025-2026 p.20 |
+| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 2 | audi/a5 mcum-a5-4-door-2025-2026 p.112; audi/a5 mcum-a5-4-door-2025-2026 p.112 |
 | octane_aki | one document gives N values: ['N', 'N', 'N'] | 2 | audi/a5 MY2025 (mcum-a5-4-door-2025-2026); audi/a5 MY2026 (mcum-a5-4-door-2025-2026) |
 | octane_ron | one document gives N values: ['N', 'N', 'N'] | 2 | audi/a5 MY2025 (mcum-a5-4-door-2025-2026); audi/a5 MY2026 (mcum-a5-4-door-2025-2026) |
+| engine_oil_oem_approval | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке — «Sticker fo | 2 | audi/a5 MY2025-2026 (mcum-a5-4-door-2025-2026 p.80); audi/a5 MY2025-2026 (mcum-a5-4-door-2025-2026 p.110) |
+| engine_oil_capacity_l | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке — «Sticker fo | 2 | audi/a5 MY2025-2026 (mcum-a5-4-door-2025-2026 p.80); audi/a5 MY2025-2026 (mcum-a5-4-door-2025-2026 p.110) |
 | engine_description | one document gives N values: ['"N TFSI\\uNae, N CYL"', '"N TFSI\\uNae,N CYL"'] | 2 | audi/a6 MY2020 (press-audiusa-a6-2020-5e62f4f5); audi/a6 MY2020 (press-audiusa-a6-2020-5e62f4f5) |
 | front_brakes | one document gives N values: ['"Floating caliper /"', '"Single-piston floating caliper / N\\" (Nmm) ventilated | 2 | audi/a6 MY2026 (press-audiusa-a6-2026-2db7b32a); audi/a6 MY2026 (press-audiusa-a6-2026-ebd3f192) |
 | front_brakes | one document gives N values: ['"Aluminum fixed caliper /"', '"dual-piston N\\" (Nmm) Ventilated steel discs"'] | 2 | audi/q7 MY2026 (press-audiusa-q7-2026-5d8fcdf9); audi/q7 MY2026 (press-audiusa-q7-2026-5d8fcdf9) |
@@ -103,14 +114,11 @@
 | engine_description | one document gives N values: ['"Four-cylinder"', '"Inline four-cylinder"'] | 1 | audi/a4 MY2017 (press-audiusa-a4-2017-e2a0350f) |
 | curb_weight_kg | one document gives N values: ['N', 'N', 'N'] | 1 | audi/a5 MY2018 (press-audiusa-a5-2018-74063df5) |
 | wheelbase_mm | one document gives N values: ['N', 'N', 'N', 'N'] | 1 | audi/a5 MY2021 (press-audiusa-a5-2021-7325382b) |
-| engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 1 | audi/a5 US2025+ |
-| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 1 | audi/a5 US2025+ |
-| coolant | not found unambiguously in the available US owner's manuals | 1 | audi/a5 US2025+ |
-| transmission_fluid | not found unambiguously in the available US owner's manuals | 1 | audi/a5 US2025+ |
 | front_brakes | one document gives N values: ['"N-piston N\\" (Nmm) ventilated steel discs"', '"Fixed caliper"'] | 1 | audi/a6 MY2026 (press-audiusa-a6-2026-77b198eb) |
 | front_brakes | one document gives N values: ['"N-piston N\\" (Nmm) ventilated steel discs"', '"Floating caliper"'] | 1 | audi/a6 MY2026 (press-audiusa-a6-2026-77b198eb) |
 | front_brakes | one document gives N values: ['"Floating caliper /"', '"Single-piston caliper / N\\" (Nmm) ventilated steel di | 1 | audi/a6 MY2026 (press-audiusa-a6-2026-9e289d44) |
 | rear_brakes | one document gives N values: ['"Floating caliper with integrated parking brake"', '"Single-piston caliper / N\ | 1 | audi/a6 MY2026 (press-audiusa-a6-2026-9e289d44) |
+| fuel_tank_l | not found unambiguously in the available US owner's manuals | 1 | audi/q5 FY |
 | power_hp | one document gives N values: ['N', 'N'] | 1 | audi/q7 MY2020 (press-audiusa-q7-2020-bad8d113) |
 | torque_lb_ft | one document gives N values: ['N', 'N'] | 1 | audi/q7 MY2020 (press-audiusa-q7-2020-bad8d113) |
 | front_brakes | one document gives N values: ['"N-piston N\\" (Nmm) Ventilated steel discs"', '"Aluminum fixed caliper /"'] | 1 | audi/q7 MY2026 (press-audiusa-q7-2026-5d8fcdf9) |
@@ -259,10 +267,10 @@
 
 ## 5. Выборочная перепроверка
 
-Проверено 294 записей (10% каждой линейки), расхождений 0.
+Проверено 295 записей (10% каждой линейки), расхождений 0.
 - a3: 48 проверено, 0 расхождений
 - a4: 32 проверено, 0 расхождений
-- a5: 74 проверено, 0 расхождений
+- a5: 75 проверено, 0 расхождений
 - a6: 56 проверено, 0 расхождений
 - q3: 17 проверено, 0 расхождений
 - q5: 39 проверено, 0 расхождений
@@ -294,10 +302,10 @@
 ## Загрузка
 
 Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- audi/a3: --prune-stale, код 0, {"raw_documents_seen": 79, "source_records_new": 74, "te_new_GENERATION": 728, "te_new_CONFIGURATION": 483, "configurations": 37, "configurations_linked": 4, "configurations_research_only": 33, "issues_new": 39}
-- audi/a4: --prune-stale, код 0, {"raw_documents_seen": 76, "source_records_new": 61, "te_new_GENERATION": 577, "te_new_CONFIGURATION": 490, "configurations": 38, "configurations_research_only": 35, "configurations_linked": 3, "issues_new": 45}
-- audi/a5: --prune-stale, код 0, {"raw_documents_seen": 112, "source_records_new": 94, "te_new_GENERATION": 1052, "te_new_CONFIGURATION": 709, "configurations": 47, "configurations_research_only": 47, "issues_new": 61}
-- audi/a6: --prune-stale, код 0, {"raw_documents_seen": 90, "source_records_new": 72, "te_new_GENERATION": 836, "te_new_CONFIGURATION": 585, "configurations": 51, "configurations_linked": 4, "configurations_research_only": 47, "issues_new": 65}
-- audi/q3: --prune-stale, код 0, {"raw_documents_seen": 46, "source_records_new": 29, "te_new_GENERATION": 328, "te_new_CONFIGURATION": 196, "configurations": 16, "configurations_linked": 6, "configurations_research_only": 10, "issues_new": 39}
-- audi/q5: --prune-stale, код 0, {"raw_documents_seen": 92, "source_records_new": 74, "te_new_GENERATION": 768, "te_new_CONFIGURATION": 524, "configurations": 40, "configurations_research_only": 32, "configurations_linked": 8, "issues_new": 79}
-- audi/q7: --prune-stale, код 0, {"raw_documents_seen": 54, "source_records_new": 37, "te_new_GENERATION": 526, "te_new_CONFIGURATION": 341, "configurations": 31, "configurations_research_only": 26, "configurations_linked": 5, "issues_new": 56}
+- audi/a3: --prune-stale, код 0, {"raw_documents_seen": 89, "te_existing": 1211, "configurations": 37, "configurations_linked": 4, "configurations_research_only": 33, "issues_existing": 39, "maintenance_new": 4, "maintenance_existing": 101, "maintenance_stale_deleted": 1}
+- audi/a4: --prune-stale, код 0, {"raw_documents_seen": 87, "te_existing": 1067, "configurations": 38, "configurations_research_only": 35, "configurations_linked": 3, "issues_existing": 45, "maintenance_new": 4, "maintenance_existing": 71, "maintenance_stale_deleted": 1}
+- audi/a5: --prune-stale, код 0, {"raw_documents_seen": 124, "te_existing": 1767, "configurations": 47, "configurations_research_only": 47, "issues_existing": 61, "maintenance_new": 8, "maintenance_existing": 100, "maintenance_stale_deleted": 3}
+- audi/a6: --prune-stale, код 0, {"raw_documents_seen": 102, "te_existing": 1421, "configurations": 51, "configurations_linked": 4, "configurations_research_only": 47, "issues_existing": 65, "maintenance_new": 6, "maintenance_existing": 103, "maintenance_stale_deleted": 2}
+- audi/q3: --prune-stale, код 0, {"raw_documents_seen": 58, "te_existing": 527, "configurations": 16, "configurations_linked": 6, "configurations_research_only": 10, "issues_existing": 39, "maintenance_new": 4, "maintenance_existing": 94, "maintenance_stale_deleted": 1}
+- audi/q5: --prune-stale, код 0, {"raw_documents_seen": 104, "te_existing": 1295, "configurations": 40, "configurations_research_only": 32, "configurations_linked": 8, "issues_existing": 79, "maintenance_new": 6, "maintenance_existing": 95, "maintenance_stale_deleted": 2}
+- audi/q7: --prune-stale, код 0, {"raw_documents_seen": 66, "te_existing": 873, "configurations": 31, "configurations_research_only": 26, "configurations_linked": 5, "issues_existing": 56, "maintenance_new": 4, "maintenance_existing": 90, "maintenance_stale_deleted": 1}

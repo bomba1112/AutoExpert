@@ -1,6 +1,6 @@
 # Honda — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -8,17 +8,17 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Accord | IX | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Accord | X | 2018–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Accord | US2023+ | 2023–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
-| Civic | IX Sedan | 2014–2015 | ● | ◐ | ● | ● | ○ | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Civic | 10th | 2016–2021 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
-| Civic | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | IV | 2014–2016 | ● | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | RW | 2017–2022 | ● | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| CR-V | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ● | ● | ● | ● | ○ | ◐ | ● | ● | ● | ● | ● |
+| Accord | IX | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Accord | X | 2018–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Accord | US2023+ | 2023–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ● | ● | ● | ● | ● |
+| Civic | IX Sedan | 2014–2015 | ● | ◐ | ● | ● | ○ | ◐ | ○ | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Civic | 10th | 2016–2021 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+| Civic | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | IV | 2014–2016 | ● | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | RW | 2017–2022 | ● | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| CR-V | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 85, частично 33, нет 17, неприменимо 0.
+Итого ячеек: заполнено 94, частично 33, нет 8, неприменимо 0.
 
 ## 2. Строки до и после
 
@@ -26,11 +26,11 @@
 |---|---|---|
 | technical_evidence | 0 | 5896 |
 | known_issues | 0 | 212 |
-| maintenance_schedule_items | 0 | 0 |
+| maintenance_schedule_items | 0 | 588 |
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 891 (по полю и причине):
+Записей в журнале пробелов: 896 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -63,6 +63,7 @@
 | front_brakes | not found unambiguously in the available US press specification pages | 5 | honda/accord IX; honda/accord X; honda/civic IX Sedan |
 | engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 5 | honda/accord X; honda/accord US2023+; honda/civic IX Sedan |
 | engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 5 | honda/accord X; honda/accord US2023+; honda/civic IX Sedan |
+| maintenance:transmission_fluid | REPLACE SEVERE {"edition": "civic sedan"}: the manuals give different values ['[[N, null], null]', '[[N, null] | 5 | honda/civic MY2022; honda/civic MY2023; honda/civic MY2024 |
 | engine_oil_capacity_l | one document gives N values: ['N', 'N'] | 5 | honda/cr-v MY2017 (carmans-2017-honda-cr-v); honda/cr-v MY2017 (carmans-2017-honda-crv); honda/cr-v MY2018 (carmans-2018-honda-cr-v) |
 | ground_clearance | not found unambiguously in the available US press specification pages | 4 | honda/accord IX; honda/accord X; honda/civic IX Sedan |
 | steering | not found unambiguously in the available US press specification pages | 4 | honda/accord X; honda/civic 10th; honda/civic US2022+ |
@@ -218,20 +219,11 @@
 
 ## Изменения ранее записанных строк (последняя загрузка)
 
-- Accord: проблема accord-IX-tsb-battery-drain обновлена {"evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Engine Won't Turn Over, Won't Start\" (owner reports): MY2014: #2, average cost to fix $500, averag
-- Accord: проблема accord-IX-tsb-loss-of-power обновлена {"evidence_ids": [4, 5], "note": [null, "CarComplaints.com \"Sudden Loss Of Power\" (owner reports): MY2015: #2, average cost to fix $1,600, average mileage 34,
-- Accord: проблема accord-X-tsb-infotainment обновлена {"evidence_ids": [8, 9], "note": [null, "CarComplaints.com \"Infotainment System Issue\" (owner reports): MY2021: #3, average cost to fix $1,300, average mileag
-- Accord: проблема accord-X-tsb-loss-of-power обновлена {"evidence_ids": [3, 4], "note": [null, "CarComplaints.com \"Car Goes Into Limp Mode\" (owner reports): MY2021: #2, average cost to fix N/A, average mileage 16,
-- Accord: проблема accord-IX-complaints-paint обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Clear Coat Problem\" (owner reports): MY2015: #1, average 
-- Civic: проблема civic-10th-tsb-air-conditioning обновлена {"evidence_ids": [23, 24], "note": [null, "CarComplaints.com \"A/C Compressor Failure\" (owner reports): MY2018: #3, average cost to fix $3,000, average mileage
-- Civic: проблема civic-IX Sedan-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Transmission Failed\" (owner reports): MY2015: #1, average
-- CR-V: проблема cr-v-US2023+-recall-24V763000 обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Unexpected And Unwarranted Stalling\" (owner reports): MY2
-- CR-V: проблема cr-v-IV-tsb-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Transmission Failure\" (owner reports): MY2016: #3, averag
-- CR-V: проблема cr-v-IV-complaints-hesitation обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Delayed Acceleration / Hesitation\" (owner reports): MY201
+- нет
 
 ## Загрузка
 
 Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- honda/accord: --prune-stale, код 0, {"raw_documents_seen": 110, "source_records_new": 34, "te_existing": 1207, "te_new_GENERATION": 820, "configurations": 62, "configurations_research_only": 54, "configurations_linked": 8, "issues_existing": 68, "issues_updated": 5, "issues_new": 1}
-- honda/civic: --prune-stale, код 0, {"raw_documents_seen": 173, "source_records_new": 65, "te_existing": 1582, "te_new_GENERATION": 862, "te_new_ENGINE": 12, "configurations": 77, "configurations_research_only": 76, "configurations_linked": 1, "issues_existing": 61, "issues_updated": 2, "issues_new": 1}
-- honda/cr-v: --prune-stale, код 0, {"raw_documents_seen": 101, "source_records_new": 43, "te_existing": 833, "te_new_GENERATION": 540, "te_new_ENGINE": 40, "configurations": 45, "configurations_linked": 8, "configurations_research_only": 37, "issues_existing": 81, "issues_updated": 3}
+- honda/accord: --prune-stale, код 0, {"raw_documents_seen": 132, "source_records_new": 22, "te_existing": 2027, "configurations": 62, "configurations_research_only": 54, "configurations_linked": 8, "issues_existing": 69, "maintenance_new": 183}
+- honda/civic: --prune-stale, код 0, {"raw_documents_seen": 211, "source_records_new": 38, "te_existing": 2456, "configurations": 77, "configurations_research_only": 76, "configurations_linked": 1, "issues_existing": 62, "maintenance_new": 282}
+- honda/cr-v: --prune-stale, код 0, {"raw_documents_seen": 121, "source_records_new": 20, "te_existing": 1413, "configurations": 45, "configurations_linked": 8, "configurations_research_only": 37, "issues_existing": 81, "maintenance_new": 123}

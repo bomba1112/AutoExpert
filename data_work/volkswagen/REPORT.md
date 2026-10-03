@@ -1,6 +1,6 @@
 # Volkswagen — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -8,34 +8,34 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Jetta | VI | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Jetta | VII | 2019–2026 | ● | ◐ | ● | ● | ○ | ● | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Passat | NMS | 2014–2022 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | 5N | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | II-US-LWB | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Tiguan | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Atlas | I-US-2018 | 2018–2026 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Arteon | I | 2019–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ○ | ◐ | ● | ● | ● | ● | ● |
-| Touareg | 7P | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| Jetta | VI | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Jetta | VII | 2019–2026 | ● | ◐ | ● | ● | ○ | ● | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Passat | NMS | 2014–2022 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | 5N | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | II-US-LWB | 2018–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Tiguan | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Atlas | I-US-2018 | 2018–2026 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Arteon | I | 2019–2024 | ● | ◐ | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ | ● | ● | ● | ● | ● |
+| Touareg | 7P | 2014–2017 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 79, частично 39, нет 17, неприменимо 0.
+Итого ячеек: заполнено 88, частично 39, нет 8, неприменимо 0.
 
 ## 2. Строки до и после
 
 | Таблица | До пакета | После |
 |---|---|---|
-| technical_evidence | 0 | 5566 |
+| technical_evidence | 0 | 5592 |
 | known_issues | 0 | 304 |
-| maintenance_schedule_items | 0 | 0 |
+| maintenance_schedule_items | 0 | 274 |
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 730 (по полю и причине):
+Записей в журнале пробелов: 756 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 163 | volkswagen-jetta-us-2014-1.4l-4cyl-turbo-hev-a-am-s7-fwd; volkswagen-jetta-us-2014-1.8l-4cyl-turbo-ice-a-s6-fwd; volkswagen-jetta-us-2014-1.8l-4cyl-turbo-ice-m-5-spd-fwd |
-| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 55 | volkswagen/jetta carmans-2019-volkswagen-jetta p.249; volkswagen/jetta carmans-2019-volkswagen-jetta p.250; volkswagen/jetta carmans-2019-volkswagen-jetta p.252 |
+| engine_oil_capacity_drain_refill_l | value N outside the validator range; not used | 44 | volkswagen/jetta carmans-2019-volkswagen-jetta p.249; volkswagen/jetta carmans-2019-volkswagen-jetta p.250; volkswagen/jetta carmans-2019-volkswagen-jetta p.252 |
 | octane_aki | one document gives N values: ['N', 'N', 'N'] | 42 | volkswagen/jetta MY2014 (mcum-jetta-4-door-2011-2018); volkswagen/jetta MY2015 (mcum-jetta-4-door-2011-2018); volkswagen/jetta MY2016 (mcum-jetta-4-door-2011-2018) |
 | fuel_tank_l | value N outside the validator range; not used | 36 | volkswagen/jetta carmans-2022-volkswagen-jetta p.342; volkswagen/jetta carmans-2023-volkswagen-jetta-2 p.342; volkswagen/jetta mcum-jetta-4-door-2011-2018 p.151 |
 | curb_weight_kg | one document gives N values: ['N', 'N'] | 31 | volkswagen/jetta MY2014 (press-vw-jetta-2014-0fb78ecb); volkswagen/jetta MY2014 (press-vw-jetta-2014-0fb78ecb); volkswagen/jetta MY2014 (press-vw-jetta-2014-2842b69f) |
@@ -52,6 +52,8 @@
 | valvetrain | engine not stated; EPA lists several engines | 22 | volkswagen/jetta MY2014 (press-vw-jetta-2014-2842b69f); volkswagen/jetta MY2014 (press-vw-jetta-2014-60013743); volkswagen/jetta MY2015 (press-vw-jetta-2015-b0f357a9) |
 | cargo_l | one document gives N values: ['N', 'N'] | 20 | volkswagen/tiguan MY2018 (press-vw-tiguan-2018-3e326d7e); volkswagen/tiguan MY2019 (press-vw-tiguan-2019-43f8aae5); volkswagen/tiguan MY2020 (press-vw-tiguan-2020-0938826a) |
 | wheel_size_in | one document gives N values: ['N', 'N', 'N'] | 19 | volkswagen/jetta MY2014 (press-vw-jetta-2014-60013743); volkswagen/jetta MY2025 (press-vw-jetta-2025-16cdd190); volkswagen/jetta MY2026 (press-vw-jetta-2026-67422415) |
+| engine_oil_oem_approval | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке — «There is a | 18 | volkswagen/jetta MY2019-2025 (mcum-jetta-4-door-2019-2025 p.143); volkswagen/jetta MY2019-2025 (mcum-jetta-4-door-2019-2025 p.183); volkswagen/passat MY2014-2022 (mcum-passat-suv-2014-2023 p.13) |
+| engine_oil_capacity_l | не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке — «There is a | 18 | volkswagen/jetta MY2019-2025 (mcum-jetta-4-door-2019-2025 p.143); volkswagen/jetta MY2019-2025 (mcum-jetta-4-door-2019-2025 p.183); volkswagen/passat MY2014-2022 (mcum-passat-suv-2014-2023 p.13) |
 | octane_ron | one document gives N values: ['N', 'N'] | 12 | volkswagen/jetta MY2019 (mcum-jetta-4-door-2019-2025); volkswagen/jetta MY2020 (mcum-jetta-4-door-2019-2025); volkswagen/jetta MY2021 (mcum-jetta-4-door-2019-2025) |
 | wheel_size_in | one document gives N values: ['N', 'N', 'N', 'N'] | 12 | volkswagen/passat MY2017 (press-vw-passat-2017-95389f0e); volkswagen/tiguan MY2014 (press-vw-tiguan-2014-8171e3bb); volkswagen/tiguan MY2015 (press-vw-tiguan-2015-e2e7198e) |
 | fuel_tank_l | one document gives N values: ['N', 'N'] | 10 | volkswagen/jetta MY2019 (carmans-2019-volkswagen-jetta); volkswagen/jetta MY2020 (carmans-2020-volkswagen-jetta); volkswagen/jetta MY2021 (carmans-2021-volkswagen-jetta) |
@@ -77,6 +79,7 @@
 | cargo_l | not found unambiguously in the available US press specification pages | 2 | volkswagen/tiguan US2025+; volkswagen/atlas I-US-2018 |
 | power_hp | not found unambiguously in the available US press specification pages | 1 | volkswagen/jetta VII |
 | torque_lb_ft | not found unambiguously in the available US press specification pages | 1 | volkswagen/jetta VII |
+| maintenance:transmission_fluid | row text not found again on one page: Transmission, Automatic - Change Fluid & filter (if applicable) | 1 | volkswagen/jetta MY2024 (volkswagen-maintenance-card-2024 p.4) |
 | power_hp | value N outside the validator range; not used | 1 | volkswagen/touareg press-vw-touareg-2015-fd3a4d82 p.1 |
 | engine_oil_capacity_l | no US owner's manual for these years | 1 | volkswagen/touareg 7P |
 | engine_oil_viscosity | no US owner's manual for these years | 1 | volkswagen/touareg 7P |
@@ -282,12 +285,12 @@
 
 ## 5. Выборочная перепроверка
 
-Проверено 228 записей (10% каждой линейки), расхождений 0.
+Проверено 231 записей (10% каждой линейки), расхождений 0.
 - arteon: 15 проверено, 0 расхождений
-- atlas: 45 проверено, 0 расхождений
-- jetta: 65 проверено, 0 расхождений
+- atlas: 46 проверено, 0 расхождений
+- jetta: 66 проверено, 0 расхождений
 - passat: 24 проверено, 0 расхождений
-- tiguan: 60 проверено, 0 расхождений
+- tiguan: 61 проверено, 0 расхождений
 - touareg: 19 проверено, 0 расхождений
 
 ## Поколения: свидетельства прессы и решения детектора
@@ -306,9 +309,9 @@
 ## Загрузка
 
 Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- volkswagen/jetta: --prune-stale, код 0, {"raw_documents_seen": 113, "source_records_new": 108, "te_new_GENERATION": 1089, "te_new_CONFIGURATION": 754, "configurations": 66, "configurations_research_only": 63, "configurations_linked": 3, "issues_new": 80}
-- volkswagen/passat: --prune-stale, код 0, {"raw_documents_seen": 41, "source_records_new": 28, "te_new_GENERATION": 462, "te_new_CONFIGURATION": 231, "configurations": 21, "configurations_research_only": 21, "issues_new": 47}
-- volkswagen/tiguan: --prune-stale, код 0, {"raw_documents_seen": 71, "source_records_new": 53, "te_new_GENERATION": 975, "te_new_CONFIGURATION": 351, "configurations": 29, "configurations_research_only": 25, "configurations_linked": 4, "issues_new": 80}
-- volkswagen/atlas: --prune-stale, код 0, {"raw_documents_seen": 47, "source_records_new": 33, "te_new_GENERATION": 686, "te_new_CONFIGURATION": 321, "configurations": 27, "configurations_linked": 6, "configurations_research_only": 21, "issues_new": 66}
-- volkswagen/arteon: --prune-stale, код 0, {"raw_documents_seen": 36, "source_records_new": 25, "te_new_GENERATION": 205, "te_new_CONFIGURATION": 121, "configurations": 11, "configurations_research_only": 11, "issues_new": 12}
-- volkswagen/touareg: --prune-stale, код 0, {"raw_documents_seen": 24, "source_records_new": 15, "te_new_GENERATION": 272, "te_new_CONFIGURATION": 99, "configurations": 9, "configurations_research_only": 5, "configurations_linked": 4, "issues_new": 19}
+- volkswagen/jetta: --prune-stale, код 0, {"raw_documents_seen": 126, "source_records_new": 13, "te_existing": 1848, "configurations": 66, "configurations_research_only": 63, "configurations_linked": 3, "issues_existing": 80, "maintenance_new": 72}
+- volkswagen/passat: --prune-stale, код 0, {"raw_documents_seen": 50, "te_existing": 698, "configurations": 21, "configurations_research_only": 21, "issues_existing": 47, "maintenance_new": 34}
+- volkswagen/tiguan: --prune-stale, код 0, {"raw_documents_seen": 84, "te_existing": 1336, "configurations": 29, "configurations_research_only": 25, "configurations_linked": 4, "issues_existing": 80, "maintenance_new": 84}
+- volkswagen/atlas: --prune-stale, код 0, {"raw_documents_seen": 56, "te_existing": 1011, "configurations": 27, "configurations_linked": 6, "configurations_research_only": 21, "issues_existing": 66, "maintenance_new": 27}
+- volkswagen/arteon: --prune-stale, код 0, {"raw_documents_seen": 42, "te_existing": 328, "configurations": 11, "configurations_research_only": 11, "issues_existing": 12, "maintenance_new": 25}
+- volkswagen/touareg: --prune-stale, код 0, {"raw_documents_seen": 28, "te_existing": 371, "configurations": 9, "configurations_research_only": 5, "configurations_linked": 4, "issues_existing": 19, "maintenance_new": 32}

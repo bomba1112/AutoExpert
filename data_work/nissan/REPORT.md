@@ -1,6 +1,6 @@
 # Nissan — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -8,17 +8,17 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Altima | L33 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Altima | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | B17 | 2014–2019 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | US2020-2025 | 2020–2025 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Sentra | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ○ | ◐ | ◐ | ● | ● | ○ | ● |
-| Rogue | T32 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Rogue | T33 | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ◐ | ● | ● | ● | ● |
-| Pathfinder | R52 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
-| Pathfinder | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ○ | ◐ | ● | ● | ● | ● | ● |
+| Altima | L33 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● | ● |
+| Altima | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | B17 | 2014–2019 | ● | ◐ | ● | ● | ● | ● | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | US2020-2025 | 2020–2025 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Sentra | US2026+ | 2026–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ○ | ● |
+| Rogue | T32 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Rogue | T33 | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ◐ | ● | ● | ● | ● |
+| Pathfinder | R52 | 2014–2020 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● |
+| Pathfinder | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 89, частично 34, нет 12, неприменимо 0.
+Итого ячеек: заполнено 96, частично 36, нет 3, неприменимо 0.
 
 ## 2. Строки до и после
 
@@ -26,11 +26,11 @@
 |---|---|---|
 | technical_evidence | 0 | 4154 |
 | known_issues | 0 | 211 |
-| maintenance_schedule_items | 0 | 0 |
+| maintenance_schedule_items | 0 | 748 |
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 412 (по полю и причине):
+Записей в журнале пробелов: 464 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
@@ -41,6 +41,7 @@
 | engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 19 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
 | engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 17 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2016 (official-d4f834985984) |
 | octane_aki | one document gives N values: ['N', 'N'] | 15 | nissan/sentra MY2017 (carmans-2017-nissan-sentra); nissan/sentra MY2018 (carmans-2018-nissan-sentra); nissan/sentra MY2019 (carmans-2019-nissan-sentra) |
+| maintenance:schedule | the owner's manual prints no maintenance schedule; it refers to the separate "Service and Maintenance Guide" | 14 | nissan/altima MY2014 (official-338af110aa8d); nissan/altima MY2015 (official-003558d62f6d); nissan/altima MY2016 (official-d4f834985984) |
 | engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N'] | 12 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/sentra MY2026 (official-511ec26d6b9d) |
 | engine_oil_capacity_drain_refill_l | one document gives N values: ['N', 'N'] | 11 | nissan/altima MY2023 (carmans-2023-nissan-altima); nissan/altima MY2024 (official-02f7c81d0bf6); nissan/altima MY2026 (official-531628333f60) |
 | engine_oil_capacity_l | one document gives N values: ['N', 'N'] | 10 | nissan/sentra MY2016 (carmans-2016-nissan-sentra); nissan/sentra MY2015 (official-56814c430d7c); nissan/sentra MY2016 (official-b930b0e01a9b) |
@@ -50,10 +51,16 @@
 | coolant_capacity_l | value N outside the validator range; not used | 5 | nissan/sentra official-511ec26d6b9d p.456; nissan/sentra official-511ec26d6b9d p.456; nissan/rogue carmans-2026-nissan-rogue p.581 |
 | fuel_tank_l | one document gives N values: ['N', 'N'] | 4 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/pathfinder MY2025 (official-788622dcf159) |
 | height_mm | one document gives N values: ['N', 'N'] | 4 | nissan/altima MY2025 (press-nissannews-altima-2025-8a7b3b89); nissan/altima MY2025 (press-nissannews-altima-2025-8a7b3b89); nissan/altima MY2026 (press-nissannews-altima-2026-2b0f5d63) |
+| maintenance:suspension | 'Suspension components (shocks, sub￾frame, tie rods)' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N,  | 4 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
+| maintenance:fluid_levels | 'All fluids inspected (engine, wiper, brake, power steering, coolant)' (normal) listed at [N, N, N, N, N, N, N | 4 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
+| maintenance:battery_12v | 'Battery terminals and cables, battery test' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N,  | 4 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
+| maintenance:engine_oil_and_filter | 'Replace engine oil & filter' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N] miles: not a regular interv | 4 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
 | fuel_tank_l | one document gives N values: ['N', 'N', 'N'] | 4 | nissan/rogue MY2026 (carmans-2026-nissan-rogue); nissan/rogue MY2026 (official-1c14f723f96f); nissan/rogue MY2024 (official-9296d77ee8d0) |
 | transmission_fluid_capacity_l | one document gives N values: ['N', 'N'] | 3 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/sentra MY2026 (official-511ec26d6b9d) |
 | torque_lb_ft | one document gives N values: ['N', 'N'] | 3 | nissan/altima MY2019 (press-nissannews-altima-2019-f7adfd3b); nissan/altima MY2023 (press-nissannews-altima-2023-2669e149); nissan/altima MY2024 (press-nissannews-altima-2024-8534174d) |
 | ground_clearance | not found unambiguously in the available US press specification pages | 3 | nissan/altima L33; nissan/altima US2019+; nissan/sentra B17 |
+| maintenance:accessory_drive_belt | 'Engine drive belts and hose inspections' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N]  | 3 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
+| maintenance:engine_air_filter | 'Engine air filter' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular i | 3 | nissan/altima MY2021 (official-dbaba56b8dd5); nissan/altima MY2022 (official-7dccb7c4ac49); nissan/altima MY2023 (official-982701d57f02) |
 | rear_suspension | one document gives N values: ['"NISMO-tuned front and rear suspension"', '"Torsion Beam"'] | 3 | nissan/sentra MY2017 (press-nissannews-sentra-2017-f618c18b); nissan/sentra MY2018 (press-nissannews-sentra-2018-cd6a6173); nissan/sentra MY2019 (press-nissannews-sentra-2019-51fcc602) |
 | coolant_capacity_l | one document gives N values: ['N', 'N'] | 3 | nissan/rogue MY2026 (carmans-2026-nissan-rogue); nissan/rogue MY2026 (official-1c14f723f96f); nissan/rogue MY2025 (official-9b62fef6fa22) |
 | electric_motor | one document gives N values: ['"N"', '"N"', '"Advanced electric motor \\uN N kW"'] | 3 | nissan/rogue MY2017 (press-nissannews-rogue-2017-b7db407e); nissan/rogue MY2018 (press-nissannews-rogue-2018-f5d0224d); nissan/rogue MY2019 (press-nissannews-rogue-2019-3617e98e) |
@@ -66,7 +73,18 @@
 | octane_ron | one document gives N values: ['N', 'N'] | 2 | nissan/pathfinder MY2025 (official-788622dcf159); nissan/pathfinder MY2026 (official-f833693eb154) |
 | passenger_volume_l | one document gives N values: ['N', 'N'] | 2 | nissan/pathfinder MY2025 (press-nissannews-pathfinder-2025-df0eeb32); nissan/pathfinder MY2026 (press-nissannews-pathfinder-2026-042c77d3) |
 | valvetrain | engine not stated; EPA lists several engines | 1 | nissan/altima MY2014 (press-nissannews-altima-2014-2bfe45da) |
+| maintenance:differential_fluid | 'Differential and fluid' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regu | 1 | nissan/altima MY2021 (official-dbaba56b8dd5) |
+| maintenance:cabin_air_filter | 'Replace in-cabin microfilter' (normal) listed at [N, N, N, N, N, N, N, N, N, N] miles: not a regular interval | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:key_fob_battery | 'Replace Intelligent Key battery' (normal) listed at [N, N, N, N, N, N, N, N] miles: not a regular interval; n | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:suspension | 'Axle & suspension parts' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a reg | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:accessory_drive_belt | 'Engine drive belts' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular  | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:engine_air_filter | 'Air cleaner filter' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular  | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:cabin_air_filter | 'Replace in-cabin microfilter' (normal) listed at [N, N, N, N, N, N, N] miles: not a regular interval; not con | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:key_fob_battery | 'Replace Intelligent Key battery' (normal) listed at [N, N, N, N, N, N] miles: not a regular interval; not con | 1 | nissan/altima MY2024 (official-02f7c81d0bf6) |
+| maintenance:tire_rotation | 'Tire rotation' (severe) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N] miles | 1 | nissan/altima MY2026 (official-531628333f60) |
 | transmission_fluid_capacity_l | value N outside the validator range; not used | 1 | nissan/sentra official-511ec26d6b9d p.456 |
+| maintenance:accessory_drive_belt | grid row 'Drive belts' (p.N): I marks at [N, N, N, N, N, N] miles do not form a regular interval; not converte | 1 | nissan/sentra MY2017 (official-2a18679a0faa) |
+| maintenance:transmission_fluid | 'CVT fluid' (normal) listed at [N, N, N, N, N, N, N, N, N, N] miles: not a regular interval; not converted | 1 | nissan/sentra MY2026 (official-511ec26d6b9d) |
 | electric_motor | one document gives N values: ['"N"', '"N"', '"N"', '"N"'] | 1 | nissan/rogue MY2026 (press-nissannews-rogue-2026-deaa1bf3) |
 | transmission_description | one document gives N values: ['"Single speed reduction gearbox"', '"Single speed, drive mode-switchable reduct | 1 | nissan/rogue MY2026 (press-nissannews-rogue-2026-deaa1bf3) |
 | coolant_capacity_l | one document gives N values: ['N', 'N', 'N'] | 1 | nissan/pathfinder MY2026 (official-f833693eb154) |
@@ -74,6 +92,11 @@
 | engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N', 'N', 'N'] | 1 | nissan/pathfinder MY2026 (official-f833693eb154) |
 | electric_motor | one document gives N values: ['"N"', '"N"', '"Advanced electric motor - N kW"'] | 1 | nissan/pathfinder MY2014 (press-nissannews-pathfinder-2014-402ac222) |
 | system_power_hp | one document gives N values: ['N', 'N'] | 1 | nissan/pathfinder MY2014 (press-nissannews-pathfinder-2014-402ac222) |
+| maintenance:transmission_fluid | 'Automatic transmission' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular inter | 1 | nissan/pathfinder MY2014 (official-874804c9fb0e) |
+| maintenance:transmission_fluid | 'CVT fluid' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular interval; not conv | 1 | nissan/pathfinder MY2014 (official-874804c9fb0e) |
+| maintenance:differential_fluid | 'Differential oil' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular interval; n | 1 | nissan/pathfinder MY2014 (official-874804c9fb0e) |
+| maintenance:manual_transmission_fluid | 'Manual transmission oil' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular inte | 1 | nissan/pathfinder MY2014 (official-874804c9fb0e) |
+| maintenance:transfer_case_fluid | 'Transfer case oil (NWD/AWD)' (normal) listed at [N, N, N, N, N, N, N, N, N, N, N, N, N] miles: not a regular  | 1 | nissan/pathfinder MY2014 (official-874804c9fb0e) |
 
 ## 4. Конфликты источников
 
@@ -141,25 +164,12 @@
 
 ## Изменения ранее записанных строк (последняя загрузка)
 
-- Altima: проблема altima-L33-tsb-cvt обновлена {"evidence_ids": [76, 77], "note": [null, "CarComplaints.com \"Cvt Failure\" (owner reports): MY2018: #2, average cost to fix $6,500, average mileage 98,000 mi"
-- Altima: проблема altima-L33-tsb-hesitation обновлена {"evidence_ids": [12, 15], "note": [null, "CarComplaints.com \"Hesitates/Sputters\" (owner reports): MY2015: #1, average cost to fix $3,000, average mileage 50,
-- Altima: проблема altima-L33-tsb-torque-converter обновлена {"evidence_ids": [11, 12], "note": [null, "CarComplaints.com \"Shudders And Jerks\" (owner reports): MY2014: #2, average cost to fix $3,300, average mileage 40,
-- Altima: проблема altima-US2019+-tsb-cvt обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [9, 10], "note": [null, "CarComplaints.com \"Cvt Malfunction\" (owner reports): MY2019: #3, average co
-- Altima: проблема altima-US2019+-tsb-false-braking обновлена {"evidence_ids": [6, 7], "note": [null, "CarComplaints.com \"Automatic Emergency Brake Malfunction\" (owner reports): MY2020: #2, average cost to fix N/A, avera
-- Altima: проблема altima-L33-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Transmission Failure\" (owner reports): MY2014: #1, averag
-- Pathfinder: проблема pathfinder-R52-tsb-infotainment обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [14, 15], "note": [null, "CarComplaints.com \"Infotainment System Failing\" (owner reports): MY2019: #
-- Pathfinder: проблема pathfinder-R52-tsb-steering-noise обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [3, 4], "note": [null, "CarComplaints.com \"Power Steering Noise\" (owner reports): MY2015: #3, averag
-- Pathfinder: проблема pathfinder-R52-tsb-torque-converter обновлена {"evidence_ids": [9, 11], "note": [null, "CarComplaints.com \"Shudder, Jerking\" (owner reports): MY2015: #1, average cost to fix $2,800, average mileage 31,000
-- Pathfinder: проблема pathfinder-US2022+-tsb-suspension обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [2, 3], "note": [null, "CarComplaints.com \"Struts Failure\" (owner reports): MY2022: #1, average cost
-- Pathfinder: проблема pathfinder-R52-complaints-hesitation обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 3], "note": [null, "CarComplaints.com \"Transmission Slips And Hesitates\" (owner reports): MY2014
-- Pathfinder: проблема pathfinder-R52-complaints-timing-drive обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 3], "note": [null, "CarComplaints.com \"Timing Chain Failing\" (owner reports): MY2018: #1, averag
-- Pathfinder: проблема pathfinder-R52-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 3], "note": [null, "CarComplaints.com \"Transmission Slips And Hesitates\" (owner reports): MY2014
-- Pathfinder: проблема pathfinder-US2022+-complaints-water-leak обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Sunroof Leaks Horribly\" (owner reports): MY2022: #3, aver
+- нет
 
 ## Загрузка
 
-Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: ['rogue', 'sentra']
-- nissan/altima: --prune-stale, код 0, {"raw_documents_seen": 86, "source_records_new": 42, "te_existing": 712, "te_new_GENERATION": 529, "te_new_ENGINE": 13, "configurations": 35, "configurations_research_only": 26, "configurations_linked": 9, "issues_existing": 50, "issues_updated": 6}
-- nissan/sentra: --replace-own, код 0, {"replaced_own_te": 592, "replaced_own_issues": 44, "raw_documents_seen": 92, "source_records_new": 40, "te_new_GENERATION": 591, "te_new_ENGINE": 33, "te_new_CONFIGURATION": 343, "configurations": 25, "configurations_research_only": 25, "issues_new": 44}
-- nissan/rogue: --replace-own, код 0, {"replaced_own_te": 777, "replaced_own_issues": 71, "raw_documents_seen": 107, "source_records_new": 57, "te_new_GENERATION": 511, "te_new_ENGINE": 72, "te_new_CONFIGURATION": 462, "configurations": 34, "configurations_research_only": 34, "issues_new": 68}
-- nissan/pathfinder: --prune-stale, код 0, {"raw_documents_seen": 84, "source_records_new": 41, "te_existing": 643, "te_new_GENERATION": 195, "te_new_ENGINE": 50, "configurations": 28, "configurations_research_only": 28, "issues_existing": 49, "issues_updated": 8}
+Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
+- nissan/altima: --prune-stale, код 0, {"raw_documents_seen": 90, "source_records_new": 4, "te_existing": 1254, "configurations": 35, "configurations_research_only": 26, "configurations_linked": 9, "issues_existing": 50, "maintenance_new": 202}
+- nissan/sentra: --prune-stale, код 0, {"raw_documents_seen": 95, "te_existing": 967, "configurations": 25, "configurations_research_only": 25, "issues_existing": 44, "maintenance_new": 143}
+- nissan/rogue: --prune-stale, код 0, {"raw_documents_seen": 110, "te_existing": 1045, "configurations": 34, "configurations_research_only": 34, "issues_existing": 68, "maintenance_new": 208}
+- nissan/pathfinder: --prune-stale, код 0, {"raw_documents_seen": 87, "te_existing": 888, "configurations": 28, "configurations_research_only": 28, "issues_existing": 49, "maintenance_new": 195}

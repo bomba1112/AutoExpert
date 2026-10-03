@@ -1,6 +1,6 @@
 # Kia — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -28,7 +28,7 @@
 
 | Таблица | До пакета | После |
 |---|---|---|
-| technical_evidence | 0 | 4585 |
+| technical_evidence | 0 | 4592 |
 | known_issues | 0 | 265 |
 | maintenance_schedule_items | 0 | 639 |
 
@@ -129,9 +129,9 @@
 
 ## 5. Выборочная перепроверка
 
-Проверено 182 записей (10% каждой линейки), расхождений 0.
+Проверено 181 записей (10% каждой линейки), расхождений 0.
 - forte: 39 проверено, 0 расхождений
-- optima-k5: 48 проверено, 0 расхождений
+- optima-k5: 47 проверено, 0 расхождений
 - rio: 19 проверено, 0 расхождений
 - sorento: 35 проверено, 0 расхождений
 - sportage: 41 проверено, 0 расхождений
@@ -149,22 +149,13 @@
 
 ## Изменения ранее записанных строк (последняя загрузка)
 
-- Optima / K5: transmission_fluid = SK ATF SP-IV (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: coolant_description = Ethylene glycol base coolant for aluminum radiator (MY[2014, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: fuel_tank_l = 70 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: engine_oil_capacity_drain_refill_l = 4.8 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: engine_oil_specification = ACEA A5 or above (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: engine_oil_capacity_drain_refill_l = 4.8 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: engine_oil_specification = ACEA A5 or above; API Service SM; ILSAC GF-4 or above (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: transmission_fluid_capacity_l = 7.8 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: transmission_fluid_capacity_l = 7.1 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
-- Optima / K5: coolant_capacity_l = 6.8 (MY[2015, 2015]) — deleted (superseded by the current staging scope)
+- нет
 
 ## Загрузка
 
 Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- kia/optima-k5: --prune-stale, код 0, {"raw_documents_seen": 91, "te_existing": 1031, "te_new_GENERATION": 1, "configurations": 48, "configurations_research_only": 48, "issues_existing": 71, "maintenance_existing": 216, "te_stale_deleted": 10}
+- kia/optima-k5: --prune-stale, код 0, {"raw_documents_seen": 91, "te_existing": 1032, "configurations": 48, "configurations_research_only": 48, "issues_existing": 71, "maintenance_existing": 216}
 - kia/forte: --prune-stale, код 0, {"raw_documents_seen": 62, "te_existing": 949, "configurations": 45, "configurations_research_only": 45, "issues_existing": 45, "maintenance_existing": 135}
-- kia/rio: --prune-stale, код 0, {"raw_documents_seen": 47, "te_existing": 373, "configurations": 16, "configurations_research_only": 13, "configurations_linked": 3, "issues_existing": 17, "maintenance_existing": 36}
-- kia/sorento: --prune-stale, код 0, {"raw_documents_seen": 81, "te_existing": 1259, "configurations": 75, "configurations_research_only": 75, "issues_existing": 85, "maintenance_existing": 69}
-- kia/sportage: --prune-stale, код 0, {"raw_documents_seen": 78, "te_existing": 972, "configurations": 58, "configurations_research_only": 58, "issues_existing": 47, "maintenance_existing": 183}
+- kia/rio: --prune-stale, код 0, {"raw_documents_seen": 49, "source_records_new": 2, "te_existing": 373, "te_new_GENERATION": 2, "configurations": 16, "configurations_research_only": 13, "configurations_linked": 3, "issues_existing": 17, "maintenance_existing": 36}
+- kia/sorento: --prune-stale, код 0, {"raw_documents_seen": 84, "source_records_new": 3, "te_existing": 1259, "te_new_GENERATION": 3, "configurations": 75, "configurations_research_only": 75, "issues_existing": 85, "maintenance_existing": 69}
+- kia/sportage: --prune-stale, код 0, {"raw_documents_seen": 80, "source_records_new": 2, "te_existing": 972, "te_new_GENERATION": 2, "configurations": 58, "configurations_research_only": 58, "issues_existing": 47, "maintenance_existing": 183}

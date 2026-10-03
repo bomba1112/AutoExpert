@@ -1,6 +1,6 @@
 # BMW — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -8,69 +8,73 @@
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 3 Series | F30 | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 3 Series | Seventh generation · US sedan | 2019–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| 5 Series | F10 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 5 Series | G30 | 2017–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| 3 Series | F30 | 2014–2018 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 3 Series | Seventh generation · US sedan | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+| 5 Series | F10 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 5 Series | G30 | 2017–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | 5 Series | US2024+ | 2024–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| 7 Series | US2014-2015 | 2014–2015 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| 7 Series | US2016-2022 | 2016–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| 7 Series | US2014-2015 | 2014–2015 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| 7 Series | US2016-2022 | 2016–2022 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | 7 Series | US2023+ | 2023–2026 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
 | X5 | F15 | 2014–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
 | X5 | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
 | X6 | US2014-2014 | 2014–2014 | ◐ | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| X6 | US2015-2019 | 2015–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
+| X6 | US2015-2019 | 2015–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
 | X6 | US2020+ | 2020–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 | X7 | US2019+ | 2019–2026 | ● | ◐ | ● | ● | ● | ● | ○ | ○ | ○ | ◐ | ◐ | ○ | ● | ● | ● |
-| M3 | US2015-2018 | 2015–2018 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| M3 | US2021+ | 2021–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
-| M5 | US2014-2016 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| M5 | US2018-2023 | 2018–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
+| M3 | US2015-2018 | 2015–2018 | ● | ◐ | ● | ● | ● | ● | ◐ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| M3 | US2021+ | 2021–2026 | ● | ◐ | ● | ● | ● | ● | ◐ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+| M5 | US2014-2016 | 2014–2016 | ● | ◐ | ● | ● | ● | ◐ | ◐ | ○ | ● | ◐ | ● | ◐ | ● | ● | ● |
+| M5 | US2018-2023 | 2018–2023 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
 | M5 | US2025+ | 2025–2026 | ● | ◐ | ● | ● | ◐ | ● | ○ | ○ | ○ | ◐ | ● | ● | ● | ● | ● |
 | X5 M | US2015+ | 2015–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 | X6 M | US2014-2019 | 2014–2019 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ◐ | ● | ● | ● |
 | X6 M | US2020+ | 2020–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ○ | ◐ | ◐ | ● | ● | ● | ● |
 
-Итого ячеек: заполнено 178, частично 79, нет 73, неприменимо 0.
+Итого ячеек: заполнено 193, частично 78, нет 59, неприменимо 0.
 
 ## 2. Строки до и после
 
 | Таблица | До пакета | После |
 |---|---|---|
-| technical_evidence | 0 | 11459 |
+| technical_evidence | 0 | 12256 |
 | known_issues | 0 | 432 |
-| maintenance_schedule_items | 0 | 0 |
+| maintenance_schedule_items | 0 | 36 |
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 850 (по полю и причине):
+Записей в журнале пробелов: 919 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 401 | bmw-3-series-us-2014-2.0l-4cyl-turbo-diesel-a-s8-awd; bmw-3-series-us-2014-2.0l-4cyl-turbo-diesel-a-s8-rwd; bmw-3-series-us-2014-2.0l-4cyl-turbo-ice-a-s8-awd |
 | width_mm | one document gives N values: ['N', 'N'] | 59 | bmw/3-series MY2017 (press-bmwgroup-3-series-2017-69e983f2); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-9ede91b6) |
+| octane_aki | one document gives N values: ['N', 'N'] | 34 | bmw/3-series MY2014 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2015 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2016 (mcum-3-series-4-door-2013-2019) |
 | transmission_description | one document gives N values: ['"automatic transmission"', '"automatic"'] | 21 | bmw/3-series MY2017 (press-bmwgroup-3-series-2017-69e983f2); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-9ede91b6) |
-| octane_aki | one document gives N values: ['N', 'N'] | 16 | bmw/5-series MY2014 (mcum-5-series-4-door-2010-2017); bmw/5-series MY2015 (mcum-5-series-4-door-2010-2017); bmw/5-series MY2016 (mcum-5-series-4-door-2010-2017) |
+| engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| coolant | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| transmission_fluid | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| brake_fluid | not found unambiguously in the available US owner's manuals | 16 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
 | transmission_description | one document gives N values: ['"NHPN"', '"automatic transmission N"'] | 15 | bmw/3-series MY2014 (press-bmwgroup-3-series-2014-e1049003); bmw/3-series MY2014 (press-bmwgroup-3-series-2014-eec89c10); bmw/3-series MY2015 (press-bmwgroup-3-series-2015-0b4f3ad4) |
-| engine_oil_capacity_l | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| engine_oil_viscosity | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| coolant | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| transmission_fluid | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
-| brake_fluid | no US owner's manual for these years | 15 | bmw/3-series F30; bmw/3-series Seventh generation · US sedan; bmw/5-series F10 |
+| power_hp | engine not stated; EPA lists several engines | 15 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/3-series MY2015 (teoalida-ymmt-3e62c6fabe); bmw/3-series MY2017 (teoalida-ymmt-478df663bf) |
+| power_rpm | engine not stated; EPA lists several engines | 15 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/3-series MY2015 (teoalida-ymmt-3e62c6fabe); bmw/3-series MY2017 (teoalida-ymmt-478df663bf) |
+| torque_rpm | engine not stated; EPA lists several engines | 15 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/3-series MY2015 (teoalida-ymmt-3e62c6fabe); bmw/3-series MY2017 (teoalida-ymmt-478df663bf) |
 | octane_aki | one document gives N values: ['N', 'N', 'N'] | 15 | bmw/x6 MY2020 (mcum-x6-4-door-2020-2025); bmw/x6 MY2021 (mcum-x6-4-door-2020-2025); bmw/x6 MY2022 (mcum-x6-4-door-2020-2025) |
+| engine_oil_oem_approval | engine not stated; EPA lists several engines | 12 | bmw/3-series MY2014 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2015 (mcum-3-series-4-door-2013-2019); bmw/3-series MY2016 (mcum-3-series-4-door-2013-2019) |
 | curb_weight_kg | one document gives N values: ['N', 'N'] | 12 | bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4); bmw/3-series MY2017 (press-bmwgroup-3-series-2017-839132a4) |
 | front_suspension | not found unambiguously in the available US press specification pages | 9 | bmw/3-series F30; bmw/5-series F10; bmw/7-series US2014-2015 |
 | rear_suspension | not found unambiguously in the available US press specification pages | 9 | bmw/3-series F30; bmw/5-series F10; bmw/7-series US2014-2015 |
 | wheel_size_in | value N outside the validator range; not used | 7 | bmw/3-series press-bmwgroup-3-series-2026-ed050784 p.1; bmw/m5 press-bmwgroup-m5-2021-9fa55a65 p.1; bmw/m5 press-bmwgroup-m5-2021-9fa55a65 p.1 |
-| engine_oil_capacity_l | not found unambiguously in the available US owner's manuals | 7 | bmw/5-series US2024+; bmw/7-series US2014-2015; bmw/7-series US2016-2022 |
-| engine_oil_viscosity | not found unambiguously in the available US owner's manuals | 7 | bmw/5-series US2024+; bmw/7-series US2014-2015; bmw/7-series US2016-2022 |
-| coolant | not found unambiguously in the available US owner's manuals | 7 | bmw/5-series US2024+; bmw/7-series US2014-2015; bmw/7-series US2016-2022 |
-| transmission_fluid | not found unambiguously in the available US owner's manuals | 7 | bmw/5-series US2024+; bmw/7-series US2014-2015; bmw/7-series US2016-2022 |
-| brake_fluid | not found unambiguously in the available US owner's manuals | 7 | bmw/5-series US2024+; bmw/7-series US2014-2015; bmw/7-series US2016-2022 |
 | cargo_l | not found unambiguously in the available US press specification pages | 7 | bmw/x5 F15; bmw/x6 US2015-2019; bmw/x6 US2020+ |
 | wheel_size_in | one document gives N values: ['N', 'N', 'N'] | 6 | bmw/3-series MY2019 (press-bmwgroup-3-series-2019-d96bbe05); bmw/x5 MY2020 (press-bmwgroup-x5-2020-f241f74b); bmw/x5 MY2021 (press-bmwgroup-x5-2021-6942a683) |
 | coolant_capacity_l | value N outside the validator range; not used | 6 | bmw/5-series mcum-5-series-4-door-2024-2025 p.664; bmw/x5 carmans-2023-bmw-x5 p.390; bmw/x6 carmans-2023-bmw-x6 p.378 |
-| engine_oil_oem_approval | engine not stated; EPA lists several engines | 6 | bmw/7-series MY2023 (carmans-2023-bmw-7); bmw/x6 MY2015 (mcum-x6-4-door-2015-2019); bmw/x6 MY2016 (mcum-x6-4-door-2015-2019) |
+| maintenance | the manual copy does not describe the CBS jobs (or the page is missing) | 6 | bmw/5-series MY2024-2025 (mcum-5-series-4-door-2024-2025); bmw/7-series MY2014-2014 (mcum-7-series-4-door-2008-2014); bmw/7-series MY2022-2025 (mcum-7-series-4-door-2022-2025) |
+| engine_oil_capacity_l | no US owner's manual for these years | 6 | bmw/x5 F15; bmw/x5 US2019+; bmw/x6 US2014-2014 |
+| engine_oil_viscosity | no US owner's manual for these years | 6 | bmw/x5 F15; bmw/x5 US2019+; bmw/x6 US2014-2014 |
+| coolant | no US owner's manual for these years | 6 | bmw/x5 F15; bmw/x5 US2019+; bmw/x6 US2014-2014 |
+| transmission_fluid | no US owner's manual for these years | 6 | bmw/x5 F15; bmw/x5 US2019+; bmw/x6 US2014-2014 |
+| brake_fluid | no US owner's manual for these years | 6 | bmw/x5 F15; bmw/x5 US2019+; bmw/x6 US2014-2014 |
 | torque_lb_ft | one document gives N values: ['N', 'N'] | 5 | bmw/3-series MY2014 (press-bmwgroup-3-series-2014-75739985); bmw/3-series MY2021 (press-bmwgroup-3-series-2021-c00ec7aa); bmw/5-series MY2021 (press-bmwgroup-5-series-2021-dfae6ab7) |
 | wheel_size_in | one document gives N values: ['N', 'N'] | 5 | bmw/3-series MY2014 (press-bmwgroup-3-series-2014-75739985); bmw/5-series MY2024 (press-bmwgroup-5-series-2024-8292b63c); bmw/x5 MY2020 (press-bmwgroup-x5-2020-f241f74b) |
 | power_hp | one document gives N values: ['N', 'N'] | 4 | bmw/3-series MY2014 (press-bmwgroup-3-series-2014-75739985); bmw/3-series MY2021 (press-bmwgroup-3-series-2021-c00ec7aa); bmw/5-series MY2018 (press-bmwgroup-5-series-2018-098c0c80) |
@@ -85,10 +89,7 @@
 | transmission_description | one document gives N values: ['"NHP"', '"automatic"'] | 2 | bmw/3-series MY2019 (press-bmwgroup-3-series-2019-d96bbe05); bmw/x5 MY2019 (press-bmwgroup-x5-2019-fca9ffa5) |
 | wheel_size_in | one document gives N values: ['N', 'N', 'N', 'N'] | 2 | bmw/3-series MY2019 (press-bmwgroup-3-series-2019-d96bbe05); bmw/x5 MY2019 (press-bmwgroup-x5-2019-fca9ffa5) |
 | transmission_description | one document gives N values: ['"GANPNHZ"', '"automatic"'] | 2 | bmw/3-series MY2021 (press-bmwgroup-3-series-2021-c00ec7aa); bmw/x5 MY2021 (press-bmwgroup-x5-2021-6942a683) |
-| power_hp | engine not stated; EPA lists several engines | 2 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/7-series MY2017 (press-bmwgroup-7-series-2017-c6eb54ce) |
-| power_rpm | engine not stated; EPA lists several engines | 2 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/7-series MY2017 (press-bmwgroup-7-series-2017-c6eb54ce) |
 | torque_lb_ft | engine not stated; EPA lists several engines | 2 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/7-series MY2017 (press-bmwgroup-7-series-2017-c6eb54ce) |
-| torque_rpm | engine not stated; EPA lists several engines | 2 | bmw/3-series MY2026 (press-bmwgroup-3-series-2026-ed050784); bmw/7-series MY2017 (press-bmwgroup-7-series-2017-c6eb54ce) |
 | power_hp | no US press specification page for these years | 2 | bmw/7-series US2023+; bmw/x6 US2014-2014 |
 | torque_lb_ft | no US press specification page for these years | 2 | bmw/7-series US2023+; bmw/x6 US2014-2014 |
 | tires | no US press specification page for these years | 2 | bmw/7-series US2023+; bmw/x6 US2014-2014 |
@@ -169,10 +170,10 @@
 
 ## 4. Конфликты источников
 
-Конфликтов: 227. По решениям:
+Конфликтов: 265. По решениям:
 
 - official value is the main value; the vPIC Canadian value stays a SECO: 226
-- sources of the same rank disagree; field not shown: 1
+- sources of the same rank disagree; field not shown: 39
 
 | Линейка | Область | Поле | Оставлено | Другие значения | Решение |
 |---|---|---|---|---|---|
@@ -235,6 +236,19 @@
 | 3 Series | bmw/3-series Seventh generation · US sedan MY2026 | length_mm | [4722.0] | [4710] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 3 Series | bmw/3-series Seventh generation · US sedan MY2025 | track_rear_mm | [1567.0] | [1600] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 3 Series | bmw/3-series Seventh generation · US sedan MY2026 | track_rear_mm | [1567.0] | [1600] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
+| 5 Series | bmw/5-series G30 MY2017 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2018 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2019 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2020 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2021 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2022 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series G30 MY2023 | platform_code | None | ['G30, G31', 'G30, G31, G38'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series US2024+ MY2024 | platform_code | None | ['G60, G61', 'G60, G61, G68'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series US2024+ MY2025 | platform_code | None | ['G60, G61', 'G60, G61, G68'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series US2024+ MY2026 | platform_code | None | ['G60, G61', 'G60, G61, G68'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series F10 MY2014 | platform_code | None | ['F10, F11', 'F10, F11, F18'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series F10 MY2015 | platform_code | None | ['F10, F11', 'F10, F11, F18'] | sources of the same rank disagree; field not shown |
+| 5 Series | bmw/5-series F10 MY2016 | platform_code | None | ['F10, F11', 'F10, F11, F18'] | sources of the same rank disagree; field not shown |
 | 5 Series | bmw/5-series F10 MY2015 | length_mm | [4912.0, 5006.0] | [4900] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 5 Series | bmw/5-series F10 MY2015 | length_mm | [4912.0, 5006.0] | [4900] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 5 Series | bmw/5-series F10 MY2015 | length_mm | [4912.0, 5006.0] | [4900] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
@@ -284,6 +298,13 @@
 | 5 Series | bmw/5-series US2024+ MY2024 | curb_weight_kg | [1833.0, 1886.0] | [2280] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 5 Series | bmw/5-series US2024+ MY2024 | track_front_mm | [1623.0] | [1640] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 5 Series | bmw/5-series US2024+ MY2024 | track_rear_mm | [1656.0] | [1620] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
+| 7 Series | bmw/7-series US2016-2022 MY2016 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2017 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2018 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2019 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2020 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2021 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
+| 7 Series | bmw/7-series US2016-2022 MY2022 | platform_code | None | ['G11, G12', 'G10, G11'] | sources of the same rank disagree; field not shown |
 | 7 Series | bmw/7-series US2014-2015 MY2015 | track_rear_mm | [1651.0] | [1630] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 7 Series | bmw/7-series US2014-2015 MY2015 | track_rear_mm | [1651.0] | [1630] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 7 Series | bmw/7-series US2014-2015 MY2015 | track_rear_mm | [1651.0] | [1630] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
@@ -297,6 +318,19 @@
 | 7 Series | bmw/7-series US2016-2022 MY2017 | wheelbase_mm | [3211.0] | [3070] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 7 Series | bmw/7-series US2016-2022 MY2018 | wheelbase_mm | [3211.0] | [3070] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | 7 Series | bmw/7-series US2016-2022 MY2020 | wheelbase_mm | [3211.0] | [3070] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
+| X5 | bmw/x5 F15 MY2014 | platform_code | None | ['F15', 'F15, F85'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 F15 MY2015 | platform_code | None | ['F15', 'F15, F85'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 F15 MY2016 | platform_code | None | ['F15', 'F15, F85'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 F15 MY2017 | platform_code | None | ['F15', 'F15, F85'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 F15 MY2018 | platform_code | None | ['F15', 'F15, F85'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2019 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2020 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2024 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2025 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2026 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2021 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2022 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
+| X5 | bmw/x5 US2019+ MY2023 | platform_code | None | ['G05', 'G05, G18, F95'] | sources of the same rank disagree; field not shown |
 | X5 | bmw/x5 F15 MY2014 | length_mm | [4907.0] | [4890] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X5 | bmw/x5 F15 MY2015 | length_mm | [4907.0] | [4890] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X5 | bmw/x5 F15 MY2016 | length_mm | [4907.0] | [4890] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
@@ -325,6 +359,11 @@
 | X5 | bmw/x5 US2019+ MY2021 | curb_weight_kg | [2573.0] | [2258] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X5 | bmw/x5 US2019+ MY2021 | curb_weight_kg | [2573.0] | [2339] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X5 | bmw/x5 US2019+ MY2021 | curb_weight_kg | [2573.0] | [2435] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
+| X6 | bmw/x6 US2015-2019 MY2015 | platform_code | None | ['F16', 'F16, F86'] | sources of the same rank disagree; field not shown |
+| X6 | bmw/x6 US2015-2019 MY2016 | platform_code | None | ['F16', 'F16, F86'] | sources of the same rank disagree; field not shown |
+| X6 | bmw/x6 US2015-2019 MY2017 | platform_code | None | ['F16', 'F16, F86'] | sources of the same rank disagree; field not shown |
+| X6 | bmw/x6 US2015-2019 MY2018 | platform_code | None | ['F16', 'F16, F86'] | sources of the same rank disagree; field not shown |
+| X6 | bmw/x6 US2015-2019 MY2019 | platform_code | None | ['F16', 'F16, F86'] | sources of the same rank disagree; field not shown |
 | X6 | bmw/x6 US2015-2019 MY2015 | height_mm | [1689.0] | [1700] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X6 | bmw/x6 US2015-2019 MY2015 | length_mm | [4923.0] | [4910] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
 | X6 | bmw/x6 US2015-2019 MY2017 | length_mm | [4923.0] | [4910] | official value is the main value; the vPIC Canadian value stays a SECONDARY note (section 5.2) |
@@ -406,17 +445,17 @@
 
 ## 5. Выборочная перепроверка
 
-Проверено 559 записей (10% каждой линейки), расхождений 0.
-- 3-series: 111 проверено, 0 расхождений
-- 5-series: 118 проверено, 0 расхождений
-- 7-series: 91 проверено, 0 расхождений
-- m3: 48 проверено, 0 расхождений
-- m5: 24 проверено, 0 расхождений
-- x5: 82 проверено, 0 расхождений
+Проверено 638 записей (10% каждой линейки), расхождений 0.
+- 3-series: 174 проверено, 0 расхождений
+- 5-series: 121 проверено, 0 расхождений
+- 7-series: 93 проверено, 0 расхождений
+- m3: 53 проверено, 0 расхождений
+- m5: 25 проверено, 0 расхождений
+- x5: 84 проверено, 0 расхождений
 - x5-m: 16 проверено, 0 расхождений
-- x6: 33 проверено, 0 расхождений
+- x6: 35 проверено, 0 расхождений
 - x6-m: 17 проверено, 0 расхождений
-- x7: 19 проверено, 0 расхождений
+- x7: 20 проверено, 0 расхождений
 
 ## Поколения: свидетельства прессы и решения детектора
 
@@ -440,19 +479,18 @@
 
 ## Изменения ранее записанных строк (последняя загрузка)
 
-- X5: проблема x5-F15-tsb-battery-drain обновлена {"evidence_ids": [7, 8], "note": [null, "CarComplaints.com \"Will Not Start\" (owner reports): MY2015: #3, average cost to fix N/A, average mileage 5,000 mi"]}
-- X5: проблема x5-F15-tsb-water-leak обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [3, 5], "note": [null, "CarComplaints.com \"Water Leaking Into Interior\" (owner reports): MY2014: #2,
+- нет
 
 ## Загрузка
 
-Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: ['m5']
-- bmw/3-series: --prune-stale, код 0, {"raw_documents_seen": 139, "source_records_new": 18, "te_existing": 1647, "te_new_GENERATION": 738, "te_new_ENGINE": 7, "configurations": 89, "configurations_research_only": 89, "issues_existing": 61}
-- bmw/5-series: --prune-stale, код 0, {"raw_documents_seen": 117, "source_records_new": 10, "te_existing": 1639, "te_new_GENERATION": 730, "te_new_ENGINE": 7, "configurations": 87, "configurations_linked": 19, "configurations_research_only": 68, "issues_existing": 66}
-- bmw/7-series: --prune-stale, код 0, {"raw_documents_seen": 97, "source_records_new": 14, "te_existing": 1139, "te_new_GENERATION": 690, "te_new_ENGINE": 7, "configurations": 62, "configurations_research_only": 62, "issues_existing": 52}
-- bmw/x5: --prune-stale, код 0, {"raw_documents_seen": 75, "source_records_new": 13, "te_existing": 961, "te_new_GENERATION": 593, "configurations": 51, "configurations_research_only": 44, "configurations_linked": 7, "issues_existing": 76, "issues_updated": 2}
-- bmw/x6: --prune-stale, код 0, {"raw_documents_seen": 51, "source_records_new": 5, "te_existing": 610, "te_new_GENERATION": 205, "te_new_ENGINE": 7, "configurations": 33, "configurations_research_only": 33, "issues_existing": 62}
-- bmw/x7: --prune-stale, код 0, {"raw_documents_seen": 34, "source_records_new": 5, "te_existing": 389, "te_new_GENERATION": 101, "configurations": 16, "configurations_research_only": 16, "issues_existing": 42}
-- bmw/m3: --prune-stale, код 0, {"raw_documents_seen": 40, "source_records_new": 10, "te_existing": 352, "te_new_GENERATION": 427, "configurations": 25, "configurations_research_only": 25, "issues_existing": 19}
-- bmw/m5: --replace-own, код 0, {"replaced_own_te": 336, "replaced_own_issues": 34, "raw_documents_seen": 46, "source_records_new": 9, "te_new_GENERATION": 345, "te_new_CONFIGURATION": 186, "configurations": 14, "configurations_research_only": 14, "issues_new": 37}
-- bmw/x5-m: --prune-stale, код 0, {"raw_documents_seen": 32, "source_records_new": 5, "te_existing": 182, "te_new_ENGINE": 14, "te_new_GENERATION": 125, "configurations": 11, "configurations_research_only": 11, "issues_existing": 9}
-- bmw/x6-m: --prune-stale, код 0, {"raw_documents_seen": 28, "source_records_new": 3, "te_existing": 219, "te_new_GENERATION": 125, "te_new_ENGINE": 14, "configurations": 13, "configurations_research_only": 13, "issues_existing": 8}
+Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
+- bmw/3-series: --prune-stale, код 0, {"raw_documents_seen": 212, "te_existing": 3017, "configurations": 89, "configurations_research_only": 89, "issues_existing": 61, "maintenance_new": 6}
+- bmw/5-series: --prune-stale, код 0, {"raw_documents_seen": 125, "te_existing": 2410, "configurations": 87, "configurations_linked": 19, "configurations_research_only": 68, "issues_existing": 66, "maintenance_new": 9}
+- bmw/7-series: --prune-stale, код 0, {"raw_documents_seen": 104, "te_existing": 1861, "configurations": 62, "configurations_research_only": 62, "issues_existing": 52, "maintenance_new": 6}
+- bmw/x5: --prune-stale, код 0, {"raw_documents_seen": 79, "te_existing": 1580, "configurations": 51, "configurations_research_only": 44, "configurations_linked": 7, "issues_existing": 76}
+- bmw/x6: --prune-stale, код 0, {"raw_documents_seen": 58, "te_existing": 844, "configurations": 33, "configurations_research_only": 33, "issues_existing": 62, "maintenance_new": 3}
+- bmw/x7: --prune-stale, код 0, {"raw_documents_seen": 36, "te_existing": 499, "configurations": 16, "configurations_research_only": 16, "issues_existing": 42}
+- bmw/m3: --prune-stale, код 0, {"raw_documents_seen": 58, "te_existing": 828, "configurations": 25, "configurations_research_only": 25, "issues_existing": 19, "maintenance_new": 6}
+- bmw/m5: --prune-stale, код 0, {"raw_documents_seen": 48, "te_existing": 538, "configurations": 14, "configurations_research_only": 14, "issues_existing": 37, "maintenance_new": 6}
+- bmw/x5-m: --prune-stale, код 0, {"raw_documents_seen": 32, "te_existing": 321, "configurations": 11, "configurations_research_only": 11, "issues_existing": 9}
+- bmw/x6-m: --prune-stale, код 0, {"raw_documents_seen": 28, "te_existing": 358, "configurations": 13, "configurations_research_only": 13, "issues_existing": 8}

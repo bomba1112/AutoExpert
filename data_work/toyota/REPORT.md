@@ -1,6 +1,6 @@
 # Toyota — отчёт по базе технических данных US
 
-Сформировано 2026-10-02T20:13:36+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -28,7 +28,7 @@
 
 | Таблица | До пакета | После |
 |---|---|---|
-| technical_evidence | 1031 | 6322 |
+| technical_evidence | 1031 | 6717 |
 | known_issues | 14 | 227 |
 | maintenance_schedule_items | 0 | 0 |
 
@@ -318,10 +318,10 @@
 
 ## 5. Выборочная перепроверка
 
-Проверено 224 записей (10% каждой линейки), расхождений 0.
+Проверено 263 записей (10% каждой линейки), расхождений 0.
 - corolla: 60 проверено, 0 расхождений
 - highlander: 71 проверено, 0 расхождений
-- prius: 32 проверено, 0 расхождений
+- prius: 71 проверено, 0 расхождений
 - rav4: 61 проверено, 0 расхождений
 
 ## Поколения: свидетельства прессы и решения детектора
@@ -337,20 +337,11 @@
 
 - Camry: torque_lb_ft = 182 (MY[2021, 2021]) — deleted (superseded by the current staging scope)
 - Camry: torque_lb_ft = 185 (MY[2021, 2021]) — deleted (superseded by the current staging scope)
-- Corolla: проблема corolla-XI-complaints-brake-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 3], "note": [null, "CarComplaints.com \"Premature Brake Failure\" (owner reports): MY2017: #1, ave
-- RAV4: проблема rav4-IV-tsb-infotainment обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [11, 12], "note": [null, "CarComplaints.com \"Infotainment System Stopped Working\" (owner reports): M
-- RAV4: проблема rav4-IV-tsb-paint обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [43, 44], "note": [null, "CarComplaints.com \"Clear Coat Is Bubbling\" (owner reports): MY2015: #3, av
-- RAV4: проблема rav4-V (2019 redesign, TNGA)-tsb-hesitation обновлена {"evidence_ids": [6, 7], "note": [null, "CarComplaints.com \"Hesitates And Lurches At Slower Speeds\" (owner reports): MY2019: #1, average cost to fix $20,000, 
-- RAV4: проблема rav4-V (2019 redesign, TNGA)-tsb-misfire обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [6, 7], "note": [null, "CarComplaints.com \"Misfire, Engine Light On, Surging\" (owner reports): MY202
-- RAV4: проблема rav4-IV-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 3], "note": [null, "CarComplaints.com \"Transmission Slipping\" (owner reports): MY2014: #3, avera
-- Highlander: проблема highlander-III-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Transmission Failure\" (owner reports): MY2017: #1, averag
-- Highlander: проблема highlander-IV-complaints-transmission-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Transmission Slips Out Of Gear\" (owner reports): MY2021: 
-- Prius: проблема prius-ZVW30-complaints-brake-failure обновлена {"probability": ["OCCASIONAL", "COMMON"], "evidence_ids": [1, 2], "note": [null, "CarComplaints.com \"Brakes Failed\" (owner reports): MY2014: #3, average cost 
 
 ## Загрузка
 
 Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- toyota/corolla: --prune-stale, код 0, {"raw_documents_seen": 107, "source_records_new": 46, "te_existing": 1182, "te_new_GENERATION": 419, "configurations": 59, "configurations_research_only": 57, "configurations_linked": 2, "issues_existing": 43, "issues_updated": 1, "issues_new": 1}
-- toyota/rav4: --prune-stale, код 0, {"raw_documents_seen": 113, "source_records_new": 46, "te_existing": 983, "te_new_GENERATION": 402, "te_new_ENGINE": 10, "configurations": 38, "configurations_research_only": 36, "configurations_linked": 2, "issues_existing": 66, "issues_updated": 5}
-- toyota/highlander: --prune-stale, код 0, {"raw_documents_seen": 99, "source_records_new": 37, "te_existing": 991, "te_new_GENERATION": 535, "configurations": 49, "configurations_linked": 6, "configurations_research_only": 43, "issues_existing": 64, "issues_updated": 2}
-- toyota/prius: --prune-stale, код 0, {"raw_documents_seen": 68, "source_records_new": 24, "te_existing": 524, "te_new_GENERATION": 219, "te_new_ENGINE": 26, "configurations": 21, "configurations_research_only": 21, "issues_existing": 39, "issues_updated": 1}
+- toyota/corolla: --prune-stale, код 0, {"raw_documents_seen": 107, "te_existing": 1601, "configurations": 59, "configurations_research_only": 57, "configurations_linked": 2, "issues_existing": 44}
+- toyota/rav4: --prune-stale, код 0, {"raw_documents_seen": 113, "te_existing": 1395, "configurations": 38, "configurations_research_only": 36, "configurations_linked": 2, "issues_existing": 66}
+- toyota/highlander: --prune-stale, код 0, {"raw_documents_seen": 99, "te_existing": 1526, "configurations": 49, "configurations_linked": 6, "configurations_research_only": 43, "issues_existing": 64}
+- toyota/prius: --prune-stale, код 0, {"raw_documents_seen": 81, "source_records_new": 13, "te_existing": 769, "te_new_GENERATION": 395, "configurations": 21, "configurations_research_only": 21, "issues_existing": 39}
