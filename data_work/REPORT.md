@@ -1,6 +1,6 @@
 # Итоговый отчёт: база технических данных US (все марки Приложения A)
 
-Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py; отчёты по маркам — data_work/<марка>/REPORT.md.
+Сформировано 2026-10-03T20:46:07+00:00 скриптом scripts/build_us_report.py; отчёты по маркам — data_work/<марка>/REPORT.md.
 
 ## 1. Матрица покрытия
 
@@ -19,15 +19,15 @@
 | Ford | загружена | 5174f4e data(us): Ford — Fusion maintenance from the factory owner's manuals (stage B) |
 | Lexus | загружена | db1fbdc data(us): Lexus — owner's manual facts, press specifications, CarComplaints (secon |
 | Honda | загружена | ac88437 data(us): Honda — Maintenance Minder and fixed items from the US owner's manuals ( |
-| Nissan | загружена | a1bbe2b data(us): Nissan — maintenance from the official US service guides and owner's man |
+| Nissan | загружена | 5d19721 fix(us): Nissan manifest typo; Altima rebuilt with the official 2017 manual (owner |
 | Land Rover | загружена | 93bc408 data(us): Land Rover — maintenance: no schedule on disk (gaps with evidence) |
 | Infiniti | загружена до решения об остановке, оставлена как есть | f014848 data(us): Infiniti — maintenance from the official US service guides and owner's m |
-| Cadillac | не загружена (решение владельца) | a72994d chore(us-batch): prepared extraction and staging for Cadillac, Jeep, Mitsubishi (n |
-| Jeep | не загружена (решение владельца) | 692e7a6 chore(us-batch): scripts and staging snapshot before the next load pass |
+| Cadillac | загружена | a66ca89 data(us): Cadillac — first load: base layer, manual facts, press, CarComplaints, m |
+| Jeep | загружена | 94e7925 data(us): Jeep — first load: base layer, manual facts, CarComplaints, maintenance  |
 | Audi | загружена | dda3a80 fix(us): Audi maintenance — "Except ..." applicability and "First X miles and ther |
 | Volkswagen | загружена | 1d8eadc data(us): Audi — maintenance cards and OCR of the US image editions (Q7, Q3, Q5);  |
-| Mitsubishi | не загружена (решение владельца) | 692e7a6 chore(us-batch): scripts and staging snapshot before the next load pass |
-| Tesla | загружена | 4185ccc data(us): Tesla — service intervals from the North American owner's manuals (stage |
+| Mitsubishi | загружена | 7479320 data(us): Mitsubishi — first load: base layer, press, CarComplaints, maintenance ( |
+| Tesla | загружена | 60e25a0 data(us): Tesla — "North America" editions count as US (owner decision); mcum clas |
 
 ### Hyundai
 
@@ -259,11 +259,28 @@ _Загружена до получения решения владельца о
 
 ### Cadillac
 
-Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/cadillac/staging), в рабочей БД строк этого конвейера нет.
+| Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CTS | III | 2014–2019 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| SRX | 2010-REDESIGN | 2014–2016 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Escalade | US2014-2014 | 2014–2014 | ◐ | ◐ | ● | ● | ○ | ◐ | ◐ | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Escalade | IV | 2015–2020 | ◐ | ◐ | ● | ● | ○ | ◐ | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Escalade | US2021+ | 2021–2026 | ◐ | ◐ | ● | ● | ● | ◐ | ● | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● |
+
+Итого ячеек: заполнено 34, частично 29, нет 12, неприменимо 0.
 
 ### Jeep
 
-Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/jeep/staging), в рабочей БД строк этого конвейера нет.
+| Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Grand Cherokee | WK-2011 | 2014–2021 | ◐ | ◐ | ● | ● | ○ | ● | ● | ● | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Grand Cherokee | US2022+ | 2022–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Cherokee | KL | 2014–2023 | ◐ | ◐ | ● | ● | ○ | ● | ● | ● | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Cherokee | US2026+ | 2026–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Compass | MK | 2014–2016 | ◐ | ◐ | ● | ● | ○ | ● | ● | ◐ | ● | ○ | ◐ | ○ | ● | ● | ● |
+| Compass | MP | 2017–2026 | ◐ | ◐ | ● | ● | ○ | ● | ● | ● | ● | ○ | ◐ | ○ | ● | ● | ● |
+
+Итого ячеек: заполнено 51, частично 21, нет 18, неприменимо 0.
 
 ### Audi
 
@@ -308,18 +325,24 @@ _Загружена до получения решения владельца о
 
 ### Mitsubishi
 
-Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/mitsubishi/staging), в рабочей БД строк этого конвейера нет.
+| Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Outlander | III | 2014–2021 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+| Outlander | US2022+ | 2022–2026 | ● | ◐ | ● | ● | ○ | ◐ | ○ | ○ | ● | ○ | ◐ | ◐ | ● | ● | ● |
+| Outlander Sport | I-US-2011 | 2014–2026 | ● | ◐ | ● | ● | ● | ◐ | ○ | ○ | ● | ◐ | ● | ● | ● | ● | ● |
+
+Итого ячеек: заполнено 27, частично 10, нет 8, неприменимо 0.
 
 ### Tesla
 
 | Линейка | Поколение | Годы | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Model 3 | I | 2017–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ○ | ○ | ◐ | ○ | ● | ● | ● |
-| Model Y | I | 2020–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Model Y | I | 2020–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ◐ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
 | Model S | I | 2014–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
-| Model X | I | 2016–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ○ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
+| Model X | I | 2016–2026 | ◐ | ◐ | ● | ● | ○ | ● | — | ◐ | ◐ | ○ | ◐ | ○ | ● | ● | ● |
 
-Итого ячеек: заполнено 24, частично 15, нет 17, неприменимо 4.
+Итого ячеек: заполнено 24, частично 17, нет 15, неприменимо 4.
 
 ## 2. Строки по таблицам: до и после
 
@@ -327,13 +350,13 @@ _Загружена до получения решения владельца о
 |---|---|---|---|
 | vehicle_makes | 32 | 31 | 31 |
 | vehicle_models | 574 | 573 | 579 |
-| vehicle_generations | 702 | 700 | 787 |
+| vehicle_generations | 702 | 700 | 792 |
 | vehicle_variants | 15592 | 15589 | 15589 |
-| technical_evidence | 273086 | 274110 | 359922 |
-| known_issues | 2 | 14 | 3648 |
-| maintenance_schedule_items | None | 0 | 4598 |
-| source_records | 24539 | 24651 | 30096 |
-| raw_documents | 492 | 608 | 6109 |
+| technical_evidence | 273086 | 274110 | 368210 |
+| known_issues | 2 | 14 | 4107 |
+| maintenance_schedule_items | None | 0 | 5897 |
+| source_records | 24539 | 24651 | 30616 |
+| raw_documents | 492 | 608 | 6626 |
 | knowledge_sources | 45 | 45 | 49 |
 
 По маркам (technical_evidence / known_issues / maintenance_schedule_items):
@@ -352,12 +375,12 @@ _Загружена до получения решения владельца о
 | Nissan | 0 / 0 / 0 | 4154 / 211 / 748 |
 | Land Rover | 0 / 0 / 0 | 3489 / 188 / 0 |
 | Infiniti | 0 / 0 / 0 | 1940 / 74 / 447 |
-| Cadillac | 0 / 0 / 0 | 0 / 0 / 0 |
-| Jeep | 0 / 0 / 0 | 0 / 0 / 0 |
+| Cadillac | 0 / 0 / 0 | 2594 / 151 / 264 |
+| Jeep | 0 / 0 / 0 | 3887 / 244 / 451 |
 | Audi | 0 / 0 / 0 | 8161 / 384 / 690 |
 | Volkswagen | 0 / 0 / 0 | 5592 / 304 / 274 |
-| Mitsubishi | 0 / 0 / 0 | 0 / 0 / 0 |
-| Tesla | 0 / 0 / 0 | 1568 / 132 / 32 |
+| Mitsubishi | 0 / 0 / 0 | 1805 / 64 / 584 |
+| Tesla | 0 / 0 / 0 | 1570 / 132 / 32 |
 
 ## 3. Журнал пробелов
 
@@ -516,16 +539,16 @@ _Загружена до получения решения владельца о
 
 ### Nissan
 
-Записей в журнале пробелов: 464 (по полю и причине):
+Записей в журнале пробелов: 467 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 122 | nissan-altima-us-2014-2.5l-4cyl-ice-a-variable-gear-ratios-fwd; nissan-altima-us-2014-3.5l-6cyl-ice-a-av-s7-fwd; nissan-altima-us-2015-2.5l-4cyl-ice-a-variable-gear-ratios-fwd |
 | fuel_tank_l | value N outside the validator range; not used | 72 | nissan/altima carmans-2014-nissan-altima-sedan p.92; nissan/altima carmans-2015-nissan-altima-sedan p.97; nissan/altima carmans-2018-nissan-altima-sedan p.108 |
 | engine_oil_capacity_l | engine not stated; EPA lists several engines | 29 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
-| coolant_capacity_l | engine not stated; EPA lists several engines | 24 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan) |
-| engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 19 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
-| engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 17 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2016 (official-d4f834985984) |
+| coolant_capacity_l | engine not stated; EPA lists several engines | 25 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan) |
+| engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 20 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
+| engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 18 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2017 (official-9809be600e8e) |
 | octane_aki | one document gives N values: ['N', 'N'] | 15 | nissan/sentra MY2017 (carmans-2017-nissan-sentra); nissan/sentra MY2018 (carmans-2018-nissan-sentra); nissan/sentra MY2019 (carmans-2019-nissan-sentra) |
 | maintenance:schedule | the owner's manual prints no maintenance schedule; it refers to the separate "Service and Maintenance Guide" | 14 | nissan/altima MY2014 (official-338af110aa8d); nissan/altima MY2015 (official-003558d62f6d); nissan/altima MY2016 (official-d4f834985984) |
 | engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N'] | 12 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/sentra MY2026 (official-511ec26d6b9d) |
@@ -565,6 +588,40 @@ _Загружена до получения решения владельца о
 | engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 7 | infiniti/q50 MY2018 (official-859f6f6c908a); infiniti/qx60 MY2016 (official-1d31600339bc); infiniti/qx60 MY2015 (official-273175b7459f) |
 | curb_weight_kg | one document gives N values: ['N', 'N', 'N'] | 7 | infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16); infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16); infiniti/fx-qx70 MY2014 (press-infinitinews-fx-qx70-2014-bf283b16) |
 
+### Cadillac
+
+Записей в журнале пробелов: 269 (по полю и причине):
+
+| Поле | Причина | Записей | Примеры |
+|---|---|---|---|
+| engine_family_key | factory engine code not in EPA; filled only from a source that names it | 87 | cadillac-cts-us-2014-2.0l-4cyl-turbo-ice-a-s6-awd; cadillac-cts-us-2014-2.0l-4cyl-turbo-ice-a-s6-rwd; cadillac-cts-us-2014-3.0l-6cyl-ice-a-s6-awd |
+| engine_oil_oem_approval | engine not stated; EPA lists several engines | 22 | cadillac/cts MY2014 (carmans-2014-cadillac-cts); cadillac/cts MY2015 (carmans-2015-cadillac-cts); cadillac/cts MY2016 (carmans-2016-cadillac-cts) |
+| fuel_tank_l | one document gives N values: ['N', 'N'] | 21 | cadillac/escalade MY2014 (carmans-2014-cadillac-escalade-esv); cadillac/escalade MY2015 (carmans-2015-cadillac-escalade); cadillac/escalade MY2016 (carmans-2016-cadillac-escalade) |
+| engine_oil_viscosity | engine not stated; EPA lists several engines | 16 | cadillac/cts MY2014 (carmans-2014-cadillac-cts); cadillac/cts MY2015 (carmans-2015-cadillac-cts); cadillac/cts MY2016 (carmans-2016-cadillac-cts) |
+| brake_fluid | one document gives N values: ['"DOT N"', '"DOT N"'] | 13 | cadillac/cts MY2014 (carmans-2014-cadillac-cts); cadillac/cts MY2015 (carmans-2015-cadillac-cts); cadillac/cts MY2016 (carmans-2016-cadillac-cts) |
+| coolant_capacity_l | value N outside the validator range; not used | 10 | cadillac/cts carmans-2018-cadillac-cts p.354; cadillac/cts carmans-2018-cadillac-cts p.354; cadillac/cts carmans-2019-cadillac-cts p.360 |
+| coolant_capacity_l | one document gives N values: ['N', 'N'] | 8 | cadillac/cts MY2018 (carmans-2018-cadillac-cts); cadillac/cts MY2019 (carmans-2019-cadillac-cts); cadillac/cts MY2019 (official-52554d6eb793) |
+| engine_oil_capacity_l | one document gives N values: ['N', 'N'] | 5 | cadillac/cts MY2017 (carmans-2017-cadillac-cts); cadillac/cts MY2018 (carmans-2018-cadillac-cts); cadillac/cts MY2016 (official-7001f7da5e90) |
+| fuel_tank_l | value N outside the validator range; not used | 5 | cadillac/escalade carmans-2014-cadillac-escalade-esv p.339; cadillac/escalade official-2d17cb7dff62 p.438; cadillac/escalade official-2d17cb7dff62 p.438 |
+| coolant | not found unambiguously in the available US owner's manuals | 4 | cadillac/cts III; cadillac/srx 2010-REDESIGN; cadillac/escalade IV |
+
+### Jeep
+
+Записей в журнале пробелов: 410 (по полю и причине):
+
+| Поле | Причина | Записей | Примеры |
+|---|---|---|---|
+| engine_family_key | factory engine code not in EPA; filled only from a source that names it | 179 | jeep-grand-cherokee-us-2014-3.0l-6cyl-turbo-diesel-a-8-spd-4wd; jeep-grand-cherokee-us-2014-3.0l-6cyl-turbo-diesel-a-8-spd-rwd; jeep-grand-cherokee-us-2014-3.6l-6cyl-ice-a-8-spd-4wd |
+| coolant_capacity_l | one document gives N values: ['N', 'N'] | 28 | jeep/grand-cherokee MY2022 (official-0a8be9d59112); jeep/grand-cherokee MY2022 (official-0a8be9d59112); jeep/grand-cherokee MY2021 (official-279827ad7254) |
+| engine_oil_oem_approval | engine not stated; EPA lists several engines | 22 | jeep/grand-cherokee MY2017 (official-0c5d0982e5de); jeep/grand-cherokee MY2018 (official-285834fb39dc); jeep/grand-cherokee MY2016 (official-4a36beb37f33) |
+| engine_oil_viscosity | engine not stated; EPA lists several engines | 21 | jeep/grand-cherokee MY2022 (official-0a8be9d59112); jeep/grand-cherokee MY2024 (official-2ddeb9fed3d8); jeep/grand-cherokee MY2023 (official-3e8401906661) |
+| octane_aki | one document gives N values: ['N', 'N'] | 15 | jeep/grand-cherokee MY2022 (official-0a8be9d59112); jeep/grand-cherokee MY2017 (official-0c5d0982e5de); jeep/grand-cherokee MY2021 (official-279827ad7254) |
+| fuel_tank_l | value N outside the validator range; not used | 12 | jeep/grand-cherokee official-e9e755a7eaad p.531; jeep/cherokee official-0198a6663aac p.341; jeep/cherokee official-0198a6663aac p.341 |
+| engine_oil_specification | engine not stated; EPA lists several engines | 12 | jeep/grand-cherokee MY2022 (official-0a8be9d59112); jeep/grand-cherokee MY2024 (official-2ddeb9fed3d8); jeep/grand-cherokee MY2023 (official-3e8401906661) |
+| brake_fluid | one document gives N values: ['"DOT N"', '"DOT N"'] | 12 | jeep/grand-cherokee MY2018 (official-285834fb39dc); jeep/grand-cherokee MY2016 (official-4a36beb37f33); jeep/grand-cherokee MY2016 (official-aab479b0d08e) |
+| maintenance transfer_case_fluid | irregular points [N, N, N, N] in the official schedule; not converted | 9 | jeep/grand-cherokee MY2017; jeep/grand-cherokee MY2017; jeep/grand-cherokee MY2018 |
+| maintenance:tire_rotation | rotate the tires at every oil change indicated by the oil change indicator system; no fixed interval printed | 9 | jeep/grand-cherokee MY2014 (jeep-grand-cherokee-2014-owner-manual); jeep/grand-cherokee MY2015 (jeep-grand-cherokee-2015-owner-manual); jeep/grand-cherokee MY2016 (jeep-grand-cherokee-2016-owner-manual) |
+
 ### Audi
 
 Записей в журнале пробелов: 710 (по полю и причине):
@@ -599,6 +656,23 @@ _Загружена до получения решения владельца о
 | compression_ratio | engine not stated; EPA lists several engines | 22 | volkswagen/jetta MY2014 (press-vw-jetta-2014-2842b69f); volkswagen/jetta MY2014 (press-vw-jetta-2014-60013743); volkswagen/jetta MY2015 (press-vw-jetta-2015-b0f357a9) |
 | engine_description | engine not stated; EPA lists several engines | 22 | volkswagen/jetta MY2014 (press-vw-jetta-2014-2842b69f); volkswagen/jetta MY2014 (press-vw-jetta-2014-60013743); volkswagen/jetta MY2015 (press-vw-jetta-2015-b0f357a9) |
 
+### Mitsubishi
+
+Записей в журнале пробелов: 178 (по полю и причине):
+
+| Поле | Причина | Записей | Примеры |
+|---|---|---|---|
+| engine_family_key | factory engine code not in EPA; filled only from a source that names it | 91 | mitsubishi-outlander-us-2014-2.4l-4cyl-ice-a-av-s6-4wd; mitsubishi-outlander-us-2014-2.4l-4cyl-ice-a-av-s6-fwd; mitsubishi-outlander-us-2014-3.0l-6cyl-ice-a-s6-4wd |
+| compression_ratio | engine not stated; EPA lists several engines | 9 | mitsubishi/outlander MY2014 (press-mitsubishicars-outlander-2014-9977ec18); mitsubishi/outlander MY2015 (press-mitsubishicars-outlander-2015-63bc5400); mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9) |
+| bore_stroke_mm | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| engine_displacement_cc | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| power_hp | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| power_rpm | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| torque_lb_ft | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| torque_rpm | engine not stated; EPA lists several engines | 4 | mitsubishi/outlander MY2016 (press-mitsubishicars-outlander-2016-f78b1cd9); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97); mitsubishi/outlander MY2026 (press-mitsubishicars-outlander-2026-7dbda758) |
+| cargo_l | one document gives N values: ['N', 'N'] | 4 | mitsubishi/outlander MY2019 (press-mitsubishicars-outlander-2019-13f3de32); mitsubishi/outlander MY2019 (press-mitsubishicars-outlander-2019-13f3de32); mitsubishi/outlander MY2025 (press-mitsubishicars-outlander-2025-d0103e97) |
+| maintenance:fuel_filter | p.N schedule N: 'Check fuel filter*N': footnote: Periodic maintenance is not required. | 4 | mitsubishi/outlander MY2022 (mitsubishi-wm-2022-2022-mitsubishi-warranty-outlander); mitsubishi/outlander MY2022 (mitsubishi-wm-2022-2022-mitsubishi-warranty-outlander); mitsubishi/outlander MY2023 (mitsubishi-wm-2023-2023-outlander) |
+
 ### Tesla
 
 Записей в журнале пробелов: 127 (по полю и причине):
@@ -607,14 +681,14 @@ _Загружена до получения решения владельца о
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 60 | tesla-model-3-us-2017-ev-bev-a-a1-rwd; tesla-model-3-us-2018-ev-bev-a-a1-awd; tesla-model-3-us-2018-ev-bev-a-a1-rwd |
 | maintenance:battery_coolant | no replacement interval: 'does not need to be replaced for the life of your vehicle under most circumstances' | 11 | tesla/model-y MY2020 (carmans-2020-tesla-model-y-maintenance); tesla/model-y MY2021 (carmans-2021-tesla-model-y-maintenance); tesla/model-y MY2022 (carmans-2022-tesla-model-y-maintenance) |
-| engine_oil_capacity_l | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| engine_oil_viscosity | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| coolant | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| transmission_fluid | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| brake_fluid | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
-| fuel_tank_l | no US owner's manual for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | tires | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
 | front_suspension | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| rear_suspension | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| front_brakes | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| steering | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| ground_clearance | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| cargo_l | no US press specification page for these years | 4 | tesla/model-3 I; tesla/model-y I; tesla/model-s I |
+| engine_oil_capacity_l | no US owner's manual for these years | 2 | tesla/model-3 I; tesla/model-s I |
 
 Закрытые и заблокированные источники (manifest):
 
@@ -720,6 +794,20 @@ _Загружена до получения решения владельца о
 
 - official value is the main value; the vPIC Canadian value stays a SECO: 44
 
+### Cadillac
+
+Конфликтов: 13. По решениям:
+
+- official value is the main value; the vPIC Canadian value stays a SECO: 9
+- sources of the same rank disagree; field not shown: 2
+- official document kept over the copy: 2
+
+### Jeep
+
+Конфликтов: 8. По решениям:
+
+- sources of the same rank disagree; field not shown: 8
+
 ### Audi
 
 Конфликтов: 132. По решениям:
@@ -734,6 +822,12 @@ _Загружена до получения решения владельца о
 - official value is the main value; the vPIC Canadian value stays a SECO: 156
 - sources of the same rank disagree; field not shown: 28
 - model-year manual kept over the whole-generation page (Appendix E.6): 1
+
+### Mitsubishi
+
+Конфликтов: 18. По решениям:
+
+- official value is the main value; the vPIC Canadian value stays a SECO: 18
 
 ### Tesla
 
@@ -790,6 +884,14 @@ _Загружена до получения решения владельца о
 
 Проверено 79 записей (10% каждой линейки), расхождений 0.
 
+### Cadillac
+
+Проверено 79 записей (10% каждой линейки), расхождений 0.
+
+### Jeep
+
+Проверено 133 записей (10% каждой линейки), расхождений 0.
+
 ### Audi
 
 Проверено 295 записей (10% каждой линейки), расхождений 0.
@@ -798,6 +900,10 @@ _Загружена до получения решения владельца о
 
 Проверено 231 записей (10% каждой линейки), расхождений 0.
 
+### Mitsubishi
+
+Проверено 132 записей (10% каждой линейки), расхождений 0.
+
 ### Tesla
 
 Проверено 34 записей (10% каждой линейки), расхождений 0.
@@ -805,6 +911,7 @@ _Загружена до получения решения владельца о
 ## 6. Изменения схемы
 
 - backend/alembic/versions/f087_us_tech_scoped_facts.py
+- backend/alembic/versions/f088_content_translations.py
 
 ## 7. Тесты: baseline и финал
 
@@ -871,6 +978,15 @@ VDB = нет; запросов к VDB: 0.
 
 ## 11. Git-коммиты
 
+- 7479320 data(us): Mitsubishi — first load: base layer, press, CarComplaints, maintenance (owner decision)
+- 94e7925 data(us): Jeep — first load: base layer, manual facts, CarComplaints, maintenance (owner decision)
+- a66ca89 data(us): Cadillac — first load: base layer, manual facts, press, CarComplaints, maintenance (owner decision)
+- ff84472 data(preview): 2021-2026 US configurations prepared for publication, preview only (owner decision)
+- 3ab04e0 feat(app): RU/AZ translations table and the 2021-2026 preview layer (owner decisions 2026-10-03)
+- 60e25a0 data(us): Tesla — "North America" editions count as US (owner decision); mcum classifier fixes
+- 5d19721 fix(us): Nissan manifest typo; Altima rebuilt with the official 2017 manual (owner decision)
+- 600f673 docs(next-stage): final report (Teoalida, maintenance, app behind the flag) and progress
+- 28ba2a9 docs(us): US database report regenerated after stage B and the OCR editions (section 9 recount)
 - dda3a80 fix(us): Audi maintenance — "Except ..." applicability and "First X miles and thereafter every Y"
 - daa8f76 feat(app): US technical facts in the configuration card behind show_us_tech_facts (stage C)
 - 93bc408 data(us): Land Rover — maintenance: no schedule on disk (gaps with evidence)
@@ -929,7 +1045,7 @@ VDB = нет; запросов к VDB: 0.
 
 ## 12. Библиотека других рынков
 
-Материалов в библиотеке (data_work/_library/manifest.csv): 22.
+Материалов в библиотеке (data_work/_library/manifest.csv): 21.
 
 | Рынок | Марка | Материалов |
 |---|---|---|
@@ -940,17 +1056,16 @@ VDB = нет; запросов к VDB: 0.
 | EU | BMW;Tesla;Toyota | 1 |
 | EU | audi | 2 |
 | EU | mercedes | 3 |
+| EU | mitsubishi | 1 |
 | EU | vw | 3 |
 | GENERAL | bmw | 1 |
-| GENERAL | ford | 1 |
 | GENERAL | honda | 1 |
 | GENERAL | hyundai | 1 |
-| GENERAL | tesla | 1 |
 | IN | BMW;Chevrolet;Tata | 1 |
 | JP | BMW;TESLA;TOYOTA | 2 |
 | UK | BMW;Tesla;Toyota | 1 |
 
-Скачанные руководства не US-издания (не использованы, помечены other_market): 54.
+Скачанные руководства не US-издания (не использованы, помечены other_market): 43.
 
 | Рынок | Марка | Документов |
 |---|---|---|
@@ -961,7 +1076,7 @@ VDB = нет; запросов к VDB: 0.
 | UNKNOWN | jeep | 1 |
 | UNKNOWN | kia | 16 |
 | UNKNOWN | mercedes-benz | 2 |
-| UNKNOWN | tesla | 12 |
+| UNKNOWN | tesla | 1 |
 | UNKNOWN | toyota | 1 |
 | UNKNOWN | volkswagen | 9 |
 
@@ -1226,8 +1341,11 @@ VDB = нет; запросов к VDB: 0.
 | Nissan | 21 | 0 | 748 |
 | Land Rover | 0 | 0 | 0 |
 | Infiniti | 2 | 0 | 447 |
+| Cadillac | 6 | 0 | 264 |
+| Jeep | 8 | 1 | 451 |
 | Audi | 24 | 1 | 690 |
 | Volkswagen | 18 | 0 | 274 |
+| Mitsubishi | 4 | 0 | 584 |
 | Tesla | 0 | 0 | 32 |
 
 ## Поколения: свидетельства прессы

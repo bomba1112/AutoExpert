@@ -1,6 +1,6 @@
 # Nissan — отчёт по базе технических данных US
 
-Сформировано 2026-10-03T18:00:06+00:00 скриптом scripts/build_us_report.py.
+Сформировано 2026-10-03T20:46:07+00:00 скриптом scripts/build_us_report.py.
 
 ## 1. Матрица покрытия
 
@@ -30,16 +30,16 @@
 
 ## 3. Журнал пробелов
 
-Записей в журнале пробелов: 464 (по полю и причине):
+Записей в журнале пробелов: 467 (по полю и причине):
 
 | Поле | Причина | Записей | Примеры |
 |---|---|---|---|
 | engine_family_key | factory engine code not in EPA; filled only from a source that names it | 122 | nissan-altima-us-2014-2.5l-4cyl-ice-a-variable-gear-ratios-fwd; nissan-altima-us-2014-3.5l-6cyl-ice-a-av-s7-fwd; nissan-altima-us-2015-2.5l-4cyl-ice-a-variable-gear-ratios-fwd |
 | fuel_tank_l | value N outside the validator range; not used | 72 | nissan/altima carmans-2014-nissan-altima-sedan p.92; nissan/altima carmans-2015-nissan-altima-sedan p.97; nissan/altima carmans-2018-nissan-altima-sedan p.108 |
 | engine_oil_capacity_l | engine not stated; EPA lists several engines | 29 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
-| coolant_capacity_l | engine not stated; EPA lists several engines | 24 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan) |
-| engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 19 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
-| engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 17 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2016 (official-d4f834985984) |
+| coolant_capacity_l | engine not stated; EPA lists several engines | 25 | nissan/altima MY2015 (carmans-2015-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan) |
+| engine_oil_capacity_drain_refill_l | engine not stated; EPA lists several engines | 20 | nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2018 (carmans-2018-nissan-altima-sedan); nissan/altima MY2019 (carmans-2019-nissan-altima-sedan) |
+| engine_oil_capacity_without_filter_l | engine not stated; EPA lists several engines | 18 | nissan/altima MY2016 (carmans-2016-nissan-altima-sedan); nissan/altima MY2017 (carmans-2017-nissan-altima-sedan); nissan/altima MY2017 (official-9809be600e8e) |
 | octane_aki | one document gives N values: ['N', 'N'] | 15 | nissan/sentra MY2017 (carmans-2017-nissan-sentra); nissan/sentra MY2018 (carmans-2018-nissan-sentra); nissan/sentra MY2019 (carmans-2019-nissan-sentra) |
 | maintenance:schedule | the owner's manual prints no maintenance schedule; it refers to the separate "Service and Maintenance Guide" | 14 | nissan/altima MY2014 (official-338af110aa8d); nissan/altima MY2015 (official-003558d62f6d); nissan/altima MY2016 (official-d4f834985984) |
 | engine_oil_capacity_without_filter_l | one document gives N values: ['N', 'N'] | 12 | nissan/altima MY2026 (official-531628333f60); nissan/altima MY2025 (official-627953d373ea); nissan/sentra MY2026 (official-511ec26d6b9d) |
@@ -168,8 +168,8 @@
 
 ## Загрузка
 
-Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: []
-- nissan/altima: --prune-stale, код 0, {"raw_documents_seen": 90, "source_records_new": 4, "te_existing": 1254, "configurations": 35, "configurations_research_only": 26, "configurations_linked": 9, "issues_existing": 50, "maintenance_new": 202}
-- nissan/sentra: --prune-stale, код 0, {"raw_documents_seen": 95, "te_existing": 967, "configurations": 25, "configurations_research_only": 25, "issues_existing": 44, "maintenance_new": 143}
-- nissan/rogue: --prune-stale, код 0, {"raw_documents_seen": 110, "te_existing": 1045, "configurations": 34, "configurations_research_only": 34, "issues_existing": 68, "maintenance_new": 208}
-- nissan/pathfinder: --prune-stale, код 0, {"raw_documents_seen": 87, "te_existing": 888, "configurations": 28, "configurations_research_only": 28, "issues_existing": 49, "maintenance_new": 195}
+Режим: live, quick_check: ok, нарушений FK: 0, полностью перезагружены: ['altima']
+- nissan/altima: --replace-own, код 0, {"replaced_own_maintenance": 202, "replaced_own_te": 1254, "replaced_own_issues": 50, "raw_documents_seen": 90, "te_new_GENERATION": 804, "te_new_ENGINE": 13, "te_new_CONFIGURATION": 437, "configurations": 35, "configurations_research_only": 26, "configurations_linked": 9, "issues_new": 50, "maintenance_new": 202}
+- nissan/sentra: --prune-stale, код 0, {"raw_documents_seen": 95, "te_existing": 967, "configurations": 25, "configurations_research_only": 25, "issues_existing": 44, "maintenance_existing": 143}
+- nissan/rogue: --prune-stale, код 0, {"raw_documents_seen": 110, "te_existing": 1045, "configurations": 34, "configurations_research_only": 34, "issues_existing": 68, "maintenance_existing": 208}
+- nissan/pathfinder: --prune-stale, код 0, {"raw_documents_seen": 87, "te_existing": 888, "configurations": 28, "configurations_research_only": 28, "issues_existing": 49, "maintenance_existing": 195}
