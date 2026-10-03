@@ -1,0 +1,68 @@
+{
+ "make": "mitsubishi",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-03T20:42:45+00:00",
+ "replace_own": [],
+ "lines": {
+  "mitsubishi/outlander": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 78,
+    "source_records_new": 73,
+    "te_new_GENERATION": 473,
+    "te_new_ENGINE": 18,
+    "te_new_CONFIGURATION": 440,
+    "configurations": 40,
+    "configurations_research_only": 38,
+    "configurations_linked": 2,
+    "issues_new": 40,
+    "maintenance_new": 411
+   },
+   "generations": [
+    {
+     "code": "III",
+     "action": "filled",
+     "end_year": 2021
+    },
+    {
+     "code": "US2022+",
+     "action": "created",
+     "start_year": 2022,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "mitsubishi/outlander-sport": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 48,
+    "source_records_new": 39,
+    "te_new_ENGINE": 8,
+    "te_new_GENERATION": 305,
+    "te_new_CONFIGURATION": 561,
+    "configurations": 51,
+    "configurations_research_only": 50,
+    "configurations_linked": 1,
+    "issues_new": 24,
+    "maintenance_new": 173
+   },
+   "generations": [
+    {
+     "code": "I-US-2011",
+     "action": "unchanged"
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-03T20:43:35+00:00"
+}
