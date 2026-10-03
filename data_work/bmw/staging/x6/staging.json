@@ -22108,7 +22108,113 @@
    ]
   }
  ],
- "maintenance": [],
+ "maintenance": [
+  {
+   "id": "x6-US2015-2019-mnt-engine_oil_and_filter-2da9f9f8-2015",
+   "generation": "US2015-2019",
+   "years": [
+    2015,
+    2019
+   ],
+   "engine": null,
+   "job": "engine_oil_and_filter",
+   "action": "REPLACE",
+   "condition": "NORMAL",
+   "occurrence": "EVERY",
+   "schedule_system": "CBS",
+   "interval_km": null,
+   "interval_months": null,
+   "interval_miles_original": null,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {},
+   "note": "interval set by Condition Based Service (sensors and algorithms); the manual prints no fixed interval or limit",
+   "cites": [
+    {
+     "source": "mcum-x6-4-door-2015-2019",
+     "quote": "time-dependent maintenance pro‐ cedures, such as checking brake fluid and, if necessary, changing the engine oil and the mi‐ crofilter/activated-charcoal filter",
+     "pages": [
+      410
+     ],
+     "locator": "Condition Based Service"
+    }
+   ],
+   "primary_source": "mcum-x6-4-door-2015-2019",
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "x6-US2015-2019-mnt-cabin_air_filter-a214f399-2015",
+   "generation": "US2015-2019",
+   "years": [
+    2015,
+    2019
+   ],
+   "engine": null,
+   "job": "cabin_air_filter",
+   "action": "REPLACE",
+   "condition": "NORMAL",
+   "occurrence": "EVERY",
+   "schedule_system": "CBS",
+   "interval_km": null,
+   "interval_months": null,
+   "interval_miles_original": null,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {},
+   "note": "interval set by Condition Based Service (sensors and algorithms); the manual prints no fixed interval or limit",
+   "cites": [
+    {
+     "source": "mcum-x6-4-door-2015-2019",
+     "quote": "time-dependent maintenance pro‐ cedures, such as checking brake fluid and, if necessary, changing the engine oil and the mi‐ crofilter/activated-charcoal filter",
+     "pages": [
+      410
+     ],
+     "locator": "Condition Based Service"
+    }
+   ],
+   "primary_source": "mcum-x6-4-door-2015-2019",
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "x6-US2015-2019-mnt-brake_fluid-bee70d24-2015",
+   "generation": "US2015-2019",
+   "years": [
+    2015,
+    2019
+   ],
+   "engine": null,
+   "job": "brake_fluid",
+   "action": "INSPECT",
+   "condition": "NORMAL",
+   "occurrence": "EVERY",
+   "schedule_system": "CBS",
+   "interval_km": null,
+   "interval_months": null,
+   "interval_miles_original": null,
+   "rule": null,
+   "max_interval_km": null,
+   "max_interval_months": null,
+   "applicability": {},
+   "note": "interval set by Condition Based Service (sensors and algorithms); the manual prints no fixed interval or limit",
+   "cites": [
+    {
+     "source": "mcum-x6-4-door-2015-2019",
+     "quote": "time-dependent maintenance pro‐ cedures, such as checking brake fluid and, if necessary, changing the engine oil and the mi‐ crofilter/activated-charcoal filter",
+     "pages": [
+      410
+     ],
+     "locator": "Condition Based Service"
+    }
+   ],
+   "primary_source": "mcum-x6-4-door-2015-2019",
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM"
+  }
+ ],
  "conflicts": [
   {
    "scope": "bmw/x6 US2015-2019 MY2015",
@@ -22953,6 +23059,11 @@
    "scope": "bmw/x6 US2020+",
    "field": "cargo_l",
    "reason": "not found unambiguously in the available US press specification pages"
+  },
+  {
+   "scope": "bmw/x6 MY2020-2025 (mcum-x6-4-door-2020-2025)",
+   "field": "maintenance",
+   "reason": "the manual copy does not describe the CBS jobs (or the page is missing)"
   }
  ],
  "notes": [
@@ -22973,7 +23084,7 @@
   },
   "cc_problems": 0,
   "tsbs": 146,
-  "maintenance": 0,
+  "maintenance": 3,
   "errors": 0,
   "display_levels": {
    "SECONDARY_NOTE": 70,
