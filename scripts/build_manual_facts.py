@@ -182,7 +182,7 @@ def combine(values: list[str]) -> str:
     """List-type fields: all names one document gives, the most specific spelling kept
     ("SK ATF SP-IV" covers "SP-IV")."""
     unique = []
-    values = [re.sub(r"ACEA-", "ACEA ", v) for v in values]
+    values = [re.sub(r"\bACEA-", "ACEA ", v) for v in values]
     for v in sorted(set(values), key=lambda x: (-len(x), x)):
         if not any(v.lower() in u.lower() for u in unique):
             unique.append(v)
@@ -222,7 +222,7 @@ def doc_powertrain(meta: dict, staging: dict, year: int) -> str | None:
         # the file name says hybrid/EV but the manual's own text never does (carmans.net
         # "2015-kia-optima-hybrid.pdf" is the regular Optima manual): treated as the regular edition
         text = re.sub(r"hybrid|\bhev\b|plug-in|phev|energi|prime|electric|\bev\b|e-tron", " ", text)
-    if re.search(r"plug-in|phev|energi|prime", text) and re.search(r"hybrid|hev", text.replace("plug-in hybrid", "")):
+    if re.search(r"plug-in|phev|energi|prime", text) and re.search(r"hybrid|\bhev\b", text.replace("plug-in hybrid", "")):
         return "HEV/PHEV"
     if re.search(r"plug-in|phev|energi|prime", text):
         return "PHEV"
@@ -392,6 +392,18 @@ def build_line(make: str, line_key: str, extracted: list[dict]) -> dict:
             used["pages"].add(fact["page"])
     for doc_key, key, year, reason in sorted(ambiguous):
         gaps.append({"scope": f"{line_key} MY{year} ({doc_key})", "field": key, "reason": reason})
+    # what a US manual says it does not print (VW/Audi: oil standard and quantity on a label in
+    # the engine compartment): a gap with the manual's own words, never a value
+    for doc in extracted:
+        meta = doc["doc"]
+        if line_key not in meta["lines"] or doc.get("edition_market") != "US":
+            continue
+        for note in doc.get("not_in_manual", []):
+            years = [y for y in meta["years"] if line.years[0] <= y <= line.years[1]]
+            for field in note["fields"]:
+                if years:
+                    gaps.append({"scope": f"{line_key} MY{years[0]}-{years[-1]} ({meta['key']} p.{note['page']})", "field": field,
+                                 "reason": f"{note['reason']} — «{note['quote']}»"})
     facts = []
     for scope, by_year in observed.items():
         gen, level, engine_key, key, applicability_json = scope

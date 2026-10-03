@@ -44,7 +44,8 @@ from us_tech_lines import LINES, MAKES  # noqa: E402
 
 EM_TO_PT = 12.0  # the row/column thresholds of the PDF parser are in points
 CHAR_EM = 0.5
-BLOCK = re.compile(r'<div class="stl_01" style="left:([\d.]+)em;top:([\d.]+)em;">(.*?)</div>', re.S)
+# a block may carry more style after its position ("z-index:973;"): its text belongs to the page too
+BLOCK = re.compile(r'<div class="stl_01" style="left:([\d.]+)em;top:([\d.]+)em;[^"]*">(.*?)</div>', re.S)
 PRIORITY = re.compile(r"specification|lubric|capacit|maintenance-data|fuel|fluid|engine-oil|oil", re.I)
 
 
@@ -71,6 +72,115 @@ def words_of(raw_html: str) -> tuple[list[dict], str]:
     return words, " ".join(chunks)
 
 
+# ---- owner's amendment (VW/Audi/BMW, 2026-10-03): fields the US editions print besides the
+# oil table, kept as their own fields and never taken for an approval or an oil capacity
+SERVICE_PASS = "service-1"
+OIL_STD = re.compile(r"VW (?:standard )?\d{3}\s?\d{2}|ACEA [A-C]\d(?:/[A-C]\d)?|API S[A-Z](?: or (?:superior|higher)(?: oil rating)?)?"
+                     r"|ILSAC GF-\d[AB]?|BMW Longlife-\d{2}(?: FE)?|\bLL-\d{2}(?: FE)?|dexos\s?\d", re.I)
+# the emergency top-up paragraph: "not available … in an emergency / can be added / may be
+# added" near "oil", then within the paragraph the amount (litres) and the standards
+TOPUP_TRIGGER = re.compile(r"(?:If|When)\s[^.]{0,160}?oil[^.]{0,220}?(?:not available|unavailable)"
+                           r"|If no (?:engine )?oil[^.]{0,120}?is available", re.I)
+TOPUP_AMOUNT = re.compile(r"(?:up to|no more than|a maximum of|max(?:imum)?\.?)\s*(?:(?P<q>\d+(?:[.,]\d+)?)\s*(?:US )?(?:quarts?|qt)\.?\s*\(\s*)?"
+                          r"(?P<amt>\d+(?:[.,]\d+)?)\s*(?P<unit>US quart/liter|liters?|litres?|l)\b", re.I)
+TOPUP_END = re.compile(r"All viscosity|Changing the engine oil|Engine oil change:|Please add max|Oil level sensor|Checking the engine oil", re.I)
+SENTENCE = r"(?:[^.]|\.(?=\d))"  # a sentence: a full stop inside a number ("0.5") does not end it
+CONSUMPTION = re.compile(SENTENCE + r"{0,200}?(?:oil consumption|consume[sd]? (?:engine )?oil|considered normal)" + SENTENCE + r"{0,200}\.", re.I)
+METRIC_RATE = re.compile(r"(?P<a>\d+(?:[.,]\d+)?)\s*(?:l|liters?|litres?)\b(?:\s*\([^)]*\))?\s*(?:per|/)\s*(?P<d>\d[\d,]*)\s*(?:km|kilometers|kilometres)\b", re.I)
+FUEL_TANK = re.compile(r"(?:The fuel tank has the following volume|Fuel tank(?: capacity)?)\s*:?\s*(?P<approx>approx\.?\s*)?(?P<l>\d+(?:[.,]\d+)?)\s*(?:l|liters?)\s*\((?P<gal>\d+(?:\.\d+)?)\s*(?:gal|gallons|US gal)\.?\)"
+                       r"(?P<more>(?:\s*(?:approx\.?\s*)?\d+(?:[.,]\d+)?\s*(?:l|liters?)\s*\(\d+(?:\.\d+)?\s*(?:gal|gallons)\)\s*for [^.]{0,60}?vehicles)*)", re.I)
+FUEL_TANK_MORE = re.compile(r"(?P<approx>approx\.?\s*)?(?P<l>\d+(?:[.,]\d+)?)\s*(?:l|liters?)\s*\((?P<gal>\d+(?:\.\d+)?)\s*(?:gal|gallons)\)\s*for (?P<who>[^.]{0,60}?vehicles)", re.I)
+OIL_LABEL = re.compile(r"There is a label on the lock carrier[^.]{0,120}?that shows which engine oil should be added"
+                       r"|There is a label[^.]{0,120}engine compartment[^.]{0,80}engine oil[^.]{0,60}"
+                       r"|Sticker for engine oil specifications"
+                       r"|engine oil (?:specification|standard)s?[^.]{0,40}(?:label|sticker)[^.]{0,80}engine compartment", re.I)
+
+
+def litres_of(amount: str, unit: str) -> float | None:
+    """Litres as printed; BMW prints "1 US quart/liter" as one figure."""
+    if re.match(r"l|liter|litre|US quart/liter", unit, re.I):
+        return float(amount.replace(",", "."))
+    return None
+
+
+def standards_in(text: str) -> list[str]:
+    out = []
+    for std in OIL_STD.findall(text):
+        std = " ".join(std.split())
+        if std.lower() not in [x.lower() for x in out]:
+            out.append(std)
+    return out
+
+
+def service_facts(number: int, text: str, next_text: str = "") -> tuple[list[dict], list[dict]]:
+    """(facts, notes) of one page: emergency top-up amount and standards, oil consumption norm,
+    fuel tank capacities (Tank capacities section), and the statement that the oil
+    specification is on a label in the engine compartment (a note, not a value)."""
+    facts, notes = [], []
+    flat = " ".join(text.split())
+    following = " ".join(next_text.split())
+    for trig in TOPUP_TRIGGER.finditer(flat):
+        window = flat[trig.start(): trig.start() + 520]
+        cut = TOPUP_END.search(window, len(trig.group(0)))
+        window = window[: cut.start()] if cut else window
+        amount = TOPUP_AMOUNT.search(window)
+        if not amount:
+            continue
+        common = {"row": "emergency top-up", "engine_text": None, "source_layout": "mcum_service"}
+        litres = litres_of(amount.group("amt"), amount.group("unit"))
+        if litres is not None:
+            facts.append({"key": "engine_oil_topup_limit_l", "value": litres, "unit": "L", "page": number,
+                          "quote": window[: amount.end()].strip(), "label": "emergency top-up limit",
+                          "original": amount.group(0), **common})
+        standards = standards_in(window[amount.end():])
+        if standards:
+            last = list(OIL_STD.finditer(window[amount.end():]))[-1]
+            facts.append({"key": "engine_oil_topup_standards", "value": "; ".join(standards), "unit": None, "page": number,
+                          "quote": window[: amount.end() + last.end()].strip(), "label": "emergency top-up standards",
+                          "note": "for topping up when the prescribed oil is not available", **common})
+        elif following and len(flat) - trig.start() < 520:
+            # the list continues on the next manual page
+            head = following[:320]
+            cut = TOPUP_END.search(head)
+            head = head[: cut.start()] if cut else head
+            standards = standards_in(head)
+            if standards:
+                last = list(OIL_STD.finditer(head))[-1]
+                facts.append({"key": "engine_oil_topup_standards", "value": "; ".join(standards), "unit": None, "page": number + 1,
+                              "quote": head[: last.end()].strip(), "label": "emergency top-up standards",
+                              "note": "for topping up when the prescribed oil is not available (list continued from the previous page)",
+                              **common})
+    for m in CONSUMPTION.finditer(flat):
+        rate = METRIC_RATE.search(m.group(0))
+        if not rate:
+            continue
+        amount, distance = float(rate.group("a").replace(",", ".")), int(rate.group("d").replace(",", ""))
+        if not distance:
+            continue
+        rs = re.search(r"\bIn (RS|M|AMG) models\b", m.group(0))
+        facts.append({"key": "engine_oil_consumption_max_l_per_1000km", "value": round(amount * 1000 / distance, 3), "unit": "L/1000 km",
+                      "page": number, "quote": m.group(0).strip(), "row": "engine oil consumption", "label": "oil consumption norm",
+                      "engine_text": None, "source_layout": "mcum_service", "original": rate.group(0),
+                      **({"variant": f"{rs.group(1)} models"} if rs else {})})
+    for m in FUEL_TANK.finditer(flat):
+        approx = bool(m.group("approx"))
+        facts.append({"key": "fuel_tank_l", "value": float(m.group("l").replace(",", ".")), "unit": "L", "page": number,
+                      "quote": m.group(0).strip(), "row": "tank capacities", "label": "fuel tank", "engine_text": None,
+                      "source_layout": "mcum_service", "approx_in_source": approx, "original": f"{m.group('l')} l ({m.group('gal')} gal)"})
+        for more in FUEL_TANK_MORE.finditer(m.group("more") or ""):
+            who = " ".join(more.group("who").split())
+            facts.append({"key": "fuel_tank_l", "value": float(more.group("l").replace(",", ".")), "unit": "L", "page": number,
+                          "quote": m.group(0).strip(), "row": "tank capacities", "label": "fuel tank", "engine_text": None,
+                          "source_layout": "mcum_service", "approx_in_source": bool(more.group("approx")),
+                          "variant": who, **({"drive": "AWD"} if re.search(r"all-wheel|4MOTION|quattro", who, re.I) else {}),
+                          "original": f"{more.group('l')} l ({more.group('gal')} gal) for {who}"})
+    for m in OIL_LABEL.finditer(flat):
+        notes.append({"page": number, "quote": m.group(0).strip(),
+                      "fields": ["engine_oil_oem_approval", "engine_oil_capacity_l"],
+                      "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке"})
+    return facts, notes
+
+
 def rows_of_words(words: list[dict]) -> list[list[dict]]:
     width = max((w["x1"] for w in words), default=600.0)
     return [merge_values([render(r) for r in group_rows(col)]) for col in split_columns(width, words) if col]
@@ -84,7 +194,11 @@ def main() -> int:
     for row in manifest:
         by_gen[(row["make"], row["model"], row["body"], row["years"])].append(row)
     slug_to_make = {v["mcum"]: k for k, v in MAKES.items() if v.get("mcum")}
+    only = set(sys.argv[1:])  # our make slugs to extract (default: every make)
+    written = set()
     for (site_make, model, body, years), rows in sorted(by_gen.items()):
+        if only and slug_to_make.get(site_make) not in only:
+            continue
         info = markets.get(f"{site_make}/{model}/{body}/{years}", {})
         if info.get("market") != "US":
             continue
@@ -95,7 +209,7 @@ def main() -> int:
         first, last = (int(x) for x in (years.split("-") + [years])[:2])
         folder = RAW_ROOT / "_mcum" / site_make / model / f"{body}_{years}"
         pages, sections, urls, digests = [], [], [], []
-        result_facts, review = [], []
+        result_facts, review, notes = [], [], []
         state = PageState()
         for row in sorted(rows, key=lambda r: r["section"]):
             name = row["section"] or "_index"
@@ -117,6 +231,14 @@ def main() -> int:
                     fact["section_url"] = row["url"]
                 result_facts += facts
                 review += rev
+        for i, text in enumerate(pages):
+            # pages of one section run on: the next page holds the rest of a paragraph
+            following = pages[i + 1] if i + 1 < len(pages) and sections[i + 1] == sections[i] else ""
+            extra, page_notes = service_facts(i + 1, text, following)
+            for fact in extra:
+                fact["section_url"] = urls[fact["page"] - 1]
+            result_facts += extra
+            notes += page_notes
         key = f"mcum-{model}-{body}-{years}"
         sha = hashlib.sha256("".join(digests).encode()).hexdigest()
         store = RAW_ROOT / "pagetext" / f"{sha}.json.gz"
@@ -132,13 +254,30 @@ def main() -> int:
             "publisher": "factory owner's manual, copy hosted by mycarusermanual.com",
             "authenticity": "REVIEWED_MIRROR", "generation_range": True,
         }
-        out = {"doc": doc, "extractor": EXTRACTOR + "+mcum", "pages": len(pages), "edition_market": "US",
+        # a top-up or consumption amount read by the table pass as an oil capacity ("0.5 l (0.5 qt)")
+        # is not a capacity: the service pass holds it under its own field
+        service_quotes = [f["quote"] for f in result_facts if f.get("source_layout") == "mcum_service"]
+        result_facts = [f for f in result_facts if not (
+            f["key"].startswith("engine_oil_capacity") and f.get("source_layout") != "mcum_service"
+            and any(norm(f["quote"]) in norm(q) for q in service_quotes))]
+        if any(f["key"].startswith("engine_oil_capacity") and f.get("source_layout") != "mcum_service"
+               and isinstance(f["value"], (int, float)) and f["value"] >= 3 for f in result_facts):
+            notes = [n for n in notes if "engine_oil_capacity_l" not in n["fields"]] + [
+                {**n, "fields": [x for x in n["fields"] if x != "engine_oil_capacity_l"]} for n in notes if len(n["fields"]) > 1]
+        out = {"doc": doc, "extractor": EXTRACTOR + "+mcum+" + SERVICE_PASS, "pages": len(pages), "edition_market": "US",
                "edition_markers": info.get("markers"), "facts": result_facts, "review": review,
-               "engine_codes": engine_codes(pages), "status": "ok"}
+               "not_in_manual": notes, "engine_codes": engine_codes(pages), "status": "ok"}
         target = WORK / make / "extracted" / f"{key}.json"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+        written.add(target.resolve())
         print(key, lines, doc["years"], len(result_facts), "facts", len(review), "review", flush=True)
+    # an edition no longer classified US (re-classified on the full crawl) leaves no document behind
+    for make in (only or {m for m in MAKES}):
+        for stale in (WORK / make / "extracted").glob("mcum-*.json"):
+            if stale.resolve() not in written:
+                print("removed (edition no longer US):", stale.name, flush=True)
+                stale.unlink()
     return 0
 
 

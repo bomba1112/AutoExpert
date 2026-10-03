@@ -333,14 +333,28 @@ def library_section() -> list[str]:
     return out
 
 
+def manual_years(make: str, line_key: str) -> dict:
+    """Model year -> US owner's-manual editions that cover it, from every extracted document:
+    a year-specific manual or a generation edition (mycarusermanual, e.g. Audi Q7 2016-2025)
+    covers all its years. Press pages, secondary databases and non-US editions do not count."""
+    out = defaultdict(set)
+    for path in (WORK / make / "extracted").glob("*.json"):
+        doc = read_json(path, {})
+        meta = doc.get("doc", {})
+        if (line_key in meta.get("lines", []) and doc.get("edition_market") == "US" and doc.get("status", "ok") == "ok"
+                and meta.get("doc_type") not in ("press_specifications", "secondary_specifications", "teoalida_specifications")):
+            for y in meta.get("years", []):
+                out[y].add(meta["key"])
+    return out
+
+
 def vin_samples(all_data: dict) -> list[str]:
     out = []
     for make in ("bmw", "volkswagen", "audi"):
         for line in all_data[make]["lines"]:
             st = line.get("staging") or {}
             years = sorted({c["year"] for c in st.get("configurations", [])})
-            covered = {s.get("model_year") for s in st.get("sources", {}).values()
-                       if s.get("source_type") in ("OWNER_MANUAL_OFFICIAL", "OWNER_MANUAL_COPY")}
+            covered = manual_years(make, line["key"])
             missing = [y for y in years if y not in covered]
             if missing:
                 out.append(f"- {line['name']}: {', '.join(map(str, missing))}")

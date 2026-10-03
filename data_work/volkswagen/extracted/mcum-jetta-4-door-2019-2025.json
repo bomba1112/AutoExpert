@@ -27,20 +27,20 @@
   "authenticity": "REVIEWED_MIRROR",
   "generation_range": true
  },
- "extractor": "manual-geometry-14+mcum",
+ "extractor": "manual-geometry-14+mcum+service-1",
  "pages": 1163,
  "edition_market": "US",
  "edition_markers": {
-  "us_refs": 0,
-  "miles": 77,
-  "quarts_gallons": 14,
-  "api_ilsac": 2,
-  "acea": 2,
+  "us_refs": 7,
+  "miles": 253,
+  "quarts_gallons": 25,
+  "api_ilsac": 4,
+  "acea": 4,
   "middle_east": 0,
   "canada": 0,
-  "europe": 0,
-  "diesel": 0,
-  "right_hand": 0,
+  "europe": 9,
+  "diesel": 1,
+  "right_hand": 9,
   "korea": 0,
   "china": 4
  },
@@ -77,20 +77,6 @@
    "label": "brake fluid",
    "engine_text": null,
    "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--brake-fluid"
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.0,
-   "unit": "L",
-   "page": 182,
-   "quote": "1 l (1 qt)",
-   "row": "vehicle. Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 qt) per",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1 l (1 qt)",
-   "drive": null,
-   "approx_in_source": false,
-   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--engine-oil"
   },
   {
    "key": "engine_oil_capacity_drain_refill_l",
@@ -133,20 +119,6 @@
    "drive": null,
    "approx_in_source": false,
    "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--engine-oil"
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.0,
-   "unit": "L",
-   "page": 199,
-   "quote": "1 l (1 qt)",
-   "row": "vehicle. Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 qt) per",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1 l (1 qt)",
-   "drive": null,
-   "approx_in_source": false,
-   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--washer-fluid"
   },
   {
    "key": "octane_aki",
@@ -505,9 +477,120 @@
    "drive": null,
    "approx_in_source": false,
    "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/technical-data--tank-capacities"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 142,
+   "quote": "Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 qt) per 2000 kilometers (approximately 1200 miles); it can also be higher within the ﬁrst 5000 kilometers (approximately 3100 miles) on new vehicles.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "original": "1 l (1 qt) per 2000 kilometers",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling"
+  },
+  {
+   "key": "engine_oil_topup_limit_l",
+   "value": 0.5,
+   "unit": "L",
+   "page": 144,
+   "quote": "If no engine oil that meets the prescribed standard is available, you may, in an emergency, top up the engine oil no more than once before your next standard oil change using no more than 0.5 l",
+   "label": "emergency top-up limit",
+   "original": "no more than 0.5 l",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling"
+  },
+  {
+   "key": "engine_oil_topup_standards",
+   "value": "VW standard 504 00; ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "unit": null,
+   "page": 145,
+   "quote": "Gasoline engines: VW standard 504 00 and ACEA C3, ACEA C4, API SP or ILSAC GF-6A",
+   "label": "emergency top-up standards",
+   "note": "for topping up when the prescribed oil is not available (list continued from the previous page)",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 182,
+   "quote": "Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 qt) per 2000 kilometers (approximately 1200 miles); it can also be higher within the ﬁrst 5000 kilometers (approximately 3100 miles) on new vehicles.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "original": "1 l (1 qt) per 2000 kilometers",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--engine-oil"
+  },
+  {
+   "key": "engine_oil_topup_limit_l",
+   "value": 0.5,
+   "unit": "L",
+   "page": 184,
+   "quote": "If no engine oil that meets the prescribed standard is available, you may, in an emergency, top up the engine oil no more than once before your next standard oil change using no more than 0.5 l",
+   "label": "emergency top-up limit",
+   "original": "no more than 0.5 l",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--engine-oil"
+  },
+  {
+   "key": "engine_oil_topup_standards",
+   "value": "VW standard 504 00; ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "unit": null,
+   "page": 185,
+   "quote": "Gasoline engines: VW standard 504 00 and ACEA C3, ACEA C4, API SP or ILSAC GF-6A",
+   "label": "emergency top-up standards",
+   "note": "for topping up when the prescribed oil is not available (list continued from the previous page)",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--engine-oil"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 199,
+   "quote": "Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 qt) per 2000 kilometers (approximately 1200 miles); it can also be higher within the ﬁrst 5000 kilometers (approximately 3100 miles) on new vehicles.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "mcum_service",
+   "original": "1 l (1 qt) per 2000 kilometers",
+   "section_url": "https://www.mycarusermanual.com/vw/jetta/4-door/2019-2025/checking-and-filling--washer-fluid"
   }
  ],
  "review": [],
+ "not_in_manual": [
+  {
+   "page": 143,
+   "quote": "There is a label on the lock carrier at the front of the hood space that shows which engine oil should be added",
+   "fields": [
+    "engine_oil_oem_approval",
+    "engine_oil_capacity_l"
+   ],
+   "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке"
+  },
+  {
+   "page": 183,
+   "quote": "There is a label on the lock carrier at the front of the hood space that shows which engine oil should be added",
+   "fields": [
+    "engine_oil_oem_approval",
+    "engine_oil_capacity_l"
+   ],
+   "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке"
+  }
+ ],
  "engine_codes": [],
  "status": "ok"
 }

@@ -196,7 +196,7 @@ def classify(label: str, section: str, motor_ctx: bool) -> str | None:
         return "injection"
     if has(r"^(engine )?(code|name|model)$|^engine (code|name|model|designation)", l) and has(r"engine", both):
         return "engine_code"
-    if has(r"^engines?", s) and has(r"\d\.\d\s?l", l) and has(r"cyl|v-?6|inline|in-line", l):
+    if has(r"^engines?\b", s) and has(r"\d\.\d\s?l\b", l) and has(r"cyl|v-?6|inline|in-line", l):
         return "engine_description"  # Mitsubishi "2.4L MIVEC SOHC 16-valve 4-cylinder | STD | -" rows
     if has(r"^engine( type)?$|^engine description$|^type$|^engine type", l) and has(r"engine|power ?unit|powertrain|"
                                                                                     r"mechanical", s + (" engine" if l.startswith("engine") else "")):
