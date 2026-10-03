@@ -45,7 +45,14 @@ MARKERS = {
     "right_hand": r"right[- ]hand drive|RHD",
     "korea": r"Korea",
     "china": r"China|Chinese",
+    # owner decision 2026-10-03: an edition for North America with the US NHTSA defect-reporting
+    # text is a US edition (Tesla prints no quarts or gallons)
+    "north_america": r"North America",
+    "us_defect_reporting": r"Reporting Safety Defects[^.]{0,600}?(?:NHTSA|National Highway Traffic Safety Administration)",
 }
+# trademark notices ("... registered in the U.S. and other countries", Apple CarPlay) name the
+# United States without saying anything about the edition: they are not US references
+TRADEMARK = re.compile(r"(?:registered |trademarks? )?[^.]{0,80}?\bin the (?:U\.S\.|United States)(?:\s+and(?:/or)?\s+other countries)", re.I)
 
 
 def classify(counts: dict) -> str:
@@ -54,6 +61,13 @@ def classify(counts: dict) -> str:
     oil standards instead of API; CA needs Canada wording without US units."""
     if sum(counts.values()) == 0:
         return "UNKNOWN"
+    if counts.get("north_america") and counts.get("us_defect_reporting") and not (counts["acea"] and not counts["api_ilsac"]):
+        return "US"
+    # a right-hand-drive edition that never refers to the United States (once trademark notices
+    # are set aside) is not the US edition, whatever units it prints in brackets ("1,000 km (620
+    # miles)"): Mitsubishi Outlander 2020 PHEV, a European edition
+    if counts.get("right_hand", 0) >= 20 and counts.get("us_refs", 0) == 0:
+        return "EU" if counts.get("europe", 0) >= 5 else "UNKNOWN"
     us_units = counts["miles"] >= 10 and counts["quarts_gallons"] >= 2
     if counts["middle_east"] >= 3 and (counts["us_refs"] >= 3 or counts["europe"] >= 5 or us_units):
         return "GENERAL"
@@ -91,7 +105,8 @@ def main() -> int:
         for path in text_files:
             text = re.sub(r"\s+", " ", path.read_text(encoding="utf-8", errors="ignore"))
             for name, pattern in MARKERS.items():
-                counts[name] += len(re.findall(pattern, text))
+                source = TRADEMARK.sub(" ", text) if name == "us_refs" else text
+                counts[name] += len(re.findall(pattern, source))
         market = classify(counts)
         result[f"{make}/{model}/{body}/{years}"] = {"market": market, "markers": dict(counts), "pages": len(pages),
                                                     "folder": folder.relative_to(RAW_ROOT).as_posix()}

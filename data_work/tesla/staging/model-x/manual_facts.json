@@ -1,37 +1,90 @@
 {
- "sources": {},
- "facts": [],
+ "sources": {
+  "carmans-2020-tesla-model-x": {
+   "key": "carmans-2020-tesla-model-x",
+   "kind": "pdf_pages",
+   "path": "rawstore:manuals/tesla/carmans/2020-tesla-model-x.pdf",
+   "url": "https://www.carmans.net/wp-content/uploads/pdf/2020-tesla-model-x.pdf",
+   "page_url": "https://www.carmans.net/2020-tesla-model-x/",
+   "sha256": "828db4d291a783300c45c7e0c31a22e124245d551ec8fc0c65cd8cfedf40f4ec",
+   "retrieved_at": "2026-10-02T09:12:03+00:00",
+   "tier": "B",
+   "source_type": "OWNER_MANUAL_COPY",
+   "registry": "factory-tesla-us",
+   "title": "Tesla owner's manual [2020] (carmans-2020-tesla-model-x)",
+   "publisher": "factory owner's manual, copy hosted by carmans.net",
+   "authenticity": "REVIEWED_MIRROR",
+   "edition": "US",
+   "model_year": 2020,
+   "extract": "{\"pdf_sha256\": \"828db4d291a783300c45c7e0c31a22e124245d551ec8fc0c65cd8cfedf40f4ec\", \"url\": \"https://www.carmans.net/wp-content/uploads/pdf/2020-tesla-model-x.pdf\", \"pages\": {\"207\": \"Removing the Maintenance Panel\\r\\nTo check fluid levels, remove the maintenance\\r\\npanel:\\r\\n1. Open the hood.\\r\\n2. Pull the maintenance panel upward to\\r\\nrelease the clips that hold it in place.\\r\\nCaution: The maintenance panel protects\\r\\nthe front trunk from water. When re￾attaching, make sure it is fully seated.\\r\\nChecking Battery Coolant\\r\\nYour Battery coolant should not need to be\\r\\nreplaced for the life of your vehicle under\\r\\nmost circumstances. However, if the quantity\\r\\nof fluid in the cooling system drops below the\\r\\nrecommended level, the instrument panel\\r\\ndisplays a warning message. Stop driving\\r\\nModel X as soon as safety permits and contact\\r\\nTesla.\\r\\nFluid Level Check\\r\\nDO NOT REMOVE THE FILLER CAP AND DO\\r\\nNOT ADD FLUID. Doing so can result in\\r\\ndamage not covered by the warranty.\\r\\nDo Not Top Up Battery Coolant\\r\\nWarning: Battery coolant can be\\r\\nhazardous and can irritate eyes and skin.\\r\\nUnder no circumstances should you\\r\\nremove the filler cap and/or add coolant.\\r\\nIf the instrument panel warns you that the\\r\\nfluid level is low, contact Tesla\\r\\nimmediately.\\r\\nTo maximize the performance and life of the\\r\\nBattery, the cooling system uses a specific\\r\\nmixture of G-48 ethylene-glycol coolant\\r\\n(HOAT). Contact Tesla for more specific\\r\\ninformation about the coolant.\\r\\nChecking Brake Fluid\\r\\nWarning: Contact Tesla immediately if you\\r\\nnotice increased movement of the brake\\r\\npedal or a significant loss of brake fluid.\\r\\nDriving under these conditions can result\\r\\nin extended stopping distances or\\r\\ncomplete brake failure.\\r\\nA red brake indicator on the\\r\\ninstrument panel alerts you if the\\r\\nquantity of fluid in the brake\\r\\nreservoir drops below the\\r\\nrecommended level. If it displays\\r\\nwhile driving, stop as soon as safety\\r\\npermits by gently applying the\\r\\nbrakes. Do not continue driving.\\r\\nContact Tesla immediately.\\r\\nFluid Level Check\\r\\nTesla checks the brake fluid level and health at\\r\\nthe regularly scheduled maintenance intervals.\\r\\nTopping Up the Brake Fluid\\r\\nDo not top up your brake fluid. The following\\r\\ninstructions are provided for information\\r\\npurposes and future reference only:\\r\\n1. Clean the filler cap before removing it to\\r\\nprevent dirt from entering the reservoir.\\r\\n2. Unscrew the cap and remove it.\\r\\n3. Top up the reservoir to the MAX mark\\r\\nusing the appropriate brake fluid.\\r\\n4. Replace the filler cap, ensuring it is fully\\r\\nsecured.\\r\\nWarning: Only use new fluid from a sealed\\r\\nair-tight container. Never use previously\\r\\nused fluid or fluid from a previously\\r\\nopened container—fluid absorbs moisture\\r\\nwhich decreases braking performance.\\r\\nWarning: Brake fluid is highly toxic. Keep\\r\\ncontainers sealed and out of the reach of\\r\\nchildren. In the event of accidental\\r\\nconsumption, seek medical attention\\r\\nimmediately.\\r\\nCaution: Brake fluid damages painted\\r\\nsurfaces. Immediately soak up any spills\\r\\nwith an absorbent cloth and wash the\\r\\narea with a mixture of car shampoo and\\r\\nwater.\\r\\nFluid Reservoirs\\r\\n206 Model X Owner's Manual\"}}"
+  }
+ },
+ "facts": [
+  {
+   "id": "model-x-I-man-coolant_description-c73c7f18-2020",
+   "generation": "I",
+   "key": "coolant_description",
+   "level": "GENERATION",
+   "engine": null,
+   "gen_bound": true,
+   "years": [
+    2020,
+    2020
+   ],
+   "value": "ethylene-glycol coolant",
+   "unit": null,
+   "original": "ethylene-glycol coolant",
+   "applicability": {},
+   "note": null,
+   "cites": [
+    {
+     "source": "carmans-2020-tesla-model-x",
+     "pages": [
+      207
+     ],
+     "quote": "ethylene-glycol coolant",
+     "tier": "B",
+     "publisher": "factory owner's manual, copy hosted by carmans.net",
+     "row": "mixture of G-48 ethylene-glycol coolant",
+     "year": 2020
+    }
+   ],
+   "display_level": "SECONDARY_NOTE",
+   "confidence": "MEDIUM",
+   "primary_source": "carmans-2020-tesla-model-x"
+  }
+ ],
  "conflicts": [],
  "gaps": [
   {
    "scope": "tesla/model-x I",
    "field": "engine_oil_capacity_l",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",
    "field": "engine_oil_viscosity",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",
    "field": "coolant",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",
    "field": "transmission_fluid",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",
    "field": "brake_fluid",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",
    "field": "fuel_tank_l",
-   "reason": "no US owner's manual for these years"
+   "reason": "not found unambiguously in the available US owner's manuals"
   },
   {
    "scope": "tesla/model-x I",

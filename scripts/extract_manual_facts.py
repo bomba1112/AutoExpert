@@ -117,6 +117,15 @@ def page_cache(sha: str) -> dict | None:
         return json.load(handle)
 
 
+def north_america_edition(pages: list[str]) -> bool:
+    """The owner's rule for editions marked "North America": the cover (first three pages) says
+    "North America" and a page prints the US "Reporting Safety Defects" text naming NHTSA."""
+    cover = " ".join(" ".join(p.split()) for p in pages[:3])
+    nhtsa = any(re.search(r"Reporting Safety Defects", p) and re.search(r"National Highway Traffic Safety Administration|NHTSA", p)
+                for p in pages)
+    return "North America" in cover and nhtsa
+
+
 def edition_market(pages: list[str], official_us: bool = False) -> tuple[str, dict]:
     text = "\n".join(pages)
     marks = {
@@ -143,6 +152,12 @@ def edition_market(pages: list[str], official_us: bool = False) -> tuple[str, di
     # US units throughout (mbusa AMG owner's manuals: quarts, gallons, mph)
     if (official_us and (marks["quarts"] + marks["gallons"]) >= 2 and marks["mph"] >= 3
             and not marks["acea_only"] and marks["middle_east"] < 10):
+        return "US", marks
+    # owner decision 2026-10-03: an edition for North America (the cover says "North America")
+    # that prints the US NHTSA defect-reporting text is a US edition (Tesla manuals print no
+    # quarts or gallons, so the unit test above never passes for them)
+    marks["north_america_edition"] = int(north_america_edition(pages))
+    if marks["north_america_edition"] and not marks["acea_only"]:
         return "US", marks
     if marks["middle_east"] >= 10 and marks["mph"] < 3:
         return "GCC", marks
