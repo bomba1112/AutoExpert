@@ -99,7 +99,9 @@ def check_fact(fact, sources) -> list[str]:
 
 
 def norm_text(text: str) -> str:
-    return " ".join(text.replace("\u00a0", " ").split())
+    # U+FFFE: the hyphenation mark some manuals leave inside words ("inter\ufffevals"); the
+    # maintenance builders and scripts/recheck_maintenance.py drop it the same way
+    return " ".join(text.replace("\u00a0", " ").replace("\ufffe", "").split())
 
 
 try:  # geometric re-check needs pdfplumber (run through uv); without it only quotes are checked
@@ -175,6 +177,13 @@ def main(make: str) -> int:
                     pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{source['sha256']}.json.gz").read_bytes()))
                     if not any(norm_text(cite["quote"]) in norm_text(pages["pages"][p - 1]) for p in cite.get("pages") or []):
                         problems.append(f"{cite['source']}: schedule text not found on page {cite.get('pages')}")
+                elif source["kind"] == "json_file":
+                    # schedule data: the quote is built from the file's values (maintenance_common.json_values)
+                    from maintenance_common import json_values
+
+                    values = norm_text(" ".join(json_values(RAW_ROOT / source["path"][len("rawstore:"):])))
+                    if not all(part.strip() in values for part in norm_text(cite["quote"]).split("•") if part.strip()):
+                        problems.append(f"{cite['source']}: schedule text not found in the data file")
                 elif cite["quote"].split(" ", 6)[-1][:60] not in body.decode("utf-8", errors="ignore"):
                     problems.append(f"{cite['source']}: service text not found again")
             results.append({"kind": "maintenance", "id": item["id"], "problems": problems})

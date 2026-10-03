@@ -1,0 +1,101 @@
+{
+ "make": "jeep",
+ "mode": "rehearsal",
+ "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
+ "started_at": "2026-10-03T20:38:24+00:00",
+ "replace_own": [],
+ "lines": {
+  "jeep/grand-cherokee": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 138,
+    "source_records_new": 133,
+    "te_new_GENERATION": 915,
+    "te_new_CONFIGURATION": 820,
+    "configurations": 68,
+    "configurations_research_only": 53,
+    "configurations_linked": 15,
+    "issues_new": 115,
+    "maintenance_new": 356
+   },
+   "generations": [
+    {
+     "code": "WK-2011",
+     "action": "filled",
+     "end_year": 2021
+    },
+    {
+     "code": "US2022+",
+     "action": "created",
+     "start_year": 2022,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "jeep/cherokee": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 67,
+    "source_records_new": 51,
+    "te_new_GENERATION": 394,
+    "te_new_CONFIGURATION": 761,
+    "configurations": 59,
+    "configurations_research_only": 59,
+    "issues_new": 71,
+    "maintenance_new": 42
+   },
+   "generations": [
+    {
+     "code": "KL",
+     "action": "filled",
+     "end_year": 2023
+    },
+    {
+     "code": "US2026+",
+     "action": "created",
+     "start_year": 2026,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 50
+  },
+  "jeep/compass": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 71,
+    "source_records_new": 53,
+    "te_new_GENERATION": 421,
+    "te_new_CONFIGURATION": 576,
+    "configurations": 52,
+    "configurations_linked": 11,
+    "configurations_research_only": 41,
+    "issues_new": 58,
+    "maintenance_new": 53
+   },
+   "generations": [
+    {
+     "code": "MK",
+     "action": "filled",
+     "end_year": 2016
+    },
+    {
+     "code": "MP",
+     "action": "filled",
+     "start_year": 2017
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 10
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-03T20:39:45+00:00"
+}

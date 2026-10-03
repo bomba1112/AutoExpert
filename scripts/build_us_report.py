@@ -38,7 +38,7 @@ MARK = {"full": "●", "part": "◐", "none": "○", "na": "—"}
 # are loaded; Infiniti had already been loaded when the decision arrived and is kept as it is.
 # Owner's decision of 2026-10-03: Cadillac, Jeep, Mitsubishi loaded by the same rules (one commit
 # per make); a make leaves this set when its load is committed.
-NOT_LOADED = {"jeep", "mitsubishi"}
+NOT_LOADED = {"mitsubishi"}
 STATUS_NOTE = {
     **{m: ("Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/" + m +
            "/staging), в рабочей БД строк этого конвейера нет.") for m in NOT_LOADED},

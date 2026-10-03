@@ -12,6 +12,14 @@ per job and action:
   - oil changes "as indicated by the oil change indicator" -> OIL_LIFE_MONITOR, no interval.
 Miles are converted with the fixed factor (KM_PER_MI) and kept in interval_miles_original.
 
+Generation of a schedule: by its own model code when the title names one (MODEL_CODES: Grand
+Cherokee "WK (2022 carryover WK2)" -> WK-2011 including MY2022, "Grand Cherokee L / Grand
+Cherokee (WL)" -> US2022+ including MY2021), else by model year. When two schedules of
+different editions (title without year/make: "Grand Cherokee", "Grand Cherokee SRT", "Grand
+Cherokee 4xe", ...) cover one model year of a line, the items of that year carry
+{"edition": <edition>}. Two schedules of one edition and year that give the same job different
+intervals (2019 Cherokee 123.json / 124.json) are ambiguous: no item for that year, a gap.
+
 Output: data_work/<make>/staging/<line>/maintenance.json (items + sources + gaps), merged by
 build_us_batch_staging.py and written by load_us_tech_facts.py.
 
@@ -38,19 +46,21 @@ from app.services.tech_units import convert  # noqa: E402
 JOBS = [  # (job, pattern) on the service text
     ("engine_oil_and_filter", r"oil and (?:oil )?filter|change (?:the )?(?:engine )?oil"),
     ("engine_air_filter", r"engine air (?:cleaner )?filter|air cleaner (?:filter|element)"),
-    ("cabin_air_filter", r"cabin air filter|air conditioning/cabin|a/c (?:cabin )?filter"),
+    ("cabin_air_filter", r"cabin air filter|air conditioning/cabin|a/c (?:cabin )?filter|air conditioning filter"),
     ("spark_plugs", r"spark plugs?"),
     ("engine_coolant", r"engine coolant|coolant"),
     ("brake_fluid", r"brake fluid"),
+    ("manual_transmission_fluid", r"manual transmission fluid"),
     ("transmission_fluid", r"automatic transmission fluid|transmission fluid|transaxle fluid"),
     ("transfer_case_fluid", r"transfer case"),
-    ("differential_fluid", r"axle fluid|differential|power transfer unit|\bPTU\b|rear drive module"),
+    ("differential_fluid", r"axle fluid|differential|power transfer unit|\bPTU\b|rear drive module|rear drive assembly|\bRDA\b"),
     ("timing_belt", r"timing belt"),
     ("accessory_drive_belt", r"accessory drive belt|drive belt|serpentine"),
     ("tire_rotation", r"rotate the tires|tire rotation|rotate tires"),
     ("pcv_valve", r"\bPCV\b"),
     ("fuel_filter", r"fuel filter"),
     ("brakes", r"brake (?:linings|pads|shoes|rotors)|brake linings"),
+    ("parking_brake", r"adjust the parking brake"),
     ("cv_joints", r"CV joints?"),
     ("front_suspension", r"suspension|tie rod|ball joints?"),
     ("exhaust_system", r"exhaust"),
@@ -77,7 +87,7 @@ def action_of(text: str) -> str:
         return "ADJUST"
     if re.search(r"\bclean\b", t) and not re.search(r"replace|change|flush", t):
         return "CLEAN"
-    if re.search(r"replace|change|flush|drain and refill", t):
+    if re.search(r"replace|change|flush|drain and refill|\bdrain\b.*\brefill\b", t):  # "Drain the transfer case and refill."
         return "REPLACE"
     return "INSPECT"
 
@@ -123,6 +133,17 @@ def from_points(points: list[int]) -> list[dict] | None:
     return [{"occurrence": "FIRST", "miles": points[0]}, {"occurrence": "SUBSEQUENT", "miles": step}]
 
 
+def component_of(text: str) -> dict:
+    """PTU and RDA fluids are both differential_fluid; the unit tells the two rows apart."""
+    if re.search(r"power transfer unit|\bPTU\b", text):
+        return {"component": "power transfer unit (PTU)"}
+    if re.search(r"rear drive assembly|\bRDA\b", text):
+        return {"component": "rear drive assembly (RDA)"}
+    if re.search(r"rear drive module", text):
+        return {"component": "rear drive module"}
+    return {}
+
+
 def engines_of(title: str) -> str | None:
     found = re.findall(r"\d\.\dL?", title)
     if found:
@@ -145,6 +166,33 @@ def mopar_docs(make: str) -> list[dict]:
     return rows
 
 
+MODEL_CODES = {  # line -> model code printed in the schedule title -> generation code of the line
+    "jeep/grand-cherokee": {"WK": "WK-2011", "WL": "US2022+"},
+}
+
+
+def model_code(title: str) -> str | None:
+    """'2022 Jeep Grand Cherokee WK (2022 carryover WK2)' -> WK; '... Grand Cherokee L / Grand
+    Cherokee (WL)' -> WL; no code printed -> None."""
+    m = re.search(r"\b(WK|WL)2?\b", title)
+    return m.group(1) if m else None
+
+
+def edition_of(title: str) -> str:
+    """'2021 Jeep Grand Cherokee L / Grand Cherokee (WL) - Maintenance Schedule (also listed ...)'
+    -> 'Grand Cherokee L / Grand Cherokee (WL)'."""
+    name = re.sub(r"\s+-\s+Maintenance Schedule.*$", "", title)
+    return re.sub(r"^\d{4}\s+\w+\s+", "", name).strip()
+
+
+def generation_of(line_key: str, row: dict, year: int, gens: list[dict]) -> tuple[str | None, str]:
+    code = model_code(row["title"])
+    mapped = MODEL_CODES.get(line_key, {}).get(code) if code else None
+    if mapped and any(g["code"] == mapped for g in gens):
+        return mapped, f"model code {code} in the schedule title"
+    return next((g["code"] for g in gens if g["start_year"] <= year <= g["end_year"]), None), "model year"
+
+
 def build(make: str) -> int:
     by_line = defaultdict(list)
     for row in mopar_docs(make):
@@ -158,19 +206,26 @@ def build(make: str) -> int:
         gens = json.loads(staging_path.read_text(encoding="utf-8"))["generations"]
         sources, gaps = {}, []
         observed = defaultdict(lambda: defaultdict(list))  # scope -> year -> cites
+        editions = defaultdict(set)  # model year -> editions of the schedules covering it
+        for row in rows:
+            for year in [int(y) for y in row["years"].split(";") if y]:
+                editions[year].add(edition_of(row["title"]))
         for row in rows:
             plans = json.loads((RAW_ROOT / row["path"]).read_text(encoding="utf-8"))
             plans = plans if isinstance(plans, list) else [plans]
             source_key = "mopar-" + hashlib.sha1(row["url"].encode()).hexdigest()[:10]
             for year in [int(y) for y in row["years"].split(";") if y]:
-                gen = next((g["code"] for g in gens if g["start_year"] <= year <= g["end_year"]), None)
+                gen, _ = generation_of(line_key, row, year, gens)
                 if gen is None:
                     continue
+                shared = len(editions[year]) > 1
                 for plan in plans:
                     engine = engines_of(plan.get("title", ""))
                     applicability = {"plan": plan.get("title", "").strip(), **({"engine": engine} if engine else {})}
                     if re.search(r"SRT", row["title"]) and "engine" not in applicability:
                         applicability["engine"] = "SRT"
+                    if shared:
+                        applicability["edition"] = edition_of(row["title"])
                     for anc in plan.get("ancillary", []):
                         if re.search(r"oil change indicator|oil change interval", anc.get("title", ""), re.I):
                             for service in anc.get("services", []):
@@ -211,7 +266,7 @@ def build(make: str) -> int:
                                        for s in shape]
                         condition = "SEVERE" if re.search(r"severe|police|taxi|fleet|towing|off-?road", text, re.I) else "NORMAL"
                         text_engine = engines_of(text)
-                        service_applicability = {**applicability, **({"engine": text_engine} if text_engine else {})}
+                        service_applicability = {**applicability, **({"engine": text_engine} if text_engine else {}), **component_of(text)}
                         for entry in entries:
                             item = {"job": job, "action": action, "condition": condition, "schedule_system": "FIXED_INTERVAL",
                                     **{k: entry.get(k) for k in ("occurrence", "interval_km", "interval_months",
@@ -227,8 +282,11 @@ def build(make: str) -> int:
                 "authenticity": "OFFICIAL_PUBLISHER", "edition": "US",
                 "model_year": int(row["years"].split(";")[0]) if row["years"] else None,
             }
+        drop_ambiguous(line_key, observed, sources, gaps)
         items = []
         for scope, by_year in observed.items():
+            if not by_year:
+                continue
             gen, item, applicability = json.loads(scope)
             years = sorted(by_year)
             runs, run = [], [years[0]]
@@ -252,6 +310,32 @@ def build(make: str) -> int:
         out.write_text(json.dumps({"sources": sources, "items": items, "gaps": gaps}, ensure_ascii=False, indent=1), encoding="utf-8")
         print(line_key, "items", len(items), "sources", len(sources), "gaps", len(gaps))
     return 0
+
+
+def drop_ambiguous(line_key: str, observed: dict, sources: dict, gaps: list) -> None:
+    """One scope (generation, job, action, condition, occurrence, applicability) must have one
+    interval per model year. When the schedules covering a year give it different intervals
+    (and no edition or engine tells them apart) the year is not written for that scope: gap."""
+    groups = defaultdict(list)  # (base scope, year) -> scopes
+    for scope, by_year in observed.items():
+        gen, item, applicability = json.loads(scope)
+        base = {k: v for k, v in item.items() if k not in ("interval_km", "interval_months", "interval_miles_original", "rule", "note")}
+        for year in by_year:
+            groups[(json.dumps([gen, base, applicability], sort_keys=True), year)].append(scope)
+    for (base, year), scopes in groups.items():
+        intervals = {json.dumps([json.loads(s)[1].get(k) for k in ("interval_km", "interval_months")]) for s in scopes}
+        if len(intervals) < 2:
+            continue
+        gen, item, applicability = json.loads(base)
+        found = []
+        for s in scopes:
+            it = json.loads(s)[1]
+            titles = sorted({sources[c["source"]]["title"] + f" ({sources[c['source']]['path'].rsplit('/', 1)[-1]})"
+                             for c in observed[s][year]})
+            found.append(f"{it.get('interval_miles_original') or it.get('interval_km')} mi / {it.get('interval_months')} mo in {'; '.join(titles)}")
+            del observed[s][year]
+        gaps.append({"scope": f"{line_key} MY{year}", "field": f"maintenance {item['job']} {item['condition']} {item['occurrence']}",
+                     "reason": f"schedules of the same edition give different intervals ({' | '.join(found)}); ambiguous, not converted"})
 
 
 if __name__ == "__main__":

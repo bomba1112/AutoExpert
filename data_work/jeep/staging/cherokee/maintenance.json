@@ -762,10 +762,10 @@
    "confidence": "HIGH"
   },
   {
-   "id": "cherokee-KL-mnt-spark_plugs-22121a1b-2019",
+   "id": "cherokee-KL-mnt-spark_plugs-22121a1b-2020",
    "generation": "KL",
    "years": [
-    2019,
+    2020,
     2023
    ],
    "engine": null,
@@ -787,11 +787,6 @@
    "max_interval_months": null,
    "cites": [
     {
-     "source": "mopar-d1fd11bc75",
-     "quote": "Replace spark plugs — 2.0L Engine",
-     "locator": "service: Replace spark plugs — 2.0L Engine"
-    },
-    {
      "source": "mopar-01330f644f",
      "quote": "Replace spark plugs — 2.0L EngineThe spark plug change interval is mileage based only, yearly intervals do not apply.",
      "locator": "service: Replace spark plugs — 2.0L EngineThe spark plug change interval is mileage based only, yearly intervals do not apply."
@@ -812,7 +807,7 @@
      "locator": "service: Replace spark plugs — 2.0L Engine.The spark plug change interval is mileage based only, yearly intervals do not apply."
     }
    ],
-   "primary_source": "mopar-d1fd11bc75",
+   "primary_source": "mopar-01330f644f",
    "display_level": "FACT",
    "confidence": "HIGH"
   },
@@ -868,41 +863,6 @@
     }
    ],
    "primary_source": "mopar-d1fd11bc75",
-   "display_level": "FACT",
-   "confidence": "HIGH"
-  },
-  {
-   "id": "cherokee-KL-mnt-spark_plugs-0355fb07-2019",
-   "generation": "KL",
-   "years": [
-    2019,
-    2019
-   ],
-   "engine": null,
-   "applicability": {
-    "engine": "2.0L",
-    "plan": "Maintenance Plan"
-   },
-   "action": "REPLACE",
-   "condition": "NORMAL",
-   "interval_km": 48280,
-   "interval_miles_original": 30000,
-   "interval_months": null,
-   "job": "spark_plugs",
-   "note": null,
-   "occurrence": "EVERY",
-   "rule": null,
-   "schedule_system": "FIXED_INTERVAL",
-   "max_interval_km": null,
-   "max_interval_months": null,
-   "cites": [
-    {
-     "source": "mopar-63de82b7c3",
-     "quote": "Replace spark plugs — 2.0L Engine",
-     "locator": "service: Replace spark plugs — 2.0L Engine"
-    }
-   ],
-   "primary_source": "mopar-63de82b7c3",
    "display_level": "FACT",
    "confidence": "HIGH"
   },
@@ -1470,6 +1430,11 @@
    "scope": "jeep/cherokee MY2019",
    "field": "maintenance accessory_drive_belt",
    "reason": "irregular points [] in the official schedule; not converted"
+  },
+  {
+   "scope": "jeep/cherokee MY2019",
+   "field": "maintenance spark_plugs NORMAL EVERY",
+   "reason": "schedules of the same edition give different intervals (60000 mi / None mo in 2019 Jeep Cherokee - Maintenance Schedule (123.json) | 30000 mi / None mo in 2019 Jeep Cherokee - Maintenance Schedule (124.json)); ambiguous, not converted"
   }
  ]
 }
