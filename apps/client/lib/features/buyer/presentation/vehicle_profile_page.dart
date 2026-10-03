@@ -1,6 +1,7 @@
 import 'package:autoexpert_client/core/theme/app_theme.dart';
 import 'package:autoexpert_client/features/buyer/data/buyer_catalog_api.dart';
 import 'package:autoexpert_client/features/buyer/presentation/technical_display.dart';
+import 'package:autoexpert_client/features/buyer/presentation/us_tech_panel.dart';
 import 'package:autoexpert_client/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,12 +13,16 @@ class VehicleProfilePage extends StatefulWidget {
       required this.variantId,
       required this.onCheckVin,
       this.qaMode = false,
+      this.usTechFacts = false,
       super.key});
   final BuyerCatalogApi api;
   final String language;
   final String variantId;
   final VoidCallback onCheckVin;
   final bool qaMode;
+
+  /// The show_us_tech_facts flag from the client configuration.
+  final bool usTechFacts;
   @override
   State<VehicleProfilePage> createState() => _VehicleProfilePageState();
 }
@@ -252,6 +257,12 @@ class _VehicleProfilePageState extends State<VehicleProfilePage> {
                                   padding: const EdgeInsets.all(16),
                                   child: Text(_text(selected['empty_text'])))),
                       ],
+                      if (widget.usTechFacts)
+                        UsTechSection(
+                            api: widget.api,
+                            variantId: widget.variantId,
+                            language: widget.language,
+                            enabled: widget.usTechFacts),
                       const SizedBox(height: 14),
                       FilledButton.icon(
                           onPressed: widget.onCheckVin,

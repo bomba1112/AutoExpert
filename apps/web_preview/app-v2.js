@@ -15,9 +15,10 @@ import {
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
 import {createBuyerViews} from './buyer-views.js?v=0.9.0';
-import {createCatalogViews} from './catalog-views.js?v=0.9.0';
+import {createCatalogViews} from './catalog-views.js?v=0.9.2';
 import {createVinHistoryViews} from './vin-history-views.js?v=0.9.0';
 import {createListingViews} from './listing-views.js?v=0.9.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.9.2';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -42,7 +43,8 @@ const buyerViews = createBuyerViews({
   startMockVinHistory: vin => historyViews.start(vin),
   mockVinHistoryCards: () => historyViews.savedCards(),
 });
-const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast});
+const usTechViews = createUsTechViews({root, state, layout});
+const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews});
 const listingViews = createListingViews({root, state, layout, go, esc, ensureSession, showToast, addCatalogVariant:(id,title)=>catalogViews.addVariantToBasket(id,title)});
 
 root.addEventListener('click', (event) => {
@@ -111,6 +113,7 @@ async function route() {
   try {
     if (await historyViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await listingViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await usTechViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await catalogViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await buyerViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (name === 'language') renderLanguage();

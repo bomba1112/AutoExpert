@@ -4,6 +4,7 @@ from app.core.config import get_settings
 from app.pricing.vin import configured_product_prices
 from app.providers.vin import FORD_EXAMPLE_VIN
 from app.services.chat_access import configured_chat_access_policy
+from app.services.us_tech_facts import enabled as us_tech_facts_enabled
 
 router = APIRouter(prefix="/meta", tags=["meta"])
 
@@ -13,7 +14,7 @@ def client_config() -> dict:
     settings = get_settings()
     chat_policy = configured_chat_access_policy()
     qa_mode = settings.environment in {"development", "test"} and settings.demo_mode
-    return {
+    config = {
         "version": "0.8.1",
         "buyer_api_version": 1,
         "catalog_api_version": 1,
@@ -58,3 +59,7 @@ def client_config() -> dict:
             "question_limit": settings.chat_question_limit,
         },
     }
+    # Stage C preview: advertised only while the flag is on, so production answers as before.
+    if us_tech_facts_enabled(settings):
+        config["us_tech_facts"] = {"enabled": True}
+    return config

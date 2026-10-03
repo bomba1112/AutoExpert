@@ -3048,3 +3048,37 @@ html.large-text .match-specs span {font-size:.8em;}
   html.large-text .home-tags {flex-wrap:wrap;overflow:visible;}
   html.large-text .home-tags span {font-size:.68em;white-space:normal;}
 }
+
+/* US technical facts of a configuration (stage C, behind show_us_tech_facts) */
+.us-tech {margin:22px 0;}
+.us-tech-heading h2 {font-size:21px;margin:0 0 6px;}
+.us-tech-heading p {font-size:13px;margin:0 0 4px;color:#4b5b6b;}
+.us-tech-note {font-size:12px!important;color:#67788b!important;}
+.us-tech-tabs {grid-template-columns:repeat(2,minmax(0,1fr));}
+.category-maintenance {background:#eef4e6;color:#3f6b12;}
+.us-tech-panel[hidden] {display:none;}
+.us-tech-group dl>div {align-items:start;}
+.us-tech-values {list-style:none;margin:0;padding:0;display:grid;gap:6px;}
+.us-tech-values li {display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 6px;align-items:baseline;}
+.us-tech-qualifier {font-size:12px;color:#5c6b7a;background:#f1f4f8;border-radius:8px;padding:1px 7px;}
+.us-tech-value {font-weight:600;}
+.us-tech-badge {display:inline-block;font-size:11px;line-height:1.4;border-radius:8px;padding:1px 7px;margin-left:6px;white-space:nowrap;}
+.us-tech-badge.secondary {background:#fff4e0;color:#8a5200;}
+.us-tech-badge.approximate {background:#eaf2ff;color:#1554b3;}
+.us-tech-sources {margin-top:12px;border-bottom:0!important;}
+.us-tech-sources summary {font-size:13px;color:#5c6b7a;}
+.us-tech-sources ol {margin:8px 0 0;padding-left:18px;font-size:12px;line-height:1.5;color:#3d4b59;}
+.us-tech-sources li {margin-bottom:6px;overflow-wrap:anywhere;}
+.us-tech-issue h3,.us-tech-campaign h3,.us-tech-maintenance h3 {font-size:16px;margin:0 0 8px;}
+.us-tech-issue.owner-reports {border-left:4px solid #d8a24a;}
+.us-tech-issue ul,.us-tech-campaign ul {margin:6px 0 10px;padding-left:18px;font-size:14px;}
+.us-tech-label {font-size:12px!important;font-weight:650;color:#4b5b6b;margin:10px 0 2px!important;text-transform:uppercase;letter-spacing:.03em;}
+.us-tech-maintenance ul {list-style:none;margin:0;padding:0;}
+.us-tech-maintenance li {display:grid;gap:3px;padding:10px 0;border-bottom:1px solid #edf0f4;font-size:14px;}
+.us-tech-maintenance li:last-child {border-bottom:0;}
+.us-tech-maintenance li span {color:#16283d;}
+.us-tech-maintenance li small {color:#67788b;font-size:12px;}
+.us-tech-maintenance li .us-tech-badge {margin-left:0;justify-self:start;}
+.us-tech-config {display:grid;gap:4px;text-decoration:none;color:inherit;}
+.us-tech-config span {font-size:13px;color:#5c6b7a;}
+@media (min-width: 720px) {.us-tech-tabs {grid-template-columns:repeat(4,minmax(0,1fr));}}

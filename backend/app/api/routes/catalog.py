@@ -1,6 +1,7 @@
 from collections import defaultdict
+from typing import Literal
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import joinedload
 
@@ -14,6 +15,7 @@ from app.models.catalog import (
     VehicleVariant,
 )
 from app.schemas.analysis import CatalogCountry, CatalogResponse, CatalogVariant
+from app.services import us_tech_facts
 
 router = APIRouter(prefix="/catalog", tags=["catalog"])
 
@@ -84,3 +86,49 @@ def catalog_options(db: DBSession) -> CatalogResponse:
             for variant in variants
         ],
     )
+
+
+# US technical database in the configuration card (next-stage prompt, stage C). Behind the
+# show_us_tech_facts flag: with the flag off these routes do not exist (404), as in production.
+def _us_tech_enabled() -> None:
+    if not us_tech_facts.enabled():
+        raise HTTPException(404, "Not Found")
+
+
+@router.get("/us-tech/facets")
+def us_tech_facets(db: DBSession) -> list[dict]:
+    _us_tech_enabled()
+    return us_tech_facts.facets(db)
+
+
+@router.get("/us-tech/configurations")
+def us_tech_configurations(
+    db: DBSession,
+    make: str | None = Query(default=None, max_length=100),
+    model: str | None = Query(default=None, max_length=100),
+    year: int | None = Query(default=None, ge=1990, le=2100),
+    language: Literal["ru", "az"] = "ru",
+) -> list[dict]:
+    _us_tech_enabled()
+    return us_tech_facts.configurations(db, make, model, year, language)
+
+
+@router.get("/us-tech/configurations/{configuration_key}")
+def us_tech_configuration(
+    configuration_key: str, db: DBSession, language: Literal["ru", "az"] = "ru"
+) -> dict:
+    _us_tech_enabled()
+    data = us_tech_facts.build(db, configuration_key, language)
+    if data is None:
+        raise HTTPException(404, "CONFIGURATION_NOT_FOUND")
+    return data
+
+
+@router.get("/variants/{variant_id}/us-tech")
+def variant_us_tech(variant_id: str, db: DBSession, language: Literal["ru", "az"] = "ru") -> dict:
+    _us_tech_enabled()
+    key = us_tech_facts.configuration_for_variant(db, variant_id)
+    data = us_tech_facts.build(db, key, language) if key else None
+    if data is None:
+        raise HTTPException(404, "CONFIGURATION_NOT_FOUND")
+    return data

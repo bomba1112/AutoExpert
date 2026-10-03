@@ -56,6 +56,9 @@ class Settings(BaseSettings):
     knowledge_worker_enabled: bool = False
     knowledge_import_max_records: int = Field(default=10000, ge=1, le=100000)
     knowledge_import_max_bytes: int = 32 * 1024 * 1024
+    # US technical facts in the configuration card (next-stage prompt, stage C). Unset: on in
+    # development/test (preview), off in production; AUTOEXPERT_SHOW_US_TECH_FACTS overrides.
+    show_us_tech_facts: bool | None = None
     turbo_az_authorized_connector_enabled: bool = False
     turbo_az_authorized_connector_credentials: str | None = None
     turbo_az_authorized_connector_permission_reference: str | None = None

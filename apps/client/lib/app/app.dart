@@ -27,6 +27,7 @@ class _AutoExpertAppState extends State<AutoExpertApp> {
   late final BuyerCatalogApi _buyerApi;
   late final ApiClient _configApi;
   bool _qaMode = false;
+  bool _usTechFacts = false;
 
   @override
   void initState() {
@@ -42,7 +43,13 @@ class _AutoExpertAppState extends State<AutoExpertApp> {
   Future<void> _loadClientConfig() async {
     try {
       final config = await _configApi.getJson('/meta/client-config');
-      if (mounted) setState(() => _qaMode = config['qa_mode'] == true);
+      if (mounted) {
+        setState(() {
+          _qaMode = config['qa_mode'] == true;
+          final usTech = config['us_tech_facts'];
+          _usTechFacts = usTech is Map && usTech['enabled'] == true;
+        });
+      }
     } catch (_) {
       // A failed config request must not expose QA-only controls.
     }
@@ -81,6 +88,7 @@ class _AutoExpertAppState extends State<AutoExpertApp> {
               language: _reportLanguage,
               variantId: id,
               qaMode: _qaMode,
+              usTechFacts: _usTechFacts,
               onCheckVin: () => _openCheck(context))));
 
   void _openBuyer(BuildContext context) =>
