@@ -2,20 +2,26 @@
  "make": "nissan",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T17:37:46+00:00",
- "replace_own": [],
+ "started_at": "2026-10-03T19:12:29+00:00",
+ "replace_own": [
+  "altima"
+ ],
  "lines": {
   "nissan/altima": {
-   "flag": "--prune-stale",
+   "flag": "--replace-own",
    "exit": 0,
    "counts": {
+    "replaced_own_maintenance": 202,
+    "replaced_own_te": 1254,
+    "replaced_own_issues": 50,
     "raw_documents_seen": 90,
-    "source_records_new": 4,
-    "te_existing": 1254,
+    "te_new_GENERATION": 804,
+    "te_new_ENGINE": 13,
+    "te_new_CONFIGURATION": 437,
     "configurations": 35,
     "configurations_research_only": 26,
     "configurations_linked": 9,
-    "issues_existing": 50,
+    "issues_new": 50,
     "maintenance_new": 202
    },
    "generations": [
@@ -40,7 +46,7 @@
     "configurations": 25,
     "configurations_research_only": 25,
     "issues_existing": 44,
-    "maintenance_new": 143
+    "maintenance_existing": 143
    },
    "generations": [
     {
@@ -68,7 +74,7 @@
     "configurations": 34,
     "configurations_research_only": 34,
     "issues_existing": 68,
-    "maintenance_new": 208
+    "maintenance_existing": 208
    },
    "generations": [
     {
@@ -92,7 +98,7 @@
     "configurations": 28,
     "configurations_research_only": 28,
     "issues_existing": 49,
-    "maintenance_new": 195
+    "maintenance_existing": 195
    },
    "generations": [
     {
@@ -111,5 +117,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T17:38:13+00:00"
+ "finished_at": "2026-10-03T19:13:32+00:00"
 }
