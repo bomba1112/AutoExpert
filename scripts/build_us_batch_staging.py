@@ -1323,10 +1323,11 @@ def build_line(db, line: Line) -> dict:
         st.conflicts += extra.get("conflicts", [])
     cross_check_vpic(st, facts)
     maintenance = []
-    path = WORK / line.make / "staging" / line.slug / "maintenance.json"
-    if path.exists():
+    # maintenance.json (Mopar, Hyundai/Kia, Mercedes builders) and maintenance_<source>.json of
+    # the other builders (stage B): every file of the line is merged
+    for path in sorted((WORK / line.make / "staging" / line.slug).glob("maintenance*.json")):
         extra = json.loads(path.read_text(encoding="utf-8"))
-        maintenance = [i for i in extra.get("items", []) if i["generation"] in {g["code"] for g in gens}]
+        maintenance += [i for i in extra.get("items", []) if i["generation"] in {g["code"] for g in gens}]
         for key, item in extra.get("sources", {}).items():
             st.sources.setdefault(key, item)
         st.gaps += extra.get("gaps", [])
