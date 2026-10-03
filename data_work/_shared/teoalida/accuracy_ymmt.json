@@ -1,0 +1,1719 @@
+{
+ "source": "teoalida/ymm_trim_specs",
+ "threshold": 0.9,
+ "min_compared": 5,
+ "fields": {
+  "acceleration_0_60_mph_s": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 138,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "cam_type": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 195,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "cargo_l": {
+   "compared": 50,
+   "agreed": 39,
+   "differ": 11,
+   "no_official": 138,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 479.0,
+     "official": 478.6,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 479.0,
+     "official": 478.6,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 479.0,
+     "official": 478.6,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2017 320i",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2017 320i xDrive",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2017 340i",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2017 340i xDrive",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2014 320i",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-75739985"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2014 328i",
+     "teoalida": 368.0,
+     "official": [
+      "481.4"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-75739985"
+     ]
+    },
+    {
+     "where": "toyota/prius 2022 LE AWD-e",
+     "teoalida": 697.0,
+     "official": [
+      "775.9"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    },
+    {
+     "where": "toyota/prius 2022 XLE AWD-e",
+     "teoalida": 697.0,
+     "official": [
+      "775.9"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    }
+   ],
+   "agreement": 0.78,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "cargo_max_l": {
+   "compared": 15,
+   "agreed": 10,
+   "differ": 5,
+   "no_official": 19,
+   "examples_agree": [
+    {
+     "where": "toyota/prius 2022 L Eco",
+     "teoalida": 1436.0,
+     "official": 1435.7,
+     "source": "press-toyota-prius-2021-bb27b648"
+    },
+    {
+     "where": "toyota/prius 2022 XLE",
+     "teoalida": 1436.0,
+     "official": 1435.7,
+     "source": "press-toyota-prius-2021-bb27b648"
+    },
+    {
+     "where": "toyota/prius 2022 LE",
+     "teoalida": 1436.0,
+     "official": 1435.7,
+     "source": "press-toyota-prius-2021-bb27b648"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "toyota/prius 2022 LE AWD-e",
+     "teoalida": 1356.0,
+     "official": [
+      "1435.7"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    },
+    {
+     "where": "toyota/prius 2022 XLE AWD-e",
+     "teoalida": 1356.0,
+     "official": [
+      "1435.7"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    },
+    {
+     "where": "toyota/prius 2022 Nightshade Edition AWD-e",
+     "teoalida": 1356.0,
+     "official": [
+      "1435.7"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    },
+    {
+     "where": "toyota/prius 2021 XLE AWD-e",
+     "teoalida": 1356.0,
+     "official": [
+      "1435.7"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    },
+    {
+     "where": "toyota/prius 2021 LE AWD-e",
+     "teoalida": 1356.0,
+     "official": [
+      "1435.7"
+     ],
+     "sources": [
+      "press-toyota-prius-2021-bb27b648"
+     ]
+    }
+   ],
+   "agreement": 0.667,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "charge_time_240v_h": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 7,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "curb_weight_kg": {
+   "compared": 80,
+   "agreed": 77,
+   "differ": 3,
+   "no_official": 114,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 1818.0,
+     "official": 1818,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 1818.0,
+     "official": 1818,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 330i xDrive",
+     "teoalida": 1702.0,
+     "official": 1702,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 1767.0,
+     "official": [
+      "1818"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2026-ed050784"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 1739.0,
+     "official": [
+      "1767"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2025-c4547df5"
+     ]
+    },
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 1742.0,
+     "official": [
+      "1776"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    }
+   ],
+   "agreement": 0.963,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "cylinders": {
+   "compared": 164,
+   "agreed": 162,
+   "differ": 2,
+   "no_official": 31,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": 4,
+     "official": 4,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 6,
+     "official": 6,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 6,
+     "official": 6,
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 6,
+     "official": [
+      "4"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 6,
+     "official": [
+      "4"
+     ],
+     "sources": [
+      "epa"
+     ]
+    }
+   ],
+   "agreement": 0.988,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "drag_coefficient": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 15,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "drivetrain": {
+   "compared": 164,
+   "agreed": 164,
+   "differ": 0,
+   "no_official": 31,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": "RWD",
+     "official": "RWD",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": "AWD",
+     "official": "AWD",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": "RWD",
+     "official": "RWD",
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "engine_displacement_l": {
+   "compared": 164,
+   "agreed": 164,
+   "differ": 0,
+   "no_official": 31,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": 2.0,
+     "official": "2.0",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 3.0,
+     "official": "3.0",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 3.0,
+     "official": "3.0",
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "engine_type": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 195,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "epa_combined_mpg": {
+   "compared": 164,
+   "agreed": 142,
+   "differ": 22,
+   "no_official": 31,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": 31,
+     "official": 31,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 29,
+     "official": 29,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 29,
+     "official": 29,
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2016 340i",
+     "teoalida": 26,
+     "official": [
+      "23",
+      "25"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2016 340i xDrive",
+     "teoalida": 26,
+     "official": [
+      "23",
+      "25"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2016 328d",
+     "teoalida": 36,
+     "official": [
+      "35"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2015 335i xDrive",
+     "teoalida": 24,
+     "official": [
+      "23"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2015 328d",
+     "teoalida": 37,
+     "official": [
+      "36"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2015 328d xDrive",
+     "teoalida": 35,
+     "official": [
+      "34"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2015 328d xDrive Wagon",
+     "teoalida": 35,
+     "official": [
+      "34"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2014 328d",
+     "teoalida": 37,
+     "official": [
+      "36"
+     ],
+     "sources": [
+      "epa"
+     ]
+    }
+   ],
+   "agreement": 0.866,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "epa_combined_mpge": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 11,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "epa_electric_range_km": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 9,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "epa_kwh_per_100mi": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 7,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "fast_charge_port": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 2,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "front_head_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 183,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "front_hip_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 86,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "front_leg_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 192,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "front_shoulder_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 195,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "fuel_tank_l": {
+   "compared": 68,
+   "agreed": 58,
+   "differ": 10,
+   "no_official": 127,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 59.1,
+     "official": 59.1,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 59.1,
+     "official": 59.1,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 59.1,
+     "official": 59.1,
+     "source": "press-bmwgroup-m3-2024-64769eb5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "toyota/prius 2025 XLE AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2025 Nightshade AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2025 Limited AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2025 LE AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2024 XLE AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2024 LE AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2024 Limited AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    },
+    {
+     "where": "toyota/prius 2023 LE AWD",
+     "teoalida": 39.7,
+     "official": [
+      "42.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2023-999c3af7"
+     ]
+    }
+   ],
+   "agreement": 0.853,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "fuel_type (class vs EPA)": {
+   "compared": 164,
+   "agreed": 164,
+   "differ": 0,
+   "no_official": 31,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": "premium",
+     "official": "premium",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": "premium",
+     "official": "premium",
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": "premium",
+     "official": "premium",
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "gross_weight_kg": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 53,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "ground_clearance": {
+   "compared": 49,
+   "agreed": 49,
+   "differ": 0,
+   "no_official": 133,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 130.0,
+     "official": 130,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 135.0,
+     "official": 130,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 130.0,
+     "official": 130,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "height_mm": {
+   "compared": 50,
+   "agreed": 49,
+   "differ": 1,
+   "no_official": 145,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 1440.0,
+     "official": 1440,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 1440.0,
+     "official": 1440,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 1433.0,
+     "official": 1433,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 1433.0,
+     "official": [
+      "1440"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2026-ed050784"
+     ]
+    }
+   ],
+   "agreement": 0.98,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "interior_volume_l": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 87,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "length_mm": {
+   "compared": 89,
+   "agreed": 86,
+   "differ": 3,
+   "no_official": 106,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 4722.0,
+     "official": 4722,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 4722.0,
+     "official": 4722,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 4722.0,
+     "official": 4722,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 4803.0,
+     "official": [
+      "4796"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2014 320i",
+     "teoalida": 4636.0,
+     "official": [
+      "4628"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-75739985"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2014 328i",
+     "teoalida": 4636.0,
+     "official": [
+      "4628"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-75739985"
+     ]
+    }
+   ],
+   "agreement": 0.966,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "nhtsa_overall_rating": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 115,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "payload_kg": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 46,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "platform_code": {
+   "compared": 71,
+   "agreed": 60,
+   "differ": 11,
+   "no_official": 124,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2018 320i",
+     "teoalida": "F30",
+     "official": "F30",
+     "source": "generation"
+    },
+    {
+     "where": "bmw/3-series 2018 320i xDrive",
+     "teoalida": "F30",
+     "official": "F30",
+     "source": "generation"
+    },
+    {
+     "where": "bmw/3-series 2018 330i",
+     "teoalida": "F30",
+     "official": "F30",
+     "source": "generation"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "toyota/prius 2015 One",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2015 Two",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2015 Three",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2015 Persona Series Special Edition",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2015 Four",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2015 Five",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2014 One",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    },
+    {
+     "where": "toyota/prius 2014 Two",
+     "teoalida": "XW30",
+     "official": [
+      "\"ZVW30\""
+     ],
+     "sources": [
+      "generation"
+     ]
+    }
+   ],
+   "agreement": 0.845,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "power_hp": {
+   "compared": 12,
+   "agreed": 11,
+   "differ": 1,
+   "no_official": 84,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 386,
+     "official": 386,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 330i",
+     "teoalida": 255,
+     "official": 255,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2020 M340i",
+     "teoalida": 382,
+     "official": 382,
+     "source": "press-bmwgroup-3-series-2020-e14a30eb"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 473,
+     "official": [
+      "543"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    }
+   ],
+   "agreement": 0.917,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "power_rpm": {
+   "compared": 9,
+   "agreed": 9,
+   "differ": 0,
+   "no_official": 87,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 5200,
+     "official": "5,200 - 6,250",
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 330i",
+     "teoalida": 4700,
+     "official": "4,700-6,500",
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 6250,
+     "official": "6,250-7,200",
+     "source": "press-bmwgroup-m3-2024-64769eb5"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "rear_head_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 183,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "rear_hip_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 86,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "rear_leg_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 192,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "rear_shoulder_room_mm": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 195,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "safety_features": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 114,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "seats": {
+   "compared": 84,
+   "agreed": 84,
+   "differ": 0,
+   "no_official": 111,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 5,
+     "official": 5,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 5,
+     "official": 5,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 5,
+     "official": 5,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "suspension_features": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 114,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "system_power_hp": {
+   "compared": 53,
+   "agreed": 53,
+   "differ": 0,
+   "no_official": 46,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2017 330e iPerformance",
+     "teoalida": 248,
+     "official": 248,
+     "source": "press-bmwgroup-3-series-2017-69e983f2"
+    },
+    {
+     "where": "toyota/prius 2022 L Eco",
+     "teoalida": 121,
+     "official": 121,
+     "source": "press-toyota-prius-2020-13f8ad0d"
+    },
+    {
+     "where": "toyota/prius 2022 XLE",
+     "teoalida": 121,
+     "official": 121,
+     "source": "press-toyota-prius-2020-13f8ad0d"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "tires_wheels_features": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 114,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "torque_lb_ft": {
+   "compared": 18,
+   "agreed": 15,
+   "differ": 3,
+   "no_official": 96,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 398,
+     "official": 398,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 330i",
+     "teoalida": 295,
+     "official": 295,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2020 M340i",
+     "teoalida": 369,
+     "official": 369,
+     "source": "press-bmwgroup-3-series-2020-e14a30eb"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 406,
+     "official": [
+      "479"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2017 330e iPerformance",
+     "teoalida": 310,
+     "official": [
+      "215"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2017-69e983f2",
+      "press-bmwgroup-3-series-2017-839132a4"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2015 328i xDrive Wagon",
+     "teoalida": 258,
+     "official": [
+      "255"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2014-eec89c10"
+     ]
+    }
+   ],
+   "agreement": 0.833,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "torque_rpm": {
+   "compared": 14,
+   "agreed": 13,
+   "differ": 1,
+   "no_official": 91,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 1900,
+     "official": "1,900 – 4,800",
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 330i",
+     "teoalida": 1600,
+     "official": "1,600-4,500",
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2017 320i",
+     "teoalida": 1250,
+     "official": "1250-4500",
+     "source": "press-bmwgroup-3-series-2017-839132a4"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 2650,
+     "official": [
+      "\"2,750-5,950\""
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    }
+   ],
+   "agreement": 0.929,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "track_front_mm": {
+   "compared": 1,
+   "agreed": 1,
+   "differ": 0,
+   "no_official": 18,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2014 328i xDrive Wagon",
+     "teoalida": 1532.0,
+     "official": 1532,
+     "source": "press-bmwgroup-3-series-2014-eec89c10"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "track_rear_mm": {
+   "compared": 1,
+   "agreed": 1,
+   "differ": 0,
+   "no_official": 18,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2014 328i xDrive Wagon",
+     "teoalida": 1572.0,
+     "official": 1570,
+     "source": "press-bmwgroup-3-series-2014-eec89c10"
+    }
+   ],
+   "examples_differ": [],
+   "agreement": 1.0,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "transmission (gear count vs EPA)": {
+   "compared": 92,
+   "agreed": 87,
+   "differ": 5,
+   "no_official": 17,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 330i",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 8,
+     "official": 8,
+     "source": "epa"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2018 M3",
+     "teoalida": 6,
+     "official": [
+      "7"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/m3 2017 M3",
+     "teoalida": 6,
+     "official": [
+      "7"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2016 328i",
+     "teoalida": 6,
+     "official": [
+      "8"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/m3 2016 M3",
+     "teoalida": 6,
+     "official": [
+      "7"
+     ],
+     "sources": [
+      "epa"
+     ]
+    },
+    {
+     "where": "bmw/m3 2015 M3",
+     "teoalida": 6,
+     "official": [
+      "7"
+     ],
+     "sources": [
+      "epa"
+     ]
+    }
+   ],
+   "agreement": 0.946,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "turning_circle_m": {
+   "compared": 34,
+   "agreed": 27,
+   "differ": 7,
+   "no_official": 158,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 12.0,
+     "official": 12.0,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 12.0,
+     "official": 12.0,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 11.4,
+     "official": 11.4,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 11.4,
+     "official": [
+      "12.0"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2026-ed050784"
+     ]
+    },
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 12.2,
+     "official": [
+      "12.6"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    },
+    {
+     "where": "toyota/prius 2017 One",
+     "teoalida": 10.2,
+     "official": [
+      "10.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2017-54232100"
+     ]
+    },
+    {
+     "where": "toyota/prius 2017 Two",
+     "teoalida": 10.2,
+     "official": [
+      "10.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2017-54232100"
+     ]
+    },
+    {
+     "where": "toyota/prius 2017 Two Eco",
+     "teoalida": 10.2,
+     "official": [
+      "10.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2017-54232100"
+     ]
+    },
+    {
+     "where": "toyota/prius 2017 Three",
+     "teoalida": 10.2,
+     "official": [
+      "10.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2017-54232100"
+     ]
+    },
+    {
+     "where": "toyota/prius 2017 Four",
+     "teoalida": 10.2,
+     "official": [
+      "10.8"
+     ],
+     "sources": [
+      "press-toyota-prius-2017-54232100"
+     ]
+    }
+   ],
+   "agreement": 0.794,
+   "verdict": "below 90% - not written",
+   "write": false
+  },
+  "valve_timing": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 180,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "valves": {
+   "compared": 0,
+   "agreed": 0,
+   "differ": 0,
+   "no_official": 195,
+   "examples_agree": [],
+   "examples_differ": [],
+   "agreement": null,
+   "verdict": "not measurable (too few comparisons) - not written",
+   "write": false
+  },
+  "wheelbase_mm": {
+   "compared": 103,
+   "agreed": 99,
+   "differ": 4,
+   "no_official": 92,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 2850.0,
+     "official": 2850,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 2850.0,
+     "official": 2850,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/m3 2025 M3",
+     "teoalida": 2858.0,
+     "official": 2858,
+     "source": "press-bmwgroup-m3-2025-5324dbad"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 2850.0,
+     "official": [
+      "2858"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2025-c4547df5"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2025 M340i",
+     "teoalida": 2850.0,
+     "official": [
+      "2858"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2025-c4547df5"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2025 330i xDrive",
+     "teoalida": 2850.0,
+     "official": [
+      "2858"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2025-c4547df5"
+     ]
+    },
+    {
+     "where": "bmw/3-series 2025 330i",
+     "teoalida": 2850.0,
+     "official": [
+      "2858"
+     ],
+     "sources": [
+      "press-bmwgroup-3-series-2025-c4547df5"
+     ]
+    }
+   ],
+   "agreement": 0.961,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  },
+  "width_mm": {
+   "compared": 79,
+   "agreed": 78,
+   "differ": 1,
+   "no_official": 116,
+   "examples_agree": [
+    {
+     "where": "bmw/3-series 2026 M340i xDrive",
+     "teoalida": 1826.0,
+     "official": 1826,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2026 M340i",
+     "teoalida": 1826.0,
+     "official": 1826,
+     "source": "press-bmwgroup-3-series-2026-ed050784"
+    },
+    {
+     "where": "bmw/3-series 2025 M340i xDrive",
+     "teoalida": 1826.0,
+     "official": 1826,
+     "source": "press-bmwgroup-3-series-2025-c4547df5"
+    }
+   ],
+   "examples_differ": [
+    {
+     "where": "bmw/m3 2024 M3",
+     "teoalida": 1887.0,
+     "official": [
+      "1918"
+     ],
+     "sources": [
+      "press-bmwgroup-m3-2024-64769eb5"
+     ]
+    }
+   ],
+   "agreement": 0.987,
+   "verdict": "written (SECONDARY_NOTE)",
+   "write": true
+  }
+ },
+ "records": 195
+}

@@ -43,12 +43,20 @@ def tokens(text: str) -> set[str]:
     return {t for t in re.split(r"[\s/,()]+", (text or "").lower()) if t}
 
 
-def designation_fits(designation: str | None, variant: str | None) -> bool:
-    """Same model designation, ignoring body words ("330i xDrive" fits "330i xDrive Sports Wagon")."""
+def designation_fits(designation: str | None, variant: str | None, ignore: set | None = None) -> bool:
+    """Same model designation. A variant may list several ("Three, Four", "XLE/Nightshade",
+    "Three Touring and Four Touring"); one of them must name the designation with nothing but
+    body words or the model name added ("330i xDrive" fits "330i xDrive Sports Wagon" and
+    "Prius Two" fits "Two"; "330i" does not fit "330i xDrive", "M3" does not fit "M3 CS")."""
     if not designation or not variant:
         return True
-    a, b = tokens(designation) - BODY_WORDS, tokens(variant) - BODY_WORDS
-    return bool(a) and bool(b) and (a <= b or b <= a)
+    extra = BODY_WORDS | (ignore or set())
+    a = tokens(designation) - extra
+    for alt in re.split(r",|/|\band\b|;", variant):
+        b = tokens(alt) - extra
+        if a and b and a == b:
+            return True
+    return False
 
 
 MODEL_TOKEN = re.compile(r"^(?:m?\d{3}[a-z]{0,2}|m\d{1,3}[a-z]?|x\d|z\d|i\d|[a-z]{1,3}\d{2,3}[a-z]?)$")
@@ -81,7 +89,19 @@ def number(value):
     return float(m.group(1)) if m else None
 
 
+RANGE = re.compile(r"^\s*(\d[\d,]*)\s*[-\u2013\u2014]\s*(\d[\d,]*)\s*$")
+
+
 def agree(key: str, a, b) -> bool:
+    if key.endswith("_rpm"):
+        # an official rpm band ("5,200 - 6,250") agrees with a single rpm inside it
+        for x, y in ((a, b), (b, a)):
+            m = RANGE.match(str(y))
+            if m and number(x) is not None:
+                lo, hi = (float(g.replace(",", "")) for g in m.groups())
+                return lo <= number(x) <= hi
+    a = str(a).replace(",", "") if isinstance(a, str) and re.fullmatch(r"\d{1,3}(,\d{3})+", a) else a
+    b = str(b).replace(",", "") if isinstance(b, str) and re.fullmatch(r"\d{1,3}(,\d{3})+", b) else b
     x, y = number(a), number(b)
     if x is not None and y is not None:
         abs_tol, rel_tol = TOLERANCE.get(key, (0, 0.01))
@@ -94,14 +114,29 @@ def load_line(make: str, line: str) -> dict | None:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
-def official_values(staging: dict, key: str, year: int, designation: str | None, config: dict | None) -> list:
-    """Official values for one field, model year and designation (with their source)."""
+BODY_FAMILY = [(re.compile(r"wagon|touring", re.I), "WAGON"), (re.compile(r"gran turismo|\bGT\b", re.I), "GT"),
+               (re.compile(r"convertible|cabrio", re.I), "CONVERTIBLE"), (re.compile(r"coupe", re.I), "COUPE")]
+
+
+def body_family(text: str | None) -> str | None:
+    return next((b for p, b in BODY_FAMILY if p.search(text or "")), None)
+
+
+def official_values(staging: dict, key: str, year: int, designation: str | None, config: dict | None,
+                    keys: tuple = ()) -> list:
+    """Official values for one field, model year and designation (with their source). `keys` adds
+    official fields that hold the same quantity (system power of a hybrid). A wagon, GT, coupe or
+    convertible is compared only with official values stated for that body."""
     out = []
+    ignore = tokens(staging.get("line") or "") | tokens(str(staging.get("line_key", "")).split("/")[-1].replace("-", " "))
+    body = body_family(designation)
     for f in staging["facts"]:
-        if f["key"] != key or f["display_level"] != "FACT" or not (f["years"][0] <= year <= f["years"][1]):
+        if f["key"] not in (key, *keys) or f["display_level"] != "FACT" or not (f["years"][0] <= year <= f["years"][1]):
             continue
         app = f.get("applicability") or {}
-        if not designation_fits(designation, model_label(app)) or not edition_fits(designation, app.get("edition")):
+        if not designation_fits(designation, model_label(app), ignore) or not edition_fits(designation, app.get("edition")):
+            continue
+        if body_family(" ".join(str(app.get(k) or "") for k in ("edition", "variant"))) != body:
             continue
         if config and app.get("powertrain") and config.get("powertrain") and app["powertrain"] != config["powertrain"]:
             continue
@@ -113,8 +148,11 @@ def official_values(staging: dict, key: str, year: int, designation: str | None,
                "drivetrain": config.get("drivetrain")}
         if key in epa and epa[key] not in (None, ""):
             out.append((epa[key], "epa", config["configuration_key"]))
-        for v in config.get("epa_vehicles", []):
-            if key in ("epa_city_mpg", "epa_highway_mpg", "epa_combined_mpg") and designation_fits(designation, v.get("epa_model")):
+        if key in ("epa_city_mpg", "epa_highway_mpg", "epa_combined_mpg"):
+            vehicles = config.get("epa_vehicles", [])
+            named = [v for v in vehicles if designation_fits(designation, v.get("epa_model"), ignore)]
+            # a trim name EPA does not use ("LE") is compared with the configuration's EPA rows
+            for v in named or vehicles:
                 out.append((v.get(key.replace("epa_", "")), "epa", v.get("epa_model")))
     return out
 
