@@ -2,7 +2,7 @@
  "make": "tesla",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-02T17:10:05+00:00",
+ "started_at": "2026-10-03T17:37:30+00:00",
  "replace_own": [],
  "lines": {
   "tesla/model-3": {
@@ -10,18 +10,15 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 33,
-    "source_records_new": 29,
-    "te_new_GENERATION": 200,
-    "te_new_CONFIGURATION": 244,
+    "te_existing": 444,
     "configurations": 19,
     "configurations_research_only": 19,
-    "issues_new": 42
+    "issues_existing": 42
    },
    "generations": [
     {
      "code": "I",
-     "action": "filled",
-     "start_year": 2017
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -31,19 +28,18 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 35,
-    "source_records_new": 26,
-    "te_new_GENERATION": 153,
-    "te_new_CONFIGURATION": 156,
+    "raw_documents_seen": 39,
+    "source_records_new": 4,
+    "te_existing": 309,
     "configurations": 12,
     "configurations_research_only": 12,
-    "issues_new": 39
+    "issues_existing": 39,
+    "maintenance_new": 8
    },
    "generations": [
     {
      "code": "I",
-     "action": "filled",
-     "start_year": 2020
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -53,13 +49,13 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 106,
-    "source_records_new": 92,
-    "te_new_GENERATION": 183,
-    "te_new_CONFIGURATION": 332,
+    "raw_documents_seen": 110,
+    "source_records_new": 4,
+    "te_existing": 515,
     "configurations": 18,
     "configurations_research_only": 18,
-    "issues_new": 40
+    "issues_existing": 40,
+    "maintenance_new": 10
    },
    "generations": [
     {
@@ -74,19 +70,18 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 79,
-    "source_records_new": 64,
-    "te_new_GENERATION": 92,
-    "te_new_CONFIGURATION": 208,
+    "raw_documents_seen": 82,
+    "source_records_new": 3,
+    "te_existing": 300,
     "configurations": 11,
     "configurations_research_only": 11,
-    "issues_new": 11
+    "issues_existing": 11,
+    "maintenance_new": 14
    },
    "generations": [
     {
      "code": "I",
-     "action": "filled",
-     "start_year": 2016
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -96,5 +91,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-02T17:10:21+00:00"
+ "finished_at": "2026-10-03T17:37:45+00:00"
 }
