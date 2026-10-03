@@ -17,6 +17,7 @@ default, off in production).
 
 from __future__ import annotations
 
+import hashlib
 import re
 import threading
 import time
@@ -28,6 +29,7 @@ from sqlalchemy import func, select
 from app.core.config import get_settings
 from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel
 from app.models.evidence import KnownIssue, MaintenanceScheduleItem, SourceRecord, TechnicalEvidence
+from app.models.translations import ContentTranslation
 from app.services.catalog_buyer import VALUE_LABELS
 from app.services.tech_units import convert
 
@@ -181,6 +183,32 @@ FILLER = {"with", "and", "the", "all", "models", "model", "line", "if", "equippe
           "all-new", "first-ever", "-", "us", "key", "dimensions", "preliminary", "options", "data", "edition", "series",
           "canadian", "vehicle", "activity", "stands", "apart"}
 POWER_WORDS = re.compile(r"^(?:hybrid|plug-in|phev|hev|energi|diesel|tdi|bluetec|electric|ev|e-tron|bev|tfsi|\d\.\dl?|l)$")
+
+
+def text_hash(text: str) -> str:
+    """The key of a translation: sha256 of the English text with whitespace collapsed
+    (the same as scripts/i18n_collect.py)."""
+    return hashlib.sha256(" ".join(str(text or "").split()).encode("utf-8")).hexdigest()
+
+
+class Translator:
+    """Russian / Azerbaijani text of an English original from content_translations (owner
+    decision 2026-10-03: the original stays, the translation is in separate fields). A text
+    without a translation is shown as it is."""
+
+    def __init__(self, db, language: str):
+        self.db = db
+        self.column = ContentTranslation.text_az if language == "az" else ContentTranslation.text_ru
+        self.cache: dict = {}
+
+    def __call__(self, kind: str, original):
+        if not original or not str(original).strip():
+            return original
+        key = (kind, text_hash(original))
+        if key not in self.cache:
+            self.cache[key] = self.db.scalar(select(self.column).where(
+                ContentTranslation.kind == kind, ContentTranslation.source_hash == key[1]))
+        return self.cache[key] or original
 
 
 def _enum(value) -> str | None:
@@ -477,7 +505,7 @@ def _list(value) -> list:
     return value if isinstance(value, list) else [value]
 
 
-def applies(app: dict, t: Target) -> tuple[bool, int, list[str]]:
+def applies(app: dict, t: Target, translate=None) -> tuple[bool, int, list[str]]:
     """(applies, specificity, qualifier parts). Specificity 0: the row names the configuration's
     model designation; 1: general. Qualifiers name the trim, designation, tire or condition a
     value is stated for when it is narrower than the configuration."""
@@ -590,7 +618,7 @@ def applies(app: dict, t: Target) -> tuple[bool, int, list[str]]:
         qual.append(f"Maintenance Minder: {app['minder_code']}")
     for key in ("condition", "emissions", "wheel", "equipment", "oil_monitor", "brake_fluid_type", "schedule_table", "filter"):
         if app.get(key):
-            qual.append(str(app[key]))
+            qual.append(translate("maintenance_qualifier", str(app[key])) if translate else str(app[key]))
     return True, specific, qual
 
 
@@ -692,9 +720,63 @@ def _configuration_row(db, configuration_key: str) -> TechnicalEvidence | None:
                                                      TechnicalEvidence.configuration_key == configuration_key).limit(1))
 
 
+def _gearbox(text: str) -> tuple[str | None, int | None]:
+    """(family, gears) of an EPA or catalogue gearbox: AT, CVT, DCT, MANUAL."""
+    t = str(text or "").lower()
+    gears = re.findall(r"(\d+)", t)
+    count = int(gears[-1]) if gears else None
+    if t.startswith("manual") or t == "manual":
+        return "MANUAL", count
+    if "(av" in t or "variable" in t or "cvt" in t or "ivt" in t:
+        return "CVT", None
+    if "(am" in t or "dual-clutch" in t or "dct" in t or "dsg" in t:
+        return "DCT", count
+    return ("AT", count) if t else (None, None)
+
+
 def configuration_for_variant(db, variant_id: str) -> str | None:
-    return db.scalar(select(TechnicalEvidence.configuration_key).where(
-        TechnicalEvidence.fact_key == "configuration", TechnicalEvidence.vehicle_variant_id == variant_id).limit(1))
+    """The configuration a catalogue variant is linked to. The loader links by displacement,
+    drive and powertrain only, so a variant can carry several configurations (2.0 IVT and 2.0T
+    DCT of one Elantra year): the one whose gearbox and aspiration agree with the variant wins;
+    equivalent EPA codings of the same car (AV-S7 / variable gear ratios) are told apart by the
+    amount of data; nothing compatible -> no configuration."""
+    rows = list(db.execute(select(TechnicalEvidence.configuration_key, TechnicalEvidence.conditions).where(
+        TechnicalEvidence.fact_key == "configuration", TechnicalEvidence.vehicle_variant_id == variant_id)))
+    if not rows:
+        from app.services import catalog_preview  # a variant of the preview layer (2021-2026)
+
+        return catalog_preview.configuration_key(db, variant_id)
+    if len(rows) == 1:
+        return rows[0][0]
+    from app.models.catalog import VehicleVariant
+
+    variant = db.get(VehicleVariant, variant_id)
+    facts = ((variant.specifications or {}).get("catalog") or {}).get("facts") or {} if variant else {}
+    fact = lambda k: (facts.get(k) or {}).get("value") if isinstance(facts.get(k), dict) else facts.get(k)  # noqa: E731
+    family = str(fact("transmission_family") or "").upper() or _gearbox(fact("transmission_description") or (variant.transmission if variant else ""))[0]
+    family = {"AMT": "DCT", "ECVT": "CVT", "VARIABLE_UNSPECIFIED": "CVT"}.get(family, family)
+    gears = fact("gears")
+    aspiration = str(fact("aspiration") or "").upper()
+    turbo = None if not aspiration else aspiration in ("TURBO", "TURBOCHARGED", "SUPERCHARGED")
+    fitting = []
+    for key, cond in rows:
+        ident = (cond or {}).get("identity") or {}
+        cfg_family, cfg_gears = _gearbox(ident.get("epa_transmission"))
+        if family in ("AT", "CVT", "DCT", "MANUAL") and cfg_family and cfg_family != family:
+            continue
+        if gears and cfg_gears and int(gears) != cfg_gears:
+            continue
+        cfg_turbo = str(ident.get("aspiration") or "").upper() in ("TURBOCHARGED", "SUPERCHARGED")
+        if turbo is not None and ident.get("aspiration") and cfg_turbo != turbo:
+            continue
+        fitting.append(key)
+    if not fitting:
+        return None
+    if len(fitting) == 1:
+        return fitting[0]
+    counts = dict(db.execute(select(TechnicalEvidence.configuration_key, func.count()).where(
+        TechnicalEvidence.configuration_key.in_(fitting)).group_by(TechnicalEvidence.configuration_key)).all())
+    return sorted(fitting, key=lambda k: (-counts.get(k, 0), k))[0]
 
 
 def _target(db, row: TechnicalEvidence) -> tuple[Target, list[TechnicalEvidence]]:
@@ -806,7 +888,7 @@ STAMP_SECONDS = 60
 
 def _stamp(db) -> tuple:
     out = []
-    for table in (TechnicalEvidence, KnownIssue, MaintenanceScheduleItem):
+    for table in (TechnicalEvidence, KnownIssue, MaintenanceScheduleItem, ContentTranslation):
         count, newest = db.execute(select(func.count(table.id), func.max(table.updated_at))).one()
         out.append((count, str(newest)))
     return tuple(out)
@@ -922,7 +1004,7 @@ def _build(db, configuration_key: str, language: str) -> dict | None:
         "designations": t.designations,
         "categories": categories,
         "weak_points": weak_points(db, t, language),
-        "campaigns": campaigns(recalls, t, language),
+        "campaigns": campaigns(recalls, t, language, Translator(db, language)),
         "maintenance": maintenance(db, t, language, excluded_editions),
         "labels": {
             "secondary": tr(language, ("по данным справочников", "məlumat kitabçalarına görə")),
@@ -1009,6 +1091,7 @@ def issue_fits(text: str, t: Target) -> bool:
 
 
 def weak_points(db, t: Target, language: str) -> list[dict]:
+    translate = Translator(db, language)
     issues = db.scalars(select(KnownIssue).where(
         KnownIssue.make_id == t.make_id, KnownIssue.generation_id == t.generation_id, KnownIssue.year_from <= t.year,
         KnownIssue.year_to >= t.year, KnownIssue.scope_level.is_not(None), KnownIssue.is_demo.is_(False)))
@@ -1034,17 +1117,22 @@ def weak_points(db, t: Target, language: str) -> list[dict]:
             note = tr(language, ("владельцы сообщают", "sahiblər bildirir"))
         elif display == "SECONDARY_NOTE":
             note = tr(language, ("по данным справочников", "məlumat kitabçalarına görə"))
-        out.append({"title": issue.title or issue.component, "component": issue.component,
+        title = issue.title or issue.component
+        symptoms = [str(s) for s in issue.symptoms or [] if s]
+        out.append({"title": translate("issue_title", title) if issue.title else translate("issue_component", title),
+                    "component": translate("issue_component", issue.component),
                     "severity": tr(language, SEVERITY.get(severity, (severity, severity))), "severity_code": severity,
                     "probability": tr(language, PROBABILITY[probability]) if probability in PROBABILITY else None,
-                    "symptoms": [str(s) for s in issue.symptoms or [] if s],
-                    "how_to_check": issue.inspection_recommendation or None,
+                    "symptoms": [translate("issue_symptom", s) for s in symptoms],
+                    "how_to_check": translate("issue_inspection", issue.inspection_recommendation) or None,
+                    "original": {"title": title, "symptoms": symptoms, "how_to_check": issue.inspection_recommendation or None},
                     "owner_reports": owner, "note": note, "years": [issue.year_from, issue.year_to]})
     out.sort(key=lambda i: (i["owner_reports"], SEVERITY_RANK.get(i["severity_code"], 9), i["title"] or ""))
     return out
 
 
-def campaigns(rows: list[TechnicalEvidence], t: Target, language: str) -> list[dict]:
+def campaigns(rows: list[TechnicalEvidence], t: Target, language: str, translate=None) -> list[dict]:
+    translate = translate or (lambda kind, text: text)
     out, seen = [], set()
     for r in rows:
         cond = r.conditions or {}
@@ -1055,7 +1143,9 @@ def campaigns(rows: list[TechnicalEvidence], t: Target, language: str) -> list[d
         if years and t.year not in years:
             continue
         seen.add(number_)
-        out.append({"number": number_, "component": cond.get("component"), "summary": cond.get("summary"),
+        out.append({"number": number_, "component": translate("recall_component", cond.get("component")),
+                    "summary": translate("recall_summary", cond.get("summary")),
+                    "original": {"component": cond.get("component"), "summary": cond.get("summary")},
                     "years": [min(years), max(years)] if years else [r.year_from, r.year_to],
                     "note": tr(language, ("применимость к конкретному автомобилю проверяется по VIN",
                                           "konkret avtomobilə aidiyyəti VIN üzrə yoxlanılır"))})
@@ -1114,6 +1204,7 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
         if _enum(it.display_level) in DISPLAY_RANK and not (it.engine_family_key and it.engine_family_key != t.engine)
         and (it.applicability or {}).get("edition") not in excluded_editions]
     jobs = {it.job for it in items}
+    translate = Translator(db, language)
     first, later = tr(language, ("первая", "ilk")), tr(language, ("последующие", "sonrakılar"))
     out, seen = [], set()
     for it in items:
@@ -1121,7 +1212,7 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
         if not job_fits(it.job, t, jobs):
             continue
         app = it.applicability or {}
-        ok, _, qual = applies(app, t)
+        ok, _, qual = applies(app, t, translate)
         if not ok:
             continue
         system, action = _enum(it.schedule_system), _enum(it.action)
@@ -1132,9 +1223,9 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
                  "max_interval": _interval(it.max_interval_km, it.max_interval_months, "WHICHEVER_FIRST", language),
                  "system": tr(language, SYSTEMS[system]) if system in SYSTEMS else None,
                  "severe": condition == "SEVERE",
-                 "condition_detail": app.get("operating_condition"),
+                 "condition_detail": translate("maintenance_condition", app.get("operating_condition")),
                  "occurrence": {"FIRST": first, "SUBSEQUENT": later}.get(occurrence),
-                 "service": app.get("service"),
+                 "service": translate("maintenance_service", app.get("service")),
                  "qualifier": " · ".join(q.lstrip(DISPLAY_ONLY) for q in qual if q) or None,
                  "approximate": bool(app.get("approx_in_source")),
                  "secondary": display == "SECONDARY_NOTE",

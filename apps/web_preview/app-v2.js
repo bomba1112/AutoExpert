@@ -15,7 +15,7 @@ import {
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
 import {createBuyerViews} from './buyer-views.js?v=0.9.0';
-import {createCatalogViews} from './catalog-views.js?v=0.9.2';
+import {createCatalogViews} from './catalog-views.js?v=0.9.3';
 import {createVinHistoryViews} from './vin-history-views.js?v=0.9.0';
 import {createListingViews} from './listing-views.js?v=0.9.0';
 import {createUsTechViews} from './us-tech-views.js?v=0.9.2';

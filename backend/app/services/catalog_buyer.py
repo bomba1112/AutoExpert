@@ -294,13 +294,15 @@ def configuration_display(c, language):
     return " · ".join(parts)
 
 
-def records(db, *, active_scope=True, production_safe=False):
+def records(db, *, active_scope=True, production_safe=False, variant_ids=None):
+    """variant_ids: only these variants (the preview layer); None keeps every published one."""
     sources = {s.id: s for s in db.scalars(select(SourceRegistry))}
     rules = scope_policy() if active_scope else None
     result = []
     variants = list(db.scalars(
         select(VehicleVariant).where(
-            VehicleVariant.published_revision_id.is_not(None), VehicleVariant.is_demo.is_(False)
+            VehicleVariant.published_revision_id.is_not(None), VehicleVariant.is_demo.is_(False),
+            *([VehicleVariant.id.in_(list(variant_ids))] if variant_ids is not None else []),
         )
     ))
     # Listing intake must use the same rights-cleared consumer projection even
@@ -388,7 +390,7 @@ def card(db, variant, c, language="ru", assets=None):
     generation = c.get("generation")
     generation_code = c.get("generation_code")
     unknown_generation = {"", "unknown", "unresolved", "unverified", "generation unverified"}
-    return {
+    result = {
         "id": variant.id,
         "make": c["make"],
         "model": c["model"],
@@ -425,6 +427,10 @@ def card(db, variant, c, language="ru", assets=None):
         "asset": {"state": "IMAGE_QA", "url": None}
         if c.get("commercial_fact_overlay") else asset_for(db, variant.id, assets),
     }
+    if c.get("preview_only"):  # preview layer (catalog_preview): production cards stay as they are
+        result["preview"] = True
+        result["us_configuration_key"] = c.get("us_configuration_key")
+    return result
 
 
 def facets(db, catalog_scope="ALL", *, rows=None):

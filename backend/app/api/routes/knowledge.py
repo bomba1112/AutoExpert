@@ -38,6 +38,7 @@ from app.schemas.paid_report import PaidReportSection, ReportParagraph, ReportRo
 from app.schemas.research import ResearchJobCreate
 from app.schemas.verified_ownership import OperationHistory, OwnershipScenario
 from app.services import catalog_buyer as buyer
+from app.services import catalog_preview
 from app.services.knowledge_import import (
     apply_revision,
     audit,
@@ -172,27 +173,34 @@ def published(db, variant_id, *, production_safe=True):
     return row
 
 
+def consumer_rows(db):
+    """Rows the buyer sees: the production rows, plus the preview layer while it is enabled
+    (never in production; catalog_preview.enabled)."""
+    return production_visible_us_rows(db) + catalog_preview.preview_rows(db)
+
+
 @router.get("/facets")
 def get_facets(
     db: DBSession,
     catalog_scope: Literal["ALL", "US_BASE_2000", "US_CONFIRMED_2000"] = "US_BASE_2000",
 ):
-    return buyer.facets(db, catalog_scope, rows=production_visible_us_rows(db))
+    return buyer.facets(db, catalog_scope, rows=consumer_rows(db))
 
 
 @router.post("/search")
 def search(value: ConsumerBuyerFilters, db: DBSession, language: Literal["ru", "az"] = "ru"):
-    return buyer.search(db, value, language, rows=production_visible_us_rows(db))
+    return buyer.search(db, value, language, rows=consumer_rows(db))
 
 
 @router.post("/resolve")
 def resolve(value: ResolverInput, db: DBSession):
-    return buyer.resolve(db, value.model_dump(), rows=production_visible_us_rows(db))
+    return buyer.resolve(db, value.model_dump(), rows=consumer_rows(db))
 
 
 @router.get("/vehicles/{variant_id}")
 def vehicle(variant_id: str, db: DBSession, language: Literal["ru", "az"] = "ru"):
-    v, c = published(db, variant_id, production_safe=True)
+    preview = next(((pv, pc) for pv, pc in catalog_preview.preview_rows(db) if pv.id == variant_id), None)
+    v, c = preview or published(db, variant_id, production_safe=True)
     return {
         **buyer.card(db, v, c, language),
         "projection": buyer.projection(c, language).model_dump(mode="json"),

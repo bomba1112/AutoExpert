@@ -95,6 +95,7 @@ class FakeCatalogApi extends BuyerCatalogApi {
 }
 
 void main() {
+  previewBadgeTests();
   testWidgets(
       'technical profile shows confirmed oil once and hides empty groups',
       (tester) async {
@@ -165,5 +166,47 @@ void main() {
     expect(find.textContaining('Ön ötürücü'), findsOneWidget);
     expect(find.textContaining('gasoline'), findsNothing);
     expect(find.textContaining('automatic'), findsNothing);
+  });
+}
+
+class PreviewCatalogApi extends FakeCatalogApi {
+  @override
+  Future<Map<String, dynamic>> vehicle(
+          String variantId, String language) async =>
+      {...await super.vehicle(variantId, language), 'preview': true};
+}
+
+void previewBadgeTests() {
+  testWidgets('a preview configuration carries the preview badge',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      locale: const Locale('az'),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      home: VehicleProfilePage(
+        api: PreviewCatalogApi(),
+        language: 'az',
+        variantId: 'preview-2022',
+        onCheckVin: () {},
+      ),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.text('Ön baxış · 2021–2026'), findsOneWidget);
+  });
+  testWidgets('a production configuration has no preview badge',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      locale: const Locale('ru'),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      home: VehicleProfilePage(
+        api: FakeCatalogApi(),
+        language: 'ru',
+        variantId: 'camry-2018',
+        onCheckVin: () {},
+      ),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('preview-badge')), findsNothing);
   });
 }

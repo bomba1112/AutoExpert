@@ -249,3 +249,29 @@ def test_web_preview_serves_the_panel_behind_the_flag(client):
     assert "usTechViews.route(name, id)" in app_v2
     catalog = client.get("/preview/catalog-views.js").text
     assert "usTech?.enabled()" in catalog  # the vehicle card mounts the panel only with the flag
+
+
+def test_translations_follow_the_language_and_keep_the_original(camry):
+    from app.models.translations import ContentTranslation
+
+    g = camry
+
+    def translation(kind, text, ru, az):
+        g["db"].add(ContentTranslation(kind=kind, source_hash=us_tech_facts.text_hash(text), source_text=text, text_ru=ru,
+                                       text_az=az, method="manual", glossary_version="test", status="CHECKED"))
+
+    translation("issue_title", "Fuel pump failure", "Отказ топливного насоса", "Yanacaq nasosunun nasazlığı")
+    translation("issue_symptom", "stall", "двигатель глохнет", "mühərrik söndürülür")
+    translation("recall_summary", "The fuel pump may fail.", "Топливный насос может отказать.", "Yanacaq nasosu sıradan çıxa bilər.")
+    g["db"].commit()
+    us_tech_facts.clear_cache()
+    ru = us_tech_facts.build(g["db"], ICE, "ru")
+    fact = next(w for w in ru["weak_points"] if w["original"]["title"] == "Fuel pump failure")
+    assert fact["title"] == "Отказ топливного насоса" and fact["symptoms"] == ["двигатель глохнет"]
+    assert fact["original"]["symptoms"] == ["stall"]
+    assert ru["campaigns"][0]["summary"] == "Топливный насос может отказать."
+    assert ru["campaigns"][0]["original"]["summary"] == "The fuel pump may fail."
+    az = us_tech_facts.build(g["db"], ICE, "az")
+    assert next(w for w in az["weak_points"] if w["original"]["title"] == "Fuel pump failure")["title"] == "Yanacaq nasosunun nasazlığı"
+    # a text without a translation is shown as it is
+    assert any(w["title"] == "Owners report a rattle" for w in az["weak_points"])

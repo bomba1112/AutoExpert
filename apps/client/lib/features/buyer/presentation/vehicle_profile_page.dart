@@ -212,6 +212,33 @@ class _VehicleProfilePageState extends State<VehicleProfilePage> {
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .headlineSmall),
+                                          if (vehicle['preview'] == true)
+                                            Padding(
+                                              key: const ValueKey(
+                                                  'preview-badge'),
+                                              padding:
+                                                  const EdgeInsets.only(top: 6),
+                                              child: Container(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 9,
+                                                        vertical: 3),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xFFFFF4E0),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: Text(
+                                                    widget.language == 'az'
+                                                        ? 'Ön baxış · 2021–2026'
+                                                        : 'Предпросмотр · 2021–2026',
+                                                    style: const TextStyle(
+                                                        fontSize: 12,
+                                                        color:
+                                                            Color(0xFF8A5200))),
+                                              ),
+                                            ),
                                           const SizedBox(height: 5),
                                           Text([
                                             _text(vehicle['year']),
