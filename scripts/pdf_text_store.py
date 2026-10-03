@@ -74,7 +74,10 @@ def cache(path: Path) -> str | None:
 def main(argv) -> int:
     subdirs = argv or ["manuals", "official", "owner_supplied"]
     for sub in subdirs:
-        for path in sorted((RAW_ROOT / sub).rglob("*.pdf")):
+        # some portals serve PDFs saved under a ".bin" name (ownersliterature.vw.com): the content decides
+        candidates = sorted((RAW_ROOT / sub).rglob("*.pdf")) + [
+            p for p in sorted((RAW_ROOT / sub).rglob("*.bin")) if p.read_bytes()[:5] == b"%PDF-"]
+        for path in candidates:
             message = cache(path)
             if message:
                 print(message, flush=True)

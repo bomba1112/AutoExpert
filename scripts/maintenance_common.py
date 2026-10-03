@@ -47,7 +47,7 @@ JOBS = [  # (job, pattern) tried in order on an item's text
     ("transfer_case_fluid", r"transfer case|transfer ?box"),
     ("differential_fluid", r"axle fluid|differential|power transfer unit|\bPTU\b|rear drive module|final drive"),
     ("timing_belt", r"timing belt|toothed belt|camshaft drive"),
-    ("accessory_drive_belt", r"accessory drive belt|drive belt|serpentine|ribbed belt|v-ribbed"),
+    ("accessory_drive_belt", r"accessory drive belt|drive belt|serpentine|ribbed belt|v-ribbed|\bv-belt"),
     ("tire_rotation", r"rotate (?:the )?tires|tire rotation|tires\s*-\s*rotate"),
     ("fuel_filter", r"fuel filter"),
     ("brakes", r"brake (?:pads?|linings|shoes|rotors|discs?)|brake pad thickness|disc brake pads"),

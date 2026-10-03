@@ -2,19 +2,22 @@
  "make": "audi",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T15:32:38+00:00",
+ "started_at": "2026-10-03T17:43:00+00:00",
  "replace_own": [],
  "lines": {
   "audi/a3": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 79,
+    "raw_documents_seen": 89,
     "te_existing": 1211,
     "configurations": 37,
     "configurations_linked": 4,
     "configurations_research_only": 33,
-    "issues_existing": 39
+    "issues_existing": 39,
+    "maintenance_existing": 86,
+    "maintenance_new": 16,
+    "maintenance_stale_deleted": 10
    },
    "generations": [
     {
@@ -33,12 +36,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 76,
+    "raw_documents_seen": 87,
     "te_existing": 1067,
     "configurations": 38,
     "configurations_research_only": 35,
     "configurations_linked": 3,
-    "issues_existing": 45
+    "issues_existing": 45,
+    "maintenance_existing": 56,
+    "maintenance_new": 16,
+    "maintenance_stale_deleted": 8
    },
    "generations": [
     {
@@ -57,13 +63,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 112,
-    "source_records_new": 1,
-    "te_existing": 1761,
-    "te_new_GENERATION": 6,
+    "raw_documents_seen": 124,
+    "te_existing": 1767,
     "configurations": 47,
     "configurations_research_only": 47,
-    "issues_existing": 61
+    "issues_existing": 61,
+    "maintenance_existing": 84,
+    "maintenance_new": 19,
+    "maintenance_stale_deleted": 10
    },
    "generations": [
     {
@@ -86,12 +93,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 90,
+    "raw_documents_seen": 102,
     "te_existing": 1421,
     "configurations": 51,
     "configurations_linked": 4,
     "configurations_research_only": 47,
-    "issues_existing": 65
+    "issues_existing": 65,
+    "maintenance_existing": 86,
+    "maintenance_new": 20,
+    "maintenance_stale_deleted": 12
    },
    "generations": [
     {
@@ -107,19 +117,22 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 0,
+   "conflicts": 1,
    "existing_vs_new": 8
   },
   "audi/q3": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 46,
-    "te_existing": 524,
+    "raw_documents_seen": 58,
+    "te_existing": 527,
     "configurations": 16,
     "configurations_linked": 6,
     "configurations_research_only": 10,
-    "issues_existing": 39
+    "issues_existing": 39,
+    "maintenance_existing": 78,
+    "maintenance_new": 17,
+    "maintenance_stale_deleted": 12
    },
    "generations": [
     {
@@ -142,12 +155,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 92,
-    "te_existing": 1292,
+    "raw_documents_seen": 104,
+    "te_existing": 1295,
     "configurations": 40,
     "configurations_research_only": 32,
     "configurations_linked": 8,
-    "issues_existing": 79
+    "issues_existing": 79,
+    "maintenance_existing": 78,
+    "maintenance_new": 19,
+    "maintenance_stale_deleted": 10
    },
    "generations": [
     {
@@ -170,12 +186,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 54,
-    "te_existing": 867,
+    "raw_documents_seen": 66,
+    "te_existing": 873,
     "configurations": 31,
     "configurations_research_only": 26,
     "configurations_linked": 5,
-    "issues_existing": 56
+    "issues_existing": 56,
+    "maintenance_existing": 74,
+    "maintenance_new": 17,
+    "maintenance_stale_deleted": 10
    },
    "generations": [
     {
@@ -194,5 +213,5 @@
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T15:33:50+00:00"
+ "finished_at": "2026-10-03T17:43:49+00:00"
 }

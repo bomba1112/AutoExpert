@@ -96,11 +96,27 @@ def line_index(make: str) -> dict:
     return out
 
 
+# an item heading on its own line ("Ribbed V-belt - Check and", "Spark Plugs - Replace")
+NEW_ROW = re.compile(r"\n(?=[A-Z][^\n]{2,80}?\s-\s*(?:Check|Re\W{0,3}place|Change|Inspect|Clean|Drain|Lubricate|Test)\b)")
+
+
+def card_action(text: str) -> str:
+    """"Check and replace if necessary" is an inspection (the replacement depends on its result)."""
+    if re.search(r"\b(?:check|inspect)\b[^.]{0,40}\breplace if necessary", text, re.I):
+        return "INSPECT"
+    return action_of(text)
+
+
 def lines_named(text: str, index: dict, doc_lines: list[str]) -> tuple[list[str], dict]:
     """Our lines an applicability cell names, and per line the names it gives."""
     if APPLIES_ALL.search(text):
         excepted = re.search(r"except:?\s*(.*)$", text, re.I | re.S)
         note = {"except": " ".join(excepted.group(1).split())} if excepted and excepted.group(1).strip() else {}
+        # "All vehicles with the 3.0L V6 TFSI" names an engine; "All Vehicles with 3FU PR-Code" equipment
+        narrowed = re.search(r"All (?:Applicable )?Vehicles with (?:the )?([^\n]+)", text, re.I)
+        if narrowed:
+            what = " ".join(narrowed.group(1).split())
+            note = {**note, ("engine" if re.search(r"\d\.\dL", what) else "equipment"): what}
         return list(doc_lines), {slug: note for slug in doc_lines}
     per_line = defaultdict(list)
     text = dehyphen(text)
@@ -200,20 +216,34 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
         job = job_of(flat.split("  ")[0])
         if sec == "Additional Maintenance Items":
             head, *blocks = INTERVAL_START.split(row_text)
-            job = job_of(norm(head))
-            if not job or not blocks:
+            if not blocks:
                 continue
+            next_head = None
             for block in blocks:
+                # two table rows can come out as one ("... Every 60,000 miles All vehicles with the 3.0L V6
+                # TFSI / Ribbed V-belt - Check and replace if necessary ... Every 80,000 miles"): the item
+                # heading printed after an applicability line starts the next row
+                if next_head:
+                    head, next_head = next_head, None
+                job = job_of(norm(head))
+                if not job:
+                    continue
                 interval = plausible(interval_of(norm(block)), block)
                 first_two = re.search(r"(\d+) years? aft\. registration, then every (\d+) years?\s*-?USA", norm(block), re.I)
                 once = re.search(r"Only once at first ([\d,]+) miles", norm(block), re.I)
+                # "First at 55,000 miles and thereafter every 60,000 miles": a first and a repeating interval
+                first_then = re.search(r"First at ([\d,]+) miles and thereafter every ([\d,]+) miles", norm(head + " " + block), re.I)
                 if re.search(r"Canada", norm(block), re.I) and not re.search(r"USA", norm(block)):
                     continue
                 raw_block = dehyphen(block)
                 phrase = INTERVAL_PHRASE.search(raw_block)
                 if not phrase:
                     continue
-                applies_text = raw_block[phrase.end():].strip(" -\n\r")
+                applies_text = raw_block[phrase.end():]
+                new_row = NEW_ROW.search(applies_text)
+                if new_row:
+                    next_head, applies_text = applies_text[new_row.start():].strip(), applies_text[:new_row.start()]
+                applies_text = applies_text.strip(" -\n\r")
                 if not applies_text:
                     continue  # no applicability printed after the interval: not assigned
                 slugs, apps = lines_named(applies_text, index, doc_lines)
@@ -238,10 +268,15 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
                     if not gen:
                         continue
                     common = dict(page=cite_page, source=key, quote=quote, locator="Additional Maintenance Items", applicability={**apps.get(slug, {})})
-                    action = action_of(norm(head))
+                    action = card_action(norm(head))
                     if first_two:
                         items.append(item(slug, gen, year, job, action, occurrence="FIRST", interval={"interval_months": int(first_two.group(1)) * 12}, **common))
                         items.append(item(slug, gen, year, job, action, occurrence="SUBSEQUENT", interval={"interval_months": int(first_two.group(2)) * 12}, **common))
+                    elif first_then:
+                        for occ, group in (("FIRST", 1), ("SUBSEQUENT", 2)):
+                            miles = int(first_then.group(group).replace(",", ""))
+                            items.append(item(slug, gen, year, job, action, occurrence=occ,
+                                              interval={"interval_km": miles_to_km(miles), "interval_miles_original": miles}, **common))
                     elif once:
                         miles = int(once.group(1).replace(",", ""))
                         items.append(item(slug, gen, year, job, action, occurrence="FIRST",
@@ -258,6 +293,10 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
         if re.search(r"Canada Only", flat, re.I):
             continue
         foot = service_interval[sec]
+        # the interval is printed in the service footnote: it is cited next to the row
+        foot_quote = norm(foot["quote"])
+        foot_at = next((i + 1 for i, t in enumerate(pages) if foot_quote in norm(t)), None)
+        foot_cite = {"source": key, "quote": foot_quote, "pages": [foot_at], "locator": f"{sec}: interval footnote"} if foot_at else None
         slugs, apps = lines_named(flat, index, doc_lines)
         for slug in slugs:
             gen = gen_for(generations_of(make, slug), year)
@@ -265,7 +304,7 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
                 continue
             app = {"service": sec, **apps.get(slug, {})}
             common = dict(source=key, locator=sec, applicability=app)
-            action = action_of(flat)
+            action = card_action(flat)
             if "first" in foot:
                 for occ, iv in (("FIRST", foot["first"]), ("SUBSEQUENT", foot["subsequent"])):
                     note = (iv or {}).pop("km_note", None) if iv else None
@@ -275,6 +314,11 @@ def build_doc(row: dict, index: dict, lines_meta: dict) -> tuple[list[dict], lis
                 iv = foot["every"]
                 items.append(item(slug, gen, year, job, action, interval={k: v for k, v in iv.items() if k not in ("matched", "km_note")},
                                   quote=flat, page=page, note=f"{sec}: {foot['quote']}"[:600], **common))
+            if foot_cite:
+                for it in items:
+                    if it["applicability"].get("service") == sec and it["cites"][0]["quote"] == flat and foot_cite not in it["cites"]:
+                        it["cites"].append(dict(foot_cite))
+                used_pages.add(foot_at)
             used_pages.update({page, foot_page})
     for sec_name in {s for _, s, _ in rows_of(section)} - set(service_interval) - {"Additional Maintenance Items"}:
         for slug in doc_lines:

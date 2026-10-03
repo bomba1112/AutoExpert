@@ -181,6 +181,76 @@ def service_facts(number: int, text: str, next_text: str = "") -> tuple[list[dic
     return facts, notes
 
 
+def squeezed(text: str) -> tuple[str, list[int]]:
+    """The text without whitespace, lower case, and for each kept character its position in the
+    original (to quote the original OCR text)."""
+    chars, pos = [], []
+    for i, ch in enumerate(text):
+        if not ch.isspace():
+            chars.append(ch.lower())
+            pos.append(i)
+    return "".join(chars), pos
+
+
+# "If the recommended engine oil is not available" / "If engine oil that meets the recommended
+# specification is not available"; OCR may print full-width brackets
+OCR_TOPUP_CONDITION = (r"(?:(?:recommended|specified|prescribed)engineoil(?:that\w+)?"
+                   r"|engineoilthatmeetsthe(?:recommended|specified|prescribed)speci-?fication)isnotavailable")
+OCR_TOPUP_AMOUNT = (r"maximumof(?:(?P<q>\d+(?:[.,]\d+)?)(?:us)?quarts?)?[(（]?(?P<l>\d+(?:[.,]\d+)?)liters?[)）]?"
+                r"(?:of|ofan)?(?P<list>.{0,60}?)engineoil")
+OCR_TOPUP = re.compile(OCR_TOPUP_CONDITION + r".{0,80}?" + OCR_TOPUP_AMOUNT)
+OCR_TOPUP_TRIGGER = re.compile(OCR_TOPUP_CONDITION + r",?inanemergency(?:you)?(?:may)?\d{0,4}$")
+OCR_TOPUP_TAIL = re.compile(r"^(?:checkingandfilling)?(?:you)?(?P<tail>mayadda" + OCR_TOPUP_AMOUNT + ")")  # a page header may come first
+OCR_CONSUMPTION = re.compile(r"oilconsumptionmaybeupto(?P<q>\d+(?:[.,]\d+)?)quarts?/(?P<mi>[\d,]+)miles\((?P<a>\d+(?:[.,]\d+)?)liters?/(?P<d>[\d,]+)km\)")
+OCR_LABEL = re.compile(r"useanoilthatislistedonthesticker|engineoilcapacitiesfortheusa")
+OCR_STD = [(re.compile(r"acea([a-c]\d)"), "ACEA {}"), (re.compile(r"api(s[a-z])"), "API {}"), (re.compile(r"ilsacgf-?(\d[ab]?)"), "ILSAC GF-{}"),
+           (re.compile(r"vw(?:standard)?(\d{3})(\d{2})"), "VW {} {}")]
+
+
+def ocr_service_facts(number: int, text: str, next_text: str = "") -> tuple[list[dict], list[dict]]:
+    """The service-pass fields on OCR text: rules on the text without spaces, quotes cut from
+    the original OCR text."""
+    facts, notes = [], []
+    sq, pos = squeezed(text)
+
+    def quote(m) -> str:
+        return text[pos[m.start()]: pos[m.end() - 1] + 1]
+
+    common = {"engine_text": None, "source_layout": "mcum_service_ocr"}
+    found = [(m, number, quote(m)) for m in OCR_TOPUP.finditer(sq)]
+    if not found and next_text and OCR_TOPUP_TRIGGER.search(sq[-160:]):
+        # the sentence runs over the page break ("... is not available, in an emergency you" | "may add
+        # a maximum of 1 quart (1 liter) of ACEA C3 or API SN engine oil one time ..."): the amount and
+        # the standards are cited on the next page, where they are printed
+        nsq, npos = squeezed(next_text)
+        m = OCR_TOPUP_TAIL.search(nsq[:400])
+        if m:
+            found.append((m, number + 1, next_text[npos[m.start("tail")]: npos[m.end() - 1] + 1]))
+    for m, page, cited in found:
+        facts.append({"key": "engine_oil_topup_limit_l", "value": float(m.group("l").replace(",", ".")), "unit": "L", "page": page,
+                      "quote": cited, "row": "emergency top-up", "label": "emergency top-up limit", **common})
+        standards = []
+        for pattern, form in OCR_STD:
+            for g in pattern.finditer(m.group("list")):
+                value = form.format(*[x.upper() for x in g.groups()])
+                if value not in standards:
+                    standards.append(value)
+        if standards:
+            facts.append({"key": "engine_oil_topup_standards", "value": "; ".join(standards), "unit": None, "page": page,
+                          "quote": cited, "row": "emergency top-up", "label": "emergency top-up standards",
+                          "note": "for topping up when the prescribed oil is not available", **common})
+    for m in OCR_CONSUMPTION.finditer(sq):
+        amount, distance = float(m.group("a").replace(",", ".")), int(m.group("d").replace(",", ""))
+        if distance:
+            facts.append({"key": "engine_oil_consumption_max_l_per_1000km", "value": round(amount * 1000 / distance, 3), "unit": "L/1000 km",
+                          "page": number, "quote": quote(m), "row": "engine oil consumption", "label": "oil consumption norm", **common})
+    for m in OCR_LABEL.finditer(sq):
+        notes.append({"page": number, "quote": quote(m), "fields": ["engine_oil_oem_approval", "engine_oil_capacity_l"],
+                      "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке "
+                                "и на сайт производителя"})
+    return facts, notes
+
+
 def rows_of_words(words: list[dict]) -> list[list[dict]]:
     width = max((w["x1"] for w in words), default=600.0)
     return [merge_values([render(r) for r in group_rows(col)]) for col in split_columns(width, words) if col]
@@ -209,6 +279,7 @@ def main() -> int:
         first, last = (int(x) for x in (years.split("-") + [years])[:2])
         folder = RAW_ROOT / "_mcum" / site_make / model / f"{body}_{years}"
         pages, sections, urls, digests = [], [], [], []
+        ocr_pages = set()
         result_facts, review, notes = [], [], []
         state = PageState()
         for row in sorted(rows, key=lambda r: r["section"]):
@@ -220,7 +291,17 @@ def main() -> int:
                 continue
             raw = gzip.decompress(path.read_bytes()).decode("utf-8") if path.suffix == ".gz" else path.read_text(encoding="utf-8")
             digests.append(row["sha256"])
-            for words, text in pages_of(raw):
+            parsed = pages_of(raw)
+            ocr_path = folder / f"{name}.ocr.json"
+            if ocr_path.exists() and sum(len(t) for _, t in parsed) < 200:
+                # manual pages delivered as images: the OCR text (scripts/ocr_mcum_images.py) is the page
+                for ocr_page in json.loads(ocr_path.read_text(encoding="utf-8"))["pages"]:
+                    pages.append(ocr_page["text"])
+                    sections.append(name)
+                    urls.append(row["url"])
+                    ocr_pages.add(len(pages))
+                continue
+            for words, text in parsed:
                 pages.append(text)
                 sections.append(name)
                 urls.append(row["url"])
@@ -234,7 +315,7 @@ def main() -> int:
         for i, text in enumerate(pages):
             # pages of one section run on: the next page holds the rest of a paragraph
             following = pages[i + 1] if i + 1 < len(pages) and sections[i + 1] == sections[i] else ""
-            extra, page_notes = service_facts(i + 1, text, following)
+            extra, page_notes = (ocr_service_facts if i + 1 in ocr_pages else service_facts)(i + 1, text, following)
             for fact in extra:
                 fact["section_url"] = urls[fact["page"] - 1]
             result_facts += extra
