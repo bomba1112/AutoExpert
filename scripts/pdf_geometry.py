@@ -7,6 +7,8 @@ replays the text operators of a page (BT/ET, Tm/Td/TD/T*, Tf/Tc/Tw/Tz/TL, Tj/TJ/
 with the font widths and returns one run per show operator:
   {"text", "glyphs": [(char, cx, cy)], "x", "y" (origin), "x_end", "cx", "cy" (centre), "size", "rotated"}
 Text inside form XObjects is not read (the grids checked are drawn on the page itself).
+Two-byte (Type0, Identity-H) fonts give "?" per glyph unless page_runs(..., cid_unicode=True):
+then the font's /ToUnicode CMap (bfchar / bfrange) names the characters (GM manuals 2021+).
 
   used by build_maintenance_gm.py
 """
@@ -31,7 +33,42 @@ def apply(m: tuple, x: float, y: float) -> tuple[float, float]:
     return m[0] * x + m[2] * y + m[4], m[1] * x + m[3] * y + m[5]
 
 
-def font_info(font) -> dict:
+def _hex(token: str) -> int:
+    return int(token, 16)
+
+
+def _utf16(token: str) -> str:
+    data = bytes.fromhex(token)
+    return data.decode("utf-16-be", errors="replace") if len(data) % 2 == 0 else data.decode("latin-1")
+
+
+def to_unicode(font) -> dict[int, str]:
+    """code -> text of a font's /ToUnicode CMap (bfchar and bfrange sections)."""
+    stream = font.get("/ToUnicode")
+    if stream is None:
+        return {}
+    import re
+
+    text = stream.get_object().get_data().decode("latin-1", errors="replace")
+    out = {}
+    for block in re.findall(r"beginbfchar(.*?)endbfchar", text, re.S):
+        for src, dst in re.findall(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]*)>", block):
+            out[_hex(src)] = _utf16(dst)
+    for block in re.findall(r"beginbfrange(.*?)endbfrange", text, re.S):
+        for lo, hi, rest in re.findall(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*(\[[^\]]*\]|<[0-9A-Fa-f]+>)", block):
+            lo, hi = _hex(lo), _hex(hi)
+            if rest.startswith("["):
+                for k, dst in enumerate(re.findall(r"<([0-9A-Fa-f]*)>", rest)):
+                    out[lo + k] = _utf16(dst)
+            else:
+                base = bytes.fromhex(rest[1:-1])
+                for k in range(hi - lo + 1):
+                    value = int.from_bytes(base, "big") + k
+                    out[lo + k] = _utf16(value.to_bytes(len(base), "big").hex())
+    return out
+
+
+def font_info(font, cid_unicode: bool = False) -> dict:
     f = font.get_object()
     if f.get("/Subtype") == "/Type0":
         desc = f["/DescendantFonts"][0].get_object()
@@ -47,7 +84,10 @@ def font_info(font) -> dict:
                 for code in range(start, int(nxt) + 1):
                     widths[code] = float(w[i + 2])
                 i += 3
-        return {"two_byte": True, "widths": widths, "default": float(desc.get("/DW", 1000))}
+        info = {"two_byte": True, "widths": widths, "default": float(desc.get("/DW", 1000))}
+        if cid_unicode:
+            info["unicode"] = to_unicode(f)
+        return info
     first = int(f.get("/FirstChar", 0))
     widths = {first + k: float(v) for k, v in enumerate(f.get("/Widths") or [])}
     return {"two_byte": False, "widths": widths, "default": 500.0}
@@ -91,7 +131,37 @@ def page_hrules(reader: PdfReader, index: int) -> list[tuple[float, float, float
     return out
 
 
-def page_runs(reader: PdfReader, index: int) -> list[dict]:
+def page_vrules(reader: PdfReader, index: int) -> list[tuple[float, float, float]]:
+    """Vertical ruling segments of a page: [(y0, y1, x)]. A table printed turned by 90 degrees
+    (Mitsubishi maintenance grids) has its row separators here."""
+    page = reader.pages[index]
+    contents = page.get_contents()
+    if contents is None:
+        return []
+    ctm, stack, cur, out = IDENTITY, [], None, []
+    for operands, op in ContentStream(contents, reader).operations:
+        if op == b"q":
+            stack.append(ctm)
+        elif op == b"Q":
+            ctm = stack.pop() if stack else IDENTITY
+        elif op == b"cm":
+            ctm = mult(tuple(float(v) for v in operands), ctm)
+        elif op == b"m":
+            cur = apply(ctm, float(operands[0]), float(operands[1]))
+        elif op == b"l" and cur is not None:
+            nxt = apply(ctm, float(operands[0]), float(operands[1]))
+            if abs(nxt[0] - cur[0]) < 1 and abs(nxt[1] - cur[1]) > 20:
+                out.append((min(cur[1], nxt[1]), max(cur[1], nxt[1]), (cur[0] + nxt[0]) / 2))
+            cur = nxt
+        elif op == b"re":
+            x, y, w, h = (float(v) for v in operands)
+            (x0, y0), (x1, y1) = apply(ctm, x, y), apply(ctm, x + w, y + h)
+            if abs(x1 - x0) < 2 and abs(y1 - y0) > 20:
+                out.append((min(y0, y1), max(y0, y1), (x0 + x1) / 2))
+    return out
+
+
+def page_runs(reader: PdfReader, index: int, cid_unicode: bool = False) -> list[dict]:
     page = reader.pages[index]
     resources = page.get("/Resources") or {}
     fonts = {}
@@ -99,7 +169,7 @@ def page_runs(reader: PdfReader, index: int) -> list[dict]:
     if font_dict:
         for name in font_dict:
             try:
-                fonts[name] = font_info(font_dict[name])
+                fonts[name] = font_info(font_dict[name], cid_unicode)
             except Exception:  # noqa: BLE001 - an odd font must not stop the page
                 fonts[name] = {"two_byte": False, "widths": {}, "default": 500.0}
     contents = page.get_contents()
@@ -122,7 +192,10 @@ def page_runs(reader: PdfReader, index: int) -> list[dict]:
             w = info["widths"].get(code, info["default"]) / 1000.0
             m = mult(tm, ctm)
             cx, cy = apply(m, w * size / 2, 0.35 * size)
-            ch = chr(code) if not info["two_byte"] and 32 <= code < 256 else "?"
+            if info["two_byte"]:
+                ch = info.get("unicode", {}).get(code) or "?"
+            else:
+                ch = chr(code) if 32 <= code < 256 else "?"
             glyphs.append((ch, cx, cy))
             adv = (w * size + tc + (tw if (code == 32 and not info["two_byte"]) else 0.0)) * th
             tm = mult((1, 0, 0, 1, adv, 0), tm)

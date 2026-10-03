@@ -3,7 +3,10 @@
 For each sampled item with a fixed distance, the printed number (miles as printed, or km) must be
 found in the item's quotes or on the cited page; months / years the same way. Items whose
 interval comes from a chart position (GM mileage charts, Nissan grids) carry the chart row as the
-quote, so for them the page is searched. Prints the agreement and every disagreement.
+quote, so for them the page is searched; for a JSON source (Mopar schedule data) the values of the
+stored file stand for the page. A grid that prints its time row as "Or Years: 2 3 4 ..." or
+"Or Months: 6 12 ..." (Jeep owner's manuals) states the years / months of its columns there.
+Every maintenance*.json of a line is sampled.
 
   .venv/Scripts/python.exe scripts/sample_maintenance_intervals.py chevrolet ford ...
 """
@@ -18,8 +21,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from maintenance_common import norm, page_text  # noqa: E402
-from us_tech_common import WORK  # noqa: E402
+from maintenance_common import json_values, norm, page_text  # noqa: E402
+from us_tech_common import RAW_ROOT, WORK  # noqa: E402
 
 
 def digits(text: str) -> str:
@@ -40,6 +43,9 @@ def months_stated(months: int, text: str) -> bool:
         return True
     if re.search(r"\bmonths\b", t) and stated(months, t):
         return True  # a schedule grid prints the months in its own header row
+    for row in re.findall(r"or (years|months):\s*((?:\d+\s+)*\d+)", t):
+        if (years if row[0] == "years" else months) in [int(x) for x in row[1].split()]:
+            return True  # "Or Years: 2 3 4 ..." / "Or Months: 6 12 ..." header row of a grid
     return years == 1 and bool(re.search(r"\b(?:every|once a|each|per|1)\s*year|annual|yearly|12 months", t))
 
 
@@ -48,7 +54,7 @@ def main(makes: list[str]) -> int:
     sampled = agree = 0
     misses = []
     for make in makes:
-        for path in sorted((WORK / make / "staging").glob("*/maintenance_*.json")):
+        for path in sorted((WORK / make / "staging").glob("*/maintenance*.json")):
             data = json.loads(path.read_text(encoding="utf-8"))
             sources = data.get("sources", {})
             items = [it for it in data.get("items", []) if it.get("interval_km") or it.get("interval_months")]
@@ -59,7 +65,10 @@ def main(makes: list[str]) -> int:
                 for c in it["cites"]:
                     src = sources.get(c["source"]) or {}
                     sha = src.get("sha256")
-                    if sha:
+                    if sha and src.get("kind") == "json_file":
+                        # " | " keeps the values apart (digits() joins "130,000 140,000" across a space)
+                        pages += " | ".join(json_values(RAW_ROOT / src["path"][len("rawstore:"):]))
+                    elif sha:
                         text = page_text(sha)
                         pages += " ".join(text[p - 1] for p in c.get("pages", []) if 0 < p <= len(text))
                 text = norm(quotes + " " + pages)

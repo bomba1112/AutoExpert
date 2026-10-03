@@ -1,7 +1,8 @@
-"""Self-check of maintenance_<name>.json files: every cite of every item is re-opened in the
-page-text store (RAW_ROOT/pagetext/<sha256>.json.gz of the cited source) and its quote must be
-a substring of the cited page (both normalised by maintenance_common.norm). Also checks the DB
-enums and the interval rules of the backend test.
+"""Self-check of maintenance*.json files (maintenance.json and maintenance_<name>.json): every
+cite of every item is re-opened in the page-text store (RAW_ROOT/pagetext/<sha256>.json.gz of
+the cited source) and its quote must be a substring of the cited page (both normalised by
+maintenance_common.norm); a cite of a JSON source (Mopar schedule data) must be found among the
+values of the stored file. Also checks the DB enums and the interval rules of the backend test.
 
   .venv/Scripts/python.exe scripts/check_maintenance_quotes.py chevrolet ford tesla [--name owner_manual]
 """
@@ -13,8 +14,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from maintenance_common import norm, page_text  # noqa: E402
-from us_tech_common import WORK  # noqa: E402
+from maintenance_common import json_quote_found, json_values, norm, page_text  # noqa: E402
+from us_tech_common import RAW_ROOT, WORK  # noqa: E402
 
 SYSTEMS = {"FIXED_INTERVAL", "OIL_LIFE_MONITOR", "MAINTENANCE_MINDER", "CBS", "SERVICE_A_B"}
 
@@ -24,7 +25,7 @@ def main(argv: list[str]) -> int:
     makes = [a for i, a in enumerate(argv) if not a.startswith("--") and (i == 0 or argv[i - 1] != "--name")]
     checked, problems, cache = 0, [], {}
     for make in makes:
-        pattern = f"maintenance_{name}.json" if name else "maintenance_*.json"
+        pattern = f"maintenance_{name}.json" if name else "maintenance*.json"
         for path in sorted((WORK / make / "staging").glob(f"*/{pattern}")):
             data = json.loads(path.read_text(encoding="utf-8"))
             for it in data["items"]:
@@ -44,6 +45,13 @@ def main(argv: list[str]) -> int:
                         problems.append(f"{where}: source {cite['source']} missing")
                         continue
                     sha = source["sha256"]
+                    if source.get("kind") == "json_file":
+                        checked += 1
+                        if sha not in cache:
+                            cache[sha] = json_values(RAW_ROOT / source["path"][len("rawstore:"):])
+                        if not json_quote_found(cache[sha], cite["quote"]):
+                            problems.append(f"{where}: quote not in the JSON source: {cite['quote'][:80]}")
+                        continue
                     if sha not in cache:
                         cache[sha] = [norm(p) for p in page_text(sha)]
                     for page in cite["pages"]:

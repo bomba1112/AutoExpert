@@ -206,3 +206,33 @@ def write(make: str, line_slug: str, name: str, sources: dict, items: list[dict]
 
 def our_lines(make: str) -> dict:
     return {line.slug: line for line in lines_for(make, include_done=True)}
+
+
+def json_values(path: Path) -> list[str]:
+    """String and number values of a JSON source (Mopar schedule data), in document order,
+    normalised: the "page text" of a json_file source for the quote checks."""
+    out = []
+
+    def walk(node):
+        if isinstance(node, dict):
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+        elif isinstance(node, (str, int, float)) and not isinstance(node, bool):
+            text = norm(str(node))
+            if text:
+                out.append(text)
+
+    walk(json.loads(Path(path).read_text(encoding="utf-8")))
+    return out
+
+
+def json_quote_found(values: list[str], quote: str) -> bool:
+    """The quote is one value of the JSON source, or a value followed by another one (the
+    builders quote '<ancillary title> <service>' of the Mopar data)."""
+    q = norm(quote)
+    if any(q in v for v in values):
+        return True
+    return any(q.startswith(v) and any(q[len(v):].strip() == w for w in values) for v in values if len(v) < len(q))

@@ -35,8 +35,10 @@ TABLES = ["vehicle_makes", "vehicle_models", "vehicle_generations", "vehicle_var
 BASELINE_COMMIT = "0ff74ff"
 MARK = {"full": "●", "part": "◐", "none": "○", "na": "—"}
 # owner's decision of 2026-10-02 (evening): of the last seven makes only Audi, Volkswagen and Tesla
-# are loaded; Infiniti had already been loaded when the decision arrived and is kept as it is
-NOT_LOADED = {"cadillac", "jeep", "mitsubishi"}
+# are loaded; Infiniti had already been loaded when the decision arrived and is kept as it is.
+# Owner's decision of 2026-10-03: Cadillac, Jeep, Mitsubishi loaded by the same rules (one commit
+# per make); a make leaves this set when its load is committed.
+NOT_LOADED = {"jeep", "mitsubishi"}
 STATUS_NOTE = {
     **{m: ("Не загружена по решению владельца (2026-10-02, вечер). Данные подготовлены (data_work/" + m +
            "/staging), в рабочей БД строк этого конвейера нет.") for m in NOT_LOADED},

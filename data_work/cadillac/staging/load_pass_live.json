@@ -1,0 +1,97 @@
+{
+ "make": "cadillac",
+ "mode": "live",
+ "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "started_at": "2026-10-03T20:36:07+00:00",
+ "replace_own": [],
+ "lines": {
+  "cadillac/cts": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 59,
+    "source_records_new": 54,
+    "te_new_GENERATION": 493,
+    "te_new_ENGINE": 7,
+    "te_new_CONFIGURATION": 479,
+    "configurations": 41,
+    "configurations_research_only": 41,
+    "issues_new": 37,
+    "maintenance_new": 123
+   },
+   "generations": [
+    {
+     "code": "III",
+     "action": "filled",
+     "end_year": 2019
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  },
+  "cadillac/srx": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 25,
+    "source_records_new": 17,
+    "te_new_GENERATION": 172,
+    "te_new_CONFIGURATION": 66,
+    "configurations": 6,
+    "configurations_linked": 6,
+    "issues_new": 20,
+    "maintenance_new": 29
+   },
+   "generations": [
+    {
+     "code": "2010-REDESIGN",
+     "action": "filled",
+     "end_year": 2016
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 6
+  },
+  "cadillac/escalade": {
+   "flag": "--prune-stale",
+   "exit": 0,
+   "counts": {
+    "raw_documents_seen": 109,
+    "source_records_new": 98,
+    "te_new_GENERATION": 897,
+    "te_new_CONFIGURATION": 480,
+    "configurations": 40,
+    "configurations_research_only": 38,
+    "configurations_linked": 2,
+    "issues_new": 94,
+    "maintenance_new": 112
+   },
+   "generations": [
+    {
+     "code": "US2014-2014",
+     "action": "created",
+     "start_year": null,
+     "end_year": 2014
+    },
+    {
+     "code": "IV",
+     "action": "filled",
+     "start_year": 2015,
+     "end_year": 2020
+    },
+    {
+     "code": "US2021+",
+     "action": "created",
+     "start_year": 2021,
+     "end_year": null
+    }
+   ],
+   "conflicts": 0,
+   "existing_vs_new": 0
+  }
+ },
+ "stale_without_same_value": [],
+ "quick_check": "ok",
+ "foreign_key_violations": 0,
+ "finished_at": "2026-10-03T20:36:39+00:00"
+}

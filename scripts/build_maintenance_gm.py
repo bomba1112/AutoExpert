@@ -1,4 +1,4 @@
-"""Chevrolet maintenance schedules from the official GM US owner's manuals
+"""GM (Chevrolet, Cadillac) maintenance schedules from the official GM US owner's manuals
 (contentdelivery.ext.gm.com, chapter "Service and Maintenance" > "Maintenance Schedule").
 
 Two layouts are printed:
@@ -24,16 +24,28 @@ filters governed by the Engine Air Filter Life System and rows without a printed
 gaps. Severe items are the rows of the severe chart (layout A) or the severe section (layout B)
 only, as printed.
 
-Documents: every official owner's manual of our Chevrolet lines (manifest_official
+Documents: every official owner's manual of our lines of the make (manifest_official
 contentdelivery.ext.gm.com.csv, doc_type owners_manual). The warranty booklets of the same
 manifest print no schedule and are not used. A model year without an official manual (Trax
 2023) is read from the carmans.net copy of the factory manual (tier B, SECONDARY_NOTE) when its
-extracted edition is US. "Limited" manuals (2016 Cruze Limited, 2016 Malibu Limited) carry
-{"edition": "<title name>"} in the applicability.
+extracted edition is US. Editions (EDITIONS, by the manifest title): "Limited" manuals (2016
+Cruze Limited, 2016 Malibu Limited) carry {"edition": "<title name>"} in the applicability;
+Cadillac CTS model years with two manuals carry the edition of each manual (2014 "CTS/CTS-V"
+and "CTS", 2015 "CTS" and "CTS-V"), so that the two manuals never write the same scope.
 
-Output: data_work/chevrolet/staging/<line>/maintenance_owner_manual.json (maintenance_common).
+The make is the first argument (default chevrolet; the Chevrolet output is frozen and must stay
+byte-identical). For the other GM makes (RICH = True) the qualifiers that the Cadillac charts
+print are read as well: "CTS-V Only:" / "Except CTS-V:" / "(V-Series Only)" (edition),
+engines with RPO codes ("(2.0L LTG and 3.6L LF3 Turbo Engines)", "6.2L L87 Engine."), 4WD,
+(electronic) limited slip differential, front / rear axle, and the 2021 note "For diesel engine
+vehicles, see Maintenance Schedule in the Duramax diesel supplement" (powertrain_except diesel).
+Chart pages set in two-byte (Identity-H) fonts are read through their ToUnicode map
+(pdf_geometry cid_unicode), and chart headings printed without spaces ("12000km/7,500mi",
+2014 CTS/CTS-V and Escalade/ESV) are recognised.
 
-  .venv/Scripts/python.exe scripts/build_maintenance_gm.py
+Output: data_work/<make>/staging/<line>/maintenance_owner_manual.json (maintenance_common).
+
+  .venv/Scripts/python.exe scripts/build_maintenance_gm.py [chevrolet|cadillac]
 """
 
 from __future__ import annotations
@@ -55,19 +67,42 @@ from maintenance_common import (  # noqa: E402
 )
 from pdf_geometry import page_runs  # noqa: E402
 from us_tech_common import RAW_ROOT, WORK  # noqa: E402
+from us_tech_lines import MAKES  # noqa: E402
 
 MAKE = "chevrolet"
+MAKE_NAME = "Chevrolet"
 REGISTRY = "factory-chevrolet-us"
+RICH = False  # richer qualifier reading; off for the frozen Chevrolet output
 NAME = "owner_manual"
+# (manifest title pattern, edition (None: group 1 of the pattern), key suffix, manual covers the
+# whole model year of the line: a year with such a manual is not read from a carmans.net copy)
+EDITIONS = {
+    "chevrolet": [(r"Chevrolet (\w+ Limited) Owner", None, "-limited", False)],
+    "cadillac": [(r"\d{4} Cadillac CTS and \d{4} CTS V Owner", "CTS/CTS-V", "-cts-cts-v", True),
+                 (r"\d{4} Cadillac CTS V Owner", "CTS-V", "-cts-v", True),
+                 (r"^\d{4} Cadillac CTS Owner", "CTS", "-cts", True)],
+}
+
+
+def configure(make: str) -> None:
+    global MAKE, MAKE_NAME, REGISTRY, RICH
+    if make not in MAKES:
+        raise SystemExit(f"unknown make {make}")
+    MAKE, MAKE_NAME, REGISTRY, RICH = make, MAKES[make]["epa"], f"factory-{make}-us", make != "chevrolet"
+
+
 GM_MANIFEST = WORK / "_shared" / "manifest_official" / "contentdelivery.ext.gm.com.csv"
 CARMANS_MANIFEST = WORK / "_shared" / "manifest_carmans.csv"
 MARK = "@"
 # running page header of the GM manuals (title, print code, date, page number, "Black plate")
 PAGE_HEAD = re.compile(r"Owner Manual \(GMNA|^\d+ Service and Maintenance$|^Service and Maintenance \d+$|Black plate"
-                       r"|\b(?:CRC|crc)\b|^\d{5,}\)|^\d+-\d+ Service and Maintenance$|^Service and Maintenance \d+-\d+$")
+                       r"|\b(?:CRC|crc)\b|^\d{5,}\)|^\d+-\d+ Service and Maintenance$|^Service and Maintenance \d+-\d+$"
+                       r"|^\d+ SERVICE AND MAINTENANCE$|^SERVICE AND MAINTENANCE \d+$")  # Cadillac 2017-2020
 
 GM_JOBS = [  # tried before maintenance_common.JOBS
     ("tire_rotation", r"^\W*Rotate tires"),
+    ("supercharger_drive_belt", r"supercharger drive belt"),
+    ("intercooler_coolant", r"intercooler system"),
     ("engine_coolant", r"engine cooling system"),
     ("cabin_air_filter", r"passenger compartment air filter"),
     ("evap_system", r"evaporative control system|evaporative \(EVAP\)"),
@@ -138,7 +173,47 @@ def gm_applicability(label: str) -> dict:
         app["equipment"] = "without engine air filter life system"
     elif re.search(r"\(If equipped\)", label, re.I):
         app["equipment"] = "if equipped"
+    if RICH:
+        app.update(rich_applicability(label, app))
     return app
+
+
+RPO_TOKEN = r"\d\.\dL(?:\s+(?:V6|V8|I4|I6|Turbo|Supercharged|Diesel|L[A-Z0-9]{2}))*"
+RPO_ENGINES = rf"{RPO_TOKEN}(?:\s+and\s+{RPO_TOKEN})*"
+VARIANT = r"CTS-V|V-Series"
+
+
+def rich_applicability(label: str, app: dict) -> dict:
+    """Qualifiers of the Cadillac charts and text blocks, as printed (RICH makes only)."""
+    out = {}
+    m = (re.search(rf"\(Except\s+({RPO_ENGINES})(?:\s+Engines?)?\)", label)
+         or re.search(rf"\bExcept\s+({RPO_ENGINES})(?:\s+Engines?)?\s*:", label))
+    if m:
+        app.pop("engine", None)
+        out["engine_except"] = engines(m.group(1))
+    else:
+        m = (re.search(rf"\(({RPO_ENGINES})(?:\s+Engines?)?(?:\s+only)?\)", label, re.I)
+             or re.search(rf"^\W*({RPO_ENGINES})(?:\s+Engines?)?(?:\s+Only)?\s*:", label, re.I)
+             or re.search(rf"\.\s+({RPO_ENGINES})\s+Engines?\.?$", label))
+        if m:
+            app.pop("engine_except", None)
+            out["engine"] = engines(m.group(1))
+    m = re.search(rf"^\W*Except\s+({VARIANT})\s*:|\(Except\s+({VARIANT})\)", label)
+    if m:
+        out["edition_except"] = m.group(1) or m.group(2)
+    m = re.search(rf"\b({VARIANT})\s+Only\b", label, re.I)
+    if m:
+        out["edition"] = m.group(1)
+    m = re.search(r"if equipped with (AWD|4WD)\b", label, re.I)
+    if m:
+        out["drive"] = m.group(1).upper()
+    m = re.search(r"\b(if equipped with|without) ((?:electronic )?limited slip differential)", label, re.I)
+    if m:
+        out["equipment" if m.group(1).lower() != "without" else "equipment_except"] = m.group(2).lower()
+    m = re.search(r"\b(front and rear|front|rear) axle fluid", label, re.I)
+    if m:
+        out["axle"] = m.group(1).lower()
+    return out
 
 
 # ---------------------------------------------------------------- documents
@@ -154,13 +229,18 @@ def documents() -> list[dict]:
             continue
         lines = [x for x in row["lines"].split(";") if x]
         years = [int(y) for y in row["years"].split(";") if y]
-        limited = re.search(r"Chevrolet (\w+ Limited) Owner", row["title"])
-        key = f"chevrolet-{'-'.join(lines)}-{'-'.join(map(str, years))}{'-limited' if limited else ''}-owner-manual"
+        edition, suffix, full = None, "", True
+        for pattern, name, sfx, covers in EDITIONS.get(MAKE, []):
+            found = re.search(pattern, row["title"])
+            if found:
+                edition, suffix, full = name or found.group(1), sfx, covers
+                break
+        key = f"{MAKE}-{'-'.join(lines)}-{'-'.join(map(str, years))}{suffix}-owner-manual"
         docs.append({"key": key, "lines": lines, "years": years, "title": row["title"], "path": RAW_ROOT / row["path"],
                      "url": row["url"], "sha256": row["sha256"], "retrieved_at": row["retrieved_at"], "tier": "A",
-                     "edition": limited.group(1) if limited else None,
+                     "edition": edition,
                      "publisher": "General Motors (owner's manual, contentdelivery.ext.gm.com)"})
-        if not limited:
+        if full:
             official |= {(ln, y) for ln in lines for y in years}
     for row in read_csv(CARMANS_MANIFEST):
         if row["make"] != MAKE or row["kind"] != "pdf" or row["status"] != "ok":
@@ -173,7 +253,7 @@ def documents() -> list[dict]:
         if info.get("status") != "ok" or info.get("edition_market") != "US":
             continue
         docs.append({"key": f"carmans-{row['post']}-maintenance", "lines": [line], "years": [year],
-                     "title": f"{year} Chevrolet {line.title()} owner's manual (copy of the factory manual, carmans.net)",
+                     "title": f"{year} {MAKE_NAME} {line.title()} owner's manual (copy of the factory manual, carmans.net)",
                      "path": RAW_ROOT / row["path"], "url": row["url"], "sha256": row["sha256"],
                      "retrieved_at": row["retrieved_at"], "tier": "B", "edition": None,
                      "publisher": "factory owner's manual, copy hosted by carmans.net"})
@@ -200,7 +280,15 @@ def footnotes(pages: list[str], flat: list[str], start: int, condition: str) -> 
         page += 1
         text = norm(" ".join(body_lines(pages[page])))  # page header (manual title, page number) skipped
         if not re.match(r"\(\d{1,2}\)\s", text):
-            break
+            # RICH: a footnote that runs over the page break ("... Contaminated" / "fluid will
+            # decrease ... (5) Or every five years ..."): its rest is joined to it and the
+            # following footnote numbers are read
+            last = max(out) if out else None
+            cont = re.match(rf"(.{{1,600}}?)\s(?=\({last + 1}\)\s)", text) if RICH and last else None
+            if not cont or FOOT_STOP.search(cont.group(1)):
+                break
+            out[last] = (f"{out[last][0]} {cont.group(1)}", out[last][1])
+            text = text[cont.end():]
     return out
 
 
@@ -229,12 +317,32 @@ def shape(cols: list[int]) -> list[tuple[str, int]] | None:
     return [("FIRST", cols[0]), ("SUBSEQUENT", step)]
 
 
+def baseline_texts(lines: list[dict]) -> list[str]:
+    """Texts of a row label, one per printed line: show operators that continue the same
+    baseline (a ligature "fi" set apart in the 2021+ manuals, drawn before or after the rest of
+    its line) are joined back in x order."""
+    order = []
+    for ln in lines:  # lines arrive top to bottom; runs of one baseline are put in x order
+        if order and abs(order[-1][0]["y"] - ln["y"]) < 0.5:
+            order[-1].append(ln)
+        else:
+            order.append([ln])
+    out, last = [], None
+    for ln in (x for group in order for x in sorted(group, key=lambda r: r["x"])):
+        if last is not None and abs(last["y"] - ln["y"]) < 0.5 and 0 <= ln["x"] - last["x_end"] < 0.3 * ln["size"]:
+            out[-1] += ln["text"]
+        else:
+            out.append(ln["text"])
+        last = ln
+    return out
+
+
 def grid_rows(reader: PdfReader, index: int, page_lines: list[str]) -> dict:
     """Column headings and the rows (label, mark columns) of the chart drawn on a page."""
-    runs = page_runs(reader, index)
+    runs = page_runs(reader, index, cid_unicode=True)
     headers = []
     for r in runs:
-        m = HEADER.match(r["text"].replace(" ", ""))
+        m = HEADER.match(re.sub(r"\s+", "", r["text"]))
         if m:
             headers.append({"km": int(m.group("km")), "mi": int(m.group("mi").replace(",", "")), "cx": r["cx"], "y": r["y"]})
     headers.sort(key=lambda h: h["cx"])
@@ -245,7 +353,7 @@ def grid_rows(reader: PdfReader, index: int, page_lines: list[str]) -> dict:
     foot = [r["y"] for r in runs if r["text"].replace(" ", "").startswith("Footnotes") and r["y"] < top]
     bottom = max(foot) if foot else -1e9
     left = headers[0]["cx"] - 0.6 * pitch
-    marks = [(g[1], g[2]) for r in runs for g in r["glyphs"] if g[0] == MARK and bottom < g[2] < top]
+    marks = [(g[1], g[2], r["size"]) for r in runs for g in r["glyphs"] if g[0] == MARK and bottom < g[2] < top]
     labels = [r for r in runs if not r["rotated"] and MARK not in r["text"] and r["text"].strip()
               and r["x"] < left and bottom < r["y"] < top and not GRID_TITLE.search(r["text"])]
     labels.sort(key=lambda r: -r["y"])
@@ -256,7 +364,7 @@ def grid_rows(reader: PdfReader, index: int, page_lines: list[str]) -> dict:
         else:
             rows.append({"lines": [r], "marks": []})
     problems = []
-    for cx, cy in marks:
+    for cx, cy, mark_size in marks:
         best, dist = None, None
         for row in rows:
             ys = [ln["cy"] for ln in row["lines"]]
@@ -264,7 +372,10 @@ def grid_rows(reader: PdfReader, index: int, page_lines: list[str]) -> dict:
             if dist is None or d < dist:
                 best, dist = row, d
         col = min(range(len(headers)), key=lambda i: abs(headers[i]["cx"] - cx))
-        if best is None or dist > 6 or abs(headers[col]["cx"] - cx) > 0.35 * pitch:
+        # RICH: the 2021+ charts set a 12 pt mark centred in a taller row, up to ~7 pt below the
+        # label line (the mark still goes to the nearest row)
+        limit = max(6, 0.75 * mark_size) if RICH else 6
+        if best is None or dist > limit or abs(headers[col]["cx"] - cx) > 0.35 * pitch:
             problems.append(f"mark at x={cx:.1f} y={cy:.1f} not placed")
             continue
         best["marks"].append(col + 1)
@@ -272,7 +383,7 @@ def grid_rows(reader: PdfReader, index: int, page_lines: list[str]) -> dict:
     for ln in page_lines:
         compact.setdefault(re.sub(r"\s+", "", ln), ln)
     for row in rows:
-        row["label"] = norm(" ".join(compact.get(re.sub(r"\s+", "", ln["text"]), ln["text"]) for ln in row["lines"]))
+        row["label"] = norm(" ".join(compact.get(re.sub(r"\s+", "", t), t) for t in baseline_texts(row["lines"])))
     linear = all(h["km"] == (i + 1) * headers[0]["km"] and h["mi"] == (i + 1) * headers[0]["mi"] for i, h in enumerate(headers))
     return {"headers": headers, "rows": rows, "problems": problems, "linear": linear}
 
@@ -282,7 +393,7 @@ def head_text(h: dict) -> str:
     return f"{km} km/{h['mi']:,} mi"
 
 
-HEAD_TEXT = re.compile(r"\b\d{1,3} 000 km/\d{1,3}(?:,\d{3})* mi")
+HEAD_TEXT = re.compile(r"\b\d{1,3} ?000 ?km/\d{1,3}(?:,\d{3})* ?mi")  # "12 000 km/7,500 mi", 2014: "12000km/7,500mi"
 
 
 def chart_condition(text: str) -> str | None:
@@ -362,7 +473,7 @@ def layout_a(doc: dict, pages: list[str], flat: list[str], grid_pages: list[int]
                         cites.append((foot_quote, foot[1], f"{chart}, footnote ({refs[0]})"))
                     entries.append({"job": job, "action": action, "condition": cond, "occurrence": occurrence,
                                     "interval": interval, "applicability": app, "note": "; ".join(parts) or None,
-                                    "cites": cites})
+                                    "cites": cites, "row": (label, page, months, foot)})
             elif months:
                 # "(7) Replace brake fluid every five years for DOT 3 fluid or every three years for DOT 4 fluid."
                 per_fluid = re.search(r"every (\w+) years? for (DOT \d) fluid or every (\w+) years? for (DOT \d) fluid", foot[0], re.I)
@@ -377,9 +488,36 @@ def layout_a(doc: dict, pages: list[str], flat: list[str], grid_pages: list[int]
                              (label, page, f"{chart}, row '{label[:90]}' (no mileage mark)")]
                     entries.append({"job": job, "action": action, "condition": cond, "occurrence": "EVERY",
                                     "interval": {"interval_km": None, "interval_miles_original": None, "interval_months": m_, "rule": None},
-                                    "applicability": {**app, **extra}, "note": "; ".join(note_parts) or None, "cites": cites})
+                                    "applicability": {**app, **extra}, "note": "; ".join(note_parts) or None, "cites": cites,
+                                    "row": (label, page, m_, foot)})
             else:
                 gaps.append({"field": f"maintenance:{job}", "reason": f"p.{page} {cond.lower()}: chart row without mileage marks or a printed interval"})
+    if RICH:
+        footnote_agreement(entries, gaps)
+
+
+def footnote_agreement(entries: list, gaps: list):
+    """RICH: the same chart row printed in the Normal and the Severe chart of one manual must take
+    the same time limit from its footnote. 2015 CTS-V: "Drain, flush, and fill intercooler system.
+    (6)" (Normal; footnote 6 is the drive-belt note "Or every 10 years ... Inspect for fraying")
+    against "(5)" (Severe; "Or every five years"): the time limit is ambiguous, so neither row is
+    converted (gap)."""
+    by_row = defaultdict(list)
+    for e in entries:
+        if "row" in e:
+            label = re.sub(r"\s*\(\d{1,2}\)", "", e["row"][0])
+            by_row[(e["job"], json.dumps(e["applicability"], sort_keys=True), label)].append(e)
+    for (job, _, label), group in by_row.items():
+        conds = {e["condition"] for e in group}
+        months = {e["row"][2] for e in group}
+        if len(conds) > 1 and len(months) > 1:
+            where = "; ".join(sorted({f"p.{e['row'][1]} {e['condition'].lower()}: ({e['row'][3][0][:60] if e['row'][3] else 'no footnote'})"
+                                      for e in group}))
+            gaps.append({"field": f"maintenance:{job}",
+                         "reason": f"row '{label[:70]}' takes different time limits from its footnotes in the normal and severe "
+                                   f"charts ({where}); ambiguous, not converted"})
+            for e in group:
+                entries.remove(e)
 
 
 # ---------------------------------------------------------------- layout B (text)
@@ -517,6 +655,23 @@ def oil_life(pages: list[str], flat: list[str], first: int, entries: list, gaps:
     gaps.append({"field": "maintenance:engine_oil_and_filter", "reason": "Oil Life System paragraph with a stated limit not found"})
 
 
+DIESEL_NOTE = re.compile(r"For diesel engine vehicles, see “Maintenance Schedule” in the Duramax diesel supplement\.")
+
+
+def diesel_supplement(flat: list[str], first: int, entries: list, gaps: list):
+    """2021 Escalade: "For diesel engine vehicles, see “Maintenance Schedule” in the Duramax diesel
+    supplement." printed above the schedule: the chart items are not for the diesel engine."""
+    for index in range(max(first - 3, 0), first + 1):
+        m = DIESEL_NOTE.search(flat[index])
+        if m:
+            for e in entries:
+                e["applicability"] = {**e["applicability"], "powertrain_except": "diesel"}
+                e["cites"] = list(e["cites"]) + [(m.group(0), index + 1, "Maintenance Schedule: diesel engine vehicles")]
+            gaps.append({"field": "maintenance:schedule (diesel)",
+                         "reason": f"p.{index + 1}: the diesel schedule is printed in the Duramax diesel supplement, which is not on disk"})
+            return
+
+
 def build() -> int:
     lines = our_lines(MAKE)
     per_line = defaultdict(lambda: {"sources": {}, "items": [], "gaps": []})
@@ -541,6 +696,8 @@ def build() -> int:
             layout_b(doc, pages, flat, entries, gaps)
             first = next((i for i, t in enumerate(flat) if "Maintenance Schedule Tire Rotation" in t), 0)
         oil_life(pages, flat, first, entries, gaps)
+        if RICH:
+            diesel_supplement(flat, first, entries, gaps)
         official = doc["tier"] == "A"
         used_pages = {c[1] for e in entries for c in e["cites"]}
         for ln in targets:
@@ -565,7 +722,7 @@ def build() -> int:
                 for e in entries:
                     app = dict(e["applicability"])
                     if doc["edition"]:
-                        app["edition"] = doc["edition"]
+                        app.setdefault("edition", doc["edition"])  # a "CTS-V Only" row keeps its own edition
                     quote, page, locator = e["cites"][0]
                     it = item(ln, gen, year, e["job"], e["action"], condition=e["condition"], occurrence=e["occurrence"],
                               system=e.get("system", "FIXED_INTERVAL"), interval=e["interval"], applicability=app,
@@ -593,4 +750,5 @@ def build() -> int:
 
 
 if __name__ == "__main__":
+    configure(sys.argv[1] if len(sys.argv) > 1 else "chevrolet")
     sys.exit(build())
