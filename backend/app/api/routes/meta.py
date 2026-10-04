@@ -5,6 +5,7 @@ from app.pricing.vin import configured_product_prices
 from app.providers.vin import FORD_EXAMPLE_VIN
 from app.services.catalog_preview import enabled as preview_us_configurations_enabled
 from app.services.chat_access import configured_chat_access_policy
+from app.services.garage import enabled as garage_enabled
 from app.services.us_tech_facts import enabled as us_tech_facts_enabled
 
 router = APIRouter(prefix="/meta", tags=["meta"])
@@ -61,6 +62,8 @@ def client_config() -> dict:
         },
     }
     # Stage C preview: advertised only while the flag is on, so production answers as before.
+    if garage_enabled(settings):
+        config["garage_v1"] = {"enabled": True}
     if us_tech_facts_enabled(settings):
         config["us_tech_facts"] = {"enabled": True}
     if preview_us_configurations_enabled(settings):
