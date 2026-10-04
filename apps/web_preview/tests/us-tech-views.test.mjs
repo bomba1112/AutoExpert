@@ -46,3 +46,15 @@ test('text from the database is escaped', () => {
   assert.match(html, /&lt;script&gt;/);
   assert.match(html, /владельцы сообщают/);
 });
+
+test('fuel: the Auto Expert recommendation is its own marked line, without a source and never the manufacturer', () => {
+  const html = usTechHtml(data({categories: [{key: 'fuel', title: 'Топливо', rows: [
+    {key: 'octane_aki', kind: 'manufacturer', label: 'Бензин по требованию производителя', values: [value('АИ-95 (AKI 91 по шкале США)')]},
+    {key: 'fuel_recommendation', kind: 'recommendation', label: 'Рекомендация Auto Expert',
+     values: [{value: 'не ниже АИ-95, рекомендация для АЗ/СНГ', qualifier: null, reason: 'турбонаддув', secondary: false, approximate: false, level: null, source: null}]},
+  ]}]}), 'ru');
+  assert.match(html, /data-fuel-kind="manufacturer"><dt>Бензин по требованию производителя/);
+  assert.match(html, /data-fuel-kind="recommendation"><dt>Рекомендация Auto Expert<\/dt><dd><span class="us-tech-value">не ниже АИ-95, рекомендация для АЗ\/СНГ<\/span><small class="fuel-reason">турбонаддув/);
+  assert.doesNotMatch(html.split('data-fuel-kind="recommendation"')[1].split('</div>')[0], /по требованию производителя/);
+  assert.match(html, /Источники · 1/);  // the derived line lists no source
+});

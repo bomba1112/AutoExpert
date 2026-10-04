@@ -1,7 +1,7 @@
 import {mountOwnership} from './ownership-panel.js?v=0.8.1';
 import {editorTools, bindEditorTools} from './editor-tools.js?v=0.8.1';
 import {api, sessionUser, clearSession} from './api.js?v=0.8.1';
-import {message} from './catalog-copy.js?v=0.9.3';
+import {message} from './catalog-copy.js?v=0.9.4';
 import {localizeConfiguration, localizeProfile, localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 
 export function createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech = null}) {
@@ -106,7 +106,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     return `<div class="fluids-grid">${groups.map(group=>{const found=rows.filter(row=>group.keys.includes(row.key));return found.length?`<section class="fluid-card"><h3>${esc(group.title)}</h3>${rowsHtml(found.map(row=>({...row,label:group.labels?.[row.key]||row.label})))}</section>`:'';}).join('')}</div>`;
   }
   function technicalGroup(group, index, rowsHtml) {
-    return `<details class="catalog-card technical-group ${group.key==='fluids'?'fluids-group':''}" ${index===0?'open':''}><summary>${esc(group.title)}<small>${group.rows.length}</small></summary>${group.key==='fluids'?fluidsGroup(group.rows,rowsHtml):rowsHtml(group.rows)}${group.key==='fuel'?`<p class="catalog-note">${esc(state.language==='az'?'AKI və RON fərqli şkalalardır. Tələb olunan yanacağı avtomobilin sənədlərindən yoxlayın.':'AKI и RON — разные шкалы. Требуемое топливо проверьте по документам автомобиля.')}</p>`:''}</details>`;
+    return `<details class="catalog-card technical-group ${group.key==='fluids'?'fluids-group':''}" ${index===0?'open':''}><summary>${esc(group.title)}<small>${group.rows.length}</small></summary>${group.key==='fluids'?fluidsGroup(group.rows,rowsHtml):rowsHtml(group.rows)}${group.key==='fuel'?`<p class="catalog-note">${esc(state.language==='az'?'İstehsalçının oktanı (AKI, ABŞ şkalası) Auto Expert cədvəli ilə AI-yə çevrilib. Auto Expert tövsiyəsi istehsalçının tələbi deyil.':'Октан производителя (AKI, шкала США) пересчитан в АИ по таблице Auto Expert. Рекомендация Auto Expert — не требование производителя.')}</p>`:''}</details>`;
   }
   function categoryEmpty(key) {
     if(key==='weak_points')return state.language==='az'?'Almazdan əvvəl diaqnostika nəticələrini və servis tarixçəsini yoxlayın.':'Перед покупкой проверьте диагностику и сервисную историю.';
@@ -118,7 +118,8 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     if(!valid())return;
     const p=current.projection;
     const profile=localizeProfile(current.profile,state.language);
-    const rowsHtml=rows=>`<dl>${rows.map(r=>`<div><dt>${esc(r.label)}</dt><dd>${esc(r.value)}${r.source_url?`<a class="fact-source" href="${esc(r.source_url)}" target="_blank" rel="noopener noreferrer" title="${esc(r.locator||l('source'))}" aria-label="${esc(l('source')+' · '+r.label)}"> ↗</a>`:''}</dd></div>`).join('')}</dl>`;
+    // fuel (owner rule 2026-10-04): the Auto Expert recommendation is a rule of the app, shown apart from the manufacturer's octane
+    const rowsHtml=rows=>`<dl>${rows.map(r=>`<div${r.kind?` class="fuel-line fuel-${esc(r.kind)}" data-fuel-kind="${esc(r.kind)}"`:''}><dt>${esc(r.label)}</dt><dd>${esc(r.value)}${r.kind==='recommendation'&&r.reason?`<small class="fuel-reason">${esc(r.reason)}</small>`:''}${r.source_url?`<a class="fact-source" href="${esc(r.source_url)}" target="_blank" rel="noopener noreferrer" title="${esc(r.locator||l('source'))}" aria-label="${esc(l('source')+' · '+r.label)}"> ↗</a>`:''}</dd></div>`).join('')}</dl>`;
     const summaryOrder=['market','years','model_year','engine_description','transmission_description','drivetrain','body','fuel','seats'];
     const summaryRows=[...profile.summary].filter(r=>r.value && !['UNKNOWN','UNRESOLVED'].includes(String(r.value).toUpperCase())).sort((a,b)=>{
       const ai=summaryOrder.indexOf(a.key),bi=summaryOrder.indexOf(b.key);

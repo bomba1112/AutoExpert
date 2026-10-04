@@ -36,6 +36,7 @@ from app.services.catalog_verification import (
     source_confirmed_core_ready,
     us_catalog_ready,
 )
+from app.services import fuel_advice
 from app.services.commercial_fact_overlay import (
     claims_for_variants,
     commercial_overlay_core_ready,
@@ -1282,9 +1283,17 @@ def vehicle_profile(c, language):
             }),
         )
 
+    # owner rule 2026-10-04: the manufacturer's AKI is shown as our AI grade, and the Auto
+    # Expert recommendation is a separate line derived by app.services.fuel_advice (never a fact)
+    fuel_lines = [
+        dict(**line, source_url=None)
+        for line in fuel_advice.rows(fuel_advice.traits_from_facts(c.get("facts", {})), language)
+    ]
     technical = []
     for key, ru, az, keys in groups:
         rows = [r for k in keys if (r := row(k))]
+        if key == "fuel":
+            rows = [r for r in rows if r["key"] != "octane_aki"] + fuel_lines
         if key == "fluids" and not rows:
             # The UI component can be exercised with a local QA response
             # fixture; no empty oils category belongs in a consumer profile.
@@ -1332,11 +1341,11 @@ def vehicle_profile(c, language):
         "drivetrain",
         "acceleration_0_100_s",
         "octane_ron",
-        "octane_aki",
     ]:
         value = row(key)
         if value:
             summary.append(value)
+    summary += fuel_lines
     documentary = c.get("documentary_sections", [])
 
     def evidence(keys):
@@ -1384,8 +1393,8 @@ def vehicle_profile(c, language):
             ),
         ],
         fuel_note=t(
-            "AKI и RON — разные шкалы. Regular/Premium из EPA не подтверждают AI-92 или AI-95 для этой версии.",
-            "AKI və RON fərqli şkalalardır. EPA Regular/Premium təsnifatı bu versiya üçün AI-92 və ya AI-95-i təsdiqləmir.",
+            "Октан производителя (AKI, шкала США) пересчитан в АИ по таблице Auto Expert. Рекомендация Auto Expert — не требование производителя.",
+            "İstehsalçının oktanı (AKI, ABŞ şkalası) Auto Expert cədvəli ilə AI-yə çevrilib. Auto Expert tövsiyəsi istehsalçının tələbi deyil.",
         ),
     )
 

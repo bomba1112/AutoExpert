@@ -42,14 +42,17 @@ function rowHtml(row, data) {
   const values = row.values.length === 1
     ? valueHtml(row.values[0], data)
     : `<ul class="us-tech-values">${row.values.map(v => `<li>${valueHtml(v, data)}</li>`).join('')}</ul>`;
-  return `<div><dt>${escape(row.label)}</dt><dd>${values}</dd></div>`;
+  // fuel (owner rule 2026-10-04): the Auto Expert recommendation is a rule of the app, not a sourced fact
+  const reason = row.kind === 'recommendation' && row.values[0]?.reason ? `<small class="fuel-reason">${escape(row.values[0].reason)}</small>` : '';
+  return `<div${row.kind ? ` class="fuel-line fuel-${escape(row.kind)}" data-fuel-kind="${escape(row.kind)}"` : ''}><dt>${escape(row.label)}</dt><dd>${values}${reason}</dd></div>`;
 }
 
 function sourcesHtml(category, data, t) {
   const items = [];
   for (const row of category.rows) {
     for (const v of row.values) {
-      const s = v.source || {};
+      if (!v.source) continue;  // a derived line (the fuel recommendation) has no source
+      const s = v.source;
       const where = [s.title, s.publisher, s.locator].filter(Boolean).join(' · ');
       items.push(`<li><strong>${escape(row.label)}${v.qualifier ? ` · ${escape(v.qualifier)}` : ''}</strong>: ${escape(where)}${s.quote ? ` — «${escape(s.quote)}»` : ''}${s.url ? ` <a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">↗</a>` : ''}</li>`);
     }

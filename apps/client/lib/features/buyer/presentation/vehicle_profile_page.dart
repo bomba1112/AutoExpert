@@ -69,26 +69,57 @@ class _VehicleProfilePageState extends State<VehicleProfilePage> {
               TechnicalDisplay.rowValue(_text(item['key']), facts,
                       widget.language, _text(item['value'])) !=
                   null)
-            Padding(
-                padding: const EdgeInsets.only(bottom: 11),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                        flex: 2,
-                        child: Text(_text(item['label']),
-                            style: const TextStyle(color: Color(0xFF5F7289)))),
-                    const SizedBox(width: 9),
-                    Expanded(
-                        flex: 3,
-                        child: Text(
-                            TechnicalDisplay.rowValue(_text(item['key']), facts,
-                                widget.language, _text(item['value']))!,
-                            style:
-                                const TextStyle(fontWeight: FontWeight.w600))),
-                  ],
-                )),
+            _row(item, facts),
       ]);
+
+  // Fuel (owner rule 2026-10-04): the Auto Expert recommendation is a rule
+  // of the app, shown apart from the manufacturer's octane, never as a fact.
+  Widget _row(Map<String, dynamic> item, Map<String, dynamic> facts) {
+    final recommendation = item['kind'] == 'recommendation';
+    final line = Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+            flex: 2,
+            child: Text(_text(item['label']),
+                style: TextStyle(
+                    color: recommendation
+                        ? const Color(0xFF1554B3)
+                        : const Color(0xFF5F7289)))),
+        const SizedBox(width: 9),
+        Expanded(
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                    TechnicalDisplay.rowValue(_text(item['key']), facts,
+                        widget.language, _text(item['value']))!,
+                    style: const TextStyle(fontWeight: FontWeight.w600)),
+                if (recommendation && _text(item['reason']).isNotEmpty)
+                  Padding(
+                      padding: const EdgeInsets.only(top: 3),
+                      child: Text(_text(item['reason']),
+                          style: const TextStyle(
+                              fontSize: 12, color: Color(0xFF67788B)))),
+              ],
+            )),
+      ],
+    );
+    return Padding(
+        key: item['kind'] == null ? null : ValueKey('fuel-${item['kind']}'),
+        padding: const EdgeInsets.only(bottom: 11),
+        child: recommendation
+            ? Container(
+                padding: const EdgeInsets.fromLTRB(9, 6, 6, 6),
+                decoration: BoxDecoration(
+                    color: const Color(0xFFF4F8FF),
+                    borderRadius: BorderRadius.circular(6),
+                    border: const Border(
+                        left: BorderSide(color: Color(0xFF1769E0), width: 3))),
+                child: line)
+            : line);
+  }
 
   Widget _technical(Map<String, dynamic> profile, Map<String, dynamic> facts,
       AppLocalizations copy) {

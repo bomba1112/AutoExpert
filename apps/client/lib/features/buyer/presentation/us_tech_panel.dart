@@ -227,6 +227,18 @@ class _UsTechPanelState extends State<UsTechPanel> {
                                       for (final value in _list(row['values']))
                                         if (value is Map<String, dynamic>)
                                           _value(value),
+                                      // fuel (owner rule 2026-10-04): the
+                                      // recommendation's reason, no source
+                                      if (row['kind'] == 'recommendation')
+                                        for (final value in _list(row['values']))
+                                          if (_text(_map(value)['reason'])
+                                              .isNotEmpty)
+                                            Text(_text(_map(value)['reason']),
+                                                key: const ValueKey(
+                                                    'us-tech-fuel-reason'),
+                                                style: const TextStyle(
+                                                    fontSize: 12,
+                                                    color: Color(0xFF67788B))),
                                     ])),
                           ]),
                     ),
@@ -241,6 +253,7 @@ class _UsTechPanelState extends State<UsTechPanel> {
     final items = <String>[];
     for (final row in _list(category['rows'])) {
       for (final value in _list(_map(row)['values'])) {
+        if (_map(value)['source'] == null) continue; // a derived line
         final source = _map(_map(value)['source']);
         final where = [source['title'], source['publisher'], source['locator']]
             .where((part) => _text(part).isNotEmpty)

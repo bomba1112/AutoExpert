@@ -94,8 +94,74 @@ class FakeCatalogApi extends BuyerCatalogApi {
   }
 }
 
+class FuelCatalogApi extends FakeCatalogApi {
+  @override
+  Future<Map<String, dynamic>> vehicle(
+      String variantId, String language) async {
+    final data = await super.vehicle(variantId, language);
+    final profile = data['profile'] as Map<String, dynamic>;
+    profile['technical'] = [
+      {
+        'key': 'fuel',
+        'title': 'Топливо',
+        'rows': [
+          {
+            'key': 'fuel_octane_maker',
+            'kind': 'manufacturer',
+            'label': 'Бензин по требованию производителя',
+            'value': 'АИ-95 (AKI 91 по шкале США)',
+            'basis': 'по требованию производителя',
+          },
+          {
+            'key': 'fuel_recommendation',
+            'kind': 'recommendation',
+            'label': 'Рекомендация Auto Expert',
+            'value': 'не ниже АИ-98, рекомендация для АЗ/СНГ',
+            'basis': 'рекомендация для АЗ/СНГ',
+            'reason': 'турбонаддув; требование производителя выше',
+          },
+        ],
+      },
+    ];
+    return data;
+  }
+}
+
 void main() {
   previewBadgeTests();
+  testWidgets('fuel: the recommendation is its own marked line, apart from '
+      "the manufacturer's octane", (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      locale: const Locale('ru'),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      home: VehicleProfilePage(
+        api: FuelCatalogApi(),
+        language: 'ru',
+        variantId: 'turbo-2020',
+        onCheckVin: () {},
+      ),
+    ));
+    await tester.pumpAndSettle();
+    final maker = find.byKey(const ValueKey('fuel-manufacturer'));
+    final recommendation = find.byKey(const ValueKey('fuel-recommendation'));
+    expect(maker, findsOneWidget);
+    expect(recommendation, findsOneWidget);
+    expect(
+        find.descendant(
+            of: maker, matching: find.text('Бензин по требованию производителя')),
+        findsOneWidget);
+    expect(
+        find.descendant(
+            of: recommendation,
+            matching: find.text('не ниже АИ-98, рекомендация для АЗ/СНГ')),
+        findsOneWidget);
+    expect(
+        find.descendant(
+            of: recommendation,
+            matching: find.textContaining('по требованию производителя')),
+        findsNothing);
+  });
   testWidgets(
       'technical profile shows confirmed oil once and hides empty groups',
       (tester) async {

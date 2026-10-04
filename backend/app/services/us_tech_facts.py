@@ -27,9 +27,10 @@ from decimal import Decimal, InvalidOperation
 from sqlalchemy import func, select
 
 from app.core.config import get_settings
-from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel
+from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel, VehicleVariant
 from app.models.evidence import KnownIssue, MaintenanceScheduleItem, SourceRecord, TechnicalEvidence
 from app.models.translations import ContentTranslation
+from app.services import fuel_advice
 from app.services.catalog_buyer import VALUE_LABELS
 from app.services.tech_units import convert
 
@@ -957,6 +958,7 @@ def _build(db, configuration_key: str, language: str) -> dict | None:
     source_ids = {o[-1].source_id for opts in candidates.values() for o in opts}
     sources = {s.id: s for s in db.scalars(select(SourceRecord).where(SourceRecord.id.in_(source_ids)))} if source_ids else {}
     others = tr(language, ("остальные версии", "digər versiyalar"))
+    maker_aki: list[int] = []
     categories = []
     for cat, ru, az, keys in CATEGORIES:
         out_rows = []
@@ -973,6 +975,10 @@ def _build(db, configuration_key: str, language: str) -> dict | None:
             for _level, _specific, display, group, label, r in sorted(_choose(options), key=lambda o: (o[3] == "", o[4], o[2])):
                 app = _app(r)
                 shown = show(key, r.value, r.unit, app, language)
+                if key == "octane_aki" and number(r.value) is not None:
+                    # owner rule 2026-10-04: the manufacturer's AKI shown as our AI grade
+                    maker_aki.append(int(number(r.value)))
+                    shown = fuel_advice.maker_value(int(number(r.value)), language)
                 if not shown or (label, shown) in seen:
                     continue
                 seen.add((label, shown))
@@ -985,11 +991,14 @@ def _build(db, configuration_key: str, language: str) -> dict | None:
                 values = [{**v, "qualifier": v["qualifier"] or others} for v in values]
             values = [{k: x for k, x in v.items() if k != "group"} for v in values]
             if values:
-                label = LABELS.get(key, (key, key))
+                label = fuel_advice.MAKER_LABEL if key == "octane_aki" else LABELS.get(key, (key, key))
                 if key == "fuel_combined" and t.powertrain == "BEV":
                     # EPA states an electric car's consumption as MPGe: the litres are a gasoline equivalent
                     label = ("Расход EPA в бензиновом эквиваленте", "EPA sərfiyyatı benzin ekvivalentində")
-                out_rows.append({"key": key, "label": tr(language, label), "values": values})
+                out_rows.append({"key": key, "label": tr(language, label), "values": values,
+                                 **({"kind": "manufacturer", "basis": tr(language, fuel_advice.MAKER_BASIS)} if key == "octane_aki" else {})})
+        if cat == "fuel":
+            out_rows += _fuel_recommendation(db, row, t, candidates, maker_aki, language)
         if out_rows:
             categories.append({"key": cat, "title": tr(language, (ru, az)), "rows": out_rows})
     names = db.execute(select(VehicleMake.name, VehicleModel.name, VehicleGeneration.name, VehicleGeneration.code)
@@ -1013,6 +1022,39 @@ def _build(db, configuration_key: str, language: str) -> dict | None:
             "sources": tr(language, ("Источники", "Mənbələr")),
         },
     }
+
+
+def _fuel_recommendation(db, row: TechnicalEvidence, t: Target, candidates: dict, maker_aki: list[int],
+                         language: str) -> list[dict]:
+    """The Auto Expert fuel recommendation line (app.services.fuel_advice): a rule of the app,
+    not a fact of the database, never labelled as the manufacturer's requirement. Engine traits:
+    the EPA records of the configuration (eng_dscr "SIDI", fuelType1), the aspiration of its
+    identity (EPA tCharger / sCharger) and the injection / engine texts of the sources."""
+    ident = (row.conditions or {}).get("identity") or {}
+    facts: dict = {}
+    keys = [f"epa:{i}" for i in ident.get("epa_ids") or []]
+    for variant in db.scalars(select(VehicleVariant).where(VehicleVariant.catalog_key.in_(keys))) if keys else []:
+        catalog_facts = ((variant.specifications or {}).get("catalog") or {}).get("facts") or {}
+        for key, fact in catalog_facts.items():
+            # one engine per configuration: a direct-injection mark on any of its EPA records counts
+            if key not in facts or (key == "engine_description" and "SIDI" in str((fact or {}).get("value"))):
+                facts[key] = fact
+    texts = [str(o[-1].value) for key in ("injection", "engine_description") for o in candidates.get(key, [])]
+    traits = fuel_advice.traits_from_facts(facts, texts, maker_aki, aspiration=ident.get("aspiration"))
+    if t.diesel:
+        traits.fuel = "DIESEL"
+    elif t.powertrain in ("BEV", "FCEV"):
+        traits.fuel = "ELECTRICITY"
+    elif traits.fuel is None and t.powertrain in fuel_advice.GASOLINE_POWERTRAINS:
+        traits.fuel = "GASOLINE"
+    out = []
+    for line in fuel_advice.rows(traits, language):
+        if line["kind"] != "recommendation":
+            continue  # the manufacturer's octane is the octane row above, with its sources
+        out.append({"key": line["key"], "kind": "recommendation", "label": line["label"], "basis": line["basis"],
+                    "values": [{"value": line["value"], "qualifier": None, "reason": line["reason"], "secondary": False,
+                                "approximate": False, "level": None, "source": None}]})
+    return out
 
 
 def configuration_label(row: TechnicalEvidence, language: str) -> str:
