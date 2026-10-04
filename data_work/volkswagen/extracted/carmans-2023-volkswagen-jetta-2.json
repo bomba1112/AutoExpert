@@ -1,5 +1,43 @@
 {
  "doc": {
+  "edition_market": "US",
+  "edition_markers": {
+   "usa": 9,
+   "quarts": 6,
+   "gallons": 2,
+   "mph": 77,
+   "canada_only": 0,
+   "acea_only": 0,
+   "middle_east": 0,
+   "nhtsa_defect_reporting": 1,
+   "united_states_version_cover": 1,
+   "volkswagen_of_america": 3,
+   "tyres": 0,
+   "tires": 755,
+   "petrol": 0,
+   "right_hand_drive": 1
+  },
+  "edition_years": {
+   "stated": [
+    2023
+   ],
+   "stated_by": "edition number",
+   "rule": "years stated in the document",
+   "posts": [
+    "2022-volkswagen-jetta",
+    "2023-volkswagen-jetta-2",
+    "2024-volkswagen-jetta"
+   ],
+   "evidence": [
+    {
+     "page": 1,
+     "year": 2023,
+     "method": "edition number on the cover",
+     "quote": "s Manual GLI, Jetta Edition 01/2023 United States version Teile-Nr.: 17A012"
+    }
+   ]
+  },
+  "doc_type_detected": "owners_manual",
   "key": "carmans-2023-volkswagen-jetta-2",
   "make": "volkswagen",
   "lines": [
@@ -19,7 +57,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-14",
+ "extractor": "manual-geometry-14+manual_service-1",
  "pages": 346,
  "edition_market": "US",
  "edition_markers": {
@@ -29,61 +67,16 @@
   "mph": 77,
   "canada_only": 0,
   "acea_only": 0,
-  "middle_east": 0
+  "middle_east": 0,
+  "nhtsa_defect_reporting": 1,
+  "united_states_version_cover": 1,
+  "volkswagen_of_america": 3,
+  "tyres": 0,
+  "tires": 755,
+  "petrol": 0,
+  "right_hand_drive": 1
  },
  "facts": [
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.0,
-   "unit": "L",
-   "page": 269,
-   "quote": "1 l (1 quart)",
-   "row": "and the usage conditions, the engine oil consumption can be up to 1 l (1 quart) per 2000 kilometers (1200 miles); it can also be higher within the first",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1 l (1 quart)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 270,
-   "quote": "0.5 liters (0.5 qt)",
-   "row": "engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters (0.5 qt) of the following engine oils may be added until",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 liters (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 273,
-   "quote": "0.5 l (0.5 qt)",
-   "row": "4. If necessary, top up the engine oil gradually in small quantities (not more than 0.5 l (0.5 qt) in total) or observe the top-up recommendation in the display of the",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 l (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 273,
-   "quote": "0.5 l (0.5 qt)",
-   "row": "4. If necessary, top up the engine oil gradually in small quantities (not more than 0.5 l (0.5 qt) in total) or observe the top-up recommendation in the display of the",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 l (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
   {
    "key": "coolant",
    "value": "G12evo",
@@ -95,47 +88,537 @@
    "engine_text": null
   },
   {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 269,
+   "quote": "Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 quart) per 2000 kilometers (1200 miles); it can also be higher within the first 5000 kilometers (3100 miles) on new vehicles.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "manual_service",
+   "original": "1 l (1 quart) per 2000 kilometers"
+  },
+  {
+   "key": "engine_oil_topup_limit_l",
+   "value": 0.5,
+   "unit": "L",
+   "page": 270,
+   "quote": "If the engine oil recommended by an authorized Volkswagen dealer or authorized Volkswagen Service Facility qualified in this respect is not available, a different engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters",
+   "label": "emergency top-up limit",
+   "original": "a maximum of 0.5 liters",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_topup_standards",
+   "value": "ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "unit": null,
+   "page": 270,
+   "quote": "If the engine oil recommended by an authorized Volkswagen dealer or authorized Volkswagen Service Facility qualified in this respect is not available, a different engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters (0.5 qt) of the following engine oils may be added until the next oil change: Gasoline engines: ACEA C3, ACEA C4, API SP, or ILSAC GF-6A",
+   "label": "emergency top-up standards",
+   "note": "for topping up when the prescribed oil is not available",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "manual_service"
+  },
+  {
    "key": "fuel_tank_l",
    "value": 50.0,
    "unit": "L",
    "page": 342,
    "quote": "13.2 gallons (approximately 50 l)",
-   "row": "13.2 gallons (approximately 50 l)",
-   "label": "fuel_tank_l",
+   "row": "tank capacities",
+   "label": "fuel tank",
    "engine_text": null,
+   "approx_in_source": true,
    "original": "13.2 gallons (approximately 50 l)",
-   "drive": null,
-   "approx_in_source": true
+   "note": "the first tank volume printed; the next line gives the volume for the named vehicles",
+   "source_layout": "manual_service"
   },
   {
    "key": "fuel_tank_l",
    "value": 55.0,
    "unit": "L",
    "page": 342,
-   "quote": "14.5 gallons (approximately 55 l)",
-   "row": "14.5 gallons (approximately 55 l) for all-wheel drive vehicles",
-   "label": "fuel_tank_l",
+   "quote": "14.5 gallons (approximately 55 l) for all-wheel drive vehicles",
+   "row": "tank capacities",
+   "label": "fuel tank",
    "engine_text": null,
-   "original": "14.5 gallons (approximately 55 l)",
-   "drive": null,
-   "approx_in_source": true
+   "approx_in_source": true,
+   "original": "14.5 gallons (approximately 55 l) for all-wheel drive vehicles",
+   "variant": "all-wheel drive vehicles",
+   "drive": "AWD",
+   "source_layout": "manual_service"
   },
   {
-   "key": "fuel_tank_l",
-   "value": 2.0,
-   "unit": "L",
-   "page": 342,
-   "quote": "2.0 l",
-   "row": "2.0 l, 4 cylinder, TSI®, 170 kW (228 hp), gasoline engine",
-   "label": "fuel_tank_l",
+   "page": 289,
+   "row": "Jetta | 205/60 R16 92H | 36 | 250 | 2.5",
    "engine_text": null,
-   "original": "2.0 l",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tires",
+   "value": "205/60 R16 92H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "205/60 R16 92H",
+   "original": "205/60 R16 92H"
+  },
+  {
+   "page": 289,
+   "row": "Jetta | 205/60 R16 92H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tire_pressure_front_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "205/60 R16 92H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "205/60 R16 92H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "Jetta | 205/60 R16 92H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "205/60 R16 92H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "205/60 R16 92H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "205/55 R17 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tires",
+   "value": "205/55 R17 91H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "205/55 R17 91H",
+   "original": "205/55 R17 91H"
+  },
+  {
+   "page": 289,
+   "row": "205/55 R17 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tire_pressure_front_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "205/55 R17 91H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "205/55 R17 91H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "205/55 R17 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta",
+   "key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "205/55 R17 91H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "205/55 R17 91H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "Jetta GLI | 225/45 R18 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tires",
+   "value": "225/45 R18 91H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "225/45 R18 91H",
+   "original": "225/45 R18 91H"
+  },
+  {
+   "page": 289,
+   "row": "Jetta GLI | 225/45 R18 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tire_pressure_front_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "225/45 R18 91H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "225/45 R18 91H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "Jetta GLI | 225/45 R18 91H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "225/45 R18 91H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "225/45 R18 91H"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "225/45 R18 91Y | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tires",
+   "value": "225/45 R18 91Y",
+   "unit": null,
+   "label": "tire size",
+   "quote": "225/45 R18 91Y",
+   "original": "225/45 R18 91Y"
+  },
+  {
+   "page": 289,
+   "row": "225/45 R18 91Y | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tire_pressure_front_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "225/45 R18 91Y",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "225/45 R18 91Y"
+    ]
+   }
+  },
+  {
+   "page": 289,
+   "row": "225/45 R18 91Y | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Jetta GLI",
+   "key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "225/45 R18 91Y",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "225/45 R18 91Y"
+    ]
+   }
+  },
+  {
+   "key": "track_front_mm",
+   "value": 1543.0,
+   "unit": "mm",
+   "page": 340,
+   "quote": "1 5 4 3 ( 6 0 . 7 )",
+   "row": "Front track | Jetta: 1 5 4 3 ( 6 0 . 7 )",
+   "label": "Front track",
+   "engine_text": null,
+   "original": "1 5 4 3 ( 6 0 . 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "track_front_mm",
+   "value": 1537.0,
+   "unit": "mm",
+   "page": 340,
+   "quote": "1 5 3 7 ( 6 0. 5 )",
+   "row": "Front track | GLI: 1 5 3 7 ( 6 0. 5 )",
+   "label": "Front track",
+   "engine_text": null,
+   "original": "1 5 3 7 ( 6 0. 5 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "track_rear_mm",
+   "value": 1534.0,
+   "unit": "mm",
+   "page": 340,
+   "quote": "1 5 3 4 ( 6 0 . 4 )",
+   "row": "Rear track | Jetta: 1 5 3 4 ( 6 0 . 4 )",
+   "label": "Rear track",
+   "engine_text": null,
+   "original": "1 5 3 4 ( 6 0 . 4 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "track_rear_mm",
+   "value": 1541.0,
+   "unit": "mm",
+   "page": 340,
+   "quote": "1 5 4 1 ( 6 0. 7 )",
+   "row": "Rear track | GLI: 1 5 4 1 ( 6 0. 7 )",
+   "label": "Rear track",
+   "engine_text": null,
+   "original": "1 5 4 1 ( 6 0. 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "width_mm",
+   "value": 1799.0,
+   "unit": "mm",
+   "page": 341,
+   "quote": "1799(70.8)",
+   "row": "Width | Jetta: 1 7 9 9 ( 7 0 . 8 )",
+   "label": "Width",
+   "engine_text": null,
+   "original": "1 7 9 9 ( 7 0 . 8 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "width_mm",
+   "value": 1799.0,
+   "unit": "mm",
+   "page": 341,
+   "quote": "1799(70.8)",
+   "row": "Width | GLI: 1 7 9 9 ( 7 0. 8 )",
+   "label": "Width",
+   "engine_text": null,
+   "original": "1 7 9 9 ( 7 0. 8 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "height_mm",
+   "value": 1460.0,
+   "unit": "mm",
+   "page": 341,
+   "quote": "1460(57.5)",
+   "row": "Height to top of the roof | Jetta: 1 4 6 0 ( 5 7 . 5 )",
+   "label": "Height to top of the roof",
+   "engine_text": null,
+   "original": "1 4 6 0 ( 5 7 . 5 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "height_mm",
+   "value": 1466.0,
+   "unit": "mm",
+   "page": 341,
+   "quote": "1466(57. 7)",
+   "row": "Height to top of the roof | GLI: 1 4 6 6 ( 5 7. 7 )",
+   "label": "Height to top of the roof",
+   "engine_text": null,
+   "original": "1 4 6 6 ( 5 7. 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "ground_clearance",
+   "value": 140.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "1 4 0 ( 5 . 5 )",
+   "row": "Ground clearance between the axles | Jetta: 1 4 0 ( 5 . 5 )",
+   "label": "Ground clearance between the axles",
+   "engine_text": null,
+   "original": "1 4 0 ( 5 . 5 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "ground_clearance",
+   "value": 146.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "1 4 6 ( 5. 7 )",
+   "row": "Ground clearance between the axles | GLI: 1 4 6 ( 5. 7 )",
+   "label": "Ground clearance between the axles",
+   "engine_text": null,
+   "original": "1 4 6 ( 5. 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "wheelbase_mm",
+   "value": 2686.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "2 6 8 6 ( 1 0 5 . 7 )",
+   "row": "Wheelbase | Jetta: 2 6 8 6 ( 1 0 5 . 7 )",
+   "label": "Wheelbase",
+   "engine_text": null,
+   "original": "2 6 8 6 ( 1 0 5 . 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "wheelbase_mm",
+   "value": 2681.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "2 6 8 1 ( 1 0 5. 6 )",
+   "row": "Wheelbase | GLI: 2 6 8 1 ( 1 0 5. 6 )",
+   "label": "Wheelbase",
+   "engine_text": null,
+   "original": "2 6 8 1 ( 1 0 5. 6 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
+  },
+  {
+   "key": "length_mm",
+   "value": 4738.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "4 7 3 8 ( 1 8 6 . 5 )",
+   "row": "Length from bumper to bumper | Jetta: 4 7 3 8 ( 1 8 6 . 5 )",
+   "label": "Length from bumper to bumper",
+   "engine_text": null,
+   "original": "4 7 3 8 ( 1 8 6 . 5 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Jetta"
+  },
+  {
+   "key": "length_mm",
+   "value": 4747.0,
+   "unit": "mm",
+   "page": 342,
+   "quote": "4 7 4 7 ( 1 8 6. 9 )",
+   "row": "Length from bumper to bumper | GLI: 4 7 4 7 ( 1 8 6. 9 )",
+   "label": "Length from bumper to bumper",
+   "engine_text": null,
+   "original": "4 7 4 7 ( 1 8 6. 9 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "GLI"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 269,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "1 l (1 quart)",
+   "value": 1.0,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 270,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 liters (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 273,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 l (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 273,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 l (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 289,
+   "key": "tires",
+   "row": "Jetta spare wheel | T125/70 R18 | 60 | 420 | 4.2",
+   "reason": "spare wheel row: no field for a spare tire"
+  },
+  {
+   "page": 289,
+   "key": "tires",
+   "row": "Jetta GLI spare wheel | T125/70 R18 | 60 | 420 | 4.2",
+   "reason": "spare wheel row: no field for a spare tire"
+  },
+  {
+   "page": 342,
+   "key": "turning_circle_m",
+   "row": "Minimum turning circle diameter | – ( – )",
+   "reason": "no value in the cell"
+  },
+  {
+   "page": 342,
+   "key": "turning_circle_m",
+   "row": "Minimum turning circle diameter | – ( – )",
+   "reason": "no value in the cell"
+  }
+ ],
  "engine_codes": [],
+ "not_in_manual": [
+  {
+   "page": 270,
+   "quote": "There is a label on the lock carrier that shows which engine oil should be added",
+   "fields": [
+    "engine_oil_oem_approval",
+    "engine_oil_capacity_l"
+   ],
+   "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке"
+  }
+ ],
  "candidate_pages": [
   147,
   148,

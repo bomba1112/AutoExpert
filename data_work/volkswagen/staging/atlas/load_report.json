@@ -62,18 +62,81 @@
    "resolution": "existing catalog fact kept; new scoped fact stored separately"
   }
  ],
- "stale": [],
+ "stale": [
+  {
+   "id": "1a3ee565-502b-4160-aa39-bd46381d3ff4",
+   "fact_key": "fuel_tank_l",
+   "value": 70,
+   "years": [
+    2018,
+    2020
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "347131ef-7dba-4ffb-ac29-2bf686ac8b14",
+   "fact_key": "fuel_tank_l",
+   "value": 70.4,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "71f61bdd-e056-4a19-8d2d-944673e1d7f9",
+   "fact_key": "fuel_tank_l",
+   "value": 70,
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "8b76adaa-171d-46d0-b0c5-9507d76508be",
+   "fact_key": "fuel_tank_l",
+   "value": 70,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "542cc76b-baaa-485d-831f-4f6e80481ec6",
+   "fact_key": "engine_oil_topup_standards",
+   "value": "ACEA C3; API SP",
+   "years": [
+    2018,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T17:07:55+00:00",
+ "started_at": "2026-10-04T05:04:36+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
   "raw_documents_seen": 56,
-  "te_existing": 1011,
+  "te_existing": 1006,
+  "te_new_GENERATION": 9,
   "configurations": 27,
   "configurations_linked": 6,
   "configurations_research_only": 21,
   "issues_existing": 66,
-  "maintenance_new": 27
+  "maintenance_existing": 27,
+  "te_stale_deleted": 5
  },
- "finished_at": "2026-10-03T17:08:08+00:00"
+ "finished_at": "2026-10-04T05:04:42+00:00"
 }

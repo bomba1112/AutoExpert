@@ -1,5 +1,30 @@
 {
  "doc": {
+  "edition_market": "US",
+  "edition_markers": {
+   "usa": 35,
+   "quarts": 10,
+   "gallons": 2,
+   "mph": 54,
+   "canada_only": 0,
+   "acea_only": 1,
+   "middle_east": 0,
+   "north_america_edition": 0,
+   "nhtsa_defect_reporting": 1,
+   "united_states_version_cover": 0,
+   "volkswagen_of_america": 3,
+   "rule": "US units and the US defect-reporting text / US version cover (ACEA named for the top-up only)"
+  },
+  "edition_years": {
+   "stated": [],
+   "stated_by": null,
+   "rule": "no year stated; posted for one model year only: that year",
+   "posts": [
+    "2014-volkswagen-jetta"
+   ],
+   "evidence": []
+  },
+  "doc_type_detected": "owners_manual",
   "key": "carmans-2014-volkswagen-jetta",
   "make": "volkswagen",
   "lines": [
@@ -19,9 +44,9 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-14",
+ "extractor": "manual-geometry-14+manual_service-1",
  "pages": 359,
- "edition_market": "EU",
+ "edition_market": "US",
  "edition_markers": {
   "usa": 35,
   "quarts": 10,
@@ -29,10 +54,782 @@
   "mph": 54,
   "canada_only": 0,
   "acea_only": 1,
-  "middle_east": 0
+  "middle_east": 0,
+  "north_america_edition": 0,
+  "nhtsa_defect_reporting": 1,
+  "united_states_version_cover": 0,
+  "volkswagen_of_america": 3,
+  "rule": "US units and the US defect-reporting text / US version cover (ACEA named for the top-up only)"
  },
- "facts": [],
- "review": [],
+ "facts": [
+  {
+   "key": "engine_oil_viscosity_alternative",
+   "value": "SAE 5W-40",
+   "unit": null,
+   "page": 251,
+   "quote": "SAE 5W-40",
+   "row": " General recommendations: If \"synthetic\" oil that meets the applicable Volkswagen oil quality standard with viscosity grade SAE 5W-40 or SAE 5W-30 is not available in your area, be sure to use a viscosity grade suitable for the climate, season, and operating conditions that exist where the vehicle i",
+   "label": "viscosity",
+   "engine_text": null
+  },
+  {
+   "key": "engine_oil_viscosity_alternative",
+   "value": "SAE 5W-30",
+   "unit": null,
+   "page": 251,
+   "quote": "SAE 5W-30",
+   "row": " General recommendations: If \"synthetic\" oil that meets the applicable Volkswagen oil quality standard with viscosity grade SAE 5W-40 or SAE 5W-30 is not available in your area, be sure to use a viscosity grade suitable for the climate, season, and operating conditions that exist where the vehicle i",
+   "label": "viscosity",
+   "engine_text": null
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 55.0,
+   "unit": "L",
+   "page": 236,
+   "quote": "14.5 gallons (55.0 liters)",
+   "row": "tank capacities",
+   "label": "fuel tank",
+   "engine_text": null,
+   "approx_in_source": false,
+   "original": "14.5 gallons (55.0 liters)",
+   "note": "the first tank volume printed; the next line gives the volume for the named vehicles",
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "fuel_tank_l",
+   "value": 7.0,
+   "unit": "L",
+   "page": 236,
+   "quote": "2 gallons (7.0 liters)",
+   "row": "tank capacities",
+   "label": "fuel tank",
+   "engine_text": null,
+   "approx_in_source": false,
+   "original": "2 gallons (7.0 liters)",
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_topup_limit_l",
+   "value": 0.5,
+   "unit": "L",
+   "quote": "If you need to add oil and there is none available that meets the Volkswagen oil quality standard your engine requires, you may add a total of no more than 1/2 quart (0.5",
+   "label": "emergency top-up limit",
+   "original": "1/2 quart (0.5 liter)",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "page": 251,
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_topup_standards",
+   "value": "ACEA A3",
+   "unit": null,
+   "quote": "If you need to add oil and there is none available that meets the Volkswagen oil quality standard your engine requires, you may add a total of no more than 1/2 quart (0.5 liter) of a high-quality \"synthetic\" oil that meets ACEA A3",
+   "label": "emergency top-up standards",
+   "note": "for topping up when the prescribed oil is not available",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "page": 251,
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 254,
+   "quote": "A maximum of 1 quart per 1200 miles (1 liter per 2000 km) would be considered normal.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "manual_service",
+   "original": "1 liter per 2000 km"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 254,
+   "quote": "Depending on the way the vehicle is driven and the operating conditions, oil consumption can be up to 1 quart per 1200 miles (0.5 liter per 1000 km).",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "manual_service",
+   "original": "0.5 liter per 1000 km"
+  },
+  {
+   "key": "width_mm",
+   "value": 1778.0,
+   "unit": "mm",
+   "page": 21,
+   "quote": "about 70.0 in. (1778 mm)",
+   "row": "Width | about 70.0 in. (1778 mm)",
+   "label": "Width",
+   "engine_text": null,
+   "original": "about 70.0 in. (1778 mm)",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": true
+  },
+  {
+   "key": "wheelbase_mm",
+   "value": 2651.0,
+   "unit": "mm",
+   "page": 21,
+   "quote": "104.4 in. (2651 mm)",
+   "row": "Wheelbase | 104.4 in. (2651 mm)",
+   "label": "Wheelbase",
+   "engine_text": null,
+   "original": "104.4 in. (2651 mm)",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false
+  },
+  {
+   "key": "turning_circle_m",
+   "value": 11.1,
+   "unit": "m",
+   "page": 21,
+   "quote": "about 36.4 ft (about 11.1 m)",
+   "row": "Minimum turning circle diameter (wall to wall) | about 36.4 ft (about 11.1 m)",
+   "label": "Minimum turning circle diameter (wall to wall)",
+   "engine_text": null,
+   "original": "about 36.4 ft (about 11.1 m)",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": true
+  },
+  {
+   "page": 135,
+   "row": "1.8 L/170 hp (125 kW) | 225/45 R 17 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L"
+   },
+   "key": "tires",
+   "value": "225/45 R 17",
+   "unit": null,
+   "label": "tire size",
+   "quote": "225/45 R 17",
+   "original": "225/45 R 17"
+  },
+  {
+   "page": 135,
+   "row": "1.8 L/170 hp (125 kW) | 225/45 R 17 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "225/45 R 17"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "225/45 R 17",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "1.8 L/170 hp (125 kW) | 225/45 R 17 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "225/45 R 17"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "225/45 R 17",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "205/55 R 16 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L"
+   },
+   "key": "tires",
+   "value": "205/55 R 16",
+   "unit": null,
+   "label": "tire size",
+   "quote": "205/55 R 16",
+   "original": "205/55 R 16"
+  },
+  {
+   "page": 135,
+   "row": "205/55 R 16 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "205/55 R 16",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "205/55 R 16 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "205/55 R 16",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L"
+   },
+   "key": "tires",
+   "value": "195/65 R 15",
+   "unit": null,
+   "label": "tire size",
+   "quote": "195/65 R 15",
+   "original": "195/65 R 15"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "195/65 R 15",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.2 | 32 | 220",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "1.8 L/170 hp (125 kW)",
+   "applicability_extra": {
+    "engine": "1.8L",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 220,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "195/65 R 15",
+   "original": "2.2 bar / 32 psi / 220 kPa",
+   "note": "printed 2.2 bar / 32 psi / 220 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "2.0 L/115 hp (85 kW) | 205/55 R 16 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L"
+   },
+   "key": "tires",
+   "value": "205/55 R 16",
+   "unit": null,
+   "label": "tire size",
+   "quote": "205/55 R 16",
+   "original": "205/55 R 16"
+  },
+  {
+   "page": 135,
+   "row": "2.0 L/115 hp (85 kW) | 205/55 R 16 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 200,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "205/55 R 16",
+   "original": "2.0 bar / 29 psi / 200 kPa",
+   "note": "printed 2.0 bar / 29 psi / 200 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "2.0 L/115 hp (85 kW) | 205/55 R 16 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 200,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "205/55 R 16",
+   "original": "2.0 bar / 29 psi / 200 kPa",
+   "note": "printed 2.0 bar / 29 psi / 200 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L"
+   },
+   "key": "tires",
+   "value": "195/65 R 15",
+   "unit": null,
+   "label": "tire size",
+   "quote": "195/65 R 15",
+   "original": "195/65 R 15"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 200,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "195/65 R 15",
+   "original": "2.0 bar / 29 psi / 200 kPa",
+   "note": "printed 2.0 bar / 29 psi / 200 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 135,
+   "row": "195/65 R 15 | 2.0 | 29 | 200",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/115 hp (85 kW)",
+   "applicability_extra": {
+    "engine": "2.0L",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 200,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "195/65 R 15",
+   "original": "2.0 bar / 29 psi / 200 kPa",
+   "note": "printed 2.0 bar / 29 psi / 200 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "2.0 L/140 hp (103 kW) TDI | 225/45 R 17 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI"
+   },
+   "key": "tires",
+   "value": "225/45 R 17",
+   "unit": null,
+   "label": "tire size",
+   "quote": "225/45 R 17",
+   "original": "225/45 R 17"
+  },
+  {
+   "page": 136,
+   "row": "2.0 L/140 hp (103 kW) TDI | 225/45 R 17 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "225/45 R 17"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "225/45 R 17",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "2.0 L/140 hp (103 kW) TDI | 225/45 R 17 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "225/45 R 17"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "225/45 R 17",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "205/55 R 16 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI"
+   },
+   "key": "tires",
+   "value": "205/55 R 16",
+   "unit": null,
+   "label": "tire size",
+   "quote": "205/55 R 16",
+   "original": "205/55 R 16"
+  },
+  {
+   "page": 136,
+   "row": "205/55 R 16 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "205/55 R 16",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "205/55 R 16 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "205/55 R 16"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "205/55 R 16",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "195/65 R 15 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI"
+   },
+   "key": "tires",
+   "value": "195/65 R 15",
+   "unit": null,
+   "label": "tire size",
+   "quote": "195/65 R 15",
+   "original": "195/65 R 15"
+  },
+  {
+   "page": 136,
+   "row": "195/65 R 15 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_front_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "195/65 R 15",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  },
+  {
+   "page": 136,
+   "row": "195/65 R 15 | 2.3 | 33 | 230",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "2.0 L/140 hp (103 kW) TDI",
+   "applicability_extra": {
+    "engine": "2.0L TDI",
+    "tires": [
+     "195/65 R 15"
+    ]
+   },
+   "key": "tire_pressure_rear_kpa",
+   "value": 230,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "195/65 R 15",
+   "original": "2.3 bar / 33 psi / 230 kPa",
+   "note": "printed 2.3 bar / 33 psi / 230 kPa for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle"
+  }
+ ],
+ "review": [
+  {
+   "page": 251,
+   "key": "engine_oil_capacity_l",
+   "row": "170 hp (125 kW), 1.8 L gasoline engines About 5.2 quarts (5.0 liters)",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 251,
+   "key": "engine_oil_capacity_l",
+   "row": "115 hp (85 kW), 2.0 L gasoline engines About 3.9 quarts (3.7 liters)",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 251,
+   "key": "engine_oil_capacity_l",
+   "row": "140 hp (103 kW), 2.0 L diesel engines About 4.5 quarts (4.3 liters)",
+   "reason": "several volumes on one row"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "octane rating of 91",
+   "value": 91,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "90 AKI",
+   "value": 90,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "Anti-Knock Index (AKI) must be 87",
+   "value": 87,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "Anti-Knock Index (AKI) must be 87",
+   "value": 87,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "Anti-Knock Index (AKI) must be 87",
+   "value": 87,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "octane rating lower than 87",
+   "value": 87,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 238,
+   "key": "octane_aki",
+   "quote": "AKI/91",
+   "value": 91,
+   "reason": "octane printed per engine / as an example: scope not stated for the line"
+  },
+  {
+   "page": 250,
+   "key": "engine_oil_viscosity",
+   "quote": "SAE 5W-40",
+   "value": "SAE 5W-40",
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 251,
+   "key": "engine_oil_specification",
+   "quote": "ACEA A3",
+   "value": "ACEA A3",
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 251,
+   "key": "engine_oil_viscosity",
+   "quote": "SAE 5W-40",
+   "value": "SAE 5W-40",
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 251,
+   "key": "engine_oil_viscosity",
+   "quote": "SAE 5W-30",
+   "value": "SAE 5W-30",
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 254,
+   "key": "fuel_tank_l",
+   "quote": "1 quart",
+   "reason": "not a fuel tank volume (another fluid on the page)"
+  },
+  {
+   "page": 21,
+   "key": "length_mm",
+   "row": "Length | 182.2–186.8 in. (4628–4744 mm)",
+   "reason": "a range, not one value"
+  },
+  {
+   "page": 21,
+   "key": "height_mm",
+   "row": "Height (unloaded) | 56.6–58.3 in. (1438–1482 mm)",
+   "reason": "a range, not one value"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "1.8 L/170 hp (125 kW) | 225/45 R 17 | 2.2 | 32 | 220",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "205/55 R 16 | 2.2 | 32 | 220",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "195/65 R 15 | 2.2 | 32 | 220",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "2.0 L/115 hp (85 kW) | 205/55 R 16 | 2.0 | 29 | 200",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "195/65 R 15 | 2.0 | 29 | 200",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "2.0 L/140 hp (103 kW) TDI | 225/45 R 17 | 2.3 | 33 | 230",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "205/55 R 16 | 2.3 | 33 | 230",
+   "reason": "table for Canada only"
+  },
+  {
+   "page": 136,
+   "key": "tires",
+   "row": "195/65 R 15 | 2.3 | 33 | 230",
+   "reason": "table for Canada only"
+  }
+ ],
  "engine_codes": [],
- "status": "other_market"
+ "not_in_manual": [],
+ "candidate_pages": [
+  96,
+  97,
+  98,
+  99,
+  212,
+  213,
+  214,
+  215,
+  235,
+  236,
+  237,
+  238,
+  250,
+  251,
+  252,
+  253,
+  254,
+  255,
+  256
+ ],
+ "status": "ok"
 }

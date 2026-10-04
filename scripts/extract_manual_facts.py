@@ -62,17 +62,51 @@ def read_csv(path: Path):
         return list(csv.DictReader(handle))
 
 
+def carmans_editions(make: str) -> dict | None:
+    """scripts/manual_editions.py: per carmans file (sha256) the market and the model years the
+    document itself states (owner decision 2026-10-04)."""
+    path = WORK / make / "manual_editions_carmans.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
 def documents(make: str) -> list[dict]:
-    """Every downloaded manual-type PDF of the make with its line(s), year(s) and provenance."""
+    """Every downloaded manual-type PDF of the make with its line(s), year(s) and provenance.
+
+    carmans.net copies: with data_work/<make>/manual_editions_carmans.json (scripts/
+    manual_editions.py) one document per file — the same PDF posted on the pages of several
+    model years is read once and bound only to the model years the document states (cover,
+    edition number); a file stating none and posted for several years is bound to none (owner
+    decision 2026-10-04). Without that file, a copy applies to the year of the page it was
+    downloaded for."""
     docs = []
+    editions = carmans_editions(make)
+    taken = set()
     for row in read_csv(WORK / "_shared" / "manifest_carmans.csv"):
         if row["kind"] != "pdf" or row["status"] != "ok" or row["make"] != make:
             continue
-        docs.append({
+        lines, years, extra = [row["line"]], [int(row["year"])], {}
+        if editions is not None:
+            entry = editions.get(row["sha256"])
+            if entry is None or entry.get("status") != "ok" or row["sha256"] in taken:
+                continue
+            files = [r for r in read_csv(WORK / "_shared" / "manifest_carmans.csv")
+                     if r["kind"] == "pdf" and r["status"] == "ok" and r["sha256"] == row["sha256"]]
+            # the post the file is filed under: the one of a stated year, else the first
+            row = next((r for r in files if int(r["year"]) in entry["years_used"]), files[0])
+            taken.add(row["sha256"])
+            if not entry["years_used"]:
+                continue
+            lines, years = entry["lines"], entry["years_used"]
+            extra = {"edition_market": entry["market"], "edition_markers": entry.get("market_markers", {}),
+                     "edition_years": {"stated": entry.get("stated_years"), "stated_by": entry.get("stated_by"),
+                                       "rule": entry["rule"], "posts": [x["post"] for x in entry["posts"]],
+                                       "evidence": entry.get("year_evidence", [])[:3]},
+                     "doc_type_detected": entry.get("doc_type")}
+        docs.append({**extra,
             "key": f"carmans-{row['post']}",
             "make": make,
-            "lines": [row["line"]],
-            "years": [int(row["year"])],
+            "lines": lines,
+            "years": years,
             "doc_type": "owners_manual",
             "path": RAW_ROOT / row["path"],
             "url": row["url"],
@@ -964,6 +998,8 @@ def mb_model_tables(pages: list[str]) -> tuple[list[dict], list[dict]]:
 
 
 def extractor_for(make: str) -> str:
+    if make in SERVICE_PASS_MAKES:
+        return f"{EXTRACTOR}+{SERVICE_LAYOUT}-1"
     return f"{EXTRACTOR}+{MB_TABLES}" if make == "mercedes-benz" else EXTRACTOR
 
 
@@ -973,6 +1009,8 @@ def process(doc: dict) -> dict:
         return {"status": "no_page_cache"}
     pages = cache["pages"]
     market, marks = edition_market(pages, official_us=doc["tier"] == "A")
+    if doc.get("edition_market"):  # reviewed per file by scripts/manual_editions.py
+        market, marks = doc["edition_market"], {**marks, **doc.get("edition_markers", {})}
     result = {
         "doc": {k: (str(v) if isinstance(v, Path) else v) for k, v in doc.items()},
         "extractor": extractor_for(doc["make"]),
@@ -1025,9 +1063,388 @@ def process(doc: dict) -> dict:
             facts = [f for f in facts if f["key"] != "coolant"]
         result["facts"] = [f for f in result["facts"] if (f["page"], f["key"]) not in covered] + facts
         result["review"] += review
+    if doc["make"] in SERVICE_PASS_MAKES:
+        service_pass(doc, pages, result)
     result["candidate_pages"] = [i + 1 for i in candidates]
     result["status"] = "ok"
     return result
+
+
+# ---- VW US owner's manuals (owner request 2026-10-04): what the manual prints besides the
+# capacity table — emergency oil top-up (amount, standards), oil consumption norm, fuel tank
+# ("13.2 gallons (approximately 50 l)"), recommended octane, vehicle dimensions. VW prints no oil
+# approval and no oil capacity in the newer US manuals: those fields stay gaps.
+SERVICE_PASS_MAKES = {"volkswagen"}
+VW_OIL_GAPS = {"engine_oil_capacity_l", "engine_oil_capacity_without_filter_l", "engine_oil_capacity_drain_refill_l",
+               "engine_oil_oem_approval", "engine_oil_specification", "engine_oil_viscosity"}
+SERVICE_LAYOUT = "manual_service"
+TANK_GAL_FIRST = re.compile(r"(?P<gal>\d+(?:\.\d+)?)\s*gallons?\s*\((?P<approx>approx(?:imately|\.)?\s*)?(?P<l>\d+(?:[.,]\d+)?)\s*(?:l|liters?)\)"
+                            r"(?:\s*for (?P<who>[^.()]{0,60}?vehicles))?"
+                            r"|(?P<approx2>approx(?:imately|\.)?\s*)?(?P<l2>\d+(?:[.,]\d+)?)\s*(?:l|liters?)\s*\((?P<gal2>\d+(?:\.\d+)?)\s*gallons?\)"
+                            r"(?:\s*for (?P<who2>[^.()]{0,60}?vehicles))?", re.I)
+# the older editions: "If you need to add oil and there is none available that meets ... you may add a
+# total of no more than 1/2 quart (0.5 liter) of ... ACEA A3 ..." (one sentence)
+TOPUP_OLD = re.compile(r"If you need to add oil and there is none available[^.]*?no more than\s*(?P<q>\d+/\d+|\d+(?:\.\d+)?)\s*quarts?\s*"
+                       r"\((?P<l>\d+(?:[.,]\d+)?)\s*liters?\)(?P<rest>(?:[^.]|\.(?=\d))*)\.", re.I)
+# "up to 1 liter (1 quart) per 1200 miles (2000 kilometers)": miles before kilometres
+RATE_MILES_FIRST = re.compile(r"(?P<a>\d+(?:[.,]\d+)?)\s*(?:l|liters?|litres?)\s*\([^)]*\)\s*per\s*[\d,]+\s*miles\s*\((?P<d>[\d,]+)\s*(?:km|kilometers|kilometres)\)", re.I)
+OIL_SENTENCE = re.compile(r"(?:[^.]|\.(?=\d))*(?:oil consumption|consume[sd]? (?:engine )?oil)(?:[^.]|\.(?=\d))*\.", re.I)
+TANK_HEAD = re.compile(r"The fuel tank has the following volume:?|Fuel tank capacity:?|Tank capacities", re.I)
+
+
+def service_page_facts(pages: list[str], i: int) -> tuple[list[dict], list[dict]]:
+    """(facts, notes) the service rules read on page i (0-based) — also used by the re-check."""
+    from extract_mcum_facts import service_facts  # the same rules as the mycarusermanual.com pages
+
+    text = pages[i]
+    facts, page_notes = service_facts(i + 1, text, pages[i + 1] if i + 1 < len(pages) else "")
+    # the mycarusermanual pattern reads "X l (Y gal)"; the PDF prints gallons first
+    facts = [f for f in facts if f["key"] != "fuel_tank_l"]
+    flat = norm(text)
+    head = TANK_HEAD.search(flat)
+    if head:
+        window = flat[head.start(): head.start() + 400]
+        tanks = list(TANK_GAL_FIRST.finditer(window))
+        for n, m in enumerate(tanks):
+            who = " ".join((m.group("who") or m.group("who2") or "").split())
+            litres = m.group("l") or m.group("l2")
+            facts.append({"key": "fuel_tank_l", "value": float(litres.replace(",", ".")), "unit": "L", "page": i + 1,
+                          "quote": m.group(0).strip(), "row": "tank capacities", "label": "fuel tank", "engine_text": None,
+                          "approx_in_source": bool(m.group("approx") or m.group("approx2")), "original": m.group(0).strip(),
+                          **({"variant": who} if who else {}),
+                          **({"drive": "AWD"} if re.search(r"all-wheel|4MOTION", who, re.I) else {})})
+            if n == 0 and not who and len(tanks) > 1:
+                facts[-1]["note"] = "the first tank volume printed; the next line gives the volume for the named vehicles"
+    if not any(f["key"] == "engine_oil_topup_limit_l" for f in facts):
+        from extract_mcum_facts import OIL_STD, standards_in
+
+        for m in TOPUP_OLD.finditer(flat):
+            common = {"row": "emergency top-up", "engine_text": None, "page": i + 1}
+            facts.append({"key": "engine_oil_topup_limit_l", "value": float(m.group("l").replace(",", ".")), "unit": "L",
+                          "quote": m.group(0)[: m.end("l") - m.start() + 1].strip(), "label": "emergency top-up limit",
+                          "original": f"{m.group('q')} quart ({m.group('l')} liter)", **common})
+            standards = standards_in(m.group("rest"))
+            if standards:
+                last = list(OIL_STD.finditer(m.group("rest")))[-1]
+                facts.append({"key": "engine_oil_topup_standards", "value": "; ".join(standards), "unit": None,
+                              "quote": m.group(0)[: m.start("rest") - m.start() + last.end()].strip(),
+                              "label": "emergency top-up standards",
+                              "note": "for topping up when the prescribed oil is not available", **common})
+    if not any(f["key"] == "engine_oil_consumption_max_l_per_1000km" for f in facts):
+        for sentence in OIL_SENTENCE.finditer(flat):
+            rate = RATE_MILES_FIRST.search(sentence.group(0))
+            if rate:
+                amount, distance = float(rate.group("a").replace(",", ".")), int(rate.group("d").replace(",", ""))
+                facts.append({"key": "engine_oil_consumption_max_l_per_1000km", "value": round(amount * 1000 / distance, 3),
+                              "unit": "L/1000 km", "page": i + 1, "quote": sentence.group(0).strip(), "row": "engine oil consumption",
+                              "label": "oil consumption norm", "engine_text": None, "original": rate.group(0)})
+    for f in facts:
+        f["source_layout"] = SERVICE_LAYOUT
+    return facts, page_notes
+
+
+def service_pass(doc: dict, pages: list[str], result: dict) -> None:
+    found, notes = [], []
+    for i in range(len(pages)):
+        facts, page_notes = service_page_facts(pages, i)
+        flat = norm(pages[i])
+        for f in facts:
+            if norm(f["quote"]) not in flat and not (f["page"] == i + 2 and i + 1 < len(pages) and norm(f["quote"]) in norm(pages[i + 1])):
+                result["review"].append({"page": f["page"], "key": f["key"], "reason": "service-pass quote not in the page text", "quote": f["quote"]})
+                continue
+            found.append(f)
+        notes += page_notes
+    service_quotes = [norm(f["quote"]) for f in found]
+    kept = []
+    for f in result["facts"]:
+        if f["key"] in ("octane_aki", "octane_ron"):
+            # the VW US manuals print octane per engine section, as a fuel-door label example
+            # ("AKI 93 in this example") or conditionally ("If premium grade gasoline is specified");
+            # the scope of such a value is not the line: not written
+            result["review"].append({"page": f["page"], "key": f["key"], "quote": f["quote"], "value": f["value"],
+                                     "reason": "octane printed per engine / as an example: scope not stated for the line"})
+            continue
+        if f["key"] in VW_OIL_GAPS:
+            # owner request 2026-10-04: the VW oil approval and oil quantity stay gaps (the newer US
+            # manuals point to a label in the engine compartment); what an older edition prints is
+            # kept in the review list with its quote, not written
+            result["review"].append({"page": f["page"], "key": f["key"], "quote": f["quote"], "value": f["value"],
+                                     "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"})
+            continue
+        # a top-up / consumption amount read by the table pass as an oil capacity ("0.5 l"), and
+        # the tank lines the service pass now reads with their vehicles
+        if f["key"].startswith("engine_oil_capacity") and (any(norm(f["quote"]) in q for q in service_quotes)
+                                                           or (isinstance(f["value"], (int, float)) and f["value"] < 2)):
+            result["review"].append({"page": f["page"], "key": f["key"], "quote": f["quote"],
+                                     "reason": "an amount to add (top-up / consumption), not an oil capacity"})
+            continue
+        if f["key"] == "fuel_tank_l" and any(g["key"] == "fuel_tank_l" and g["page"] == f["page"] for g in found):
+            continue
+        if f["key"] == "fuel_tank_l" and isinstance(f["value"], (int, float)) and f["value"] < 20:
+            result["review"].append({"page": f["page"], "key": f["key"], "quote": f["quote"],
+                                     "reason": "not a fuel tank volume (another fluid on the page)"})
+            continue
+        kept.append(f)
+    tables, table_review = vw_tables(doc, pages)
+    result["facts"] = kept + found + tables
+    result["review"] += table_review
+    result["not_in_manual"] = notes
+
+
+# Ruled tables of the VW US manuals, read cell by cell (pdfplumber, lines strategy); owner
+# decision 2026-10-04 for tire tables: read by coordinates, nothing ambiguous is written.
+#   dimensions  "Key for fig. N: | Jetta | GLI" + rows "Front track | 1,543 mm (60.7 in) | ...";
+#               the 2014 editions print "Length | 182.2–186.8 in. (4628–4744 mm)" (a range: not
+#               written); a value cell merged over several variant columns holds for each of them
+#   tires       "Model|Engine | Size designation|Tire size | Tire pressure" + units row
+#               (psi / kPa / bar in any order); the model/engine cell is merged over its rows;
+#               an empty (not merged) label cell, a spare-wheel row, a row whose psi / kPa / bar
+#               disagree or a table for Canada only is not written. One pressure per size (no
+#               front/rear split): written for the front and the rear axle, kPa as printed.
+DIM_FIELDS = [
+    (re.compile(r"^front track$", re.I), "track_front_mm"),
+    (re.compile(r"^rear track$", re.I), "track_rear_mm"),
+    (re.compile(r"^width$", re.I), "width_mm"),
+    (re.compile(r"^height(?: at curb weight| \(unloaded\))?$|^height to (?:the )?top of (?:the )?roof$|^maximum vehicle height$", re.I), "height_mm"),
+    (re.compile(r"^wheelbase(?: (?:at|with) curb weight)?$", re.I), "wheelbase_mm"),
+    (re.compile(r"^length(?: from bumper to bumper)?$", re.I), "length_mm"),
+    (re.compile(r"^ground clearance(?: at curb weight)?(?: between (?:the )?axles)?$", re.I), "ground_clearance"),
+    (re.compile(r"^minimum turning circle diameter(?: \((?:wall to wall|curb to curb)\))?$", re.I), "turning_circle_m"),
+]
+DIM_LABEL_ANY = re.compile(r"^(?:front track|rear track|width|height|maximum vehicle height|wheelbase|length|ground clearance|minimum turning circle)", re.I)
+TIRE_SIZE = re.compile(r"^T?\d{3}/\d{2}\s?Z?R\s?\d{2}(?:\s?\d{2,3}\s?[A-Z]{1,2})?(?:\s?XL)?$")
+TIRE_UNITS = re.compile(r"^(psi|kpa|bar)$", re.I)
+
+
+def cell_text(value) -> str:
+    return " ".join((value or "").split())
+
+
+def squeeze(text: str) -> str:
+    return re.sub(r"\s+", "", text or "")
+
+
+def page_span(quote: str, flat: str) -> str | None:
+    """The page-text span of a cell text whatever the spacing of the two text layers
+    ("1 5 7 1 ( 6 1 . 8 )" in the cells, "1571(61.8)" in the page text)."""
+    chars = squeeze(quote)
+    if not chars:
+        return None
+    found = re.search(r"\s*".join(re.escape(c) for c in chars), flat)
+    return found.group(0) if found else None
+
+
+def heading(text: str) -> str:
+    """A column heading; some editions print it with a space between letters ("J e tt a",
+    "F r o n t-w h e e l d ri v e"): squeezed and read as a known heading."""
+    t = cell_text(text).replace("\ufffe", "-")
+    tokens = t.split()
+    if len(tokens) >= 2 and max(len(x) for x in tokens) <= 3 and sum(len(x) for x in tokens) / len(tokens) <= 2:
+        squeezed = t.replace(" ", "")
+        known = {"frontwheeldrive": "Front-wheel drive", "front-wheeldrive": "Front-wheel drive",
+                 "all-wheeldrive(4motion)": "All-wheel drive (4MOTION)", "allwheeldrive(4motion)": "All-wheel drive (4MOTION)"}
+        return known.get(squeezed.lower(), squeezed)
+    return t
+
+
+def dims_value(text: str, key: str, unit_hint: str | None) -> tuple[float | None, str | None]:
+    t = cell_text(text)
+    if unit_hint:  # "4 7 2 8 ( 1 8 6 . 1 )" under a "mm (in)" label: the spacing is the PDF's
+        squeezed = re.sub(r"(?<=[\d.(]) (?=[\d.)])", "", t)
+        m = re.fullmatch(r"(?:about\s*)?(\d+(?:\.\d+)?)\s*\((\d+(?:\.\d+)?)\)", squeezed)
+        if m and unit_hint == ("m" if key == "turning_circle_m" else "mm"):
+            return float(m.group(1)), None
+    if re.search(r"\d\s*[–-]\s*\d", t):
+        return None, "a range, not one value"
+    if key == "turning_circle_m":
+        m = re.search(r"(?:about\s*)?(\d{1,2}(?:\.\d+)?)\s*m\b", t)
+    else:
+        m = re.search(r"(?:about\s*)?(\d{1,2},\d{3}|\d{3,4})\s*mm\b", t)
+    if not m:
+        return None, "no value in the cell"
+    return float(m.group(1).replace(",", "")), None
+
+
+def vw_tables(doc: dict, pages: list[str]) -> tuple[list[dict], list[dict]]:
+    facts, review = [], []
+    # some editions print the tables letter-spaced ("R e a r t r a c k"): pages are found on the
+    # text without spaces
+    wanted = [i for i, t in enumerate(pages)
+              if (re.search(r"Keyforfig", squeeze(t)) and re.search(r"Wheelbase|track|turningcircle|Width|Height|Length|Groundclearance", squeeze(t), re.I))
+              or (re.search(r"Wheelbase", t) and re.search(r"Length", t))
+              or (re.search(r"Size designation|Tire size", t) and re.search(r"\bpsi\b|kPa", t, re.I))]
+    with pdfplumber.open(doc["path"]) as pdf:
+        for index in wanted:
+            page = pdf.pages[index]
+            flat = norm(pages[index])
+            try:
+                tables = page.find_tables({"vertical_strategy": "lines", "horizontal_strategy": "lines"})
+            except Exception as exc:  # a damaged page must not stop the document
+                review.append({"page": index + 1, "reason": f"tables unreadable: {type(exc).__name__}"})
+                continue
+            f, r = table_page_facts(page, tables, index + 1, flat)
+            facts += f
+            review += r
+    return facts, review
+
+
+def table_page_facts(page, tables, number: int, flat: str) -> tuple[list[dict], list[dict]]:
+    """Dimension and tire facts of one page's ruled tables — also used by the re-check."""
+    facts, review = [], []
+    for table in tables:
+        rows = table.extract()
+        cells = [row.cells for row in table.rows]
+        f, r = dims_table(number, rows, cells, flat)
+        facts += f
+        review += r
+        above = page.crop((0, max(0, table.bbox[1] - 60), page.width, max(1, table.bbox[1]))).extract_text() or ""
+        f, r = tire_table(number, rows, cells, flat, canada_only=bool(re.search(r"Applicable only in Canada", above)))
+        facts += f
+        review += r
+    return facts, review
+
+
+def dims_table(number: int, rows: list[list], cells: list[list], flat: str) -> tuple[list[dict], list[dict]]:
+    facts, review = [], []
+    header, columns = None, {}
+    for i, row in enumerate(rows):
+        texts = [cell_text(c) for c in row]
+        if any(re.match(r"Key for fig", t, re.I) for t in texts):
+            header = i
+            columns = {j: heading(t) for j, t in enumerate(texts) if t and not re.match(r"Key for fig", t, re.I)}
+            continue
+        label_at = next((j for j, t in enumerate(texts) if DIM_LABEL_ANY.match(t)), None)
+        if label_at is None:
+            continue
+        raw_label = texts[label_at]
+        unit_hint = None
+        hint = re.search(r"\s+(mm|m)\s*\((?:in|ft)\)\s*$", raw_label)
+        if hint:
+            unit_hint, raw_label = hint.group(1), raw_label[: hint.start()]
+        label = re.sub(r"\)\d+$", ")", re.sub(r"\s*\d+\)", "", raw_label)).strip()
+        key = next((k for pattern, k in DIM_FIELDS if pattern.match(label)), None)
+        if key is None:
+            continue  # widths over the mirrors, heights with antenna / open hood, ...
+        value_cols = [j for j in range(label_at + 1, len(row))]
+        for j in list(value_cols):  # "mm (in)" printed in a cell of its own
+            unit = re.fullmatch(r"(mm|m)\s*\((?:in|ft)\)", cell_text(row[j]))
+            if unit:
+                unit_hint = unit.group(1)
+                value_cols.remove(j)
+        if columns:
+            targets = [(j, columns[j]) for j in value_cols if j in columns]
+        else:
+            filled = [j for j in value_cols if cell_text(row[j])]
+            if len(filled) > 1:
+                review.append({"page": number, "key": key, "row": " | ".join(texts), "reason": "several values without a column heading"})
+                continue
+            targets = [(j, None) for j in filled]
+        for j, variant in targets:
+            text, merged_from = row[j], None
+            if text is None:  # merged with the cell to its left: one value for both columns
+                k = j - 1
+                while k > label_at and row[k] is None:
+                    k -= 1
+                text, merged_from = row[k], columns.get(k)
+            if not cell_text(text):
+                continue
+            value, problem = dims_value(text, key, unit_hint)
+            cell = cell_text(text)
+            if problem:
+                review.append({"page": number, "key": key, "row": f"{label} | {cell}", "reason": problem})
+                continue
+            quote = page_span(cell, flat)
+            if quote is None:
+                review.append({"page": number, "key": key, "row": f"{label} | {cell}", "reason": "cell text not in the page text"})
+                continue
+            unit = "m" if key == "turning_circle_m" else "mm"
+            facts.append({"key": key, "value": value, "unit": unit, "page": number, "quote": quote,
+                          "row": f"{label} | {variant + ': ' if variant else ''}{cell}", "label": label, "engine_text": None,
+                          "original": cell, "source_layout": "manual_dimensions_table",
+                          "approx_in_source": bool(re.match(r"about", cell, re.I)),
+                          **({"variant": variant} if variant else {}),
+                          **({"drive": "AWD" if re.search(r"all-wheel|4MOTION", variant, re.I) else "FWD"}
+                             if variant and re.search(r"wheel drive|4MOTION", variant, re.I) else {}),
+                          **({"note": f"one cell for the {merged_from} and {variant} columns"} if merged_from else {})})
+    del header
+    return facts, review
+
+
+def tire_table(number: int, rows: list[list], cells: list[list], flat: str, canada_only: bool) -> tuple[list[dict], list[dict]]:
+    facts, review = [], []
+    head = next((i for i, row in enumerate(rows) if any(re.fullmatch(r"Size designation|Tire size", cell_text(c), re.I) for c in row)), None)
+    if head is None:
+        return facts, review
+    size_col = next(j for j, c in enumerate(rows[head]) if re.fullmatch(r"Size designation|Tire size", cell_text(c), re.I))
+    label_col = next((j for j, c in enumerate(rows[head]) if re.fullmatch(r"Model|Engine|Drive train|Version", cell_text(c), re.I)), None)
+    units_row = next((i for i in (head, head + 1) if i < len(rows) and sum(bool(TIRE_UNITS.match(cell_text(c))) for c in rows[i]) >= 2), None)
+    if units_row is None:
+        review.append({"page": number, "key": "tires", "reason": "tire table without psi / kPa / bar columns"})
+        return facts, review
+    units = {j: cell_text(c).lower() for j, c in enumerate(rows[units_row]) if TIRE_UNITS.match(cell_text(c))}
+    if any(re.search(r"front|rear|load", cell_text(c), re.I) for row in rows[head: units_row + 1] for c in row):
+        review.append({"page": number, "key": "tires", "reason": "pressures split by axle or load: not read"})
+        return facts, review
+    label = None
+    for row in rows[units_row + 1:]:
+        size = cell_text(row[size_col]) if size_col < len(row) else ""
+        if not TIRE_SIZE.match(size):
+            if any(cell_text(c) for c in row):
+                label = None  # the table has ended (a note row) or a row this pass cannot read
+            continue
+        if label_col is not None:
+            if row[label_col] is None:
+                pass  # merged with the label cell above
+            elif cell_text(row[label_col]):
+                label = cell_text(row[label_col])
+            else:
+                label = None
+        text = " | ".join(cell_text(c) for c in row if c is not None)
+        if canada_only:
+            review.append({"page": number, "key": "tires", "row": text, "reason": "table for Canada only"})
+            continue
+        if size.startswith("T") or (label and re.search(r"spare", label, re.I)):
+            review.append({"page": number, "key": "tires", "row": text, "reason": "spare wheel row: no field for a spare tire"})
+            continue
+        if label_col is not None and not label:
+            review.append({"page": number, "key": "tires", "row": text, "reason": "no model/engine cell for the row"})
+            continue
+        vals = {u: cell_text(row[j]) for j, u in units.items() if j < len(row)}
+        if not all(re.fullmatch(r"\d+(?:[.,]\d)?", v or "") for v in vals.values()):
+            review.append({"page": number, "key": "tires", "row": text, "reason": "a pressure cell is not one number"})
+            continue
+        kpa = int(vals["kpa"]) if "kpa" in vals else round(float(vals["bar"].replace(",", ".")) * 100) if "bar" in vals else None
+        problems = []
+        if kpa is None:
+            problems.append("no kPa or bar value")
+        if "bar" in vals and kpa is not None and round(float(vals["bar"].replace(",", ".")) * 100) != kpa:
+            problems.append(f"bar {vals['bar']} x 100 != {kpa} kPa")
+        if "psi" in vals and kpa is not None and abs(int(vals["psi"]) * 6.89476 - kpa) > 10:
+            problems.append(f"psi {vals['psi']} does not fit {kpa} kPa")
+        if problems:
+            review.append({"page": number, "key": "tires", "row": text, "reason": "; ".join(problems)})
+            continue
+        size_quote = page_span(size, flat)
+        if size_quote is None:
+            review.append({"page": number, "key": "tires", "row": text, "reason": "size cell not in the page text"})
+            continue
+        printed = " / ".join(f"{vals[u]} {u if u != 'kpa' else 'kPa'}" for u in units.values())
+        extra = {}
+        if label:
+            drive = "AWD" if re.search(r"all-wheel|4MOTION", label, re.I) else "FWD" if re.search(r"\bFWD\b|front-wheel", label, re.I) else None
+            engine = re.search(r"(\d\.\d)\s?[lL]\b", label)
+            extra = {"variant": label, **({"drive": drive} if drive else {})}
+            if engine:
+                extra["applicability_extra"] = {"engine": f"{engine.group(1)}L" + (" TDI" if re.search(r"\bTDI\b", label) else "")}
+        base = {"page": number, "row": text, "engine_text": None, "source_layout": "manual_tire_table", **extra}
+        facts.append({**base, "key": "tires", "value": size, "unit": None, "label": "tire size", "quote": size_quote, "original": size})
+        for slot in ("front", "rear"):
+            facts.append({**base, "key": f"tire_pressure_{slot}_kpa", "value": kpa, "unit": "kPa", "label": f"cold tire pressure, {slot}",
+                          "quote": size_quote, "original": printed,
+                          "note": f"printed {printed} for cold tires next to the size; one pressure per tire size (no front/rear "
+                                  f"split), written for the front and the rear axle",
+                          "applicability_extra": {**extra.get("applicability_extra", {}), "tires": [size]}})
+    return facts, review
 
 
 def main(argv) -> int:
@@ -1053,6 +1470,14 @@ def main(argv) -> int:
             continue
         target.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
         print(doc["key"], result["status"], len(result.get("facts", [])), "facts", len(result.get("review", [])), "review", flush=True)
+    if carmans_editions(make) is not None and not only and limit is None:
+        # one document per file: the copies filed under the other posts of a file, and files bound
+        # to no model year, leave no extraction behind
+        keys = {d["key"] for d in docs}
+        for stale in sorted(out_dir.glob("carmans-*.json")):
+            if stale.stem not in keys:
+                print("removed (same file as another post, or bound to no model year):", stale.name, flush=True)
+                stale.unlink()
     print(dict(summary))
     return 0
 

@@ -163,18 +163,33 @@
    "resolution": "existing catalog fact kept; new scoped fact stored separately"
   }
  ],
- "stale": [],
+ "stale": [
+  {
+   "id": "8ffb2ab7-2561-4546-9c5e-2348a55bb08f",
+   "fact_key": "coolant",
+   "value": "G12evo",
+   "years": [
+    2024,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T17:07:32+00:00",
+ "started_at": "2026-10-04T05:04:26+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
   "raw_documents_seen": 84,
-  "te_existing": 1336,
+  "te_existing": 1335,
+  "te_new_GENERATION": 39,
   "configurations": 29,
   "configurations_research_only": 25,
   "configurations_linked": 4,
   "issues_existing": 80,
-  "maintenance_new": 84
+  "maintenance_existing": 84,
+  "te_stale_deleted": 1
  },
- "finished_at": "2026-10-03T17:07:52+00:00"
+ "finished_at": "2026-10-04T05:04:35+00:00"
 }

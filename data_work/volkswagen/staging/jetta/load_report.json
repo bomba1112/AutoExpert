@@ -11,19 +11,58 @@
  ],
  "conflicts": [],
  "existing_vs_new": [],
- "stale": [],
+ "stale": [
+  {
+   "id": "4dac3a79-70d3-49ad-a38c-6e292421275d",
+   "fact_key": "octane_ron",
+   "value": 95,
+   "years": [
+    2019,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "83145e01-51cb-4ffa-a073-04d0ef84827a",
+   "fact_key": "coolant",
+   "value": "G12evo",
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "db78d125-4e76-44a4-b903-437c1b5bbba9",
+   "fact_key": "engine_oil_topup_standards",
+   "value": "VW standard 504 00; ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "years": [
+    2019,
+    2025
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T17:06:43+00:00",
+ "started_at": "2026-10-04T05:04:04+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
-  "raw_documents_seen": 126,
-  "source_records_new": 13,
-  "te_existing": 1848,
+  "raw_documents_seen": 124,
+  "source_records_new": 1,
+  "te_existing": 1845,
+  "te_new_GENERATION": 82,
   "configurations": 66,
   "configurations_research_only": 63,
   "configurations_linked": 3,
   "issues_existing": 80,
-  "maintenance_new": 72
+  "maintenance_existing": 72,
+  "te_stale_deleted": 3
  },
- "finished_at": "2026-10-03T17:07:15+00:00"
+ "finished_at": "2026-10-04T05:04:20+00:00"
 }

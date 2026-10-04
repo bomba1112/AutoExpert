@@ -74,7 +74,7 @@ def check_fact(fact, sources) -> list[str]:
             pages = json.loads(gzip.decompress((RAW_ROOT / "pagetext" / f"{item['sha256']}.json.gz").read_bytes()))
             texts = [" ".join(pages["pages"][p - 1].split()) for p in cite["pages"] or []]
             quote = " ".join(cite["quote"].split())
-            if not any(quote in t or norm_text(quote) in norm_text(t) for t in texts):
+            if not any(quote in t or norm_text(quote) in norm_text(t) or (MNORM and MNORM(quote) in MNORM(t)) for t in texts):
                 problems.append(f"{cite['source']}: quote not on page {cite['pages']}")
                 continue
             # PDF rows are rebuilt again from the word positions (label/value pairing re-checked);
@@ -93,6 +93,14 @@ def check_fact(fact, sources) -> list[str]:
                     if not found and TABLES is not None:
                         again = [f for table in TABLES[0](page) for f in TABLES[1](cite["pages"][0], table, pages["pages"][cite["pages"][0] - 1])[0]]
                         found = any(f["row"] == cite["row"] for f in again)
+                    if not found and VW_PAGE is not None:
+                        # VW US manuals: dimension / tire tables and the service rules read the page again
+                        number = cite["pages"][0]
+                        again = VW_PAGE[0](pages["pages"], number - 1)[0] + VW_PAGE[1](
+                            page, page.find_tables({"vertical_strategy": "lines", "horizontal_strategy": "lines"}),
+                            number, MNORM(pages["pages"][number - 1]))[0]
+                        found = any(f["row"] == cite["row"] and MNORM(f["quote"]) == MNORM(cite["quote"]) and (f["value"] == fact["value"] or str(f["value"]) in str(fact["value"]))
+                                    for f in again if f["key"] == fact["key"])
                 if not found:
                     problems.append(f"{cite['source']}: row not rebuilt on page {cite['pages'][0]}: {cite['row'][:80]}")
     return problems
@@ -110,9 +118,14 @@ try:  # geometric re-check needs pdfplumber (run through uv); without it only qu
     from extract_manual_facts import ruled_tables, table_facts
 
     TABLES = (ruled_tables, table_facts)
+    from extract_manual_facts import service_page_facts, table_page_facts
+
+    VW_PAGE = (service_page_facts, table_page_facts)
 except Exception:  # noqa: BLE001
     ROWS = None
     TABLES = None
+    VW_PAGE = None
+    MNORM = None
 
 
 def raw_path_of(item) -> Path:

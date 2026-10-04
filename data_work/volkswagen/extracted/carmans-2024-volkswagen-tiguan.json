@@ -1,12 +1,48 @@
 {
  "doc": {
+  "edition_market": "US",
+  "edition_markers": {
+   "usa": 9,
+   "quarts": 6,
+   "gallons": 2,
+   "mph": 94,
+   "canada_only": 0,
+   "acea_only": 0,
+   "middle_east": 0,
+   "nhtsa_defect_reporting": 1,
+   "united_states_version_cover": 1,
+   "volkswagen_of_america": 3,
+   "tyres": 0,
+   "tires": 695,
+   "petrol": 0,
+   "right_hand_drive": 6
+  },
+  "edition_years": {
+   "stated": [
+    2023
+   ],
+   "stated_by": "edition number",
+   "rule": "years stated in the document",
+   "posts": [
+    "2024-volkswagen-tiguan"
+   ],
+   "evidence": [
+    {
+     "page": 1,
+     "year": 2023,
+     "method": "edition number on the cover",
+     "quote": "ner's Manual Tiguan Edition 01/2023 United States version Teile-Nr.: 5NM012"
+    }
+   ]
+  },
+  "doc_type_detected": "owners_manual",
   "key": "carmans-2024-volkswagen-tiguan",
   "make": "volkswagen",
   "lines": [
    "volkswagen/tiguan"
   ],
   "years": [
-   2024
+   2023
   ],
   "doc_type": "owners_manual",
   "path": "C:\\AutoExpertData\\raw\\manuals\\volkswagen\\carmans\\2024-volkswagen-tiguan.pdf",
@@ -19,7 +55,7 @@
   "publisher": "factory owner's manual, copy hosted by carmans.net",
   "authenticity": "REVIEWED_MIRROR"
  },
- "extractor": "manual-geometry-14",
+ "extractor": "manual-geometry-14+manual_service-1",
  "pages": 403,
  "edition_market": "US",
  "edition_markers": {
@@ -29,61 +65,16 @@
   "mph": 94,
   "canada_only": 0,
   "acea_only": 0,
-  "middle_east": 0
+  "middle_east": 0,
+  "nhtsa_defect_reporting": 1,
+  "united_states_version_cover": 1,
+  "volkswagen_of_america": 3,
+  "tyres": 0,
+  "tires": 695,
+  "petrol": 0,
+  "right_hand_drive": 6
  },
  "facts": [
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 1.0,
-   "unit": "L",
-   "page": 329,
-   "quote": "1 l (1 quart)",
-   "row": "and the usage conditions, the engine oil consumption can be up to 1 l (1 quart) per 2000 kilometers (1200 miles); it can also be higher within the first",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "1 l (1 quart)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 329,
-   "quote": "0.5 liters (0.5 qt)",
-   "row": "engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters (0.5 qt) of the following engine oils may be added until",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 liters (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 333,
-   "quote": "0.5 l (0.5 qt)",
-   "row": "4. If necessary, top up the engine oil gradually in small quantities (not more than 0.5 l (0.5 qt) in total) or observe the top-up recommendation in the display of the",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 l (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
-  {
-   "key": "engine_oil_capacity_drain_refill_l",
-   "value": 0.5,
-   "unit": "L",
-   "page": 333,
-   "quote": "0.5 l (0.5 qt)",
-   "row": "4. If necessary, top up the engine oil gradually in small quantities (not more than 0.5 l (0.5 qt) in total) or observe the top-up recommendation in the display of the",
-   "label": "engine_oil_capacity_drain_refill_l",
-   "engine_text": null,
-   "original": "0.5 l (0.5 qt)",
-   "drive": null,
-   "approx_in_source": false
-  },
   {
    "key": "coolant",
    "value": "G12evo",
@@ -95,47 +86,884 @@
    "engine_text": null
   },
   {
+   "key": "engine_oil_topup_limit_l",
+   "value": 0.5,
+   "unit": "L",
+   "page": 329,
+   "quote": "If the engine oil recommended by an authorized Volkswagen dealer or authorized Volkswagen Service Facility qualified in this respect is not available, a different engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters",
+   "label": "emergency top-up limit",
+   "original": "a maximum of 0.5 liters",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_topup_standards",
+   "value": "ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "unit": null,
+   "page": 329,
+   "quote": "If the engine oil recommended by an authorized Volkswagen dealer or authorized Volkswagen Service Facility qualified in this respect is not available, a different engine oil can be used in an emergency. To reduce the risk of damaging the engine, a maximum of 0.5 liters (0.5 qt) of the following engine oils may be added until the next oil change: Gasoline engines: ACEA C3, ACEA C4, API SP, or ILSAC GF-6A",
+   "label": "emergency top-up standards",
+   "note": "for topping up when the prescribed oil is not available",
+   "row": "emergency top-up",
+   "engine_text": null,
+   "source_layout": "manual_service"
+  },
+  {
+   "key": "engine_oil_consumption_max_l_per_1000km",
+   "value": 0.5,
+   "unit": "L/1000 km",
+   "page": 329,
+   "quote": "Depending on the driving style and the usage conditions, the engine oil consumption can be up to 1 l (1 quart) per 2000 kilometers (1200 miles); it can also be higher within the first 5000 kilometers (3100 miles) on new vehicles.",
+   "row": "engine oil consumption",
+   "label": "oil consumption norm",
+   "engine_text": null,
+   "source_layout": "manual_service",
+   "original": "1 l (1 quart) per 2000 kilometers"
+  },
+  {
    "key": "fuel_tank_l",
    "value": 60.0,
    "unit": "L",
    "page": 399,
-   "quote": "60 l (15.8 gallons)",
-   "row": "approx. 60 l (15.8 gallons)",
-   "label": "fuel_tank_l",
+   "quote": "approx. 60 l (15.8 gallons)",
+   "row": "tank capacities",
+   "label": "fuel tank",
    "engine_text": null,
-   "original": "60 l (15.8 gallons)",
-   "drive": null,
-   "approx_in_source": true
+   "approx_in_source": true,
+   "original": "approx. 60 l (15.8 gallons)",
+   "note": "the first tank volume printed; the next line gives the volume for the named vehicles",
+   "source_layout": "manual_service"
   },
   {
    "key": "fuel_tank_l",
    "value": 62.0,
    "unit": "L",
    "page": 399,
-   "quote": "62 l (16.4 gallons)",
-   "row": "approx. 62 l (16.4 gallons) for all-wheel drive vehicles",
-   "label": "fuel_tank_l",
+   "quote": "approx. 62 l (16.4 gallons) for all-wheel drive vehicles",
+   "row": "tank capacities",
+   "label": "fuel tank",
    "engine_text": null,
-   "original": "62 l (16.4 gallons)",
-   "drive": null,
-   "approx_in_source": true
+   "approx_in_source": true,
+   "original": "approx. 62 l (16.4 gallons) for all-wheel drive vehicles",
+   "variant": "all-wheel drive vehicles",
+   "drive": "AWD",
+   "source_layout": "manual_service"
   },
   {
-   "key": "fuel_tank_l",
-   "value": 2.0,
-   "unit": "L",
-   "page": 399,
-   "quote": "2.0 l",
-   "row": "2.0 l, 4 cylinder, TFSI®, 137 kW (184 hp), gasoline engine",
-   "label": "fuel_tank_l",
+   "page": 348,
+   "row": "Tiguan FWD | 215/65 R17 99H | 38 | 260 | 2.6",
    "engine_text": null,
-   "original": "2.0 l",
-   "drive": null,
-   "approx_in_source": false
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "215/65 R17 99H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "215/65 R17 99H",
+   "original": "215/65 R17 99H"
+  },
+  {
+   "page": 348,
+   "row": "Tiguan FWD | 215/65 R17 99H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "215/65 R17 99H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R17 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "Tiguan FWD | 215/65 R17 99H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "215/65 R17 99H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R17 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "235/55 R18 100H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "235/55 R18 100H",
+   "original": "235/55 R18 100H"
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "235/55 R18 100H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/55 R18 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 36 | 250 | 2.5",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "235/55 R18 100H",
+   "original": "36 psi / 250 kPa / 2.5 bar",
+   "note": "printed 36 psi / 250 kPa / 2.5 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/55 R18 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "235/50 R19 99H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "235/50 R19 99H",
+   "original": "235/50 R19 99H"
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "235/50 R19 99H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/50 R19 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "235/50 R19 99H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/50 R19 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "255/45 R19 100H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "255/45 R19 100H",
+   "original": "255/45 R19 100H"
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "255/45 R19 100H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/45 R19 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 38 | 260 | 2.6",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 260,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "255/45 R19 100H",
+   "original": "38 psi / 260 kPa / 2.6 bar",
+   "note": "printed 38 psi / 260 kPa / 2.6 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/45 R19 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 44 | 300 | 3.0",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "255/40 R20 101H XL",
+   "unit": null,
+   "label": "tire size",
+   "quote": "255/40 R20 101H XL",
+   "original": "255/40 R20 101H XL"
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 44 | 300 | 3.0",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 300,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "255/40 R20 101H XL",
+   "original": "44 psi / 300 kPa / 3.0 bar",
+   "note": "printed 44 psi / 300 kPa / 3.0 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/40 R20 101H XL"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 44 | 300 | 3.0",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan FWD",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 300,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "255/40 R20 101H XL",
+   "original": "44 psi / 300 kPa / 3.0 bar",
+   "note": "printed 44 psi / 300 kPa / 3.0 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/40 R20 101H XL"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "Tiguan all-wheel drive (4MOTION) | 215/65 R17 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tires",
+   "value": "215/65 R17 99H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "215/65 R17 99H",
+   "original": "215/65 R17 99H"
+  },
+  {
+   "page": 348,
+   "row": "Tiguan all-wheel drive (4MOTION) | 215/65 R17 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "215/65 R17 99H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R17 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "Tiguan all-wheel drive (4MOTION) | 215/65 R17 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "215/65 R17 99H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R17 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 39 | 270 | 2.7",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tires",
+   "value": "235/55 R18 100H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "235/55 R18 100H",
+   "original": "235/55 R18 100H"
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 39 | 270 | 2.7",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 270,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "235/55 R18 100H",
+   "original": "39 psi / 270 kPa / 2.7 bar",
+   "note": "printed 39 psi / 270 kPa / 2.7 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/55 R18 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/55 R18 100H | 39 | 270 | 2.7",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 270,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "235/55 R18 100H",
+   "original": "39 psi / 270 kPa / 2.7 bar",
+   "note": "printed 39 psi / 270 kPa / 2.7 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/55 R18 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tires",
+   "value": "235/50 R19 99H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "235/50 R19 99H",
+   "original": "235/50 R19 99H"
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "235/50 R19 99H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/50 R19 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "235/50 R19 99H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "235/50 R19 99H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "235/50 R19 99H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tires",
+   "value": "255/45 R19 100H",
+   "unit": null,
+   "label": "tire size",
+   "quote": "255/45 R19 100H",
+   "original": "255/45 R19 100H"
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "255/45 R19 100H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/45 R19 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/45 R19 100H | 41 | 280 | 2.8",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 280,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "255/45 R19 100H",
+   "original": "41 psi / 280 kPa / 2.8 bar",
+   "note": "printed 41 psi / 280 kPa / 2.8 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/45 R19 100H"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 46 | 320 | 3.2",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tires",
+   "value": "255/40 R20 101H XL",
+   "unit": null,
+   "label": "tire size",
+   "quote": "255/40 R20 101H XL",
+   "original": "255/40 R20 101H XL"
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 46 | 320 | 3.2",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 320,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "255/40 R20 101H XL",
+   "original": "46 psi / 320 kPa / 3.2 bar",
+   "note": "printed 46 psi / 320 kPa / 3.2 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/40 R20 101H XL"
+    ]
+   }
+  },
+  {
+   "page": 348,
+   "row": "255/40 R20 101H XL | 46 | 320 | 3.2",
+   "engine_text": null,
+   "source_layout": "manual_tire_table",
+   "variant": "Tiguan all-wheel drive (4MOTION)",
+   "drive": "AWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 320,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "255/40 R20 101H XL",
+   "original": "46 psi / 320 kPa / 3.2 bar",
+   "note": "printed 46 psi / 320 kPa / 3.2 bar for cold tires next to the size; one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "255/40 R20 101H XL"
+    ]
+   }
+  },
+  {
+   "key": "track_front_mm",
+   "value": 1581.0,
+   "unit": "mm",
+   "page": 396,
+   "quote": "1 5 8 1 ( 6 2 . 2 )",
+   "row": "Front track | Front-wheel drive: 1 5 8 1 ( 6 2 . 2 )",
+   "label": "Front track",
+   "engine_text": null,
+   "original": "1 5 8 1 ( 6 2 . 2 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "track_front_mm",
+   "value": 1580.0,
+   "unit": "mm",
+   "page": 396,
+   "quote": "1 5 8 0 ( 6 2. 2 )",
+   "row": "Front track | All-wheel drive (4MOTION): 1 5 8 0 ( 6 2. 2 )",
+   "label": "Front track",
+   "engine_text": null,
+   "original": "1 5 8 0 ( 6 2. 2 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "track_rear_mm",
+   "value": 1571.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1571(61.8)",
+   "row": "Rear track | Front-wheel drive: 1 5 7 1 ( 6 1 . 8 )",
+   "label": "Rear track",
+   "engine_text": null,
+   "original": "1 5 7 1 ( 6 1 . 8 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "track_rear_mm",
+   "value": 1571.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1571(61.8)",
+   "row": "Rear track | All-wheel drive (4MOTION): 1 5 7 1 ( 6 1. 8 )",
+   "label": "Rear track",
+   "engine_text": null,
+   "original": "1 5 7 1 ( 6 1. 8 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "width_mm",
+   "value": 1839.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1839(72.4)",
+   "row": "Width | Front-wheel drive: 1 8 3 9 ( 7 2 . 4 )",
+   "label": "Width",
+   "engine_text": null,
+   "original": "1 8 3 9 ( 7 2 . 4 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "width_mm",
+   "value": 1839.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1839(72.4)",
+   "row": "Width | All-wheel drive (4MOTION): 1 8 3 9 ( 7 2. 4 )",
+   "label": "Width",
+   "engine_text": null,
+   "original": "1 8 3 9 ( 7 2. 4 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "height_mm",
+   "value": 1687.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1687(66.3)",
+   "row": "Maximum vehicle height | Front-wheel drive: 1 6 8 7 ( 6 6 . 3 )",
+   "label": "Maximum vehicle height",
+   "engine_text": null,
+   "original": "1 6 8 7 ( 6 6 . 3 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "height_mm",
+   "value": 1688.0,
+   "unit": "mm",
+   "page": 397,
+   "quote": "1688(66. 4)",
+   "row": "Maximum vehicle height | All-wheel drive (4MOTION): 1 6 8 8 ( 6 6. 4 )",
+   "label": "Maximum vehicle height",
+   "engine_text": null,
+   "original": "1 6 8 8 ( 6 6. 4 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "ground_clearance",
+   "value": 187.0,
+   "unit": "mm",
+   "page": 398,
+   "quote": "187(7.4)",
+   "row": "Ground clearance between the axles | Front-wheel drive: 1 8 7 ( 7 . 4 )",
+   "label": "Ground clearance between the axles",
+   "engine_text": null,
+   "original": "1 8 7 ( 7 . 4 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "ground_clearance",
+   "value": 193.0,
+   "unit": "mm",
+   "page": 398,
+   "quote": "193(7. 6)",
+   "row": "Ground clearance between the axles | All-wheel drive (4MOTION): 1 9 3 ( 7. 6 )",
+   "label": "Ground clearance between the axles",
+   "engine_text": null,
+   "original": "1 9 3 ( 7. 6 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "wheelbase_mm",
+   "value": 2791.0,
+   "unit": "mm",
+   "page": 398,
+   "quote": "2791(109.9)",
+   "row": "Wheelbase | Front-wheel drive: 2 7 9 1 ( 1 0 9 . 9 )",
+   "label": "Wheelbase",
+   "engine_text": null,
+   "original": "2 7 9 1 ( 1 0 9 . 9 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "wheelbase_mm",
+   "value": 2791.0,
+   "unit": "mm",
+   "page": 398,
+   "quote": "2791(109.9)",
+   "row": "Wheelbase | All-wheel drive (4MOTION): 2 7 9 1 ( 1 0 9. 9 )",
+   "label": "Wheelbase",
+   "engine_text": null,
+   "original": "2 7 9 1 ( 1 0 9. 9 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
+  },
+  {
+   "key": "turning_circle_m",
+   "value": 11.5,
+   "unit": "m",
+   "page": 399,
+   "quote": "1 1 . 5 ( 3 7 . 7 )",
+   "row": "Minimum turning circle diameter | Front-wheel drive: 1 1 . 5 ( 3 7 . 7 )",
+   "label": "Minimum turning circle diameter",
+   "engine_text": null,
+   "original": "1 1 . 5 ( 3 7 . 7 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "length_mm",
+   "value": 4728.0,
+   "unit": "mm",
+   "page": 399,
+   "quote": "4 7 2 8 ( 1 8 6 . 1 )",
+   "row": "Length from bumper to bumper | Front-wheel drive: 4 7 2 8 ( 1 8 6 . 1 )",
+   "label": "Length from bumper to bumper",
+   "engine_text": null,
+   "original": "4 7 2 8 ( 1 8 6 . 1 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "Front-wheel drive",
+   "drive": "FWD"
+  },
+  {
+   "key": "length_mm",
+   "value": 4728.0,
+   "unit": "mm",
+   "page": 399,
+   "quote": "4 7 2 8 ( 1 8 6 . 1 )",
+   "row": "Length from bumper to bumper | All-wheel drive (4MOTION): 4 7 2 8 ( 1 8 6. 1 )",
+   "label": "Length from bumper to bumper",
+   "engine_text": null,
+   "original": "4 7 2 8 ( 1 8 6. 1 )",
+   "source_layout": "manual_dimensions_table",
+   "approx_in_source": false,
+   "variant": "All-wheel drive (4MOTION)",
+   "drive": "AWD"
   }
  ],
- "review": [],
+ "review": [
+  {
+   "page": 329,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "1 l (1 quart)",
+   "value": 1.0,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 329,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 liters (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 333,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 l (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 333,
+   "key": "engine_oil_capacity_drain_refill_l",
+   "quote": "0.5 l (0.5 qt)",
+   "value": 0.5,
+   "reason": "VW oil approval / quantity: kept as a gap (owner request 2026-10-04)"
+  },
+  {
+   "page": 348,
+   "key": "tires",
+   "row": "Spare wheel | T145/85 R18 | 60 | 420 | 4.2",
+   "reason": "spare wheel row: no field for a spare tire"
+  }
+ ],
  "engine_codes": [],
+ "not_in_manual": [
+  {
+   "page": 329,
+   "quote": "There is a label on the lock carrier that shows which engine oil should be added",
+   "fields": [
+    "engine_oil_oem_approval",
+    "engine_oil_capacity_l"
+   ],
+   "reason": "не публикуется производителем в руководстве: руководство ссылается на наклейку в моторном отсеке"
+  }
+ ],
  "candidate_pages": [
   169,
   170,
