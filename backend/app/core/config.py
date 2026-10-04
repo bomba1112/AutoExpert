@@ -70,6 +70,11 @@ class Settings(BaseSettings):
     club_review_threshold: int = Field(default=5, ge=2, le=1000)
     club_report_threshold: int = Field(default=3, ge=1, le=100)
     club_media_dir: str = ".localdata/club_media"
+    # Public car pages (product phase, stage 5): a static site; unset: on in development/test,
+    # off in production. The preview serves the generated folder at /cars.
+    public_car_pages: bool | None = None
+    public_site_dir: str = "C:/AutoExpertData/public_site"
+    public_site_base_url: str = "http://127.0.0.1:8010"
     # Links in messages to users (email confirmation, password reset).
     public_app_url: str = "http://127.0.0.1:8010/preview/"
     # Claude API key from the environment (AUTOEXPERT_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY);
