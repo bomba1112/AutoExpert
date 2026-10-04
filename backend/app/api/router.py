@@ -7,6 +7,7 @@ from app.api.routes import (
     buyer,
     catalog,
     chat,
+    club,
     garage,
     health,
     history_flow,
@@ -33,4 +34,5 @@ api_router.include_router(history_flow.router)
 api_router.include_router(listing_intake.router)
 api_router.include_router(chat.router)
 api_router.include_router(garage.router)
+api_router.include_router(club.router)
 api_router.include_router(research.router)

@@ -1,3 +1,5 @@
+from app.models.account import AuthToken, LoginAttempt, OutboxMessage  # noqa: F401
+from app.models.ai_mechanic import AIMechanicRequest  # noqa: F401
 from app.models.analysis import AnalysisRequest, Payment, Report, ReportQuestion
 from app.models.analytics import AnalyticsEvent
 from app.models.catalog import (
@@ -8,6 +10,17 @@ from app.models.catalog import (
     VehicleModel,
     VehicleVariant,
 )
+from app.models.club import (  # noqa: F401
+    ClubBan,
+    ClubComment,
+    ClubModerationLog,
+    ClubPhoto,
+    ClubPost,
+    ClubReaction,
+    ClubReport,
+    ClubReviewItem,
+    ClubRoom,
+)
 from app.models.evidence import (
     KnownIssue,
     LocalCostItem,
@@ -17,8 +30,6 @@ from app.models.evidence import (
     SourceRecord,
     TechnicalEvidence,
 )
-from app.models.account import AuthToken, LoginAttempt, OutboxMessage  # noqa: F401
-from app.models.ai_mechanic import AIMechanicRequest  # noqa: F401
 from app.models.garage import (  # noqa: F401
     GarageFeedItem,
     GarageOdometerReading,
