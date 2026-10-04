@@ -21,6 +21,7 @@ import {createVinHistoryViews} from './vin-history-views.js?v=0.11.0';
 import {createListingViews} from './listing-views.js?v=0.11.0';
 import {createUsTechViews} from './us-tech-views.js?v=0.11.0';
 import {createGarageViews} from './garage-views.js?v=0.11.0';
+import {createClubViews} from './club-views.js?v=0.11.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -49,10 +50,11 @@ const buyerViews = createBuyerViews({
   root, state, layout, go, esc, ensureSession, handleError, showToast,
   startMockVinHistory: vin => historyViews.start(vin),
   mockVinHistoryCards: () => historyViews.savedCards(),
-  garageEntrance: () => garageViews.homeCard(),
+  garageEntrance: () => garageViews.homeCard() + (clubViews.enabled() ? `<button class="buyer-entrance" data-action="club"><span class="entrance-number">05</span><span><strong>${esc(clubViews.navLabel())}</strong><small>${esc(pickText(state.language, 'Владельцы таких же машин', 'Eyni avtomobillərin sahibləri', 'Owners of the same cars'))}</small></span><span class="entrance-arrow">›</span></button>` : ''),
 });
 const usTechViews = createUsTechViews({root, state, layout});
-const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast});
+const clubViews = createClubViews({root, state, layout, go, ensureSession, showToast});
+const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton: id => clubViews.vehicleRoomsButton(id)});
 const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews});
 const listingViews = createListingViews({root, state, layout, go, esc, ensureSession, showToast, addCatalogVariant:(id,title)=>catalogViews.addVariantToBasket(id,title)});
 
@@ -71,6 +73,9 @@ root.addEventListener('submit', (event) => {
   if (event.target.id?.startsWith('garage-')) {
     event.preventDefault();
     void garageViews.submit(event.target).catch(handleError);
+  } else if (event.target.id?.startsWith('club-')) {
+    event.preventDefault();
+    void clubViews.submit(event.target).catch(handleError);
   } else if (event.target.id === 'vin-form') {
     event.preventDefault();
     void submitVin().catch(handleError);
@@ -131,6 +136,7 @@ async function route() {
     if (await listingViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await usTechViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await garageViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await clubViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await catalogViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await buyerViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (name === 'language') renderLanguage();
@@ -1046,6 +1052,7 @@ async function ensureSession() {
 async function handleAction(target) {
   if (await historyViews.action(target)) return;
   if (await garageViews.action(target)) return;
+  if (await clubViews.action(target)) return;
   const action = target.dataset.action;
   if (action === 'profile') {go('/profile'); return;}
   if (action === 'buyer-check') {go('/check'); return;}

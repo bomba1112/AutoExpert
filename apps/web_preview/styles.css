@@ -3192,3 +3192,22 @@ html.large-text .match-specs span {font-size:.8em;}
 .garage-examples {display:flex;flex-wrap:wrap;gap:6px;}
 .garage-chip {border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink);}
 .garage-ask input {flex:1;min-width:180px;}
+
+/* The owners club (product phase, stage 4) */
+.club {display:grid;gap:14px;}
+.club-rooms {display:grid;gap:8px;}
+.club-makes {grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+.club-room-card {display:grid;gap:2px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);}
+.club-room-card small,.club-meta {color:var(--muted);font-size:12px;}
+.club-posts {list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+.club-post-card {background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;gap:4px;cursor:pointer;}
+.club-post-card.starter {border-left:4px solid var(--gold);}
+.club-post-head {display:flex;justify-content:space-between;gap:8px;align-items:flex-start;}
+.club-body {margin:0;white-space:normal;line-height:1.5;}
+.club-photos {display:flex;flex-wrap:wrap;gap:8px;}
+.club-photos img {max-width:100%;max-height:260px;border-radius:10px;}
+.club-comments {list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+.club-comments li {border-top:1px solid var(--line);padding-top:8px;font-size:14px;}
+.club-comments p {margin:4px 0;}
+.club-link {justify-self:start;}
+.club textarea {border:1px solid var(--line);border-radius:10px;padding:9px 10px;font:inherit;}

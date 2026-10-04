@@ -82,7 +82,7 @@ export function garageCopy(language, key) {
   return entry ? entry[LANG_INDEX[language] ?? 0] : key;
 }
 
-export function createGarageViews({root, state, layout, go, ensureSession, showToast}) {
+export function createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton}) {
   const t = key => garageCopy(state.language, key);
   const unit = () => (state.language === 'en' ? 'mi' : 'km');
   const enabled = () => Boolean(state.meta?.garage_v1?.enabled);
@@ -205,11 +205,13 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
     const oil = v.services.find(s => s.job === 'engine_oil_and_filter');
     const others = v.services.filter(s => s !== oil);
     const mechanic = state.meta?.ai_mechanic_v1?.enabled ? await api(`/garage/vehicles/${encodeURIComponent(id)}/mechanic`).catch(() => null) : null;
+    const clubLink = clubButton ? await clubButton(id).catch(() => '') : '';
     const jobs = [...new Map([...v.main_jobs, ...v.services.map(s => ({job: s.job, label: s.label}))].map(j => [j.job, j])).values()];
     root.innerHTML = layout(`
       <section class="garage garage-car">
         ${heading(v.nickname || v.title, v.configuration || '')}
         ${v.vin ? `<p class="garage-vin">VIN ${escape(v.vin)}</p>` : ''}
+        ${clubLink}
         <section class="garage-panel garage-summary">
           <div><span>${escape(t('mileage'))}</span><strong>${escape(v.mileage.text || '—')}</strong>${v.mileage.estimated ? `<small class="garage-mark">${escape(t('estimated'))}</small>` : ''}${v.mileage.monthly_text ? `<small>${escape(v.mileage.monthly_text)} ${escape(t('perMonth'))}</small>` : ''}</div>
           <form id="garage-odometer-form" class="garage-inline"><input name="value" type="number" min="0" placeholder="${unit()}" required><button class="button" type="submit">${escape(t('update'))}</button></form>
