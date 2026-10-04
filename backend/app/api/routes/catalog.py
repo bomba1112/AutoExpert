@@ -125,7 +125,9 @@ def us_tech_configuration(
 
 
 @router.get("/variants/{variant_id}/us-tech")
-def variant_us_tech(variant_id: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru") -> dict:
+def variant_us_tech(
+    variant_id: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru"
+) -> dict:
     _us_tech_enabled()
     key = us_tech_facts.configuration_for_variant(db, variant_id)
     data = us_tech_facts.build(db, key, language) if key else None

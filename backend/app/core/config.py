@@ -64,6 +64,8 @@ class Settings(BaseSettings):
     garage_recall_job: bool = False
     # The AI mechanic (product phase, stage 3). Unset: on in development/test, off in production.
     ai_mechanic_v1: bool | None = None
+    # Links in messages to users (email confirmation, password reset).
+    public_app_url: str = "http://127.0.0.1:8010/preview/"
     # Claude API key from the environment (AUTOEXPERT_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY);
     # without it the mechanic answers from the car's data only.
     anthropic_api_key: str | None = None
