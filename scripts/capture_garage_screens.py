@@ -69,6 +69,9 @@ def main(base: str) -> int:
             page.goto(f"{base}/preview/#/garage")
             page.wait_for_selector(".garage", timeout=120000)
             ids = []
+            # several cars are a subscription right (stage 6): the demo user starts the trial first
+            page.evaluate("""async () => { const t = localStorage.getItem('autoexpert.demo.token');
+                await fetch('/api/v1/subscription/trial', {method: 'POST', headers: {Authorization: 'Bearer ' + t}}); }""")
             for car in CARS:
                 body = {k: car[k] for k in ("configuration_key", "vin", "odometer", "monthly", "region", "history")} | {"unit": "km", "read_on": "2026-10-01"}
                 view = call(page, "POST", f"/garage/vehicles?language={language}", body)
