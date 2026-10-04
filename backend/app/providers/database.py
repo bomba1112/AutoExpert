@@ -40,7 +40,12 @@ class DatabaseTechnicalDataProvider:
     def issues_for(self, variant_id: str) -> list[KnownIssue]:
         return list(
             self.session.scalars(
-                select(KnownIssue).where(KnownIssue.vehicle_variant_id == variant_id)
+                select(KnownIssue).where(
+                    KnownIssue.vehicle_variant_id == variant_id,
+                    # f090: CN owner-review issues carry no severity and stay out of
+                    # the analysis reports.
+                    KnownIssue.severity.is_not(None),
+                )
             )
         )
 

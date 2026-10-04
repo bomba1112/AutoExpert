@@ -55,6 +55,8 @@ class ScopedFactMixin:
     # Normalized factory family key confirmed by a source (e.g. A25A-FKS); never an EPA code.
     engine_family_key: Mapped[str | None] = mapped_column(String(40), index=True)
     transmission_key: Mapped[str | None] = mapped_column(String(40), index=True)
+    # f090: hybrid system component key (CN catalogue, e.g. byd_dmi_4.0).
+    hybrid_system_key: Mapped[str | None] = mapped_column(String(40), index=True)
     year_from: Mapped[int | None] = mapped_column(Integer)
     year_to: Mapped[int | None] = mapped_column(Integer)
     display_level: Mapped[DisplayLevel | None] = mapped_column(
@@ -149,7 +151,8 @@ class KnownIssue(ScopedFactMixin, UUIDPrimaryKeyMixin, TimestampMixin, Base):
     consequences: Mapped[str | None] = mapped_column(Text)
     typical_mileage_min: Mapped[int | None] = mapped_column(Integer)
     typical_mileage_max: Mapped[int | None] = mapped_column(Integer)
-    severity: Mapped[Severity] = mapped_column(enum_column(Severity, "issue_severity"))
+    # NULL only for f090 owner-review issues that state no severity (CN catalogue); hidden.
+    severity: Mapped[Severity | None] = mapped_column(enum_column(Severity, "issue_severity"))
     evidence_ids: Mapped[list] = mapped_column(JSON, default=list)
     source_count: Mapped[int] = mapped_column(Integer, default=1)
     confidence: Mapped[ConfidenceLevel] = mapped_column(

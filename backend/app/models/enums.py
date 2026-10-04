@@ -143,6 +143,7 @@ class ScopeLevel(StrEnum):
     GENERATION = "GENERATION"
     ENGINE = "ENGINE"
     TRANSMISSION = "TRANSMISSION"
+    HYBRID_SYSTEM = "HYBRID_SYSTEM"
 
 
 class DisplayLevel(StrEnum):
