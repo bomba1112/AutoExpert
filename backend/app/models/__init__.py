@@ -73,6 +73,7 @@ from app.models.listing_intake import (  # noqa: F401
     ListingSnapshot,
 )
 from app.models.research import ProviderCacheEntry, ResearchJob
+from app.models.subscription import Subscription  # noqa: F401
 from app.models.translations import ContentTranslation
 from app.models.user import User
 from app.models.vehicle_knowledge import (

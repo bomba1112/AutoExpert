@@ -1,3 +1,4 @@
+# ruff: noqa: E501
 """Generate the public car pages (product phase, stage 5): a static site from the database, one
 page per line -> generation -> engine in EN, RU, AZ, with indexes, sitemap.xml and robots.txt.
 The output folder is what goes to the web server (never into git).

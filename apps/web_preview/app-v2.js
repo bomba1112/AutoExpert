@@ -22,6 +22,7 @@ import {createListingViews} from './listing-views.js?v=0.11.0';
 import {createUsTechViews} from './us-tech-views.js?v=0.11.0';
 import {createGarageViews} from './garage-views.js?v=0.11.0';
 import {createClubViews} from './club-views.js?v=0.11.0';
+import {createSubscriptionViews} from './subscription-views.js?v=0.11.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -54,7 +55,8 @@ const buyerViews = createBuyerViews({
 });
 const usTechViews = createUsTechViews({root, state, layout});
 const clubViews = createClubViews({root, state, layout, go, ensureSession, showToast});
-const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton: id => clubViews.vehicleRoomsButton(id)});
+const subscriptionViews = createSubscriptionViews({root, state, layout, go, ensureSession, showToast});
+const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton: id => clubViews.vehicleRoomsButton(id), lockedPanel: n => subscriptionViews.enabled() ? subscriptionViews.lockedPanel(n) : ''});
 const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews});
 const listingViews = createListingViews({root, state, layout, go, esc, ensureSession, showToast, addCatalogVariant:(id,title)=>catalogViews.addVariantToBasket(id,title)});
 
@@ -137,6 +139,7 @@ async function route() {
     if (await usTechViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await garageViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await clubViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await subscriptionViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await catalogViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await buyerViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (name === 'language') renderLanguage();
@@ -1053,6 +1056,7 @@ async function handleAction(target) {
   if (await historyViews.action(target)) return;
   if (await garageViews.action(target)) return;
   if (await clubViews.action(target)) return;
+  if (await subscriptionViews.action(target)) return;
   const action = target.dataset.action;
   if (action === 'profile') {go('/profile'); return;}
   if (action === 'buyer-check') {go('/check'); return;}
@@ -1167,6 +1171,7 @@ function renderError(error) {
 }
 
 function handleError(error) {
+  if (subscriptionViews.handle(error)) return;
   renderError(error);
 }
 

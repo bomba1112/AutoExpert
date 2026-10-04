@@ -9,12 +9,12 @@ from typing import Literal
 
 from fastapi import APIRouter, HTTPException, Query, Response
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import func, select
 
 from app.api.dependencies import CurrentUser, DBSession
 from app.core.config import get_settings
 from app.models.garage import GarageFeedItem, GarageServiceRecord, GarageVehicle
-from app.services import ai_mechanic, garage, garage_pdf, us_tech_facts
+from app.services import ai_mechanic, entitlements, garage, garage_pdf, us_tech_facts
 
 router = APIRouter(prefix="/garage", tags=["garage"])
 Language = Literal["ru", "az", "en"]
@@ -117,6 +117,9 @@ def create_vehicle(value: VehicleCreate, db: DBSession, user: CurrentUser, langu
     names = garage.configuration_names(db, value.configuration_key)
     if names is None:
         raise HTTPException(422, "CONFIGURATION_NOT_FOUND")
+    cars = db.scalar(select(func.count()).select_from(GarageVehicle).where(GarageVehicle.user_id == user.id)) or 0
+    if cars >= entitlements.FREE_CARS:
+        entitlements.require(db, user, "GARAGE_MULTIPLE_CARS")
     region = value.region or garage.default_region(user.country_code, language)
     vehicle = GarageVehicle(user_id=user.id, configuration_key=value.configuration_key, make=names[0], model=names[1],
                             year=names[2], nickname=value.nickname, region=region,
@@ -249,6 +252,7 @@ def delete_record(vehicle_id: str, record_id: str, db: DBSession, user: CurrentU
 def service_log_pdf(vehicle_id: str, db: DBSession, user: CurrentUser, language: Language = "ru") -> Response:
     _enabled()
     vehicle = _vehicle(db, user, vehicle_id)
+    entitlements.require(db, user, "LOG_EXPORT")
     pdf = garage_pdf.render(garage.overview(db, vehicle, language), language)
     name = f"AutoExpert_service_log_{vehicle.make}_{vehicle.model}_{vehicle.year}.pdf".replace(" ", "_")
     return Response(pdf, media_type="application/pdf", headers={"Content-Disposition": f'attachment; filename="{name}"'})
@@ -298,6 +302,7 @@ def mechanic_ask(vehicle_id: str, value: MechanicQuestion, db: DBSession, user: 
     only, checked by the server; per-user daily limit; every request logged."""
     _mechanic_enabled()
     vehicle = _vehicle(db, user, vehicle_id)
+    entitlements.require(db, user, "AI_MECHANIC")
     limit = get_settings().ai_mechanic_daily_limit
     if ai_mechanic.used_today(db, user.id) >= limit:
         raise HTTPException(429, {"code": "AI_MECHANIC_LIMIT", "message": ai_mechanic.tt(language, "limit"), "limit": limit})

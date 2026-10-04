@@ -75,6 +75,15 @@ class Settings(BaseSettings):
     public_car_pages: bool | None = None
     public_site_dir: str = "C:/AutoExpertData/public_site"
     public_site_base_url: str = "http://127.0.0.1:8010"
+    # The subscription model (product phase, stage 6): rights and a store stub, no real payment.
+    # Unset: on in development, off in production. Prices per region are the owner's to confirm.
+    subscription_v1: bool | None = None
+    subscription_trial_days: int = Field(default=7, ge=0, le=90)
+    subscription_prices: dict = Field(default_factory=lambda: {
+        "US": {"currency": "USD", "monthly_minor": 399},
+        "CA": {"currency": "CAD", "monthly_minor": 499},
+        "AZ": {"currency": "AZN", "monthly_minor": 100},
+    })
     # Links in messages to users (email confirmation, password reset).
     public_app_url: str = "http://127.0.0.1:8010/preview/"
     # Claude API key from the environment (AUTOEXPERT_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY);
