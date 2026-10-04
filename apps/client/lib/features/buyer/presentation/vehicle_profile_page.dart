@@ -261,9 +261,11 @@ class _VehicleProfilePageState extends State<VehicleProfilePage> {
                                                         BorderRadius.circular(
                                                             9)),
                                                 child: Text(
-                                                    widget.language == 'az'
-                                                        ? 'Ön baxış · 2021–2026'
-                                                        : 'Предпросмотр · 2021–2026',
+                                                    switch (widget.language) {
+                                                      'az' => 'Ön baxış · 2021–2026',
+                                                      'en' => 'Preview · 2021–2026',
+                                                      _ => 'Предпросмотр · 2021–2026',
+                                                    },
                                                     style: const TextStyle(
                                                         fontSize: 12,
                                                         color:

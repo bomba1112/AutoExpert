@@ -1,3 +1,4 @@
+import 'package:autoexpert_client/app/device_language.dart';
 import 'package:autoexpert_client/app/app_controller.dart';
 import 'package:autoexpert_client/core/theme/app_theme.dart';
 import 'package:autoexpert_client/core/network/api_client.dart';
@@ -68,8 +69,7 @@ class _AutoExpertAppState extends State<AutoExpertApp> {
     super.dispose();
   }
 
-  String get _reportLanguage =>
-      _controller.locale?.languageCode == 'az' ? 'az' : 'ru';
+  String get _reportLanguage => _controller.locale?.languageCode ?? deviceLanguage();
 
   void _openCheck(BuildContext context, {String? initialVin}) =>
       Navigator.of(context).push(MaterialPageRoute<void>(
@@ -116,9 +116,10 @@ class _AutoExpertAppState extends State<AutoExpertApp> {
       theme: AppTheme.light,
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      locale: _controller.locale ?? const Locale('ru'),
+      locale: _controller.locale ?? Locale(deviceLanguage()),
       home: _controller.locale == null
-          ? LanguagePage(onSelected: _controller.selectLanguage)
+          ? LanguagePage(
+              onSelected: _controller.selectLanguage, initial: deviceLanguage())
           : HomePage(
               onChangeLanguage: _controller.resetLanguage,
               onCheckVehicle: _openCheck,

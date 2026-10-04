@@ -13,62 +13,64 @@ class TechnicalDisplay {
     return value == null ? '' : '$value'.trim();
   }
 
-  static String _language(String language) => language == 'az' ? 'az' : 'ru';
+  static String _litre(String language) =>
+      switch (language) { 'az' => 'l', 'en' => 'L', _ => 'л' };
+
+  static String _language(String language) =>
+      language == 'az' || language == 'en' ? language : 'ru';
 
   static String? _term(String value, String language) {
-    final terms = <String, (String, String)>{
-      'ICE': ('ДВС', 'Daxiliyanma mühərriki'),
-      'BEV': ('Электромобиль', 'Elektromobil'),
-      'HEV': ('Гибрид', 'Hibrid'),
-      'PHEV': ('Подключаемый гибрид', 'Şarj olunan hibrid'),
-      'MHEV': ('Мягкий гибрид', 'Yumşaq hibrid'),
-      'GASOLINE': ('Бензин', 'Benzin'),
-      'DIESEL': ('Дизель', 'Dizel'),
-      'ELECTRICITY': ('Электричество', 'Elektrik'),
-      'HYDROGEN': ('Водород', 'Hidrogen'),
-      'TURBO': ('Турбо', 'Turbo'),
-      'NATURALLY_ASPIRATED': ('Без наддува', 'Turbosuz'),
+    final terms = <String, (String, String, String)>{
+      'ICE': ('ДВС', 'Daxiliyanma mühərriki', 'Gas engine'),
+      'BEV': ('Электромобиль', 'Elektromobil', 'Electric vehicle'),
+      'HEV': ('Гибрид', 'Hibrid', 'Hybrid'),
+      'PHEV': ('Подключаемый гибрид', 'Şarj olunan hibrid', 'Plug-in hybrid'),
+      'MHEV': ('Мягкий гибрид', 'Yumşaq hibrid', 'Mild hybrid'),
+      'GASOLINE': ('Бензин', 'Benzin', 'Gasoline'),
+      'DIESEL': ('Дизель', 'Dizel', 'Diesel'),
+      'ELECTRICITY': ('Электричество', 'Elektrik', 'Electricity'),
+      'HYDROGEN': ('Водород', 'Hidrogen', 'Hydrogen'),
+      'TURBO': ('Турбо', 'Turbo', 'Turbo'),
+      'NATURALLY_ASPIRATED': ('Без наддува', 'Turbosuz', 'Naturally aspirated'),
       'AT': (
         'Гидротрансформаторный автомат AT',
-        'Hidrotransformatorlu avtomat AT'
-      ),
-      'CVT': ('Вариатор CVT', 'Variator CVT'),
-      'ECVT': ('Электромеханическая e-CVT', 'Elektromexaniki e-CVT'),
-      'DCT': ('Робот DCT', 'Robot DCT'),
-      'MANUAL': ('Механическая коробка', 'Mexaniki sürətlər qutusu'),
-      'SINGLE_SPEED': ('Одноступенчатый редуктор', 'Birpilləli reduktor'),
+        'Hidrotransformatorlu avtomat AT', 'Torque-converter automatic (AT)'),
+      'CVT': ('Вариатор CVT', 'Variator CVT', 'CVT'),
+      'ECVT': ('Электромеханическая e-CVT', 'Elektromexaniki e-CVT', 'Electric e-CVT'),
+      'DCT': ('Робот DCT', 'Robot DCT', 'Dual-clutch DCT'),
+      'MANUAL': ('Механическая коробка', 'Mexaniki sürətlər qutusu', 'Manual transmission'),
+      'SINGLE_SPEED': ('Одноступенчатый редуктор', 'Birpilləli reduktor', 'Single-speed reduction gear'),
       'AUTOMATIC_UNSPECIFIED': (
         'Автоматическая, точный тип неизвестен',
-        'Avtomatik, dəqiq növ məlum deyil'
-      ),
+        'Avtomatik, dəqiq növ məlum deyil', 'Automatic, exact type unknown'),
       'VARIABLE_UNSPECIFIED': (
         'Бесступенчатая, точный тип неизвестен',
-        'Pilləsiz, dəqiq növ məlum deyil'
-      ),
+        'Pilləsiz, dəqiq növ məlum deyil', 'Continuously variable, exact type unknown'),
       'AMT_UNSPECIFIED': (
         'Автоматизированная, точный тип неизвестен',
-        'Avtomatlaşdırılmış, dəqiq növ məlum deyil'
-      ),
-      'FWD': ('Передний привод', 'Ön ötürücü'),
-      'FRONT': ('Передний привод', 'Ön ötürücü'),
-      'RWD': ('Задний привод', 'Arxa ötürücü'),
-      'REAR': ('Задний привод', 'Arxa ötürücü'),
-      'AWD': ('Полный привод AWD', 'Tam ötürücü AWD'),
-      '4WD': ('Полный привод 4WD', 'Tam ötürücü 4WD'),
-      'PART_TIME_4WD': ('Подключаемый полный привод', 'Qoşulan tam ötürücü'),
-      'SEDAN': ('Седан', 'Sedan'),
-      'CROSSOVER': ('Кроссовер', 'Krossover'),
-      'SUV': ('SUV', 'SUV'),
-      'HATCHBACK': ('Хетчбэк', 'Hetçbek'),
-      'WAGON': ('Универсал', 'Universal'),
-      'COUPE': ('Купе', 'Kupe'),
+        'Avtomatlaşdırılmış, dəqiq növ məlum deyil', 'Automated, exact type unknown'),
+      'FWD': ('Передний привод', 'Ön ötürücü', 'Front-wheel drive'),
+      'FRONT': ('Передний привод', 'Ön ötürücü', 'Front-wheel drive'),
+      'RWD': ('Задний привод', 'Arxa ötürücü', 'Rear-wheel drive'),
+      'REAR': ('Задний привод', 'Arxa ötürücü', 'Rear-wheel drive'),
+      'AWD': ('Полный привод AWD', 'Tam ötürücü AWD', 'All-wheel drive (AWD)'),
+      '4WD': ('Полный привод 4WD', 'Tam ötürücü 4WD', 'Four-wheel drive (4WD)'),
+      'PART_TIME_4WD': ('Подключаемый полный привод', 'Qoşulan tam ötürücü', 'Part-time four-wheel drive'),
+      'SEDAN': ('Седан', 'Sedan', 'Sedan'),
+      'CROSSOVER': ('Кроссовер', 'Krossover', 'Crossover'),
+      'SUV': ('SUV', 'SUV', 'SUV'),
+      'HATCHBACK': ('Хетчбэк', 'Hetçbek', 'Hatchback'),
+      'WAGON': ('Универсал', 'Universal', 'Wagon'),
+      'COUPE': ('Купе', 'Kupe', 'Coupe'),
     };
     final pair = terms[value.toUpperCase()];
     return pair == null
         ? null
-        : _language(language) == 'az'
-            ? pair.$2
-            : pair.$1;
+        : switch (_language(language)) {
+            'az' => pair.$2,
+            'en' => pair.$3,
+            _ => pair.$1,
+          };
   }
 
   static String? _sourceCode(String raw) =>
@@ -108,9 +110,13 @@ class TechnicalDisplay {
     final codes = _engineCodes(facts);
     final parts = <String>[
       if (displacement.isNotEmpty)
-        '$displacement ${language == 'az' ? 'l' : 'л'}',
+        '$displacement ${_litre(language)}',
       if (cylinders.isNotEmpty && RegExp(r'^\d+$').hasMatch(cylinders))
-        language == 'az' ? '$cylinders silindr' : '$cylinders цилиндра',
+        switch (language) {
+          'az' => '$cylinders silindr',
+          'en' => '$cylinders cylinders',
+          _ => '$cylinders цилиндра',
+        },
       if (fuel != null) fuel,
       if (aspiration != null) aspiration,
       ...codes,
@@ -130,9 +136,11 @@ class TechnicalDisplay {
     }
     final gears = _raw(facts, 'gears');
     if (gears.isEmpty || !RegExp(r'^\d+$').hasMatch(gears)) return family;
-    return language == 'az'
-        ? '$gears pilləli $family'
-        : '$gears-ступенчатая · $family';
+    return switch (language) {
+      'az' => '$gears pilləli $family',
+      'en' => '$gears-speed $family',
+      _ => '$gears-ступенчатая · $family',
+    };
   }
 
   static String configuration(Map<String, dynamic> facts, String language) {
@@ -193,7 +201,7 @@ class TechnicalDisplay {
     }
     if (key == 'engine_displacement') {
       final value = _raw(facts, key);
-      return value.isEmpty ? null : '$value ${language == 'az' ? 'l' : 'л'}';
+      return value.isEmpty ? null : '$value ${_litre(language)}';
     }
     if (key == 'cylinders') {
       final value = _raw(facts, key);

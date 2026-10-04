@@ -2,16 +2,17 @@ import 'package:autoexpert_client/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class LanguagePage extends StatefulWidget {
-  const LanguagePage({required this.onSelected, super.key});
+  const LanguagePage({required this.onSelected, this.initial = 'en', super.key});
 
   final ValueChanged<String> onSelected;
+  final String initial;
 
   @override
   State<LanguagePage> createState() => _LanguagePageState();
 }
 
 class _LanguagePageState extends State<LanguagePage> {
-  String _selected = 'ru';
+  late String _selected = widget.initial;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +37,9 @@ class _LanguagePageState extends State<LanguagePage> {
                       style: Theme.of(context).textTheme.bodyLarge),
                   const SizedBox(height: 24),
                   for (final language in const [
+                    ('en', 'English'),
                     ('az', 'Azərbaycan dili'),
                     ('ru', 'Русский'),
-                    ('en', 'English'),
                   ])
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),

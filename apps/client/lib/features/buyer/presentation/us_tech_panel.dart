@@ -39,6 +39,23 @@ const _copy = {
     'severe': 'Ağır şərait',
     'limit': 'gec olmayaraq',
   },
+  'en': {
+    'title': 'Specifications · USA',
+    'technical': 'Specs',
+    'weak_points': 'Known issues',
+    'campaigns': 'Service campaigns',
+    'maintenance': 'Maintenance',
+    'sources': 'Sources',
+    'component': 'Component',
+    'severity': 'Severity',
+    'probability': 'Likelihood',
+    'symptoms': 'Symptoms',
+    'check': 'How to check',
+    'years': 'Years',
+    'normal': 'Normal conditions',
+    'severe': 'Severe conditions',
+    'limit': 'no later than',
+  },
 };
 
 Map<String, dynamic> _map(Object? value) =>
@@ -120,7 +137,7 @@ class UsTechPanel extends StatefulWidget {
 class _UsTechPanelState extends State<UsTechPanel> {
   String? _selected;
 
-  Map<String, String> get t => _copy[widget.language == 'az' ? 'az' : 'ru']!;
+  Map<String, String> get t => _copy[_copy.containsKey(widget.language) ? widget.language : 'ru']!;
   Map<String, dynamic> get labels => _map(widget.data['labels']);
 
   @override
