@@ -9,15 +9,396 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-03T17:48:43+00:00",
+ "started_at": "2026-10-04T13:03:52+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "540cf08b81977c959e958fb6ec823dd861d4acafb6a55a1d0ba333e2bf2d4858",
+   "old": {
+    "job": "drive_shaft_boots",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Drive shaft boots (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Drive shaft boots (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "drive_shaft_boots",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Drive shaft boots (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Drive shaft boots (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "91f622efa2ed97279f3a67e6c6b4a17b927192e253315298ba617df3349ffa71",
+   "old": {
+    "job": "drive_shaft_boots",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.17 'Drive shaft boots (4WD/AWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Drive shaft boots (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "new": {
+    "job": "drive_shaft_boots",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.17 'Drive shaft boots (4WD/AWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Drive shaft boots (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "77dc26a5564484f210cd724d77bb5bd8ed9048641326f3d854bf2504e95ac703",
+   "old": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Propeller shaft (4WD/AWD/RWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Propeller shaft (4WD/AWD/RWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8a0d265af364e52ba46fe80f3024f89c444b2e015c6351aae1f8e0c24660b9fe",
+   "old": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.17 'Propeller shaft (4WD/AWD/RWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "new": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.17 'Propeller shaft (4WD/AWD/RWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0e8608a82795f70c7d94bb9401be006bc6d9318cb3115e3c30d221cae621449a",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Transfer case oil (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Transfer case oil (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.18 'Transfer case oil (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000 miles",
+    "quote": "Transfer case oil (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b38341261cb4635e0e9453efdfea52a48affd11481b75b534e22de4e365c95d9",
+   "old": {
+    "job": "key_fob_battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 18,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.19 '< Replace Nissan Intelligent Key™ battery >' (normal) listed at 15,000, 30,000, 45,000, 60,000, 75,000, 90,000, 105,000, 120,000 miles",
+    "quote": "< Replace Nissan Intelligent Key™ battery >; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "key_fob_battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 18,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.19 '< Replace Nissan Intelligent Key™ battery >' (normal) listed at 15,000, 30,000, 45,000, 60,000, 75,000, 90,000, 105,000, 120,000 miles",
+    "quote": "< Replace Nissan Intelligent Key™ battery >; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 26,
   "te_existing": 254,
   "configurations": 9,
   "configurations_research_only": 9,
   "issues_existing": 6,
-  "maintenance_new": 56
+  "maintenance_existing": 56,
+  "maintenance_corrected": 6
  },
- "finished_at": "2026-10-03T17:48:44+00:00"
+ "finished_at": "2026-10-04T13:03:54+00:00"
 }
