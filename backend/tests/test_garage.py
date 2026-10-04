@@ -304,6 +304,10 @@ def test_garage_api_flow(car, client):
     assert listing[0]["id"] == vid
     feed = client.get("/api/v1/garage/feed?language=ru", headers=h).json()
     assert {f["kind"] for f in feed} >= {"RECALL"} and all(f["vehicle_id"] == vid for f in feed)
+    oil_notices = [f for f in feed if f["kind"] == "OIL_INTERVAL"]
+    assert oil_notices and all(f["read"] for f in oil_notices)  # resolved once the owner set the interval
+    unknown = next(r for r in client.get(f"/api/v1/garage/vehicles/{vid}", headers=h).json()["log"] if r["status"] == "UNKNOWN")
+    assert unknown["on"] is None  # "не знаю" has no work date
     assert client.post(f"/api/v1/garage/feed/{feed[0]['id']}/read", headers=h).json() == {"ok": True}
     pdf = client.get(f"/api/v1/garage/vehicles/{vid}/service-log.pdf?language=ru", headers=h)
     assert pdf.status_code == 200 and pdf.content.startswith(b"%PDF")

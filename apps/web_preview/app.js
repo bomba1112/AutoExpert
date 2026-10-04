@@ -1,4 +1,4 @@
-import {ApiError, api, clearSession, ensureDemoSession, hasSession, trackEvent} from './api.js?v=0.8.1';
+import {ApiError, api, clearSession, ensureDemoSession, hasSession, trackEvent} from './api.js?v=0.11.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');

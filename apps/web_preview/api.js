@@ -185,3 +185,24 @@ function errorMessage(payload) {
   }
   return 'Request failed';
 }
+
+export async function downloadFile(path, filename) {
+  const headers = new Headers();
+  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  const response = await fetch(endpoint(path), {headers});
+  if (!response.ok) throw new ApiError(response.status, 'Download unavailable');
+  const blob = await response.blob();
+  if (globalThis.AutoExpertFiles?.savePdf && blob.type === 'application/pdf') {
+    const reader = new FileReader();
+    await new Promise((resolve, reject) => {
+      reader.onload = () => { globalThis.AutoExpertFiles.savePdf(filename, String(reader.result).split(',')[1]); resolve(); };
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+    return;
+  }
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url; link.download = filename; link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+}

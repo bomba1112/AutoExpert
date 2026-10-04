@@ -78,6 +78,7 @@ T = {
     "odometer_ask": ("Уточните пробег: мы оцениваем его по среднему за месяц", "Yürüşü dəqiqləşdirin: onu aylıq ortalamaya görə hesablayırıq",
                      "Please confirm the mileage: we estimate it from your monthly average"),
 }
+RESOLVABLE = ("OIL_INTERVAL", "SERVICE_CHECK", "SERVICE_DUE")
 DUE_TITLE = {
     "OVERDUE": ("Пора: просрочено", "Vaxtıdır: gecikib", "Due now: overdue"),
     "SOON": ("Скоро", "Tezliklə", "Coming up"),
@@ -345,7 +346,8 @@ def overview(db, vehicle: GarageVehicle, language: str, today: date | None = Non
         "recalls": recalls,
         "weak_points": weak,
         "log": [{"id": r.id, "job": r.job, "label": _job_label(r.job, language), "action": r.action, "status": r.status,
-                 "on": r.performed_on.isoformat() if r.performed_on else None, "km": r.odometer_km,
+                 # "не знаю": the date is when the owner answered, not when the work was done
+                 "on": r.performed_on.isoformat() if r.performed_on and r.status != "UNKNOWN" else None, "km": r.odometer_km,
                  "km_text": distance(r.odometer_km, language), "note": r.note}
                 for r in sorted(vehicle.records, key=lambda r: (r.performed_on or date.min, r.odometer_km or 0), reverse=True)],
         "main_jobs": main_jobs(schedule, language),
@@ -417,6 +419,11 @@ def refresh_feed(db, vehicle: GarageVehicle, view: dict | None = None, today: da
                                                            "origin": r.get("origin")}))
     if view["mileage"]["ask"]:
         wanted.append(("ODOMETER_ASK", f"odometer:{today:%Y-%m}", {"estimate_km": view["mileage"]["km"]}))
+    # a notice whose reason is gone (the oil interval was set, the job was logged) is resolved: read
+    wanted_keys = {key for _kind, key, _payload in wanted}
+    for item in vehicle.feed:
+        if item.kind in RESOLVABLE and item.read_at is None and item.key not in wanted_keys:
+            mark_read(item)
     added = []
     for kind, key, payload in wanted:
         if key in existing:

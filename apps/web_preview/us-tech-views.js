@@ -1,8 +1,8 @@
-import {EN, pickText} from './en-text.js?v=0.10.0';
+import {EN, pickText} from './en-text.js?v=0.11.0';
 // US technical facts of a configuration (next-stage prompt, stage C). Shown only while the API
 // advertises the show_us_tech_facts flag (client-config "us_tech_facts"); production without
 // the flag never loads or renders anything from here.
-import {api} from './api.js?v=0.8.1';
+import {api} from './api.js?v=0.11.0';
 
 const COPY = {
   ru: {
