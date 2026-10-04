@@ -1,18 +1,13 @@
 {
- "generations": [
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "live",
+ "counts": {
+  "hidden": 3
+ },
+ "changes": [
   {
-   "code": "US2014-2020",
-   "action": "unchanged"
-  }
- ],
- "conflicts": [],
- "existing_vs_new": [],
- "stale": [],
- "dry_run": false,
- "started_at": "2026-10-04T13:01:20+00:00",
- "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "maintenance_corrections": [
-  {
+   "line": "fusion",
    "change": "updated",
    "natural_key": "dfb39777c626d31c859f028ba31cd5c2b8282d8dd4ccb2c3c5bcec959ae8c3f8",
    "old": {
@@ -76,6 +71,7 @@
    }
   },
   {
+   "line": "fusion",
    "change": "updated",
    "natural_key": "686d1dd6e5624382b65bdcf0745b2d3cc01690035a04e12f552dd61b51b0a4bc",
    "old": {
@@ -139,6 +135,7 @@
    }
   },
   {
+   "line": "fusion",
    "change": "updated",
    "natural_key": "4a5a80e46039c912786f7a8f357d0c7cbc53a08f78848d3518005a7da1ee0b1e",
    "old": {
@@ -201,15 +198,5 @@
     ]
    }
   }
- ],
- "counts": {
-  "raw_documents_seen": 88,
-  "te_existing": 799,
-  "configurations": 46,
-  "configurations_research_only": 46,
-  "issues_existing": 54,
-  "maintenance_existing": 96,
-  "maintenance_corrected": 3
- },
- "finished_at": "2026-10-04T13:01:26+00:00"
+ ]
 }
