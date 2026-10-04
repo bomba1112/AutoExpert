@@ -13,21 +13,4902 @@
    "action": "unchanged"
   }
  ],
- "conflicts": [],
+ "conflicts": [
+  {
+   "what": "technical_evidence 538df65d1a74 engine_oil_specification",
+   "existing": "ACEA-A5 or above; API SM or above; ILSAC GF-4 or above",
+   "new": "ACEA A5 or above; API SM or above; ILSAC GF-4 or above",
+   "resolution": "existing kept"
+  },
+  {
+   "what": "technical_evidence 9cf2817d4554 engine_oil_specification",
+   "existing": "ACEA-A5 or above; API SM or above; ILSAC GF-4 or above",
+   "new": "ACEA A5 or above; API SM or above; ILSAC GF-4 or above",
+   "resolution": "existing kept"
+  },
+  {
+   "what": "technical_evidence 1550427e6d11 engine_oil_specification",
+   "existing": "ACEA-A5 or above; API SM or above; ILSAC GF-4 or above",
+   "new": "ACEA A5 or above; API SM or above; ILSAC GF-4 or above",
+   "resolution": "existing kept"
+  }
+ ],
  "existing_vs_new": [],
- "stale": [],
+ "stale": [
+  {
+   "id": "deb7ab0c-8524-4948-9ae4-14af42b5ef0c",
+   "fact_key": "brake_fluid",
+   "value": "DOT 4",
+   "years": [
+    2021,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "ac2bb5ca-69e9-4d2e-95f6-583ed9637cbb",
+   "fact_key": "coolant_description",
+   "value": "Ethylene glycol base coolant for aluminum radiator",
+   "years": [
+    2021,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "9a9b9514-4855-4d2c-9237-b1a0e09ee95a",
+   "fact_key": "fuel_tank_l",
+   "value": 71,
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "e67b9ec6-ee0f-462e-b86e-6bc07858c0ad",
+   "fact_key": "engine_oil_capacity_drain_refill_l",
+   "value": 6.5,
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "e11dbb40-216e-4da2-a380-ec10f80808ae",
+   "fact_key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "1af5a557-8d00-4bcc-b66d-711229e9a0f9",
+   "fact_key": "engine_oil_specification",
+   "value": "ACEA A5/B5",
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "1fbc2b96-b8d8-47ca-9e57-dc4a5a391f26",
+   "fact_key": "coolant_capacity_l",
+   "value": 12.2,
+   "years": [
+    2022,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T14:41:48+00:00",
+ "started_at": "2026-10-04T13:05:10+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "added",
+   "natural_key": "aa6cf6eed7c6fdab80687c56de67c4adb2950b12eb0897bc1c11dcc0b9e2f12f",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.4L/3.3L"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 479 severe table row 'ENGINE OIL AND FILTER' / '2.4L/3.3L': operation R",
+    "quote": "EVERY 3,750 MILES (6,000 KM) OR 6 MONTHS"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "1cdc8c5af62072759bf763a32546c7d569b2760b5edcf3856bf46a06149330e1",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.4L/3.3L"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 508 severe table row 'ENGINE OIL AND FILTER' / '2.4L/3.3L': operation R",
+    "quote": "EVERY 3,750 MILES (6,000 KM) OR 6 MONTHS"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "9e5590fd1e12f08fd78f48f101c98a59269f6d40dccc7a2838e91ce04abd2b40",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.0L"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 3,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 479 severe table row 'ENGINE OIL AND FILTER' / '2.0L': operation R",
+    "quote": "EVERY 3,000 MILES (5,000 KM) OR 3 MONTHS"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "54d4caec03418884e9c5793a34a0d6813cc7d3140fb7c246ff15a034b2194e3d",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.0L"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 508 severe table row 'ENGINE OIL AND FILTER' / '2.0L': operation R",
+    "quote": "EVERY 3,000 MILES (5,000 KM) OR 6 MONTHS"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1015c60aef9d9b7becca6729dd8ec9104c3a64c78074ed79422e3123e9a386c7",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 479: AUTOMATIC TRANSAXLE FLUID",
+    "quote": "EVERY 60,000 MILES (96,000 KM)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 479 severe table row 'AUTOMATIC TRANSAXLE FLUID': operation R",
+    "quote": "EVERY 60,000 MILES (96,000 KM)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7fcd5bd33cc88b7512ded9bac252725dafa5da8dd03ed25e9eddee55bab77850",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 508: AUTOMATIC TRANSAXLE FLUID",
+    "quote": "EVERY 60,000 MILES (96,000 KM)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 508 severe table row 'AUTOMATIC TRANSAXLE FLUID': operation R",
+    "quote": "EVERY 60,000 MILES (96,000 KM)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "759d76321b73b408c5db065c5ade77d9a70720a351e24bf608dfcc6faf9707e2",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 480 severe table row 'TRANSFER CASE OIL (AWD)': operation R",
+    "quote": "EVERY 75,000 MILES (120,000 KM)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "d9e2fdc0a02bfd0265e845bf7c31c2b2dbe96d412d14200fbb55966dffb6d006",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 509 severe table row 'TRANSFER CASE OIL (AWD)': operation R",
+    "quote": "EVERY 75,000 MILES (120,000 KM)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "418308f3a7a5d0ab5b110d60aed19f40c2e7309622c2a7f5383a41bef02986ef",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464: Replace engine oil and filter (2.0 T-GDI) (At first, replace at",
+    "quote": "Replace engine oil and filter (2.0 T-GDI) (At first, replace at"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464 list bullet 'Replace engine oil and filter (2.0 T-GDI)': own interval text",
+    "quote": "At first, replace at 3,000 miles (5,000 km) or 6 months, after that, every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "5e1dbbad464c8edd5d063ee86c3d0321966bd5bf98525a9804345cd111c1c3d8",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464 list bullet 'Replace engine oil and filter (2.0 T-GDI)': own interval text",
+    "quote": "At first, replace at 3,000 miles (5,000 km) or 6 months, after that, every 5,000 miles (8,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "22c919e309cca7fc3b85f392e23cba93cc282b534a7b44396aead20771c96c50",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 478: Replace engine oil and filter (Every 7,500 miles (12,000 km) or 12 months)",
+    "quote": "Replace engine oil and filter (Every 7,500 miles (12,000 km) or 12 months)"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464 list bullet 'Replace engine oil and filter': own interval text",
+    "quote": "Every 7,500 miles (12,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "affbbde6c01a7dcb929a722fed622de869b06d6e7ff1496134c263926fd588b1",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": 60,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 470: Inspect drive belts (First,",
+    "quote": "Inspect drive belts (First,"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 469 list bullet 'Inspect drive belts *5': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_miles_original",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "4908cbe932917e87aa16767a4a418cb7adcfe095175a2984fa529af9816f92f7",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 498 list bullet 'Inspect drive belts *5': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3a771407fb0a3710b17c8d5212677dee4501795eec0d67b99ca9dae97766f24d",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 470: Inspect drive belts (First,",
+    "quote": "Inspect drive belts (First,"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 469 list bullet 'Inspect drive belts *5': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "d04bb50368799c740e0041be8051d5fe083191d523e3156acbd6103c26989f16",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 498 list bullet 'Inspect drive belts *5': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6da4de227d74169f4278fc6b29ca97decf91cf0f491a924dbb76755788621ac9",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 478: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 100000,
+    "interval_miles_original": 60000,
+    "interval_months": 60,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 469 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 60,000 miles (100,000 km) or 60 months after every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "de3469e6a9f6d55b42d19f3dc5192d52b356737463ff7394be9636173bd9aa1e",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 507: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 100000,
+    "interval_miles_original": 60000,
+    "interval_months": 60,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 498 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 60,000 miles (100,000 km) or 60 months after every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d459f73d4b34d74c496cd61134ffe8bd9256bdfb9c05bafc07b2a0654c70a780",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 478: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 469 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 60,000 miles (100,000 km) or 60 months after every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_miles_original",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ef50e97159bdc6fb25c895748d0fdd9871803142e6b0c1f0fecc9e853834a06d",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 507: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 498 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 60,000 miles (100,000 km) or 60 months after every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_miles_original",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4ec874f9819cfcd81649d8ffdc8bc486e0b845433f8eb4303973dd51276aa17e",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464: Rotate tire",
+    "quote": "Rotate tire"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464 list schedule: 'Rotate tire' listed under 7,500 miles (12,000 km) or 6 months (p.464); 15,000 miles (24,000 km) or 12 months (p.465); 22,500 miles (36,000 km) or 18 months (p.465); 30,000 miles (48,000 km) or 24 months (p.466); 37,500 miles (60,000 km) or 30 months (p.467); 45,000 miles (72,000 km) or 36 months (p.467); 52,500 miles (84,000 km) or 42 months (p.468); 60,000 miles (96,000 km) or 48 months (p.468); 67,500 miles (108,000 km) or 54 months (p.469); 75,000 miles (120,000 km) o",
+    "quote": "Rotate tire"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "cbb337d90305088df6a1f9faaf891211d25a7053025a1c631f8ec8966f95168e",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493: Rotate tire",
+    "quote": "Rotate tire"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list schedule: 'Rotate tire' listed under 7,500 miles (12,000 km) or 6 months (p.493); 15,000 miles (24,000 km) or 12 months (p.493); 22,500 miles (36,000 km) or 18 months (p.494); 30,000 miles (48,000 km) or 24 months (p.495); 37,500 miles (60,000 km) or 30 months (p.496); 45,000 miles (72,000 km) or 36 months (p.496); 52,500 miles (84,000 km) or 42 months (p.497); 60,000 miles (96,000 km) or 48 months (p.498); 67,500 miles (108,000 km) or 54 months (p.499); 75,000 miles (120,000 km) o",
+    "quote": "Rotate tire"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "42ef2a9980ff2814c09b6101113dc28893cc36c01cba9968035c840a265c2b5a",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464: Inspect battery condition",
+    "quote": "Inspect battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 464 list schedule: 'Inspect battery condition' listed under 7,500 miles (12,000 km) or 6 months (p.464); 15,000 miles (24,000 km) or 12 months (p.465); 22,500 miles (36,000 km) or 18 months (p.465); 30,000 miles (48,000 km) or 24 months (p.466); 37,500 miles (60,000 km) or 30 months (p.467); 45,000 miles (72,000 km) or 36 months (p.467); 52,500 miles (84,000 km) or 42 months (p.468); 60,000 miles (96,000 km) or 48 months (p.468); 67,500 miles (108,000 km) or 54 months (p.469); 75,000 miles ",
+    "quote": "Inspect battery condition"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a4232ce8b4eda2e940a8585b1cbfdc00393be3a7458cc325e9f5b4cb8603fd31",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493: Inspect battery condition",
+    "quote": "Inspect battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list schedule: 'Inspect battery condition' listed under 7,500 miles (12,000 km) or 6 months (p.493); 15,000 miles (24,000 km) or 12 months (p.493); 22,500 miles (36,000 km) or 18 months (p.494); 30,000 miles (48,000 km) or 24 months (p.495); 37,500 miles (60,000 km) or 30 months (p.496); 45,000 miles (72,000 km) or 36 months (p.496); 52,500 miles (84,000 km) or 42 months (p.497); 60,000 miles (96,000 km) or 48 months (p.498); 67,500 miles (108,000 km) or 54 months (p.499); 75,000 miles ",
+    "quote": "Inspect battery condition"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ec82e7c398777e3fc9580b9c84ae0c2da4896cc67c3abfe4c29e6519d3182124",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 465: Inspect exhaust pipe and muffler",
+    "quote": "Inspect exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 465 list schedule: 'Inspect exhaust pipe and muffler' listed under 15,000 miles (24,000 km) or 12 months (p.465); 30,000 miles (48,000 km) or 24 months (p.466); 45,000 miles (72,000 km) or 36 months (p.467); 60,000 miles (96,000 km) or 48 months (p.468); 75,000 miles (120,000 km) or 60 months (p.470); 90,000 miles (144,000 km) or 72 months (p.471); 105,000 miles (168,000 km) or 84 months (p.473); 120,000 miles (192,000 km) or 96 months (p.474); 135,000 miles (216,000 km) or 108 months (p.47",
+    "quote": "Inspect exhaust pipe and muffler"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "c5a56f961cd91e509ed6c951b9a0a3a54749758d2113ce6a75e6691bf4199525",
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list schedule: 'Inspect exhaust pipe and muffler' listed under 15,000 miles (24,000 km) or 12 months (p.493); 30,000 miles (48,000 km) or 24 months (p.495); 45,000 miles (72,000 km) or 36 months (p.496); 60,000 miles (96,000 km) or 48 months (p.498); 75,000 miles (120,000 km) or 60 months (p.499); 90,000 miles (144,000 km) or 72 months (p.500); 105,000 miles (168,000 km) or 84 months (p.502); 120,000 miles (192,000 km) or 96 months (p.503); 135,000 miles (216,000 km) or 108 months (p.50",
+    "quote": "Inspect exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "32833b639c39de127cec720073931d49bbf31b913feba26cae3a632c23e3fc32",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 465: Inspect suspension mounting bolts",
+    "quote": "Inspect suspension mounting bolts"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 465 list schedule: 'Inspect suspension mounting bolts' listed under 15,000 miles (24,000 km) or 12 months (p.465); 30,000 miles (48,000 km) or 24 months (p.466); 45,000 miles (72,000 km) or 36 months (p.467); 60,000 miles (96,000 km) or 48 months (p.468); 75,000 miles (120,000 km) or 60 months (p.470); 90,000 miles (144,000 km) or 72 months (p.471); 105,000 miles (168,000 km) or 84 months (p.473); 120,000 miles (192,000 km) or 96 months (p.474); 135,000 miles (216,000 km) or 108 months (p.4",
+    "quote": "Inspect suspension mounting bolts"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a50ef10af705c765b7a736fa392ad07933fb8e97fca6524cf49ddc168fc1f101",
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list schedule: 'Inspect suspension mounting bolts' listed under 15,000 miles (24,000 km) or 12 months (p.493); 30,000 miles (48,000 km) or 24 months (p.495); 45,000 miles (72,000 km) or 36 months (p.496); 60,000 miles (96,000 km) or 48 months (p.498); 75,000 miles (120,000 km) or 60 months (p.499); 90,000 miles (144,000 km) or 72 months (p.500); 105,000 miles (168,000 km) or 84 months (p.502); 120,000 miles (192,000 km) or 96 months (p.503); 135,000 miles (216,000 km) or 108 months (p.5",
+    "quote": "Inspect suspension mounting bolts"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "8370afc9a89e47300de2dae1c82d5f80f1ad4d2d61a5f15e56af9a6db8cf9736",
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 465 list schedule: 'Replace climate control air filter (for evaporator and blower unit)' listed under 15,000 miles (24,000 km) or 12 months (p.465); 30,000 miles (48,000 km) or 24 months (p.466); 45,000 miles (72,000 km) or 36 months (p.467); 60,000 miles (96,000 km) or 48 months (p.468); 75,000 miles (120,000 km) or 60 months (p.470); 90,000 miles (144,000 km) or 72 months (p.471); 105,000 miles (168,000 km) or 84 months (p.473); 120,000 miles (192,000 km) or 96 months (p.474); 135,000 mil",
+    "quote": "Replace climate control air filter (for evaporator and blower unit)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "5f06982780637f505abca2af871b0acc23c204378bb44bc252a6af28d7f61646",
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list schedule: 'Replace climate control air filter (for evaporator and blower unit)' listed under 15,000 miles (24,000 km) or 12 months (p.493); 30,000 miles (48,000 km) or 24 months (p.495); 45,000 miles (72,000 km) or 36 months (p.496); 60,000 miles (96,000 km) or 48 months (p.498); 75,000 miles (120,000 km) or 60 months (p.499); 90,000 miles (144,000 km) or 72 months (p.500); 105,000 miles (168,000 km) or 84 months (p.502); 120,000 miles (192,000 km) or 96 months (p.503); 135,000 mil",
+    "quote": "Replace climate control air filter (for evaporator and blower unit)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f8e7036383f76544776234584440441de61824c3d91c8babe95c6f52a77136e1",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 466: Inspect brake fluid",
+    "quote": "Inspect brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 466 list schedule: 'Inspect brake fluid' listed under 30,000 miles (48,000 km) or 24 months (p.466); 60,000 miles (96,000 km) or 48 months (p.468); 90,000 miles (144,000 km) or 72 months (p.471); 120,000 miles (192,000 km) or 96 months (p.474); 150,000 miles (240,000 km) or 120 months (p.477)",
+    "quote": "Inspect brake fluid"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f01d8993d42570b47b35b9ddf65a3f33dfeb20870c41adf2747a9b03418cf165",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 495: Inspect brake fluid",
+    "quote": "Inspect brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 495 list schedule: 'Inspect brake fluid' listed under 30,000 miles (48,000 km) or 24 months (p.495); 60,000 miles (96,000 km) or 48 months (p.498); 90,000 miles (144,000 km) or 72 months (p.500); 120,000 miles (192,000 km) or 96 months (p.503); 150,000 miles (240,000 km) or 120 months (p.506)",
+    "quote": "Inspect brake fluid"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0e68d08ce7d32119db3be6e8da7b9c888f36cb518df816f4b7ef1d6c57d9e8cb",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 466: Inspect fuel filter *2",
+    "quote": "Inspect fuel filter *2"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 466 list schedule: 'Inspect fuel filter *2' listed under 30,000 miles (48,000 km) or 24 months (p.466); 60,000 miles (96,000 km) or 48 months (p.468); 90,000 miles (144,000 km) or 72 months (p.471); 120,000 miles (192,000 km) or 96 months (p.474); 150,000 miles (240,000 km) or 120 months (p.477)",
+    "quote": "Inspect fuel filter *2"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "6adffa227f605dab60702939cea37842493a1f92f274dfff049b4a31b4a6d9fb",
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 466 list schedule: 'Replace air cleaner filter' listed under 30,000 miles (48,000 km) or 24 months (p.466); 60,000 miles (96,000 km) or 48 months (p.468); 90,000 miles (144,000 km) or 72 months (p.471); 120,000 miles (192,000 km) or 96 months (p.474); 150,000 miles (240,000 km) or 120 months (p.477)",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a44ba3aea11a3f3c102387789594b29b9c9c58b43dbd42fdbd7de12991362376",
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 495 list schedule: 'Replace air cleaner filter' listed under 30,000 miles (48,000 km) or 24 months (p.495); 60,000 miles (96,000 km) or 48 months (p.498); 90,000 miles (144,000 km) or 72 months (p.500); 120,000 miles (192,000 km) or 96 months (p.503); 150,000 miles (240,000 km) or 120 months (p.506)",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "49d28783b93643f210dc1ebd090bdc80750605706cee40a2058e656abfd049db",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 467 list schedule: 'Inspect transfer case oil (AWD) *3' listed under 37,500 miles (60,000 km) or 30 months (p.467); 75,000 miles (120,000 km) or 60 months (p.470); 112,500 miles (180,000 km) or 90 months (p.474); 150,000 miles (240,000 km) or 120 months (p.477)",
+    "quote": "Inspect transfer case oil (AWD) *3"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "acd25a6bd777166afa9cddd44796c1f32e706d26e80c407c187abf64e01f9bb7",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 496 list schedule: 'Inspect transfer case oil (AWD) *3' listed under 37,500 miles (60,000 km) or 30 months (p.496); 75,000 miles (120,000 km) or 60 months (p.499); 112,500 miles (180,000 km) or 90 months (p.502); 150,000 miles (240,000 km) or 120 months (p.506)",
+    "quote": "Inspect transfer case oil (AWD) *3"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "0fed3508359c3b25f30c5749073b63d63d62a0c31456bed64821050a1a5fe1c6",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine_except": "2.0 TGDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 493 list bullet 'Replace engine oil and filter *6': own interval text",
+    "quote": "Every 7,500 miles (12,000 km) or 12 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1aab57811d7aab9950b5e76b67541fcf9b04f16f8ac14f9769137cdd395016e3",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459: Drive belts *1",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months, after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8688c6ad670d2ddf22d5db409eef698b9bc548b5c0e0b369ae235c556f3908a4",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459: Drive belts *1",
+    "quote": "after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months, after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0181052c4b80c7088c153f5dbe8e8724216e06af40e8cec9feebeeebd9490552",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Theta II 2.4L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Theta II 2.4L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Engine oil and engine oil filter' / 'Theta II 2.4L GDI': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter Theta II 2.4L GDI R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "0ae12ae8fd77098766202d8f0e2627ceeeb5f6415db4b6faed63c206f4976dc7",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Lambda II 3.3L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Engine oil and engine oil filter' / 'Lambda II 3.3L GDI': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter Theta II 2.4L GDI R R R R R R R R R R R R R R R Lambda II 3.3L GDI R R R R R R R R R R R R R R R"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "23fab715f1cc4948dcd2e1dad2d546cfbc6bfbad5d9efd5bbf6151ce428bd5a3",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "51b669ed72fd89263cfba1e282cd0007846c1c96d7edf386e1ec0e0c8d4c0a29",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Theta II 2.4L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459: Spark plugs",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Theta II 2.4L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Spark plugs' / 'Theta II 2.4L GDI': text cell",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "479b177dcefe95d0cb889dfb640da971717467854b11297d7e64773d8b9246c4",
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Lambda II 3.3L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 459 grid row 'Spark plugs' / 'Lambda II 3.3L GDI': text cell",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "124319ee6f38cc8b5e7049c42d35a0dab6e024c03722de3082a176ee2f67a6cc",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Rotate tires",
+    "quote": "Rotate every 7,500 miles (12,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Rotate tires': text cell",
+    "quote": "Rotate every 7,500 miles (12,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "00de6d082cfe4605a0594a1f0551e47af3c1f01eb3c367a69d39a8cb0ca17ab7",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Climate control air filter': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Climate control air filter R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ca001b4dadd52fdb518c0d8f4827963c03460be49459c6623e400953daa0c307",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 192000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Coolant (Engine)",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 192000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Coolant (Engine)': text cell",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years, after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a1b828750d237123a5d78872a2339c3a6956aca862604857c8819b555a94978e",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Coolant (Engine)",
+    "quote": "after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Coolant (Engine)': text cell",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years, after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "da04d7c52d5dbe5461028e6b4fd2e27d7d0cd4c418ed849ba19ed079693b005e",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Battery condition': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b85247f2e03e265effb9dabd3934de3beede1e12445bc3aa98ac648c8513c924",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Suspension ball joints",
+    "quote": "Suspension ball joints"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Suspension ball joints': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Suspension ball joints I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9aa539bdefbe7f6679ccb942bb5eb119c1d8d5b4cd1fed2d31f4c12244607cb6",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460: Exhaust system",
+    "quote": "Exhaust system"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 460 grid row 'Exhaust system': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Exhaust system I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "32e647859d9e5533d8f0071a5df38814aca4ee18ba99bf0aef6637a4f9524682",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461 grid row 'Cooling system': I at 30,000/45,000/60,000/75,000/90,000/105,000 miles; months 48/72/96/120/144/168; km 48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Cooling system - - - I - I - I - I - I - I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a2640bc7bf19f793869b8e68ecd7e9967f3991afbab3a83a127d6890c1ed9a8b",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461 grid row 'Cooling system': I at 30,000/45,000/60,000/75,000/90,000/105,000 miles; months 48/72/96/120/144/168; km 48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Cooling system - - - I - I - I - I - I - I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "732724a65c6cbeb3a2f4c98c61a23e89a338c409dcdd11387187b13156559ca6",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461 grid row 'Transfer case oil (AWD) *5': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Transfer case oil (AWD) *5 - - - I - - - I - - - I"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "19e461594903e8425c04430edc52fdf384bf8975c79e1c1452b8a5003b8bcb3a",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461 grid row 'Brake fluid': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Brake fluid - I - I - I - I - I - I - I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "89a89e84dae5d43f1fe6f95e883a9f1f9efcd0b6810c1f3efd7ac26bc9e1b799",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Theta II 2.4L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 462 severe table row 'Engine oil and engine oil filter' / 'Theta II 2.4L GDI': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "59341e2c2b3ff70aca29b4ca54c51198b804e5709db2114f4325d3dda1411a7a",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Lambda II 3.3L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 462 severe table row 'Engine oil and engine oil filter' / 'Lambda II 3.3L GDI': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0531eff7813d1a3f1eb672097e6d9a341496d61fe0b7215fb5e6d728e2117c08",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 462: Automatic transmission fluid",
+    "quote": "Every 60,000 miles (96,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 462 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles (96,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "4d7abc2b4c8a539dad55ed47152d3b38ea08b1f17cda6d0dc89d8077011e72c5",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 463 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "102239d1deb40fd46f473b246430d5fb71a3449636cf3471ecc2c37a22a71b1f",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601: Engine oil and engine oil filter",
+    "quote": "Every 3,750 miles (6,000km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601 severe table row 'Engine oil and engine oil filter': operation R",
+    "quote": "Every 3,750 miles (6,000km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6117ac4f052b44b565ab9123d2e8bfb40bcc130b2f78b238a88499bae5d90e82",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601: Automatic transmission fluid",
+    "quote": "Every 60,000 miles (96,000km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles (96,000km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "d7a834440aeefabc9f345e0101479bca065de158780ca7b04850dcc41e0c6a93",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601 severe table row 'Differential oil (rear) (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "bc3d202556a1212806fd614b87394619a9f186a00951a6ce88dd71b7fcdcd7e2",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8f871a56c6db131386172a0026bc0fcb43b1134a24d7c0e1df1b50d0f4f27330",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606: Engine oil and engine oil filter",
+    "quote": "Every 3,000 miles (5,000km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606 severe table row 'Engine oil and engine oil filter': operation R",
+    "quote": "Every 3,000 miles (5,000km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6df890777c9de2b3301b3e16b316bde1fad8c95badd4ca2115323a12e8605c40",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 100000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606: Dual clutch transmission (DCT) fluid",
+    "quote": "Every 60,000 miles (100,000km)"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 100000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606 severe table row 'Dual clutch transmission (DCT) fluid': operation R",
+    "quote": "Every 60,000 miles (100,000km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "08975db6ae096dd053bfd77ebfc5da6247854e7a53298e11c84b70f6c24b5cd8",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606 severe table row 'Differential oil (rear) (AWD)': operation R",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "5f08ed93e77ebb829f6ddfa9e574f070160300b047425f406f667ca591df970a",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fea0bbf6744c0450b6366f48e83b2fcf8f5eea02496e17e899b827d6b596638c",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Tire rotation",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Tire rotation': text cell",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f623a98d12423b3b02afeeb401b713864bedb5bd921594aecdb5f4e735019444",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Engine oil and engine oil filter *2",
+    "quote": "Engine oil and engine oil filter *2"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Engine oil and engine oil filter *2': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000",
+    "quote": "Engine oil and engine oil filter *2 R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "151829b13224d7151e5352d0b3801dd82d923094c3fbc3382f8421dcb9bf0348",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Climate control air filter I R I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "aadb5f7b040b7697c9b8cbf460bd7b79562989ac7736316468a4e49a40490593",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Climate control air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000 miles; months 12/36/60/84/108/132; km 13,000/39,000/65,000/91,000/117,000/143,000",
+    "quote": "Climate control air filter I R I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a8328f5f1014dc1d48c1ca55a166ec98a53201225d0a38c6638281034d7f25bb",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Climate control air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000 miles; months 12/36/60/84/108/132; km 13,000/39,000/65,000/91,000/117,000/143,000",
+    "quote": "Climate control air filter I R I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "41bf48de360ca3a038db5b4851e49ec63911e364d706ea95aa1be9663099aa31",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Air cleaner filter (Engine)",
+    "quote": "Air cleaner filter (Engine)"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Air cleaner filter (Engine)': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter (Engine) I I R I I R I I R I I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d95e2b29c299a6523bb68d32f4bb49ac1284fae338dc47d9876ea942ece2e5db",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e215d1aa442b6f9cae41a5d9a4b39dad885819047e8d51b783bf7021ad6966cb",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "821b3e1dea94943a2442c84b63cbc270afcb00920a65de7fc787dc969ac329ff",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Spark plugs",
+    "quote": "Replace every 48,000 miles (78,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c812062da72778dc3fb27ed59f8e4bda97030518b2071b633634a4788c15abd0",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 195000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Coolant (Engine) *3",
+    "quote": "At first, replace at 120,000 miles (195,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 195000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Coolant (Engine) *3': text cell",
+    "quote": "At first, replace at 120,000 miles (195,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "db4e9ac7e870a6d73ecc0f663001fdecfeaa09f29c6c5b8738bb9780221cc01b",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Coolant (Engine) *3",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Coolant (Engine) *3': text cell",
+    "quote": "At first, replace at 120,000 miles (195,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "657d3f15ceaf7740622444b4159ab3301246998b07232d81dead7f1909b4ae5e",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a",
+     "engine": "HEV"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 195000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Coolant (Inverter)' / 'HEV*4': text cell",
+    "quote": "At first, replace 120,000 miles (195,000 km) or 120 months After that, Replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "62a46d567ab8368b4aef4810cbe61c167c1ef83836affcee5f27b178d6eef2fd",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a",
+     "engine": "HEV"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Coolant (Inverter)' / 'HEV*4': text cell",
+    "quote": "At first, replace 120,000 miles (195,000 km) or 120 months After that, Replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a9e4541a109c01af526dc2ddc3bafd2d857d7ccd8f54e1835fbbb8526df67a98",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a",
+     "engine": "PHEV"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Coolant (Inverter)' / 'PHEV*5': text cell",
+    "quote": "Replace every 32,000 miles (52,000 km) or 36 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "3cf09cf818477757a963909bd012b9749502bb619d8fb077eea62ae2b02509de",
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 65000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Differential oil (rear) (AWD) *7': text cell",
+    "quote": "Inspect every 40,000 miles (65,000 km) or 48 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "970f9bb80775e82b500f77b37fb2ead8e5de7b2d5b6d56916d1d7d2852a733e9",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 65000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541 grid row 'Transfer case oil (AWD)*8': text cell",
+    "quote": "Inspect every 40,000 miles (65,000 km) or 48 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "76198ade57d4cae416170cfbb31e4487fe5682f8ec0c45e6ecc01a3e100d69ab",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543: Engine oil and engine oil filter",
+    "quote": "Every 5,000 miles(8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543 severe table row 'Engine oil and engine oil filter': operation R",
+    "quote": "Every 5,000 miles(8,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "e3778fbcaec551eca095607cc8ffd1ffee002b9a17ae86f66c72b477969dfc45",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 117000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543 severe table row 'Differential oil (rear) (AWD)': operation R",
+    "quote": "Every 72,000 miles (117,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "8f968ed6922d4f1658d85b3f1556aebb78f3875f679dcdf6efe6cb996651a56c",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 117000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 72,000 miles (117,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "77c8d2683fd48f612c0c512d71338a3de298055c101541a2e6a722c03b8b14e6",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 480: TRANSFER CASE OIL (AWD)",
+    "quote": "EVERY 75,000 MILES (120,000 KM)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "ccd6b7f5b3e6e494f95d9d0deadab49230668ce1f0e3865c51a5c973149941ad",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 509: TRANSFER CASE OIL (AWD)",
+    "quote": "EVERY 75,000 MILES (120,000 KM)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "6e519b68d6d62433410f6cb7b4d0183498c2492f6f5a05988edfe2bdbc14b392",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 507: Replace engine oil and filter *6 (Every 7,500 miles (12,000 km) or 12 months)",
+    "quote": "Replace engine oil and filter *6 (Every 7,500 miles (12,000 km) or 12 months)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "9b80ea00f0afc479496939bded39c3063f0cf9ccced93f25e639088958802735",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 467: Inspect transfer case oil (AWD) *3",
+    "quote": "Inspect transfer case oil (AWD) *3"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "f09d66d116528bc19fd74cd9365b46dd334b3bf4e0485e141f7b44202b33ffc5",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 478: Replace air cleaner filter",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "b1fe5d90bcc163f5e388a6feefe93f299a869748630b7b3ba870469cc56410a6",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 507: Replace air cleaner filter",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "efe79a78ea11619b1a3236bc88e43efa86429d5bc2847bbe18ff6fde9dac2422",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 478: Replace air cleaner filter",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "86d08031349c8633a4c6df44324cea84ea6373c0834a4dfdcfbf581408cc30be",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "sorento"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 507: Replace air cleaner filter",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "8f0cb19d99cebf50ab51231a7ae0016814611ae814983ab51a3af4805ea13a14",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 461: Transfer case oil (AWD) *5",
+    "quote": "Transfer case oil (AWD) *5"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "d733e9394b06c9253478ab9cdbfe201775f16b525f542c4bde95fe6412157b19",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 462: Engine oil and engine oil filter",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "c1316ef07a1806f985b0b9cf69d7775dc82e02d7c4de39abffad595a0886c2cf",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 463: Transfer case oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "5fdb5b2a4c4fb0ab23957a8743caf9025fb00575ce8917a6f78fe0a830854c43",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601: Differential oil (rear) (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "3dd281bd085ba0978744211e2152095c206c10beb9ac702ecd0935c30163c127",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 601: Transfer case oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "f2ea864a051d88d70ce11ab46861fd68c0d34def6d36f12038af4e5ab7a8b053",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606: Differential oil (rear) (AWD)",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "490fe019420ab51443cd1a738202eb70cd036695c330740738baed6256dbbd88",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sorento",
+     "engine": "Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 606: Transfer case oil (AWD)",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "86c36f29afcd1a47b2ebfddd6e3291cd9c22e8750b42a53868c1de600fa51279",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 65000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 541: Differential oil (rear) (AWD) *7",
+    "quote": "Inspect every 40,000 miles (65,000 km) or 48 months"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "750e1de4501b2873786565962bc2df68033fe42c8533db119aebf3389598fefe",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 117000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543: Differential oil (rear) (AWD)",
+    "quote": "Every 72,000 miles (117,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "fed787993bba620a09af7615518f2dc06ab377a5b4ec8ec00a886a0dec8e1bec",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "edition": "official c560f37de89a"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 117000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 543: Transfer case oil (AWD)",
+    "quote": "Every 72,000 miles (117,000 km)"
+   }
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 84,
-  "source_records_new": 3,
-  "te_existing": 1259,
-  "te_new_GENERATION": 3,
+  "raw_documents_seen": 82,
+  "te_existing": 1255,
+  "te_new_GENERATION": 2,
   "configurations": 75,
   "configurations_research_only": 75,
   "issues_existing": 85,
-  "maintenance_existing": 69
+  "maintenance_new": 35,
+  "maintenance_corrected": 51,
+  "maintenance_existing": 51,
+  "maintenance_stale_deleted": 18,
+  "te_stale_deleted": 7
  },
- "finished_at": "2026-10-03T14:42:03+00:00"
+ "finished_at": "2026-10-04T13:05:17+00:00"
 }

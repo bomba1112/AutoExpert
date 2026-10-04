@@ -13,18 +13,2747 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-03T14:41:45+00:00",
+ "started_at": "2026-10-04T13:05:07+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "7c0687f6342d23c25ef5f8348db134a725627a3449d96139272670f5a7e39da6",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370: Engine oil and filter",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "0ce1adfff100492b8b468cd613aa08856a188035b12114b62897c1312f483b7d",
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles (96,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "ad7687794121d23346bda9220fdd40af9bd3b7dd2c9083afadeb7906fe0f6dee",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370 severe table row 'Manual transaxle fluid': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f073d15a67c496508cf204a2dcaff638e27ccb728b2d8ed4e971fab8e8547042",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 369: Rotate tire position (Every 7,500 miles (12,000 km)) No check, No service requir",
+    "quote": "Rotate tire position (Every 7,500 miles (12,000 km)) No check, No service required"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360 list bullet 'Rotate tire position': own interval text",
+    "quote": "Every 7,500 miles (12,000 km)"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "600ab3cd97da20c0d5479fa06601343aba77c1206feed58a59bc1f9986ed4e66",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 363: Inspect drive belts (First,",
+    "quote": "Inspect drive belts (First,"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 363 list bullet 'Inspect drive belts': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dd4cd53a1bf80c176a2ac83759f95c45d1360f8489195a9ff24c5b5c7c0e4977",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 363: Inspect drive belts (First,",
+    "quote": "Inspect drive belts (First,"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 363 list bullet 'Inspect drive belts': own interval text",
+    "quote": "First, 60,000 miles (96,000 km) or 72 months after every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6ed872c46eec1b06206d4745145346146a115c452b208fe32bc478dfba76b08b",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 369: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 192000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 120,000 miles (192,000 km) or 120 months after that, every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_miles_original",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e85e04af624b89d34ba795a2d1a334d6e842151f3af734e538bf7abfa34aff3c",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 108000,
+    "interval_miles_original": 67500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 369: Replace coolant (First,",
+    "quote": "Replace coolant (First,"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367 list bullet 'Replace coolant': own interval text",
+    "quote": "First, 120,000 miles (192,000 km) or 120 months after that, every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "interval_km",
+    "interval_miles_original",
+    "interval_months",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "efd0c37c4f440c4cde444e3b15fb2b818fb63238e91ab68b10b04aaf6e31c2cc",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360: Replace engine oil and filter (7,500 miles (12,000 km) or 12 months)",
+    "quote": "Replace engine oil and filter (7,500 miles (12,000 km) or 12 months)"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360 list schedule: 'Replace engine oil and filter' listed under 7,500 miles (12,000 km) or 12 months (p.360); 15,000 miles (24,000 km) or 24 months (p.360); 22,500 miles (36,000 km) or 36 months (p.360); 30,000 miles (48,000 km) or 48 months (p.361); 37,500 miles (60,000 km) or 60 months (p.361); 45,000 miles (72,000 km) or 72 months (p.362); 52,500 miles (84,000 km) or 84 months (p.362); 60,000 miles (96,000 km) or 96 months (p.363); 67,500 miles (108,000 km) or 108 months (p.363); 75,000 ",
+    "quote": "Replace engine oil and filter (7,500 miles (12,000 km) or 12 months)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "61a2f09e7f540ec3f291f82d321873d3370abbaba0c3f7bef26434657c7e480e",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360: Inspect exhaust pipe and muffler",
+    "quote": "Inspect exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360 list schedule: 'Inspect exhaust pipe and muffler' listed under 15,000 miles (24,000 km) or 12 months (p.360); 30,000 miles (48,000 km) or 24 months (p.361); 45,000 miles (72,000 km) or 36 months (p.362); 60,000 miles (96,000 km) or 48 months (p.363); 75,000 miles (120,000 km) or 60 months (p.364); 90,000 miles (144,000 km) or 72 months (p.365); 105,000 miles (168,000 km) or 84 months (p.366); 120,000 miles (192,000 km) or 96 months (p.367); 135,000 miles (216,000 km) or 108 months (p.36",
+    "quote": "Inspect exhaust pipe and muffler"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "756dd497c1c94fe1c49f9a6be93bdf17e4cb84eafcb49401e246cf2adf50620c",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360: Inspect suspension mounting bolts (Continued)",
+    "quote": "Inspect suspension mounting bolts (Continued)"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360 list schedule: 'Inspect suspension mounting bolts' listed under 15,000 miles (24,000 km) or 12 months (p.360); 30,000 miles (48,000 km) or 24 months (p.361); 45,000 miles (72,000 km) or 36 months (p.362); 60,000 miles (96,000 km) or 48 months (p.363); 75,000 miles (120,000 km) or 60 months (p.364); 90,000 miles (144,000 km) or 72 months (p.365); 105,000 miles (168,000 km) or 84 months (p.366); 120,000 miles (192,000 km) or 96 months (p.367); 135,000 miles (216,000 km) or 108 months (p.3",
+    "quote": "Inspect suspension mounting bolts"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "7dd9754c59db957e2c6f76bfc4fcd2a65b58a19ca9a97fa68cf3d6e3acea015d",
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 360 list schedule: 'Replace climate control air filter (for evaporator and blower unit)' listed under 15,000 miles (24,000 km) or 12 months (p.360); 30,000 miles (48,000 km) or 24 months (p.361); 45,000 miles (72,000 km) or 36 months (p.362); 60,000 miles (96,000 km) or 48 months (p.363); 75,000 miles (120,000 km) or 60 months (p.364); 90,000 miles (144,000 km) or 72 months (p.365); 105,000 miles (168,000 km) or 84 months (p.366); 120,000 miles (192,000 km) or 96 months (p.367); 135,000 mil",
+    "quote": "Replace climate control air filter (for evaporator and blower unit)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a690906fc913339ab9e2538f0cfee4990ac7d768281f58e6454f6cbd20a5d58c",
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 361 list schedule: 'Replace air cleaner filter' listed under 30,000 miles (48,000 km) or 24 months (p.361); 60,000 miles (96,000 km) or 48 months (p.363); 90,000 miles (144,000 km) or 72 months (p.365); 120,000 miles (192,000 km) or 96 months (p.367); 150,000 miles (240,000 km) or 120 months (p.369)",
+    "quote": "Replace air cleaner filter"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "13c14635c138e6e9a876b8d7a744206a473b5fcb695896478d7834ba2d5acd48",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 361 list schedule: 'Inspect manual transaxle fluid (if equipped)' listed under 37,500 miles (60,000 km) or 30 months (p.361); 75,000 miles (120,000 km) or 60 months (p.364); 112,500 miles (180,000 km) or 90 months (p.366); 150,000 miles (240,000 km) or 120 months (p.369)",
+    "quote": "Inspect manual transaxle fluid (if equipped)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "cff267ff203d908fe0481ef82991d29afc38cd0f48fedc316976ab9f7bf4faf7",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": 78,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 365: Replace spark plugs (iridium coated)",
+    "quote": "Replace spark plugs (iridium coated)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": 78,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 365 list schedule: 'Replace spark plugs (iridium coated)' listed under 97,500 miles (156,000 km) or 78 months (p.365)",
+    "quote": "Replace spark plugs (iridium coated)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "704b0c7cb78f724db420533085c3d1f15bfc22b19e6fa0c2cd14b6bfdae6d21c",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351: Drive belts *1",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months, after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7ccad765fb4468c8e2ba704cd95db757b7859c6a19891e53e015055592939544",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351: Drive belts *1",
+    "quote": "after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles (96,000 km) or 72 months, after that, inspect every 15,000 miles (24,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "db86032d42f0d7d8938fb603db7f2a4d43fbfb930a9b04215c279649668dc636",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma 1.6L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma 1.6L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351 grid row 'Engine oil and engine oil filter' / 'Gamma 1.6L GDI': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter Gamma 1.6L GDI R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3b84a4c6d45edfc0dfaffeb47a3ba46b686baf7fef4c2cd27226bc07e09a2cbc",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351 grid row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "55acc9e8ed7e582455ebc22e368c83a551a6c60eff85a64823d810fb1b201cb9",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma 1.6L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351: Spark plugs",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma 1.6L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 351 grid row 'Spark plugs' / 'Gamma 1.6L GDI': text cell",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b1af9e50a8353c14d7353ca950ef084228aee737164561ae5dd708d161076165",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Rotate tires",
+    "quote": "Rotate every 6,000 miles (10,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Rotate tires': text cell",
+    "quote": "Rotate every 6,000 miles (10,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "703685605bd449dba97edff5dc0ff8cd30c395551ddf5b895221cc192f763aaf",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367: Rotate tires",
+    "quote": "Rotate every 7,500 miles (12,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367 grid row 'Rotate tires': text cell",
+    "quote": "Rotate every 7,500 miles (12,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2bcb56a747c1354b8cc4166cc601b4a62fafb9c70d6b995accf4d78148088b28",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Climate control air filter (for evaporator and blower unit)",
+    "quote": "Climate control air filter (for evaporator and blower unit)"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Climate control air filter (for evaporator and blower unit)': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Climate control air filter (for evaporator and blower unit) R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "69f71f4cdb89c94ce8f78a65b79720502dce3b5c1ea976288d3a03a441055b95",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 403: Climate control air filter (for evaporator and blower unit)",
+    "quote": "Climate control air filter (for evaporator and blower unit)"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 403 grid row 'Climate control air filter (for evaporator and blower unit)': R at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Climate control air filter (for evaporator and blower unit) - R - R - R - R - R - R - R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "34ce4f7cca35bbccdd3c6c423ee262be60570d297d6b49809318e76e5a9c89a2",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 192000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Coolant (Engine)",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 192000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Coolant (Engine)': text cell",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years, after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "24363a3e841952ea4e5a1cff9a545200ed24a92ff0f6de4bfaa223fb4b7fc1e3",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Coolant (Engine)",
+    "quote": "after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Coolant (Engine)': text cell",
+    "quote": "At first, replace at 120,000 miles (192,000 km) or 10 years, after that, replace every 30,000 miles (48,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bdfbbfe089e87831883788ecacaeaeb7570c45b7055a806c7476cad79013a4ea",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Battery condition': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "19d02476eff164c1f8fd15a09c4f85e9623a21d6334fc0b20dd83346565a7480",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352: Suspension ball joints and mounting bolts",
+    "quote": "Suspension ball joints and mounting bolts"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 352 grid row 'Suspension ball joints and mounting bolts': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Suspension ball joints and mounting bolts I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "47b6f50f26069253f8855a26d59b1ffa64a03e73ec361c8da76f7e439273de64",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353: Exhaust system",
+    "quote": "Exhaust system"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353 grid row 'Exhaust system': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Exhaust system I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2769c2110822d2f120fa4d755b1a5e39c3e3ecdb85e1401e2f1c638ee05a7d7a",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353 grid row 'Cooling system': I at 30,000/45,000/60,000/75,000/90,000/105,000 miles; months 48/72/96/120/144/168; km 48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Cooling system - - - I - I - I - I - I - I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "53340e572167853d1f125fdca7fbbf35b398fbb06dfb345ce1f8d1ddc9937a0e",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 353 grid row 'Cooling system': I at 30,000/45,000/60,000/75,000/90,000/105,000 miles; months 48/72/96/120/144/168; km 48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Cooling system - - - I - I - I - I - I - I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "d3c7cb127842f40565b77c3339cd06b77f47a4aadc3983dc33ac40587aa2cba9",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma 1.6L GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 354 severe table row 'Engine oil and engine oil filter' / 'Gamma 1.6L GDI': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "1a0b50c80aac39b5cdbd122da29f46eed60d93e82f2ba32926b200ebb6f9d808",
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 354 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles (96,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a9cb2b0128b5e74119bb974d800649133b41b1c40c11646a4c7d866eac5c8bd0",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma II 1.6L MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma II 1.6L MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367 grid row 'Engine oil and engine oil filter' / 'Gamma II 1.6L MPI': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter Gamma II 1.6L MPI R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "72ad3a3699b7a8f3d6be04fd75bf0d5833e1783823045bb728f041f2fe5e415d",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma II 1.6L MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367: Spark plugs",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma II 1.6L MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 367 grid row 'Spark plugs' / 'Gamma II 1.6L MPI': text cell",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a6aed5071f542fa30828e2a4aa68268a71a340f06b893fa8aed93feb029b40ca",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 369 grid row 'Manual transmission fluid *3': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Manual transmission fluid *3 - - - I - - - I - - - I"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "f530e78c401d6ce390380fc3ed6bc878f2f72bd796bde5b4a5670bee65a8a50b",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Gamma II 1.6L MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370 severe table row 'Engine oil and engine oil filter' / 'Gamma II 1.6L MPI': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "4843fa2d4a957655aafa066b1a087b6469ed448b004d97471cba0661ee6550e2",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 370 severe table row 'Manual transmission fluid': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "da18f39bb59a4c0998aa7cecab6a69cb9b093fd3bcee843c1137106d4712d3a8",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Smartstream G1.6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 402: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Smartstream G1.6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 402 grid row 'Engine oil and engine oil filter' / 'Smartstream G1.6': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter Smartstream G1.6 R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0d5e895a90616e8b17670f8c1e7a62cffb04d1567dc3115b756b8227307f8875",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Smartstream G1.6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 402: Spark plugs",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Smartstream G1.6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 402 grid row 'Spark plugs' / 'Smartstream G1.6': text cell",
+    "quote": "Replace every 97,500 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "2a59b94f21ddfa8deee7da7e73be36c5a621552deb6b9cf277ef813715829a55",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Smartstream G1.6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 405 severe table row 'Engine oil and engine oil filter' / 'Smartstream G1.6': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "552cf590a75a1643fe986577d8ad7df641437f91dd9971dc22260b929283f6e1",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 352: ENGINE OIL AND FILTER",
+    "quote": "EVERY 3,750 miles OR 6 MONTHS"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 352 severe table row 'ENGINE OIL AND FILTER': operation R",
+    "quote": "EVERY 3,750 miles OR 6 MONTHS"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "51dc77b9ad22c0a71d5cd33c4679b172551bf5cd878fdff4ce74c474850cd964",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120701,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 353 severe table row 'MANUAL TRANSAXLE OIL*': operation R",
+    "quote": "EVERY 75,000 miles"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "495cb143a533c3e3cf9cb8ed7e133f86f598bda1de732bdc99321ffd02372554",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 353: AUTOMATIC TRANSAXLE FLUID*",
+    "quote": "EVERY 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 353 severe table row 'AUTOMATIC TRANSAXLE FLUID*': operation R",
+    "quote": "EVERY 60,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "e089b3f182bb0c15e13c67f2a6dcea757f821eb280e791f4a984781e90b76e63",
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 340 list bullet 'Replace engine oil and filter': own interval text",
+    "quote": "Every 7,500 miles or 12 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "1abf82f8e0bb3fac5d263b0b59f5d5963dc42e99f15566e6345a9b60ab1a156c",
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 340 list bullet 'Rotate tires - including tire pressure and tread wear': own interval text",
+    "quote": "Every 7,500 miles or 12 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "8e89fcbe8e46c210f11c7594b481d492e9704ac8924ba2c29ec14977d5fadcca",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 342 list bullet 'Inspect manual transaxle fluid (if equipped)': own interval text",
+    "quote": "Every 37,500 miles (60,000 km) or 48 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "12479743eb7ba710ffc34816188757f00dfc4e513af1d9796c7ed98eb19f9e13",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 344 list bullet 'Inspect drive belt *4': own interval text",
+    "quote": "First, 60,000 miles or 72 months after every 15,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "c57c7deeba195bb9285e7c43b391c54a0e378da9127a3146e93587686f046acb",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 344 list bullet 'Inspect drive belt *4': own interval text",
+    "quote": "First, 60,000 miles or 72 months after every 15,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "d425f43e5264c561c43d7b8e26f60a1cccc648f016cab54b064ba2e9283ffc3d",
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 160934,
+    "interval_miles_original": 100000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 347 list bullet 'Replace spark plugs (iridium coated),': own interval text",
+    "quote": "Every 100,000 miles or 120 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "a5b03a44b884c0303245b4ab5fa2fddbabf2e963b47ff0b6550eaf06911125a7",
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 348 list bullet 'Replace engine coolant*5': own interval text",
+    "quote": "First, 120,000 miles or 120 months after every 30,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "ebd6475a5a00859749def248a5dbdab20843e793e4d75669a8ea5d5315fe968f",
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "edition": "official a97e3904b01d"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 348 list bullet 'Replace engine coolant*5': own interval text",
+    "quote": "First, 120,000 miles or 120 months after every 30,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "686a4e14857340f91bb44fb3a0abab3966809cb6a2d4de3d1ed9dfb8a74326f7",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "rio"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 37500,
+    "interval_months": 30,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 361: Inspect manual transaxle fluid (if equipped)",
+    "quote": "Inspect manual transaxle fluid (if equipped)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "a71aa36dedeed601c4bbaa2681fdb58f8f3ff34c774f47e071867e3a5224f4d9",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 354: Engine oil and engine oil filter",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "2a2bea2eeb0ddc10a66c9aa106d0816f5567bfa47966e5919e6ac01acadf1549",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 354: Automatic transmission fluid",
+    "quote": "Every 60,000 miles (96,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "4fbc16124dc86e36fac5550f087e5949a875e8bf129261d4cde55c49af4645be",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "rio",
+     "engine": "Non Turbo Model"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "page 369: Manual transmission fluid *3",
+    "quote": "Manual transmission fluid *3"
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 49,
-  "source_records_new": 2,
-  "te_existing": 373,
-  "te_new_GENERATION": 2,
+  "te_existing": 375,
   "configurations": 16,
   "configurations_research_only": 13,
   "configurations_linked": 3,
   "issues_existing": 17,
-  "maintenance_existing": 36
+  "maintenance_corrected": 32,
+  "maintenance_existing": 32,
+  "maintenance_new": 20,
+  "maintenance_stale_deleted": 4
  },
- "finished_at": "2026-10-03T14:41:47+00:00"
+ "finished_at": "2026-10-04T13:05:09+00:00"
 }

@@ -2,19 +2,23 @@
  "make": "kia",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T14:37:36+00:00",
+ "started_at": "2026-10-04T12:55:42+00:00",
  "replace_own": [],
  "lines": {
   "kia/optima-k5": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 91,
-    "te_existing": 1032,
+    "raw_documents_seen": 90,
+    "te_existing": 1025,
     "configurations": 48,
     "configurations_research_only": 48,
     "issues_existing": 71,
-    "maintenance_existing": 216
+    "maintenance_new": 60,
+    "maintenance_corrected": 199,
+    "maintenance_existing": 199,
+    "maintenance_stale_deleted": 17,
+    "te_stale_deleted": 7
    },
    "generations": [
     {
@@ -30,7 +34,7 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 0,
+   "conflicts": 2,
    "existing_vs_new": 0
   },
   "kia/forte": {
@@ -42,7 +46,10 @@
     "configurations": 45,
     "configurations_research_only": 45,
     "issues_existing": 45,
-    "maintenance_existing": 135
+    "maintenance_new": 72,
+    "maintenance_corrected": 109,
+    "maintenance_existing": 109,
+    "maintenance_stale_deleted": 26
    },
    "generations": [
     {
@@ -62,14 +69,15 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 49,
-    "source_records_new": 2,
-    "te_existing": 373,
-    "te_new_GENERATION": 2,
+    "te_existing": 375,
     "configurations": 16,
     "configurations_research_only": 13,
     "configurations_linked": 3,
     "issues_existing": 17,
-    "maintenance_existing": 36
+    "maintenance_corrected": 32,
+    "maintenance_existing": 32,
+    "maintenance_new": 20,
+    "maintenance_stale_deleted": 4
    },
    "generations": [
     {
@@ -88,14 +96,17 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 84,
-    "source_records_new": 3,
-    "te_existing": 1259,
-    "te_new_GENERATION": 3,
+    "raw_documents_seen": 82,
+    "te_existing": 1255,
+    "te_new_GENERATION": 2,
     "configurations": 75,
     "configurations_research_only": 75,
     "issues_existing": 85,
-    "maintenance_existing": 69
+    "maintenance_new": 35,
+    "maintenance_corrected": 51,
+    "maintenance_existing": 51,
+    "maintenance_stale_deleted": 18,
+    "te_stale_deleted": 7
    },
    "generations": [
     {
@@ -111,7 +122,7 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 0,
+   "conflicts": 3,
    "existing_vs_new": 0
   },
   "kia/sportage": {
@@ -119,13 +130,16 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 80,
-    "source_records_new": 2,
     "te_existing": 972,
-    "te_new_GENERATION": 2,
+    "te_new_GENERATION": 1,
     "configurations": 58,
     "configurations_research_only": 58,
     "issues_existing": 47,
-    "maintenance_existing": 183
+    "maintenance_new": 57,
+    "maintenance_corrected": 144,
+    "maintenance_existing": 144,
+    "maintenance_stale_deleted": 39,
+    "te_stale_deleted": 2
    },
    "generations": [
     {
@@ -141,12 +155,164 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 0,
+   "conflicts": 1,
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "maintenance_corrections": {
+  "added": 244,
+  "evidence": 479,
+  "values": 56,
+  "removed": 104
+ },
+ "stale_without_same_value": [
+  {
+   "line": "kia/optima-k5",
+   "key": "coolant_description",
+   "value": "phosphate based coolant",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 0W-20",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "engine_oil_specification",
+   "value": "API SN PLUS/SP; ILSAC GF-6",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 0W-30",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "engine_oil_specification",
+   "value": "API SN PLUS/SP; ILSAC GF-6",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "brake_fluid",
+   "value": "DOT 4",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/optima-k5",
+   "key": "transmission_fluid",
+   "value": "SK ATF SP-IV",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sorento",
+   "key": "fuel_tank_l",
+   "value": 71,
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sorento",
+   "key": "engine_oil_capacity_drain_refill_l",
+   "value": 6.5,
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sorento",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sorento",
+   "key": "engine_oil_specification",
+   "value": "ACEA A5/B5",
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sorento",
+   "key": "coolant_capacity_l",
+   "value": 12.2,
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "kia/sportage",
+   "key": "engine_oil_specification",
+   "value": "ACEA-A5 or above; API SM or above; ILSAC GF-4 or above",
+   "years": [
+    2018,
+    2019
+   ],
+   "now": [
+    "\"ACEA A5 or above; API SM or above; ILSAC GF-4 or "
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T14:38:38+00:00"
+ "finished_at": "2026-10-04T12:56:14+00:00"
 }
