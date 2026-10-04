@@ -13,11 +13,11 @@
  "existing_vs_new": [],
  "stale": [
   {
-   "id": "4dac3a79-70d3-49ad-a38c-6e292421275d",
-   "fact_key": "octane_ron",
-   "value": 95,
+   "id": "d4d51338-2df7-4362-9476-aa6d76ad3dd7",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
    "years": [
-    2019,
+    2021,
     2021
    ],
    "scope_level": "GENERATION",
@@ -25,11 +25,11 @@
    "action": "deleted (superseded by the current staging scope)"
   },
   {
-   "id": "83145e01-51cb-4ffa-a073-04d0ef84827a",
-   "fact_key": "coolant",
-   "value": "G12evo",
+   "id": "068fcacd-a82e-4ece-b860-3c2be357a550",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
    "years": [
-    2022,
+    2023,
     2023
    ],
    "scope_level": "GENERATION",
@@ -37,12 +37,120 @@
    "action": "deleted (superseded by the current staging scope)"
   },
   {
-   "id": "db78d125-4e76-44a4-b903-437c1b5bbba9",
-   "fact_key": "engine_oil_topup_standards",
-   "value": "VW standard 504 00; ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "id": "1b52dd53-a591-4375-b217-84af0aa3c812",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
    "years": [
-    2019,
-    2025
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "1d941346-5f5e-48c1-8604-5ee1be3d0b2e",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "years": [
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "a57e6238-21a4-459b-ae8a-7112423b90f8",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "79aa3d2d-f61b-451c-8dec-13f7da09e8d5",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
+   "years": [
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "291e7a51-4316-44db-8fe9-12c2f9faea9c",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "793a0213-f931-49b0-974e-48ade5747598",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "years": [
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "86500dfa-a1f3-4022-b944-961347928fd1",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "8636de58-ff0b-46d4-9fad-84bff73bf516",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 250,
+   "years": [
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "3d5d6e61-ebf0-4778-9018-4c76d60620b8",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "fa016a73-1337-44e3-adb6-2be8adaf47cf",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 250,
+   "years": [
+    2023,
+    2023
    ],
    "scope_level": "GENERATION",
    "referenced_by_issue": false,
@@ -50,19 +158,1222 @@
   }
  ],
  "dry_run": false,
- "started_at": "2026-10-04T05:04:04+00:00",
+ "started_at": "2026-10-04T13:09:54+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "355289dd0d3f406d5285074a8065a5d898b635bacddfa15f723212aac195d019",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162 - Except CCTA; Jetta Wag.(AJ5 -"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace Every 40,000 miles (60K km), or 4 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162 - Except CCTA; Jetta Wag.(AJ5 -"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace Every 40,000 miles (60K km), or 4 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:applicability_truncated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c9eeadfc92c3219fd2bee0a20c001ea4d5133d183a8a520b696f8ace6e750b49",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162 -; Jetta Wag.(AJ5 -"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162 -; Jetta Wag.(AJ5 -"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:applicability_truncated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "367182e8e181ddd9dd2f986f8a6f8d4b2fcbd3403cdf9453961c82e6320fe983",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta (09S)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta (09S)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "76ae4929b1344e2767a7edf4144e0eef8b87b2285f467a1f1c4b31f4544822f7",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "eb18e67b79c994b9629cd4e8aa8b59b17fe0ee2e66d2b0c0c706bc5ac9979a2d",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 210000,
+    "interval_miles_original": 130000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 130,000 miles (210K km)"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 210000,
+    "interval_miles_original": 130000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 130,000 miles (210K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e2225db7569677b6f74537b25e49177cd6f5cd42f4df19493d5d24f45290ba79",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162) and"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 240000,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles (240K km)"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Jetta (162) and"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 240000,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles (240K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "23105927699a6cba1fab4672913b74011dea82f81975e0d6db5c4132e06461aa",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 240000,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles (240K km)"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 240000,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles (240K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "clause_continues_after_quote",
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9150bbb7522c607a34bc5c4478c4685b2776246dd4a5d53f5a2ce53427d08496",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 241402,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 241402,
+    "interval_miles_original": 150000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 150,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "clause_continues_after_quote",
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "82892da0212139befeb60e99a0d61efa6928bd17e71d4a2f79c272a9fd646ed5",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "55d76e53a1259cd8d2fec0ac70cbe6332f8335cf52098872bf3a97cfbc5f8ba9",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E); Jetta (0CG)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E); Jetta (0CG)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4825c4468d1b43e18e535e711b9fd8152522f801c7a6227eda5262bf4293af3d",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "966b7a180dc78b9f1f2faac376576ed60db6b81bccaa1135f1d41fcb15fb7331",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "46d4a9973e9274fb3978b92fab30c858568740a5f667969a7b922b16789d6526",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2022
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2022
+    ],
+    "applicability": {
+     "models": "Jetta (01M); Jetta (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "de64600d03224befc7d44f06cc1fd6ffe5970a63b56dc50a7b9b4dc343be26ef",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Tiguan(5N) Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Tiguan(5N) Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "39eff164e86ae4b1864261bc1c7f92f151396395d499cc9cbe20beaac49f5489",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "afc13d54c83a34e117f1ddaa0653cc97b7b8ca91702eb9070c1d96673b0d592c",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "models": "Jetta (BU3)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "models": "Jetta (BU3)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d680a64b0941953ea1d9ae2a81fb4494a712feaad271882f28a17736fc882e2b",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (BU*) (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "models": "Jetta (09S); Jetta (BU*) (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "03bfa99b76312c0108bbb240cc15082a73abf61f683ea79c6c038b14638e0e10",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1a50747fed98969d063e177dc9e84cab2c1d3e6f2eb18bdb48f51e3cea20c90c",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles (300 km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "Jetta"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles (300 km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried",
+     "km_printed_implausible",
+     "months_printed_not_in_item"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 124,
-  "source_records_new": 1,
-  "te_existing": 1845,
-  "te_new_GENERATION": 82,
+  "te_existing": 1915,
+  "te_new_GENERATION": 56,
   "configurations": 66,
   "configurations_research_only": 63,
   "configurations_linked": 3,
   "issues_existing": 80,
   "maintenance_existing": 72,
-  "te_stale_deleted": 3
+  "maintenance_corrected": 19,
+  "te_stale_deleted": 12
  },
- "finished_at": "2026-10-04T05:04:20+00:00"
+ "finished_at": "2026-10-04T13:10:05+00:00"
 }

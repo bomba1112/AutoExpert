@@ -2,7 +2,7 @@
  "make": "volkswagen",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-04T05:04:03+00:00",
+ "started_at": "2026-10-04T13:09:54+00:00",
  "replace_own": [],
  "lines": {
   "volkswagen/jetta": {
@@ -10,15 +10,15 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 124,
-    "source_records_new": 1,
-    "te_existing": 1845,
-    "te_new_GENERATION": 82,
+    "te_existing": 1915,
+    "te_new_GENERATION": 56,
     "configurations": 66,
     "configurations_research_only": 63,
     "configurations_linked": 3,
     "issues_existing": 80,
     "maintenance_existing": 72,
-    "te_stale_deleted": 3
+    "maintenance_corrected": 19,
+    "te_stale_deleted": 12
    },
    "generations": [
     {
@@ -38,13 +38,13 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 51,
-    "source_records_new": 1,
-    "te_existing": 698,
-    "te_new_GENERATION": 17,
+    "te_existing": 715,
+    "te_new_GENERATION": 24,
     "configurations": 21,
     "configurations_research_only": 21,
     "issues_existing": 47,
-    "maintenance_existing": 34
+    "maintenance_existing": 34,
+    "maintenance_corrected": 8
    },
    "generations": [
     {
@@ -60,14 +60,15 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 84,
-    "te_existing": 1335,
-    "te_new_GENERATION": 39,
+    "te_existing": 1372,
+    "te_new_GENERATION": 11,
     "configurations": 29,
     "configurations_research_only": 25,
     "configurations_linked": 4,
     "issues_existing": 80,
     "maintenance_existing": 84,
-    "te_stale_deleted": 1
+    "maintenance_corrected": 9,
+    "te_stale_deleted": 2
    },
    "generations": [
     {
@@ -91,14 +92,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 56,
-    "te_existing": 1006,
-    "te_new_GENERATION": 9,
+    "te_existing": 1015,
+    "te_new_GENERATION": 19,
     "configurations": 27,
     "configurations_linked": 6,
     "configurations_research_only": 21,
     "issues_existing": 66,
     "maintenance_existing": 27,
-    "te_stale_deleted": 5
+    "maintenance_corrected": 1
    },
    "generations": [
     {
@@ -115,10 +116,12 @@
    "counts": {
     "raw_documents_seen": 42,
     "te_existing": 328,
+    "te_new_GENERATION": 10,
     "configurations": 11,
     "configurations_research_only": 11,
     "issues_existing": 12,
-    "maintenance_existing": 25
+    "maintenance_existing": 25,
+    "maintenance_corrected": 3
    },
    "generations": [
     {
@@ -139,7 +142,8 @@
     "configurations_research_only": 5,
     "configurations_linked": 4,
     "issues_existing": 19,
-    "maintenance_existing": 32
+    "maintenance_existing": 32,
+    "maintenance_corrected": 5
    },
    "generations": [
     {
@@ -151,44 +155,11 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [
-  {
-   "line": "volkswagen/jetta",
-   "key": "octane_ron",
-   "value": 95,
-   "years": [
-    2019,
-    2021
-   ],
-   "now": [],
-   "action": "deleted (superseded by the current staging scope)"
-  },
-  {
-   "line": "volkswagen/tiguan",
-   "key": "coolant",
-   "value": "G12evo",
-   "years": [
-    2024,
-    2024
-   ],
-   "now": [],
-   "action": "deleted (superseded by the current staging scope)"
-  },
-  {
-   "line": "volkswagen/atlas",
-   "key": "fuel_tank_l",
-   "value": 70.4,
-   "years": [
-    2021,
-    2021
-   ],
-   "now": [
-    "70.0"
-   ],
-   "action": "deleted (superseded by the current staging scope)"
-  }
- ],
+ "maintenance_corrections": {
+  "hidden": 45
+ },
+ "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-04T05:04:53+00:00"
+ "finished_at": "2026-10-04T13:10:29+00:00"
 }

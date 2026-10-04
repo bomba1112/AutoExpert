@@ -9,17 +9,523 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-04T05:04:21+00:00",
+ "started_at": "2026-10-04T13:10:06+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "ab83f5da1f2cebaf6cfad1f17f8720163bee87f45cc0c1e301f8fabc47ccffac",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2019
+    ],
+    "applicability": {
+     "models": "Passat (A3"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace Every 40,000 miles (60K km), or 4 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2019
+    ],
+    "applicability": {
+     "models": "Passat (A3"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace Every 40,000 miles (60K km), or 4 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:applicability_truncated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fa3924cd039be752daf4e335f615474df5dbedb4180b9908f215569fc9272839",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2018
+    ],
+    "applicability": {
+     "models": "Passat CC (35); Passat (A3* - 6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2018
+    ],
+    "applicability": {
+     "models": "Passat CC (35); Passat (A3* - 6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:applicability_truncated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5cad054ff112b38484d359afff232ddb6266337f71917e610b7c8c0cc466be4d",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat (09G); Passat (09M)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat (09G); Passat (09M)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dde5762f198f3009b1c27d0818463e734e0ba62dbfedeaee75ef495fb486ee3f",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat (02E)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 40,000 miles (60K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f0e7da9877364245d958c9a6a16c7d7eb3ef8694ad2961e402c9435038d3708b",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Passat (A32)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Beetle (5C1/5C7), Pas‐ sat(3C). CC, Ti‐ guan(5N), Jetta (162), Jetta Sport‐ wagon (AJ5), Golf(5K1), Golf variant(BX5) At 150,000 miles (240K km) then every 20K Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Passat (A32)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Beetle (5C1/5C7), Pas‐ sat(3C). CC, Ti‐ guan(5N), Jetta (162), Jetta Sport‐ wagon (AJ5), Golf(5K1), Golf variant(BX5) At 150,000 miles (240K km) then every 20K Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6bbf287c2ae54339e3cd378c54452cb2d78bd697d90dad6e7fef9b45b0a437fc",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles CC, Tiguan(5N) Golf(AU1), Golf variant(BX5) At 150,000 miles (240K km) then every 20K Jetta (163), Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2022
+    ],
+    "applicability": {
+     "models": "Passat"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles CC, Tiguan(5N) Golf(AU1), Golf variant(BX5) At 150,000 miles (240K km) then every 20K Jetta (163), Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8889a724de49722fc3fd5f3b029bf22114501eb86d08751cf9e4399741f02c4e",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Passat"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 210000,
+    "interval_miles_original": 130000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt and Camshaft Drive Tensioning Roller (Diesel Engine) - Replace Every 130,000 miles (210K km)"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Passat"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 210000,
+    "interval_miles_original": 130000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt and Camshaft Drive Tensioning Roller (Diesel Engine) - Replace Every 130,000 miles (210K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "50e09f2d974f2360111b3f519cf1d9fdc74668b3676ab7346235444d700f5f64",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Passat (A3* - 6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Passat (A3* - 6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Every 60,000 miles (90K km), or 6 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:applicability_truncated"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 51,
-  "source_records_new": 1,
-  "te_existing": 698,
-  "te_new_GENERATION": 17,
+  "te_existing": 715,
+  "te_new_GENERATION": 24,
   "configurations": 21,
   "configurations_research_only": 21,
   "issues_existing": 47,
-  "maintenance_existing": 34
+  "maintenance_existing": 34,
+  "maintenance_corrected": 8
  },
- "finished_at": "2026-10-04T05:04:25+00:00"
+ "finished_at": "2026-10-04T13:10:09+00:00"
 }

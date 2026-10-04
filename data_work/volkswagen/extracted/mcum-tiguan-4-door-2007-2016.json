@@ -23,7 +23,7 @@
   "authenticity": "REVIEWED_MIRROR",
   "generation_range": true
  },
- "extractor": "manual-geometry-14+mcum+service-1",
+ "extractor": "manual-geometry-14+mcum+service-1+tires-1",
  "pages": 1038,
  "edition_market": "US",
  "edition_markers": {
@@ -638,6 +638,84 @@
    "source_layout": "mcum_service",
    "original": "0.5 liter per 1000 km",
    "section_url": "https://www.mycarusermanual.com/vw/tiguan/4-door/2007-2016/engine-oil--engine-oil-consumption"
+  },
+  {
+   "page": 861,
+   "row": "Front-wheel drive | 215/65 R16 | 35 240 2.4",
+   "engine_text": null,
+   "source_layout": "mcum_tire_table",
+   "section_url": "https://www.mycarusermanual.com/vw/tiguan/4-door/2007-2016/tires-and-wheels--tire-inflation-pressure-in-cold-tires",
+   "cites": [
+    {
+     "page": 861,
+     "quote": "Front-wheel drive 215/65 R16 35 240 2.4",
+     "role": "table row"
+    }
+   ],
+   "variant": "Front-wheel drive",
+   "drive": "FWD",
+   "key": "tire_pressure_front_kpa",
+   "value": 240,
+   "unit": "kPa",
+   "label": "cold tire pressure, front",
+   "quote": "Front-wheel drive 215/65 R16 35 240 2.4",
+   "original": "35 psi / 240 kPa / 2.4 bar",
+   "note": "printed 35 psi / 240 kPa / 2.4 bar for cold tires; the table gives one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R16"
+    ]
+   }
+  },
+  {
+   "page": 861,
+   "row": "Front-wheel drive | 215/65 R16 | 35 240 2.4",
+   "engine_text": null,
+   "source_layout": "mcum_tire_table",
+   "section_url": "https://www.mycarusermanual.com/vw/tiguan/4-door/2007-2016/tires-and-wheels--tire-inflation-pressure-in-cold-tires",
+   "cites": [
+    {
+     "page": 861,
+     "quote": "Front-wheel drive 215/65 R16 35 240 2.4",
+     "role": "table row"
+    }
+   ],
+   "variant": "Front-wheel drive",
+   "drive": "FWD",
+   "key": "tire_pressure_rear_kpa",
+   "value": 240,
+   "unit": "kPa",
+   "label": "cold tire pressure, rear",
+   "quote": "Front-wheel drive 215/65 R16 35 240 2.4",
+   "original": "35 psi / 240 kPa / 2.4 bar",
+   "note": "printed 35 psi / 240 kPa / 2.4 bar for cold tires; the table gives one pressure per tire size (no front/rear split), written for the front and the rear axle",
+   "applicability_extra": {
+    "tires": [
+     "215/65 R16"
+    ]
+   }
+  },
+  {
+   "page": 861,
+   "row": "Front-wheel drive | 215/65 R16 | 35 240 2.4",
+   "engine_text": null,
+   "source_layout": "mcum_tire_table",
+   "section_url": "https://www.mycarusermanual.com/vw/tiguan/4-door/2007-2016/tires-and-wheels--tire-inflation-pressure-in-cold-tires",
+   "cites": [
+    {
+     "page": 861,
+     "quote": "Front-wheel drive 215/65 R16 35 240 2.4",
+     "role": "table row"
+    }
+   ],
+   "variant": "Front-wheel drive",
+   "drive": "FWD",
+   "key": "tires",
+   "value": "215/65 R16",
+   "unit": null,
+   "label": "tire size",
+   "quote": "215/65 R16",
+   "original": "215/65 R16"
   }
  ],
  "review": [
@@ -662,5 +740,22 @@
  ],
  "not_in_manual": [],
  "engine_codes": [],
- "status": "ok"
+ "status": "ok",
+ "tire_skipped": [
+  {
+   "where": "p.829 (tires-and-wheels)",
+   "row": "(no model column) | 215/65 R16 | 38 260 2.6",
+   "reason": "no consistent reading of the model/engine column"
+  },
+  {
+   "where": "p.862 (tires-and-wheels--tire-inflation-pressure-in-cold-tires)",
+   "row": "(no model column) | 215/65 R16 | 38 260 2.6",
+   "reason": "no consistent reading of the model/engine column"
+  },
+  {
+   "where": "p.871 (tires-and-wheels--tread-depth-and-tread-wear-indicators)",
+   "row": "(no model column) | 215/65 R16 | 38 260 2.6",
+   "reason": "no consistent reading of the model/engine column"
+  }
+ ]
 }

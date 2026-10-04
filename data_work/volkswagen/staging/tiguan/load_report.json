@@ -165,12 +165,24 @@
  ],
  "stale": [
   {
-   "id": "8ffb2ab7-2561-4546-9c5e-2348a55bb08f",
-   "fact_key": "coolant",
-   "value": "G12evo",
+   "id": "abdc50cd-14d9-4c5f-980a-f13a43c4ef59",
+   "fact_key": "tire_pressure_front_kpa",
+   "value": 320,
    "years": [
-    2024,
-    2024
+    2023,
+    2023
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "c3b667bc-2f19-4bb3-abda-4e8fb0734d3e",
+   "fact_key": "tire_pressure_rear_kpa",
+   "value": 320,
+   "years": [
+    2023,
+    2023
    ],
    "scope_level": "GENERATION",
    "referenced_by_issue": false,
@@ -178,18 +190,590 @@
   }
  ],
  "dry_run": false,
- "started_at": "2026-10-04T05:04:26+00:00",
+ "started_at": "2026-10-04T13:10:10+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "86282663b6ff5745fc5f28a7016b5df98a16ccf74f6b3234ed8ed589089892f6",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Tiguan (09M); Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "models": "Tiguan (09M); Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0c6b12826b294f5b757253d0daaa29a173bd784ff4595d3f1d758a9324b01ea5",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c7cdee8770fbb0e08dc8c1c1581932006cd1338e149d012d8187d5d0d785fa43",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "79eeb50eb04bdddc7f8e66fcb5f5c1b4127430731e6673daf30df61d82d7cc61",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2016
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2016
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c385e7919ffc1cf2b3201bcd43210cd2722785655b94c26e21cf777ff8c0ab88",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2022
+    ],
+    "applicability": {
+     "models": "Tiguan (09M); Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2022
+    ],
+    "applicability": {
+     "models": "Tiguan (09M); Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "856f597047139baf17ce6f0574cd6cb4b69f276154e17536fbb0330a3b33eedc",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2024
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles CC At 150,000 miles (240K km) then every 20K Jetta (163), Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2024
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles CC At 150,000 miles (240K km) then every 20K Jetta (163), Jetta (hybrid) Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "654eb22b5cf5673dde60d7bf49e5ea64388a2f1af9c36d1bdc3123f2e4ad7479",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "models": "Tiguan (5N)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 300000,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Coolant Pump Toothed Belt - Check Every 180,000 miles (300K km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0b80dbb8c9989b9e35104f317a8845aa47dade9d7abd43abece0b0bc2c23227a",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "Tiguan (09P)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "762f842596450b4d2e1bbb2673a1573fc5fc31a10b083b95f8beddcbea0dbc3e",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles (300 km), or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "Tiguan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check Every 180,000 miles (300 km), or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried",
+     "km_printed_implausible",
+     "months_printed_not_in_item"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 84,
-  "te_existing": 1335,
-  "te_new_GENERATION": 39,
+  "te_existing": 1372,
+  "te_new_GENERATION": 11,
   "configurations": 29,
   "configurations_research_only": 25,
   "configurations_linked": 4,
   "issues_existing": 80,
   "maintenance_existing": 84,
-  "te_stale_deleted": 1
+  "maintenance_corrected": 9,
+  "te_stale_deleted": 2
  },
- "finished_at": "2026-10-04T05:04:35+00:00"
+ "finished_at": "2026-10-04T13:10:16+00:00"
 }

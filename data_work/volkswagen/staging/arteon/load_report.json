@@ -9,15 +9,208 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-04T05:04:43+00:00",
+ "started_at": "2026-10-04T13:10:21+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "7067c05370eeab1ea1211d49132be0eafcfe8376bc4638cbdd3aeaf574dd49b3",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2022
+    ],
+    "applicability": {
+     "models": "Arteon (09P); Arteon (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2022
+    ],
+    "applicability": {
+     "models": "Arteon (09P); Arteon (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9c9dc1d2fad3ccbed9f5b342be0a118567b6c756d71953f57fe88d58982ebe7f",
+   "old": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2024
+    ],
+    "applicability": {
+     "models": "Arteon"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Tiguan(5N) Every 180,000 miles, or 15 years"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2024
+    ],
+    "applicability": {
+     "models": "Arteon"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 289682,
+    "interval_miles_original": 180000,
+    "interval_months": 180,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Toothed Belt, Camshaft Drive Ten‐ sioning Roller (Gas Engine) - Check At 60,000 miles (90K km) then every 20K miles Tiguan(5N) Every 180,000 miles, or 15 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4b05deed246fdab87fa76c8dce9de32c9dbeae6e59c8655690ac25dd47289a27",
+   "old": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "Arteon (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "new": {
+    "job": "dual_clutch_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "Arteon (0GC)"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Transmission, Automatic - Change Fluid & filter (if applicable) »for non-DSG - USA Only« Every 80,000 miles (120K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 42,
   "te_existing": 328,
+  "te_new_GENERATION": 10,
   "configurations": 11,
   "configurations_research_only": 11,
   "issues_existing": 12,
-  "maintenance_existing": 25
+  "maintenance_existing": 25,
+  "maintenance_corrected": 3
  },
- "finished_at": "2026-10-04T05:04:45+00:00"
+ "finished_at": "2026-10-04T13:10:23+00:00"
 }
