@@ -1,0 +1,84 @@
+{
+ "mode": "rehearsal",
+ "database": "C:\\AutoExpertData\\work\\rehearsal_cn.db",
+ "started_at": "2026-10-04T17:46:21+00:00",
+ "samr_commit": "8e13ff60ca03f15706def07058cd454a6ae1dd4d",
+ "alembic_before": [
+  "f090_garage"
+ ],
+ "alembic_after": {
+  "heads": [
+   "f090_cn_catalog",
+   "f090_garage"
+  ],
+  "foreign_revisions": [
+   "f090_garage.py"
+  ]
+ },
+ "before": {
+  "production_visible_us": {
+   "count": 644,
+   "variant_ids_sha": "20505bee6fcfdadefa4646ad90b4ceef8ddc84016ea9cda4af6281dce6260ff0"
+  },
+  "us_configuration_rows": 3260,
+  "cn": {
+   "variants": 0,
+   "technical_evidence": 0,
+   "known_issues": 0,
+   "source_records": 0
+  }
+ },
+ "load": {
+  "counts": {
+   "components_engine": 26,
+   "components_hybrid_system": 21,
+   "components_transmission": 7,
+   "facts_new": 3926,
+   "generations_new": 24,
+   "issues_new": 367,
+   "makes_new": 4,
+   "models_new": 23,
+   "source_records_new": 175,
+   "variants_new": 157
+  },
+  "conflicts": [],
+  "warnings": [],
+  "stale": []
+ },
+ "second_load": {
+  "counts": {
+   "variants_unchanged": 157,
+   "facts_unchanged": 3926,
+   "issues_unchanged": 367,
+   "components_engine": 26,
+   "components_transmission": 7,
+   "components_hybrid_system": 21
+  },
+  "conflicts": 0,
+  "stale": 0
+ },
+ "after": {
+  "production_visible_us": {
+   "count": 644,
+   "variant_ids_sha": "20505bee6fcfdadefa4646ad90b4ceef8ddc84016ea9cda4af6281dce6260ff0"
+  },
+  "us_configuration_rows": 3260,
+  "cn": {
+   "variants": 157,
+   "technical_evidence": 3926,
+   "known_issues": 367,
+   "source_records": 175
+  }
+ },
+ "inherited_issues": {
+  "records": 157,
+  "mismatched": []
+ },
+ "listing_regression": null,
+ "integrity": {
+  "quick_check": "ok",
+  "foreign_key_violations": 0
+ },
+ "finished_at": "2026-10-04T17:47:08+00:00",
+ "ok": true
+}
