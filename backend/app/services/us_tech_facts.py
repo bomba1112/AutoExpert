@@ -727,8 +727,12 @@ def enabled(settings=None) -> bool:
     return settings.environment != "production"
 
 
+# Configurations of the Chinese catalogue (market CN) have their own card (app.services.cn_catalog).
+NOT_CN = func.coalesce(TechnicalEvidence.market, "") != "CN"
+
+
 def _configuration_row(db, configuration_key: str) -> TechnicalEvidence | None:
-    return db.scalar(select(TechnicalEvidence).where(TechnicalEvidence.fact_key == "configuration",
+    return db.scalar(select(TechnicalEvidence).where(TechnicalEvidence.fact_key == "configuration", NOT_CN,
                                                      TechnicalEvidence.configuration_key == configuration_key).limit(1))
 
 
@@ -1092,7 +1096,7 @@ def _catalog_query():
             .join(VehicleGeneration, VehicleGeneration.id == TechnicalEvidence.generation_id)
             .join(VehicleModel, VehicleModel.id == VehicleGeneration.model_id)
             .join(VehicleMake, VehicleMake.id == VehicleModel.make_id)
-            .where(TechnicalEvidence.fact_key == "configuration"))
+            .where(TechnicalEvidence.fact_key == "configuration", NOT_CN))
 
 
 def configurations(db, make: str | None, model: str | None, year: int | None, language: str = "ru", limit: int = 200) -> list[dict]:
@@ -1116,7 +1120,7 @@ def facets(db) -> list[dict]:
                       .join(VehicleGeneration, VehicleGeneration.id == TechnicalEvidence.generation_id)
                       .join(VehicleModel, VehicleModel.id == VehicleGeneration.model_id)
                       .join(VehicleMake, VehicleMake.id == VehicleModel.make_id)
-                      .where(TechnicalEvidence.fact_key == "configuration")
+                      .where(TechnicalEvidence.fact_key == "configuration", NOT_CN)
                       .distinct()).all()
     years = defaultdict(set)
     for make, model, year in rows:

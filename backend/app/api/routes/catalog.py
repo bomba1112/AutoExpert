@@ -15,7 +15,7 @@ from app.models.catalog import (
     VehicleVariant,
 )
 from app.schemas.analysis import CatalogCountry, CatalogResponse, CatalogVariant
-from app.services import us_tech_facts
+from app.services import cn_catalog, us_tech_facts
 
 router = APIRouter(prefix="/catalog", tags=["catalog"])
 
@@ -129,6 +129,42 @@ def variant_us_tech(variant_id: str, db: DBSession, language: Literal["ru", "az"
     _us_tech_enabled()
     key = us_tech_facts.configuration_for_variant(db, variant_id)
     data = us_tech_facts.build(db, key, language) if key else None
+    if data is None:
+        raise HTTPException(404, "CONFIGURATION_NOT_FOUND")
+    return data
+
+
+# Chinese configuration catalogue. Behind the show_cn_catalog flag: with the flag off these
+# routes do not exist (404), as in production.
+def _cn_enabled() -> None:
+    if not cn_catalog.enabled():
+        raise HTTPException(404, "Not Found")
+
+
+@router.get("/cn/facets")
+def cn_facets(db: DBSession) -> list[dict]:
+    _cn_enabled()
+    return cn_catalog.facets(db)
+
+
+@router.get("/cn/configurations")
+def cn_configurations(
+    db: DBSession,
+    make: str | None = Query(default=None, max_length=100),
+    model: str | None = Query(default=None, max_length=100),
+    year: int | None = Query(default=None, ge=1990, le=2100),
+    language: Literal["ru", "az", "en"] = "ru",
+) -> list[dict]:
+    _cn_enabled()
+    return cn_catalog.configurations(db, make, model, year, language)
+
+
+@router.get("/cn/configurations/{configuration_key}")
+def cn_configuration(
+    configuration_key: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru"
+) -> dict:
+    _cn_enabled()
+    data = cn_catalog.build(db, configuration_key, language)
     if data is None:
         raise HTTPException(404, "CONFIGURATION_NOT_FOUND")
     return data
