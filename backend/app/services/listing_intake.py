@@ -32,6 +32,7 @@ from app.models.listing_intake import (
 )
 from app.schemas.listing_intake import ListingIntakeCreate
 from app.services import catalog_buyer as buyer
+from app.services import cn_listing_match
 from app.services.catalog_scope import POLICY_PATH
 
 PARSER_VERSION = "turbo-user-content-1.0"
@@ -985,13 +986,22 @@ def _existing_in_language(
         existing.snapshot.language = value.language
         if value.input_type != "URL_REFERENCE":
             rows = _consumer_rows(db)
-            localized = _match(rows, _canonical_claims(claims, rows), value.language)
+            canonical = _canonical_claims(claims, rows)
+            localized = _match(rows, canonical, value.language)
+            localized = _with_cn(db, canonical, value.language, localized)
             existing.match.status = localized["status"]
             existing.match.candidates = localized["candidates"]
             existing.match.question = localized["question"]
             existing.match.conflicts = localized["conflicts"]
         db.commit()
     return _read(existing)
+
+
+def _with_cn(db, claims: dict[str, ClaimDraft], language: str, match: dict) -> dict:
+    """The CN catalogue answers for Chinese makes / a Chinese-market listing (behind the
+    cn_listing_match flag); otherwise the US match stands unchanged."""
+    cn_match = cn_listing_match.try_match(db, claims, language, us_result=match)
+    return match if cn_match is None else cn_match
 
 
 def create_intake(db, user_id: str, value: ListingIntakeCreate) -> dict:
@@ -1034,6 +1044,16 @@ def create_intake(db, user_id: str, value: ListingIntakeCreate) -> dict:
         rows = _consumer_rows(db)
         claims = _canonical_claims(claims, rows)
         match = _match(rows, claims, value.language)
+        cn_match = _with_cn(db, claims, value.language, match)
+        if cn_match is not match:
+            match = cn_match
+            # battery and power stated inside the engine line become their own seller claims
+            for field, raw, normalized, unit, locator, confidence in (
+                cn_listing_match.derived_claims(claims)
+            ):
+                claims.setdefault(
+                    field, ClaimDraft(field, raw, normalized, unit, locator, confidence)
+                )
     request = ListingIntakeRequest(
         user_id=user_id, request_key=request_key, language=value.language
     )

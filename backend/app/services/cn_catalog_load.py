@@ -139,10 +139,12 @@ def read_staging(staging_dir: Path, model_map_path: Path) -> Staging:
 def validate(staging: Staging) -> list[str]:
     """Problems that stop a load."""
     errors = []
-    expected = staging.manifest["files"]
-    catalog = staging.root / "catalog"
+    expected = {f"catalog/{k}": v for k, v in staging.manifest["files"].items()}
+    expected.update(
+        {f"listings/{k}": v for k, v in (staging.manifest.get("listing_files") or {}).items()}
+    )
     for relative, digest in expected.items():
-        path = catalog / relative
+        path = staging.root / relative
         if not path.exists():
             errors.append(f"missing {relative}")
         elif hashlib.sha256(path.read_bytes()).hexdigest() != digest:
@@ -220,7 +222,8 @@ def engine_label(record: dict) -> str | None:
     parts = []
     if engine.get("displacement_cc"):
         litres = (Decimal(engine["displacement_cc"]) / 1000).quantize(Decimal("0.1"))
-        parts.append(f"{litres}{'T' if engine.get('aspiration') == 'T' else ''}")
+        turbo = str(engine.get("aspiration") or "").casefold() in ("t", "turbo")
+        parts.append(f"{litres}{'T' if turbo else ''}")
     if engine.get("code"):
         parts.append(engine["code"])
     return " ".join(parts)

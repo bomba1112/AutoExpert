@@ -163,12 +163,10 @@ def issues_check(db, staging) -> dict:
     return {"records": len(staging.records), "mismatched": mismatched}
 
 
-def listing_regression(db) -> dict | None:
-    try:
-        from app.services import cn_listing_match
-    except ImportError:
-        return None
-    return cn_listing_match.regression(db, Path(r"C:\Users\jalil\samr\turbo_specs.json"), STAGING)
+def listing_regression(db) -> dict:
+    from app.services import cn_listing_match
+
+    return cn_listing_match.regression(db, STAGING / "listings" / "turbo_specs.json", STAGING)
 
 
 def integrity(database: Path) -> dict:
@@ -251,6 +249,7 @@ def load(database: Path, mode: str) -> int:
         and not summary["inherited_issues"]["mismatched"]
         and summary["integrity"]["quick_check"] == "ok"
         and summary["integrity"]["foreign_key_violations"] == 0
+        and not summary["listing_regression"]["summary"].get("miss")
     )
     summary["ok"] = ok
     out = CN / f"load_{mode}.json"
@@ -265,6 +264,7 @@ def load(database: Path, mode: str) -> int:
     print("load counts", json.dumps(summary["load"]["counts"], ensure_ascii=False))
     print("second load", json.dumps(summary["second_load"], ensure_ascii=False))
     print("inherited issues mismatched:", len(summary["inherited_issues"]["mismatched"]))
+    print("listing regression:", summary["listing_regression"]["summary"])
     print("report ->", out.relative_to(ROOT))
     return 0 if ok else 1
 

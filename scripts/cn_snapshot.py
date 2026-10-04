@@ -36,9 +36,9 @@ def main(argv: list[str]) -> int:
     args = parser.parse_args(argv)
     samr = Path(args.samr)
     catalog = samr / "catalog"
-    dirty = git(samr, "status", "--porcelain", "--", "catalog")
+    dirty = git(samr, "status", "--porcelain", "--", "catalog", "turbo_specs.json")
     if dirty:
-        print("samr/catalog has uncommitted changes; commit them first:\n" + dirty)
+        print("samr has uncommitted changes in the catalogue; commit them first:\n" + dirty)
         return 1
     files = sorted(catalog.glob("*.json")) + sorted(catalog.glob("components/*/*.json"))
     files += [catalog / "index.csv", catalog / "REPORT.md"]
@@ -52,6 +52,13 @@ def main(argv: list[str]) -> int:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, destination)
         hashes[relative] = hashlib.sha256(path.read_bytes()).hexdigest()
+    # the turbo.az listings the catalogue was built from: the matcher's regression set
+    listings = STAGING / "listings"
+    listings.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(samr / "turbo_specs.json", listings / "turbo_specs.json")
+    listing_hashes = {
+        "turbo_specs.json": hashlib.sha256((samr / "turbo_specs.json").read_bytes()).hexdigest()
+    }
     manifest = {
         "source": str(catalog),
         "samr_commit": git(samr, "rev-parse", "HEAD"),
@@ -63,6 +70,7 @@ def main(argv: list[str]) -> int:
             "components": sum(1 for k in hashes if k.startswith("components/")),
         },
         "files": hashes,
+        "listing_files": listing_hashes,
     }
     (STAGING / "MANIFEST.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"

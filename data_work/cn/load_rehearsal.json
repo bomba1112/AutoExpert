@@ -1,7 +1,7 @@
 {
  "mode": "rehearsal",
  "database": "C:\\AutoExpertData\\work\\rehearsal_cn.db",
- "started_at": "2026-10-04T17:46:21+00:00",
+ "started_at": "2026-10-04T18:16:34+00:00",
  "samr_commit": "8e13ff60ca03f15706def07058cd454a6ae1dd4d",
  "alembic_before": [
   "f090_garage"
@@ -74,11 +74,507 @@
   "records": 157,
   "mismatched": []
  },
- "listing_regression": null,
+ "listing_regression": {
+  "listings": 28,
+  "summary": {
+   "primary": 25,
+   "candidate": 1,
+   "closest_official_alternative": 2
+  },
+  "results": [
+   {
+    "url": "https://turbo.az/autos/10738747-byd-qin-plus",
+    "listing": "BYD Qin Plus 2025 | 1.5 L / 7.68 kWh / 197 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:byd_qin-plus_2025_dm-i-55km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:byd_qin-plus_2025_dm-i-55km",
+    "candidates": [
+     "cn:byd_qin-plus_2025_dm-i-55km"
+    ],
+    "conflicts": [
+     {
+      "field_name": "power",
+      "claimed": "197 a.g.",
+      "catalog_values": [
+       "163 a.g. (120 kW)"
+      ]
+     }
+    ],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10724400-changan-qiyuan-a05",
+    "listing": "Changan Qiyuan A05 2025 | 1.5 L / 9.07 kWh / 190 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_qiyuan-a05_2025_70"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_qiyuan-a05_2025_70",
+    "candidates": [
+     "cn:changan_qiyuan-a05_2025_70",
+     "cn:changan_qiyuan-a05_2024_9.07kwh-140kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10017220-byd-destroyer-05",
+    "listing": "BYD Destroyer 05 2025 | 1.5 L / 18.3 kWh / 197 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:byd_destroyer-05_2025_dm-i-120km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:byd_destroyer-05_2025_dm-i-120km",
+    "candidates": [
+     "cn:byd_destroyer-05_2025_dm-i-120km",
+     "cn:byd_destroyer-05_2024_18.3kwh-145kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10730684-changan-qiyuan-a06",
+    "listing": "Changan Qiyuan A06 2023 | 1.5 L / 28.39 kWh / 163 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_qiyuan-a06_2026_erev-240"
+    ],
+    "catalogue_alternatives": [
+     "cn:changan_qiyuan-a06r_2025_erev-240"
+    ],
+    "status": "CLAIM_CONFLICT",
+    "primary": null,
+    "candidates": [
+     "cn:changan_qiyuan-a06_2026_erev-240"
+    ],
+    "conflicts": [
+     {
+      "field_name": "year",
+      "claimed": "2023",
+      "catalog_values": [
+       "2026"
+      ]
+     }
+    ],
+    "outcome": "candidate"
+   },
+   {
+    "url": "https://turbo.az/autos/10743833-changan-eado",
+    "listing": "Changan Eado 2025 | 1.5 L / 18.4 kWh / 215 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_eado-phev_2025_145km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_eado-phev_2025_145km",
+    "candidates": [
+     "cn:changan_eado-phev_2025_145km"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10612950-changan-cs-75-pro",
+    "listing": "Changan CS 75 Pro 2025 | 1.5 L / 192 a.g. / Benzin",
+    "expected": [
+     "cn:changan_cs75-pro_2025_1.5t-dct"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_cs75-pro_2025_1.5t-dct",
+    "candidates": [
+     "cn:changan_cs75-pro_2025_1.5t-dct",
+     "cn:changan_cs75_2025_jl473zq7-7dct",
+     "cn:changan_cs75_2024_jl473zq7-6mt",
+     "cn:changan_cs75_2024_jl473zq7-7dct"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10738355-changan-uni-z",
+    "listing": "Changan Uni-Z 2025 | 1.5 L / 18.4 kWh / 215 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_uni-z-phev_2025_125km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_uni-z-phev_2025_125km",
+    "candidates": [
+     "cn:changan_uni-z-phev_2025_125km",
+     "cn:changan_uni-z-phev_2024_18.4kwh-158kw",
+     "cn:changan_uni-z-phev_2026_18.4kwh-160kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10650770-changan-cs-55-plus",
+    "listing": "Changan CS 55 Plus 2026 | 1.5 L / 192 a.g. / Benzin",
+    "expected": [
+     "cn:changan_cs55-plus_2026_1.5t-dct"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_cs55-plus_2026_1.5t-dct",
+    "candidates": [
+     "cn:changan_cs55-plus_2026_1.5t-dct",
+     "cn:changan_cs55-plus_2025_jl473zqd-7dct"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10603959-changan-cs-55-plus",
+    "listing": "Changan CS 55 Plus 2026 | 1.5 L / 192 a.g. / Benzin",
+    "expected": [
+     "cn:changan_cs55-plus_2026_1.5t-dct"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_cs55-plus_2026_1.5t-dct",
+    "candidates": [
+     "cn:changan_cs55-plus_2026_1.5t-dct",
+     "cn:changan_cs55-plus_2025_jl473zqd-7dct"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10736390-changan-nevo-a05",
+    "listing": "Changan Nevo A05 2025 | 1.5 L / 18.4 kWh / 215 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_nevo-a05_2025_145"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_nevo-a05_2025_145",
+    "candidates": [
+     "cn:changan_nevo-a05_2025_145",
+     "cn:changan_qiyuan-a05_2024_18.4kwh-158kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10536975-changan-cs-75-plus",
+    "listing": "Changan CS 75 Plus 2026 | 1.5 L / 185 a.g. / Benzin",
+    "expected": [
+     "cn:changan_cs75-plus_2026_1.5t-8at"
+    ],
+    "catalogue_alternatives": [
+     "cn:changan_cs75-plus_2025_jl473zq7-8at"
+    ],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_cs75-plus_2025_jl473zq7-8at",
+    "candidates": [
+     "cn:changan_cs75-plus_2025_jl473zq7-8at"
+    ],
+    "conflicts": [],
+    "outcome": "closest_official_alternative"
+   },
+   {
+    "url": "https://turbo.az/autos/10667087-changan-cs-75-plus",
+    "listing": "Changan CS 75 Plus 2026 | 1.5 L / 185 a.g. / Benzin",
+    "expected": [
+     "cn:changan_cs75-plus_2026_1.5t-8at"
+    ],
+    "catalogue_alternatives": [
+     "cn:changan_cs75-plus_2025_jl473zq7-8at"
+    ],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_cs75-plus_2025_jl473zq7-8at",
+    "candidates": [
+     "cn:changan_cs75-plus_2025_jl473zq7-8at"
+    ],
+    "conflicts": [],
+    "outcome": "closest_official_alternative"
+   },
+   {
+    "url": "https://turbo.az/autos/10744031-changan-uni-v",
+    "listing": "Changan Uni-V 2026 | 1.5 L / 192 a.g. / Benzin",
+    "expected": [
+     "cn:changan_uni-v_2026_1.5t-dct"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_uni-v_2026_1.5t-dct",
+    "candidates": [
+     "cn:changan_uni-v_2026_1.5t-dct"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10604255-byd-qin-plus",
+    "listing": "BYD Qin Plus 2025 | 1.5 L / 15.9 kWh / 197 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:byd_qin-plus_2025_dm5-120km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:byd_qin-plus_2025_dm5-120km",
+    "candidates": [
+     "cn:byd_qin-plus_2025_dm5-120km",
+     "cn:byd_qin-plus-dm-i_2026_15.87kwh-120kw"
+    ],
+    "conflicts": [
+     {
+      "field_name": "power",
+      "claimed": "197 a.g.",
+      "catalog_values": [
+       "163 a.g. (120 kW)"
+      ]
+     }
+    ],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10652522-byd-song-plus-dm-i",
+    "listing": "BYD Song Plus DM-İ 2024 | 1.5 L / 18.3 kWh / 331 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:byd_song-plus-dm-i_2024_110km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:byd_song-plus-dm-i_2024_110km",
+    "candidates": [
+     "cn:byd_song-plus-dm-i_2024_110km",
+     "cn:byd_song-plus-dm-i_2023_18.3kwh-145kw",
+     "cn:byd_song-plus-dm-i_2025_18.3kwh-160kw"
+    ],
+    "conflicts": [
+     {
+      "field_name": "power",
+      "claimed": "331 a.g.",
+      "catalog_values": [
+       "197 a.g. (145 kW)",
+       "218 a.g. (160 kW)"
+      ]
+     }
+    ],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10747015-changan-deepal-s07",
+    "listing": "Changan Deepal S07 2025 | 1.5 L / 31.73 kWh / 238 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_deepal-s07_2025_erev-215"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_deepal-s07_2025_erev-215",
+    "candidates": [
+     "cn:changan_deepal-s07_2025_erev-215",
+     "cn:changan_deepal-s07_2024_31.73kwh-175kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10315170-changan-qiyuan-a06r",
+    "listing": "Changan Qiyuan A06R 2025 | 1.5 L / 28.39 kWh / 325 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_qiyuan-a06r_2025_erev-240"
+    ],
+    "catalogue_alternatives": [
+     "cn:changan_qiyuan-a06_2026_erev-240"
+    ],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_qiyuan-a06r_2025_erev-240",
+    "candidates": [
+     "cn:changan_qiyuan-a06r_2025_erev-240"
+    ],
+    "conflicts": [
+     {
+      "field_name": "power",
+      "claimed": "325 a.g.",
+      "catalog_values": [
+       "163 a.g. (120 kW)"
+      ]
+     }
+    ],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10588616-changan-qiyuan-q07",
+    "listing": "Changan Qiyuan Q07 2025 | 1.5 L / 21.5 kWh / 224 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_qiyuan-q07_2025_145"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_qiyuan-q07_2025_145",
+    "candidates": [
+     "cn:changan_qiyuan-q07_2025_145",
+     "cn:changan_qiyuan-q07_2026_145"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10675073-changan-qiyuan-q07",
+    "listing": "Changan Qiyuan Q07 2026 | 1.5 L / 21.5 kWh / 224 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_qiyuan-q07_2026_145"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_qiyuan-q07_2026_145",
+    "candidates": [
+     "cn:changan_qiyuan-q07_2026_145",
+     "cn:changan_qiyuan-q07_2025_145"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10076984-changan-deepal-s07",
+    "listing": "Changan Deepal S07 2025 | 1.5 L / 39.05 kWh / 258 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_deepal-s07_2025_erev-285"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:changan_deepal-s07_2025_erev-285",
+    "candidates": [
+     "cn:changan_deepal-s07_2025_erev-285",
+     "cn:changan_deepal-s07_2024_39.05kwh-190kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10482266-toyota-corolla-cross",
+    "listing": "Toyota Corolla Cross 2026 | 2.0 L / 197 a.g. / Hibrid",
+    "expected": [
+     "cn:toyota_corolla-cross_2026_2.0-hev"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:toyota_corolla-cross_2026_2.0-hev",
+    "candidates": [
+     "cn:toyota_corolla-cross_2026_2.0-hev"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10727942-changan-nevo-q06",
+    "listing": "Changan Nevo Q06 2026 | 1.5 L / 28.4 kWh / 367 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_nevo-q06_2026_erev"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_nevo-q06_2026_erev",
+    "candidates": [
+     "cn:changan_nevo-q06_2026_erev"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10330527-zeekr-x",
+    "listing": "ZEEKR X 2026 | 69 kWh / 272 a.g. / Elektro",
+    "expected": [
+     "cn:zeekr_x_2026_rwd-200kw"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:zeekr_x_2026_rwd-200kw",
+    "candidates": [
+     "cn:zeekr_x_2026_rwd-200kw"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10741004-byd-leopard-7",
+    "listing": "BYD Leopard 7 2025 | 1.5 L / 35.6 kWh / 490 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:byd_leopard-7_2025_phev-4wd-190km"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:byd_leopard-7_2025_phev-4wd-190km",
+    "candidates": [
+     "cn:byd_leopard-7_2025_phev-4wd-190km"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/9741620-changan-deepal-s09",
+    "listing": "Changan Deepal S09 2025 | 1.5 L / 40.18 kWh / 492 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:changan_deepal-s09_2025_erev-4wd"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:changan_deepal-s09_2025_erev-4wd",
+    "candidates": [
+     "cn:changan_deepal-s09_2025_erev-4wd"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10323535-lynk-co-900",
+    "listing": "Lynk & Co 900 2026 | 1.5 L / 721 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:lynk-co_900_2026_1.5t-phev"
+    ],
+    "catalogue_alternatives": [],
+    "status": "MULTIPLE_CANDIDATES",
+    "primary": "cn:lynk-co_900_2026_1.5t-phev",
+    "candidates": [
+     "cn:lynk-co_900_2026_1.5t-phev",
+     "cn:lynk-co_900_2025_44.85kwh-390kw-awd"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10440730-zeekr-001",
+    "listing": "ZEEKR 001 2026 | 103 kWh / 925 a.g. / Elektro",
+    "expected": [
+     "cn:zeekr_001_2026_103kwh-awd"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:zeekr_001_2026_103kwh-awd",
+    "candidates": [
+     "cn:zeekr_001_2026_103kwh-awd"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   },
+   {
+    "url": "https://turbo.az/autos/10547402-zeekr-8x",
+    "listing": "ZEEKR 8X 2026 | 2.0 L / 55 kWh / 898 a.g. / Plug-in Hibrid",
+    "expected": [
+     "cn:zeekr_8x_2026_55kwh"
+    ],
+    "catalogue_alternatives": [],
+    "status": "EXACT_MATCH",
+    "primary": "cn:zeekr_8x_2026_55kwh",
+    "candidates": [
+     "cn:zeekr_8x_2026_55kwh"
+    ],
+    "conflicts": [],
+    "outcome": "primary"
+   }
+  ]
+ },
  "integrity": {
   "quick_check": "ok",
   "foreign_key_violations": 0
  },
- "finished_at": "2026-10-04T17:47:08+00:00",
+ "finished_at": "2026-10-04T18:17:21+00:00",
  "ok": true
 }

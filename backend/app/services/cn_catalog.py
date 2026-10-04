@@ -246,6 +246,18 @@ WORDS = {
     "BEV": ("Электромобиль (BEV)", "Elektromobil (BEV)", "Battery electric (BEV)"),
     "NA": ("Атмосферный", "Atmosfer", "Naturally aspirated"),
     "T": ("Турбонаддув", "Turbo", "Turbocharged"),
+    "turbo": ("Турбонаддув", "Turbo", "Turbocharged"),
+    "LFP": (
+        "LFP (литий-железо-фосфат)",
+        "LFP (litium-dəmir-fosfat)",
+        "LFP (lithium iron phosphate)",
+    ),
+    "NCM": (
+        "NCM (никель-кобальт-марганец)",
+        "NCM (nikel-kobalt-manqan)",
+        "NCM (nickel cobalt manganese)",
+    ),
+    "Li-ion": ("Литий-ионная", "Litium-ion", "Lithium-ion"),
     "PMSM": (
         "Синхронный с постоянными магнитами",
         "Daimi maqnitli sinxron",
