@@ -64,6 +64,12 @@ class Settings(BaseSettings):
     garage_recall_job: bool = False
     # The AI mechanic (product phase, stage 3). Unset: on in development/test, off in production.
     ai_mechanic_v1: bool | None = None
+    # The owners club (product phase, stage 4). Unset: on in development/test, off in production.
+    owners_club_v1: bool | None = None
+    club_ai_moderation: bool = False
+    club_review_threshold: int = Field(default=5, ge=2, le=1000)
+    club_report_threshold: int = Field(default=3, ge=1, le=100)
+    club_media_dir: str = ".localdata/club_media"
     # Links in messages to users (email confirmation, password reset).
     public_app_url: str = "http://127.0.0.1:8010/preview/"
     # Claude API key from the environment (AUTOEXPERT_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY);

@@ -206,3 +206,12 @@ export async function downloadFile(path, filename) {
   link.href = url; link.download = filename; link.click();
   setTimeout(() => URL.revokeObjectURL(url), 30000);
 }
+
+export async function apiForm(path, formData) {
+  const headers = new Headers();
+  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  const response = await fetch(endpoint(path), {method: 'POST', body: formData, headers});
+  const payload = await readPayload(response);
+  if (!response.ok) throw new ApiError(response.status, errorMessage(payload), payload);
+  return payload;
+}
