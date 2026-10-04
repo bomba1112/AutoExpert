@@ -152,7 +152,16 @@ JOBS = {
     "evap_vapor_lines": ("Трубки улавливания паров топлива", "Yanacaq buxarı boruları"), "fuel_lines": ("Топливные трубки", "Yanacaq boruları"),
     "fluid_levels": ("Уровни жидкостей", "Maye səviyyələri"), "gas_struts": ("Газовые упоры", "Qaz dayaqları"),
     "idle_speed": ("Обороты холостого хода", "Boş gediş dövrləri"), "inverter_coolant": ("Охлаждающая жидкость инвертора", "İnvertorun soyuducu mayesi"),
-    "key_fob_battery": ("Батарейка ключа", "Açar batareyası"), "steering_linkage": ("Рулевые тяги и шарниры", "Sükan çubuqları və oynaqları"),
+    "key_fob_battery": ("Батарейка ключа", "Açar batareyası"),
+    "cooling_system_hoses": ("Шланги системы охлаждения", "Soyutma sisteminin şlanqları"),
+    "cv_joints": ("ШРУСы (шарниры равных угловых скоростей)", "Bərabər bucaq sürətli oynaqlar"),
+    "driveshaft_boots": ("Пыльники приводных валов", "Ötürücü val tozluqları"),
+    "high_voltage_wiring": ("Высоковольтная проводка", "Yüksək gərginlikli naqillər"),
+    "intercooler_coolant": ("Охлаждающая жидкость интеркулера", "İnterkulerin soyuducu mayesi"),
+    "motor_coolant": ("Охлаждающая жидкость электромотора", "Elektrik mühərrikinin soyuducu mayesi"),
+    "motor_cooling_oil": ("Масло охлаждения электромотора", "Elektrik mühərrikinin soyutma yağı"),
+    "pcv_valve": ("Клапан вентиляции картера (PCV)", "Karter ventilyasiya klapanı (PCV)"),
+    "supercharger_drive_belt": ("Ремень привода нагнетателя", "Kompressorun ötürücü kəməri"), "steering_linkage": ("Рулевые тяги и шарниры", "Sükan çubuqları və oynaqları"),
 }
 ACTIONS = {"REPLACE": ("замена", "dəyişmə"), "INSPECT": ("проверка", "yoxlama"), "ROTATE": ("перестановка", "yerdəyişmə"),
            "ADJUST": ("регулировка", "tənzimləmə"), "CLEAN": ("очистка", "təmizləmə")}
