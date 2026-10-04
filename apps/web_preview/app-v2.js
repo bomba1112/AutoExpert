@@ -1,3 +1,4 @@
+import {EN, pickText, deviceLanguage} from './en-text.js?v=0.10.0';
 import {
   ApiError,
   api,
@@ -14,23 +15,28 @@ import {
   executeResearchContinuation,
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
-import {createBuyerViews} from './buyer-views.js?v=0.9.0';
-import {createCatalogViews} from './catalog-views.js?v=0.9.4';
-import {createVinHistoryViews} from './vin-history-views.js?v=0.9.0';
-import {createListingViews} from './listing-views.js?v=0.9.0';
-import {createUsTechViews} from './us-tech-views.js?v=0.9.4';
+import {createBuyerViews} from './buyer-views.js?v=0.10.0';
+import {createCatalogViews} from './catalog-views.js?v=0.10.0';
+import {createVinHistoryViews} from './vin-history-views.js?v=0.10.0';
+import {createListingViews} from './listing-views.js?v=0.10.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.10.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
 const LANGUAGE_KEY = 'autoexpert.ui.language';
+// product phase, stage 1: RU, AZ and EN; the default follows the device (en -> EN, ru -> RU, az -> AZ, else EN)
+const SUPPORTED_LANGUAGES = ['en', 'ru', 'az'];
+function storedLanguage() {
+  try { const value = localStorage.getItem(LANGUAGE_KEY); return SUPPORTED_LANGUAGES.includes(value) ? value : null; } catch { return null; }
+}
 const LAST_CHECK_KEY = 'autoexpert.v2.last_check';
 const LAST_RESEARCH_JOB_KEY = 'autoexpert.v2.last_research_job';
 const SIMULATE_PAYWALL_KEY = 'autoexpert.developer.simulate_user_paywall';
 const researchContinuationsInFlight = new Set();
 
 const state = {
-  language: localStorage.getItem(LANGUAGE_KEY) === 'en' ? 'ru' : localStorage.getItem(LANGUAGE_KEY) || null,
-  pendingLanguage: localStorage.getItem(LANGUAGE_KEY) || 'ru',
+  language: storedLanguage(),
+  pendingLanguage: storedLanguage() || deviceLanguage(),
   copy: {},
   meta: null,
   simulateUserPaywall: false,
@@ -78,7 +84,7 @@ window.addEventListener('hashchange', () => void route());
 window.addEventListener('DOMContentLoaded', () => void boot());
 
 async function boot() {
-  await loadLanguage(state.language || 'ru');
+  await loadLanguage(state.language || deviceLanguage());
   try {
     state.meta = await fetchMeta();
   } catch (error) {
@@ -159,7 +165,7 @@ async function fetchMeta() {
 
 async function loadLanguage(language) {
   const supported = ['az', 'ru', 'en'];
-  const safe = supported.includes(language) ? language : 'ru';
+  const safe = supported.includes(language) ? language : 'en';
   const response = await fetch(`/preview/locales/${safe}.json?v=0.8.1`);
   if (!response.ok) throw new Error('Localization could not be loaded');
   state.copy = await response.json();
@@ -175,7 +181,7 @@ function t(key, values = {}) {
 }
 
 function renderLanguage() {
-  const chosen = state.pendingLanguage || state.language || 'ru';
+  const chosen = state.pendingLanguage || state.language || deviceLanguage();
   root.innerHTML = `
     <main class="language-screen">
       <div class="brand-mark" aria-hidden="true"></div>
@@ -184,6 +190,7 @@ function renderLanguage() {
       <h1>${esc(t('languageTitle'))}</h1>
       <p class="lead">${esc(t('languageSubtitle'))}</p>
       <div class="language-grid" role="radiogroup" aria-label="Language">
+        ${languageChoice('en', 'English', chosen)}
         ${languageChoice('az', 'Azərbaycan dili', chosen)}
         ${languageChoice('ru', 'Русский', chosen)}
       </div>
@@ -983,9 +990,9 @@ function layout(content, {active = '', wide = false, nav = true} = {}) {
         <button class="brand ghost-button" data-action="home" aria-label="${esc(t('navHome'))}">
           <span class="brand-car" aria-hidden="true"><svg viewBox="0 0 50 28"><path d="m5 16 6-10h25l8 10 3 2v7H3v-7Z"/><path d="M14 9h19l6 8H9ZM24 9v8"/><circle cx="12" cy="23" r="4"/><circle cx="38" cy="23" r="4"/></svg></span><span><strong><em>AUTO</em> EXPERT</strong><small>Azerbaijan</small></span>
         </button>
-        <div class="header-actions"><div class="language-switch">${['az','ru'].map(code => `<button data-action="buyer-language" data-language="${code}" class="${state.language === code ? 'selected' : ''}">${code.toUpperCase()}</button>`).join('')}</div><button class="profile-button" data-action="profile" aria-label="${state.language==='az'?'Profil':'Профиль'}">●</button></div>
+        <div class="header-actions"><div class="language-switch">${['en','az','ru'].map(code => `<button data-action="buyer-language" data-language="${code}" class="${state.language === code ? 'selected' : ''}">${code.toUpperCase()}</button>`).join('')}</div><button class="profile-button" data-action="profile" aria-label="${pickText(state.language, 'Профиль', 'Profil')}">●</button></div>
       </header>
-      ${state.meta?.developer?.enabled ? `<details class="developer-drawer"><summary>${esc(state.language === 'ru' ? 'Настройки тестирования' : state.language === 'az' ? 'Sınaq parametrləri' : 'Test settings')}</summary>${developerToolbar()}</details>` : ''}
+      ${state.meta?.developer?.enabled ? `<details class="developer-drawer"><summary>${esc(state.language === 'ru' ? 'Настройки тестирования' : pickText(state.language, 'Test settings', 'Sınaq parametrləri'))}</summary>${developerToolbar()}</details>` : ''}
       <main class="screen ${wide ? 'wide' : ''}">${content}</main>
       ${nav ? bottomNav(active) : ''}
     </div>`;
@@ -1006,8 +1013,8 @@ function bottomNav(active) {
   return `
     <nav class="bottom-nav" aria-label="Primary">
       <button class="${active === 'home' ? 'active' : ''}" data-action="home"><span class="nav-icon">⌂</span><span>${esc(t('navHome'))}</span></button>
-      <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(state.language === 'ru' ? 'Сравнение' : state.language === 'az' ? 'Müqayisə' : 'Compare')}</span></button>
-      <button class="${active === 'check' ? 'active' : ''}" data-action="buyer-check"><span class="nav-icon">⌕</span><span>${esc(state.language==='az'?'Yoxla':'Проверить')}</span></button>
+      <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(state.language === 'ru' ? 'Сравнение' : pickText(state.language, 'Compare', 'Müqayisə'))}</span></button>
+      <button class="${active === 'check' ? 'active' : ''}" data-action="buyer-check"><span class="nav-icon">⌕</span><span>${esc(pickText(state.language, 'Проверить', 'Yoxla'))}</span></button>
       <button class="${active === 'reports' ? 'active' : ''}" data-action="reports"><span class="nav-icon">▤</span><span>${esc(t('navReports'))}</span></button>
     </nav>`;
 }
@@ -1021,7 +1028,7 @@ function metric(value, label) {
 }
 
 async function ensureSession() {
-  await ensureDemoSession(state.language || 'ru');
+  await ensureDemoSession(state.language || deviceLanguage());
 }
 
 async function handleAction(target) {

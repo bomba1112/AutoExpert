@@ -30,7 +30,10 @@ def main(target: str) -> int:
     if not db.execute("select name from sqlite_master where type='table' and name='content_translations'").fetchone():
         raise SystemExit("content_translations missing: run the f088 migration first")
     now = datetime.now(UTC).isoformat()
-    existing = {(k, h): (ru, az) for k, h, ru, az in db.execute("select kind, source_hash, text_ru, text_az from content_translations")}
+    if "text_en" not in {r[1] for r in db.execute("pragma table_info(content_translations)")}:
+        raise SystemExit("content_translations.text_en missing: run the f089 migration first")
+    existing = {(k, h): (ru, az, en) for k, h, ru, az, en in
+                db.execute("select kind, source_hash, text_ru, text_az, text_en from content_translations")}
     inserted = same = 0
     changes = []
     for r in rows:
@@ -38,15 +41,17 @@ def main(target: str) -> int:
         status = "REVIEWED" if r.get("reviewed") else "CHECKED"
         if key not in existing:
             db.execute("insert into content_translations (id, created_at, updated_at, kind, source_hash, source_text, text_ru, text_az, "
-                       "method, glossary_version, status) values (?,?,?,?,?,?,?,?,?,?,?)",
-                       (str(uuid4()), now, now, r["kind"], r["hash"], r["text"], r["ru"], r["az"], r["method"], r["glossary_version"], status))
+                       "text_en, method, glossary_version, status) values (?,?,?,?,?,?,?,?,?,?,?,?)",
+                       (str(uuid4()), now, now, r["kind"], r["hash"], r["text"], r["ru"], r["az"], r["en"], r["method"],
+                        r["glossary_version"], status))
             inserted += 1
-        elif existing[key] == (r["ru"], r["az"]):
+        elif existing[key] == (r["ru"], r["az"], r["en"]):
             same += 1
         else:
-            db.execute("update content_translations set text_ru=?, text_az=?, method=?, glossary_version=?, status=?, updated_at=? "
-                       "where kind=? and source_hash=?", (r["ru"], r["az"], r["method"], r["glossary_version"], status, now, *key))
-            changes.append({"kind": r["kind"], "hash": r["hash"], "old": existing[key], "new": [r["ru"], r["az"]]})
+            db.execute("update content_translations set text_ru=?, text_az=?, text_en=?, method=?, glossary_version=?, status=?, "
+                       "updated_at=? where kind=? and source_hash=?",
+                       (r["ru"], r["az"], r["en"], r["method"], r["glossary_version"], status, now, *key))
+            changes.append({"kind": r["kind"], "hash": r["hash"], "old": existing[key], "new": [r["ru"], r["az"], r["en"]]})
     db.commit()
     total = db.execute("select count(*) from content_translations").fetchone()[0]
     check = db.execute("pragma quick_check").fetchone()[0]

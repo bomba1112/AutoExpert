@@ -1,10 +1,11 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 import {api, privateImageUrl} from './api.js?v=0.8.1';
 
 // VIN-history checkout is intentionally separate from the legacy demo dossier.
 // The server decides entitlement and which provider facts can be displayed.
 export function createVinHistoryViews({root, state, layout, go, esc, ensureSession, showToast, maskVin, formatMoney}) {
   const assetUrls = new Map();
-  const l = (ru, az) => state.language === 'az' ? az : ru;
+  const l = (ru, az, en) => pickText(state.language, ru, az, en);
   const qaMode = () => state.meta?.qa_mode === true;
   const title = (check) => [
     check.vehicle_identity?.model_year || check.vehicle_identity?.year,

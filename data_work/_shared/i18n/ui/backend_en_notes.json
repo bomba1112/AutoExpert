@@ -1,0 +1,1221 @@
+{
+  "not_ui": [
+    {
+      "ru": "(?<!\\d)(\\d[\\d ]{0,5})\\s*(?:км|km)",
+      "en": "(?<!\\d)(\\d[\\d ]{0,5})\\s*(?:km|kilometers?)",
+      "where": [
+        "services/catalog_buyer.py:1818",
+        "api/routes/buyer.py:361"
+      ],
+      "why": "regex for '<number> km' in a chat question (catalog_buyer.py:1818, buyer.py:361); the code reads the number as kilometers, so the English pattern keeps km and does not add miles"
+    },
+    {
+      "ru": "двиг",
+      "en": "engine",
+      "where": [
+        "services/catalog_buyer.py:1799"
+      ],
+      "why": "topic keyword stem matched in the chat question (catalog_buyer.py:1799)"
+    },
+    {
+      "ru": "мотор",
+      "en": "motor",
+      "where": [
+        "services/catalog_buyer.py:1799"
+      ],
+      "why": "topic keyword matched in the chat question (catalog_buyer.py:1799)"
+    },
+    {
+      "ru": "короб",
+      "en": "transmission",
+      "where": [
+        "services/catalog_buyer.py:1800"
+      ],
+      "why": "topic keyword stem matched in the chat question (catalog_buyer.py:1800)"
+    },
+    {
+      "ru": "расход",
+      "en": "fuel",
+      "where": [
+        "services/catalog_buyer.py:1801"
+      ],
+      "why": "topic keyword matched in the chat question (catalog_buyer.py:1801)"
+    },
+    {
+      "ru": "месяц",
+      "en": "month",
+      "where": [
+        "services/catalog_buyer.py:1801",
+        "api/routes/buyer.py:367"
+      ],
+      "why": "topic keyword matched in the chat question (catalog_buyer.py:1801, buyer.py:367)"
+    },
+    {
+      "ru": "багаж",
+      "en": "cargo",
+      "where": [
+        "services/catalog_buyer.py:1802"
+      ],
+      "why": "topic keyword stem matched in the chat question (catalog_buyer.py:1802)"
+    },
+    {
+      "ru": "кузов",
+      "en": "body",
+      "where": [
+        "services/catalog_buyer.py:1802"
+      ],
+      "why": "topic keyword matched in the chat question (catalog_buyer.py:1802)"
+    },
+    {
+      "ru": "месяц|month|ayda|aylıq",
+      "en": "month|monthly",
+      "where": [
+        "services/catalog_buyer.py:1819"
+      ],
+      "why": "regex alternation for 'per month' in a chat question (catalog_buyer.py:1819)"
+    },
+    {
+      "ru": "US technical facts for one configuration (next-stage prompt, stage C).\n\nAssembles the scoped rows of the US technical database (technical_evidence, known_issues,\nmaintenance_schedule_items) whose applicability matches one configuration: line, generation,\nmodel year, engine family, powertrain, drive, model designation, edition and body, trim. Rules:\n- the most specific level wins: configuration -> engine family -> generation; within a level a\n  row that names the configuration's model designation wins over a general one, and a FACT wins\n  over a SECONDARY_NOTE stated for the same trim / designation;\n- FACT is shown; SECONDARY_NOTE is shown marked \"по данным справочников\"; OWNER_REPORTS only in\n  the weak points (\"владельцы сообщают\"); HIDDEN_CONFLICT never;\n- metric units (conversions only through app.services.tech_units); every value keeps its source;\n- an empty field or category is left out (no \"no data\" rows).\nThe database is only read. Served only while the show_us_tech_facts flag is on (preview/dev by\ndefault, off in production).\n",
+      "en": "US technical facts for one configuration (next-stage prompt, stage C).\n\nAssembles the scoped rows of the US technical database (technical_evidence, known_issues,\nmaintenance_schedule_items) whose applicability matches one configuration: line, generation,\nmodel year, engine family, powertrain, drive, model designation, edition and body, trim. Rules:\n- the most specific level wins: configuration -> engine family -> generation; within a level a\n  row that names the configuration's model designation wins over a general one, and a FACT wins\n  over a SECONDARY_NOTE stated for the same trim / designation;\n- FACT is shown; SECONDARY_NOTE is shown marked \"per reference sources\"; OWNER_REPORTS only in\n  the weak points (\"owners report\"); HIDDEN_CONFLICT never;\n- metric units (conversions only through app.services.tech_units); every value keeps its source;\n- an empty field or category is left out (no \"no data\" rows).\nThe database is only read. Served only while the show_us_tech_facts flag is on (preview/dev by\ndefault, off in production).\n",
+      "where": [
+        "services/us_tech_facts.py:2"
+      ],
+      "why": "module docstring of us_tech_facts.py (developer text); English given with the quoted Russian labels translated"
+    },
+    {
+      "ru": "Fuel shown in the app (owner rule 2026-10-04).\n\n1. The manufacturer's octane from the US manuals (AKI scale) is shown as our AI grade by a fixed\n   table (AKI_TO_AI), labelled \"по требованию производителя\".\n2. A separate line is the Auto Expert recommendation for AZ / CIS fuel: for a direct-injection\n   engine (EPA eng_dscr \"SIDI\", or a source naming GDI / direct injection) and for a turbo or a\n   supercharger (EPA tCharger / sCharger) \"не ниже АИ-95\"; a manufacturer requirement above it\n   (AI-95 / AI-98) raises the recommendation to it.\n3. The fuel field is never empty for a gasoline car: without the manufacturer's octane only the\n   recommendation is shown.\n4. The recommendation is a rule of this module (a derived line), never a fact of the database,\n   and it is never labelled as the manufacturer's requirement.\n\nRules of this module beyond the owner's text (stated so they can be changed in one place):\n- an engine without direct injection and without boost, as the EPA record or the source shows it\n  (a port injection named: MPI, SFI, EFI, multi-point), gets \"не ниже АИ-92\";\n- an engine whose injection is not known gets \"не ниже АИ-95\" (the safe side);\n- EPA \"Premium\" / \"Midgrade\" (the fuel the manufacturer states to the EPA) also raises the\n  recommendation to AI-95, so the recommendation never reads lower than the fuel shown next to it;\n- diesel, electric, hydrogen and natural-gas cars get no AI line; a flex-fuel car (E85) is a\n  gasoline car; a record whose combustion type is unspecified but whose fuel is gasoline gets the line.\n",
+      "en": "Fuel shown in the app (owner rule 2026-10-04).\n\n1. The manufacturer's octane from the US manuals (AKI scale) is shown as our AI grade by a fixed\n   table (AKI_TO_AI), labelled \"manufacturer requirement\".\n2. A separate line is the Auto Expert recommendation for AZ / CIS fuel: for a direct-injection\n   engine (EPA eng_dscr \"SIDI\", or a source naming GDI / direct injection) and for a turbo or a\n   supercharger (EPA tCharger / sCharger) \"AI-95 or higher\"; a manufacturer requirement above it\n   (AI-95 / AI-98) raises the recommendation to it.\n3. The fuel field is never empty for a gasoline car: without the manufacturer's octane only the\n   recommendation is shown.\n4. The recommendation is a rule of this module (a derived line), never a fact of the database,\n   and it is never labelled as the manufacturer's requirement.\n\nRules of this module beyond the owner's text (stated so they can be changed in one place):\n- an engine without direct injection and without boost, as the EPA record or the source shows it\n  (a port injection named: MPI, SFI, EFI, multi-point), gets \"AI-92 or higher\";\n- an engine whose injection is not known gets \"AI-95 or higher\" (the safe side);\n- EPA \"Premium\" / \"Midgrade\" (the fuel the manufacturer states to the EPA) also raises the\n  recommendation to AI-95, so the recommendation never reads lower than the fuel shown next to it;\n- diesel, electric, hydrogen and natural-gas cars get no AI line; a flex-fuel car (E85) is a\n  gasoline car; a record whose combustion type is unspecified but whose fuel is gasoline gets the line.\n",
+      "where": [
+        "services/fuel_advice.py:1"
+      ],
+      "why": "module docstring of fuel_advice.py (developer text); English given with the quoted Russian labels translated"
+    },
+    {
+      "ru": "(?P<n>\\d{1,3}(?:[\\s\\u00a0]\\d{3})+|\\d{3,7})\\s*(?P<u>km|км|kilometr|mile|mi|миль)\\b",
+      "en": "(?P<n>\\d{1,3}(?:[\\s\\u00a0,]\\d{3})+|\\d{3,7})\\s*(?P<u>km|kilometers?|miles?|mi)\\b",
+      "where": [
+        "services/listing_intake.py:47"
+      ],
+      "why": "MILEAGE regex in the listing parser (listing_intake.py:47)"
+    },
+    {
+      "ru": "Тойота",
+      "en": "Toyota",
+      "where": [
+        "services/listing_intake.py:98"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Хендай",
+      "en": "Hyundai",
+      "where": [
+        "services/listing_intake.py:99"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Хундай",
+      "en": "Hyundai",
+      "where": [
+        "services/listing_intake.py:100"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Шевроле",
+      "en": "Chevrolet",
+      "where": [
+        "services/listing_intake.py:101"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Мерседес",
+      "en": "Mercedes",
+      "where": [
+        "services/listing_intake.py:102"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Фольксваген",
+      "en": "Volkswagen",
+      "where": [
+        "services/listing_intake.py:103"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Киа",
+      "en": "Kia",
+      "where": [
+        "services/listing_intake.py:104"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "Ауди",
+      "en": "Audi",
+      "where": [
+        "services/listing_intake.py:105"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "БМВ",
+      "en": "BMW",
+      "where": [
+        "services/listing_intake.py:106"
+      ],
+      "why": "Cyrillic make spelling matched in a listing title (TITLE_MAKES)"
+    },
+    {
+      "ru": "тойота",
+      "en": "toyota",
+      "where": [
+        "services/listing_intake.py:109"
+      ],
+      "why": "MAKE_ALIASES key (Cyrillic make -> Latin make)"
+    },
+    {
+      "ru": "хендай",
+      "en": "hyundai",
+      "where": [
+        "services/listing_intake.py:110"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "хундай",
+      "en": "hyundai",
+      "where": [
+        "services/listing_intake.py:111"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "шевроле",
+      "en": "chevrolet",
+      "where": [
+        "services/listing_intake.py:112"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "мерседес",
+      "en": "mercedes",
+      "where": [
+        "services/listing_intake.py:113"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "фольксваген",
+      "en": "volkswagen",
+      "where": [
+        "services/listing_intake.py:114"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "киа",
+      "en": "kia",
+      "where": [
+        "services/listing_intake.py:115"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "ауди",
+      "en": "audi",
+      "where": [
+        "services/listing_intake.py:116"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "бмв",
+      "en": "bmw",
+      "where": [
+        "services/listing_intake.py:117"
+      ],
+      "why": "MAKE_ALIASES key"
+    },
+    {
+      "ru": "камри",
+      "en": "camry",
+      "where": [
+        "services/listing_intake.py:122"
+      ],
+      "why": "MODEL_ALIASES key (Cyrillic model -> Latin model)"
+    },
+    {
+      "ru": "королла",
+      "en": "corolla",
+      "where": [
+        "services/listing_intake.py:123"
+      ],
+      "why": "MODEL_ALIASES key"
+    },
+    {
+      "ru": "элантра",
+      "en": "elantra",
+      "where": [
+        "services/listing_intake.py:124"
+      ],
+      "why": "MODEL_ALIASES key"
+    },
+    {
+      "ru": "соната",
+      "en": "sonata",
+      "where": [
+        "services/listing_intake.py:125"
+      ],
+      "why": "MODEL_ALIASES key"
+    },
+    {
+      "ru": "спортейдж",
+      "en": "sportage",
+      "where": [
+        "services/listing_intake.py:126"
+      ],
+      "why": "MODEL_ALIASES key"
+    },
+    {
+      "ru": "круз",
+      "en": "cruze",
+      "where": [
+        "services/listing_intake.py:127"
+      ],
+      "why": "MODEL_ALIASES key"
+    },
+    {
+      "ru": "Марка",
+      "en": "Make",
+      "where": [
+        "services/listing_intake.py:53",
+        "providers/listings.py:120"
+      ],
+      "why": "turbo.az listing field label matched by the parser (listing_intake.py LABELS, providers/listings.py)"
+    },
+    {
+      "ru": "Модель",
+      "en": "Model",
+      "where": [
+        "services/listing_intake.py:54",
+        "providers/listings.py:121"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Год выпуска",
+      "en": "Year",
+      "where": [
+        "services/listing_intake.py:55",
+        "providers/listings.py:122"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Год",
+      "en": "Year",
+      "where": [
+        "services/listing_intake.py:55"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Объем двигателя",
+      "en": "Engine size",
+      "where": [
+        "services/listing_intake.py:56"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Тип топлива",
+      "en": "Fuel type",
+      "where": [
+        "services/listing_intake.py:57"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Тип кузова",
+      "en": "Body type",
+      "where": [
+        "services/listing_intake.py:60",
+        "providers/listings.py:129"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Рынок сборки",
+      "en": "Built for market",
+      "where": [
+        "services/listing_intake.py:61"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Рынок",
+      "en": "Market",
+      "where": [
+        "services/listing_intake.py:61",
+        "providers/listings.py:130"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Пробег",
+      "en": "Mileage",
+      "where": [
+        "services/listing_intake.py:63",
+        "providers/listings.py:127"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "VIN код",
+      "en": "VIN",
+      "where": [
+        "services/listing_intake.py:64"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "VIN-код",
+      "en": "VIN",
+      "where": [
+        "services/listing_intake.py:64"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Цвет",
+      "en": "Color",
+      "where": [
+        "services/listing_intake.py:66",
+        "providers/listings.py:126"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Количество владельцев",
+      "en": "Number of owners",
+      "where": [
+        "services/listing_intake.py:67"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Владельцев",
+      "en": "Owners",
+      "where": [
+        "services/listing_intake.py:67"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Состояние",
+      "en": "Condition",
+      "where": [
+        "services/listing_intake.py:68",
+        "providers/listings.py:131"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Описание",
+      "en": "Description",
+      "where": [
+        "services/listing_intake.py:69"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Тип продавца",
+      "en": "Seller type",
+      "where": [
+        "services/listing_intake.py:70"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Продавец",
+      "en": "Seller",
+      "where": [
+        "services/listing_intake.py:70"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "Номер объявления",
+      "en": "Listing ID",
+      "where": [
+        "services/listing_intake.py:71"
+      ],
+      "why": "turbo.az listing field label matched by the parser"
+    },
+    {
+      "ru": "а",
+      "en": "a",
+      "where": [
+        "services/listing_intake.py:131"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "б",
+      "en": "b",
+      "where": [
+        "services/listing_intake.py:132"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "в",
+      "en": "v",
+      "where": [
+        "services/listing_intake.py:133"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "г",
+      "en": "g",
+      "where": [
+        "services/listing_intake.py:134"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "д",
+      "en": "d",
+      "where": [
+        "services/listing_intake.py:135"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "е",
+      "en": "e",
+      "where": [
+        "services/listing_intake.py:136"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ё",
+      "en": "e",
+      "where": [
+        "services/listing_intake.py:137"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ж",
+      "en": "zh",
+      "where": [
+        "services/listing_intake.py:138"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "з",
+      "en": "z",
+      "where": [
+        "services/listing_intake.py:139"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "и",
+      "en": "i",
+      "where": [
+        "services/listing_intake.py:140"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "й",
+      "en": "i",
+      "where": [
+        "services/listing_intake.py:141"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "к",
+      "en": "k",
+      "where": [
+        "services/listing_intake.py:142"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "н",
+      "en": "n",
+      "where": [
+        "services/listing_intake.py:145"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "о",
+      "en": "o",
+      "where": [
+        "services/listing_intake.py:146"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "п",
+      "en": "p",
+      "where": [
+        "services/listing_intake.py:147"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "р",
+      "en": "r",
+      "where": [
+        "services/listing_intake.py:148"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "с",
+      "en": "s",
+      "where": [
+        "services/listing_intake.py:149"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "т",
+      "en": "t",
+      "where": [
+        "services/listing_intake.py:150"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "у",
+      "en": "u",
+      "where": [
+        "services/listing_intake.py:151"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ф",
+      "en": "f",
+      "where": [
+        "services/listing_intake.py:152"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "х",
+      "en": "kh",
+      "where": [
+        "services/listing_intake.py:153"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ц",
+      "en": "ts",
+      "where": [
+        "services/listing_intake.py:154"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ч",
+      "en": "ch",
+      "where": [
+        "services/listing_intake.py:155"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ш",
+      "en": "sh",
+      "where": [
+        "services/listing_intake.py:156"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "щ",
+      "en": "shch",
+      "where": [
+        "services/listing_intake.py:157"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ы",
+      "en": "y",
+      "where": [
+        "services/listing_intake.py:158"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "э",
+      "en": "e",
+      "where": [
+        "services/listing_intake.py:159"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "ю",
+      "en": "yu",
+      "where": [
+        "services/listing_intake.py:160"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "я",
+      "en": "ya",
+      "where": [
+        "services/listing_intake.py:161"
+      ],
+      "why": "Cyrillic-to-Latin TRANSLITERATION table entry (listing_intake.py:129); English value = the Latin output the table already uses"
+    },
+    {
+      "ru": "\\b(?:km|км|kilometr)\\b",
+      "en": "\\b(?:km|kilometers?)\\b",
+      "where": [
+        "services/listing_intake.py:262"
+      ],
+      "why": "regex: kilometer unit in a listing mileage value"
+    },
+    {
+      "ru": "\\b(?:mi|mile|миль)\\b",
+      "en": "\\b(?:mi|miles?)\\b",
+      "where": [
+        "services/listing_intake.py:264"
+      ],
+      "why": "regex: mile unit in a listing mileage value"
+    },
+    {
+      "ru": "\\b(\\d{1,2}[.,]\\d{1,2})\\s*(?:l|л|litr|литр)?\\b",
+      "en": "\\b(\\d{1,2}[.,]\\d{1,2})\\s*(?:l|liters?|litres?)?\\b",
+      "where": [
+        "services/listing_intake.py:284"
+      ],
+      "why": "regex: engine displacement in liters in a listing value"
+    },
+    {
+      "ru": "(?:,|\\s)(\\d[.,]\\d)\\s*(?:L|л)\\b",
+      "en": "(?:,|\\s)(\\d[.,]\\d)\\s*(?:L)\\b",
+      "where": [
+        "services/listing_intake.py:416"
+      ],
+      "why": "regex: engine displacement in a listing title"
+    },
+    {
+      "ru": "официальный дилер",
+      "en": "official dealer",
+      "where": [
+        "services/listing_intake.py:451"
+      ],
+      "why": "lowercase phrase searched in listing text (listing_intake.py:451)"
+    },
+    {
+      "ru": "бенз",
+      "en": "gas",
+      "where": [
+        "services/listing_intake.py:291"
+      ],
+      "why": "fuel keyword stem in a listing value -> GASOLINE"
+    },
+    {
+      "ru": "дизел",
+      "en": "diesel",
+      "where": [
+        "services/listing_intake.py:294"
+      ],
+      "why": "fuel keyword stem in a listing value -> DIESEL"
+    },
+    {
+      "ru": "электр",
+      "en": "electric",
+      "where": [
+        "services/listing_intake.py:297"
+      ],
+      "why": "fuel keyword stem in a listing value -> ELECTRICITY"
+    },
+    {
+      "ru": "робот",
+      "en": "automated manual",
+      "where": [
+        "services/listing_intake.py:311"
+      ],
+      "why": "transmission keyword in a listing value -> AMT_UNSPECIFIED"
+    },
+    {
+      "ru": "передн",
+      "en": "front",
+      "where": [
+        "services/listing_intake.py:316"
+      ],
+      "why": "drivetrain keyword stem in a listing value -> FWD"
+    },
+    {
+      "ru": "задн",
+      "en": "rear",
+      "where": [
+        "services/listing_intake.py:321"
+      ],
+      "why": "drivetrain keyword stem in a listing value -> RWD"
+    },
+    {
+      "ru": "полн",
+      "en": "all-wheel",
+      "where": [
+        "services/listing_intake.py:326"
+      ],
+      "why": "drivetrain keyword stem in a listing value -> AWD_OR_4WD"
+    },
+    {
+      "ru": "седан",
+      "en": "sedan",
+      "where": [
+        "services/listing_intake.py:332"
+      ],
+      "why": "body keyword in a listing value -> SEDAN"
+    },
+    {
+      "ru": "кроссов",
+      "en": "crossover",
+      "where": [
+        "services/listing_intake.py:335"
+      ],
+      "why": "body keyword stem in a listing value -> CROSSOVER"
+    },
+    {
+      "ru": "хетч",
+      "en": "hatch",
+      "where": [
+        "services/listing_intake.py:337"
+      ],
+      "why": "body keyword stem in a listing value -> HATCHBACK"
+    },
+    {
+      "ru": "купе",
+      "en": "coupe",
+      "where": [
+        "services/listing_intake.py:339"
+      ],
+      "why": "body keyword in a listing value -> COUPE"
+    },
+    {
+      "ru": "универсал",
+      "en": "wagon",
+      "where": [
+        "services/listing_intake.py:341"
+      ],
+      "why": "body keyword in a listing value -> WAGON"
+    },
+    {
+      "ru": "автомат",
+      "en": "automatic",
+      "where": [
+        "services/listing_intake.py:303"
+      ],
+      "why": "transmission keyword in a listing value -> AUTOMATIC_UNSPECIFIED"
+    },
+    {
+      "ru": "механ",
+      "en": "manual",
+      "where": [
+        "services/listing_intake.py:305"
+      ],
+      "why": "transmission keyword stem in a listing value -> MANUAL"
+    },
+    {
+      "ru": "США",
+      "en": "USA",
+      "where": [
+        "services/listing_intake.py:346"
+      ],
+      "why": "market keyword in a listing value -> US"
+    },
+    {
+      "ru": "Америка",
+      "en": "America",
+      "where": [
+        "services/listing_intake.py:346"
+      ],
+      "why": "market keyword in a listing value -> US"
+    },
+    {
+      "ru": "месяц|month|\\bay\\b|ayda|aylıq",
+      "en": "month|monthly",
+      "where": [
+        "api/routes/buyer.py:360"
+      ],
+      "why": "regex alternation for 'per month' in a chat question (buyer.py:360)"
+    },
+    {
+      "ru": "почему",
+      "en": "why",
+      "where": [
+        "api/routes/buyer.py:339"
+      ],
+      "why": "comparison keyword matched in a chat question (buyer.py:339)"
+    },
+    {
+      "ru": "лучше",
+      "en": "better",
+      "where": [
+        "api/routes/buyer.py:339"
+      ],
+      "why": "comparison keyword matched in a chat question (buyer.py:339)"
+    },
+    {
+      "ru": "выб",
+      "en": "choose",
+      "where": [
+        "api/routes/buyer.py:339"
+      ],
+      "why": "comparison keyword stem matched in a chat question (buyer.py:339)"
+    },
+    {
+      "ru": "при мо",
+      "en": "my mileage",
+      "where": [
+        "api/routes/buyer.py:367"
+      ],
+      "why": "keyword prefix of 'at my mileage' matched in a chat question (buyer.py:367)"
+    }
+  ],
+  "dual_use": [
+    {
+      "ru": "Топливо",
+      "en": "Fuel",
+      "where": [
+        "services/catalog_buyer.py:52",
+        "services/catalog_buyer.py:1103",
+        "services/us_tech_facts.py:54",
+        "services/us_tech_facts.py:93",
+        "services/listing_intake.py:57"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser (listing_intake.py:57)"
+    },
+    {
+      "ru": "Привод",
+      "en": "Drivetrain",
+      "where": [
+        "services/catalog_buyer.py:61",
+        "services/us_tech_facts.py:92",
+        "services/history_flow.py:618",
+        "services/listing_intake.py:59",
+        "providers/listings.py:125"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Кузов",
+      "en": "Body style",
+      "where": [
+        "services/catalog_buyer.py:63",
+        "services/us_tech_facts.py:110",
+        "services/listing_intake.py:60"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Комплектация",
+      "en": "Trim",
+      "where": [
+        "services/catalog_buyer.py:74",
+        "providers/listings.py:132"
+      ],
+      "why": "UI label; also a turbo.az listing label (providers/listings.py:132)"
+    },
+    {
+      "ru": "Двигатель",
+      "en": "Engine",
+      "where": [
+        "services/catalog_buyer.py:1070",
+        "services/catalog_buyer.py:1426",
+        "services/us_tech_facts.py:45",
+        "services/us_tech_facts.py:80",
+        "services/history_flow.py:618",
+        "services/listing_intake.py:56",
+        "providers/listings.py:123"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Коробка",
+      "en": "Transmission",
+      "where": [
+        "services/catalog_buyer.py:1090",
+        "services/us_tech_facts.py:51",
+        "services/us_tech_facts.py:91",
+        "services/us_tech_facts.py:91",
+        "services/history_flow.py:618",
+        "services/listing_intake.py:58"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Коробка передач",
+      "en": "Transmission",
+      "where": [
+        "services/catalog_buyer.py:1437",
+        "services/listing_intake.py:58",
+        "services/listing_intake.py:779",
+        "providers/listings.py:124"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "вариатор",
+      "en": "CVT",
+      "where": [
+        "services/us_tech_facts.py:655",
+        "services/listing_intake.py:307"
+      ],
+      "why": "UI value (us_tech_facts.py:656) and a transmission matching keyword (listing_intake.py:307)"
+    },
+    {
+      "ru": " или ",
+      "en": " or ",
+      "where": [
+        "services/us_tech_facts.py:1217",
+        "services/listing_intake.py:748"
+      ],
+      "why": "UI joiner; in listing_intake.py:748 it joins choices in a question"
+    },
+    {
+      "ru": "Цена",
+      "en": "Price",
+      "where": [
+        "services/buyer_experience.py:322",
+        "services/listing_intake.py:62"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Город",
+      "en": "City",
+      "where": [
+        "services/buyer_experience.py:328",
+        "services/listing_intake.py:65",
+        "providers/listings.py:128"
+      ],
+      "why": "UI label; also a turbo.az listing label matched by the parser"
+    },
+    {
+      "ru": "Официальный дилер",
+      "en": "Official dealer",
+      "where": [
+        "services/listing_intake.py:455",
+        "services/listing_intake.py:348"
+      ],
+      "why": "seller_type claim value stored from listing text (may be shown) and a market matching phrase (listing_intake.py:348)"
+    }
+  ],
+  "unsure": [
+    {
+      "ru": "Наддув",
+      "en": "Induction",
+      "where": [
+        "services/catalog_buyer.py:57",
+        "services/us_tech_facts.py:84"
+      ],
+      "why": "'Наддув' as a spec label (values: Turbo / Supercharged / Naturally aspirated); rendered 'Induction'. 'Aspiration' is the alternative."
+    },
+    {
+      "ru": "Размерный класс источника",
+      "en": "Size class (per source)",
+      "where": [
+        "services/catalog_buyer.py:62"
+      ],
+      "why": "'Размерный класс источника' = EPA/NRCan size class as published by the source; rendered 'Size class (per source)'."
+    },
+    {
+      "ru": "ДВС/гибрид · архитектура не уточнена",
+      "en": "Gas/hybrid · architecture not specified",
+      "where": [
+        "services/catalog_buyer.py:120"
+      ],
+      "why": "'ДВС/гибрид · архитектура не уточнена' (COMBUSTION_UNSPECIFIED); rendered 'Gas/hybrid · architecture not specified' (ДВС = internal-combustion engine; 'Gas' is the US consumer word)."
+    },
+    {
+      "ru": "ДВС",
+      "en": "Gas engine",
+      "where": [
+        "services/catalog_buyer.py:137"
+      ],
+      "why": "'ДВС' (powertrain value ICE); rendered 'Gas engine'. 'Internal combustion (ICE)' is the alternative if diesels must be covered."
+    },
+    {
+      "ru": "(?<!\\d)(\\d[\\d ]{0,5})\\s*(?:км|km)",
+      "en": "(?<!\\d)(\\d[\\d ]{0,5})\\s*(?:km|kilometers?)",
+      "where": [
+        "services/catalog_buyer.py:1818",
+        "api/routes/buyer.py:361"
+      ],
+      "why": "regex: the English pattern accepts km / kilometers only, since the code treats the number as km; supporting miles would need a code change."
+    },
+    {
+      "ru": "Оснащение",
+      "en": "Equipment",
+      "where": [
+        "services/catalog_buyer.py:1249"
+      ],
+      "why": "'Оснащение' rendered 'Equipment'; 'Features' would be the consumer-site wording."
+    },
+    {
+      "ru": " передач",
+      "en": "-speed",
+      "where": [
+        "services/catalog_buyer.py:240",
+        "services/us_tech_facts.py:656"
+      ],
+      "why": "' передач' is appended to a digit ('8' + ' передач' = '8 передач'); English '-speed' gives '8-speed' with no leading space. The ru key has a leading space; the code concatenates directly, so the output reads '8-speed' (correct) only because the English value has no leading space."
+    },
+    {
+      "ru": "Техническая часть",
+      "en": "Specifications",
+      "where": [
+        "services/catalog_buyer.py:1366"
+      ],
+      "why": "'Техническая часть' section title; rendered 'Specifications'."
+    },
+    {
+      "ru": "Класс масла",
+      "en": "Oil standard",
+      "where": [
+        "services/us_tech_facts.py:96"
+      ],
+      "why": "'Класс масла' (engine_oil_specification, e.g. API SP / ILSAC GF-6); rendered 'Oil standard'."
+    },
+    {
+      "ru": "Масло при замене",
+      "en": "Oil drain and refill",
+      "where": [
+        "services/us_tech_facts.py:100"
+      ],
+      "why": "'Масло при замене' (engine_oil_capacity_drain_refill_l); rendered 'Oil drain and refill'."
+    },
+    {
+      "ru": "Охлаждение инвертора",
+      "en": "Inverter cooling",
+      "where": [
+        "services/us_tech_facts.py:107"
+      ],
+      "why": "'Охлаждение инвертора' (inverter_coolant_capacity_l); rendered 'Inverter cooling' to keep the label short; 'Inverter coolant capacity' is the exact meaning."
+    },
+    {
+      "ru": "по данным справочников",
+      "en": "per reference sources",
+      "where": [
+        "services/us_tech_facts.py:1019",
+        "services/us_tech_facts.py:1161"
+      ],
+      "why": "'по данным справочников' (SECONDARY_NOTE marker); rendered 'per reference sources'."
+    },
+    {
+      "ru": "мес.",
+      "en": "mo.",
+      "where": [
+        "services/us_tech_facts.py:1214"
+      ],
+      "why": "'мес.' month abbreviation; rendered 'mo.' (also 574 ' mo.')."
+    },
+    {
+      "ru": "тип впрыска не подтверждён — с запасом",
+      "en": "injection type not confirmed — with a safety margin",
+      "where": [
+        "services/fuel_advice.py:152"
+      ],
+      "why": "'тип впрыска не подтверждён — с запасом' rendered 'injection type not confirmed — with a safety margin'."
+    },
+    {
+      "ru": "Сопоставимых данных нет",
+      "en": "No comparable data",
+      "where": [
+        "services/buyer_experience.py:475"
+      ],
+      "why": "'Сопоставимых данных нет' rendered 'No comparable data'."
+    },
+    {
+      "ru": "Title, salvage и total loss",
+      "en": "Title, salvage, and total loss",
+      "where": [
+        "services/history_flow.py:80"
+      ],
+      "why": "'Title, salvage и total loss' — kept the US title terms; Oxford comma added."
+    },
+    {
+      "ru": "Угон и иные статусы",
+      "en": "Theft and other statuses",
+      "where": [
+        "services/history_flow.py:81"
+      ],
+      "why": "'Угон и иные статусы' rendered 'Theft and other statuses'; 'Theft and other title brands' may fit better depending on the section content."
+    },
+    {
+      "ru": "Рынок сборки",
+      "en": "Built for market",
+      "where": [
+        "services/listing_intake.py:61"
+      ],
+      "why": "'Рынок сборки' listing label; rendered 'Built for market' (en.turbo.az wording not verified). The listing-label English equivalents (452-471) are guesses of the English page labels, not checked against en.turbo.az."
+    },
+    {
+      "ru": "VIN код",
+      "en": "VIN",
+      "where": [
+        "services/listing_intake.py:64"
+      ],
+      "why": "'VIN код' / 'VIN-код' are listing labels; English equivalent 'VIN' (en.turbo.az wording not verified)."
+    },
+    {
+      "ru": "бенз",
+      "en": "gas",
+      "where": [
+        "services/listing_intake.py:291"
+      ],
+      "why": "matching stem 'бенз' rendered 'gas'; as a substring it would also match 'gasket' etc. 'gasoline' is safer if precision matters."
+    },
+    {
+      "ru": "полн",
+      "en": "all-wheel",
+      "where": [
+        "services/listing_intake.py:326"
+      ],
+      "why": "matching stem 'полн' (full-time drive) rendered 'all-wheel'; '4x4' / 'awd' / 'full' are already in the English token list."
+    },
+    {
+      "ru": "Фотографии этого VIN в отчёт не получены. Это не подтверждает отсутствие аукциона или ремонта. ",
+      "en": "No photos for this VIN were received for the report. This does not confirm that there was no auction or repair. ",
+      "where": [
+        "services/chat_context.py:181"
+      ],
+      "why": "ru string ends with a trailing space (concatenated); the English keeps the trailing space."
+    },
+    {
+      "ru": "Цена 27 500 AZN нормальная?",
+      "en": "Is 27,500 AZN a fair price?",
+      "where": [
+        "api/routes/chat.py:70"
+      ],
+      "why": "'Цена 27 500 AZN нормальная?' — the number is written US-style '27,500'; keep '27 500' if numbers must match byte for byte. AZN currency kept although the audience is US/Canada."
+    }
+  ]
+}

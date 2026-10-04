@@ -1,3 +1,4 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 // US technical facts of a configuration (next-stage prompt, stage C). Shown only while the API
 // advertises the show_us_tech_facts flag (client-config "us_tech_facts"); production without
 // the flag never loads or renders anything from here.
@@ -26,6 +27,7 @@ const ICONS = {technical: '⚙', weak_points: '!', campaigns: '↻', maintenance
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 
 export function copyOf(language) {
+  if (language === 'en') return Object.fromEntries(Object.entries(COPY.ru).map(([k, v]) => [k, EN[v] ?? v]));
   return COPY[language === 'az' ? 'az' : 'ru'];
 }
 
@@ -128,7 +130,7 @@ export function bindUsTech(container) {
 
 export function createUsTechViews({root, state, layout}) {
   const enabled = () => state.meta?.us_tech_facts?.enabled === true;
-  const language = () => (state.language === 'az' ? 'az' : 'ru');
+  const language = () => (['az', 'en'].includes(state.language) ? state.language : 'ru');
   const t = () => copyOf(language());
   let facets = null;
 

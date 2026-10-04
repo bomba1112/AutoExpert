@@ -127,7 +127,7 @@ class ResolverInput(StrictModel):
     # The public product is USA MY2012+; the legacy scope identifier remains
     # available so internal historical rows and strict verification are intact.
     catalog_scope: Literal["ALL", "US_BASE_2000", "US_CONFIRMED_2000"] = "US_BASE_2000"
-    language: Literal["ru", "az"] = "ru"
+    language: Literal["ru", "az", "en"] = "ru"
     catalog_ready_only: bool = False
     generation: str | None = Field(default=None, max_length=100)
     make: str | None = Field(default=None, max_length=100)
@@ -143,7 +143,7 @@ class ResolverInput(StrictModel):
 
 
 class SaveInput(StrictModel):
-    language: Literal["ru", "az"] = "ru"
+    language: Literal["ru", "az", "en"] = "ru"
     preferences: BuyerFilters = Field(default_factory=BuyerFilters)
 
 
@@ -155,7 +155,7 @@ class ConsumerBuyerFilters(BuyerFilters):
 class ComparisonInput(StrictModel):
     variant_ids: list[str] = Field(min_length=2, max_length=3)
     scenarios: list[CostScenario] = Field(default_factory=list, max_length=3)
-    language: Literal["ru", "az"] = "ru"
+    language: Literal["ru", "az", "en"] = "ru"
 
 
 def guard(call, *args, **kwargs):
@@ -188,7 +188,7 @@ def get_facets(
 
 
 @router.post("/search")
-def search(value: ConsumerBuyerFilters, db: DBSession, language: Literal["ru", "az"] = "ru"):
+def search(value: ConsumerBuyerFilters, db: DBSession, language: Literal["ru", "az", "en"] = "ru"):
     return buyer.search(db, value, language, rows=consumer_rows(db))
 
 
@@ -198,7 +198,7 @@ def resolve(value: ResolverInput, db: DBSession):
 
 
 @router.get("/vehicles/{variant_id}")
-def vehicle(variant_id: str, db: DBSession, language: Literal["ru", "az"] = "ru"):
+def vehicle(variant_id: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru"):
     preview = next(((pv, pc) for pv, pc in catalog_preview.preview_rows(db) if pv.id == variant_id), None)
     v, c = preview or published(db, variant_id, production_safe=True)
     return {
@@ -297,7 +297,7 @@ def ownership_calculation(variant_id: str, value: OwnershipScenario, db: DBSessi
 
 
 class OwnershipSaveInput(StrictModel):
-    language: Literal["ru", "az"] = "ru"
+    language: Literal["ru", "az", "en"] = "ru"
     scenario: OwnershipScenario
     expected_scenario_id: str = Field(min_length=64, max_length=64)
 
@@ -458,7 +458,7 @@ def save_comparison(value: ComparisonInput, db: DBSession, user: CurrentUser):
 
 
 @router.get("/publications")
-def publications(db: DBSession, language: Literal["ru", "az"] = "ru", topic: str | None = None):
+def publications(db: DBSession, language: Literal["ru", "az", "en"] = "ru", topic: str | None = None):
     # Legacy editorial prose and claims lack per-claim commercial rights review.
     # Keep authored publications in admin storage, hidden from every consumer
     # environment until their content (not just variant IDs) has been cleared.

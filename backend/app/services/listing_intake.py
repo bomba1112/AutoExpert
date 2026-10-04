@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from app.core.english import pick
+
 import hashlib
 import json
 import re
@@ -716,7 +718,7 @@ def _question(rows: list, claims: dict[str, ClaimDraft], language: str) -> str:
         if field == "engine":
             return f"{Decimal(value):.1f}"
         labels = buyer.VALUE_LABELS.get(value)
-        return labels[1 if language == "az" else 0] if labels else value
+        return pick(language, labels[0], labels[1]) if labels else value
 
     for field, fact_name, ru, az in (
         (
@@ -752,14 +754,10 @@ def _question(rows: list, claims: dict[str, ClaimDraft], language: str) -> str:
             return f"{az if language == 'az' else ru}: {joined}{suffix}?"
     if "year" not in claims:
         return (
-            "Avtomobilin buraxılış ili neçədir?"
-            if language == "az"
-            else "Какой год выпуска указан?"
+            pick(language, "Какой год выпуска указан?", "Avtomobilin buraxılış ili neçədir?")
         )
     return (
-        "Avtomobilin sənədlərində hansı mühərrik göstərilib?"
-        if language == "az"
-        else "Какой двигатель указан в документах автомобиля?"
+        pick(language, "Какой двигатель указан в документах автомобиля?", "Avtomobilin sənədlərində hansı mühərrik göstərilib?")
     )
 
 
@@ -768,15 +766,15 @@ def _conflict_display(field: str, value: object, language: str) -> str:
     if field == "transmission":
         labels = buyer.VALUE_LABELS.get(raw)
         if labels:
-            return labels[1 if language == "az" else 0]
+            return pick(language, labels[0], labels[1])
         key = _key(raw)
         if "manual" in key or "mexan" in key:
-            return "Mexaniki" if language == "az" else "Механика"
+            return pick(language, "Механика", "Mexaniki")
         if "cvt" in key or "variator" in key:
-            return "Variator" if language == "az" else "Вариатор"
+            return pick(language, "Вариатор", "Variator")
         if "automatic" in key or "dct" in key or "dsg" in key:
-            return "Avtomatik" if language == "az" else "Автоматическая"
-        return "Sürətlər qutusu" if language == "az" else "Коробка передач"
+            return pick(language, "Автоматическая", "Avtomatik")
+        return pick(language, "Коробка передач", "Sürətlər qutusu")
     if field == "drivetrain" and _key(raw) in {"front", "frontwheeldrive"}:
         raw = "FWD"
     if field == "fuel" and _key(raw) in {"gasoline", "petrol"}:
@@ -784,7 +782,7 @@ def _conflict_display(field: str, value: object, language: str) -> str:
     if field == "body" and raw.upper() in buyer.VALUE_LABELS:
         raw = raw.upper()
     labels = buyer.VALUE_LABELS.get(raw)
-    return labels[1 if language == "az" else 0] if labels else raw
+    return pick(language, labels[0], labels[1]) if labels else raw
 
 
 def _match(rows: list, claims: dict[str, ClaimDraft], language: str) -> dict:

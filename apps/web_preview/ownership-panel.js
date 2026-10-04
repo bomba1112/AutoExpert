@@ -1,9 +1,10 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 import {api} from './api.js?v=0.8.1';
 
 // Shared by the existing dossier and comparison. All arithmetic stays on the backend.
 export function mountOwnership(host, members, {language, esc, ensureSession, go}) {
   const az = language === 'az';
-  const t = (ru, a) => az ? a : ru;
+  const t = (ru, a, en) => pickText(language, ru, a, en);
   const key = 'autoexpert.verified.ownership.v1';
   let stored = {}; try {stored = JSON.parse(localStorage.getItem(key) || '{}');} catch {}
   const common = stored.common || {};
@@ -107,6 +108,6 @@ export function mountOwnership(host, members, {language, esc, ensureSession, go}
       `<button type="button" class="button secondary full" data-snapshot>${esc(t('Скачать расчёт и источники · JSON','Hesabı və mənbələri endir · JSON'))}</button>`+
       (members.length===1?`<button type="button" class="button primary full" data-save-ownership>${esc(t('Сохранить в мои отчёты','Hesabatlarımda saxla'))}</button>`:'');
     output.querySelector('[data-snapshot]').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(last,null,2)],{type:'application/json'}));a.download='autoexpert-ownership-snapshot.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
-    const saver=output.querySelector('[data-save-ownership]');if(saver)saver.onclick=async()=>{saver.disabled=true;try{await ensureSession();const r=await api(`/knowledge/vehicles/${members[0].id}/ownership/save`,{method:'POST',body:JSON.stringify({language:az?'az':'ru',scenario:lastScenario,expected_scenario_id:last[0].scenario_id})});go('/buyer-report/'+r.id);}catch(error){if(error.status===409){output.insertAdjacentHTML('beforeend',`<p>${esc(t('Источники изменились. Выполните расчёт снова.','Mənbələr dəyişib. Yenidən hesablayın.'))}</p>`);saver.disabled=false;return;}output.insertAdjacentHTML('beforeend',`<p>${esc(t('Войдите в профиль, чтобы сохранить отчёт.','Hesabatı saxlamaq üçün profilə daxil olun.'))}</p>`);saver.disabled=false;}};
+    const saver=output.querySelector('[data-save-ownership]');if(saver)saver.onclick=async()=>{saver.disabled=true;try{await ensureSession();const r=await api(`/knowledge/vehicles/${members[0].id}/ownership/save`,{method:'POST',body:JSON.stringify({language,scenario:lastScenario,expected_scenario_id:last[0].scenario_id})});go('/buyer-report/'+r.id);}catch(error){if(error.status===409){output.insertAdjacentHTML('beforeend',`<p>${esc(t('Источники изменились. Выполните расчёт снова.','Mənbələr dəyişib. Yenidən hesablayın.'))}</p>`);saver.disabled=false;return;}output.insertAdjacentHTML('beforeend',`<p>${esc(t('Войдите в профиль, чтобы сохранить отчёт.','Hesabatı saxlamaq üçün profilə daxil olun.'))}</p>`);saver.disabled=false;}};
   }catch{output.textContent=t('Проверьте введённые значения и доступность локального сервера.','Daxil edilmiş dəyərləri və lokal serverin əlçatanlığını yoxlayın.');}finally{button.disabled=false;}});
 }

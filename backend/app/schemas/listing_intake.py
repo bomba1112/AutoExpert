@@ -48,7 +48,7 @@ class ListingIntakeCreate(APIModel):
     text: str | None = None
     html: str | None = None
     fields: dict[str, str | int | float] | None = None
-    language: Literal["ru", "az"] = "ru"
+    language: Literal["ru", "az", "en"] = "ru"
 
     @model_validator(mode="after")
     def exactly_one_allowed_payload(self) -> ListingIntakeCreate:
@@ -94,7 +94,7 @@ class ListingSnapshotRead(APIModel):
     input_type: InputType
     content_hash: str
     raw_content_locator: str | None = None
-    language: Literal["ru", "az"]
+    language: Literal["ru", "az", "en"]
     parser_version: str
 
 

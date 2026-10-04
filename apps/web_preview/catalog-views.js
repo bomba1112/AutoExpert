@@ -1,3 +1,4 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 import {mountOwnership} from './ownership-panel.js?v=0.8.1';
 import {editorTools, bindEditorTools} from './editor-tools.js?v=0.8.1';
 import {api, sessionUser, clearSession} from './api.js?v=0.8.1';
@@ -53,8 +54,8 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   async function home() {
     const valid=guardView();
     show(`<section class="home-intro"><p class="home-location">AZƏRBAYCAN</p><h1>${esc(l('slogan'))}</h1><p>${esc(l('sub'))}</p><span class="skyline" aria-hidden="true"></span></section>
-      <section class="home-buy"><img class="home-buy-art" src="/preview/assets/buyer-road.svg" alt="" aria-hidden="true"><div><h2>${esc(l('buy'))}</h2><p>${esc(l('buySub'))}</p>${btn('start','wizard','','primary')}<button class="home-existing" data-k="check-listing">${esc(state.language==='az'?'Artıq seçimlərim var':'У меня уже есть варианты')} →</button></div><div class="home-tags">${['budget','engine','transmission','body','market'].map(k=>`<span>${esc(l(k))}</span>`).join('')}</div></section>
-      <section class="home-check"><span class="check-illustration" aria-hidden="true">VIN<span>▱ ▱ ▱</span></span><h2>${esc(l('check'))}</h2><p>${esc(state.language==='az'?'VIN, Turbo.az elanı və ya bildiyiniz göstəricilərlə başlayın.':'VIN, объявление Turbo.az или известные вам параметры.')}</p>${btn('checkCta','check','','primary')}<div class="check-foot">VIN · Turbo.az · ${esc(state.language==='az'?'Əllə daxil et':'Ручной ввод')}</div></section>
+      <section class="home-buy"><img class="home-buy-art" src="/preview/assets/buyer-road.svg" alt="" aria-hidden="true"><div><h2>${esc(l('buy'))}</h2><p>${esc(l('buySub'))}</p>${btn('start','wizard','','primary')}<button class="home-existing" data-k="check-listing">${esc(pickText(state.language, 'У меня уже есть варианты', 'Artıq seçimlərim var'))} →</button></div><div class="home-tags">${['budget','engine','transmission','body','market'].map(k=>`<span>${esc(l(k))}</span>`).join('')}</div></section>
+      <section class="home-check"><span class="check-illustration" aria-hidden="true">VIN<span>▱ ▱ ▱</span></span><h2>${esc(l('check'))}</h2><p>${esc(pickText(state.language, 'VIN, объявление Turbo.az или известные вам параметры.', 'VIN, Turbo.az elanı və ya bildiyiniz göstəricilərlə başlayın.'))}</p>${btn('checkCta','check','','primary')}<div class="check-foot">VIN · Turbo.az · ${esc(pickText(state.language, 'Ручной ввод', 'Əllə daxil et'))}</div></section>
       <section class="home-battles"><div class="section-title"><h2>${esc(l('battles'))}</h2><button class="text-button" data-k="battles">${esc(l('all'))} →</button></div><p>${esc(l('battlesSub'))}</p><div id="home-publications" class="battle-strip"><p class="catalog-loading" role="status">${esc(l('loading'))}</p></div></section>`, 'home');
     const pairs = await loadCatalogPairs();
     if(!valid())return;
@@ -79,7 +80,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   }
   function conditionFields() {return `<label>${esc(l('city'))}<input name="city" value="${esc(filters.city||'')}" placeholder="Bakı"></label>${chips('roads','roads',['urban','highway','rough'].map(k=>[k,k]),true)}<div class="form-pair">${number('monthly_km','km',filters.monthly_km,'min="0" max="30000" required')}${number('ownership_months','months',filters.ownership_months,'min="1" max="120" required')}</div>${select('charging','charging',[['UNKNOWN','unknown'],['YES','yes'],['NO','no']],filters.charging)}<label class="check-label"><input type="checkbox" name="family_use" ${filters.family_use?'checked':''}>${esc(l('family'))}</label>${chips('priorities','priorities',['reliability','cost','comfort','performance','repair','parts','space','safety','resale'].map(k=>[k,k]),true)}${note('priorityHelp')}`;}
   async function results() {
-    const valid=guardView();wait(); result=await api(`/knowledge/search?language=${state.language==='az'?'az':'ru'}`,{method:'POST',body:JSON.stringify(filters)});if(!valid())return;
+    const valid=guardView();wait(); result=await api(`/knowledge/search?language=${state.language}`,{method:'POST',body:JSON.stringify(filters)});if(!valid())return;
     show(heading('suitable') + box(`<div class="profile-summary"><span class="profile-dot">●</span><div><strong>${esc(l('profile'))}</strong><p>${esc([filters.budget_max_minor!=null?`${l('to')} ${(filters.budget_max_minor/100).toLocaleString(state.language)} AZN`:l('any'),[filters.year_min,filters.year_max].filter(Boolean).join('–'), ...filters.makes,...filters.models,...filters.markets.map(l),...filters.body.map(l),l(filters.engine),l(filters.transmission)].filter(Boolean).join(' · '))}</p></div><button class="text-button" data-k="wizard">${esc(l('change'))}</button></div>`)+`<div class="result-tools"><label class="search-label"><span class="sr-only">${esc(l('search'))}</span><input id="catalog-search" value="${esc(filters.query||'')}" placeholder="${esc(l('search'))}" type="search"><button data-k="search" class="icon-button" aria-label="${esc(l('search'))}">⌕</button></label>${select('sort','sort',['recommended','year_desc','make','consumption'].map(k=>[k,k]),filters.sort,'id="catalog-sort"')}</div>
       <p class="result-count"><strong>${result.matched_models} ${esc(l('models'))}</strong> · ${result.matched_versions} ${esc(l('versions'))}</p>${result.recommendation?.top?`${topRecommendation(result.recommendation)}${result.recommendation.competitors.length?`<h2 class="list-heading">${esc(l('alternatives'))}</h2>${result.recommendation.competitors.map(vehicleCard).join('')}`:''}`:box(`<h2>${esc(l('noMatches'))}</h2>${btn('change','wizard')}`)}
       ${(result.recommendation?.competitor_models||0)>(filters.offset||0)+20?btn('more','more','','secondary full'):''}<div class="catalog-sticky">${btn('compare','compare','','primary full')}<span>${basket.length} / 3</span></div>`, 'compare');
@@ -95,26 +96,26 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   function missingLabel(k){return ({body_subtype:l('body'),budget:l('budgetMissing'),initial_service_budget:l('initialService'),transmission_construction:l('transmission'),powertrain:l('engine'),aspiration:l('engine'),ground_clearance:l('clearance'),cargo_l:l('boot'),displacement:l('displacement'),supply_channel:l('supply'),year_min:l('year'),year_max:l('year')})[k]||l(k);}
   function fluidsGroup(rows, rowsHtml) {
     const groups=[
-      {title:state.language==='az'?'Mühərrik yağı':'Моторное масло',keys:['engine_oil_viscosity','engine_oil_specification','engine_oil_capacity_l','engine_oil_alternatives'],labels:{engine_oil_viscosity:state.language==='az'?'Özlülük':'Вязкость',engine_oil_specification:state.language==='az'?'Spesifikasiya':'Допуск / спецификация',engine_oil_capacity_l:state.language==='az'?'Filtrlə həcm':'Объём с фильтром',engine_oil_alternatives:state.language==='az'?'İcazə verilən alternativ':'Допустимая альтернатива'}},
-      {title:state.language==='az'?'Sürətlər qutusu':'Коробка',keys:['transmission_fluid']},
-      {title:state.language==='az'?'Paylayıcı qutu':'Раздатка',keys:['transfer_fluid']},
-      {title:state.language==='az'?'Ön diferensial':'Передний дифференциал',keys:['front_differential_fluid']},
-      {title:state.language==='az'?'Arxa diferensial':'Задний дифференциал',keys:['rear_differential_fluid']},
-      {title:state.language==='az'?'Soyuducu maye':'Охлаждающая жидкость',keys:['coolant','coolant_capacity_note']},
-      {title:state.language==='az'?'Əyləc mayesi':'Тормозная жидкость',keys:['brake_fluid']},
+      {title:pickText(state.language, 'Моторное масло', 'Mühərrik yağı'),keys:['engine_oil_viscosity','engine_oil_specification','engine_oil_capacity_l','engine_oil_alternatives'],labels:{engine_oil_viscosity:pickText(state.language, 'Вязкость', 'Özlülük'),engine_oil_specification:pickText(state.language, 'Допуск / спецификация', 'Spesifikasiya'),engine_oil_capacity_l:pickText(state.language, 'Объём с фильтром', 'Filtrlə həcm'),engine_oil_alternatives:pickText(state.language, 'Допустимая альтернатива', 'İcazə verilən alternativ')}},
+      {title:pickText(state.language, 'Коробка', 'Sürətlər qutusu'),keys:['transmission_fluid']},
+      {title:pickText(state.language, 'Раздатка', 'Paylayıcı qutu'),keys:['transfer_fluid']},
+      {title:pickText(state.language, 'Передний дифференциал', 'Ön diferensial'),keys:['front_differential_fluid']},
+      {title:pickText(state.language, 'Задний дифференциал', 'Arxa diferensial'),keys:['rear_differential_fluid']},
+      {title:pickText(state.language, 'Охлаждающая жидкость', 'Soyuducu maye'),keys:['coolant','coolant_capacity_note']},
+      {title:pickText(state.language, 'Тормозная жидкость', 'Əyləc mayesi'),keys:['brake_fluid']},
     ];
     return `<div class="fluids-grid">${groups.map(group=>{const found=rows.filter(row=>group.keys.includes(row.key));return found.length?`<section class="fluid-card"><h3>${esc(group.title)}</h3>${rowsHtml(found.map(row=>({...row,label:group.labels?.[row.key]||row.label})))}</section>`:'';}).join('')}</div>`;
   }
   function technicalGroup(group, index, rowsHtml) {
-    return `<details class="catalog-card technical-group ${group.key==='fluids'?'fluids-group':''}" ${index===0?'open':''}><summary>${esc(group.title)}<small>${group.rows.length}</small></summary>${group.key==='fluids'?fluidsGroup(group.rows,rowsHtml):rowsHtml(group.rows)}${group.key==='fuel'?`<p class="catalog-note">${esc(state.language==='az'?'İstehsalçının oktanı (AKI, ABŞ şkalası) Auto Expert cədvəli ilə AI-yə çevrilib. Auto Expert tövsiyəsi istehsalçının tələbi deyil.':'Октан производителя (AKI, шкала США) пересчитан в АИ по таблице Auto Expert. Рекомендация Auto Expert — не требование производителя.')}</p>`:''}</details>`;
+    return `<details class="catalog-card technical-group ${group.key==='fluids'?'fluids-group':''}" ${index===0?'open':''}><summary>${esc(group.title)}<small>${group.rows.length}</small></summary>${group.key==='fluids'?fluidsGroup(group.rows,rowsHtml):rowsHtml(group.rows)}${group.key==='fuel'?`<p class="catalog-note">${esc(pickText(state.language, 'Октан производителя (AKI, шкала США) пересчитан в АИ по таблице Auto Expert. Рекомендация Auto Expert — не требование производителя.', 'İstehsalçının oktanı (AKI, ABŞ şkalası) Auto Expert cədvəli ilə AI-yə çevrilib. Auto Expert tövsiyəsi istehsalçının tələbi deyil.'))}</p>`:''}</details>`;
   }
   function categoryEmpty(key) {
-    if(key==='weak_points')return state.language==='az'?'Almazdan əvvəl diaqnostika nəticələrini və servis tarixçəsini yoxlayın.':'Перед покупкой проверьте диагностику и сервисную историю.';
-    if(key==='campaigns')return state.language==='az'?'Servis kampaniyalarının tətbiqini VIN üzrə yoxlayın.':'Проверьте применимость сервисных кампаний по VIN.';
-    return state.language==='az'?'VIN və sənədləri, kuzovu, soyuq işəsalmanı və servis tarixçəsini yoxlayın.':'Проверьте VIN и документы, кузов, холодный запуск и сервисную историю.';
+    if(key==='weak_points')return pickText(state.language, 'Перед покупкой проверьте диагностику и сервисную историю.', 'Almazdan əvvəl diaqnostika nəticələrini və servis tarixçəsini yoxlayın.');
+    if(key==='campaigns')return pickText(state.language, 'Проверьте применимость сервисных кампаний по VIN.', 'Servis kampaniyalarının tətbiqini VIN üzrə yoxlayın.');
+    return pickText(state.language, 'Проверьте VIN и документы, кузов, холодный запуск и сервисную историю.', 'VIN və sənədləri, kuzovu, soyuq işəsalmanı və servis tarixçəsini yoxlayın.');
   }
   async function vehicle(id) {
-    const valid=guardView();wait(); current=await api(`/knowledge/vehicles/${encodeURIComponent(id)}?language=${state.language==='az'?'az':'ru'}`);
+    const valid=guardView();wait(); current=await api(`/knowledge/vehicles/${encodeURIComponent(id)}?language=${state.language}`);
     if(!valid())return;
     const p=current.projection;
     const profile=localizeProfile(current.profile,state.language);
@@ -133,7 +134,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   async function compare() {
     const valid=guardView();
     if(basket.length<2) {show(heading('compareTitle','emptyBasket')+basket.map(id=>box(`<p>${esc(names[id]||l('selected'))}</p>${btn('remove','remove',id)}`)).join('')+btn('catalog','browse','','primary full')+btn('savedCompare','saved-compare','','secondary full'),'compare');return;}
-    wait(); compareData=await api('/knowledge/compare',{method:'POST',body:JSON.stringify({variant_ids:basket,language:state.language==='az'?'az':'ru',scenarios:basket.map(id=>({months:filters.ownership_months||24,monthly_km:filters.monthly_km||0,...scenarios[id]}))})});
+    wait(); compareData=await api('/knowledge/compare',{method:'POST',body:JSON.stringify({variant_ids:basket,language:state.language,scenarios:basket.map(id=>({months:filters.ownership_months||24,monthly_km:filters.monthly_km||0,...scenarios[id]}))})});
     const comparedFact=(v,k)=>{
       const fact=v.facts[k]; if(!fact)return '—';
       const context=Object.fromEntries(Object.entries(v.facts).map(([name,item])=>[name,item?.value]));
@@ -148,7 +149,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   async function resolver() {show(heading('resolve','resolverHelp')+`<form id="resolver-form" class="catalog-card"><div class="form-pair"><label>${esc(l('make'))}<input name="make" required></label><label>${esc(l('model'))}<input name="model" required></label>${number('year','year','','min="2012" max="2100"')}${number('engine','displacement','','step="0.1"')}</div>${select('market','market',[['US','US']],'US')}<button class="button primary full">${esc(l('resolve'))}</button></form><div id="resolver-result"></div>`);}
   async function loadCatalogPairs() {
     if(catalogPairs !== null)return catalogPairs;
-    const data = await api(`/knowledge/search?language=${state.language==='az'?'az':'ru'}`,{method:'POST',body:JSON.stringify({...defaults(),sort:'make',limit:100})});
+    const data = await api(`/knowledge/search?language=${state.language}`,{method:'POST',body:JSON.stringify({...defaults(),sort:'make',limit:100})});
     const matches = (data.matches||[]).filter(v=>v.id&&v.make&&v.model&&Number.isInteger(v.year));
     const byModel = new Map();
     for(const vehicle of matches){const key=`${vehicle.make.toLowerCase()}|${vehicle.model.toLowerCase()}`;if(!byModel.has(key))byModel.set(key,vehicle);}
@@ -164,7 +165,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   }
   function catalogPairCard([first,second]) {
     const title=v=>`${v.make} ${v.model} · ${v.year}`;
-    const label=state.language==='az'?'Kataloqdakı iki versiyanı müqayisə edin':'Сравните две версии из каталога';
+    const label=pickText(state.language, 'Сравните две версии из каталога', 'Kataloqdakı iki versiyanı müqayisə edin');
     return `<article class="battle-card catalog-pair-card"><div class="battle-visual" aria-hidden="true"><span>↔</span></div><h3>${esc(title(first))}<br><span class="catalog-pair-vs">vs</span> ${esc(title(second))}</h3><p>${esc(label)}</p><button class="text-button" data-k="catalog-pair-compare" data-ids="${esc(first.id+','+second.id)}">${esc(l('personalCompare'))} →</button></article>`;
   }
   async function battles() {const valid=guardView();wait();const pairs=await loadCatalogPairs();if(!valid())return;show(heading('battles','battlesSub')+`<div class="battle-list">${pairs.length?pairs.map(catalogPairCard).join(''):box(`<h2>${esc(l('noEditorial'))}</h2><p>${esc(l('noEditorialSub'))}</p>`)}</div>${btn('personalCompare','compare','','primary full')}`, 'compare');}
@@ -175,7 +176,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   async function action(target) {
     const a=target.dataset.k, id=target.dataset.id;
     if(a==='text-size'){largeText=!largeText;document.documentElement.classList.toggle('large-text',largeText);save();profile();return;}
-    if(a==='research'){await ensureSession();const job=await api('/knowledge/research',{method:'POST',body:JSON.stringify({vehicle:{make:current.make,model:current.model,year:current.year,market:current.market},language:state.language==='az'?'az':'ru'})});go('/catalog-research/'+job.id);return;}
+    if(a==='research'){await ensureSession();const job=await api('/knowledge/research',{method:'POST',body:JSON.stringify({vehicle:{make:current.make,model:current.model,year:current.year,market:current.market},language:state.language})});go('/catalog-research/'+job.id);return;}
     if(a==='research-refresh'){await researchStatus(id);return;}
     if(a==='research-cancel'||a==='research-retry'){await api('/knowledge/research/'+id+'/control',{method:'POST',body:JSON.stringify({action:a==='research-cancel'?'cancel':'retry',note:'Owner requested action through buyer interface'})});await researchStatus(id);return;}
     if(a==='chip'){const form=root.querySelector('#catalog-wizard');if(form)readFilters(form);const key=target.dataset.field,value=target.dataset.value;if(target.dataset.multi==='true'){const arr=filters[key]||[];if(arr.includes(value))filters[key]=arr.filter(x=>x!==value);else {if(key==='priorities'&&arr.length===3){showToast(l('max3'));return;}filters[key]=[...arr,value];}}else filters[key]=value;save();await wizard();return;}
@@ -188,8 +189,8 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     if(a==='more'){filters.offset=(filters.offset||0)+20;save();await results();window.scrollTo(0,0);return;}
     if(a==='basket'){if(basket.includes(id))basket=basket.filter(x=>x!==id);else {if(basket.length===3){showToast(l('max3'));return;}basket.push(id);}save();target.textContent=l(basket.includes(id)?'selected':'addCompare');target.classList.toggle('selected',basket.includes(id));root.querySelector('.catalog-sticky span')?.replaceChildren(`${basket.length} / 3`);return;}
     if(a==='remove'){basket=basket.filter(x=>x!==id);save();await compare();return;}
-    if(a==='save'){if(!sessionUser()&&!state.meta?.developer?.enabled){go('/profile');return;}await ensureSession();const r=await api(`/knowledge/vehicles/${id}/save`,{method:'POST',body:JSON.stringify({language:state.language==='az'?'az':'ru',preferences:filters})});showToast(l('saved'));go('/buyer-report/'+r.id);return;}
-    if(a==='save-compare'){if(!sessionUser()&&!state.meta?.developer?.enabled){go('/profile');return;}await ensureSession();const r=await api('/knowledge/compare/save',{method:'POST',body:JSON.stringify({variant_ids:basket,language:state.language==='az'?'az':'ru',scenarios:basket.map(id=>({months:filters.ownership_months||24,monthly_km:filters.monthly_km||0,...scenarios[id]}))})});go('/buyer-report/'+r.id);return;}
+    if(a==='save'){if(!sessionUser()&&!state.meta?.developer?.enabled){go('/profile');return;}await ensureSession();const r=await api(`/knowledge/vehicles/${id}/save`,{method:'POST',body:JSON.stringify({language:state.language,preferences:filters})});showToast(l('saved'));go('/buyer-report/'+r.id);return;}
+    if(a==='save-compare'){if(!sessionUser()&&!state.meta?.developer?.enabled){go('/profile');return;}await ensureSession();const r=await api('/knowledge/compare/save',{method:'POST',body:JSON.stringify({variant_ids:basket,language:state.language,scenarios:basket.map(id=>({months:filters.ownership_months||24,monthly_km:filters.monthly_km||0,...scenarios[id]}))})});go('/buyer-report/'+r.id);return;}
     if(a==='favorite'){await ensureSession();await api('/knowledge/favorites/'+id,{method:'PUT'});showToast(l('saved'));return;}
     if(a==='only-favorites'){onlyFavorites=!onlyFavorites;await battles();return;}
     if(a==='topic'){topic=id;await battles();return;}
@@ -205,8 +206,8 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     if(form.id==='catalog-wizard'){readFilters(form);if(step===1){step=2;await wizard();window.scrollTo(0,0);}else{filters.offset=0;save();go('/catalog-results');}}
     else if(form.id==='plate-form'){root.querySelector('#plate-result').textContent=l('plateUnavailable');}
     else if(form.matches('.cost-form')){scenarios[form.dataset.id]=Object.fromEntries([...new FormData(form)].map(([k,v])=>[k,v===''?null:v]));save();await compare();}
-    else if(form.id==='resolver-form'){const d=Object.fromEntries([...new FormData(form)].filter(([,v])=>v!==''));if(d.year)d.year=Number(d.year);d.catalog_scope=CONSUMER_CATALOG_SCOPE;d.language=state.language==='az'?'az':'ru';const r=await api('/knowledge/resolve',{method:'POST',body:JSON.stringify(d)});root.querySelector('#resolver-result').innerHTML=box(`<h2>${esc(l(r.status))}</h2><p>${esc(l('resolverHelp'))}</p>`)+(r.suggestions?.length?box(`<h3>${esc(l('suggestions'))}</h3>${r.suggestions.map(s=>`<p>${esc(s.make+' '+s.model)}</p>`).join('')}`):'')+r.candidates.map(vehicleCard).join('')+(r.needs_confirmation?.length?box(`<h3>${esc(l('needs'))}</h3>`)+r.needs_confirmation.map(vehicleCard).join(''):'')+btn('manual','manual','','secondary full');}
-    else if(form.id==='account-form'){const d=Object.fromEntries(new FormData(form));const mode=submit?.value||'login';if(mode==='register'){d.preferred_language=state.language==='az'?'az':'ru';d.country_code='AZ';}const r=await api('/auth/'+mode,{method:'POST',body:JSON.stringify(d)});localStorage.setItem('autoexpert.demo.token',r.access_token);localStorage.setItem('autoexpert.demo.user',JSON.stringify(r.user));profile();}
+    else if(form.id==='resolver-form'){const d=Object.fromEntries([...new FormData(form)].filter(([,v])=>v!==''));if(d.year)d.year=Number(d.year);d.catalog_scope=CONSUMER_CATALOG_SCOPE;d.language=state.language;const r=await api('/knowledge/resolve',{method:'POST',body:JSON.stringify(d)});root.querySelector('#resolver-result').innerHTML=box(`<h2>${esc(l(r.status))}</h2><p>${esc(l('resolverHelp'))}</p>`)+(r.suggestions?.length?box(`<h3>${esc(l('suggestions'))}</h3>${r.suggestions.map(s=>`<p>${esc(s.make+' '+s.model)}</p>`).join('')}`):'')+r.candidates.map(vehicleCard).join('')+(r.needs_confirmation?.length?box(`<h3>${esc(l('needs'))}</h3>`)+r.needs_confirmation.map(vehicleCard).join(''):'')+btn('manual','manual','','secondary full');}
+    else if(form.id==='account-form'){const d=Object.fromEntries(new FormData(form));const mode=submit?.value||'login';if(mode==='register'){d.preferred_language=state.language;d.country_code='AZ';}const r=await api('/auth/'+mode,{method:'POST',body:JSON.stringify(d)});localStorage.setItem('autoexpert.demo.token',r.access_token);localStorage.setItem('autoexpert.demo.user',JSON.stringify(r.user));profile();}
     else if(form.id==='manifest-form'){await api('/knowledge/admin/imports',{method:'POST',body:JSON.stringify(JSON.parse(new FormData(form).get('manifest')))});await admin();}
     else if(form.id==='document-form'){const d=new FormData(form),file=d.get('document');const r=await api('/knowledge/admin/documents/'+encodeURIComponent(d.get('source_id')),{method:'POST',headers:{'Content-Type':file.type||'application/octet-stream'},body:file});root.querySelector('#document-output').textContent=l('documentId')+': '+r.id;}
   })().catch(fail).finally(()=>{if(submit)submit.disabled=false;});});

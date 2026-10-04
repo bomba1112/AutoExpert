@@ -9,7 +9,7 @@ from pydantic import Field, field_validator
 from app.core.vin import VINValidationError, validate_vin
 from app.schemas.common import APIModel
 
-HistoryLanguage = Literal["ru", "az"]
+HistoryLanguage = Literal["ru", "az", "en"]
 
 
 class HistoryCheckCreate(APIModel):

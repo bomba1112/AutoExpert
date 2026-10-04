@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from app.core.english import english, pick
+
 from decimal import Decimal
 from uuid import uuid4
 
@@ -143,6 +145,10 @@ PHOTO_TYPE_TEXT = {
         "HISTORICAL_PHOTO": "tarixi foto",
     },
 }
+
+# English (product phase, stage 1): the Russian texts of these tables through the English table
+for _table in (SECTION_TITLES, EVENT_TEXT, PHOTO_TYPE_TEXT):
+    _table["en"] = {key: english(text) for key, text in _table["ru"].items()}
 
 
 def owned_check(
@@ -560,13 +566,12 @@ def report_read(db: Session, check: VinCheckRequest, *, language: str) -> Histor
     buckets["summary"].append(
         HistoryReportItem(
             text=(
-                f"{len(events)} записей из учебного источника."
-                if check.is_mock and language == "ru"
-                else f"Nümunə mənbədə {len(events)} qeyd."
+                pick(language, f"{len(events)} записей из учебного источника.", f"Nümunə mənbədə {len(events)} qeyd.",
+                     f"{len(events)} records from the sample source.")
                 if check.is_mock
-                else f"Поставщик истории сообщил {len(events)} событий."
-                if language == "ru"
-                else f"Tarixçə provayderi {len(events)} hadisə bildirdi."
+                else pick(language, f"Поставщик истории сообщил {len(events)} событий.",
+                          f"Tarixçə provayderi {len(events)} hadisə bildirdi.",
+                          f"The history provider reported {len(events)} events.")
             )
         )
     )
@@ -583,7 +588,7 @@ def report_read(db: Session, check: VinCheckRequest, *, language: str) -> Histor
     for asset in assets:
         caption = (asset.caption or {}).get(language)
         photo_label = PHOTO_TYPE_TEXT[language].get(
-            asset.photo_type, "Foto" if language == "az" else "Фото"
+            asset.photo_type, pick(language, "Фото", "Foto")
         )
         buckets["auction"].append(
             HistoryReportItem(

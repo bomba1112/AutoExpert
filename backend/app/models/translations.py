@@ -25,6 +25,7 @@ class ContentTranslation(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     source_hash: Mapped[str] = mapped_column(String(64), index=True)
     source_text: Mapped[str] = mapped_column(Text)
     text_ru: Mapped[str] = mapped_column(Text)
+    text_en: Mapped[str | None] = mapped_column(Text, nullable=True)  # f089: clean English for English users
     text_az: Mapped[str] = mapped_column(Text)
     # template (script, glossary), glossary (term list), llm (agent, checked), manual
     method: Mapped[str] = mapped_column(String(20))

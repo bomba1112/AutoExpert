@@ -27,10 +27,11 @@ from decimal import Decimal, InvalidOperation
 from sqlalchemy import func, select
 
 from app.core.config import get_settings
+from app.core.english import pick
 from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel, VehicleVariant
 from app.models.evidence import KnownIssue, MaintenanceScheduleItem, SourceRecord, TechnicalEvidence
 from app.models.translations import ContentTranslation
-from app.services import fuel_advice
+from app.services import fuel_advice, unit_display
 from app.services.catalog_buyer import VALUE_LABELS
 from app.services.tech_units import convert
 
@@ -120,9 +121,10 @@ LABELS = {
     "seats": ("Мест", "Oturacaq sayı"), "passenger_volume_l": ("Объём салона", "Salonun həcmi"), "cargo_l": ("Багажник", "Baqaj"),
     "cargo_max_l": ("Багажник со сложенными сиденьями", "Qatlanmış oturacaqlarla baqaj"),
 }
-UNIT_WORDS = {"L": ("л", "l"), "mm": ("мм", "mm"), "kg": ("кг", "kq"), "m": ("м", "m"), "kPa": ("кПа", "kPa"),
-              "rpm": ("об/мин", "dövr/dəq"), "kW": ("кВт", "kVt"), "N·m": ("Н·м", "N·m"), "L/100km": ("л/100 км", "l/100 km"),
-              "cm3": ("см³", "sm³"), "%": ("%", "%"), "L/1000km": ("л на 1000 км", "l / 1000 km")}
+UNIT_WORDS = {"L": ("л", "l", "L"), "mm": ("мм", "mm", "mm"), "kg": ("кг", "kq", "kg"), "m": ("м", "m", "m"), "kPa": ("кПа", "kPa", "kPa"),
+              "rpm": ("об/мин", "dövr/dəq", "rpm"), "kW": ("кВт", "kVt", "kW"), "N·m": ("Н·м", "N·m", "N·m"),
+              "L/100km": ("л/100 км", "l/100 km", "L/100 km"), "cm3": ("см³", "sm³", "cc"), "%": ("%", "%", "%"),
+              "L/1000km": ("л на 1000 км", "l / 1000 km", "L per 1,000 km")}
 UNIT_OF = {"engine_oil_consumption_max_l_per_1000km": "L/1000km", "engine_displacement_l": "L", "engine_oil_topup_limit_l": "L"}
 EXTRA_WORDS = {"TURBOCHARGED": ("Турбонаддув", "Turbo"), "CHAIN": ("Цепь", "Zəncir"), "BELT": ("Ремень", "Kəmər"),
                "4WD": ("Полный 4WD", "Tam 4WD")}
@@ -199,7 +201,7 @@ class Translator:
 
     def __init__(self, db, language: str):
         self.db = db
-        self.column = ContentTranslation.text_az if language == "az" else ContentTranslation.text_ru
+        self.column = {"az": ContentTranslation.text_az, "en": ContentTranslation.text_en}.get(language, ContentTranslation.text_ru)
         self.cache: dict = {}
 
     def __call__(self, kind: str, original):
@@ -217,7 +219,7 @@ def _enum(value) -> str | None:
 
 
 def tr(language: str, pair) -> str:
-    return pair[1] if language == "az" else pair[0]
+    return pick(language, pair[0], pair[1], pair[2] if len(pair) > 2 else None)
 
 
 def norm_text(text) -> str:
@@ -689,6 +691,15 @@ def show(key: str, value, unit: str | None, app: dict, language: str) -> str:
     n = number(value)
     if n is None:
         return str(value)
+    if language == "en" and key not in ("power_hp", "system_power_hp", "torque_lb_ft", "power_rpm", "torque_rpm",
+                                        "wheel_size_in", "engine_displacement_l", "engine_displacement_cc"):
+        # product phase, stage 1: US units with the metric value in brackets
+        us = unit_display.show(n, unit, language, key)
+        if us:
+            return us
+        if unit == "L/1000km":
+            miles = unit_display.to_us(1000, "km")[0]
+            return f"{fmt(n)} L per {fmt(miles)} mi (1,000 km)"
     if key in ("power_hp", "system_power_hp"):
         text = f"{fmt(n)} hp ({fmt(convert(n, 'hp', 'kW'))} {u('kW')})"
     elif key == "torque_lb_ft":
@@ -1198,6 +1209,8 @@ def campaigns(rows: list[TechnicalEvidence], t: Target, language: str, translate
 def _years_word(years: int, language: str) -> str:
     if language == "az":
         return f"{years} il"
+    if language == "en":
+        return f"{years} year" if years == 1 else f"{years} years"
     if years % 10 == 1 and years % 100 != 11:
         return f"{years} год"
     if 2 <= years % 10 <= 4 and not 12 <= years % 100 <= 14:
@@ -1205,18 +1218,20 @@ def _years_word(years: int, language: str) -> str:
     return f"{years} лет"
 
 
-def _interval(km, months, rule, language: str) -> str | None:
+def _interval(km, months, rule, language: str, miles=None) -> str | None:
     parts = []
-    if km:
+    if km and language == "en":
+        parts.append(unit_display.distance(km, miles, language))
+    elif km:
         parts.append(f"{km:,}".replace(",", " ") + " " + tr(language, ("км", "km")))
     if months:
         years, rest = divmod(months, 12)
-        parts.append(_years_word(years, language) if not rest else f"{months} " + tr(language, ("мес.", "ay")))
+        parts.append(_years_word(years, language) if not rest else f"{months} " + tr(language, ("мес.", "ay", "mo.")))
     if not parts:
         return None
-    text = tr(language, (" или ", " və ya ")).join(parts)
+    text = tr(language, (" или ", " və ya ", " or ")).join(parts)
     if len(parts) > 1 and rule == "WHICHEVER_FIRST":
-        text += tr(language, (", что наступит раньше", ", hansı əvvəl çatarsa"))
+        text += tr(language, (", что наступит раньше", ", hansı əvvəl çatarsa", ", whichever comes first"))
     return text
 
 
@@ -1261,7 +1276,7 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
         condition, occurrence = _enum(it.condition), _enum(it.occurrence)
         entry = {"job": tr(language, JOBS.get(it.job, (it.job.replace("_", " "),) * 2)), "job_key": it.job,
                  "action": tr(language, ACTIONS.get(action, (action, action))),
-                 "interval": _interval(it.interval_km, it.interval_months, it.rule, language),
+                 "interval": _interval(it.interval_km, it.interval_months, it.rule, language, it.interval_miles_original),
                  "max_interval": _interval(it.max_interval_km, it.max_interval_months, "WHICHEVER_FIRST", language),
                  "system": tr(language, SYSTEMS[system]) if system in SYSTEMS else None,
                  "severe": condition == "SEVERE",

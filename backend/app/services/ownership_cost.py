@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from app.core.english import pick
+
 import calendar
 import hashlib
 import json
@@ -21,15 +23,13 @@ def report_section(snapshot, language):
     az = language == "az"
     section = PaidReportSection(
         key="ownership_evidence",
-        title="İstifadə xərcləri · AZ" if az else "Стоимость владения · AZ",
+        title=pick(language, "Стоимость владения · AZ", "İstifadə xərcləri · AZ"),
         paragraphs=[
             ReportParagraph(
                 text=(
-                    "Hesab mənbələrin və ssenarinin saxlanmış nüsxəsinə əsaslanır. "
-                    "Naməlum məbləğ sıfır deyil."
-                    if az
-                    else "Расчёт основан на сохранённом снимке источников и сценария. "
-                    "Неизвестная сумма не равна нулю."
+                    pick(language, "Расчёт основан на сохранённом снимке источников и сценария. "
+                    "Неизвестная сумма не равна нулю.", "Hesab mənbələrin və ssenarinin saxlanmış nüsxəsinə əsaslanır. "
+                    "Naməlum məbləğ sıfır deyil.")
                 )
             )
         ],
@@ -47,7 +47,7 @@ def report_section(snapshot, language):
         section.rows.append(
             ReportRow(
                 key=key,
-                label=az_label if az else ru,
+                label=pick(language, ru, az_label),
                 value=(snapshot[key] + " AZN") if snapshot[key] is not None else "—",
             )
         )
@@ -59,10 +59,8 @@ def report_section(snapshot, language):
         section.paragraphs.append(
             ReportParagraph(
                 text=(
-                    "Hesab qisməndir: xidmət, hissə, iş və digər məbləğlər üzrə boşluqlar var."
-                    if az
-                    else "Расчёт частичный: есть пробелы в обслуживании, деталях, "
-                    "работе или других статьях."
+                    pick(language, "Расчёт частичный: есть пробелы в обслуживании, деталях, "
+                    "работе или других статьях.", "Hesab qisməndir: xidmət, hissə, iş və digər məbləğlər üzrə boşluqlar var.")
                 )
             )
         )

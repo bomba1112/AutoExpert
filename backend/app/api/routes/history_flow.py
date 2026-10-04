@@ -179,7 +179,7 @@ def get_history_report(
     check_id: str,
     db: DBSession,
     user: CurrentUser,
-    language: str = Query(default="ru", pattern="^(ru|az)$"),
+    language: str = Query(default="ru", pattern="^(ru|az|en)$"),
 ) -> HistoryReportRead:
     check = _owned(db, user.id, check_id)
     if entitlement(db, check, user.id) is None:

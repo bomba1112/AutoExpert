@@ -107,7 +107,7 @@ def us_tech_configurations(
     make: str | None = Query(default=None, max_length=100),
     model: str | None = Query(default=None, max_length=100),
     year: int | None = Query(default=None, ge=1990, le=2100),
-    language: Literal["ru", "az"] = "ru",
+    language: Literal["ru", "az", "en"] = "ru",
 ) -> list[dict]:
     _us_tech_enabled()
     return us_tech_facts.configurations(db, make, model, year, language)
@@ -115,7 +115,7 @@ def us_tech_configurations(
 
 @router.get("/us-tech/configurations/{configuration_key}")
 def us_tech_configuration(
-    configuration_key: str, db: DBSession, language: Literal["ru", "az"] = "ru"
+    configuration_key: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru"
 ) -> dict:
     _us_tech_enabled()
     data = us_tech_facts.build(db, configuration_key, language)
@@ -125,7 +125,7 @@ def us_tech_configuration(
 
 
 @router.get("/variants/{variant_id}/us-tech")
-def variant_us_tech(variant_id: str, db: DBSession, language: Literal["ru", "az"] = "ru") -> dict:
+def variant_us_tech(variant_id: str, db: DBSession, language: Literal["ru", "az", "en"] = "ru") -> dict:
     _us_tech_enabled()
     key = us_tech_facts.configuration_for_variant(db, variant_id)
     data = us_tech_facts.build(db, key, language) if key else None

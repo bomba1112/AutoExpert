@@ -125,3 +125,10 @@ TITLE_TEMPLATES = [
     (re.compile(r"^Owners report: (?P<part>.+)$"), "issue_topic",
      "Владельцы сообщают: {part}", "Sahiblər bildirir: {part}"),
 ]
+# English of the same titles (product phase, stage 1): the part in the glossary's English
+TITLE_TEMPLATES_EN = [
+    "NHTSA recall {n}: {part}",
+    "Manufacturer communication: {part}",
+    "Owners report (CarComplaints.com): {part}",
+    "Owners report: {part}",
+]

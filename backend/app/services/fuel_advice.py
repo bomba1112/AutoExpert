@@ -26,6 +26,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+from app.core.english import pick
+
 # AKI (US pump octane, (R+M)/2) -> our AI grade: (ru, az, the grade a recommendation compares with)
 AKI_TO_AI: dict[int, tuple[str, str, int]] = {
     87: ("АИ-92", "AI-92", 92),
@@ -38,8 +40,8 @@ FLOOR_PORT_NATURAL = 92
 FLOOR_UNKNOWN = 95
 AI_NAMES = {92: ("АИ-92", "AI-92"), 95: ("АИ-95", "AI-95"), 98: ("АИ-98", "AI-98")}
 
-MAKER_LABEL = ("Бензин по требованию производителя", "İstehsalçının tələbi ilə benzin")
-MAKER_BASIS = ("по требованию производителя", "istehsalçının tələbi ilə")
+MAKER_LABEL = ("Бензин по требованию производителя", "İstehsalçının tələbi ilə benzin", "Fuel required by the manufacturer")
+MAKER_BASIS = ("по требованию производителя", "istehsalçının tələbi ilə", "required by the manufacturer")
 RECOMMENDATION_LABEL = ("Рекомендация Auto Expert", "Auto Expert tövsiyəsi")
 RECOMMENDATION_BASIS = ("рекомендация для АЗ/СНГ", "AZ/MDB üçün tövsiyə")
 
@@ -119,10 +121,12 @@ def traits_from_facts(facts: dict, extra_texts: list[str] = (), maker_aki: list[
 
 
 def _tr(language: str, pair) -> str:
-    return pair[1] if language == "az" else pair[0]
+    return pick(language, pair[0], pair[1], pair[2] if len(pair) > 2 else None)
 
 
 def maker_value(aki: int, language: str) -> str:
+    if language == "en":  # the US scale as printed (product phase, stage 1)
+        return f"AKI {aki} (US pump octane)"
     grade = AKI_TO_AI.get(aki)
     scale = ("по шкале США", "ABŞ şkalası ilə")
     if grade is None:
@@ -160,10 +164,20 @@ def recommendation(t: Traits) -> tuple[int, list[tuple[str, str]]] | None:
     return floor, reasons
 
 
+EN_MAKER_LABEL = "Fuel required by the manufacturer"
+EN_MAKER_BASIS = "required by the manufacturer"
+
+
 def rows(t: Traits, language: str) -> list[dict]:
     """Display lines of the fuel section: the manufacturer's octane (one line per AKI value the
     record states) and the Auto Expert recommendation. kind tells them apart for the UI."""
     out = []
+    if language == "en":
+        # product phase, stage 1: in English (US / Canada) the manufacturer's octane is shown as
+        # printed (AKI, the US pump scale); the AI conversion and the AZ / CIS recommendation are
+        # for RU / AZ only
+        return [{"key": "fuel_octane_maker", "kind": "manufacturer", "label": EN_MAKER_LABEL,
+                 "value": f"AKI {aki} (US pump octane)", "basis": EN_MAKER_BASIS, "aki": aki} for aki in t.maker_aki]
     for aki in t.maker_aki:
         out.append({"key": "fuel_octane_maker", "kind": "manufacturer", "label": _tr(language, MAKER_LABEL),
                     "value": maker_value(aki, language), "basis": _tr(language, MAKER_BASIS), "aki": aki})
@@ -171,8 +185,7 @@ def rows(t: Traits, language: str) -> list[dict]:
     if rec:
         grade, reasons = rec
         name = AI_NAMES[grade][1 if language == "az" else 0]
-        value = (f"ən azı {name}, {_tr(language, RECOMMENDATION_BASIS)}" if language == "az"
-                 else f"не ниже {name}, {_tr(language, RECOMMENDATION_BASIS)}")
+        value = (pick(language, f"не ниже {name}, {_tr(language, RECOMMENDATION_BASIS)}", f"ən azı {name}, {_tr(language, RECOMMENDATION_BASIS)}"))
         out.append({"key": "fuel_recommendation", "kind": "recommendation", "label": _tr(language, RECOMMENDATION_LABEL),
                     "value": value, "basis": _tr(language, RECOMMENDATION_BASIS),
                     "reason": "; ".join(_tr(language, r) for r in reasons), "grade": grade})

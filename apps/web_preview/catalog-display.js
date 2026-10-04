@@ -1,3 +1,4 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 // Consumer wording is derived from the published structured facts. Source
 // descriptions remain available to editors; unsupported English prose is not
 // presented as a translated technical specification.
@@ -10,8 +11,8 @@ const labels = {
   VARIABLE_UNSPECIFIED:['Бесступенчатая, тип не уточнён','Pilləsiz, növü dəqiqləşdirilməyib'], AMT_UNSPECIFIED:['Автоматизированная, тип не уточнён','Avtomatlaşdırılmış, növü dəqiqləşdirilməyib'],
   SEDAN:['Седан','Sedan'], SUV:['Внедорожник','Yolsuzluq avtomobili'], CROSSOVER:['Кроссовер','Krossover'], HATCHBACK:['Хетчбэк','Hetçbek'], WAGON:['Универсал','Universal'], COUPE:['Купе','Kupe'], MINIVAN:['Минивэн','Miniven'], PICKUP:['Пикап','Pikap'],
 };
-const label = (code, language) => labels[String(code || '').trim().toUpperCase()]?.[language === 'az' ? 1 : 0] || '';
-const lit = (language, ru, az) => language === 'az' ? az : ru;
+const label = (code, language) => (pair => pair ? pickText(language, pair[0], pair[1], pair[2]) : '')(labels[String(code || '').trim().toUpperCase()]);
+const lit = (language, ru, az, en) => pickText(language, ru, az, en);
 const decimal = (value) => String(value).replace('.', ',');
 const contextValue = (context, key) => {
   const value = context?.[key];
@@ -27,9 +28,9 @@ function engineDescription(source, language, context) {
   const inline=raw.match(/\b(?:inline|in-line|i|l)[- ]?([3-8])\b/i);
   const vee=raw.match(/\bV[- ]?([3-9]|10|12)\b/i);
   const boxer=raw.match(/\b(?:flat|boxer)[- ]?([3-8])\b/i);
-  if(inline)parts.push(lit(language,`рядный ${inline[1]}-цилиндровый`,`sıralı ${inline[1]} silindrli`));
+  if(inline)parts.push(lit(language,`рядный ${inline[1]}-цилиндровый`,`sıralı ${inline[1]} silindrli`,`inline ${inline[1]}-cylinder`));
   else if(vee)parts.push(`V${vee[1]}`);
-  else if(boxer)parts.push(lit(language,`оппозитный ${boxer[1]}-цилиндровый`,`oppozit ${boxer[1]} silindrli`));
+  else if(boxer)parts.push(lit(language,`оппозитный ${boxer[1]}-цилиндровый`,`oppozit ${boxer[1]} silindrli`,`flat ${boxer[1]}-cylinder`));
   const fuel=label(contextValue(context,'fuel') || (/(?:gasoline|petrol)/i.test(raw)?'GASOLINE':/diesel/i.test(raw)?'DIESEL':''),language);
   if(fuel)parts.push(fuel.toLowerCase());
   if(/\bturbo(?:charged)?\b/i.test(raw))parts.push(lit(language,'турбо','turbo'));
@@ -87,7 +88,7 @@ export function localizeTechnicalValue(key, value, language, context={}) {
   if(key==='motor_description')return /electric|электр|elektr/i.test(raw)?lit(language,'Электропривод','Elektrik ötürücüsü'):'';
   if(key==='engine_family') {
     const inline=raw.match(/\b(?:inline|in-line)[- ]?([3-8])\b/i);
-    return inline?lit(language,`Рядный ${inline[1]}-цилиндровый`,`Sıralı ${inline[1]} silindrli`):raw;
+    return inline?lit(language,`Рядный ${inline[1]}-цилиндровый`,`Sıralı ${inline[1]} silindrli`,`Inline ${inline[1]}-cylinder`):raw;
   }
   if(key==='aspiration') {
     if(/[А-Яа-яƏəİıÖöÜüÇçŞşĞğ]/u.test(raw))return raw;
@@ -102,7 +103,7 @@ export function localizeTechnicalValue(key, value, language, context={}) {
   }
   if(key==='cylinders') {
     const inline=raw.match(/\b(?:inline|in-line)[- ]?([3-8])\b/i);
-    return inline?lit(language,`Рядный ${inline[1]}-цилиндровый`,`Sıralı ${inline[1]} silindrli`):raw;
+    return inline?lit(language,`Рядный ${inline[1]}-цилиндровый`,`Sıralı ${inline[1]} silindrli`,`Inline ${inline[1]}-cylinder`):raw;
   }
   if(key==='engine_displacement') {
     const match=raw.match(/^(\d+(?:[.,]\d+)?)\s*(?:L|л|l)?$/i);

@@ -12,6 +12,7 @@ from difflib import SequenceMatcher
 from sqlalchemy import select
 
 from app.core.config import get_settings
+from app.core.english import pick
 from app.models.catalog import VehicleVariant
 from app.models.enums import DataOrigin, SourceUsageStatus
 from app.models.evidence import MarketListing, SourceRecord
@@ -36,7 +37,7 @@ from app.services.catalog_verification import (
     source_confirmed_core_ready,
     us_catalog_ready,
 )
-from app.services import fuel_advice
+from app.services import fuel_advice, unit_display
 from app.services.commercial_fact_overlay import (
     claims_for_variants,
     commercial_overlay_core_ready,
@@ -165,8 +166,8 @@ VALUE_LABELS = {
 }
 
 
-def tr(language, ru, az):
-    return az if language == "az" else ru
+def tr(language, ru, az, en=None):
+    return pick(language, ru, az, en)
 
 
 def comparison_conclusion(language):
@@ -1061,8 +1062,8 @@ def costs(catalog, scenario: CostScenario):
 def vehicle_profile(c, language):
     """A compact catalogue profile, independent of paid or full dossier readiness."""
 
-    def t(ru, az):
-        return tr(language, ru, az)
+    def t(ru, az, en=None):
+        return tr(language, ru, az, en)
 
     groups = [
         (
@@ -1275,7 +1276,8 @@ def vehicle_profile(c, language):
             key=key,
             label=f.get("titles", {}).get(language)
             or t(*labels.get(key, LABELS.get(key, (key, key)))),
-            value=fact_display(f, language) + (" " + f["unit"] if f.get("unit") else ""),
+            value=unit_display.show(f["value"], f.get("unit"), language, key)
+            or fact_display(f, language) + (" " + f["unit"] if f.get("unit") else ""),
             reuse_status=f.get("reuse_status"),
             source_url=source.get("url") or f.get("source_url") or c["source_url"],
             **({} if c.get("commercial_fact_overlay") else {
@@ -1351,7 +1353,7 @@ def vehicle_profile(c, language):
     def evidence(keys):
         return [
             dict(
-                text=s["text"]["az" if language == "az" else "ru"],
+                text=s["text"][pick(language, "ru", "az")],
                 status=s["status"],
                 sources=s["references"],
             )
@@ -1400,8 +1402,8 @@ def vehicle_profile(c, language):
 
 
 def projection(c, language, *, generated_at=None, preferences=None):
-    def t(ru, az):
-        return tr(language, ru, az)
+    def t(ru, az, en=None):
+        return tr(language, ru, az, en)
 
     sections = [
         PaidReportSection(
@@ -1591,6 +1593,7 @@ def projection(c, language, *, generated_at=None, preferences=None):
                 text=t(
                     f"При {km} км в месяц расчёт по циклу источника составляет {amount} L. Это ориентир тестового цикла, а не прогноз реального расхода в AZ.",
                     f"Ayda {km} km üçün mənbənin sınaq dövrü üzrə hesab {amount} L təşkil edir. Bu, sınaq göstəricisidir, AZ üzrə real sərfiyyat proqnozu deyil.",
+                    f"At {km} km per month, the source's test cycle gives {amount} L. This is a test-cycle reference, not a forecast of real consumption.",
                 ),
                 source_ids=[fact["source_id"]],
                 evidence_ids=[fact["evidence_id"]],
@@ -1649,7 +1652,7 @@ def projection(c, language, *, generated_at=None, preferences=None):
         if section is not None:
             refs = c.get("documentary_evidence", {}).get(documentary["key"], {})
             paragraph = ReportParagraph(
-                text=documentary["text"]["az" if language == "az" else "ru"], **refs
+                text=documentary["text"][pick(language, "ru", "az")], **refs
             )
             if target_key not in populated_documentary_targets:
                 section.paragraphs = [paragraph]
@@ -1831,6 +1834,7 @@ def answer_catalog_question(report, question, language):
                 language,
                 f"Сценарий: {distance} км × {fact['value']} / 100 = {quantity} {unit} в месяц. Цена энергии не задана.",
                 f"Ssenari: {distance} km × {fact['value']} / 100 = ayda {quantity} {unit}. Enerji qiyməti verilməyib.",
+                f"Scenario: {distance} km × {fact['value']} / 100 = {quantity} {unit} per month. Energy price not set.",
             )
             grounding["calculation"] = {
                 "monthly_km": distance,

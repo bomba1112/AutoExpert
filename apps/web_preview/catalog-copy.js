@@ -1,3 +1,4 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 // New buyer journeys share a single AZ/RU message catalogue. Existing EN reports remain readable.
 export const copy = {
   ownershipImport:['Импорт ТО, деталей и цен','Xidmət, hissə və qiymət idxalı'],
@@ -78,4 +79,4 @@ Object.assign(copy, {
   CONFIGURATION_PREFERENCE_UNRESOLVED:['Предпочтения по конструкции требуют уточнения','Quruluş seçimini dəqiqləşdirmək lazımdır'],
   rankingHelp:['Рекомендация учитывает условия запроса и подтверждённые измеримые предпочтения. Причины показаны в первой карточке; неизвестные надёжность, цены и расходы не получают выдуманной оценки.','Tövsiyə sorğu şərtlərini və təsdiqlənmiş ölçülə bilən üstünlükləri nəzərə alır. Səbəblər ilk kartda göstərilir; naməlum etibarlılıq, qiymət və xərclərə uydurma qiymət verilmir.'],
 });
-export const message = (language, key) => copy[key]?.[language === 'az' ? 1 : 0] ?? key;
+export const message = (language, key) => copy[key] ? pickText(language, copy[key][0], copy[key][1], copy[key][2]) : key;

@@ -29,7 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 I18N = ROOT / "data_work" / "_shared" / "i18n"
 sys.path.insert(0, str(ROOT / "scripts"))
-from i18n_templates import MANUAL, TEMPLATES, TITLE_TEMPLATES  # noqa: E402
+from i18n_templates import MANUAL, TEMPLATES, TITLE_TEMPLATES, TITLE_TEMPLATES_EN  # noqa: E402
 
 TOKEN = re.compile(r"[A-Za-z][A-Za-z'&.-]*")
 KEEP = re.compile(r"\b(?:\d{2}V\d{3}\w{3}|[A-Z0-9]*\d[A-Z0-9/.-]*|https?://\S+|[a-z]+\.(?:gov|com|org)\S*)\b")
@@ -103,6 +103,27 @@ def check(source: str, ru: str, az: str, glossary_general: dict) -> list[str]:
     return problems
 
 
+def english_clean(text: str) -> str:
+    """The English shown to English users: the source, a text in capitals in sentence case."""
+    letters = re.sub(r"[^A-Za-z]", "", text)
+    if letters and sum(c.isupper() for c in letters) / len(letters) > 0.6:
+        return text[:1] + text[1:].lower()
+    return " ".join(text.split())
+
+
+def check_en(source: str, en: str) -> list[str]:
+    problems = []
+    if not en or not en.strip():
+        return ["en: empty"]
+    if re.search(r"[А-Яа-яƏəĞğİıÖöŞşÇçÜü]", en):
+        problems.append("en: not English")
+    for token in kept_tokens(source):
+        digits = re.findall(r"\d+", token)
+        if digits and not all(d in en for d in digits):
+            problems.append(f"en: '{token}' of the source is missing")
+    return problems
+
+
 def glossary_warnings(source: str, ru: str, az: str, general: dict) -> list[str]:
     out = []
     low = source.lower()
@@ -127,7 +148,7 @@ def main() -> int:
 
     def term(kind: str, text: str):
         entry = terms.get(kind, {}).get(text) or terms.get(kind, {}).get(text.upper())
-        return (entry["ru"], entry["az"]) if entry else None
+        return (entry["ru"], entry["az"], entry.get("en") or text) if entry else None
 
     def component(text: str):
         parts = [term("nhtsa_component_segment", seg.strip()) for seg in text.split(":") if seg.strip()]
@@ -135,7 +156,9 @@ def main() -> int:
             return None
 
         join = lambda i: ": ".join(p[i] if n == 0 else lower_first(p[i]) for n, p in enumerate(parts))  # noqa: E731
-        return join(0), join(1)
+        # English after a colon: plain lower case of the first letter (not the Azerbaijani dotless i)
+        en = ": ".join(p[2] if n == 0 or p[2][:2].isupper() else p[2][:1].lower() + p[2][1:] for n, p in enumerate(parts))
+        return join(0), join(1), en
 
     def topic(text: str):
         whole = term("issue_topic", text)
@@ -144,17 +167,17 @@ def main() -> int:
         parts = [term("issue_topic_part", p.strip()) for p in text.split(" / ")]
         if None in parts:
             return None
-        return " / ".join(p[0] for p in parts), " / ".join(p[1] for p in parts)
+        return " / ".join(p[0] for p in parts), " / ".join(p[1] for p in parts), text
 
     def translate(kind: str, text: str):
         if text in MANUAL:
-            return MANUAL[text][0], MANUAL[text][1], "manual"
+            return MANUAL[text][0], MANUAL[text][1], "manual", text
         for pattern, ru, az in TEMPLATES:
             m = pattern.match(text)
             if m:
-                return ru.format(**m.groupdict()), az.format(**m.groupdict()), "template"
+                return ru.format(**m.groupdict()), az.format(**m.groupdict()), "template", text
         if kind == "issue_title":
-            for pattern, part_kind, ru, az in TITLE_TEMPLATES:
+            for (pattern, part_kind, ru, az), en in zip(TITLE_TEMPLATES, TITLE_TEMPLATES_EN, strict=True):
                 m = pattern.match(text)
                 if not m:
                     continue
@@ -163,23 +186,26 @@ def main() -> int:
                       "carcomplaints_problem": lambda p: term("carcomplaints_problem", p)}[part_kind](part)
                 if tr:
                     values = {k: v for k, v in m.groupdict().items() if k != "part"}
-                    return ru.format(part=lower_first(tr[0]), **values), az.format(part=lower_first(tr[1]), **values), "template"
+                    part_en = tr[2]
+                    return (ru.format(part=lower_first(tr[0]), **values), az.format(part=lower_first(tr[1]), **values), "template",
+                            en.format(part=part_en, **values))
                 break
         if kind in ("issue_component", "recall_component"):
             tr = component(text)
             if tr:
-                return tr[0], tr[1], "glossary"
+                return tr[0], tr[1], "glossary", tr[2]
         if kind == "issue_symptom":
             tr = topic(text)
             if tr:
-                return tr[0], tr[1], "glossary"
+                return tr[0], tr[1], "glossary", tr[2][:1].upper() + tr[2][1:]
         if kind.startswith("maintenance_"):
             tr = term(kind, text)
             if tr:
-                return tr[0], tr[1], "glossary"
+                return tr[0], tr[1], "glossary", tr[2]
         entry = llm.get((kind, sources_hash[(kind, text)]))
         if entry:
-            return entry["ru"], entry["az"], "llm"
+            # the source of a free text (NHTSA recall summary) is plain English already
+            return entry["ru"], entry["az"], "llm", english_clean(text)
         return None
 
     sources_hash = {(e["kind"], e["text"]): e["hash"] for e in sources}
@@ -191,12 +217,12 @@ def main() -> int:
         if result is None:
             missing.append(e)
             continue
-        ru, az, method = result
-        problems = check(e["text"], ru, az, general)
+        ru, az, method, en = result
+        problems = check(e["text"], ru, az, general) + check_en(e["text"], en)
         warn = glossary_warnings(e["text"], ru, az, general) if method == "llm" else []
         for w in warn:
             warnings[w.split("'")[1]] += 1
-        record = {"kind": e["kind"], "hash": e["hash"], "text": e["text"], "ru": ru, "az": az, "method": method,
+        record = {"kind": e["kind"], "hash": e["hash"], "text": e["text"], "ru": ru, "az": az, "en": en, "method": method,
                   "glossary_version": version, "rows": e["rows"]}
         if problems:
             failed.append({**record, "problems": problems})

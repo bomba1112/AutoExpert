@@ -1,3 +1,4 @@
+import {EN, pickText} from './en-text.js?v=0.10.0';
 import {api} from './api.js?v=0.8.1';
 import {localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 
@@ -68,7 +69,7 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
       selected: 'Müqayisəyə əlavə olundu', comparison: 'Avtomobillərin müqayisəsi', compareLimit: 'Müqayisədə ən çox üç avtomobil ola bilər.', compareThis: 'Bu versiyanı müqayisə et',
     },
   };
-  const t = key => copy[state.language === 'az' ? 'az' : 'ru'][key] || key;
+  const t = key => (state.language === 'en' ? EN[copy.ru[key]] : copy[state.language][key]) || key;
   const visible = value => value !== null && value !== undefined && String(value).trim() && !['UNKNOWN', 'UNRESOLVED', '—'].includes(String(value).trim().toUpperCase());
   const technicalLabels = {
     GASOLINE:['Бензин','Benzin'], GASOLINE_NA:['Бензин без турбины','Turbosuz benzin'], GASOLINE_TURBO:['Бензин турбо','Turbo benzin'], DIESEL:['Дизель','Dizel'], HEV:['Гибрид','Hibrid'], PHEV:['Заряжаемый гибрид','Şarj olunan hibrid'], BEV:['Электро','Elektrik'],
@@ -78,7 +79,7 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
   };
   const catalogValue = value => {
     const label=technicalLabels[String(value).toUpperCase()];
-    if(label)return label[state.language==='az'?1:0];
+    if(label)return pickText(state.language,label[0],label[1],label[2]);
     return /^[A-Z][A-Z0-9_]+$/.test(String(value))?'':String(value);
   };
   const candidateValue = (candidate,key) => {
@@ -87,7 +88,7 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
     const sourceKey=key==='engine'&&!candidate.engine?'engine_displacement':key==='transmission'&&!candidate.transmission?'transmission_family':technicalKey;
     return localizeTechnicalValue(sourceKey,source,state.language,candidate);
   };
-  const conflictValue = (field,value) => field==='engine'&&/^\d+(?:[.,]\d+)?$/.test(String(value))?String(value).replace('.',',')+(state.language==='az'?' l':' л'):localizeTechnicalValue(field==='engine'?'engine_description':field==='transmission'?'transmission_description':field,value,state.language);
+  const conflictValue = (field,value) => field==='engine'&&/^\d+(?:[.,]\d+)?$/.test(String(value))?String(value).replace('.',',')+(pickText(state.language, ' л', ' l', ' L')):localizeTechnicalValue(field==='engine'?'engine_description':field==='transmission'?'transmission_description':field,value,state.language);
   const localizedQuestion = value => String(value).replace(/\b(?:GASOLINE_NA|GASOLINE_TURBO|GASOLINE|DIESEL|HEV|PHEV|BEV|FWD|RWD|AWD|4WD|PART_TIME_4WD|SEDAN|HATCHBACK|WAGON|COUPE|SUV|CROSSOVER|MINIVAN|PICKUP|AT|CVT|IVT|DCT|MANUAL)\b/g,code=>catalogValue(code));
   const safeOriginal = value => {
     if(typeof value!=='string'||value.length>2000||/[\s\u0000-\u001f\u007f]/.test(value))return '';
@@ -149,7 +150,7 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
   async function loadResult(id) {await ensureSession();const data=await api(`/listings/intake/${encodeURIComponent(id)}`);result(data);}
   async function send(payload) {
     await ensureSession();
-    const data=await api('/listings/intake',{method:'POST',body:JSON.stringify({...payload,language:state.language==='az'?'az':'ru'})});
+    const data=await api('/listings/intake',{method:'POST',body:JSON.stringify({...payload,language:state.language})});
     go(`/listing-result/${encodeURIComponent(data.id)}`);
   }
   async function filePayload(form) {
@@ -194,7 +195,7 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
         const fields=Object.fromEntries(Object.entries(d).filter(([,v])=>visible(v)));
         await send({input_type:'MANUAL',source_url:url||undefined,fields});
       }else await submitImport(form,form.id==='listing-enrich-form'?lastResult?.snapshot?.source_url:'');
-    })().catch(error=>showToast(error.message && Object.values(copy[state.language==='az'?'az':'ru']).includes(error.message)?error.message:t('submitError'))).finally(()=>{if(button)button.disabled=false;});
+    })().catch(error=>showToast(error.message && Object.keys(copy.ru).map(t).includes(error.message)?error.message:t('submitError'))).finally(()=>{if(button)button.disabled=false;});
   });
   return {route(name,id){if(name==='check'){check(id);return true;}if(name==='manual'){check('manual');return true;}if(name==='listing-result'){return loadResult(id).then(()=>true);}return false;},check,result};
 }
