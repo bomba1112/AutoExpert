@@ -2,7 +2,7 @@
  "make": "chevrolet",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T17:36:55+00:00",
+ "started_at": "2026-10-04T12:54:16+00:00",
  "replace_own": [],
  "lines": {
   "chevrolet/malibu": {
@@ -10,13 +10,12 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 84,
-    "source_records_new": 13,
     "te_existing": 824,
     "configurations": 27,
     "configurations_linked": 5,
     "configurations_research_only": 22,
     "issues_existing": 70,
-    "maintenance_new": 86
+    "maintenance_existing": 86
    },
    "generations": [
     {
@@ -36,13 +35,13 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 42,
-    "source_records_new": 7,
     "te_existing": 860,
     "configurations": 28,
     "configurations_research_only": 26,
     "configurations_linked": 2,
     "issues_existing": 63,
-    "maintenance_new": 100
+    "maintenance_existing": 100,
+    "maintenance_corrected": 2
    },
    "generations": [
     {
@@ -61,13 +60,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 90,
-    "source_records_new": 13,
-    "te_existing": 1205,
+    "raw_documents_seen": 86,
+    "te_existing": 1192,
+    "te_new_GENERATION": 11,
     "configurations": 44,
     "configurations_research_only": 44,
     "issues_existing": 75,
-    "maintenance_new": 87
+    "maintenance_existing": 87,
+    "te_stale_deleted": 13
    },
    "generations": [
     {
@@ -91,12 +91,11 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 66,
-    "source_records_new": 11,
     "te_existing": 541,
     "configurations": 19,
     "configurations_research_only": 19,
     "issues_existing": 45,
-    "maintenance_new": 68
+    "maintenance_existing": 68
    },
    "generations": [
     {
@@ -112,8 +111,38 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "maintenance_corrections": {
+  "hidden": 2
+ },
+ "stale_without_same_value": [
+  {
+   "line": "chevrolet/equinox",
+   "key": "engine_oil_oem_approval",
+   "value": "dexos1; dexos2",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [
+    "\"dexos1\""
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "chevrolet/equinox",
+   "key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "years": [
+    2021,
+    2021
+   ],
+   "now": [
+    "\"SAE 0W-20\""
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T17:37:20+00:00"
+ "finished_at": "2026-10-04T12:55:10+00:00"
 }

@@ -1,28 +1,13 @@
 {
- "generations": [
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "rehearsal",
+ "counts": {
+  "hidden": 2
+ },
+ "changes": [
   {
-   "code": "US2014-2015",
-   "action": "unchanged"
-  },
-  {
-   "code": "II",
-   "action": "unchanged"
-  }
- ],
- "conflicts": [],
- "existing_vs_new": [
-  {
-   "variant": "factory-chevrolet-us:chevrolet-cruze-ii-us-1.4-at-FWD-2018",
-   "existing": "fuel_tank_us_gal='LS с автоматом: 12.0 US gal; остальные бензиновые версии: 13.7 US gal'",
-   "resolution": "existing value is not numeric; not compared"
-  }
- ],
- "stale": [],
- "dry_run": false,
- "started_at": "2026-10-04T13:00:46+00:00",
- "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "maintenance_corrections": [
-  {
+   "line": "cruze",
    "change": "updated",
    "natural_key": "9c1cde8e89a5495f3713d8b08d00527d7f2ad1d6496b780465a4adb03c28ad89",
    "old": {
@@ -88,6 +73,7 @@
    }
   },
   {
+   "line": "cruze",
    "change": "updated",
    "natural_key": "2f7445d9d7acf4edf02b603ffdd3d3acb897946bf97f2c19b81b4e5b1bfc0e91",
    "old": {
@@ -152,16 +138,5 @@
     ]
    }
   }
- ],
- "counts": {
-  "raw_documents_seen": 42,
-  "te_existing": 860,
-  "configurations": 28,
-  "configurations_research_only": 26,
-  "configurations_linked": 2,
-  "issues_existing": 63,
-  "maintenance_existing": 100,
-  "maintenance_corrected": 2
- },
- "finished_at": "2026-10-04T13:00:50+00:00"
+ ]
 }

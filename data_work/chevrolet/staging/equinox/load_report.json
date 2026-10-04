@@ -304,18 +304,176 @@
    "resolution": "existing catalog fact kept; new scoped fact stored separately"
   }
  ],
- "stale": [],
+ "stale": [
+  {
+   "id": "1091ba3f-acc3-406c-b408-ff1151c82041",
+   "fact_key": "engine_oil_viscosity",
+   "value": "SAE 0W-20",
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "c33dc340-9814-434d-b1ed-2561f2e69f94",
+   "fact_key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "04e67253-3aa4-44cb-bcef-9fe24e331c5b",
+   "fact_key": "coolant_capacity_l",
+   "value": 6.6,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "459da066-a81d-48d1-95c3-2a05c5af1794",
+   "fact_key": "coolant_capacity_l",
+   "value": 7.5,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "b2027183-4312-453c-8bfc-ebd3ce0b7049",
+   "fact_key": "coolant_capacity_l",
+   "value": 7.8,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "360ff5c7-7fc3-4533-a4d9-5e044be12045",
+   "fact_key": "engine_oil_capacity_l",
+   "value": 5,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "15d07bb0-c7fa-43a8-9636-1804164e21e9",
+   "fact_key": "engine_oil_capacity_l",
+   "value": 4,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "b2dd969b-6854-4c25-932c-c6cf48294606",
+   "fact_key": "engine_oil_capacity_l",
+   "value": 5,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "e9966509-7d74-41a0-a93d-4d5cb6fd4415",
+   "fact_key": "engine_oil_capacity_l",
+   "value": 5.7,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "49a447ab-ca92-4c3d-ad4e-d94307485eea",
+   "fact_key": "engine_oil_capacity_l",
+   "value": 4.7,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "53ff06ba-e40a-4deb-998e-22d5c5e2c976",
+   "fact_key": "fuel_tank_l",
+   "value": 56,
+   "years": [
+    2020,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "ced9e100-fab6-4f6b-baa5-adc98a40238f",
+   "fact_key": "engine_oil_oem_approval",
+   "value": "dexos1; dexos2",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "d3ce354d-d208-4e93-9999-903cd7d6133e",
+   "fact_key": "engine_oil_viscosity",
+   "value": "SAE 5W-30",
+   "years": [
+    2021,
+    2021
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T17:46:33+00:00",
+ "started_at": "2026-10-04T13:00:51+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
  "counts": {
-  "raw_documents_seen": 90,
-  "source_records_new": 13,
-  "te_existing": 1205,
+  "raw_documents_seen": 86,
+  "te_existing": 1192,
+  "te_new_GENERATION": 11,
   "configurations": 44,
   "configurations_research_only": 44,
   "issues_existing": 75,
-  "maintenance_new": 87
+  "maintenance_existing": 87,
+  "te_stale_deleted": 13
  },
- "finished_at": "2026-10-03T17:46:40+00:00"
+ "finished_at": "2026-10-04T13:00:57+00:00"
 }
