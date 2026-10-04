@@ -153,6 +153,16 @@ def test_display_level_by_source_host(db_session, loaded):
             assert fact.display_level == DisplayLevel.FACT, (fact.fact_key, host)
         elif fact.fact_key != "configuration":
             assert fact.display_level == DisplayLevel.SECONDARY_NOTE, (fact.fact_key, host)
+    # owner decision: autohome configuration tables and SAMR are FACT; autohome news / ask pages
+    # and everything else SECONDARY_NOTE
+    loader = CnLoader(db_session, read_staging(STAGING, MODEL_MAP))
+    assert loader.display_for("https://car.autohome.com.cn/config/series/5823.html") == "FACT"
+    assert loader.display_for("https://www.autohome.com.cn/spec/180009/") == "FACT"
+    assert loader.display_for("https://www.samr.gov.cn/zlfzj/qxcpzh/art.html") == "FACT"
+    assert loader.display_for("https://www.autohome.com.cn/news/202502/1303971.html") == (
+        "SECONDARY_NOTE"
+    )
+    assert loader.display_for("https://www.ifanr.com/1637177") == "SECONDARY_NOTE"
     ranges = [
         f
         for f in facts

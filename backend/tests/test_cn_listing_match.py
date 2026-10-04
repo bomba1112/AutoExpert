@@ -137,16 +137,16 @@ def test_aliases_and_exact_name_first(cn_db):
 def test_regression_on_the_catalogue_listings(cn_db):
     report = cm.regression(cn_db, STAGING_DIR / "listings/turbo_specs.json", STAGING_DIR)
     assert report["listings"] == 28
-    assert report["summary"] == {"primary": 25, "candidate": 1, "closest_official_alternative": 2}
+    assert report["summary"] == {"primary": 27, "candidate": 1}
     by_outcome = {}
     for r in report["results"]:
         by_outcome.setdefault(r["outcome"], []).append(r)
     assert [r["status"] for r in by_outcome["candidate"]] == ["CLAIM_CONFLICT"]  # Qiyuan A06 2023
-    for r in by_outcome["closest_official_alternative"]:
-        # CS 75 Plus "185 a.g.": by the ±3 % rule only 2025 JL473ZQ7 (188 PS) fits; the
-        # catalogue linked 2026 (192 PS) and names the 2025 version as the closest official one
-        assert r["primary"] == "cn:changan_cs75-plus_2025_jl473zq7-8at"
-        assert r["expected"] == ["cn:changan_cs75-plus_2026_1.5t-8at"]
+    # CS 75 Plus "185 a.g.": 2026款 1.5T is 141 kW only, the listings were relinked to 2025款
+    # JL473ZQ7 (138 kW / 188 PS) in the catalogue (owner decision, samr a9f99c4)
+    plus = [r for r in report["results"] if "CS 75 Plus" in r["listing"]]
+    assert len(plus) == 2
+    assert {r["primary"] for r in plus} == {"cn:changan_cs75-plus_2025_jl473zq7-8at"}
 
 
 def auth(client: TestClient) -> dict:

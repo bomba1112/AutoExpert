@@ -264,9 +264,12 @@ class CnLoader:
             host: level for level in ("FACT", "SECONDARY_NOTE") for host in display[level]
         }
         self.default_display = display["default"]
+        self.fact_prefixes = tuple(display.get("FACT_URL_PREFIXES") or ())
 
     # -- helpers ----------------------------------------------------------------------
     def display_for(self, url: str | None) -> DisplayLevel:
+        if any((url or "").startswith(prefix) for prefix in self.fact_prefixes):
+            return DisplayLevel.FACT  # an autohome configuration table
         host = urlparse(url or "").netloc
         return DisplayLevel(self.host_display.get(host, self.default_display))
 
@@ -282,13 +285,16 @@ class CnLoader:
             self.sources[url] = existing.id
             return existing.id
         sohu = host.endswith("auto.sohu.com")
+        autohome_table = url.startswith(self.fact_prefixes)
         if sohu:
             kind, tier, publisher = "CN_CONFIG_TABLE", SourceTier.B, "搜狐汽车 (sohu)"
+        elif autohome_table:
+            kind, tier, publisher = "CN_CONFIG_TABLE", SourceTier.B, "汽车之家 (autohome)"
         elif host.endswith("wikipedia.org"):
             kind, tier, publisher = "ENCYCLOPEDIA", SourceTier.C, "Wikipedia"
         elif host in ("www.xchuxing.com", "www.auto-data.net"):
             kind, tier, publisher = "SECONDARY_SPEC_DATABASE", SourceTier.B, host
-        elif host == "www.samr.gov.cn":
+        elif host in ("www.samr.gov.cn", "samr.gov.cn"):
             kind, tier, publisher = "REGULATOR", SourceTier.A, "SAMR (国家市场监督管理总局)"
         else:
             kind, tier, publisher = "AUTOMOTIVE_MEDIA", SourceTier.C, host
@@ -304,7 +310,9 @@ class CnLoader:
             if host.endswith(".cn") or "sohu" in host or host.endswith("xchuxing.com")
             else "en",
             retrieved_at=self.retrieved_at,
-            confidence=ConfidenceLevel.HIGH if sohu else ConfidenceLevel.MEDIUM,
+            confidence=ConfidenceLevel.HIGH
+            if sohu or autohome_table or tier == SourceTier.A
+            else ConfidenceLevel.MEDIUM,
             usage_status=SourceUsageStatus.ACTIVE,
             is_demo=False,
             notes=f"{marker}; samr_commit={self.s.manifest['samr_commit'][:12]}; "
