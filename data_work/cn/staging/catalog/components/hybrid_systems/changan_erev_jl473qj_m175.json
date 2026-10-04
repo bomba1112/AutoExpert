@@ -1,0 +1,51 @@
+{
+  "id": "changan_erev_jl473qj_m175",
+  "name": "EREV Changan: ДВС JL473QJ + мотор(ы) 175 кВт, редуктор",
+  "marketing_name": null,
+  "codes": [
+    "JL473QJ"
+  ],
+  "supplier": "Changan",
+  "generation": null,
+  "specs": {
+    "fingerprint": {
+      "engine_code": "JL473QJ",
+      "motor_kw": [
+        175
+      ],
+      "gearbox": "reducer",
+      "type": "EREV"
+    },
+    "batteries_kwh": [
+      18.99,
+      31.73
+    ],
+    "motor_axle": "rear"
+  },
+  "note": "Компонент по техническому отпечатку (маркетинговое название первоисточником не подтверждено). Объединены записи с полным совпадением ключа; батарея может отличаться.",
+  "known_issues": [
+    {
+      "text": "Генератор при заряде <15% работает на высоких оборотах и громко гудит",
+      "source": "https://k.autohome.com.cn/detail/view_01jngrbhc06mtkcchh6mw00000.html",
+      "more_sources": [
+        "https://k.autohome.com.cn/detail/view_01jk183nc16mtk8d9q74wg0000.html",
+        "https://k.autohome.com.cn/detail/view_01jnk590jh6mtkcchr6gr00000.html"
+      ],
+      "scope": "hybrid_system",
+      "review_car": "2024, EREV 215",
+      "reported_in": [
+        "Deepal S07 EREV"
+      ],
+      "scope_note": "гул ДВС/генератора при низком заряде — поведение гибридной системы"
+    }
+  ],
+  "used_in": [
+    "changan_deepal-s07_2023_18.99kwh-175kw",
+    "changan_deepal-s07_2023_31.73kwh-175kw",
+    "changan_deepal-s07_2024_18.99kwh-175kw",
+    "changan_deepal-s07_2024_31.73kwh-175kw"
+  ],
+  "sources": {
+    "specs": "таблицы sohu в записях used_in"
+  }
+}

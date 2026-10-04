@@ -1,0 +1,53 @@
+{
+  "id": "changan_phev_jl469q1_m158",
+  "name": "PHEV Changan: ДВС JL469Q1 + мотор(ы) 158 кВт, E-CVT",
+  "marketing_name": null,
+  "codes": [
+    "JL469Q1"
+  ],
+  "supplier": "Changan",
+  "generation": null,
+  "specs": {
+    "fingerprint": {
+      "engine_code": "JL469Q1",
+      "motor_kw": [
+        158
+      ],
+      "gearbox": "ecvt",
+      "type": "PHEV"
+    },
+    "batteries_kwh": [
+      18.4
+    ],
+    "motor_axle": "front"
+  },
+  "note": "Компонент по техническому отпечатку (маркетинговое название первоисточником не подтверждено). Объединены записи с полным совпадением ключа; батарея может отличаться.",
+  "known_issues": [
+    {
+      "text": "При разряженной батарее мотор громкий и крутится до 3000–3600 об/мин на трассе",
+      "source": "https://k.autohome.com.cn/detail/view_01jeebg3r76mtk0e9h6msg0000.html",
+      "more_sources": [
+        "https://k.autohome.com.cn/detail/view_01jf73czjm6mtk2d9h60t00000.html",
+        "https://k.autohome.com.cn/detail/view_01jb3jheph6mt3edsh60vg0000.html",
+        "https://k.autohome.com.cn/detail/view_01jh361ggq6mtk6d1g68t00000.html",
+        "https://k.autohome.com.cn/detail/view_01jp25xvek6mtkcdhk6gvg0000.html",
+        "https://k.autohome.com.cn/detail/view_01j5q1wg076mt34csr70s00000.html"
+      ],
+      "scope": "hybrid_system",
+      "review_car": "2024, 1.5 PHEV",
+      "reported_in": [
+        "Changan UNI-Z PHEV"
+      ],
+      "scope_note": "гул ДВС/генератора при низком заряде — поведение гибридной системы"
+    }
+  ],
+  "used_in": [
+    "changan_eado-phev_2025_145km",
+    "changan_nevo-a05_2025_145",
+    "changan_uni-z-phev_2024_18.4kwh-158kw",
+    "changan_uni-z-phev_2025_125km"
+  ],
+  "sources": {
+    "specs": "таблицы sohu в записях used_in"
+  }
+}

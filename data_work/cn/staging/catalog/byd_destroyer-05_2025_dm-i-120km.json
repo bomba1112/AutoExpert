@@ -1,0 +1,189 @@
+{
+  "model": "BYD Destroyer 05",
+  "model_cn": "驱逐舰05",
+  "aliases": [
+    "Chazor",
+    "King",
+    "Seal 5 DM-i"
+  ],
+  "twin_models": [
+    "BYD Qin Plus DM-i (DM-i 4.0)",
+    "BYD Qin Pro"
+  ],
+  "my": 2025,
+  "trim_key": "DM-i 120km",
+  "generation": "2025款; DM-i 4.0 (ДВС BYD472QA 81 кВт)",
+  "trims": [
+    "DM-i 120KM 畅行版 (sohu 178001, 2025-05, 12.18万)"
+  ],
+  "status_china": "снята с продажи, преемник Seal 05 DM-i",
+  "powertrain_type": "PHEV_series_parallel",
+  "hybrid_system": "BYD DM-i (EHS)",
+  "platform": "DM-i 4.0",
+  "engine": {
+    "code": "BYD472QA",
+    "displacement_cc": 1498,
+    "aspiration": "NA",
+    "compression": 15.5,
+    "power_hp": 110,
+    "power_kw": 81,
+    "torque_nm": 135
+  },
+  "motor": {
+    "type": "PMSM",
+    "count": 1,
+    "power_hp": 197,
+    "power_kw": 145,
+    "torque_nm": 325,
+    "axle": "front"
+  },
+  "system_power_hp": null,
+  "transmission": "E-CVT",
+  "drive": "FWD",
+  "battery": {
+    "kwh": 18.3,
+    "chemistry": "LFP",
+    "brand": "BYD Blade",
+    "supplier": "FinDreams",
+    "cooling": "liquid"
+  },
+  "ev_range_km": {
+    "NEDC": 120,
+    "WLTC": 101,
+    "CLTC": null
+  },
+  "consumption_kwh_100km": 14.5,
+  "fuel_l_100km": {
+    "value": 3.8,
+    "cycle": "NEDC"
+  },
+  "charging": {
+    "connector": "GB/T",
+    "dc_supported": true,
+    "dc_kw": 17,
+    "dc_to_80_h": 1.1,
+    "ac_kw": 3.3,
+    "ac_full_h": 5.5
+  },
+  "accel_0_100_s": 7.3,
+  "top_speed_kmh": 185,
+  "curb_weight_kg": 1620,
+  "dimensions_mm": {
+    "length": 4780,
+    "width": 1837,
+    "height": 1495,
+    "wheelbase": 2718
+  },
+  "known_issues": [
+    {
+      "text": "Стойки стабилизатора изнашиваются рано (дважды за 70 тыс. км)",
+      "source": "https://m.kolesa.kz/reviews/?reviewId=689ea3dffe1390c6f4105a33&mark-id=byd&model-id=destroyer-05",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "suspension"
+    },
+    {
+      "text": "Слабая шумоизоляция, слышно двигатель и дорогу",
+      "source": "https://www.drom.ru/reviews/byd/destroyer_05/5kopeek/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "body"
+    },
+    {
+      "text": "Дешёвые материалы салона, вялый руль",
+      "source": "https://www.drom.ru/reviews/byd/destroyer_05/5kopeek/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "interior"
+    },
+    {
+      "text": "Мало регулировки сиденья для роста >185 см (кузов Qin Plus)",
+      "source": "https://www.drive2.ru/l/666551712500155200/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "interior"
+    }
+  ],
+  "buyer_checks": [
+    "18.3 kWh = версия 120 км с DC; 8.3 kWh = версия 55 км без DC",
+    "Стук спереди — стойки стабилизатора",
+    "Совместимость разъёма GB/T с местными зарядными станциями"
+  ],
+  "match_fingerprint": {
+    "battery_kwh": 18.3,
+    "hp": 197
+  },
+  "listing_values": {
+    "battery_kwh": 18.3,
+    "hp": 197,
+    "url": "https://turbo.az/autos/10017220-byd-destroyer-05"
+  },
+  "turbo_listings": [
+    "https://turbo.az/autos/10017220-byd-destroyer-05"
+  ],
+  "sources": {
+    "config_table": "https://portal.auto.sohu.com/aggr/model/trims/pk?trim_ids=178001&city_code=110000",
+    "trim_page": "https://db.auto.sohu.com/trim_178001/",
+    "engine": "https://www.yilu.cn/params/97652/",
+    "motor": "https://www.yilu.cn/params/97652/",
+    "battery": "https://www.yilu.cn/params/97652/",
+    "performance": "https://data.carnewschina.com/database/byd/byd-destroyer-05/2025",
+    "weight": "https://portal.auto.sohu.com/aggr/model/trims/pk?trim_ids=178001&city_code=110000",
+    "dimensions": "https://portal.auto.sohu.com/aggr/model/trims/pk?trim_ids=178001&city_code=110000",
+    "charging": "https://www.yilu.cn/params/97652/",
+    "ev_range_km": "https://www.yilu.cn/params/97652/",
+    "platform": "https://en.wikipedia.org/wiki/BYD_Destroyer_05"
+  },
+  "notes": "Wikipedia указывает DC 25 kW, китайская таблица конфигурации — 17 kW; взято 17. Поколение DM-i 4.0 подтверждено (мотор 145 kW; у DM 5.0 — 160 kW).",
+  "verification": "verified",
+  "sohu_trim": {
+    "trim_id": 178001,
+    "name": "驱逐舰05 2025款 DM-i 120KM 畅行版",
+    "note": "привязка добавлена при расширении по годам"
+  },
+  "components": {
+    "engine": "byd_472qa_1.5",
+    "transmission": "byd_ehs_ecvt_dmi4",
+    "hybrid_system": "byd_dmi_4.0"
+  },
+  "components_null_reason": null,
+  "known_issues_resolved": [
+    {
+      "text": "Стойки стабилизатора изнашиваются рано (дважды за 70 тыс. км)",
+      "source": "https://m.kolesa.kz/reviews/?reviewId=689ea3dffe1390c6f4105a33&mark-id=byd&model-id=destroyer-05",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "suspension",
+      "origin": "модель"
+    },
+    {
+      "text": "Слабая шумоизоляция, слышно двигатель и дорогу",
+      "source": "https://www.drom.ru/reviews/byd/destroyer_05/5kopeek/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "body",
+      "origin": "модель"
+    },
+    {
+      "text": "Дешёвые материалы салона, вялый руль",
+      "source": "https://www.drom.ru/reviews/byd/destroyer_05/5kopeek/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "interior",
+      "origin": "модель"
+    },
+    {
+      "text": "Мало регулировки сиденья для роста >185 см (кузов Qin Plus)",
+      "source": "https://www.drive2.ru/l/666551712500155200/",
+      "review_car": "Destroyer 05, DM-i 18.3 kWh / 145 кВт (из эталонной записи)",
+      "scope": "interior",
+      "origin": "модель"
+    },
+    {
+      "text": "Громкий запуск/гул двигателя при низком заряде или в режиме удержания заряда",
+      "source": "https://k.autohome.com.cn/detail/view_01jcj179j56mt3gdsj6csg0000.html",
+      "more_sources": [
+        "https://k.autohome.com.cn/detail/view_01hw1ywve36msk8c1r6rvg0000.html",
+        "https://k.autohome.com.cn/detail/view_01hmb1z5g46ms3edss70t00000.html",
+        "https://k.autohome.com.cn/detail/view_01hjnxjr1r6ms3ae1p6cvg0000.html",
+        "https://www.drom.ru/reviews/byd/song_plus/1464221/"
+      ],
+      "scope": "hybrid_system",
+      "component": "byd_dmi_4.0",
+      "origin": "гибридная система BYD DM-i (4-е поколение DM, «DM-i 4.0»), отзыв по BYD Song PLUS DM-i"
+    }
+  ]
+}
