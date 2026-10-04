@@ -90,6 +90,8 @@ def require(db, user: User, feature: str) -> None:
 
 
 def region_of(user: User) -> str:
+    if user.email.endswith(".invalid"):  # a preview demo session: its country is a placeholder
+        return {"en": "US", "az": "AZ"}.get(user.preferred_language, "AZ")
     country = (user.country_code or "").upper()
     if country in ("US", "CA", "AZ"):
         return country

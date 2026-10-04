@@ -77,7 +77,7 @@ def main(base: str) -> int:
             page.wait_for_selector(".garage-qa", timeout=60000)
             page.fill("#garage-mechanic-form input[name=question]", QUESTIONS[lang])
             page.click("#garage-mechanic-form button[type=submit]")
-            page.wait_for_function("document.querySelectorAll('.garage-qa').length >= 2", timeout=60000)
+            page.locator(".garage-qa").nth(1).wait_for(timeout=60000)
             page.add_style_tag(content=HIDE)
             page.locator("#garage-mechanic").screenshot(path=str(OUT / f"mechanic_{lang}.png"))
             # stage 4: the owners club
@@ -100,6 +100,7 @@ def main(base: str) -> int:
             page.goto(f"{base}/cars/{lang}/{PUBLIC}/")
             page.wait_for_selector("h1", timeout=60000)
             page.screenshot(path=str(OUT / f"public_camry_{lang}.png"), full_page=True)
+            page.screenshot(path=str(OUT / f"public_camry_top_{lang}.png"))
             call(page, "DELETE", f"/garage/vehicles/{car['id']}")
             context.close()
             print(lang)

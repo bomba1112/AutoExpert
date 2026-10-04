@@ -102,6 +102,8 @@ def test_prices_per_region_from_the_configuration(db_session):
     assert entitlements.price(entitlements.region_of(az)) == {"currency": "AZN", "monthly_minor": 100}
     assert entitlements.region_of(other) == "AZ"
     assert entitlements.price("XX")["currency"] == "USD"
+    demo_en = User(email="demo-1@demo.autoexpert.invalid", password_hash="x", country_code="AZ", preferred_language="en")
+    assert entitlements.region_of(demo_en) == "US"  # a preview demo session follows its language
 
 
 def test_flag_off_grants_everything(car, client, db_session):  # noqa: F811
