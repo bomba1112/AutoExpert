@@ -42,7 +42,7 @@ class DatabaseTechnicalDataProvider:
             self.session.scalars(
                 select(KnownIssue).where(
                     KnownIssue.vehicle_variant_id == variant_id,
-                    # f090: CN owner-review issues carry no severity and stay out of
+                    # f093: CN owner-review issues carry no severity and stay out of
                     # the analysis reports.
                     KnownIssue.severity.is_not(None),
                 )
