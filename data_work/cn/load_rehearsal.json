@@ -1,18 +1,18 @@
 {
  "mode": "rehearsal",
  "database": "C:\\AutoExpertData\\work\\rehearsal_cn.db",
- "started_at": "2026-10-04T18:16:34+00:00",
- "samr_commit": "8e13ff60ca03f15706def07058cd454a6ae1dd4d",
+ "started_at": "2026-10-04T18:42:49+00:00",
+ "samr_commit": "a9f99c4bdb538c4246a969f873ca32b297ddb60d",
  "alembic_before": [
-  "f090_garage"
+  "f093_owners_club"
  ],
  "alembic_after": {
   "heads": [
-   "f090_cn_catalog",
-   "f090_garage"
+   "f093_owners_club",
+   "f094_cn_catalog"
   ],
   "foreign_revisions": [
-   "f090_garage.py"
+   "f093_owners_club.py"
   ]
  },
  "before": {
@@ -77,9 +77,8 @@
  "listing_regression": {
   "listings": 28,
   "summary": {
-   "primary": 25,
-   "candidate": 1,
-   "closest_official_alternative": 2
+   "primary": 27,
+   "candidate": 1
   },
   "results": [
    {
@@ -264,35 +263,31 @@
     "url": "https://turbo.az/autos/10536975-changan-cs-75-plus",
     "listing": "Changan CS 75 Plus 2026 | 1.5 L / 185 a.g. / Benzin",
     "expected": [
-     "cn:changan_cs75-plus_2026_1.5t-8at"
-    ],
-    "catalogue_alternatives": [
      "cn:changan_cs75-plus_2025_jl473zq7-8at"
     ],
+    "catalogue_alternatives": [],
     "status": "EXACT_MATCH",
     "primary": "cn:changan_cs75-plus_2025_jl473zq7-8at",
     "candidates": [
      "cn:changan_cs75-plus_2025_jl473zq7-8at"
     ],
     "conflicts": [],
-    "outcome": "closest_official_alternative"
+    "outcome": "primary"
    },
    {
     "url": "https://turbo.az/autos/10667087-changan-cs-75-plus",
     "listing": "Changan CS 75 Plus 2026 | 1.5 L / 185 a.g. / Benzin",
     "expected": [
-     "cn:changan_cs75-plus_2026_1.5t-8at"
-    ],
-    "catalogue_alternatives": [
      "cn:changan_cs75-plus_2025_jl473zq7-8at"
     ],
+    "catalogue_alternatives": [],
     "status": "EXACT_MATCH",
     "primary": "cn:changan_cs75-plus_2025_jl473zq7-8at",
     "candidates": [
      "cn:changan_cs75-plus_2025_jl473zq7-8at"
     ],
     "conflicts": [],
-    "outcome": "closest_official_alternative"
+    "outcome": "primary"
    },
    {
     "url": "https://turbo.az/autos/10744031-changan-uni-v",
@@ -573,8 +568,17 @@
  },
  "integrity": {
   "quick_check": "ok",
-  "foreign_key_violations": 0
+  "foreign_key_violations_before": [
+   [
+    "ai_mechanic_requests",
+    1,
+    "garage_vehicles",
+    0
+   ]
+  ],
+  "foreign_key_violations": 1,
+  "new_foreign_key_violations": []
  },
- "finished_at": "2026-10-04T18:17:21+00:00",
+ "finished_at": "2026-10-04T18:43:35+00:00",
  "ok": true
 }

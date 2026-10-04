@@ -169,14 +169,23 @@ def listing_regression(db) -> dict:
     return cn_listing_match.regression(db, STAGING / "listings" / "turbo_specs.json", STAGING)
 
 
-def integrity(database: Path) -> dict:
+def foreign_key_violations(database: Path) -> list[list]:
     with sqlite3.connect(database) as connection:
-        return {
-            "quick_check": connection.execute("pragma quick_check").fetchone()[0],
-            "foreign_key_violations": len(
-                connection.execute("pragma foreign_key_check").fetchall()
-            ),
-        }
+        return sorted(list(r) for r in connection.execute("pragma foreign_key_check").fetchall())
+
+
+def integrity(database: Path, before: list[list]) -> dict:
+    """Violations that already existed (rows of other features, e.g. an AI-mechanic request of a
+    deleted garage car) are listed; only new ones fail the load."""
+    after = foreign_key_violations(database)
+    with sqlite3.connect(database) as connection:
+        quick = connection.execute("pragma quick_check").fetchone()[0]
+    return {
+        "quick_check": quick,
+        "foreign_key_violations_before": before,
+        "foreign_key_violations": len(after),
+        "new_foreign_key_violations": [v for v in after if v not in before],
+    }
 
 
 def build() -> int:
@@ -213,6 +222,7 @@ def load(database: Path, mode: str) -> int:
             r[0] for r in connection.execute("SELECT version_num FROM alembic_version")
         )
     summary["alembic_after"] = migrate(database)
+    violations_before = foreign_key_violations(database)
     db = session_for(database)
     summary["before"] = {
         "production_visible_us": visible_us(db),
@@ -238,7 +248,7 @@ def load(database: Path, mode: str) -> int:
     summary["inherited_issues"] = issues_check(db, staging)
     summary["listing_regression"] = listing_regression(db)
     db.close()
-    summary["integrity"] = integrity(database)
+    summary["integrity"] = integrity(database, violations_before)
     summary["finished_at"] = now()
     ok = (
         summary["before"]["production_visible_us"] == summary["after"]["production_visible_us"]
@@ -248,7 +258,7 @@ def load(database: Path, mode: str) -> int:
         and not again.conflicts
         and not summary["inherited_issues"]["mismatched"]
         and summary["integrity"]["quick_check"] == "ok"
-        and summary["integrity"]["foreign_key_violations"] == 0
+        and not summary["integrity"]["new_foreign_key_violations"]
         and not summary["listing_regression"]["summary"].get("miss")
     )
     summary["ok"] = ok
