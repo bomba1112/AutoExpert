@@ -23,9 +23,11 @@ def split(size: int) -> int:
     done = set()
     for path in (I18N / "llm").glob("*.json"):
         done |= {(e["kind"], e["hash"]) for e in json.loads(path.read_text(encoding="utf-8"))}
-    todo = [e for e in missing if (e["kind"], e["hash"]) not in done]
     out = I18N / "batches"
     out.mkdir(parents=True, exist_ok=True)
+    for path in out.glob("batch_*.json"):  # texts already queued in a batch are not queued again
+        done |= {(e["kind"], e["hash"]) for e in json.loads(path.read_text(encoding="utf-8"))}
+    todo = [e for e in missing if (e["kind"], e["hash"]) not in done and e["kind"] == "recall_summary"]
     start = len(list(out.glob("batch_*.json")))
     for i in range(0, len(todo), size):
         number = start + i // size + 1

@@ -43,6 +43,16 @@ EN_FUNCTION = {"the", "and", "with", "when", "may", "will", "which", "that", "th
                "vehicle", "vehicles", "certain", "could", "should", "would", "might", "recalling", "dealers", "owners"}
 
 
+def lower_first(text: str) -> str:
+    """Lower-case start after a colon ("Подушки безопасности: датчики"), abbreviations kept."""
+    first = text.split(" ")[0] if text else ""
+    if not text or first[:2].isupper():
+        return text
+    # Azerbaijani dotted / dotless i: "İşçi" -> "işçi", "Ilıq" -> "ılıq" (str.lower gives "i̇")
+    head = {"İ": "i", "I": "ı"}.get(text[0], text[0].lower())
+    return head + text[1:]
+
+
 def words(text: str) -> list[str]:
     return TOKEN.findall(text)
 
@@ -59,10 +69,12 @@ def check(source: str, ru: str, az: str, glossary_general: dict) -> list[str]:
             # translated unit ("12 В"), so its digits are what must survive
             # numbers with a unit, range or slash ("12V", "25-50", "16/17-", "6-") may be written
             # with the translated unit or an en dash; campaign numbers and part codes stay exact
-            digits_only = re.fullmatch(r"(?:\d+(?:[.,]\d+)?[A-Za-z]{0,3}[/\-–]?)+", token) is not None
+            digits_only = re.fullmatch(r"(?:\d+(?:[.,]\d+)?[A-Za-z]{0,3}[/\-–]?)+|\d+-[A-Za-z]+", token) is not None  # "4-WHEEL"
             if token not in out and not (digits_only and all(d in out for d in re.findall(r"\d+", token))):
                 problems.append(f"{lang}: '{token}' of the source is missing")
     source_words = set(words(URL.sub(" ", source)))
+    # "non-SRT" is one token of the source: its parts may stand alone in a translation ("кроме SRT")
+    source_words |= {part for w in list(source_words) if "-" in w for part in w.split("-") if part}
     # Russian: a Latin word must be a name / abbreviation / code carried over from the source
     for w in words(URL.sub(" ", ru)):
         if w not in source_words and w.upper() not in GLOSSARY_ABBREVIATIONS and w.rstrip(".") not in GLOSSARY_ABBREVIATIONS:
@@ -70,6 +82,10 @@ def check(source: str, ru: str, az: str, glossary_general: dict) -> list[str]:
         elif w.islower() and len(w) > 2 and w not in ("nhtsa.gov", "recalls"):
             problems.append(f"ru: untranslated '{w}'")
     lower_az = {w.lower() for w in words(URL.sub(" ", az))}
+    # "may" is also the Azerbaijani name of May: "15 may 2016-cı il", "may 2016"
+    az_dates = URL.sub(" ", az)
+    if re.search(r"\b\d{1,2}\s+may\b|\bmay\s+\d{4}\b", az_dates, re.I) and not re.search(r"\bmay\s+(?!\d)[a-z]", re.sub(r"\b\d{1,2}\s+may\b|\bmay\s+\d{4}\b", "", az_dates, flags=re.I), re.I):
+        lower_az.discard("may")
     leftovers = sorted(lower_az & EN_FUNCTION)
     if leftovers:
         problems.append(f"az: English words {leftovers}")
@@ -78,6 +94,8 @@ def check(source: str, ru: str, az: str, glossary_general: dict) -> list[str]:
     if content and len(copied) / len(content) > 0.2:
         problems.append(f"az: English content words copied {sorted(copied)[:6]}")
     for lang, out in (("ru", ru), ("az", az)):
+        if "̇" in out:
+            problems.append(f"{lang}: combining dot above (a Turkish-style lower-cased İ)")
         if not out.strip():
             problems.append(f"{lang}: empty")
         elif len(out) < 0.4 * len(source) or len(out) > 3.0 * len(source) + 20:
@@ -115,7 +133,9 @@ def main() -> int:
         parts = [term("nhtsa_component_segment", seg.strip()) for seg in text.split(":") if seg.strip()]
         if not parts or None in parts:
             return None
-        return ": ".join(p[0] for p in parts), ": ".join(p[1] for p in parts)
+
+        join = lambda i: ": ".join(p[i] if n == 0 else lower_first(p[i]) for n, p in enumerate(parts))  # noqa: E731
+        return join(0), join(1)
 
     def topic(text: str):
         whole = term("issue_topic", text)
@@ -143,7 +163,7 @@ def main() -> int:
                       "carcomplaints_problem": lambda p: term("carcomplaints_problem", p)}[part_kind](part)
                 if tr:
                     values = {k: v for k, v in m.groupdict().items() if k != "part"}
-                    return ru.format(part=tr[0], **values), az.format(part=tr[1], **values), "template"
+                    return ru.format(part=lower_first(tr[0]), **values), az.format(part=lower_first(tr[1]), **values), "template"
                 break
         if kind in ("issue_component", "recall_component"):
             tr = component(text)
