@@ -1,0 +1,727 @@
+{
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "live",
+ "counts": {
+  "hidden": 11
+ },
+ "changes": [
+  {
+   "line": "accord",
+   "change": "updated",
+   "natural_key": "76f8a2219fae888a35a3e1fb919594a61a32c4e46e93e2ba8a8db894c0ee878f",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.471 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.471 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "line": "accord",
+   "change": "updated",
+   "natural_key": "e9d3bf40b7a8872a348c29b98b7836d3fb9453beaa7eea1e1becb8b0221b65ee",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.495 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.495 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "line": "accord",
+   "change": "updated",
+   "natural_key": "4f3e26b7e8e2d97cff56ea2cb507c0b4932e1f86b93488d46558efff4de12938",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.456 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.456 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:footnote_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "accord",
+   "change": "updated",
+   "natural_key": "42ed696ee2db66630b5c7dc25e9e57e58e202a06458b25fa6daf92b0c0d26125",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.490 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.490 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:footnote_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "civic",
+   "change": "updated",
+   "natural_key": "c971300ce643dc345af937fc564381d25d413e396e80a98c5107f504de3f328b",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic cng"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.22 Maintenance Minder code B: Drain fuel filter (high pressure)",
+    "quote": "Drain fuel filter (high pressure)"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2014
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic cng"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.22 Maintenance Minder code B: Drain fuel filter (high pressure)",
+    "quote": "Drain fuel filter (high pressure)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "civic",
+   "change": "updated",
+   "natural_key": "0faf95d9e4c051cbc97c117e165cf2e033988f1136e68126818aec6473424b10",
+   "old": {
+    "job": "brakes",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": 12,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.520 Maintenance Minder code B: Replace engine oil*1 and oil filter ● Inspect front and rear brakes ● Check expiration date for temporary tire repair kit bottle (if equipeed) ● Inspect these items:",
+    "quote": "Replace engine oil*1 and oil filter ● Inspect front and rear brakes ● Check expiration date for temporary tire repair kit bottle (if equipeed) ● Inspect these items:; note: maximum as printed: If a Maintenance Minder message does not appear more than 12 months after the display is reset, change the engine oil every year."
+   },
+   "new": {
+    "job": "brakes",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": 12,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.520 Maintenance Minder code B: Replace engine oil*1 and oil filter ● Inspect front and rear brakes ● Check expiration date for temporary tire repair kit bottle (if equipeed) ● Inspect these items:",
+    "quote": "Replace engine oil*1 and oil filter ● Inspect front and rear brakes ● Check expiration date for temporary tire repair kit bottle (if equipeed) ● Inspect these items:; note: maximum as printed: If a Maintenance Minder message does not appear more than 12 months after the display is reset, change the engine oil every year."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch",
+     "max_interval_not_stated"
+    ]
+   }
+  },
+  {
+   "line": "civic",
+   "change": "updated",
+   "natural_key": "4c3310c0915b5c83fa4d80e81e8c658638f2e90850179c3c6abaee45aa88e785",
+   "old": {
+    "job": "fuel_lines",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "civic coupe"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 25000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.507 footnote *4 of Minder code B",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 25,000 miles (40,000 km).; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your vehicle under"
+   },
+   "new": {
+    "job": "fuel_lines",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "civic coupe"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 25000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.507 footnote *4 of Minder code B",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 25,000 miles (40,000 km).; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your vehicle under"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_not_named"
+    ]
+   }
+  },
+  {
+   "line": "civic",
+   "change": "updated",
+   "natural_key": "6352a1ad172cd7f2c33687d5d2e98b2d7cead0cbdb450f282ed0762354bbdc75",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.507 Maintenance Minder code B: This requires transmission fluid changes more frequently than recommended by the Maintenance",
+    "quote": "This requires transmission fluid changes more frequently than recommended by the Maintenance"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.507 Maintenance Minder code B: This requires transmission fluid changes more frequently than recommended by the Maintenance",
+    "quote": "This requires transmission fluid changes more frequently than recommended by the Maintenance"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "civic",
+   "change": "updated",
+   "natural_key": "af7c43de526d540caa89fdaa419b45413511f3cf58ccad24e818943f6882e749",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.22 Maintenance Minder code B: Drain fuel filter (high pressure)",
+    "quote": "Drain fuel filter (high pressure)"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {
+     "minder_code": "B",
+     "edition": "civic sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.22 Maintenance Minder code B: Drain fuel filter (high pressure)",
+    "quote": "Drain fuel filter (high pressure)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "cr-v",
+   "change": "updated",
+   "natural_key": "8221cc014d6ec280e42eac49dbdbc3cc71ae90fef936b3ec5f3b7015ef55cf3a",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "edition": "cr-v hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 76000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.609 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (76,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "edition": "cr-v hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 76000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.609 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (76,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "line": "cr-v",
+   "change": "updated",
+   "natural_key": "bd05d53e318f9552b4528944a326e4397150e81fea8538b268c9b54202d46cec",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2022
+    ],
+    "applicability": {
+     "edition": "cr-v hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.581 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds or trailer towing results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regul"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2022
+    ],
+    "applicability": {
+     "edition": "cr-v hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.581 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds or trailer towing results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regul"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  }
+ ]
+}

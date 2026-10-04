@@ -2,21 +2,23 @@
  "make": "honda",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T17:38:30+00:00",
+ "started_at": "2026-10-04T12:55:11+00:00",
  "replace_own": [],
  "lines": {
   "honda/accord": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 132,
-    "source_records_new": 22,
-    "te_existing": 2027,
+    "raw_documents_seen": 131,
+    "te_existing": 2024,
+    "te_new_GENERATION": 3,
     "configurations": 62,
     "configurations_research_only": 54,
     "configurations_linked": 8,
     "issues_existing": 69,
-    "maintenance_new": 183
+    "maintenance_existing": 183,
+    "maintenance_corrected": 4,
+    "te_stale_deleted": 3
    },
    "generations": [
     {
@@ -39,14 +41,16 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 211,
-    "source_records_new": 38,
-    "te_existing": 2456,
+    "raw_documents_seen": 210,
+    "te_existing": 2451,
+    "te_new_GENERATION": 9,
     "configurations": 77,
     "configurations_research_only": 76,
     "configurations_linked": 1,
     "issues_existing": 62,
-    "maintenance_new": 282
+    "maintenance_existing": 282,
+    "maintenance_corrected": 5,
+    "te_stale_deleted": 5
    },
    "generations": [
     {
@@ -69,14 +73,17 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 121,
-    "source_records_new": 20,
-    "te_existing": 1413,
+    "raw_documents_seen": 118,
+    "te_existing": 1397,
+    "te_new_ENGINE": 3,
+    "te_new_GENERATION": 5,
     "configurations": 45,
     "configurations_linked": 8,
     "configurations_research_only": 37,
     "issues_existing": 81,
-    "maintenance_new": 123
+    "maintenance_existing": 123,
+    "maintenance_corrected": 2,
+    "te_stale_deleted": 16
    },
    "generations": [
     {
@@ -96,8 +103,56 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "maintenance_corrections": {
+  "hidden": 11
+ },
+ "stale_without_same_value": [
+  {
+   "line": "honda/cr-v",
+   "key": "engine_oil_capacity_l",
+   "value": 3.8,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "honda/cr-v",
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "honda/cr-v",
+   "key": "engine_oil_capacity_l",
+   "value": 3.8,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "honda/cr-v",
+   "key": "coolant_capacity_l",
+   "value": 5.5,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T17:39:03+00:00"
+ "finished_at": "2026-10-04T12:55:41+00:00"
 }

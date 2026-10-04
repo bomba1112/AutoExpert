@@ -15,19 +15,316 @@
  ],
  "conflicts": [],
  "existing_vs_new": [],
- "stale": [],
+ "stale": [
+  {
+   "id": "c937085b-9b19-4fac-b152-678ed8a09460",
+   "fact_key": "coolant",
+   "value": "Honda Long Life Antifreeze/Coolant Type 2",
+   "years": [
+    2023,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "899d731d-3d30-451f-b8f9-d8781c85047d",
+   "fact_key": "brake_fluid",
+   "value": "DOT 3",
+   "years": [
+    2023,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "id": "12a3d7ae-367d-4e86-9baa-5f47f91c4c62",
+   "fact_key": "transmission_fluid",
+   "value": "Honda HCF-2",
+   "years": [
+    2023,
+    2024
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T17:49:02+00:00",
+ "started_at": "2026-10-04T13:01:46+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "76f8a2219fae888a35a3e1fb919594a61a32c4e46e93e2ba8a8db894c0ee878f",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.471 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.471 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e9d3bf40b7a8872a348c29b98b7836d3fb9453beaa7eea1e1becb8b0221b65ee",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.495 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "edition": "accord hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 75000,
+    "interval_miles_original": 47500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.495 footnote *4 of Minder code 3",
+    "quote": "If you regularly drive your vehicle under these conditions, have the transmission fluid changed every 47,500 miles (75,000 km) or 3 years.; note: condition as printed: Driving in mountainous areas at very low vehicle speeds results in higher transmission temperatures. This requires transmission fluid changes more frequently than recommended by the Maintenance Minder. If you regularly drive your ve"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4f3e26b7e8e2d97cff56ea2cb507c0b4932e1f86b93488d46558efff4de12938",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.456 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord coupe"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.456 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:footnote_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "42ed696ee2db66630b5c7dc25e9e57e58e202a06458b25fa6daf92b0c0d26125",
+   "old": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.490 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "new": {
+    "job": "timing_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2017
+    ],
+    "applicability": {
+     "minder_code": "4",
+     "edition": "accord sedan"
+    },
+    "engine": null,
+    "schedule_system": "MAINTENANCE_MINDER",
+    "interval_km": null,
+    "interval_miles_original": null,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.490 Maintenance Minder code 4: Replace timing belt and inspect water pump*6,*7",
+    "quote": "Replace timing belt and inspect water pump*6,*7"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:footnote_scope_not_carried"
+    ]
+   }
+  }
+ ],
  "counts": {
-  "raw_documents_seen": 132,
-  "source_records_new": 22,
-  "te_existing": 2027,
+  "raw_documents_seen": 131,
+  "te_existing": 2024,
+  "te_new_GENERATION": 3,
   "configurations": 62,
   "configurations_research_only": 54,
   "configurations_linked": 8,
   "issues_existing": 69,
-  "maintenance_new": 183
+  "maintenance_existing": 183,
+  "maintenance_corrected": 4,
+  "te_stale_deleted": 3
  },
- "finished_at": "2026-10-03T17:49:13+00:00"
+ "finished_at": "2026-10-04T13:01:54+00:00"
 }
