@@ -1,18 +1,13 @@
 {
- "generations": [
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "live",
+ "counts": {
+  "hidden": 1
+ },
+ "changes": [
   {
-   "code": "I-US-2011",
-   "action": "unchanged"
-  }
- ],
- "conflicts": [],
- "existing_vs_new": [],
- "stale": [],
- "dry_run": false,
- "started_at": "2026-10-04T13:07:30+00:00",
- "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "maintenance_corrections": [
-  {
+   "line": "outlander-sport",
    "change": "updated",
    "natural_key": "5c83f8ea19527f48eb78fa13405e3b5866168812dd1d8e198d1ffaee48aae5b7",
    "old": {
@@ -72,16 +67,5 @@
     ]
    }
   }
- ],
- "counts": {
-  "raw_documents_seen": 48,
-  "te_existing": 874,
-  "configurations": 51,
-  "configurations_research_only": 50,
-  "configurations_linked": 1,
-  "issues_existing": 24,
-  "maintenance_existing": 173,
-  "maintenance_corrected": 1
- },
- "finished_at": "2026-10-04T13:07:35+00:00"
+ ]
 }

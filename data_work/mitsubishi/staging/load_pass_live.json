@@ -2,7 +2,7 @@
  "make": "mitsubishi",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-03T20:43:57+00:00",
+ "started_at": "2026-10-04T13:07:24+00:00",
  "replace_own": [],
  "lines": {
   "mitsubishi/outlander": {
@@ -10,27 +10,21 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 78,
-    "source_records_new": 73,
-    "te_new_GENERATION": 473,
-    "te_new_ENGINE": 18,
-    "te_new_CONFIGURATION": 440,
+    "te_existing": 931,
     "configurations": 40,
     "configurations_research_only": 38,
     "configurations_linked": 2,
-    "issues_new": 40,
-    "maintenance_new": 411
+    "issues_existing": 40,
+    "maintenance_existing": 411
    },
    "generations": [
     {
      "code": "III",
-     "action": "filled",
-     "end_year": 2021
+     "action": "unchanged"
     },
     {
      "code": "US2022+",
-     "action": "created",
-     "start_year": 2022,
-     "end_year": null
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -41,15 +35,13 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 48,
-    "source_records_new": 39,
-    "te_new_ENGINE": 8,
-    "te_new_GENERATION": 305,
-    "te_new_CONFIGURATION": 561,
+    "te_existing": 874,
     "configurations": 51,
     "configurations_research_only": 50,
     "configurations_linked": 1,
-    "issues_new": 24,
-    "maintenance_new": 173
+    "issues_existing": 24,
+    "maintenance_existing": 173,
+    "maintenance_corrected": 1
    },
    "generations": [
     {
@@ -61,8 +53,11 @@
    "existing_vs_new": 0
   }
  },
+ "maintenance_corrections": {
+  "hidden": 1
+ },
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T20:44:15+00:00"
+ "finished_at": "2026-10-04T13:07:38+00:00"
 }
