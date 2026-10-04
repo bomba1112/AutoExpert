@@ -65,6 +65,14 @@ const C = {
   back: ['Назад', 'Geri', 'Back'],
   open: ['Открыть', 'Aç', 'Open'],
   urgent: ['требуют внимания', 'diqqət tələb edir', 'need attention'],
+  mechanic: ['Спросить механика', 'Mexanikdən soruş', 'Ask the mechanic'],
+  mechanicNote: ['Отвечает только по данным вашей машины. Чего нет в данных — так и скажет.', 'Yalnız avtomobilinizin məlumatlarına əsasən cavab verir. Məlumatda olmayanı açıq deyir.', 'Answers only from your car\'s data. If it is not in the data, it says so.'],
+  ask: ['Спросить', 'Soruş', 'Ask'],
+  askPlaceholder: ['Например: какое масло заливать?', 'Məsələn: hansı yağ tökmək lazımdır?', 'For example: which oil should I use?'],
+  examples: [['Какое масло заливать?', 'Hansı yağ tökməli?', 'Which oil should I use?'], ['Что проверить перед зимой?', 'Qışdan əvvəl nəyi yoxlamalı?', 'What should I check before winter?'], ['Какая жидкость в коробке?', 'Qutuda hansı maye var?', 'Which transmission fluid?']],
+  general: ['Общий совет (не из данных машины)', 'Ümumi məsləhət (avtomobilin məlumatlarından deyil)', 'General advice (not from your car\'s data)'],
+  notInData: ['Нет в данных', 'Məlumatda yoxdur', 'Not in the data'],
+  questionsLeft: ['вопросов сегодня', 'bu gün sual', 'questions today'],
 };
 const LANG_INDEX = {ru: 0, az: 1, en: 2};
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
@@ -196,6 +204,7 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
     state.garageVehicle = v;
     const oil = v.services.find(s => s.job === 'engine_oil_and_filter');
     const others = v.services.filter(s => s !== oil);
+    const mechanic = state.meta?.ai_mechanic_v1?.enabled ? await api(`/garage/vehicles/${encodeURIComponent(id)}/mechanic`).catch(() => null) : null;
     const jobs = [...new Map([...v.main_jobs, ...v.services.map(s => ({job: s.job, label: s.label}))].map(j => [j.job, j])).values()];
     root.innerHTML = layout(`
       <section class="garage garage-car">
@@ -223,6 +232,7 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
           <h2>${escape(t('recalls'))}</h2>
           ${v.recalls.length ? `<ul class="garage-recalls">${v.recalls.map(r => `<li><strong>${escape(r.number)}</strong> ${r.label ? `<span class="garage-pill soon">${escape(r.label)}</span>` : ''}<span>${escape(r.component || '')}</span>${r.summary ? `<p>${escape(r.summary)}</p>` : ''}<small>${escape(r.note)}</small></li>`).join('')}</ul>` : `<p class="garage-empty">${escape(t('noRecalls'))}</p>`}
         </section>
+        ${mechanic ? mechanicPanel(mechanic) : ''}
         ${v.weak_points.length ? `<section class="garage-panel"><h2>${escape(t('issues'))}</h2><ul class="garage-issues">${v.weak_points.slice(0, 8).map(issueRow).join('')}</ul></section>` : ''}
         <section class="garage-panel">
           <h2>${escape(t('log'))}</h2>
@@ -267,6 +277,28 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
       ${oil.hints?.length ? `<p class="garage-hints"><span>${escape(t('manualSays'))}:</span> ${oil.hints.map(h => escape([h.interval, h.max_interval && `≤ ${h.max_interval}`, h.system, h.severe ? t('severeMark') : ''].filter(Boolean).join(' · '))).join('; ')}</p>` : ''}
       ${oil.onboard ? `<button class="button" data-action="garage-onboard-reset">${escape(t('onboardReset'))}</button>` : ''}
     </section>`;
+  }
+
+  function mechanicPanel(m) {
+    const examples = C.examples.map(e => e[LANG_INDEX[state.language] ?? 0]);
+    return `<section class="garage-panel garage-mechanic" id="garage-mechanic">
+      <div class="garage-service-head"><h2>${escape(t('mechanic'))}</h2><small class="garage-limit">${m.used}/${m.limit} ${escape(t('questionsLeft'))}</small></div>
+      <small>${escape(t('mechanicNote'))}</small>
+      <div class="garage-mechanic-thread">${m.items.map(answerHtml).join('')}</div>
+      <div class="garage-examples">${examples.map(e => `<button class="garage-chip" data-action="garage-mechanic-example" data-question="${escape(e)}">${escape(e)}</button>`).join('')}</div>
+      <form id="garage-mechanic-form" class="garage-inline garage-ask">
+        <input name="question" maxlength="600" required placeholder="${escape(t('askPlaceholder'))}">
+        <button class="button primary" type="submit">${escape(t('ask'))}</button>
+      </form>
+    </section>`;
+  }
+
+  function answerHtml(a) {
+    const facts = a.answer?.length ? `<ul class="garage-answer">${a.answer.map(item => `<li>${escape(item.text)}
+      <small class="garage-cite">${item.facts.map(f => escape([f.source, f.note].filter(Boolean).join(' · ') || f.id)).join(' | ')}</small></li>`).join('')}</ul>` : '';
+    const general = a.general?.length ? `<div class="garage-general"><strong>${escape(t('general'))}</strong>${a.general.map(g => `<p>${escape(g.text)}</p>`).join('')}</div>` : '';
+    const missing = a.not_in_data?.length ? `<div class="garage-missing"><strong>${escape(t('notInData'))}</strong>${a.not_in_data.map(x => `<p>${escape(x)}</p>`).join('')}</div>` : '';
+    return `<article class="garage-qa"><p class="garage-question">${escape(a.question)}</p>${a.mode_note ? `<small class="garage-mark">${escape(a.mode_note)}</small>` : ''}${facts}${general}${missing}<small class="garage-disclaimer">${escape(a.disclaimer || '')}</small></article>`;
   }
 
   function issueRow(i) {
@@ -324,6 +356,18 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
       return patchVehicle({oil_interval: data.get('oil_interval') ? Number(data.get('oil_interval')) : null,
                            oil_interval_months: data.get('oil_interval_months') ? Number(data.get('oil_interval_months')) : null});
     }
+    if (form.id === 'garage-mechanic-form') {
+      const button = form.querySelector('button');
+      button.disabled = true;
+      try {
+        await api(`/garage/vehicles/${encodeURIComponent(id)}/mechanic?${lang()}`, {method: 'POST', body: JSON.stringify({question: data.get('question')})});
+      } catch (error) {
+        showToast(error.payload?.detail?.message || error.message);
+      }
+      await renderCar(id);
+      document.querySelector('#garage-mechanic')?.scrollIntoView({block: 'start'});
+      return true;
+    }
     if (form.id === 'garage-record-form') {
       await api(`/garage/vehicles/${encodeURIComponent(id)}/records?${lang()}`, {method: 'POST', body: JSON.stringify({
         job: data.get('job'), performed_on: data.get('performed_on') || null, odometer: data.get('odometer') ? Number(data.get('odometer')) : null, unit: unit()})});
@@ -353,6 +397,10 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
       else if (action === 'garage-feed-open') {
         await api(`/garage/feed/${encodeURIComponent(target.dataset.id)}/read`, {method: 'POST'});
         go(`/garage-car/${target.dataset.vehicle}`);
+      } else if (action === 'garage-mechanic-example') {
+        const form = document.querySelector('#garage-mechanic-form');
+        form.question.value = target.dataset.question;
+        await submit(form);
       } else if (action === 'garage-conditions') await patchVehicle({conditions: target.dataset.value});
       else if (action === 'garage-onboard-reset') {
         const km = state.garageVehicle.mileage.km;

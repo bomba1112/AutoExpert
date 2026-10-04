@@ -12,8 +12,9 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select
 
 from app.api.dependencies import CurrentUser, DBSession
+from app.core.config import get_settings
 from app.models.garage import GarageFeedItem, GarageServiceRecord, GarageVehicle
-from app.services import garage, garage_pdf, us_tech_facts
+from app.services import ai_mechanic, garage, garage_pdf, us_tech_facts
 
 router = APIRouter(prefix="/garage", tags=["garage"])
 Language = Literal["ru", "az", "en"]
@@ -270,3 +271,36 @@ def feed_read(item_id: str, db: DBSession, user: CurrentUser) -> dict:
     garage.mark_read(item)
     db.commit()
     return {"ok": True}
+
+
+class MechanicQuestion(BaseModel):
+    question: str = Field(min_length=2, max_length=600)
+
+
+def _mechanic_enabled() -> None:
+    _enabled()
+    if not ai_mechanic.enabled():
+        raise HTTPException(404, "AI_MECHANIC_DISABLED")
+
+
+@router.get("/vehicles/{vehicle_id}/mechanic")
+def mechanic_history(vehicle_id: str, db: DBSession, user: CurrentUser) -> dict:
+    _mechanic_enabled()
+    vehicle = _vehicle(db, user, vehicle_id)
+    limit = get_settings().ai_mechanic_daily_limit
+    return {"items": [ai_mechanic.view(e) for e in ai_mechanic.history(db, vehicle)],
+            "used": ai_mechanic.used_today(db, user.id), "limit": limit, "connected": bool(ai_mechanic.api_key())}
+
+
+@router.post("/vehicles/{vehicle_id}/mechanic", status_code=201)
+def mechanic_ask(vehicle_id: str, value: MechanicQuestion, db: DBSession, user: CurrentUser, language: Language = "ru") -> dict:
+    """The AI mechanic (product phase, stage 3, flag ai_mechanic_v1): an answer from this car's data
+    only, checked by the server; per-user daily limit; every request logged."""
+    _mechanic_enabled()
+    vehicle = _vehicle(db, user, vehicle_id)
+    limit = get_settings().ai_mechanic_daily_limit
+    if ai_mechanic.used_today(db, user.id) >= limit:
+        raise HTTPException(429, {"code": "AI_MECHANIC_LIMIT", "message": ai_mechanic.tt(language, "limit"), "limit": limit})
+    entry = ai_mechanic.ask(db, user, vehicle, value.question.strip(), language)
+    db.commit()
+    return ai_mechanic.view(entry) | {"used": ai_mechanic.used_today(db, user.id), "limit": limit}

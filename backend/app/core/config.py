@@ -62,6 +62,14 @@ class Settings(BaseSettings):
     # The daily NHTSA recall check of the garage cars in-process (off: run
     # scripts/garage_recall_job.py by cron).
     garage_recall_job: bool = False
+    # The AI mechanic (product phase, stage 3). Unset: on in development/test, off in production.
+    ai_mechanic_v1: bool | None = None
+    # Claude API key from the environment (AUTOEXPERT_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY);
+    # without it the mechanic answers from the car's data only.
+    anthropic_api_key: str | None = None
+    ai_mechanic_model: str = "claude-opus-5-5"
+    ai_mechanic_max_tokens: int = Field(default=1200, ge=200, le=4000)
+    ai_mechanic_daily_limit: int = Field(default=20, ge=1, le=1000)
     knowledge_worker_enabled: bool = False
     knowledge_import_max_records: int = Field(default=10000, ge=1, le=100000)
     knowledge_import_max_bytes: int = 32 * 1024 * 1024
