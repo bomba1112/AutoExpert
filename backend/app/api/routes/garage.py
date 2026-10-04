@@ -131,7 +131,11 @@ def create_vehicle(value: VehicleCreate, db: DBSession, user: CurrentUser, langu
     db.flush()
     today = value.read_on or date.today()
     garage.add_reading(db, vehicle, garage.to_km(value.odometer, value.unit), today)
+    data = us_tech_facts.build(db, value.configuration_key, language) or {}
+    schedule_jobs = {m.get("job_key") for m in data.get("maintenance") or []} | set(garage.OIL_JOBS)
     for answer in value.history:
+        if answer.status == "UNKNOWN" and answer.job not in schedule_jobs:
+            continue  # "не знаю" about a job this car's schedule does not have (a chain engine's timing belt)
         garage.add_record(db, vehicle, answer.job, answer.action, answer.status, answer.performed_on or (today if answer.status == "UNKNOWN" else None),
                           garage.to_km(answer.odometer, value.unit))
     db.flush()
