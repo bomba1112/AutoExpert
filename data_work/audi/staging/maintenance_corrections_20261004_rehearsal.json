@@ -1,0 +1,4102 @@
+{
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "rehearsal",
+ "counts": {
+  "hidden": 64
+ },
+ "changes": [
+  {
+   "line": "a3",
+   "change": "updated",
+   "natural_key": "a501a1af0f1b7c8d1d5ff372af81bd44d2f8c1160e783002209628e280a50a6e",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a3",
+   "change": "updated",
+   "natural_key": "877d474d7edd5140d20dca94516e0082fbf12456e7562974f8cce0943694d0ab",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a3",
+   "change": "updated",
+   "natural_key": "c96017406876966194c486a3275345366478af90c474820044722eba8285b957",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a3",
+   "change": "updated",
+   "natural_key": "0cacad0e05615f744eb347e472076767247e10b9b11f1505e05fbe53b848ed33",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "1434b8fc4985459c55df5ffb18b81170a805742dc0510c0a39604ee90493cc48",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "53d8f94588bdd0170c76d6029c222287fcb58280ee99f52673af68c0edac3457",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "93d482546e9cea9a5c64fd03118ce1c58f91e184943ce91efac094a2c7832b51",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "bdc459f284ad1e2e2a6af719834f2514e471f4df6f4b134d053eee7577703b73",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "b0086624bd41ab69bb55a0621b22c198aa08f4ffd1b2deb042ad7cb00ec24c4d",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "cb64b73d85cddd01aa44a374d73379acc82d9ac6a3c70328b2b7c15f7af66185",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "10bf3e2de8cc260c926333203dd171693c658391a78464bea6a157dc2193bf46",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® - A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® - A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "acc75e302e7276656193f68b683e9f0d55f5095b61088a0fe6505a77ade6e755",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® - A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S4; A4 allroad® - A5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "017cd25929b949f09348f0557de9220f6ed8046043f8eefb1f56865db82287b5",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "0f3d90705b70956a977657d3f996ea0cde740728c075714db847eb2708f9fced",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "a7990fe8106995116d6bac82a5c469dcecf34769982b41cd1de5f8b46f4898eb",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A4 45 TFSI; S4 - A4 allroad® 45 TFSI - A5 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A4 45 TFSI; S4 - A4 allroad® 45 TFSI - A5 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a4",
+   "change": "updated",
+   "natural_key": "7437b0c312930a2b2ecc507cb80f0a25b41091bb2ab9aa13c0fc932c10ecdf10",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A4 45 TFSI; S4 - A4 allroad® 45 TFSI - A5 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A4 45 TFSI; S4 - A4 allroad® 45 TFSI - A5 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "c117b70ac0318edfad788e3cceffdcac9cc64293e239ffa8926e7d5666181ba7",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "af8b5895b8cff7f3a8cda4ae514195b9c3622dab8dac5a7d41e6965defb14e5d",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "bd5ced82c71b2c8cc27f1dee77e4e7080c0b0e1fa81c490cb731d93bb042e314",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 3.0T"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 3.0T"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "5d112f9984e556222d912567930a2bdebdaf1ed1e52071d025e955c70f5eba03",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 3.0T"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 3.0T"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "fdc2c7f6597d32d5c65e2478992f7c5679fb0dbf0fba62da61c952936cf387ff",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 - A6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 - A6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "d6b165d309ccc8ae4873b4e6ac8ebd69de5642964bada98ec1299a41f85a3fa1",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 - A6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5; RS 5 - A6"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "3d7bd92a6fc6ca851c1caf221e962dede5800885560e41bc6a47e7c1600518fd",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "2a98711d7b0d90eb0145fc55248645fa9bd35a8c7e9a964409d751f0ffd30c22",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "9c71f1e1b65ee1d2acf379afcf9df47e907af444bf65cd2ceebbf692265c2ed5",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5 - A6 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5 - A6 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "49559a21b23a51eb6f3c87c084627ba15ba26f6481bf34618f1c187a67d5857b",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5 - A6 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "S5 - A6 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "b94e050182451062998f5554b1690ddff4bdb60e13301c9d7378e74eb4aa5b98",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a5",
+   "change": "updated",
+   "natural_key": "c6eb25a43bb83ddd379d2c3ff7ae8e4d9e48bf7af7395b0c4498cdef65da7e45",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "c166b7b419754b22417b4ee66f0fff39c830ff138ac45dcc728fcc207345a472",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "9f9a2d73750e3b7ab16bd71ee25c70b2ad3851262cd9e9a6483a12bbae78069b",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "6045c0b988c3db2614e68e259e9cc7a2228c8ab68086db1f12d3193be7d3ffd6",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "4e122e1dc55a4891f50b286e11f6508041e3454cd2e4b50e1bb4e6ff7feef399",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "f180845cd52a343981a46d7a415f5c01ddcbced74cf9a690a781bf754e9d7f73",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A6 55 TFSI; S6 - A6 allroad® 55 TFSI - A7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A6 55 TFSI; S6 - A6 allroad® 55 TFSI - A7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "f0d59fac0180ff0dd3b9c01f9b3b3025af3ad88de7119902f0ffd69b3520634f",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A6 55 TFSI; S6 - A6 allroad® 55 TFSI - A7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "A6 55 TFSI; S6 - A6 allroad® 55 TFSI - A7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "27f89ec754240e72be5d12c3004f8843b8186bec10f9fc59d04572a2b6a779a0",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "a6",
+   "change": "updated",
+   "natural_key": "81c4038b8aba4fbc21ba6543ebdde151896fbc6a2f284f83f7d9aecc9aa9b829",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "b878bfe2d219404b5359fb2e1866e05ab8f164f5ba3c378a70e861630db5c1cb",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "756668e523997ae44954d168f98ce916d67085fac7ea5b08cb44d8d36fcfc3fd",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2015,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "487d3f03f05e9d8694d0abe0bdbbc836c5b4cf514e2bb362cfef2f0ddef5d419",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "561206d6d2573748a9788575e3b44ca3201f4b0d2bf6b11cce7c2a99bf0c76a1",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "01847c722792c6102f8a0e898df19218ec44a222c85e362df33ed9e74e00698c",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q3",
+   "change": "updated",
+   "natural_key": "6764341a8b637af6121589e4c266e40a65f1be1e2ec732cb8c6d6922ff6f3a65",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "38cfb870ff0159501b146383f158420638f753f0dbccb8d27c828ff9e4778fa5",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "afdcd37599a63fe504290b85aeaf4e313c3720e2af2156d92760f28103e33893",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "48ac96a4c6aa6a5ccd446bffa7f821fb979c6cc7450803263c5bdcd39d22136e",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5; SQ5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5; SQ5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "be8866b4b1aee7ae4e09a3c8740e81de5d55e42c9427972b3ef871ea4a77bf46",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5; SQ5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5; SQ5"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided Functions A4, S4, A4 allroad® A5, S5, RS 5 3.0T, Q5, SQ5, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "bb322f80780f1c71caf8c449febb8070b593ef71cb5e0576fe9896631c24d961",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "SQ5 - Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "SQ5 - Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "21ce538b32da68af3a1f271ba8f4a3d3c07eb9541730b8af4c9c11426e648972",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "SQ5 - Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "SQ5 - Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions - A4, S4, A4 allroad® - A5, S5, RS 5 - A6, A7, A8L - Q5, SQ5 - Q7, Q8; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "7ac52287e523189899c6014a64e247dbef18932be16a2f15929cd75f9403e901",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "a19d8b18d1710d81945a25d06d69aad822e8c4959711fac5ad2e742a7442e3b0",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2024
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "9997441f73af4ee36ef9cec5524b1b076a78cdc07398abc32a968da62b21bc7c",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5 55 TFSIe; SQ5 - Q7 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5 55 TFSIe; SQ5 - Q7 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "df67dd31ebed0d206196e1f010f22eca2a0d1e8d2de06d5e3066e852e39a432e",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5 55 TFSIe; SQ5 - Q7 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q5 55 TFSIe; SQ5 - Q7 45 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "7361567c6e81f9b37b32142ceb45356f7036639218aba00df0d035d5443dac2c",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q5",
+   "change": "updated",
+   "natural_key": "56b188930e4709ada5b35eb4a424e1a26e1828af83ecd3b48874403ced5d0eff",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2025
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "dfc37d72c94dbbffd2c96f119662779fc799a8c4eae6e797df9fe569ef887781",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "5aef6719b37bb7def84cef7dd4912e61eaad3ed05fd91f48e205ddd8a014a92f",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "e13cfe45808e47597c69566016ce384e393249c597c7406753e575b27e365316",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "4ad948b84369b3d707095a14826b20ee953f7e6153f797cf3b710ea2edc0dd8a",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "7aad1b65db012d79c13a7c4b72ff452594b3ae141cd27803aea01fb88f84fe36",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "d8d1fd6ddbde9e6353f6d5f038d5d50bcb25bceaadca4e92b1384ef555c439cd",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "1d770a9783b708fb70841b5c4e707dbf4cc1f8003a41886e3ec8483cfbdf6932",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "ab725309124e7570169b7c94db0e6fcd1412b7eb76d24bce02581d2c1ab9c74f",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "d2ca426df64d0615e258e30af964d2331759ed8750967a22b35efd863850b0cf",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "line": "q7",
+   "change": "updated",
+   "natural_key": "f5e1f97b9b9c7c5084844a2cd70486897ed1be1c8bef3a76a0d77364146dfbbe",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  }
+ ]
+}

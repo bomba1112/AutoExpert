@@ -13206,7 +13206,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-engine_air_filter-94f26396-2015",
@@ -13243,7 +13247,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-engine_oil_and_filter-d96e8ace-2015",
@@ -13279,8 +13287,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2015",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-8U-mnt-brakes-62b8ba1f-2015",
@@ -13314,8 +13328,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2015",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "occurrence_mismatch",
+     "distance_not_stated"
+    ]
+   }
   },
   {
    "id": "q3-8U-mnt-brakes-62b8ba1f-2017",
@@ -13350,7 +13371,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-brake_fluid-79fbe5c3-2015",
@@ -13385,7 +13410,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-brake_fluid-79fbe5c3-2017",
@@ -13428,7 +13457,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-transmission_fluid-92eeeede-2015",
@@ -13462,8 +13495,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2015",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
   },
   {
    "id": "q3-8U-mnt-transmission_fluid-5abd3178-2015",
@@ -13497,8 +13536,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2015",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-d267233c-2015",
@@ -13535,7 +13580,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-cbd62519-2015",
@@ -13572,7 +13621,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-39542b13-2015",
@@ -13607,7 +13660,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-17dc2847-2015",
@@ -13642,7 +13699,11 @@
    ],
    "primary_source": "audi-maintenance-card-2015",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-spark_plugs-ec5d1664-2015",
@@ -13678,8 +13739,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2015",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "occurrence_mismatch",
+     "distance_not_stated"
+    ]
+   }
   },
   {
    "id": "q3-8U-mnt-brake_fluid-baf17d80-2017",
@@ -13724,7 +13792,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-brake_fluid-f5d0da53-2017",
@@ -13769,7 +13841,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-engine_oil_and_filter-1e271300-2017",
@@ -13830,7 +13906,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-engine_oil_and_filter-4795da8c-2017",
@@ -13891,7 +13971,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-wiper_blades-05716f43-2017",
@@ -13936,7 +14020,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-wiper_blades-d99898af-2017",
@@ -13981,7 +14069,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-transmission_fluid-38f0d50a-2017",
@@ -14026,7 +14118,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-transmission_fluid-b66a78db-2017",
@@ -14071,7 +14167,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-cabin_air_filter-0503c841-2017",
@@ -14116,7 +14216,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-cabin_air_filter-721de5cb-2017",
@@ -14161,7 +14265,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-manual_transmission_fluid-68ced0f7-2017",
@@ -14206,7 +14314,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-manual_transmission_fluid-0d93055b-2017",
@@ -14251,7 +14363,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-awd_coupling_fluid-aacc143e-2017",
@@ -14288,7 +14404,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-d48bf763-2017",
@@ -14325,7 +14445,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-accessory_drive_belt-686e2a8b-2017",
@@ -14360,7 +14484,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-spark_plugs-26a648f0-2017",
@@ -14397,7 +14525,11 @@
    ],
    "primary_source": "audi-maintenance-card-2017",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-brakes-5d152da7-2018",
@@ -14442,7 +14574,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-brakes-1ce87ce0-2018",
@@ -14487,7 +14623,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-differential_fluid-6f69e0fb-2018",
@@ -14532,7 +14672,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-differential_fluid-34e3f8e4-2018",
@@ -14577,7 +14721,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-wiper_blades-b1e19da4-2018",
@@ -14622,7 +14770,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-wiper_blades-84e362f3-2018",
@@ -14667,7 +14819,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-awd_coupling_fluid-1a2613d0-2018",
@@ -14704,7 +14860,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-cabin_air_filter-59779dca-2018",
@@ -14739,7 +14899,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-8U-mnt-spark_plugs-c0ea9f78-2018",
@@ -14776,7 +14940,11 @@
    ],
    "primary_source": "audi-maintenance-card-2018",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-brakes-cf615eb6-2019",
@@ -14925,7 +15093,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-brakes-99de06fa-2019",
@@ -15074,7 +15246,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_oil_and_filter-87cbbf92-2019",
@@ -15215,7 +15391,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_oil_and_filter-9b30870a-2019",
@@ -15356,7 +15536,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-brakes-bea10f87-2019",
@@ -15505,7 +15689,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-brakes-65beaa29-2019",
@@ -15654,7 +15842,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_coolant-fbaedb33-2019",
@@ -15803,7 +15995,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_coolant-17678aae-2019",
@@ -15952,7 +16148,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_oil_and_filter-e2aefd55-2019",
@@ -16093,7 +16293,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_oil_and_filter-4ca7bf85-2019",
@@ -16234,7 +16438,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-differential_fluid-a95a5e5c-2019",
@@ -16383,7 +16591,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-differential_fluid-0f1ca50f-2019",
@@ -16532,7 +16744,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-wiper_blades-826f0978-2019",
@@ -16681,7 +16897,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-wiper_blades-edbec7e5-2019",
@@ -16830,7 +17050,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-89145686-2019",
@@ -16864,8 +17088,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-brake_fluid-528511da-2019",
@@ -16948,7 +17178,11 @@
    ],
    "primary_source": "audi-maintenance-card-2019",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-cabin_air_filter-5e538a3d-2019",
@@ -16982,8 +17216,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed",
+     "months_printed_not_in_item"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-55a88df2-2019",
@@ -17027,8 +17268,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-e0c9df1e-2019",
@@ -17072,8 +17320,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-wiper_blades-f88ef3ac-2019",
@@ -17117,8 +17372,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-wiper_blades-92fbd8ed-2019",
@@ -17162,8 +17423,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-43ddaf04-2019",
@@ -17207,8 +17474,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-43ddaf04-2023",
@@ -17284,8 +17558,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2023",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-d5355842-2019",
@@ -17329,8 +17609,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-battery_12v-d5355842-2023",
@@ -17406,8 +17693,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2023",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_coolant-e875f23d-2019",
@@ -17451,8 +17744,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain",
+     "job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_coolant-69c7d76e-2019",
@@ -17496,8 +17796,15 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2019",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain",
+     "job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-12571e98-2020",
@@ -17534,7 +17841,11 @@
    ],
    "primary_source": "audi-maintenance-card-2020",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-awd_coupling_fluid-b26f5ce3-2020",
@@ -17579,7 +17890,11 @@
    ],
    "primary_source": "audi-maintenance-card-2020",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-cabin_air_filter-a8d5d80d-2020",
@@ -17630,7 +17945,11 @@
    ],
    "primary_source": "audi-maintenance-card-2020",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-spark_plugs-0f41558f-2020",
@@ -17683,7 +18002,11 @@
    ],
    "primary_source": "audi-maintenance-card-2020",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-41018961-2021",
@@ -17728,7 +18051,11 @@
    ],
    "primary_source": "audi-maintenance-card-2021",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-17dd10d9-2023",
@@ -17765,7 +18092,11 @@
    ],
    "primary_source": "audi-maintenance-card-2023",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-awd_coupling_fluid-8656c1fc-2023",
@@ -17818,7 +18149,11 @@
    ],
    "primary_source": "audi-maintenance-card-2023",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-cabin_air_filter-72fbdcb9-2023",
@@ -17869,7 +18204,11 @@
    ],
    "primary_source": "audi-maintenance-card-2023",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-spark_plugs-051d8ae3-2023",
@@ -17922,7 +18261,11 @@
    ],
    "primary_source": "audi-maintenance-card-2023",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-5ac2183f-2024",
@@ -17959,7 +18302,11 @@
    ],
    "primary_source": "audi-maintenance-card-2024",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2019-2025-mnt-engine_air_filter-83de33ec-2025",
@@ -17996,7 +18343,11 @@
    ],
    "primary_source": "audi-maintenance-card-2025",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-brakes-420c85dd-2026",
@@ -18041,7 +18392,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-brakes-39a9272f-2026",
@@ -18086,7 +18441,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_oil_and_filter-a562a9d1-2026",
@@ -18131,7 +18490,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_oil_and_filter-7404ba8f-2026",
@@ -18176,7 +18539,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-brakes-daf51b4e-2026",
@@ -18221,7 +18588,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-brakes-0c6c87b8-2026",
@@ -18266,7 +18637,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-battery_12v-b6f28f14-2026",
@@ -18310,8 +18685,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2026",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2026+-mnt-battery_12v-71228742-2026",
@@ -18355,8 +18736,14 @@
     }
    ],
    "primary_source": "audi-maintenance-card-2026",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_coolant-b9204bcc-2026",
@@ -18401,7 +18788,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_coolant-53df33fc-2026",
@@ -18446,7 +18837,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_oil_and_filter-6807dfdb-2026",
@@ -18491,7 +18886,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_oil_and_filter-fd04c62e-2026",
@@ -18536,7 +18935,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-differential_fluid-0c9aa77e-2026",
@@ -18581,7 +18984,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-differential_fluid-2ff7bda1-2026",
@@ -18626,7 +19033,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-wiper_blades-e3df136b-2026",
@@ -18671,7 +19082,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-wiper_blades-ea690ff7-2026",
@@ -18716,7 +19131,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-engine_air_filter-2434e66d-2026",
@@ -18753,7 +19172,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-awd_coupling_fluid-0492b060-2026",
@@ -18790,7 +19213,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-brake_fluid-d37d778f-2026",
@@ -18825,7 +19252,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-cabin_air_filter-adc99d28-2026",
@@ -18860,7 +19291,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "q3-US2026+-mnt-spark_plugs-865e17cb-2026",
@@ -18897,7 +19332,11 @@
    ],
    "primary_source": "audi-maintenance-card-2026",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   }
  ],
  "conflicts": [

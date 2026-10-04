@@ -54,8 +54,1646 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-03T17:58:45+00:00",
+ "started_at": "2026-10-04T12:58:05+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "a0d09a8f80a77d79e3786d59c197b9e6574c1ed5b04dd2a6576ca6bf41018459",
+   "old": {
+    "job": "brakes",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Brake Discs - Check thickness First at 35,000 miles or 4 years, whichever occurs first and thereafter, every 40,000 miles or 4 years, whichever occurs first"
+   },
+   "new": {
+    "job": "brakes",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Brake Discs - Check thickness First at 35,000 miles or 4 years, whichever occurs first and thereafter, every 40,000 miles or 4 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "occurrence_mismatch",
+     "distance_not_stated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dfc37d72c94dbbffd2c96f119662779fc799a8c4eae6e797df9fe569ef887781",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 56327,
+    "interval_miles_original": 35000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5aef6719b37bb7def84cef7dd4912e61eaad3ed05fd91f48e205ddd8a014a92f",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Continuously Variable Transmission (multitronic™) - Change ATF First 35,000 miles and thereafter every 40,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:transmission_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9e7609234dafd26bde141bb61acd07c43c4a4bd6ef8566d217191d60dc853758",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "engine": "3.0L V6 TFSI,"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace First at 55,000 miles or 6 years, whichever occurs first and thereafter, every 60,000 miles or 6 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2015
+    ],
+    "applicability": {
+     "engine": "3.0L V6 TFSI,"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark Plugs - Replace First at 55,000 miles or 6 years, whichever occurs first and thereafter, every 60,000 miles or 6 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "occurrence_mismatch",
+     "distance_not_stated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9a5fe2c5e2ba34f24919ebc8157eb48432bc4a06eafa650c4a65dc9db353695c",
+   "old": {
+    "job": "wiper_blades",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Wiper blades - Check condition and replace if necessary All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "wiper_blades",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Wiper blades - Check condition and replace if necessary All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3199ab6510c21e599f3bbed4940fd3d0085b1079747c1e36c91badadf8311f75",
+   "old": {
+    "job": "wiper_blades",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Wiper blades - Check condition and replace if necessary All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "wiper_blades",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Wiper blades - Check condition and replace if necessary All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e13cfe45808e47597c69566016ce384e393249c597c7406753e575b27e365316",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4ad948b84369b3d707095a14826b20ee953f7e6153f797cf3b710ea2edc0dd8a",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2017,
+     2018
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected Box Battery-Check state of health with Vehicle Diagnostic Tester in Guided functions A4, S4, A4 allroad, Q7; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bba002860be3b570ed511dfee43bd218bb802f51c95f658d8d0daacddac73746",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Air filter - Replace Every 60,000 miles (90K)"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Air filter - Replace Every 60,000 miles (90K)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "267296257d89df6bacdaebeb83f6f08cc76501731e5299f14d4bac6b40c7cf28",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Dust and pollen filter - Replace Every 20,000 miles (30K) or 2 years, whichever occurs first"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {},
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Dust and pollen filter - Replace Every 20,000 miles (30K) or 2 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed",
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c05b4458003c9e97742be3fcd951f2b1d8ace52496262487ed1080ef320eb48c",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Q7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Ribbed V-belt compressor drive - Replace Every 60,000 miles (90K)"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Q7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Ribbed V-belt compressor drive - Replace Every 60,000 miles (90K)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "47399d1ed71bd87a75930004d1bc29c702fee83c4e2b7966110230717f3cf52b",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Q7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark plugs - Replace Every 60,000 miles (90K) or 6 years, whichever occurs first"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "models": "Q7 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Spark plugs - Replace Every 60,000 miles (90K) or 6 years, whichever occurs first"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "km_unitless_not_as_printed",
+     "months_printed_not_in_item"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4a64927e70b0c9340f69bffb518b0aaa3f9605e6532b6ee1107074a41efcf208",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2eadf5a4443b770f460ff3b153df42e14381b85f9a624ad48bc4b745af96ec87",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Minor Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Minor Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Minor Maintenance: 1) First minor maintenance service at 10,000 miles or 1 year after delivery, whichever occurs first. Minor maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e5b0fc71aa217e3d967cc68f44b344a9075df1b557df2b8b8a39853fb3814c23",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7aad1b65db012d79c13a7c4b72ff452594b3ae141cd27803aea01fb88f84fe36",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d8d1fd6ddbde9e6353f6d5f038d5d50bcb25bceaadca4e92b1384ef555c439cd",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "67aff420198a004c3bff875fdf8e8a7e05a027f7e50becdfd545ce8cc984d373",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state of health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component",
+     "schedule_other_powertrain"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1d770a9783b708fb70841b5c4e707dbf4cc1f8003a41886e3ec8483cfbdf6932",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ab725309124e7570169b7c94db0e6fcd1412b7eb76d24bce02581d2c1ab9c74f",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box / OCU /ConMod battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "28688905f591d74a82f20ac5ad469cccd2480c0b35f4b92d9d67ce3f8821a99b",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Front axle drive - drain coolant (with small cover removed) All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Front axle drive - drain coolant (with small cover removed) All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain",
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3f3a77590478f46b14e37437efc8533de2e2b7a75e0b02657dda50c17947a859",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Front axle drive - drain coolant (with small cover removed) All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2019,
+     2019
+    ],
+    "applicability": {
+     "service": "Standard Maintenance"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Front axle drive - drain coolant (with small cover removed) All Vehicles; note: Standard Maintenance: 2) First standard maintenance service at 20,000 miles or 2 years after delivery, whichever occurs first. Standard maintenance services thereafter occur at intervals of 20,000 miles or every 2 years"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "schedule_other_powertrain",
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d2ca426df64d0615e258e30af964d2331759ed8750967a22b35efd863850b0cf",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f5e1f97b9b9c7c5084844a2cd70486897ed1be1c8bef3a76a0d77364146dfbbe",
+   "old": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "new": {
+    "job": "battery_12v",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "service": "Standard Maintenance",
+     "models": "Q7 55 TFSI; SQ7 - Q8 55 TFSI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 32187,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Standard Maintenance",
+    "quote": "Connected box battery (for Audi Connected Services) - Check state health with Vehicle Diagnostic Tester in Guided Functions Only: - A4 40 TFSI, A4 45 TFSI, S4 - A4 allroad® 45 TFSI - A5 45 TFSI, S5 - A6 45 TFSI, A6 55 TFSI, S6 - A6 allroad® 55 TFSI - A7 55 TFSI, A7 55 TFSIe, S7 - A8L 55 TFSI, A8L 60 TFSI, A8L 60 TFSIe, S8 LWB - Q5 45 TFSI, Q5 55 TFSIe, SQ5 - Q7 45 TFSI, Q7 55 TFSI, SQ7 - Q8 55 TFS"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "10bdce6cbccce1843715596b6a976ffd66dd78ad32162e225ddc29684d774c7e",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "SQ7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Rear axle, quattro® sport - Change ATF and differential oil Every 60,000 miles (90K km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "models": "SQ7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Rear axle, quattro® sport - Change ATF and differential oil Every 60,000 miles (90K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8c50bf24d1d18b8b46fae3c563b0dff389f5b707bf164adc28742d3bfd46aa1b",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "SQ7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Rear axle, quattro® sport - Change ATF and differential oil Every 60,000 miles (90K km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "models": "SQ7"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Additional Maintenance Items",
+    "quote": "Rear axle, quattro® sport - Change ATF and differential oil Every 60,000 miles (90K km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "job_names_other_component"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 66,
   "te_existing": 873,
@@ -63,9 +1701,8 @@
   "configurations_research_only": 26,
   "configurations_linked": 5,
   "issues_existing": 56,
-  "maintenance_new": 4,
-  "maintenance_existing": 90,
-  "maintenance_stale_deleted": 1
+  "maintenance_existing": 94,
+  "maintenance_corrected": 26
  },
- "finished_at": "2026-10-03T17:58:49+00:00"
+ "finished_at": "2026-10-04T12:58:09+00:00"
 }
