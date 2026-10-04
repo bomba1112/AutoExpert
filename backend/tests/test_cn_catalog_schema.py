@@ -49,7 +49,7 @@ def test_f094_upgrade_downgrade_round_trip_on_sqlite(tmp_path):
         assert "hybrid_system_key" in issue
         assert issue["severity"] is False
 
-    result = alembic(url, "downgrade", "f092_account_readiness", cwd=tmp_path)
+    result = alembic(url, "downgrade", "f093_owners_club", cwd=tmp_path)
     assert result.returncode == 0, result.stdout + result.stderr
     with sqlite3.connect(database) as connection:
         assert "battery_kwh" not in columns(connection, "vehicle_variants")
@@ -86,7 +86,7 @@ def test_f094_downgrade_refused_while_cn_rows_exist(tmp_path):
             " VALUES ('vr', 'gn', 'CN', 'x', '{}', 0, 'REAL', 0, 18.32, ?, ?)",
             (now, now),
         )
-    result = alembic(url, "downgrade", "f092_account_readiness", cwd=tmp_path)
+    result = alembic(url, "downgrade", "f093_owners_club", cwd=tmp_path)
     assert result.returncode != 0
     assert "f094 downgrade refused" in result.stdout + result.stderr
     with sqlite3.connect(database) as connection:
@@ -99,7 +99,7 @@ def test_f094_postgresql_ddl_is_plain_alter(tmp_path):
     result = alembic(
         "postgresql://user:password@localhost/autoexpert",
         "upgrade",
-        "f092_account_readiness:f094_cn_catalog",
+        "f093_owners_club:f094_cn_catalog",
         "--sql",
         cwd=tmp_path,
     )

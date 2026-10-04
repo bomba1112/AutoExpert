@@ -17,7 +17,7 @@ import sqlalchemy as sa
 from alembic import op
 
 revision = "f094_cn_catalog"
-down_revision = "f092_account_readiness"
+down_revision = "f093_owners_club"
 branch_labels = depends_on = None
 
 
