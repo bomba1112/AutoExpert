@@ -1,3 +1,4 @@
+from datetime import UTC
 from typing import Annotated
 
 import jwt
@@ -29,6 +30,11 @@ def get_current_user(db: DBSession, token: Annotated[str, Depends(oauth2_scheme)
     user = db.get(User, user_id)
     if user is None or not user.is_active:
         raise credentials_error
+    changed = user.password_changed_at
+    if changed is not None:
+        changed = changed if changed.tzinfo else changed.replace(tzinfo=UTC)
+        if int(payload.get("iat") or 0) < int(changed.timestamp()):
+            raise credentials_error  # a session from before the password reset
     return user
 
 
