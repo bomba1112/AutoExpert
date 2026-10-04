@@ -28,19 +28,17 @@ r, _ = rec([179587, 179571, 179572, 179588], 'x', model='Changan CS55 PLUS', mod
     verification='verified', **ICE)
 save('changan_cs55-plus_2026_1.5t-dct', r)
 
-# CS75 PLUS 185 hp AT -> mismatch
+# CS75 PLUS 2026 1.5T. The two "185 hp" listings (turbo.az 10536975, 10667087) belong to 2025款
+# 第三代 冠军版 JL473ZQ7 (138 kW / 188 PS, record changan_cs75-plus_2025_jl473zq7-8at) — owner
+# decision 2026-10-04: 2026款 1.5T is JL473ZQD 141 kW / 192 PS only (sohu 180009/180010/182719/182720).
 b = base(180009)
 r, _ = rec([180009, 180010, 178449, 178450], 'x', model='Changan CS75 PLUS', model_cn='长安CS75 PLUS', my=2026, trim_key='智慧冠军版 1.5T 8AT',
     status_china='в продаже (2026款 智慧冠军版 с 2025-10)', transmission='8AT',
-    listing={'battery_kwh': None, 'hp': 185, 'url': 'https://turbo.az/autos/10536975-changan-cs-75-plus', 'more': ['https://turbo.az/autos/10667087-changan-cs-75-plus']}, fuel=fuel(b),
-    fingerprint={'battery_kwh': None, 'hp': [192, 188]},
-    closest={'trim': '2026款 智慧冠军版 1.5T 8AT (sohu 180009/180010) или 2025款 第三代 冠军版 1.5T 8AT (178449/178450)',
-             'why': 'Официально 1.5T CS75 PLUS бывает только 192 л.с. (141 кВт, JL473ZQD, все 2026款) или 188 л.с. (138 кВт, JL473ZQ7, 2025 冠军版). 185 нет ни в одной версии. 138 кВт = 185 механических hp — возможно, продавец указал мощность 188-сильной версии в hp. По году (2026) ближе 智慧冠军版 (тот же кузов 4710 мм, 8AT).'},
-    buyer_checks=['185 л.с. нет в официальных версиях — проверить код двигателя (JL473ZQD = 192 л.с., JL473ZQ7 = 188 л.с.) и VIN',
-                  '8-ступенчатый автомат (Aisin по данным производителя не подтверждено)'],
-    notes='Данные записи — 2026款 智慧冠军版 1.5T (192 л.с.). Расхождение с объявлением по мощности — см. closest_official. Два объявления — одна конфигурация.',
-    verification='mismatch', **ICE)
-r['buyer_checks'][1] = '8-ступенчатый автомат: проверить толчки при переключениях'
+    listing={'url': None}, fuel=fuel(b),
+    fingerprint={'battery_kwh': None, 'hp': 192},
+    buyer_checks=['8-ступенчатый автомат: проверить толчки при переключениях'],
+    notes='Данные записи — 2026款 1.5T JL473ZQD (141 кВт, 192 л.с.); все 1.5T комплектации 2026款 (sohu 180009/180010/182719/182720) — 141 кВт. Объявления «185 л.с.» перепривязаны к 2025款 第三代 冠军版 (JL473ZQ7, 138 кВт) по решению владельца 2026-10-04.',
+    verification='verified', **ICE)
 save('changan_cs75-plus_2026_1.5t-8at', r)
 
 # UNI-V
