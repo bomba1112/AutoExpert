@@ -11,23 +11,549 @@
  ],
  "conflicts": [],
  "existing_vs_new": [],
- "stale": [],
+ "stale": [
+  {
+   "id": "c499aa6b-eb5a-46c9-8596-93e62376fb9e",
+   "fact_key": "transmission_fluid",
+   "value": "Genuine NISSAN CVT Fluid NS-3",
+   "years": [
+    2020,
+    2022
+   ],
+   "scope_level": "GENERATION",
+   "referenced_by_issue": false,
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "dry_run": false,
- "started_at": "2026-10-03T19:14:14+00:00",
+ "started_at": "2026-10-04T13:07:56+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "4eda78e494ab3a7e20df0f70befdd41a50ec39f7e051d4efe58c9b4d893ad86c",
+   "old": {
+    "job": "suspension",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.530 'Suspension components (shocks, sub￾frame, tie rods)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Suspension components (shocks, subframe, tie rods); note: severe operating conditions: standard points plus the additional severe items"
+   },
+   "new": {
+    "job": "suspension",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.530 'Suspension components (shocks, sub￾frame, tie rods)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Suspension components (shocks, subframe, tie rods); note: severe operating conditions: standard points plus the additional severe items"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "severe_not_stated",
+     "occurrence_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f4adb2aec99872e272fc16fc779c0b65ce4efa4e1048e16938ffe02f31630faf",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2024
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.530 'Differential and fluid (AWD models)' (normal) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Differential and fluid (AWD models)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2024
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.530 'Differential and fluid (AWD models)' (normal) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000 miles",
+    "quote": "Differential and fluid (AWD models)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "marks_irregular"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2cacf368b3b580b2508c70c7faf4976ccdf4ead7a7852fd7e676c4022b87d1c9",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 168000,
+    "interval_miles_original": 105000,
+    "interval_months": 126,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "p.515 'Engine coolant' (normal) listed at 105,000 miles",
+    "quote": "Engine coolant * (1); note: single point in the printed schedule"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2025,
+     2026
+    ],
+    "applicability": {
+     "edition": "altima",
+     "engine": "PR25DD"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 168000,
+    "interval_miles_original": 105000,
+    "interval_months": 126,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "p.515 'Engine coolant' (normal) listed at 105,000 miles",
+    "quote": "Engine coolant * (1); note: single point in the printed schedule"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "months_not_stated"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f92b6012359cb44da05fb20e5c732add4dc1db2a8d816c3bb44596030d33a1b7",
+   "old": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.21 'Propeller shaft (4WD/AWD/RWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000, 130,000, 140,000, 150,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.21 'Propeller shaft (4WD/AWD/RWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000, 130,000, 140,000, 150,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "cc966c2f211e13bb5c456478aae6c5d29f4f40ffcddcc6c0c0f8c6d2a1b154de",
+   "old": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.20 'Propeller shaft (4WD/AWD/RWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000, 125,000, 130,000, 135,000, 140,000, 145,000, 150,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "new": {
+    "job": "propeller_shaft",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.20 'Propeller shaft (4WD/AWD/RWD)' (severe) listed at 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000, 45,000, 50,000, 55,000, 60,000, 65,000, 70,000, 75,000, 80,000, 85,000, 90,000, 95,000, 100,000, 105,000, 110,000, 115,000, 120,000, 125,000, 130,000, 135,000, 140,000, 145,000, 150,000 miles",
+    "quote": "Propeller shaft (4WD/AWD/RWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it; severe operating conditions: standard points plus the additional severe items"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "337d875ca786db902d87d871cd5f76f848a6ec1beef0bb3a5f80e23b9c14907b",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.21 'Transfer case oil (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000, 130,000, 140,000, 150,000 miles",
+    "quote": "Transfer case oil (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 16093,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.21 'Transfer case oil (4WD/AWD)' (normal) listed at 10,000, 20,000, 30,000, 40,000, 50,000, 60,000, 70,000, 80,000, 90,000, 100,000, 110,000, 120,000, 130,000, 140,000, 150,000 miles",
+    "quote": "Transfer case oil (4WD/AWD); note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "drive_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6675e3b7b18050bd275fcd3b29b6fe05aa0bddd641da2ec0f65a6d3dc1865927",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.28 'Replace CVT Fluid (Hybrid Electronic Vehicle (HEV))' (normal) listed at 30,000, 60,000, 90,000, 120,000, 150,000 miles",
+    "quote": "Replace CVT Fluid (Hybrid Electronic Vehicle (HEV))8; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2015,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.28 'Replace CVT Fluid (Hybrid Electronic Vehicle (HEV))' (normal) listed at 30,000, 60,000, 90,000, 120,000, 150,000 miles",
+    "quote": "Replace CVT Fluid (Hybrid Electronic Vehicle (HEV))8; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "powertrain_scope_not_carried"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "cc8dbf867caf78f1e0edb0430f24950414fd7ac90eb0469f217c916bd6a3963c",
+   "old": {
+    "job": "key_fob_battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 18,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "SECONDARY_NOTE",
+    "confidence": "MEDIUM",
+    "locator": "p.23 '<Replace Nissan Intelligent Key™ battery>' (normal) listed at 15,000, 30,000, 45,000, 60,000, 75,000, 90,000, 105,000, 120,000, 135,000, 150,000 miles",
+    "quote": "<Replace Nissan Intelligent Key™ battery>; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "new": {
+    "job": "key_fob_battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2016,
+     2016
+    ],
+    "applicability": {
+     "edition": "all models"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 18,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "MEDIUM",
+    "locator": "p.23 '<Replace Nissan Intelligent Key™ battery>' (normal) listed at 15,000, 30,000, 45,000, 60,000, 75,000, 90,000, 105,000, 120,000, 135,000, 150,000 miles",
+    "quote": "<Replace Nissan Intelligent Key™ battery>; note: model-agnostic Service and Maintenance Guide: the item is printed for all models ('Equipment varies by model'); this model is not named for it"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch"
+    ]
+   }
+  }
+ ],
  "counts": {
-  "replaced_own_maintenance": 202,
-  "replaced_own_te": 1254,
-  "replaced_own_issues": 50,
-  "raw_documents_seen": 90,
-  "te_new_GENERATION": 804,
-  "te_new_ENGINE": 13,
-  "te_new_CONFIGURATION": 437,
+  "raw_documents_seen": 88,
+  "te_existing": 1253,
+  "te_new_GENERATION": 1,
   "configurations": 35,
   "configurations_research_only": 26,
   "configurations_linked": 9,
-  "issues_new": 50,
-  "maintenance_new": 202
+  "issues_existing": 50,
+  "maintenance_existing": 202,
+  "maintenance_corrected": 8,
+  "te_stale_deleted": 1
  },
- "finished_at": "2026-10-03T19:14:22+00:00"
+ "finished_at": "2026-10-04T13:08:02+00:00"
 }

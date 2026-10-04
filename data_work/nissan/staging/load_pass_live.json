@@ -2,27 +2,23 @@
  "make": "nissan",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-03T19:14:12+00:00",
- "replace_own": [
-  "altima"
- ],
+ "started_at": "2026-10-04T13:07:56+00:00",
+ "replace_own": [],
  "lines": {
   "nissan/altima": {
-   "flag": "--replace-own",
+   "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "replaced_own_maintenance": 202,
-    "replaced_own_te": 1254,
-    "replaced_own_issues": 50,
-    "raw_documents_seen": 90,
-    "te_new_GENERATION": 804,
-    "te_new_ENGINE": 13,
-    "te_new_CONFIGURATION": 437,
+    "raw_documents_seen": 88,
+    "te_existing": 1253,
+    "te_new_GENERATION": 1,
     "configurations": 35,
     "configurations_research_only": 26,
     "configurations_linked": 9,
-    "issues_new": 50,
-    "maintenance_new": 202
+    "issues_existing": 50,
+    "maintenance_existing": 202,
+    "maintenance_corrected": 8,
+    "te_stale_deleted": 1
    },
    "generations": [
     {
@@ -41,12 +37,13 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 95,
+    "raw_documents_seen": 94,
     "te_existing": 967,
     "configurations": 25,
     "configurations_research_only": 25,
     "issues_existing": 44,
-    "maintenance_existing": 143
+    "maintenance_existing": 143,
+    "maintenance_corrected": 8
    },
    "generations": [
     {
@@ -70,11 +67,14 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 110,
-    "te_existing": 1045,
+    "te_existing": 1042,
+    "te_new_GENERATION": 2,
     "configurations": 34,
     "configurations_research_only": 34,
     "issues_existing": 68,
-    "maintenance_existing": 208
+    "maintenance_existing": 208,
+    "maintenance_corrected": 7,
+    "te_stale_deleted": 3
    },
    "generations": [
     {
@@ -93,12 +93,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 87,
+    "raw_documents_seen": 88,
+    "source_records_new": 1,
     "te_existing": 888,
     "configurations": 28,
     "configurations_research_only": 28,
     "issues_existing": 49,
-    "maintenance_existing": 195
+    "maintenance_existing": 195,
+    "maintenance_corrected": 33
    },
    "generations": [
     {
@@ -114,8 +116,38 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "maintenance_corrections": {
+  "hidden": 56
+ },
+ "stale_without_same_value": [
+  {
+   "line": "nissan/altima",
+   "key": "transmission_fluid",
+   "value": "Genuine NISSAN CVT Fluid NS-3",
+   "years": [
+    2020,
+    2022
+   ],
+   "now": [
+    "\"Genuine NISSAN CVT Fluid NS-3 (or\""
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "nissan/rogue",
+   "key": "transmission_fluid",
+   "value": "NS-3",
+   "years": [
+    2024,
+    2024
+   ],
+   "now": [
+    "\"Genuine NISSAN CVT Fluid NS-3\""
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T19:15:00+00:00"
+ "finished_at": "2026-10-04T13:08:22+00:00"
 }
