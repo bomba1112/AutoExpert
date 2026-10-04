@@ -868,10 +868,17 @@ class Loader:
         self.counts["replaced_own_te"] = len(te_ids)
         self.counts["replaced_own_issues"] = len(issues)
 
-    def load_maintenance(self, prune: bool):
+    def load_maintenance(self, prune: bool, correct: bool = False):
         """maintenance_schedule_items, one row per job/action/condition/occurrence and scope.
         Rows carry 'load=<version>; line=<line>' in notes so that a later run can prune its own
-        rows that the staging no longer has; existing keys are never overwritten."""
+        rows that the staging no longer has; existing keys are never overwritten.
+
+        correct=True (owner decision 2026-10-04: every maintenance row must be confirmed by the
+        text of its source): this pipeline's own rows of the line are brought to the staging —
+        interval, evidence and display level (an item the source does not confirm is staged as
+        HIDDEN_CONFLICT) are updated, own rows the staging no longer has are deleted; every change
+        is logged old -> new in report["maintenance_corrections"]. Rows of other pipelines are
+        never touched."""
         from app.models.catalog import VehicleGeneration
         from app.models.enums import (
             ConfidenceLevel,
@@ -895,6 +902,10 @@ class Loader:
             key = nkey(*scope)
             keys.add(key)
             existing = self.db.scalar(select(MaintenanceScheduleItem).where(MaintenanceScheduleItem.natural_key == key))
+            if existing and correct and (existing.notes or "").startswith(f"{tag};"):
+                self.correct_maintenance_row(existing, item, tag)
+                self.counts["maintenance_existing"] += 1
+                continue
             if existing:
                 if (existing.interval_km, existing.interval_months) != (item.get("interval_km"), item.get("interval_months")):
                     self.report["conflicts"].append({
@@ -942,8 +953,12 @@ class Loader:
             )
             self.db.add(row)
             self.counts["maintenance_new"] += 1
+            if correct:
+                self.db.flush()
+                self.report.setdefault("maintenance_corrections", []).append(
+                    {"change": "added", "natural_key": key, "new": self.maintenance_values(row)})
         self.db.flush()
-        if prune:
+        if prune or correct:
             for row in self.db.scalars(
                 select(MaintenanceScheduleItem).where(
                     MaintenanceScheduleItem.make_id == self.make.id,
@@ -951,9 +966,62 @@ class Loader:
                 )
             ):
                 if row.natural_key not in keys:
+                    if correct:
+                        self.report.setdefault("maintenance_corrections", []).append(
+                            {"change": "removed", "natural_key": row.natural_key, "old": self.maintenance_values(row)})
                     self.db.delete(row)
                     self.counts["maintenance_stale_deleted"] += 1
             self.db.flush()
+
+    @staticmethod
+    def maintenance_values(row) -> dict:
+        def plain(value):
+            return getattr(value, "value", value)
+
+        return {
+            "job": row.job, "action": plain(row.action), "condition": plain(row.condition),
+            "occurrence": plain(row.occurrence), "years": [row.year_from, row.year_to],
+            "applicability": row.applicability, "engine": row.engine_family_key,
+            "schedule_system": plain(row.schedule_system), "interval_km": row.interval_km,
+            "interval_miles_original": row.interval_miles_original, "interval_months": row.interval_months,
+            "rule": row.rule, "max_interval_km": row.max_interval_km, "max_interval_months": row.max_interval_months,
+            "display_level": plain(row.display_level), "confidence": plain(row.confidence),
+            "locator": row.locator, "quote": (row.notes or "").split("; quote: ", 1)[-1][:400],
+        }
+
+    def correct_maintenance_row(self, row, item, tag):
+        from app.models.enums import ConfidenceLevel, DisplayLevel, MaintenanceSystem
+
+        primary = next(c for c in item["cites"] if c["source"] == item["primary_source"])
+        old = self.maintenance_values(row)
+        new_values = {
+            "schedule_system": MaintenanceSystem(item["schedule_system"]),
+            "interval_km": item.get("interval_km"),
+            "interval_months": item.get("interval_months"),
+            "interval_miles_original": item.get("interval_miles_original"),
+            "rule": item.get("rule"),
+            "max_interval_km": item.get("max_interval_km"),
+            "max_interval_months": item.get("max_interval_months"),
+            "source_id": self.source_ids[item["primary_source"]],
+            "raw_document_id": self.raw_ids.get(item["primary_source"]),
+            "locator": (primary.get("locator") or primary["quote"])[:500],
+            "confidence": ConfidenceLevel(item["confidence"]),
+            "display_level": DisplayLevel(item["display_level"]),
+            "notes": f"{tag}; quote: {primary['quote'][:400]}" + (f"; note: {item['note']}" if item.get("note") else ""),
+        }
+        changed = False
+        for field, value in new_values.items():
+            if getattr(row, field) != value:
+                setattr(row, field, value)
+                changed = True
+        if changed:
+            new = self.maintenance_values(row)
+            self.report.setdefault("maintenance_corrections", []).append({
+                "change": "updated", "natural_key": row.natural_key, "old": old, "new": new,
+                "fields": sorted(k for k in new if new[k] != old[k]),
+                **({"verification": item["verification"]} if item.get("verification") else {}),
+            })
+            self.counts["maintenance_corrected"] += 1
 
     def reconcile_own_generations(self, previous: dict | None):
         """Correct generation years and rows that THIS pipeline wrote in an earlier load when the
@@ -1129,6 +1197,11 @@ def main(argv=None):
         action="store_true",
         help="delete this pipeline's rows for the line, then load (implies --prune-stale)",
     )
+    parser.add_argument(
+        "--correct-maintenance",
+        action="store_true",
+        help="bring this pipeline's maintenance rows of the line to the staging, every change logged (owner decision 2026-10-04)",
+    )
     args = parser.parse_args(argv)
     import os
 
@@ -1176,7 +1249,7 @@ def main(argv=None):
         loader.load_symptom_patterns()
         loader.load_cc_problems()
         loader.load_issues()
-        loader.load_maintenance(args.prune_stale)
+        loader.load_maintenance(args.prune_stale, correct=args.correct_maintenance)
         loader.stale_rows(args.prune_stale)
         if args.prune_stale:
             loader.reconcile_own_generations(previous)  # removes generations emptied by the prune
@@ -1209,6 +1282,7 @@ def main(argv=None):
                 "counts": report["counts"],
                 "generations": report["generations"],
                 "conflicts": len(report["conflicts"]),
+                "maintenance_corrections": len(report.get("maintenance_corrections", [])),
                 "existing_vs_new": len(report["existing_vs_new"]),
                 "stale": report["stale"],
             },

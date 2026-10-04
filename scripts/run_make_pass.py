@@ -11,6 +11,9 @@ stops the pass. Summary per line: data_work/<make>/staging/load_pass_<mode>.json
 
   .venv/Scripts/python.exe scripts/run_make_pass.py hyundai build|rehearse|live
   ... rehearse|live --replace-own glc   one line replaced (owner decision), the others as usual
+  ... rehearse|live --correct-maintenance   own maintenance rows brought to the staging (owner
+      decision 2026-10-04: shown only when confirmed by the source text); every change old -> new
+      in data_work/<make>/staging/maintenance_corrections_<date>[_rehearsal].json
 """
 
 from __future__ import annotations
@@ -147,14 +150,18 @@ def save_corrections(make: str) -> int:
     return total
 
 
-def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozenset = frozenset()) -> int:
+def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozenset = frozenset(),
+         correct_maintenance: bool = False) -> int:
     db = LIVE if mode == "live" else REHEARSAL
-    if mode == "live":
-        backup_live()
     replace = changed_generations(make)
     if replace_all:
         replace = {line.slug for line in lines_for(make)}
     replace |= set(replace_lines)  # owner-approved replacement of single lines (--replace-own <slug>)
+    if correct_maintenance and replace:
+        print("--correct-maintenance touches maintenance only; lines to replace:", sorted(replace))
+        return 1
+    if mode == "live":
+        backup_live()
     summary = {"make": make, "mode": mode, "db": str(db), "started_at": datetime.now(UTC).isoformat(timespec="seconds"),
                "replace_own": sorted(replace), "lines": {}}
     logs = Path(r"C:\AutoExpertData\logs")
@@ -164,7 +171,8 @@ def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozens
             continue
         flag = "--replace-own" if line.slug in replace else "--prune-stale"
         log = logs / f"load_{mode}_{make}_{line.slug}.log"
-        code = run([PY, "scripts/load_us_tech_facts.py", make, line.slug, "--db", str(db), flag], log)
+        extra = ["--correct-maintenance"] if correct_maintenance else []
+        code = run([PY, "scripts/load_us_tech_facts.py", make, line.slug, "--db", str(db), flag, *extra], log)
         text = log.read_text(encoding="utf-8", errors="replace")
         result = parse_summary(text)
         summary["lines"][line.key] = {"flag": flag, "exit": code, **{k: result.get(k) for k in ("counts", "generations", "conflicts", "existing_vs_new")}}
@@ -172,6 +180,8 @@ def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozens
         if code:
             summary["stopped_at"] = line.key
             break
+    if correct_maintenance:
+        summary["maintenance_corrections"] = collect_maintenance_corrections(make, mode)
     summary["stale_without_same_value"] = stale_without_replacement(make, mode)
     print("stale rows without the same value still present:", len(summary["stale_without_same_value"]))
     for item in summary["stale_without_same_value"][:60]:
@@ -186,6 +196,35 @@ def load(make: str, mode: str, replace_all: bool = False, replace_lines: frozens
     return 1 if summary.get("stopped_at") or summary["quick_check"] != "ok" else 0
 
 
+def collect_maintenance_corrections(make: str, mode: str) -> dict:
+    """The old -> new log of a --correct-maintenance pass, all lines of the make in one file."""
+    name = "load_report.json" if mode == "live" else "load_report_rehearsal.json"
+    changes = []
+    for line in lines_for(make):
+        report = ROOT / f"data_work/{make}/staging/{line.slug}/{name}"
+        if report.exists():
+            changes += [{"line": line.slug, **c}
+                        for c in json.loads(report.read_text(encoding="utf-8")).get("maintenance_corrections", [])]
+    date = datetime.now(UTC).strftime("%Y%m%d")
+    out = ROOT / f"data_work/{make}/staging/maintenance_corrections_{date}{'' if mode == 'live' else '_rehearsal'}.json"
+    counts = {}
+    for c in changes:
+        kind = c["change"] if c["change"] != "updated" else (
+            "hidden" if c["new"]["display_level"] == "HIDDEN_CONFLICT" and c["old"]["display_level"] != "HIDDEN_CONFLICT"
+            else "values" if any(f.startswith(("interval", "max_interval", "rule", "schedule")) for f in c["fields"])
+            else "evidence")
+        counts[kind] = counts.get(kind, 0) + 1
+    out.write_text(json.dumps({
+        "date": datetime.now(UTC).date().isoformat(),
+        "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source "
+                  "(scripts/verify_maintenance_source.py); rows the source does not confirm are hidden "
+                  "(HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace "
+                  "the old ones",
+        "mode": mode, "counts": counts, "changes": changes}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(make, "maintenance corrections", counts, "->", out.relative_to(ROOT))
+    return counts
+
+
 def main(argv) -> int:
     make, step = argv[0], argv[1]
     if step == "build":
@@ -195,7 +234,8 @@ def main(argv) -> int:
         return 0
     if step in ("rehearse", "live"):
         lines = frozenset(argv[i + 1] for i, a in enumerate(argv) if a == "--replace-own" and i + 1 < len(argv))
-        return load(make, "live" if step == "live" else "rehearsal", "--replace-all" in argv, lines)
+        return load(make, "live" if step == "live" else "rehearsal", "--replace-all" in argv, lines,
+                    "--correct-maintenance" in argv)
     raise SystemExit(f"unknown step {step}")
 
 

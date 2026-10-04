@@ -180,6 +180,13 @@ def main(make: str) -> int:
             problems = []
             for cite in item["cites"]:
                 source = staging["sources"][cite["source"]]
+                if raw_path_of(source).is_dir():
+                    # mycarusermanual sections: a folder, checked through the page text store
+                    store = RAW_ROOT / "pagetext" / f"{source['sha256']}.json.gz"
+                    pages = json.loads(gzip.decompress(store.read_bytes()))["pages"] if store.exists() else []
+                    if not any(norm_text(cite["quote"]) in norm_text(t) for t in pages):
+                        problems.append(f"{cite['source']}: schedule text not found in the stored pages")
+                    continue
                 body = source_bytes(source)
                 if source["path"].endswith(".gz"):  # stored pages (e.g. mbusa Service A/B) are hashed uncompressed
                     body = gzip.decompress(body)

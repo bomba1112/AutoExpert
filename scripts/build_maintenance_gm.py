@@ -242,18 +242,35 @@ def documents() -> list[dict]:
                      "publisher": "General Motors (owner's manual, contentdelivery.ext.gm.com)"})
         if full:
             official |= {(ln, y) for ln in lines for y in years}
-    for row in read_csv(CARMANS_MANIFEST):
-        if row["make"] != MAKE or row["kind"] != "pdf" or row["status"] != "ok":
-            continue
+    # owner decision 2026-10-04: a carmans file posted for several model years is bound only to the
+    # years the document states (scripts/manual_editions.py), filed under one post as in
+    # extract_manual_facts.documents()
+    from extract_manual_facts import carmans_editions
+
+    editions = carmans_editions(MAKE)
+    carmans_rows = [r for r in read_csv(CARMANS_MANIFEST) if r["make"] == MAKE and r["kind"] == "pdf" and r["status"] == "ok"]
+    taken = set()
+    for row in carmans_rows:
         line, year = row["line"].split("/")[-1], int(row["year"])
-        if (line, year) in official:
+        years = [year]
+        if editions is not None:
+            entry = editions.get(row["sha256"])
+            if entry is None or entry.get("status") != "ok" or row["sha256"] in taken:
+                continue
+            files = [r for r in carmans_rows if r["sha256"] == row["sha256"]]
+            row = next((r for r in files if int(r["year"]) in entry["years_used"]), files[0])
+            taken.add(row["sha256"])
+            years = [y for y in entry["years_used"] if (line, y) not in official]
+        elif (line, year) in official:
+            continue
+        if not years:
             continue
         extracted = WORK / MAKE / "extracted" / f"carmans-{row['post']}.json"
         info = json.loads(extracted.read_text(encoding="utf-8")) if extracted.exists() else {}
         if info.get("status") != "ok" or info.get("edition_market") != "US":
             continue
-        docs.append({"key": f"carmans-{row['post']}-maintenance", "lines": [line], "years": [year],
-                     "title": f"{year} {MAKE_NAME} {line.title()} owner's manual (copy of the factory manual, carmans.net)",
+        docs.append({"key": f"carmans-{row['post']}-maintenance", "lines": [line], "years": years,
+                     "title": f"{years[0]} {MAKE_NAME} {line.title()} owner's manual (copy of the factory manual, carmans.net)",
                      "path": RAW_ROOT / row["path"], "url": row["url"], "sha256": row["sha256"],
                      "retrieved_at": row["retrieved_at"], "tier": "B", "edition": None,
                      "publisher": "factory owner's manual, copy hosted by carmans.net"})

@@ -62,6 +62,12 @@ REVIEWED = {
                            "ocr_last_page": "Owner'smanual: Passat, Passat Estate, PassatAlltrack | Stand:01.04.2016 | Englisch:05.2016 | Teile-Nr:3G0012720AC",
                            "ocr_page_2": "Volkswagen AG", "rule": "European English edition (Estate / Alltrack bodies, Volkswagen AG, 'Englisch')"},
     },
+    # a European Prius manual posted on the 2022 / 2023 Prius pages: its cover names Toyota Motor Europe
+    "b76ed3a13e9fbf2be453aa0699cbde75d32d464698739034d3839e18a9446402": {
+        "market": "EU", "doc_type": "owners_manual", "stated_years": [],
+        "market_markers": {"cover": "Prius OWNER’S MANUAL Toyota Motor Europe NV/SA Address: Avenue du bourget 60 –1140 Brussels, Belgium 2015 TOYOTA MOTOR C",
+                           "rule": "European edition (Toyota Motor Europe on the cover)"},
+    },
     # a 9-page US quick-start guide: too short for the unit counts of edition_market
     "7b66330a87522183eab11bddd66f15bb55beaa5b426cc0adcd2ddfa8af155242": {
         "market": "US", "doc_type": "quick_start_guide", "stated_years": [2021], "years_used": [2021],
@@ -89,17 +95,29 @@ def flat(text: str) -> str:
     return " ".join(text.split())
 
 
-def title_years(cover: str, names: list[str]) -> list[tuple[int, str]]:
-    """A title on the cover: a year next to the make or a model name ("2019 Volkswagen Atlas",
-    "2016 Accord Owner's Manual", "Owner's Manual 2017 Altima")."""
+TITLE_WORDS = re.compile(r"Owner[’']?s Manuals?|OWNER[’']?S MANUALS?|Quick[- ]Start Guide", re.I)
+COPYRIGHT_AFTER = re.compile(r"^.{0,60}?(?:All rights|rights reserved|\bInc\b\.?|Corporation|Motors America)", re.I)
+
+
+def title_years(cover: str, names: list[str], first_page: bool) -> list[tuple[int, str, bool]]:
+    """The title on the cover: a year next to the make or a model name, at the start of the
+    first page ("2019 Volkswagen Atlas") or next to "Owner's Manual" ("2022 ACCORD Owner's
+    Manual", "Owner's Manual 2020 CR-V Hybrid", "MODEL S 2021 + OWNER'S MANUAL"). Not a title:
+    a copyright line ("( 2020 KIA MOTORS AMERICA, Inc. All rights reserved"), a list of other
+    vehicles in a supplement ("the 2017 NISSAN Sentra, 2018 NISSAN Altima ..."). (year, quote,
+    open range: "2021 +" = 2021 and later)."""
     out = []
     alternatives = "|".join(re.escape(n) for n in sorted(names, key=len, reverse=True))
     pattern = re.compile(rf"\b(20[1-2]\d)\s+(?:{alternatives})\b|\b(?:{alternatives})\s+(20[1-2]\d)\b(?!\s*[/.-]\d)", re.I)
     for m in pattern.finditer(cover):
         before = cover[max(0, m.start() - 40): m.start()]
-        if PRINT_DATE.search(before):
+        if PRINT_DATE.search(before) or re.search(r"\(\s*$", before) or COPYRIGHT_AFTER.match(cover[m.end():]):
             continue
-        out.append((int(m.group(1) or m.group(2)), cover[max(0, m.start() - 30): m.end() + 30]))
+        near_title = TITLE_WORDS.search(cover[max(0, m.start() - 60): m.end() + 60])
+        if not (near_title or (first_page and m.start() < 120)):
+            continue
+        open_range = bool(re.match(r"\s*\+", cover[m.end():]))
+        out.append((int(m.group(1) or m.group(2)), cover[max(0, m.start() - 30): m.end() + 30], open_range))
     return out
 
 
@@ -191,12 +209,16 @@ def editions(make: str) -> dict:
             for m in MODEL_YEAR.finditer(cover):
                 evidence.append({"page": n + 1, "year": int(m.group(1) or m.group(2)), "method": "model year on the cover",
                                  "quote": cover[max(0, m.start() - 40): m.end() + 20]})
-            for year, quote in title_years(cover, names):
-                evidence.append({"page": n + 1, "year": year, "method": "title on the cover", "quote": quote})
+            for year, quote, open_range in title_years(cover, names, n == 0):
+                evidence.append({"page": n + 1, "year": year, "method": "title on the cover", "quote": quote,
+                                 **({"and_later": True} if open_range else {})})
             for m in EDITION.finditer(cover):
                 evidence.append({"page": n + 1, "year": int(m.group(2)), "method": "edition number on the cover",
                                  "quote": cover[max(0, m.start() - 20): m.end() + 40]})
-        strong = sorted({e["year"] for e in evidence if e["method"] != "edition number on the cover"})
+        # the first page's title wins: later cover pages may list other vehicles ("the 2017 NISSAN
+        # Sentra, 2018 NISSAN Altima ... Owner's Manual" in a supplement)
+        first = [e for e in evidence if e["method"] != "edition number on the cover" and e["page"] == 1]
+        strong = sorted({e["year"] for e in (first or [e for e in evidence if e["method"] != "edition number on the cover"])})
         weak = sorted({e["year"] for e in evidence if e["method"] == "edition number on the cover"})
         stated = strong or weak
         entry["year_evidence"] = evidence
@@ -206,7 +228,13 @@ def editions(make: str) -> dict:
         for k in line_keys:
             if k in BY_KEY:
                 years_window |= set(range(BY_KEY[k].years[0], BY_KEY[k].years[1] + 1))
-        if stated:
+        later = [e["year"] for e in evidence if e.get("and_later")]
+        if stated and later and len(stated) == 1 and stated[0] in later:
+            # "MODEL S 2021 + OWNER'S MANUAL": the document is for 2021 and later; the page's
+            # years from then on are covered
+            used = [y for y in post_years if y >= stated[0] and y in years_window]
+            entry["rule"] = f"the document states {stated[0]} and later: the posts' years from {stated[0]}"
+        elif stated:
             used = [y for y in stated if y in years_window]
             entry["rule"] = "years stated in the document"
         elif len(post_years) == 1:

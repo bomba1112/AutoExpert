@@ -1280,6 +1280,36 @@ def apply_carcomplaints(st: Staging, issues: list[dict], problems: dict) -> list
 
 
 # ---- build ------------------------------------------------------------------------------------
+VERIFIED_VALUES = ("job", "action", "condition", "occurrence", "interval_km", "interval_miles_original", "interval_months")
+
+
+def maintenance_verdicts(make: str) -> dict | None:
+    """Verdicts of scripts/verify_maintenance_source.py for the make: (line, item id) -> entry;
+    None when the make has not been verified."""
+    path = WORK / "_shared" / "maintenance_verification" / f"{make}.json"
+    if not path.exists():
+        return None
+    return {(e["line"], e["item_id"]): e for e in json.loads(path.read_text(encoding="utf-8"))}
+
+
+def verified(item: dict, line_slug: str, verdicts: dict | None) -> dict:
+    """Owner decision 2026-10-04: a maintenance item is shown only when the text of its source
+    confirms it. An item the verifier did not confirm, did not see, or saw with other values
+    is staged as HIDDEN_CONFLICT with the reasons."""
+    if verdicts is None:
+        return item
+    entry = verdicts.get((line_slug, item["id"]))
+    if entry is None:
+        reasons = ["not verified"]
+    elif any(entry.get(k) != item.get(k) for k in VERIFIED_VALUES):
+        reasons = ["verified values differ from the staged item"]
+    elif entry["verdict"] == "CONFIRMED":
+        return {**item, "verification": {"verdict": "CONFIRMED", "method": entry.get("method")}}
+    else:
+        reasons = entry.get("reasons") or ["unconfirmed"]
+    return {**item, "display_level": "HIDDEN_CONFLICT", "verification": {"verdict": "UNCONFIRMED", "reasons": reasons}}
+
+
 def build_line(db, line: Line) -> dict:
     st = Staging(line)
     epa = epa_for_line(line)
@@ -1323,11 +1353,13 @@ def build_line(db, line: Line) -> dict:
         st.conflicts += extra.get("conflicts", [])
     cross_check_vpic(st, facts)
     maintenance = []
+    verdicts = maintenance_verdicts(line.make)
     # maintenance.json (Mopar, Hyundai/Kia, Mercedes builders) and maintenance_<source>.json of
     # the other builders (stage B): every file of the line is merged
     for path in sorted((WORK / line.make / "staging" / line.slug).glob("maintenance*.json")):
         extra = json.loads(path.read_text(encoding="utf-8"))
-        maintenance += [i for i in extra.get("items", []) if i["generation"] in {g["code"] for g in gens}]
+        maintenance += [verified(i, line.slug, verdicts) for i in extra.get("items", [])
+                        if i["generation"] in {g["code"] for g in gens}]
         for key, item in extra.get("sources", {}).items():
             st.sources.setdefault(key, item)
         st.gaps += extra.get("gaps", [])

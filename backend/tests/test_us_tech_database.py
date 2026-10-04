@@ -382,3 +382,110 @@ def test_manual_facts_cite_a_us_edition_page():
                         assert item.get("edition") == "US", cite["source"]
                     assert cite.get("pages"), fact["id"]
                     assert str(cite["pages"][0]) in json.loads(item["extract"])["pages"], fact["id"]
+
+
+def test_maintenance_shown_only_when_confirmed_by_source():
+    """Owner decision 2026-10-04: a maintenance item is shown only when the text of its source
+    confirms it (scripts/verify_maintenance_source.py); the staging hides every other one."""
+    for path in STAGING:
+        make = path.parts[-4]
+        if not (ROOT / "data_work" / "_shared" / "maintenance_verification" / f"{make}.json").exists():
+            continue
+        staging = json.loads(path.read_text(encoding="utf-8"))
+        for item in staging.get("maintenance", []):
+            verdict = (item.get("verification") or {}).get("verdict")
+            assert verdict in {"CONFIRMED", "UNCONFIRMED"}, item["id"]
+            if verdict != "CONFIRMED":
+                assert item["display_level"] == "HIDDEN_CONFLICT", item["id"]
+
+
+def test_staging_hides_unconfirmed_or_changed_maintenance():
+    item = {"id": "x-1", "job": "spark_plugs", "action": "REPLACE", "condition": "NORMAL", "occurrence": "EVERY",
+            "interval_km": 160000, "interval_miles_original": 100000, "interval_months": None, "display_level": "FACT"}
+    confirmed = {**{k: item[k] for k in batch.VERIFIED_VALUES}, "line": "camry", "item_id": "x-1",
+                 "verdict": "CONFIRMED", "method": "text"}
+    assert batch.verified(item, "camry", None) == item  # make not verified yet: unchanged
+    assert batch.verified(item, "camry", {("camry", "x-1"): confirmed})["display_level"] == "FACT"
+    rejected = {**confirmed, "verdict": "UNCONFIRMED", "reasons": ["interval not stated"]}
+    out = batch.verified(item, "camry", {("camry", "x-1"): rejected})
+    assert out["display_level"] == "HIDDEN_CONFLICT" and out["verification"]["reasons"] == ["interval not stated"]
+    stale = {**confirmed, "interval_km": 96000}  # verified against other values
+    assert batch.verified(item, "camry", {("camry", "x-1"): stale})["display_level"] == "HIDDEN_CONFLICT"
+    assert batch.verified(item, "camry", {})["display_level"] == "HIDDEN_CONFLICT"  # not seen by the verifier
+
+
+def test_correct_maintenance_logs_every_change_and_keeps_other_rows(db_session, tmp_path, monkeypatch):
+    from app.core.config import get_settings
+    from app.models.enums import (
+        ConfidenceLevel,
+        DisplayLevel,
+        EvidenceStatus,
+        MaintenanceAction,
+        MaintenanceCondition,
+        MaintenanceOccurrence,
+        MaintenanceSystem,
+    )
+    from app.models.evidence import MaintenanceScheduleItem
+
+    monkeypatch.setattr(loader, "ROOT", tmp_path)
+    monkeypatch.setattr(get_settings(), "knowledge_data_dir", str(tmp_path / "store"))
+    make = VehicleMake(name="Toyota", normalized_name="toyota")
+    db_session.add(make)
+    db_session.flush()
+    db_session.add(VehicleModel(make_id=make.id, name="Camry", normalized_name="camry"))
+    db_session.add(SourceRegistry(id="factory-toyota-us", title="t", config={}, state="LOCAL_RESEARCH"))
+    db_session.flush()
+
+    def mnt(job, occurrence, km, months, quote):
+        return {"id": f"camry-VII-{job}-{occurrence}", "generation": "VII", "years": [2014, 2014], "engine": None,
+                "applicability": {}, "action": "REPLACE", "condition": "NORMAL", "occurrence": occurrence,
+                "interval_km": km, "interval_miles_original": None, "interval_months": months, "job": job,
+                "rule": "WHICHEVER_FIRST", "schedule_system": "FIXED_INTERVAL", "max_interval_km": None,
+                "max_interval_months": None, "note": None, "primary_source": "om-2014", "display_level": "FACT",
+                "confidence": "MEDIUM", "cites": [{"source": "om-2014", "pages": [1], "quote": quote}]}
+
+    staging = {**_synthetic_staging(tmp_path), "facts": [], "maintenance": [
+        mnt("engine_coolant", "FIRST", 96000, 72, "wrong cell"),
+        mnt("spark_plugs", "EVERY", 160000, None, "Replace every 100,000 miles (160,000 km)"),
+    ]}
+    first = loader.Loader(db_session, staging, "Camry", {"generations": [], "conflicts": [], "existing_vs_new": [], "stale": []})
+    first.load_sources()
+    first.load_generations()
+    first.load_maintenance(prune=False)
+    other = MaintenanceScheduleItem(  # a row of another pipeline: never touched
+        market="US", make_id=make.id, year_from=2014, year_to=2014, job="engine_coolant", action=MaintenanceAction.REPLACE,
+        condition=MaintenanceCondition.NORMAL, occurrence=MaintenanceOccurrence.EVERY,
+        schedule_system=MaintenanceSystem.FIXED_INTERVAL, interval_km=1, source_id=first.source_ids["om-2014"],
+        confidence=ConfidenceLevel.LOW, status=EvidenceStatus.CONFIRMED, display_level=DisplayLevel.FACT, locator="p.1",
+        notes="other pipeline", natural_key="other")
+    db_session.add(other)
+    db_session.flush()
+
+    corrected = mnt("engine_coolant", "FIRST", 100000, 60, "First, 60,000 miles (100,000 km) or 60 months")
+    hidden = {**mnt("spark_plugs", "EVERY", 160000, None, "Replace every 100,000 miles (160,000 km)"),
+              "display_level": "HIDDEN_CONFLICT", "verification": {"verdict": "UNCONFIRMED", "reasons": ["x"]}}
+    staging["maintenance"] = [corrected, hidden, mnt("cabin_air_filter", "EVERY", 24000, 24, "every 15,000 miles")]
+    report = {"generations": [], "conflicts": [], "existing_vs_new": [], "stale": []}
+    second = loader.Loader(db_session, staging, "Camry", report)
+    second.load_sources()
+    second.load_generations()
+    second.load_maintenance(prune=False, correct=True)
+    changes = {(c["change"], (c.get("new") or c["old"])["job"]): c for c in report["maintenance_corrections"]}
+    coolant = changes[("updated", "engine_coolant")]
+    assert (coolant["old"]["interval_km"], coolant["old"]["interval_months"]) == (96000, 72)
+    assert (coolant["new"]["interval_km"], coolant["new"]["interval_months"]) == (100000, 60)
+    assert changes[("updated", "spark_plugs")]["new"]["display_level"] == "HIDDEN_CONFLICT"
+    assert ("added", "cabin_air_filter") in changes and not report["conflicts"]
+    rows = {r.job: r for r in db_session.scalars(select(MaintenanceScheduleItem).where(MaintenanceScheduleItem.natural_key != "other"))}
+    assert rows["engine_coolant"].interval_km == 100000 and rows["engine_coolant"].interval_months == 60
+    assert db_session.get(MaintenanceScheduleItem, other.id).interval_km == 1
+
+    staging["maintenance"] = [corrected]  # the corrected parser no longer produces the other two
+    report = {"generations": [], "conflicts": [], "existing_vs_new": [], "stale": []}
+    third = loader.Loader(db_session, staging, "Camry", report)
+    third.load_sources()
+    third.load_generations()
+    third.load_maintenance(prune=False, correct=True)
+    removed = sorted(c["old"]["job"] for c in report["maintenance_corrections"] if c["change"] == "removed")
+    assert removed == ["cabin_air_filter", "spark_plugs"]
+    assert db_session.get(MaintenanceScheduleItem, other.id) is not None

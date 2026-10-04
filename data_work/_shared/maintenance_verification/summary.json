@@ -1,0 +1,407 @@
+{
+ "audi": {
+  "items": 690,
+  "verdict": {
+   "CONFIRMED": 518,
+   "UNCONFIRMED": 172
+  },
+  "method": {
+   "text": 690
+  },
+  "reasons": {
+   "audit:job_names_other_component": 78,
+   "schedule_other_powertrain": 56,
+   "km_unitless_not_as_printed": 25,
+   "job_names_other_component": 24,
+   "months_printed_not_in_item": 15,
+   "occurrence_mismatch": 14,
+   "distance_not_stated": 14,
+   "audit:transmission_scope_not_carried": 14,
+   "km_printed_implausible": 3,
+   "action_not_stated": 2,
+   "km_not_as_printed": 1
+  },
+  "method_verdict": {
+   "text:CONFIRMED": 518,
+   "text:UNCONFIRMED": 172
+  },
+  "layout": {
+   "text": 690
+  },
+  "warnings": {
+   "other_cite:schedule_other_powertrain": 70
+  }
+ },
+ "bmw": {
+  "items": 36,
+  "verdict": {
+   "CONFIRMED": 36
+  },
+  "method": {
+   "monitor": 36
+  },
+  "reasons": {},
+  "method_verdict": {
+   "monitor:CONFIRMED": 36
+  },
+  "layout": {
+   "monitor": 36
+  },
+  "warnings": {}
+ },
+ "cadillac": {
+  "items": 264,
+  "verdict": {
+   "CONFIRMED": 264
+  },
+  "method": {
+   "grid": 228,
+   "text": 25,
+   "monitor": 11
+  },
+  "reasons": {},
+  "method_verdict": {
+   "grid:CONFIRMED": 228,
+   "text:CONFIRMED": 25,
+   "monitor:CONFIRMED": 11
+  },
+  "layout": {
+   "grid": 228,
+   "text": 25,
+   "monitor": 11
+  },
+  "warnings": {}
+ },
+ "chevrolet": {
+  "items": 341,
+  "verdict": {
+   "CONFIRMED": 339,
+   "UNCONFIRMED": 2
+  },
+  "method": {
+   "grid": 263,
+   "text": 65,
+   "monitor": 13
+  },
+  "reasons": {
+   "footnote_names_other_job": 2
+  },
+  "method_verdict": {
+   "grid:CONFIRMED": 261,
+   "text:CONFIRMED": 65,
+   "monitor:CONFIRMED": 13,
+   "grid:UNCONFIRMED": 2
+  },
+  "layout": {
+   "grid": 263,
+   "text": 65,
+   "monitor": 13
+  },
+  "warnings": {}
+ },
+ "ford": {
+  "items": 96,
+  "verdict": {
+   "CONFIRMED": 93,
+   "UNCONFIRMED": 3
+  },
+  "method": {
+   "text": 70,
+   "monitor": 26
+  },
+  "reasons": {
+   "audit:months_printed_in_note_not_in_item": 3
+  },
+  "method_verdict": {
+   "text:CONFIRMED": 67,
+   "monitor:CONFIRMED": 26,
+   "text:UNCONFIRMED": 3
+  },
+  "layout": {
+   "text": 70,
+   "monitor": 26
+  },
+  "warnings": {}
+ },
+ "honda": {
+  "items": 588,
+  "verdict": {
+   "CONFIRMED": 577,
+   "UNCONFIRMED": 11
+  },
+  "method": {
+   "monitor": 492,
+   "text": 96
+  },
+  "reasons": {
+   "months_printed_not_in_item": 4,
+   "action_mismatch": 4,
+   "audit:footnote_scope_not_carried": 2,
+   "max_interval_not_stated": 1,
+   "job_not_named": 1
+  },
+  "method_verdict": {
+   "monitor:CONFIRMED": 486,
+   "text:CONFIRMED": 91,
+   "monitor:UNCONFIRMED": 6,
+   "text:UNCONFIRMED": 5
+  },
+  "layout": {
+   "monitor": 492,
+   "text": 96
+  },
+  "warnings": {}
+ },
+ "hyundai": {
+  "items": 418,
+  "verdict": {
+   "CONFIRMED": 360,
+   "UNCONFIRMED": 58
+  },
+  "method": {
+   "text": 263,
+   "grid": 155
+  },
+  "reasons": {
+   "audit:source_generation_mismatch": 58
+  },
+  "method_verdict": {
+   "text:CONFIRMED": 229,
+   "grid:CONFIRMED": 131,
+   "text:UNCONFIRMED": 34,
+   "grid:UNCONFIRMED": 24
+  },
+  "layout": {
+   "text": 263,
+   "grid": 155
+  },
+  "warnings": {}
+ },
+ "infiniti": {
+  "items": 447,
+  "verdict": {
+   "CONFIRMED": 397,
+   "UNCONFIRMED": 50
+  },
+  "method": {
+   "grid": 363,
+   "text": 84
+  },
+  "reasons": {
+   "drive_scope_not_carried": 29,
+   "months_printed_not_in_item": 14,
+   "action_mismatch": 2,
+   "severe_not_stated": 2,
+   "list_points_not_found": 2,
+   "distance_not_stated": 1,
+   "occurrence_mismatch": 1
+  },
+  "method_verdict": {
+   "grid:CONFIRMED": 328,
+   "text:CONFIRMED": 69,
+   "grid:UNCONFIRMED": 35,
+   "text:UNCONFIRMED": 15
+  },
+  "layout": {
+   "list": 249,
+   "grid": 114,
+   "text": 84
+  },
+  "warnings": {
+   "time_printed_not_in_item": 5
+  }
+ },
+ "jeep": {
+  "items": 451,
+  "verdict": {
+   "CONFIRMED": 386,
+   "UNCONFIRMED": 65
+  },
+  "method": {
+   "json": 373,
+   "grid": 64,
+   "text": 8,
+   "monitor": 6
+  },
+  "reasons": {
+   "action_not_stated_for_condition": 30,
+   "action_mismatch": 17,
+   "engine_scope_contradicted": 12,
+   "audit:mopar_schedule_other_generation": 8,
+   "every_not_stated": 3,
+   "job_not_named": 3,
+   "transmission_scope_not_carried": 2
+  },
+  "method_verdict": {
+   "json:CONFIRMED": 316,
+   "grid:CONFIRMED": 59,
+   "json:UNCONFIRMED": 57,
+   "monitor:CONFIRMED": 6,
+   "text:CONFIRMED": 5,
+   "grid:UNCONFIRMED": 5,
+   "text:UNCONFIRMED": 3
+  },
+  "layout": {
+   "json": 373,
+   "grid": 64,
+   "text": 8,
+   "monitor": 6
+  },
+  "warnings": {
+   "time_printed_not_in_item": 283,
+   "json_point_index_out_of_range": 11
+  }
+ },
+ "kia": {
+  "items": 779,
+  "verdict": {
+   "CONFIRMED": 779
+  },
+  "method": {
+   "text": 427,
+   "grid": 352
+  },
+  "reasons": {},
+  "method_verdict": {
+   "text:CONFIRMED": 427,
+   "grid:CONFIRMED": 352
+  },
+  "layout": {
+   "text": 427,
+   "grid": 215,
+   "list": 137
+  },
+  "warnings": {}
+ },
+ "land-rover": {
+  "items": 0,
+  "verdict": {},
+  "method": {},
+  "reasons": {},
+  "method_verdict": {},
+  "layout": {},
+  "warnings": {}
+ },
+ "mercedes-benz": {
+  "items": 300,
+  "verdict": {
+   "CONFIRMED": 300
+  },
+  "method": {
+   "text": 300
+  },
+  "reasons": {},
+  "method_verdict": {
+   "text:CONFIRMED": 300
+  },
+  "layout": {
+   "text": 300
+  },
+  "warnings": {}
+ },
+ "mitsubishi": {
+  "items": 584,
+  "verdict": {
+   "CONFIRMED": 583,
+   "UNCONFIRMED": 1
+  },
+  "method": {
+   "grid": 456,
+   "text": 128
+  },
+  "reasons": {
+   "occurrence_mismatch": 1,
+   "months_not_stated": 1
+  },
+  "method_verdict": {
+   "grid:CONFIRMED": 456,
+   "text:CONFIRMED": 127,
+   "text:UNCONFIRMED": 1
+  },
+  "layout": {
+   "grid": 348,
+   "text": 128,
+   "list": 108
+  },
+  "warnings": {}
+ },
+ "nissan": {
+  "items": 748,
+  "verdict": {
+   "CONFIRMED": 692,
+   "UNCONFIRMED": 56
+  },
+  "method": {
+   "grid": 616,
+   "text": 132
+  },
+  "reasons": {
+   "schedule_supplement_partial": 26,
+   "drive_scope_not_carried": 16,
+   "powertrain_scope_not_carried": 4,
+   "action_mismatch": 4,
+   "severe_not_stated": 2,
+   "occurrence_mismatch": 2,
+   "months_not_stated": 2,
+   "marks_irregular": 1
+  },
+  "method_verdict": {
+   "grid:CONFIRMED": 560,
+   "text:CONFIRMED": 132,
+   "grid:UNCONFIRMED": 56
+  },
+  "layout": {
+   "list": 421,
+   "grid": 195,
+   "text": 132
+  },
+  "warnings": {
+   "time_printed_not_in_item": 8,
+   "header_misprint_column:82500": 7
+  }
+ },
+ "tesla": {
+  "items": 32,
+  "verdict": {
+   "CONFIRMED": 32
+  },
+  "method": {
+   "text": 32
+  },
+  "reasons": {},
+  "method_verdict": {
+   "text:CONFIRMED": 32
+  },
+  "layout": {
+   "text": 32
+  },
+  "warnings": {}
+ },
+ "volkswagen": {
+  "items": 274,
+  "verdict": {
+   "CONFIRMED": 229,
+   "UNCONFIRMED": 45
+  },
+  "method": {
+   "text": 274
+  },
+  "reasons": {
+   "job_not_named": 17,
+   "job_names_other_component": 12,
+   "powertrain_scope_not_carried": 11,
+   "audit:applicability_truncated": 5,
+   "clause_continues_after_quote": 2,
+   "km_printed_implausible": 2,
+   "months_printed_not_in_item": 2
+  },
+  "method_verdict": {
+   "text:CONFIRMED": 229,
+   "text:UNCONFIRMED": 45
+  },
+  "layout": {
+   "text": 274
+  },
+  "warnings": {}
+ }
+}
