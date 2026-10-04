@@ -2,7 +2,7 @@
  "make": "jeep",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-03T20:38:24+00:00",
+ "started_at": "2026-10-04T12:46:35+00:00",
  "replace_own": [],
  "lines": {
   "jeep/grand-cherokee": {
@@ -10,26 +10,21 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 138,
-    "source_records_new": 133,
-    "te_new_GENERATION": 915,
-    "te_new_CONFIGURATION": 820,
+    "te_existing": 1735,
     "configurations": 68,
     "configurations_research_only": 53,
     "configurations_linked": 15,
-    "issues_new": 115,
-    "maintenance_new": 356
+    "issues_existing": 115,
+    "maintenance_existing": 356
    },
    "generations": [
     {
      "code": "WK-2011",
-     "action": "filled",
-     "end_year": 2021
+     "action": "unchanged"
     },
     {
      "code": "US2022+",
-     "action": "created",
-     "start_year": 2022,
-     "end_year": null
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -40,25 +35,20 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 67,
-    "source_records_new": 51,
-    "te_new_GENERATION": 394,
-    "te_new_CONFIGURATION": 761,
+    "te_existing": 1155,
     "configurations": 59,
     "configurations_research_only": 59,
-    "issues_new": 71,
-    "maintenance_new": 42
+    "issues_existing": 71,
+    "maintenance_existing": 42
    },
    "generations": [
     {
      "code": "KL",
-     "action": "filled",
-     "end_year": 2023
+     "action": "unchanged"
     },
     {
      "code": "US2026+",
-     "action": "created",
-     "start_year": 2026,
-     "end_year": null
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
@@ -69,33 +59,33 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 71,
-    "source_records_new": 53,
-    "te_new_GENERATION": 421,
-    "te_new_CONFIGURATION": 576,
+    "te_existing": 997,
     "configurations": 52,
     "configurations_linked": 11,
     "configurations_research_only": 41,
-    "issues_new": 58,
-    "maintenance_new": 53
+    "issues_existing": 58,
+    "maintenance_existing": 53,
+    "maintenance_corrected": 6
    },
    "generations": [
     {
      "code": "MK",
-     "action": "filled",
-     "end_year": 2016
+     "action": "unchanged"
     },
     {
      "code": "MP",
-     "action": "filled",
-     "start_year": 2017
+     "action": "unchanged"
     }
    ],
    "conflicts": 0,
    "existing_vs_new": 10
   }
  },
+ "maintenance_corrections": {
+  "hidden": 6
+ },
  "stale_without_same_value": [],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T20:39:45+00:00"
+ "finished_at": "2026-10-04T12:47:04+00:00"
 }

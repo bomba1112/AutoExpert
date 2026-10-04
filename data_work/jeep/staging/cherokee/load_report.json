@@ -2,14 +2,11 @@
  "generations": [
   {
    "code": "KL",
-   "action": "filled",
-   "end_year": 2023
+   "action": "unchanged"
   },
   {
    "code": "US2026+",
-   "action": "created",
-   "start_year": 2026,
-   "end_year": null
+   "action": "unchanged"
   }
  ],
  "conflicts": [],
@@ -417,17 +414,146 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-03T20:41:33+00:00",
+ "started_at": "2026-10-04T13:04:21+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "b453701a4365556fde8323d4eaadd238b385cdedf98ef5b7eaf3d6ec2312ef03",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "engine": "1.6L",
+     "plan": "1.6L, I4, EP, Turbo, HEV"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Inspect the front and rear axle fluid, change if using your vehicle for police, taxi, fleet, off-road or frequent trailer towing.",
+    "quote": "Inspect the front and rear axle fluid, change if using your vehicle for police, taxi, fleet, off-road or frequent trailer towing."
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2026,
+     2026
+    ],
+    "applicability": {
+     "engine": "1.6L",
+     "plan": "1.6L, I4, EP, Turbo, HEV"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Inspect the front and rear axle fluid, change if using your vehicle for police, taxi, fleet, off-road or frequent trailer towing.",
+    "quote": "Inspect the front and rear axle fluid, change if using your vehicle for police, taxi, fleet, off-road or frequent trailer towing."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_not_stated_for_condition"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8d4ada57993206e1f96c2e7825117fa15ba00afc545808074d2afcedd1c3d4c9",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "operation": "dusty and off road environment"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6500,
+    "interval_miles_original": 4000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "Maintenance Schedule: Severe Duty All Models",
+    "quote": "Change Engine Oil at 4000 miles (6,500 km) if the vehicle is operated in a dusty and off road environment; note: Severe Duty All Models: change engine oil at this mileage (as printed)"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2014,
+     2016
+    ],
+    "applicability": {
+     "operation": "dusty and off road environment"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6500,
+    "interval_miles_original": 4000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "Maintenance Schedule: Severe Duty All Models",
+    "quote": "Change Engine Oil at 4000 miles (6,500 km) if the vehicle is operated in a dusty and off road environment; note: Severe Duty All Models: change engine oil at this mileage (as printed)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "every_not_stated"
+    ]
+   }
+  }
+ ],
  "counts": {
   "raw_documents_seen": 67,
-  "source_records_new": 51,
-  "te_new_GENERATION": 394,
-  "te_new_CONFIGURATION": 761,
+  "te_existing": 1155,
   "configurations": 59,
   "configurations_research_only": 59,
-  "issues_new": 71,
-  "maintenance_new": 42
+  "issues_existing": 71,
+  "maintenance_existing": 42,
+  "maintenance_corrected": 2
  },
- "finished_at": "2026-10-03T20:41:40+00:00"
+ "finished_at": "2026-10-04T13:04:26+00:00"
 }

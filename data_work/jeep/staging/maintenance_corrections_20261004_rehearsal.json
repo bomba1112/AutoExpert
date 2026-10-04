@@ -1,0 +1,398 @@
+{
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "rehearsal",
+ "counts": {
+  "hidden": 6
+ },
+ "changes": [
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "5aa5b8a8a5b81df4cda95cfc33e72da0a22649d78a13c3db2243790d16a88434",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Replace engine air cleaner filter.",
+    "quote": "Replace engine air cleaner filter."
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Replace engine air cleaner filter.",
+    "quote": "Replace engine air cleaner filter."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  },
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "1b3a3f915a6ea1d056c8f23e0a913ccbc5e7e3ff5d0735eae91e0fa117e52442",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Replace spark plugs",
+    "quote": "Replace spark plugs"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Replace spark plugs",
+    "quote": "Replace spark plugs"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  },
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "54bd3ad8d96fd6cd43e2d99ba9d211f088dda6a2eb1a683751bb321791f9b606",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "component": "rear drive assembly (RDA)",
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Replace rear drive assembly (RDA) fluid.",
+    "quote": "Replace rear drive assembly (RDA) fluid."
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "component": "rear drive assembly (RDA)",
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Replace rear drive assembly (RDA) fluid.",
+    "quote": "Replace rear drive assembly (RDA) fluid."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  },
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "8d29e9ce1bed95b74b238b1ae0936bae904c80139b1a85bebff75a4274799b80",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "component": "power transfer unit (PTU)",
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Replace power transfer unit (PTU) fluid.",
+    "quote": "Replace power transfer unit (PTU) fluid."
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "component": "power transfer unit (PTU)",
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Replace power transfer unit (PTU) fluid.",
+    "quote": "Replace power transfer unit (PTU) fluid."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  },
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "ef744b0771b388f8e78630445f302ffe6920b0158dd33875d94f7fb43c91fa3e",
+   "old": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80467,
+    "interval_miles_original": 50000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Change the manual transmission fluid if using your vehicle for any of the following: trailer towing, heavy loading, taxi, police, delivery service (co",
+    "quote": "Change the manual transmission fluid if using your vehicle for any of the following: trailer towing, heavy loading, taxi, police, delivery service (commercial service), off-road, desert operation or more than 50% of your driving is at sustained high speeds during hot weather, above 90°F (32°C)."
+   },
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80467,
+    "interval_miles_original": 50000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Change the manual transmission fluid if using your vehicle for any of the following: trailer towing, heavy loading, taxi, police, delivery service (co",
+    "quote": "Change the manual transmission fluid if using your vehicle for any of the following: trailer towing, heavy loading, taxi, police, delivery service (commercial service), off-road, desert operation or more than 50% of your driving is at sustained high speeds during hot weather, above 90°F (32°C)."
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  },
+  {
+   "line": "compass",
+   "change": "updated",
+   "natural_key": "8f32443336c0e1f3234f06ddac8da26c401fc2c78df68badbebbae1c04acdcaf",
+   "old": {
+    "job": "pcv_valve",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 160934,
+    "interval_miles_original": 100000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "service: Inspect and replace PCV valve if necessary.",
+    "quote": "Inspect and replace PCV valve if necessary.; note: single listing within the schedule's mileage horizon"
+   },
+   "new": {
+    "job": "pcv_valve",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2017,
+     2017
+    ],
+    "applicability": {
+     "plan": "Maintenance Plan"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 160934,
+    "interval_miles_original": 100000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "service: Inspect and replace PCV valve if necessary.",
+    "quote": "Inspect and replace PCV valve if necessary.; note: single listing within the schedule's mileage horizon"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
+  }
+ ]
+}

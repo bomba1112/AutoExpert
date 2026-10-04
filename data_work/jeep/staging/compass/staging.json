@@ -18816,7 +18816,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-cv_joints-35279c9b-2017",
@@ -18860,7 +18864,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-front_suspension-c4905077-2017",
@@ -18924,7 +18932,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-brakes-7d9dab07-2017",
@@ -18988,7 +19000,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-9b48512c-2017",
@@ -19021,8 +19037,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-9b48512c-2020",
@@ -19071,7 +19093,11 @@
    ],
    "primary_source": "mopar-17bf55204b",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-cabin_air_filter-894ba560-2017",
@@ -19125,7 +19151,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-spark_plugs-d3b6a8a3-2017",
@@ -19158,8 +19188,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-engine_coolant-04869786-2017",
@@ -19223,7 +19259,11 @@
    ],
    "primary_source": "mopar-010776097e",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-differential_fluid-c0cd80f5-2017",
@@ -19257,8 +19297,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-differential_fluid-83247a3c-2017",
@@ -19292,8 +19338,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-transmission_fluid-1fb4f040-2017",
@@ -19331,8 +19383,15 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation",
+     "transmission_scope_not_carried"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-transmission_fluid-1a3fbc02-2017",
@@ -19365,8 +19424,15 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation",
+     "transmission_scope_not_carried"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-manual_transmission_fluid-29b9fc85-2017",
@@ -19399,8 +19465,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-pcv_valve-5b7d86f8-2017",
@@ -19433,8 +19505,14 @@
     }
    ],
    "primary_source": "mopar-010776097e",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:mopar_schedule_other_generation"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-a2ef041b-2018",
@@ -19472,8 +19550,15 @@
     }
    ],
    "primary_source": "mopar-c7ac40cdd3",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch",
+     "action_not_stated_for_condition"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-8878bdf8-2018",
@@ -19511,8 +19596,15 @@
     }
    ],
    "primary_source": "mopar-c7ac40cdd3",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch",
+     "action_not_stated_for_condition"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-accessory_drive_belt-352a0649-2018",
@@ -19571,7 +19663,11 @@
    ],
    "primary_source": "mopar-c7ac40cdd3",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-64a69a3b-2018",
@@ -19610,7 +19706,11 @@
    ],
    "primary_source": "mopar-c7ac40cdd3",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-f7ee9923-2018",
@@ -19649,7 +19749,11 @@
    ],
    "primary_source": "mopar-c7ac40cdd3",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-spark_plugs-da442c36-2018",
@@ -19703,7 +19807,11 @@
    ],
    "primary_source": "mopar-c7ac40cdd3",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-pcv_valve-f6553f2d-2018",
@@ -19762,7 +19870,11 @@
    ],
    "primary_source": "mopar-c7ac40cdd3",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-8e211984-2020",
@@ -19795,8 +19907,15 @@
     }
    ],
    "primary_source": "mopar-17bf55204b",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch",
+     "action_not_stated_for_condition"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-8e211984-2022",
@@ -19829,8 +19948,15 @@
     }
    ],
    "primary_source": "mopar-8728d2f96f",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "action_mismatch",
+     "action_not_stated_for_condition"
+    ]
+   }
   },
   {
    "id": "compass-MP-mnt-cabin_air_filter-5691243b-2022",
@@ -19869,7 +19995,11 @@
    ],
    "primary_source": "mopar-8728d2f96f",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-spark_plugs-92eb52b1-2023",
@@ -19903,7 +20033,11 @@
    ],
    "primary_source": "mopar-7183f65bc8",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_oil_and_filter-b1aa1195-2024",
@@ -19943,7 +20077,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-brakes-af807435-2024",
@@ -19988,7 +20126,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-front_suspension-642fa233-2024",
@@ -20033,7 +20175,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-accessory_drive_belt-0bd13dbb-2024",
@@ -20078,7 +20224,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_air_filter-8c7f3fa7-2024",
@@ -20123,7 +20273,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-spark_plugs-3b37c118-2024",
@@ -20168,7 +20322,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-engine_coolant-fbdcc045-2024",
@@ -20213,7 +20371,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MP-mnt-pcv_valve-dde6c740-2024",
@@ -20258,7 +20420,11 @@
    ],
    "primary_source": "mopar-4cace64fb7",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "json"
+   }
   },
   {
    "id": "compass-MK-mnt-cv_joints-a373199d-2014",
@@ -20333,7 +20499,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-front_suspension-c5811141-2014",
@@ -20408,7 +20578,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-brakes-8e5cf018-2014",
@@ -20483,7 +20657,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-engine_air_filter-9be38520-2014",
@@ -20558,7 +20736,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-cabin_air_filter-b7c57f0c-2014",
@@ -20633,7 +20815,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-spark_plugs-0e73a0bd-2014",
@@ -20684,7 +20870,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-engine_coolant-2d0d4b11-2014",
@@ -20735,7 +20925,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
   },
   {
    "id": "compass-MK-mnt-differential_fluid-720666d4-2014",
@@ -20812,7 +21006,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-differential_fluid-f9701aaa-2014",
@@ -20889,7 +21087,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-transmission_fluid-f9399bcc-2014",
@@ -20934,7 +21136,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-transmission_fluid-4320e384-2014",
@@ -21011,7 +21217,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-transmission_fluid-5706c6f1-2014",
@@ -21072,7 +21282,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-manual_transmission_fluid-979f5ce1-2014",
@@ -21147,7 +21361,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-pcv_valve-d8aee46d-2014",
@@ -21222,7 +21440,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-engine_oil_and_filter-c748edcd-2014",
@@ -21274,8 +21496,14 @@
     }
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
-   "display_level": "FACT",
-   "confidence": "HIGH"
+   "display_level": "HIDDEN_CONFLICT",
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "every_not_stated"
+    ]
+   }
   },
   {
    "id": "compass-MK-mnt-engine_oil_and_filter-682cb50a-2014",
@@ -21334,7 +21562,11 @@
    ],
    "primary_source": "jeep-compass-2014-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "monitor"
+   }
   },
   {
    "id": "compass-MK-mnt-transmission_fluid-df2e4b86-2015",
@@ -21395,7 +21627,11 @@
    ],
    "primary_source": "jeep-compass-2015-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-transmission_fluid-5c4a07ce-2016",
@@ -21440,7 +21676,11 @@
    ],
    "primary_source": "jeep-compass-2016-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
   },
   {
    "id": "compass-MK-mnt-engine_oil_and_filter-5a0f7a5d-2016",
@@ -21483,7 +21723,11 @@
    ],
    "primary_source": "jeep-compass-2016-owner-manual",
    "display_level": "FACT",
-   "confidence": "HIGH"
+   "confidence": "HIGH",
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "monitor"
+   }
   }
  ],
  "conflicts": [],
