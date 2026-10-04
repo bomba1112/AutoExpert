@@ -1,0 +1,6166 @@
+{
+ "make": "hyundai",
+ "date": "2026-10-04",
+ "builder": "scripts/build_maintenance_hmc.py",
+ "key": [
+  "line",
+  "generation",
+  "job",
+  "action",
+  "condition",
+  "occurrence",
+  "years",
+  "applicability",
+  "engine"
+ ],
+ "summary": {
+  "items_before": 407,
+  "items_after": 418,
+  "removed": 63,
+  "added": 74,
+  "changed": 1,
+  "unchanged": 343,
+  "gaps_after": 82
+ },
+ "by_cause": {
+  "drive_scope_label": 62,
+  "rotated_header_banner": 28,
+  "inverter_coolant_job": 11,
+  "grid_subrow_engine_cell": 10,
+  "year_runs_regrouped": 10,
+  "first_subsequent_clause": 7,
+  "newly_read": 2,
+  "job_mapping": 2,
+  "first_after_different_operations": 2,
+  "drive_scope_one_part": 2,
+  "irregular_header_or_marks": 1,
+  "label_verb_vs_mark": 1
+ },
+ "cause_classes": {
+  "rotated_header_banner": "rotated grid: glyph boxes of the banner 'Number of months or driving distance, whichever comes first' overlapped the header cells, so only the last interval points (144/156 months) were read and every mark became 'FIRST at 96,000 mi / 144 months' (grid(): cells cropped by overlap, points filtered by number(); now characters by centre, columns by geometry)",
+  "grid_subrow_engine_cell": "grid row split into sub-rows by an engine cell ('TGDI' / 'EXCEPT TGDI', 'Smartstream G1.6 T-GDi', 'HEV' / 'PHEV'): the sub-row label replaced the item label and the row was dropped; now the item label is kept and the engine cell goes to applicability",
+  "grid_merged_cells": "one mark / text cell serving several stacked item rows (Kia 2022+ grids): only one row was read; now every row of the merged cell",
+  "first_subsequent_clause": "'At first, inspect 40,000 miles ...' (no 'at'), 'or 120 monthsAfter that' (glued words), '10 years', 'mile' / 'mi.' were not parsed: FIRST lost, months lost or SUBSEQUENT read as EVERY (clauses())",
+  "list_first_after_clause": "list format: '(First, X miles (Y km) or Z months after every A ...)' was taken as a mileage block header, so the bullets after it got X / Z as their block point and the FIRST / SUBSEQUENT steps came from wrong points (e.g. 37,500 mi / 6 months, 67,500 mi / 30 months)",
+  "list_reading_order": "list format read in page-text order (left / right columns interleaved, continuation bullets after '(Continued)' lost or put under the wrong block); now read column by column, page by page, the block carried across columns and pages",
+  "list_own_interval": "list bullet with its own interval ('(Every 7,500 miles ... or 12 months)', ': Every ...', '- Turbo GDI (...)') was given the block's months instead of the stated ones, or the engine variant was lost",
+  "cell_truncation": "severe-table / text cell cut at its ruling ('EVERY 3,750 MILES (6,000 ', 'or 6 mo'): printed km and months lost (km converted from miles); now the cell is completed from the page text",
+  "engine_applicability": "engine applicability now from the row's engine cell or the label ('(MPI/GDI)', '(Turbo GDI)') instead of only the table heading; same values under a narrower key (or two engines that used to collide and were withheld as a conflict)",
+  "job_mapping": "job of the row: 'Manual transmission fluid' / 'MANUAL TRANSAXLE FLUID' is manual_transmission_fluid (shared JOBS list changed in 94e7925; 'manual transaxle' added for HMC), not transmission_fluid",
+  "year_runs_regrouped": "same values, model-year run regrouped because a neighbouring year's item changed",
+  "label_verb_vs_mark": "row label names an operation the mark contradicts ('Rotate Tires ...' marked I = inspect): ambiguous, not written (gap)",
+  "irregular_header_or_marks": "printed header points or marks are not regular (e.g. 2022 Kona Electric 'Km x 1,000 ... 64 75 80'): the old builder dropped the irregular km row and converted miles; now not written (gap)",
+  "first_after_different_operations": "'At first, inspect at 6,000 miles ... After that, replace every 48,000 miles ...' (2022/2023 Kona N brake fluid): first and following intervals name different operations; the old builder wrote INSPECT FIRST + REPLACE SUBSEQUENT, now a gap",
+  "conflict_withheld": "the same document now gives two different values for one item (e.g. two 'Rotate tires' rows); not written (conflict)",
+  "km_first_not_read": "km-first text ('every 91,000 km (56,000 miles)'): not converted, as before for km-first schedules (gap)",
+  "newly_read": "row / bullet / severe row not read before (marks found by geometry, text located in the page text)",
+  "inverter_coolant_job": "audit round 1: a hybrid's coolant row names the circuit ('Coolant (Inverter)' / 'HEV*4', 'Inverter coolant', 'Replace inverter coolant'): job inverter_coolant, not engine_coolant (the JOBS pattern 'coolant' took every coolant row); a row naming both circuits ('Engine coolant / Inverter coolant', 'Coolant (Engine/Inverter)') states one interval for both, so it gives an engine_coolant and an inverter_coolant item",
+  "engine_footnote_scope": "audit round 1: an engine footnote of a list page ('*6 : Engine oil (2.0 TGDI) Replace every 6,500 miles (10,000 km) or 12 months', '*3 Engine oil (1.6 TGDI/2.0 TGDI) At first, replace at 3,000 miles ...') was not read (the label 'Engine oil' named no job, '*6 :' and 'At first,' did not match); it is now that engine's item (job of the bullet that carries the mark), and the bullet with the mark ('Replace engine oil and filter *6 (Every 7,500 miles ...)') is for the other engines (engine_except); a document that prints the footnote with different values on different pages (2018 Sorento: 12 months on most pages, 6 months on pp.499/502) gives a conflict, nothing written",
+  "implied_thousands": "header 'Miles' / 'Km' printed without 'x 1,000' (2020 Sonata Hybrid): read as thousands only when both rows agree",
+  "drive_scope_label": "audit round 2: a drive mark printed in the row label / bullet ('Rear differential oil (AWD)', 'Transfer case oil (AWD)', 'Differential oil (rear) (AWD)', 'Transfer case oil (4WD)') was not carried into applicability, so the item applied to every drive; now applicability.drive (same values, narrower scope)",
+  "drive_scope_one_part": "audit round 2: a row that names two parts and puts the drive mark on one of them ('Front (AWD) / rear differential oil', 'Front differential oil (AWD) / Rear differential oil') gives no single drive scope for the item; not written (gap)",
+  "other": "other"
+ },
+ "lines": {
+  "accent": {
+   "items_before": 0,
+   "items_after": 0,
+   "removed": 0,
+   "added": 0,
+   "changed": 0,
+   "unchanged": 0,
+   "gaps_after": 0,
+   "conflicts_after": 0,
+   "removed_items": [],
+   "added_items": [],
+   "changed_items": []
+  },
+  "elantra": {
+   "items_before": 67,
+   "items_after": 79,
+   "removed": 1,
+   "added": 13,
+   "changed": 0,
+   "unchanged": 66,
+   "gaps_after": 22,
+   "conflicts_after": 2,
+   "removed_items": [
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "transmission_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "job_mapping",
+     "old_cite": {
+      "source": "official-21323264b5ca",
+      "pages": [
+       429
+      ],
+      "quote": "Every 72,000 miles (120,000 km)",
+      "locator": "page 429: Manual transmission fluid (if equipped)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2026
+       ],
+       "applicability": {
+        "edition": "elantra n"
+       },
+       "job": "manual_transmission_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    }
+   ],
+   "added_items": [
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "accessory_drive_belt",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 48000,
+      "interval_km": 78000,
+      "interval_months": 72
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-21323264b5ca",
+      "pages": [
+       426
+      ],
+      "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 8,000 mile (13,000 km) or 12 months",
+      "locator": "page 426 grid (rotated) row 'Drive belts *3': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "accessory_drive_belt",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-21323264b5ca",
+      "pages": [
+       426
+      ],
+      "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 8,000 mile (13,000 km) or 12 months",
+      "locator": "page 426 grid (rotated) row 'Drive belts *3': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "accessory_drive_belt",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2024,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 6000,
+      "interval_km": 10000,
+      "interval_months": 12
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-1907558b86fc",
+      "pages": [
+       420
+      ],
+      "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 6,000 mile (10,000 km) or 12 months",
+      "locator": "page 420 grid (rotated) row 'Drive belts *4': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "brake_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 6000,
+      "interval_km": 10000,
+      "interval_months": 12
+     },
+     "cause": "newly_read",
+     "new_cite": {
+      "source": "official-21323264b5ca",
+      "pages": [
+       428
+      ],
+      "quote": "lnspect every 6,000 miles (10,000km) or 12 months",
+      "locator": "page 428 grid (rotated) row 'Brake fluid': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "cooling_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2023
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 40000,
+      "interval_km": 60000,
+      "interval_months": 48
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-03489bd80c5e",
+      "pages": [
+       479
+      ],
+      "quote": "At first, inspect 40,000 miles (60,000 km) or 48 months after that, inspect every 20,000 miles (30,000 km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Cooling system': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "cooling_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2021,
+       2023
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 20000,
+      "interval_km": 30000,
+      "interval_months": 24
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-03489bd80c5e",
+      "pages": [
+       479
+      ],
+      "quote": "At first, inspect 40,000 miles (60,000 km) or 48 months after that, inspect every 20,000 miles (30,000 km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Cooling system': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "engine_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2022
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 195000,
+      "interval_months": 120
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-03489bd80c5e",
+      "pages": [
+       479
+      ],
+      "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2022
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 195000,
+      "interval_months": 120
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-03489bd80c5e",
+      "pages": [
+       479
+      ],
+      "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2023,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 200000,
+      "interval_months": 120
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-4ec688485579",
+      "pages": [
+       479
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 20,000 miles (30,000 km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2021,
+       2022
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 50000,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-03489bd80c5e",
+      "pages": [
+       479
+      ],
+      "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2023,
+       2023
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 20000,
+      "interval_km": 30000,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-4ec688485579",
+      "pages": [
+       479
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 20,000 miles (30,000 km) or 24 months",
+      "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2024,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 39000,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-fada0b7e92ea",
+      "pages": [
+       481
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months",
+      "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "elantra",
+      "generation": "CN7",
+      "job": "manual_transmission_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2026
+      ],
+      "applicability": {
+       "edition": "elantra n"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "job_mapping",
+     "new_cite": {
+      "source": "official-21323264b5ca",
+      "pages": [
+       429
+      ],
+      "quote": "Every 72,000 miles (120,000 km)",
+      "locator": "page 429 severe table row 'Manual transmission fluid (if equipped)': operation R"
+     }
+    }
+   ],
+   "changed_items": []
+  },
+  "kona": {
+   "items_before": 83,
+   "items_after": 80,
+   "removed": 12,
+   "added": 9,
+   "changed": 0,
+   "unchanged": 71,
+   "gaps_after": 23,
+   "conflicts_after": 0,
+   "removed_items": [
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "battery",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2022
+      ],
+      "applicability": {
+       "edition": "kona electric"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 15000,
+      "interval_km": 24140,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "irregular_header_or_marks",
+     "old_cite": {
+      "source": "official-9bdf446cd0d6",
+      "pages": [
+       509
+      ],
+      "quote": "12V auxiliary battery condition",
+      "locator": "page 509: 12V auxiliary battery condition"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "brake_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "kona n"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 6000,
+      "interval_km": 10000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "first_after_different_operations",
+     "old_cite": {
+      "source": "official-f081f14ba448",
+      "pages": [
+       403
+      ],
+      "quote": "At first, inspect at 6,000 miles (10,000 km) or 12 months",
+      "locator": "page 403: Brake fluid"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "brake_fluid",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "kona n"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 48000,
+      "interval_km": 80000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "first_after_different_operations",
+     "old_cite": {
+      "source": "official-f081f14ba448",
+      "pages": [
+       403
+      ],
+      "quote": "After that, replace every 48,000 miles (80,000 km) or 48 months",
+      "locator": "page 403: Brake fluid"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       365
+      ],
+      "quote": "Rear differential oil (AWD) *4",
+      "locator": "page 365: Rear differential oil (AWD) *4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       359
+      ],
+      "quote": "Rear differential oil (AWD) *3",
+      "locator": "page 359: Rear differential oil (AWD) *3"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       367
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 367: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       362
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 362: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "tire_rotation",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2020
+      ],
+      "applicability": {
+       "edition": "kona electric"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 5000,
+      "interval_km": 8000,
+      "interval_months": 4
+     },
+     "new": null,
+     "cause": "label_verb_vs_mark",
+     "old_cite": {
+      "source": "official-6af7975ae1b8",
+      "pages": [
+       387
+      ],
+      "quote": "Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+      "locator": "page 387: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       365
+      ],
+      "quote": "Transfer case oil (AWD)*4",
+      "locator": "page 365: Transfer case oil (AWD)*4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       359
+      ],
+      "quote": "Transfer case oil (AWD)*3",
+      "locator": "page 359: Transfer case oil (AWD)*3"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       367
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 367: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       362
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 362: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Nu 2.0 MPI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "kona",
+        "engine": "Gamma 1.6 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    }
+   ],
+   "added_items": [
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2023,
+       2023
+      ],
+      "applicability": {
+       "edition": "kona electric"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "cause": "newly_read",
+     "new_cite": {
+      "source": "official-10fa585df465",
+      "pages": [
+       510
+      ],
+      "quote": "Replace Climate Control Air Filter (For Evaporator and Blower Unit) IRIRIRIRIRIRI",
+      "locator": "page 510 grid (rotated) row 'Replace Climate Control Air Filter (For Evaporator and Blower Unit)': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       365
+      ],
+      "quote": "Rear differential oil (AWD) *4 I I I",
+      "locator": "page 365 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       359
+      ],
+      "quote": "Rear differential oil (AWD) *3 I I I",
+      "locator": "page 359 grid row 'Rear differential oil (AWD) *3': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       367
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 367 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       362
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 362 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       365
+      ],
+      "quote": "Transfer case oil (AWD)*4 I I I",
+      "locator": "page 365 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       359
+      ],
+      "quote": "Transfer case oil (AWD)*3 I I I",
+      "locator": "page 359 grid row 'Transfer case oil (AWD)*3': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Gamma 1.6 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       367
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 367 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "kona",
+      "generation": "OS",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "kona",
+       "engine": "Nu 2.0 MPI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-b782e5e880a9",
+      "pages": [
+       362
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 362 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    }
+   ],
+   "changed_items": []
+  },
+  "santa-fe": {
+   "items_before": 122,
+   "items_after": 131,
+   "removed": 29,
+   "added": 38,
+   "changed": 1,
+   "unchanged": 92,
+   "gaps_after": 21,
+   "conflicts_after": 0,
+   "removed_items": [
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       457
+      ],
+      "quote": "Rear differential oil (AWD) *4",
+      "locator": "page 457: Rear differential oil (AWD) *4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       451
+      ],
+      "quote": "Rear differential oil (AWD) *4",
+      "locator": "page 451: Rear differential oil (AWD) *4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       459
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 459: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       454
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 454: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       457
+      ],
+      "quote": "Transfer case oil (AWD)*4",
+      "locator": "page 457: Transfer case oil (AWD)*4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       451
+      ],
+      "quote": "Transfer case oil (AWD)*4",
+      "locator": "page 451: Transfer case oil (AWD)*4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       459
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 459: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       454
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 454: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2018,
+        2018
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Climate control air filter",
+      "locator": "page 558: Climate control air filter"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "cabin_air_filter",
+       "interval_miles_original": 16000,
+       "interval_km": 26000,
+       "interval_months": 24
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "dct_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Inspect every 32,000 miles (52,000 km) or 48 months",
+      "locator": "page 558: Dual clutch transmission fluid"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "dct_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "dct_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-1e64d31facce",
+      "pages": [
+       556
+      ],
+      "quote": "Dual clutch transmission fluid",
+      "locator": "page 556: Dual clutch transmission fluid"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "dct_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       458
+      ],
+      "quote": "Rear differential oil (AWD) *4",
+      "locator": "page 458: Rear differential oil (AWD) *4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       452
+      ],
+      "quote": "Rear differential oil (AWD) *4",
+      "locator": "page 452: Rear differential oil (AWD) *4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       545
+      ],
+      "quote": "Rear Differential oil (AWD) *6",
+      "locator": "page 545: Rear Differential oil (AWD) *6"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2023
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe hybrid"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "drive_scope_one_part",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Front (AWD) / rear differential oil *1",
+      "locator": "page 558: Front (AWD) / rear differential oil *1"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       460
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 460: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       455
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 455: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_one_part",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       560
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 560: Front differential oil (AWD) / Rear differential oil"
+     },
+     "replaced_by": []
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       547
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 547: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2023
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe hybrid"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 558: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 558: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 558: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 558: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2020,
+        2023
+       ],
+       "applicability": {
+        "edition": "santa fe"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       458
+      ],
+      "quote": "Transfer case oil (AWD)*4",
+      "locator": "page 458: Transfer case oil (AWD)*4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       452
+      ],
+      "quote": "Transfer case oil (AWD)*4",
+      "locator": "page 452: Transfer case oil (AWD)*4"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 30000,
+       "interval_km": 48000,
+       "interval_months": 48
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 24000,
+       "interval_km": 40000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       545
+      ],
+      "quote": "Transfer case oil (AWD) *6",
+      "locator": "page 545: Transfer case oil (AWD) *6"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2023
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe hybrid"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       460
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 460: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       455
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 455: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.4 GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      },
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2019,
+        2019
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe",
+        "engine": "2.0 T-GDI"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 75000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       547
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 547: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2023
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "santa fe hybrid"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    }
+   ],
+   "added_items": [
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       457
+      ],
+      "quote": "Rear differential oil (AWD) *4 I I I",
+      "locator": "page 457 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       451
+      ],
+      "quote": "Rear differential oil (AWD) *4 I I I",
+      "locator": "page 451 grid row 'Rear differential oil (AWD) *4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       459
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 459 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       454
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 454 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       457
+      ],
+      "quote": "Transfer case oil (AWD)*4 I I I",
+      "locator": "page 457 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       451
+      ],
+      "quote": "Transfer case oil (AWD)*4 I I I",
+      "locator": "page 451 grid row 'Transfer case oil (AWD)*4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       459
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 459 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "NC",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2018,
+       2018
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-8d55d8b56d6d",
+      "pages": [
+       454
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 454 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "brake_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 6000,
+      "interval_km": 10000,
+      "interval_months": 12
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "Inspect every 6,000 miles (10,000 km) or 12 months",
+      "locator": "page 557 grid (rotated) row 'Brake fluid' / 'TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "brake_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine_except": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 7500,
+      "interval_km": 12000,
+      "interval_months": 12
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "Inspect every 7,500 miles (12,000 km) or 12 months",
+      "locator": "page 557 grid (rotated) row 'Brake fluid' / 'EXCEPT TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "brake_fluid",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 48000,
+      "interval_km": 80000,
+      "interval_months": 48
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "Replace every 48,000 miles (80,000 km) or 48 months",
+      "locator": "page 557 grid (rotated) row 'Brake fluid' / 'TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "brake_fluid",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine_except": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 60000,
+      "interval_km": 96000,
+      "interval_months": 48
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "Replace every 60,000 miles (96,000 km) or 48 months",
+      "locator": "page 557 grid (rotated) row 'Brake fluid' / 'EXCEPT TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "cabin_air_filter",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Climate control air filter IRIRIRIRIRIRI",
+      "locator": "page 558 grid (rotated) row 'Climate control air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000/104,000 miles; months 12/36/60/84/108/132/156; km 13,000/39,000/65,000/91,000/117,000/143,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Climate control air filter IRIRIRIRIRIRI",
+      "locator": "page 558 grid (rotated) row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "cooling_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 40000,
+      "interval_km": 60000,
+      "interval_months": 48
+     },
+     "cause": "first_subsequent_clause",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "At first, inspect 40,000 miles (60,000 km) or 48 months. After that, inspect every 20,000 miles (30,000 km) or 24 months",
+      "locator": "page 557 grid (rotated) row 'Cooling system': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "dct_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Inspect every 32,000 miles (52,000 km) or 48 months",
+      "locator": "page 558 grid (rotated) row 'Dual clutch transmission fluid': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       458
+      ],
+      "quote": "Rear differential oil (AWD) *4 I I I",
+      "locator": "page 458 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       452
+      ],
+      "quote": "Rear differential oil (AWD) *4 I I I",
+      "locator": "page 452 grid row 'Rear differential oil (AWD) *4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       545
+      ],
+      "quote": "Rear Differential oil (AWD) *6 III",
+      "locator": "page 545 grid (rotated) row 'Rear Differential oil (AWD) *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       460
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 460 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       455
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 455 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       547
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 547 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "engine_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 80000,
+      "interval_km": 130000,
+      "interval_months": 120
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "At first, replace at 80,000 miles (130,000 km) or 10 years. After that, replace every 24,000 miles (39,000 km) or 24 months",
+      "locator": "page 557 grid (rotated) row 'Engine coolant' / 'TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "engine_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine_except": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 200000,
+      "interval_months": 120
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 30,000 miles (50,000 km) or 24 months",
+      "locator": "page 557 grid (rotated) row 'Engine coolant' / 'EXCEPT TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "engine_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 39000,
+      "interval_months": 24
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "At first, replace at 80,000 miles (130,000 km) or 10 years. After that, replace every 24,000 miles (39,000 km) or 24 months",
+      "locator": "page 557 grid (rotated) row 'Engine coolant' / 'TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "engine_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine_except": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 50000,
+      "interval_months": 24
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       557
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 30,000 miles (50,000 km) or 24 months",
+      "locator": "page 557 grid (rotated) row 'Engine coolant' / 'EXCEPT TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Exhaust pipe and muffler IIIIIIIIIIIII",
+      "locator": "page 558 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Suspension mounting bolts IIIIIIIIIIIII",
+      "locator": "page 558 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 200000,
+      "interval_months": 120
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       543
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months",
+      "locator": "page 543 grid (rotated) row 'Inverter coolant': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       543
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months",
+      "locator": "page 543 grid (rotated) row 'Inverter coolant': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "spark_plugs",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 48000,
+      "interval_km": 78000,
+      "interval_months": 72
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       556
+      ],
+      "quote": "Spark plugs *5 TGDI R R",
+      "locator": "page 556 grid (rotated) row 'Spark plugs *5' / 'TGDI': R at 48,000/96,000 miles; months 72/144; km 78,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "spark_plugs",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2020,
+       2023
+      ],
+      "applicability": {
+       "edition": "santa fe",
+       "engine_except": "TGDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": null
+     },
+     "cause": "grid_subrow_engine_cell",
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       556
+      ],
+      "quote": "Replace every 96,000 miles (156,000 km)",
+      "locator": "page 556 grid (rotated) row 'Spark plugs *5' / 'EXCEPT TGDI': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 40000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       458
+      ],
+      "quote": "Transfer case oil (AWD)*4 I I I",
+      "locator": "page 458 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       452
+      ],
+      "quote": "Transfer case oil (AWD)*4 I I I",
+      "locator": "page 452 grid row 'Transfer case oil (AWD)*4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       545
+      ],
+      "quote": "Transfer case oil (AWD) *6 III",
+      "locator": "page 545 grid (rotated) row 'Transfer case oil (AWD) *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.0 T-GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       460
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 460 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2019,
+       2019
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe",
+       "engine": "2.4 GDI"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 75000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-c34991e79f3d",
+      "pages": [
+       455
+      ],
+      "quote": "Every 75,000 miles (120,000 km)",
+      "locator": "page 455 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "santa fe hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-49d996882a55",
+      "pages": [
+       547
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 547 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    }
+   ],
+   "changed_items": [
+    {
+     "key": {
+      "line": "santa-fe",
+      "generation": "US2019-2023",
+      "job": "cabin_air_filter",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2020
+      ],
+      "applicability": {
+       "edition": "santa fe"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 104000,
+      "interval_km": 169000,
+      "interval_months": 156
+     },
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Climate control air filter",
+      "locator": "page 558: Climate control air filter"
+     },
+     "new_cite": {
+      "source": "official-a1b7da1129d3",
+      "pages": [
+       558
+      ],
+      "quote": "Climate control air filter IRIRIRIRIRIRI",
+      "locator": "page 558 grid (rotated) row 'Climate control air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000/104,000 miles; months 12/36/60/84/108/132/156; km 13,000/39,000/65,000/91,000/117,000/143,000/169,000"
+     }
+    }
+   ]
+  },
+  "sonata": {
+   "items_before": 87,
+   "items_after": 91,
+   "removed": 0,
+   "added": 4,
+   "changed": 0,
+   "unchanged": 87,
+   "gaps_after": 10,
+   "conflicts_after": 0,
+   "removed_items": [],
+   "added_items": [
+    {
+     "key": {
+      "line": "sonata",
+      "generation": "DN8",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2020,
+       2021
+      ],
+      "applicability": {
+       "edition": "sonata hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 193121,
+      "interval_months": 120
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-05793f63ce44",
+      "pages": [
+       457
+      ],
+      "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months",
+      "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "sonata",
+      "generation": "DN8",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "sonata hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 120000,
+      "interval_km": 200000,
+      "interval_months": 120
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-134672ecd168",
+      "pages": [
+       481
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months",
+      "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "sonata",
+      "generation": "DN8",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2020,
+       2021
+      ],
+      "applicability": {
+       "edition": "sonata hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 30000,
+      "interval_km": 48280,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-05793f63ce44",
+      "pages": [
+       457
+      ],
+      "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months",
+      "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell"
+     }
+    },
+    {
+     "key": {
+      "line": "sonata",
+      "generation": "DN8",
+      "job": "inverter_coolant",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2023
+      ],
+      "applicability": {
+       "edition": "sonata hybrid"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 24000,
+      "interval_km": 39000,
+      "interval_months": 24
+     },
+     "cause": "inverter_coolant_job",
+     "new_cite": {
+      "source": "official-134672ecd168",
+      "pages": [
+       481
+      ],
+      "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months",
+      "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell"
+     }
+    }
+   ],
+   "changed_items": []
+  },
+  "tucson": {
+   "items_before": 48,
+   "items_after": 37,
+   "removed": 21,
+   "added": 10,
+   "changed": 0,
+   "unchanged": 27,
+   "gaps_after": 6,
+   "conflicts_after": 0,
+   "removed_items": [
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Rear differential oil *6",
+      "locator": "page 565: Rear differential oil *6"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 565: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 565: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 565: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 565: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       567
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 567: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2021,
+        2021
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "tucson"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2022
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-183b82caffc6",
+      "pages": [
+       575
+      ],
+      "quote": "Cabin air filter",
+      "locator": "page 575: Cabin air filter"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "cabin_air_filter",
+       "interval_miles_original": 16000,
+       "interval_km": 26000,
+       "interval_months": 24
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2024,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-48cecf9698b2",
+      "pages": [
+       490
+      ],
+      "quote": "Cabin air filter",
+      "locator": "page 490: Cabin air filter"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "cabin_air_filter",
+       "interval_miles_original": 16000,
+       "interval_km": 26000,
+       "interval_months": 24
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Cabin air filter",
+      "locator": "page 472: Cabin air filter"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "cabin_air_filter",
+       "interval_miles_original": 16000,
+       "interval_km": 26000,
+       "interval_months": 24
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2022
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-183b82caffc6",
+      "pages": [
+       575
+      ],
+      "quote": "Rear differential oil *5",
+      "locator": "page 575: Rear differential oil *5"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2024,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-48cecf9698b2",
+      "pages": [
+       490
+      ],
+      "quote": "Rear differential oil *6",
+      "locator": "page 490: Rear differential oil *6"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 32000,
+       "interval_km": 52000,
+       "interval_months": 48
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       474
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 474: Rear differential oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "tucson"
+       },
+       "job": "differential_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2022
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-183b82caffc6",
+      "pages": [
+       575
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 575: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2024,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-48cecf9698b2",
+      "pages": [
+       490
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 490: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 472: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Exhaust pipe and muffler",
+      "locator": "page 472: Exhaust pipe and muffler"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "exhaust_system",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2022
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-183b82caffc6",
+      "pages": [
+       575
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 575: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2024,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "year_runs_regrouped",
+     "old_cite": {
+      "source": "official-48cecf9698b2",
+      "pages": [
+       490
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 490: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "FIRST",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 96000,
+      "interval_km": 156000,
+      "interval_months": 144
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 472: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "SUBSEQUENT",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "new": null,
+     "cause": "rotated_header_banner",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Suspension mounting bolts",
+      "locator": "page 472: Suspension mounting bolts"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "edition": "tucson"
+       },
+       "job": "front_suspension",
+       "interval_miles_original": 8000,
+       "interval_km": 13000,
+       "interval_months": 12
+      }
+     ]
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "new": null,
+     "cause": "drive_scope_label",
+     "old_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       474
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 474: Transfer case oil (AWD)"
+     },
+     "replaced_by": [
+      {
+       "occurrence": "EVERY",
+       "years": [
+        2022,
+        2024
+       ],
+       "applicability": {
+        "drive": "AWD",
+        "edition": "tucson"
+       },
+       "job": "transfer_case_fluid",
+       "interval_miles_original": 72000,
+       "interval_km": 120000,
+       "interval_months": null
+      }
+     ]
+    }
+   ],
+   "added_items": [
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Rear differential oil *6 III",
+      "locator": "page 565 grid (rotated) row 'Rear differential oil *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Exhaust pipe and muffler IIIIIIIIIIIII",
+      "locator": "page 565 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       565
+      ],
+      "quote": "Suspension mounting bolts IIIIIIIIIIIII",
+      "locator": "page 565 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "TL",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2021,
+       2021
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-2e1c84db3c96",
+      "pages": [
+       567
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 567 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "cabin_air_filter",
+      "action": "REPLACE",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 16000,
+      "interval_km": 26000,
+      "interval_months": 24
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Cabin air filter R R R R R R",
+      "locator": "page 472 grid (rotated) row 'Cabin air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "differential_fluid",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 32000,
+      "interval_km": 52000,
+      "interval_months": 48
+     },
+     "cause": "year_runs_regrouped",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Rear differential oil *5 III",
+      "locator": "page 472 grid (rotated) row 'Rear differential oil *5': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "differential_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       474
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 474 severe table row 'Rear differential oil (AWD)': operation R"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "exhaust_system",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Exhaust pipe and muffler I IIIIIIIIIIII",
+      "locator": "page 472 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "front_suspension",
+      "action": "INSPECT",
+      "condition": "NORMAL",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 8000,
+      "interval_km": 13000,
+      "interval_months": 12
+     },
+     "cause": "rotated_header_banner",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       472
+      ],
+      "quote": "Suspension mounting bolts I IIIIIIIIIIII",
+      "locator": "page 472 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000"
+     }
+    },
+    {
+     "key": {
+      "line": "tucson",
+      "generation": "US2022+",
+      "job": "transfer_case_fluid",
+      "action": "REPLACE",
+      "condition": "SEVERE",
+      "occurrence": "EVERY",
+      "years": [
+       2022,
+       2024
+      ],
+      "applicability": {
+       "drive": "AWD",
+       "edition": "tucson"
+      },
+      "engine": null
+     },
+     "old": null,
+     "new": {
+      "interval_miles_original": 72000,
+      "interval_km": 120000,
+      "interval_months": null
+     },
+     "cause": "drive_scope_label",
+     "new_cite": {
+      "source": "official-5e32eeb8c909",
+      "pages": [
+       474
+      ],
+      "quote": "Replace every 72,000 miles (120,000 km)",
+      "locator": "page 474 severe table row 'Transfer case oil (AWD)': operation R"
+     }
+    }
+   ],
+   "changed_items": []
+  }
+ }
+}

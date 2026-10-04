@@ -78,20 +78,5100 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T15:58:01+00:00",
+ "started_at": "2026-10-04T13:03:12+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "80df6186cb6cafec2484a45f85b829b81e8a8aa350a812b5389dc42c6ab5ed37",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Drive belts *1",
+    "quote": "At first, inspect at 60,000 miles or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5cfc4325cf77367eef1e61cd13eb88d16a3db408de03fd952f3eba5e332877de",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Drive belts *1",
+    "quote": "Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9a262ec18bbbe6c075e2e5fe37a24d964e2947b9a37c7a23fb994a8cd2ffb558",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Engine oil and engine oil filter': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8df3c15d44b35c271b44070590a2e9660cdb81e6ed653bc5ca3a81a10b267dd2",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "31d42742ad386d185659b2ea8a3d90a97d5889bbe349fc2d82b2bd3878ae91e0",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156911,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Spark plugs",
+    "quote": "Replace every 97,500 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156911,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 97,500 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "68a25cdd16d4405dcab1a7f67492500936b117e023534dab124de57d80fc97b5",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Rotate tires",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b4a48fabaa4841e4643464b6f9e41ec8f9c23b144589d3a92d535e693671ad04",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Climate control air filter (for evaporator and blower unit)",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Climate control air filter (for evaporator and blower unit)': text cell",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4a73a3143bfa0347f8008a8c254c57aa0e8e79fca41389c349ee0917b1988b92",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 10 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f14b63451a842f12647569d75b9fc98b346624ae4d5b11a07990f04c7694fec7",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d3a4c8419a7487f8b9e54c28eff75644143b394fac11246606d1d8eae98f7395",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Battery condition': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a515caf1f8d20680a123a678271f337eb6dd5b70643a67eaa80de8d9bc9c4fec",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405: Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball join",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e5fa4bb24a18fe18ee0619cbdf5635c33005ee7a3975c6388d55d865e519e7ef",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405 grid row 'Exhaust pipe and muffler': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "83a41335ec6307be818ef91a4a86a6ef2a75bf2c60b5387e84876ebf040557cf",
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405 grid row 'Rear differential oil (AWD) *3': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Rear differential oil (AWD) *3 I I I"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "2cb0276a4ff881daed948c03d5be73a23c5a99ecac1520379406f877e78b2777",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405 grid row 'Transfer case oil (AWD)*3': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Transfer case oil (AWD)*3 I I I"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2a3148fe4d568e3c6985dbad6a7a2df5051e7e8add1be4f6649eb9a68607af93",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406: Fuel filter *4",
+    "quote": "Fuel filter *4"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406 grid row 'Fuel filter *4': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Fuel filter *4 I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dc93b1c4c5463c9418011d37360f86cf561dda69e8536e306cfbc71b18ed4887",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2019
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 399: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2019
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 399 grid row 'Brake fluid': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3245e0460603882058e6bdd53a9ad2e00fd49dd6548fb26b0c7799afee04b8fb",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Brake fluid",
+    "quote": "Inspect every 15,000 miles(24,000km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid row 'Brake fluid': text cell",
+    "quote": "Inspect every 15,000 miles(24,000km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f67ccfe292218321720a646d66ac2aaa1608d210458225d102ccfb0bc91c00c5",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406: Brake fluid",
+    "quote": "Inspect every 7,500 miles(12,000km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406 grid row 'Brake fluid': text cell",
+    "quote": "Inspect every 7,500 miles(12,000km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "32e880c4caa9ba37d35247a2365341dced88badc366fe7e087bde2c6bb583d77",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 407: Engine oil and filter",
+    "quote": "Every 3,750 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 407 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,750 miles or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "73a5e85e881bcb8331e7b6f41c8df5c4c3fe6931a85ec0cb85cafc62a407bc5f",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 407: Automatic transmission fluid",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 407 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "f169384b0136cc996ead23f4cce7eaa01547cffa11c2fbeffc586541604c1b22",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 408 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "f3be08ee81951b6768e6dd80f14ef855309c1aa9429958365d87f06b1aee7c57",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 408 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a92a6d291efe4e5471945151496977b78cef11b70c0a39daa7c29924609fa417",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Drive belts *1",
+    "quote": "At first, inspect at 60,000 miles or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bf0e7bc33fb26dc277dbd64a039d7aa7dc1c88e777b66f6ea1d9678ab32efb54",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Drive belts *1",
+    "quote": "Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "af4b0018eec7643a836a5ca866ddd8ca56497920b8c85fdcf1383de426306697",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Engine oil and engine oil filter",
+    "quote": "Engine oil and engine oil filter"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Engine oil and engine oil filter': R at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a0595afb178cf258096f4068dbdceab05dc12d1131f8b754cfdd917598702332",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Air cleaner filter': R at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "078acf40c9ed59d7fcee1f33549f9e31c9e7b4bca182f74009c0548e948e0558",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 67592,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Spark plugs",
+    "quote": "Replace every 42,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 67592,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 42,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "61a8b93bf6b852f9a9ac52f08d9f110456517014004223ea5e06b3e30789f4eb",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 9656,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Rotate tires",
+    "quote": "Rotate tires every 6,000 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 9656,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 6,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b179935ca292ed41fcca86f335250287932e511eae33673b848842c7ef0c5a35",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Climate control air filter (for evaporate and blower unit)",
+    "quote": "Replace every 12,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Climate control air filter (for evaporate and blower unit)': text cell",
+    "quote": "Replace every 12,000 miles or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6b53712dd8b59c975968683d9cc3389eec9ec3dfd9b2813d6fa2e51a1f653d11",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 10 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2605c8a39b57ee25478f788f924da955ecc1cf563ef388b1846991b72410d9a4",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 409 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8d5ce4336ff8549416cf1c524ba110561f4585ecd6e22bcef555e1560546c372",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 410: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 410 grid row 'Battery condition': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9031155941380f9a103b16f2f0a1666b9154e36bf9243b9e4e5918c4d003a187",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 410: Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball join",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 410 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7f7f3ba958bbbd3fc6e4a6ea241ad9a757ca74ab7f53b1e6c7e1b379f9d1f257",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Exhaust pipe and muffler': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6257a531dbe3a7870f48a84bb81b4f46601115aca1c90c36e26af51e5903c90b",
+   "old": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Dual clutch transmission fluid",
+    "quote": "Dual clutch transmission fluid"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Dual clutch transmission fluid': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Dual clutch transmission fluid I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "812981be47da3e3ed5c490dbc9f2b5655b6263bdff0dded6697d9697e8ab559f",
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Rear differential oil (AWD) *4 I I I"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "eaeadd1febe9db807bc9d53389cb7cfedaa9d9a7ec4239ffdad32b4216c05642",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Transfer case oil (AWD)*4 I I I"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "699a5351969e37e3309d900327230ac0e2a832d99797083745d4ded5e399c846",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Fuel filter *5",
+    "quote": "Fuel filter *5"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Fuel filter *5': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Fuel filter *5 I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1effb53fde3848b34f863771be7af9e3c84cae911216eeec1cef632172300273",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2019
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2019
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 grid row 'Brake fluid': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0fa8cf40e643f503ff171cedcccc608f2a54ecc632c73cf0ae5c30df924e3d81",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Brake fluid",
+    "quote": "Inspect every 6,000 miles(10,000km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Brake fluid': text cell",
+    "quote": "Inspect every 6,000 miles(10,000km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9d5270e60b2873cdb230cde736cf2b39eea3c534badb4ffd97a382cf8513889c",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 4828,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 412: Engine oil and filter",
+    "quote": "Every 3,000 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 4828,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 412 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,000 miles or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ee81e6712a35f9e367f344f22579397b7670debb8eb5b159ba8896f276a1605e",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 115873,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 412: Dual clutch transmission fluid",
+    "quote": "Every 72,000 miles"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 115873,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 412 severe table row 'Dual clutch transmission fluid': operation R",
+    "quote": "Every 72,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "921165b00624f2a57ab916a9b8577e2c6343b9433ca560a965c5adffe4026899",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 413 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "da226a48e3fd96c10fe3cabde442cedc2614340621960644a5e092330b513bc1",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 413 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "499493aaf23b7987591cd1c76a71695743423c5dda1e6dd48661b726c4148e12",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406: Brake fluid",
+    "quote": "Replace every 60,000 miles(96,000km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 406 grid row 'Brake fluid': text cell",
+    "quote": "Replace every 60,000 miles(96,000km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d7ae4a86470f6a0589d17ddd05084315640bbb76850ef77807cc6d890fecfa7f",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Brake fluid",
+    "quote": "Replace every 48,000 miles(80,000km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411 grid row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles(80,000km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d1ca971aaacfc1d7669df533c13694aa6ff99c5ee1b0be1d6516f50aef132ef2",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389: Cooling system",
+    "quote": "Inspect every 15,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389 grid row 'Cooling system': text cell",
+    "quote": "Inspect every 15,000 miles or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "56fb3c045d78bc7850e99294c85eec9dcd736f5ca06a3b3ceb03cde1667afb33",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 509: Cooling system",
+    "quote": "Inspect every 15,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 509 grid (rotated) row 'Cooling system': text cell",
+    "quote": "Inspect every 15,000 miles or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "60948479b807c001d5f87bd514ee846dd721883540a29bc5e5679eb1fdc9a5bb",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Cooling system': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Cooling system IIIIIIIIIIIII"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d024a07edf49a4b1098d27a6ec30999fefd34125d0ad931d16fc38a1404a1e7e",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389: Replace Climate Control Air Filter (For Evaporator and Blower Unit)",
+    "quote": "Replace Climate Control Air Filter (For Evaporator and Blower Unit)"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389 grid row 'Replace Climate Control Air Filter (For Evaporator and Blower Unit)': R at 15,000/30,000/45,000/60,000/75,000/90,000/105,000/120,000 miles; months 12/24/36/48/60/72/84/96; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000/192,000",
+    "quote": "Replace Climate Control Air Filter (For Evaporator and Blower Unit) R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "4f417e79b3558b22b5495770dbc6a357443faeeebf3dda41c6432acb8d5fbc6a",
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Replace Climate Control Air Filter (For Evaporator and Blower Unit)': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Replace Climate Control Air Filter (For Evaporator and Blower Unit) IRIRIRIRIRIRI"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dafc18ae4c921675a6d26728b95b2672f161216e979156ba580e3120089768c7",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389: Coolant*1",
+    "quote": "Replace every 40,000 miles or 36 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 64374,
+    "interval_miles_original": 40000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389 grid row 'Coolant *1': text cell",
+    "quote": "Replace every 40,000 miles or 36 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "293ab79795a64c5c661f01aa1f36d57d87a206a9b0bb3fde9db6319ab840cdd6",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 35000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Blower Unit) Coolant *1",
+    "quote": "Replace every 35,000 miles (60,000 km) or 36 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 35000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Coolant *1': text cell",
+    "quote": "Replace every 35,000 miles (60,000 km) or 36 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a1ea70b04e35eed7298792cbce83a5409399408d5ffff055aba9a337e4be8d6a",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389: 12V auxiliary battery condition",
+    "quote": "12V auxiliary battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389 grid row '12V auxiliary battery condition': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000/120,000 miles; months 12/24/36/48/60/72/84/96; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000/192,000",
+    "quote": "12V auxiliary battery condition I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bca365b8b8131dbe5533e0bdeb03b4344323624967bb650f12ccf1fc68c952f7",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: 12V auxiliary battery condition",
+    "quote": "12V auxiliary battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row '12V auxiliary battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "12V auxiliary battery condition IIIIIIIIIIIII"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "63d7945441cc6b21787aa3f65fcea5abd4d9de46741dc19bf2a84448fbef7294",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 390: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 390 grid row 'Brake fluid': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000/120,000 miles; months 12/24/36/48/60/72/84/96; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000/192,000",
+    "quote": "Brake fluid I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "59179501c74d6317d01aff5556a11245753b4f32632f74528c7ab7a7d0137850",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Brake fluid",
+    "quote": "Inspect every 7,500 miles (12,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 7,500 miles (12,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "af61cc5444afb8f31349fbd7fbbce64f9776891fec157fdc87b8ebf11f26e5c9",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2563dabc9aa3ac7bee7dc4547f7d610a83014f2ff5a10daa2fb47a6498c1577e",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 509: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+    "quote": "Rotate every 5,000 miles (8,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 509 grid (rotated) row 'Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)': text cell",
+    "quote": "Rotate every 5,000 miles (8,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "311c045a43ae9b56e12c884ca62e18cb4c4ea8b5cc214d1e4992772833414a46",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)': text cell",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5ae656a745b6d87a6e6a2e61af49448789395c34e7d88d7932ad094409d46a59",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Brake fluid",
+    "quote": "Replace every 60,000 miles (96,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 60,000 miles (96,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3cf9cb76e72f9cdf62e152691ab994290a5ba659165585c43105cd2010d7eacc",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e11868366fb2bb45a0d99d61cc5babe157101b8eae76cc1a0fd33ab535ac4f42",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000 miles; months 48/96; km 40,000/80,000",
+    "quote": "Air cleaner filter I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "529663ed871e8dd30d81d8d7c6c6b7aa3756d19a6921952f74e78bf8d9de0b9c",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Air cleaner filter': I at 12,000/36,000/60,000 miles; months 24/72/120; km 20,000/60,000/100,000",
+    "quote": "Air cleaner filter I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "395495a319ca56abf36fe6fb92dfa4f79a077f89e3659e79fd07eae8acb361e8",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Air cleaner filter': I at 12,000/36,000/60,000 miles; months 24/72/120; km 20,000/60,000/100,000",
+    "quote": "Air cleaner filter I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ee68e1574a5c34e819a93055404df641f3fe0a5914a5f12679fe0697d2856cf4",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 70000,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Spark plugs",
+    "quote": "Replace every 42,000 miles (70,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 70000,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 42,000 miles (70,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0dd70b2165c880ac30c23dab6bd8bce32824c3302405151f41dc156784284f2f",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Rotate Tires (includes tread wear inspection and tire pressure check)",
+    "quote": "Rotate every 6,000 miles (10,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Rotate Tires (includes tread wear inspection and tire pressure check)': text cell",
+    "quote": "Rotate every 6,000 miles (10,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "05b9bb349950b57127935d3e9dce9aaef5bb86b5c344862d0aa1503b04935c3c",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25750,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Cabin air filter",
+    "quote": "Replace every 16,000 miles"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25750,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5b14514b45f6d85eb11c18b1ed487ac0947f3508dd7de638383c95c95d237394",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 54000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Drive belts *3",
+    "quote": "At first, inspect at 54,000 miles (90,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 54000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 54,000 miles (90,000 km) or 72 months After that, inspect every 12,000 miles (20,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5a6bb1ddd1f51acabe35630c6d8e1880dc4de219041a6d7111a0757170f5dfb9",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Drive belts *3",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. After that, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "36db8b4a0a5568799a3aa3b98c0c5796f31980bc3a1c01c13fee0107ecb64576",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Drive belts *3",
+    "quote": "After that, inspect every 12,000 miles (20,000 km) or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 54,000 miles (90,000 km) or 72 months After that, inspect every 12,000 miles (20,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5300059bfc1b20d54d64b21fae3b3006c398e9897d8ed8b0c04ee8960b534d0a",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401: Drive belts *3",
+    "quote": "After that, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 401 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. After that, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ad22ef8cbadcced5e39d90c4d5261bad03e5d000db8dd0dcaa658166b8a2cd89",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "665a30e29ca9592a20515fb99bca90ae45137e01c61832fd36276c701eeb0e21",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ef51e678cfe186ebc30bfa2cb686e8a7a8de248747af5b17771a2b1b86f26567",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Battery condition': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Battery condition I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8d6ba5be87eb8aa470e1660a1a016c273888121aef10f08a9581d1cb06f2c750",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joi",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "90f1fe3e02731782f85e0cc38f20c8fb6ead3ea60c84b6e5823cf0d1fc035ad7",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Exhaust pipe and muffler': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f1e184dc058b69c985039bbc21b7ff8d254bff43c3335d6f340e137a7f248995",
+   "old": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402: Dual clutch transmission fluid *5",
+    "quote": "Inspect every 56,000 miles (91,000 km) or 48 month"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 402 grid (rotated) row 'Dual clutch transmission fluid *5': text cell",
+    "quote": "Inspect every 56,000 miles (91,000 km) or 48 month"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "683880dbd39ca7efb250b6dec8d5b3c368de2f881f39cb6fdaab00582e034b9f",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Engine oil and filter *1",
+    "quote": "Every 3,000 miles (5,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 3,000 miles (5,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "112df43d6f53aaff92fb5d5354727b0cf657cddafee081a902218ea6dc830740",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404: Dual clutch transmission fluid",
+    "quote": "Every 56,000 miles (91,000 km)"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 404 severe table row 'Dual clutch transmission fluid': operation R",
+    "quote": "Every 56,000 miles (91,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "5d4ab4f72bd1c537d5611392c0ce65d00ce9e712b48cecd62ab120c7d464c95e",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405: Rear differential oil (AWD) *3",
+    "quote": "Rear differential oil (AWD) *3"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "b479d331aef5d033225648d8b4d5c09ac4cf4c244a7ec18de7655d5f7e32381e",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 405: Transfer case oil (AWD)*3",
+    "quote": "Transfer case oil (AWD)*3"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "86e7278d9fc07fd7fb9b06ecf5d68ab2cb4d7b78697f6d399a5d202b988e45b2",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 408: Transfer case oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "480d31632e226bf335dc02d291593008f7e9dcfa329d5166d04fdf091d874b56",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Nu 2.0 MPI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 408: Rear differential oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "1c2262421cfad5c497aa619ce9a9d77381d9770cedcf596d63aa9ea7834a5694",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Rear differential oil (AWD) *4",
+    "quote": "Rear differential oil (AWD) *4"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "671b7018ebf581f1de33db440cf399b6a4e2a6e852e56f8c32289c3a0b270403",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 411: Transfer case oil (AWD)*4",
+    "quote": "Transfer case oil (AWD)*4"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "efc0792a6be415aaf23be5ac7967b1482f888e59601d8ff700fb0ed3d414311b",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 413: Transfer case oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "a267f97b066857e3754a97bd4ed87590b608a82b28e614939b2ee900a60d568c",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2021
+    ],
+    "applicability": {
+     "edition": "kona",
+     "engine": "Gamma 1.6 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 413: Rear differential oil (AWD)",
+    "quote": "Every 75,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "368d5b6b8ebb44dfbe79c22103ed582ef44a3b10e824a12be7a86cf1e7c2a3b9",
+   "old": {
+    "job": "tire_rotation",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2019,
+     2020
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 4,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 389: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+    "quote": "Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "4ec602c1dfa7815efeb66b73b8601ec165510df81df94ada241e08c5e57d6ea0",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "kona electric"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 509: 12V auxiliary battery condition",
+    "quote": "12V auxiliary battery condition"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "d85ef2ca3e7ffbe49d934c97fd495479d3e027e23cc9ca0a897050c423e58691",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 403: Brake fluid",
+    "quote": "At first, inspect at 6,000 miles (10,000 km) or 12 months"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "c1b28f940ad6abdd0333bf4a02e1a3ada45a20299fe36a1e2affa98ee09be4cc",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "kona n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 403: Brake fluid",
+    "quote": "After that, replace every 48,000 miles (80,000 km) or 48 months"
+   }
+  }
+ ],
  "counts": {
-  "replaced_own_maintenance": 83,
-  "replaced_own_te": 977,
-  "replaced_own_issues": 32,
   "raw_documents_seen": 86,
-  "source_records_new": 4,
-  "te_new_GENERATION": 487,
-  "te_new_CONFIGURATION": 510,
+  "te_existing": 997,
   "configurations": 45,
   "configurations_research_only": 45,
-  "issues_new": 32,
-  "maintenance_new": 83
+  "issues_existing": 32,
+  "maintenance_corrected": 71,
+  "maintenance_existing": 71,
+  "maintenance_new": 9,
+  "maintenance_stale_deleted": 12
  },
- "finished_at": "2026-10-02T15:58:07+00:00"
+ "finished_at": "2026-10-04T13:03:16+00:00"
 }

@@ -106,20 +106,4532 @@
  ],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T15:57:25+00:00",
+ "started_at": "2026-10-04T13:02:44+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "c46c5cb561f6dbfb63f49583b867d51e97902f0cf3a83462e9af7ac12045ae0f",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Engine oil and engine oil filter *1",
+    "quote": "Engine oil and engine oil filter *1"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Engine oil and engine oil filter *1': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *1 RRRRRRRRRRRRR"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4fb729ce4702f7ac814c3e08038e1667f8c33868ee9efc34dd0be0e384cf2f4a",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "86dbb21d9e724fe1b01c8151bee24dacd6b4baa9928a67d4229865fc1143f603",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 154497,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488: Spark plugs",
+    "quote": "Replace every 96,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 154497,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 96,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "140ab9c93e754b8749da7a6edbd44c7c2ea0bdca5973906dfb632d6f35b630cb",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 155000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Spark plugs",
+    "quote": "Replace every 96,000 miles (155,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 155000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 96,000 miles (155,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0a2741d63671da06f27763afcce48c4bbc600898a465625cabacb9d4e3ddb077",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1887cefce209b30379375cb1a18e88cf304fb3b13693bff5e91d9ecaa20fe8b4",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Cabin air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Cabin air filter RRRRRR"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "560117573ceb03adafa1e4918540b10bedf59765515cd4a4a960513b51068442",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Drive belts *3",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "01a94c1f8135893fdbe8f974147926b4d2d96ae67e84b051be443c7865fe5b0d",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Drive belts *3",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "52b7a49b39e22f8750f85de127739b21a37d1f62acd6c82d0ab1d9e2a9ffc677",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9c9f546fe59074a14217c71877d1f98af58fb524f14956a423ae90f84e413f87",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. Thereafter, replace every 30,000 miles (49,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4b47d9c3e04aceb4b84441fd68aa03ce5a9d90e006e29af6267b836682febc13",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 488 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1f43c2358af83012f0d2619c0d50b368b60aff8e7cf7f1ad850f6d9e68545ae0",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 49000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles (49,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 49000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. Thereafter, replace every 30,000 miles (49,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b6386a9013d91011ea19bdd1d14e4e1ec18ce8419ef0a7e08b2fcb8c45c740aa",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b34b2c2c3a9bd614ff98ce2ae42be2ffd82dbf040d8a973acf01d75456c1515f",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joi",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490 grid (rotated) row 'Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint IIIIIIIIIIIII"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2f5ae7543112c9a918ea56929765eec3a5cd52ec040963e8ddf9ee88b707819c",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2091be73cf1ef533db9aa07caec27745c0dda1fe44fad0a9ca7a48a8717cc291",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "19d7bc3aa2808234a3366a6d5bc5c493afe7c75a95cd678d808f0c914b2e4747",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3ab49b3f0260de95115339c18032bfd05e8f39db71e92d7e0222a00eea91b852",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 492: Engine oil and filter *1",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 492 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a792acc41a007dd7768f6d17c1c6880faddee37d0b9c85e691d471a4a7424828",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 492: Intelligent variable transmission fluid (if equipped)",
+    "quote": "Replace every 60,000miles (90,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 492 severe table row 'Intelligent variable transmission fluid (if equipped)': operation R",
+    "quote": "Replace every 60,000miles (90,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3b21f004a9e4d38a8a5e4ebc8cf8a381e428eb72b70b7918f443f39c3ad3d5ef",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489: Rear differential oil *1",
+    "quote": "Rear differential oil *1"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 489 grid (rotated) row 'Rear differential oil *1': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Rear differential oil *1 IIIIIIIIIIIII"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "72bb98e947bc1c164a6854a50bf7b0976b245ef5ce905e3d42038db9b606d232",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Fuel filter *1",
+    "quote": "Fuel filter *1"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra",
+     "engine": "Smartstream G2.0 Atkinson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490 grid (rotated) row 'Fuel filter *1': I at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Fuel filter *1 IIIIII"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1c20f2da41f53af262e492ee3f3e167def42ebe1d05222e974884d3ac0b2cd3a",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491: Rear differential oil",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 491 severe table row 'Rear differential oil': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b297a7dec9d1638c0f99a6460b63284510e1baa93c409edfa3ea0f60549f5598",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 477: Engine oil and engine oil filter *1",
+    "quote": "Replace every 7,500 miles (12,000 km) or 12 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 477 grid (rotated) row 'Engine oil and engine oil filter *1': text cell",
+    "quote": "Replace every 7,500 miles (12,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0850991bdb987ccba19297ea0d5e243dd3dd7cfe33ddd74ade510b435e53d021",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 466: Engine oil and engine oil filter *1 *2",
+    "quote": "Replace every 8,000 miles (13,000 km) or 12 month"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 466 grid (rotated) row 'Engine oil and engine oil filter *1 *2': text cell",
+    "quote": "Replace every 8,000 miles (13,000 km) or 12 month"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "718df7051aef6c560269633e2274c34eac0245284aa72c97f076a26478744e37",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 45000,
+    "interval_miles_original": 30000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 477: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 45000,
+    "interval_miles_original": 30000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 477 grid (rotated) row 'Air cleaner filter': R at 30,000/60,000 miles; months 36/72; km 45,000/90,000",
+    "quote": "Air cleaner filter I I R I I R I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7f6262e45c04123f6ccb79bbdb28c3d7cccade6642dcb4d37fe9a0b80b1d8311",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 466: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 466 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000/120,000 miles; months 36/72/108/144/180; km 39,000/78,000/117,000/156,000/195,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "044e78a25c6a710523943cb2d2f7bcbc7c032b0c6a821ab9b373f223355882f2",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 165000,
+    "interval_miles_original": 102500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 478: Spark plugs *3",
+    "quote": "Replace every 102,500 miles (165,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 165000,
+    "interval_miles_original": 102500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 478 grid (rotated) row 'Spark plugs *3': text cell",
+    "quote": "Replace every 102,500 miles (165,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "93ff33505c7cbce8e9cd7ecfe6dd506498a9145887c48ce7635332556f23ff85",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 467: Spark plugs *4",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 467 grid (rotated) row 'Spark plugs *4': text cell",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dfb9160e19a70c6a9ff09de1c91d7ff338449798a9c8159c774a7781a7eb48a1",
+   "old": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468: Cooling system",
+    "quote": "Cooling system"
+   },
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Cooling system': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000/112,000/120,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000/182,000/195,000",
+    "quote": "Cooling system I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "ca9fbc5a92a2e1eca9073248e79911a460ba7b24b41527f7ac900b369a586209",
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2022
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 195000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "eb78c550b19b22a832d8d9c9926a63cf19770e3ea712bcca425ccb5af3ba6d7d",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468: Engine coolant / Inverter coolant *6",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "decc5c15fedbbf9e19e7d7c14805ddbf2c5e11bb3d88fa71fa33d97352db137f",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2022
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 50000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Engine coolant / Inverter coolant *6",
+    "quote": "after that, replace every 30,000miles (50,000km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2022
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 50000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "463ee9967db5e3fc8c05fc6b886212e9e4b246ed216fb9390c9498b0cb1627ce",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Engine coolant / Inverter coolant *6",
+    "quote": "After that, replace every 20,000 miles (30,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 20,000 miles (30,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d100380a0d38092577bc4dfe8afbe36f7b714f86ec5bbc55b900451e45f7a8fe",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468: Engine coolant / Inverter coolant *6",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "c96dd248ab7617e21bd8f633f6958a8c853190bce2e4e2a1b5daa300695a7668",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2022
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 195000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "5e591e061f0b25d4008bc488d1ebae71003269f4bf04cc5f7ecd56e2a8639d6f",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2023,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "5207f76aacd0459f8a544e21a7d9e23c59063c04a6c812619469e45c073a0381",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2022
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 50000,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace 120,000miles (195,000km) or 120 months after that, replace every 30,000miles (50,000km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "2a1c67f7dcb0200b971d6e8732b066dd7bb6202933b93bf7ecee84471976ba59",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2023,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 20,000 miles (30,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "7631ddabf92137da00c9424159cb70b623ee0b3d65d97cad759b8ce56751ca87",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Engine coolant / Inverter coolant *6': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months After that, replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0aadb7e5534a24353f4e4addc0cae74c6f4ca233ef56e6966c42227cc8c83470",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "667d14c4028abee15ff63a3840253e8435a9717edf1bfa5e19b8e746c1367cb3",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Brake fluid': R at 20,000/40,000/60,000/80,000 miles; months 24/48/72/96; km 30,000/60,000/90,000/120,000",
+    "quote": "Brake fluid I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "378c15ad6baa8524cd1fa3b77ea174c4569a1356e173311fec045e12602ba753",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468: Brake fluid",
+    "quote": "replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 468 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7a85cd2f9b4f8ab5c85d65f66836deefa023102f0e8e786c26d8f89546f711ae",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+    "quote": "Rotate every 10,000 miles (15,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480 grid (rotated) row 'Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)': text cell",
+    "quote": "Rotate every 10,000 miles (15,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a1def0963e134af1f398e8cda31117ead608d7e74eae5b1b5ae4ce5c45a62fb8",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469: Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469 grid (rotated) row 'Rotate Tires (Includes Tire Pressure and Tread Wear Inspection)': text cell",
+    "quote": "Rotate every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2eed133c46b3822f643114ec0da22b62fcd1697e447732248719ffc1b5e4d289",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480: Front suspension ball joints",
+    "quote": "Front suspension ball joints"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480 grid (rotated) row 'Front suspension ball joints': I at 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000 miles; months 12/24/36/48/60/72/84/96; km 15,000/30,000/45,000/60,000/75,000/90,000/105,000/120,000",
+    "quote": "Front suspension ball joints I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7dd4ffc359f795001d9e715f43c0c1a935a3f99678b2392c624c592a1a2cda99",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469: Front suspension ball joints",
+    "quote": "Front suspension ball joints"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469 grid (rotated) row 'Front suspension ball joints': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000/112,000/120,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000/182,000/195,000",
+    "quote": "Front suspension ball joints I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1bbdde198bc816bfd198233e01f200420b2243b618d599a5fc342a5a543de7db",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25750,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480: Cabin air filter",
+    "quote": "Replace every 16,000 miles"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25750,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fea8e2e3059dd16f855355d1b664c4b3a34f02565cb3e9e7c012292b1709b71a",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469 grid (rotated) row 'Cabin air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000/112,000 miles; months 24/48/72/96/120/144/168; km 26,000/52,000/78,000/104,000/130,000/156,000/182,000",
+    "quote": "Cabin air filter I R I R I R I R I R I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "22509755f8d5469e01740df1b9540959891fc0adc4e074a9bf470ae6a1098f7a",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Engine oil and engine oil filter",
+    "quote": "Replace every 3,750 miles (6,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 severe table row 'Engine oil and engine oil filter': operation R",
+    "quote": "Replace every 3,750 miles (6,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6c5e306cc33a5f5a045f49ecfd86fb085149498a8dcd64bda544e1e33fa49e12",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Dual clutch transmission fluid",
+    "quote": "Every 80,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 80000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 severe table row 'Dual clutch transmission fluid': operation R",
+    "quote": "Every 80,000 miles (120,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3fd83327a6d3731543a2969a255c5ddc75ecfb80d7be1cb554ecf461dc1bbb84",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469 grid (rotated) row 'Cabin air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000/104,000/120,000 miles; months 12/36/60/84/108/132/156/180; km 13,000/39,000/65,000/91,000/117,000/143,000/169,000/195,000",
+    "quote": "Cabin air filter I R I R I R I R I R I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bb6ddba27436c00c1972165f27aeb1e455a7a963351efc154942fda69415e810",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 469 grid (rotated) row 'Cabin air filter': I at 8,000/24,000/40,000/56,000/72,000/88,000/104,000/120,000 miles; months 12/36/60/84/108/132/156/180; km 13,000/39,000/65,000/91,000/117,000/143,000/169,000/195,000",
+    "quote": "Cabin air filter I R I R I R I R I R I R I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "c9b274855b54158b42bdb2c722fd0f13107c9db4cb5fb456f8e5386ec1896d37",
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Cooling system': text cell",
+    "quote": "At first, inspect 40,000 miles (60,000 km) or 48 months after that, inspect every 20,000 miles (30,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "3e6316fb020ed5e37874741a6c37c9729f88862268886faf937bc291ae16c58d",
+   "new": {
+    "job": "cooling_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Cooling system': text cell",
+    "quote": "At first, inspect 40,000 miles (60,000 km) or 48 months after that, inspect every 20,000 miles (30,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "448da80da2185a17cfc01004469c910da68dbcaceb533c66c17d09fdacea3813",
+   "old": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Dual clutch transmission fluid *8",
+    "quote": "Dual clutch transmission fluid *8"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 60000,
+    "interval_miles_original": 40000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Dual clutch transmission fluid *8': I at 40,000/80,000 miles; months 48/96; km 60,000/120,000",
+    "quote": "Dual clutch transmission fluid *8 I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3441fb2efdeec8c4f1f601de49b075a764c6620af43658289f1c0d4cf9a40845",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 15000,
+    "interval_miles_original": 10000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Brake fluid': I at 10,000/30,000/50,000/70,000 miles; months 12/36/60/84; km 15,000/45,000/75,000/105,000",
+    "quote": "Brake fluid I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "403fc2c5b7b151e387c63d322932b1e9c971436b1c5a93ac9bbd03b0d9c4bdff",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479: Brake fluid",
+    "quote": "Brake fluid"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 479 grid (rotated) row 'Brake fluid': I at 10,000/30,000/50,000/70,000 miles; months 12/36/60/84; km 15,000/45,000/75,000/105,000",
+    "quote": "Brake fluid I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "eaf9769ac62998bf15985d0e686135f3dec39cb4eff7bf7d6848c019b2f67b05",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480: Exhaust system",
+    "quote": "Exhaust system"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 30000,
+    "interval_miles_original": 20000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 480 grid (rotated) row 'Exhaust system': I at 20,000/40,000/60,000/80,000 miles; months 24/48/72/96; km 30,000/60,000/90,000/120,000",
+    "quote": "Exhaust system I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4d2b71d9ab4b105d855ef1f3bdb8a7185e6dc27eee9fc32e891daf46a2d0d423",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000 miles; months 48/96; km 40,000/80,000",
+    "quote": "Air cleaner filter I I I R I I I R I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1f2c50dfafc207f042eeea0f084c80a61957b9a96ce20518bdb196009caa444f",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 70000,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Spark plugs",
+    "quote": "Replace every 42,000 miles (70,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 70000,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 42,000 miles (70,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "84fc9a241e3046a60451475adeb7c20b080715745625292d6548d75c7f295fa8",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Rotate Tires (includes tread wear inspection and tire pressure check)",
+    "quote": "Rotate every 6,000 miles (10,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Rotate Tires (includes tread wear inspection and tire pressure check)': text cell",
+    "quote": "Rotate every 6,000 miles (10,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "89d5c1f4fc75bd6008bdb96012da47d7378b4bab29fcaedf0a1a82e181d63eee",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 426: Cabin air filter",
+    "quote": "Replace every 16,000 miles (25,000 km)"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 426 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles (25,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b101749fdd9470ac39dd23d8b973e76254380468ca4826f6d29bf6d280487adf",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Cabin air filter': R at 12,000/24,000/36,000/48,000/60,000 miles; months 24/48/72/96/120; km 20,000/40,000/60,000/80,000/100,000",
+    "quote": "Cabin air filter I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "09b227ece686aedae40dac33ffa9fc95cf380e75e07f5cc44ceacd71fabca396",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Drive belts *4': text cell",
+    "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 6,000 mile (10,000 km) or 12 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "044f52bdd61a513c9d827dd91218eec4b5ba88212a481af63fc1fa02c08a22e0",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 426 grid (rotated) row 'Drive belts *3': text cell",
+    "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 8,000 mile (13,000 km) or 12 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "43bb1427936c24130af9ea8388d97a3eff831b539fc6dff3b54c46afdb97ce9a",
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Drive belts *4': text cell",
+    "quote": "At first, Inspect at 48,000 mile (78,000 km) or 72 months After that, Inspect every 6,000 mile (10,000 km) or 12 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "abeaf3a463b8eec75c2790af0115833128305cdfd2fa94a03ebb82b00d58b6cf",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c225b4f00de80fbe1641d894f09f16d60393a44407eb58a66ad5447e5141deb8",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (40,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fe02a94341d193490b405dcd1ef758496d2770e4d2a6a53ea6f7a1939963e713",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Battery condition': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Battery condition I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "55e256ff15d6469f584021c3d2296d4f5f0e6a3d6d485e5ad8e88f41fe93560a",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joi",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Steering gear rack, linkage and boots / lower arm ball joint, upper arm ball joint I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "139290312bddceced4283f36a8cb64b837926c545951aafd49ec894e4b1cde83",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Exhaust pipe and muffler': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000 miles; months 12/24/36/48/60/72/84/96/108/120; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bd2a367fe96e439a1557f1665c0111ce83d0458fc1e3a39d697aa996890984eb",
+   "old": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428: Dual clutch transmission fluid (if equipped) *1",
+    "quote": "Dual clutch transmission fluid (if equipped) *1"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 428 grid (rotated) row 'Dual clutch transmission fluid (if equipped) *1': I at 24,000/48,000 miles; months 48/96; km 40,000/80,000",
+    "quote": "Dual clutch transmission fluid (if equipped) *1 I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "bfe25a7e2863913ae8b95507d5b3e1f3e17b8a71714f5317e6746404f84bba3c",
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 429 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "lnspect every 6,000 miles (10,000km) or 12 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "efac3904dfb2bfb2cfb0d521c71568d3077b5834937ff5783d613c013b21aa28",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 429: Brake fluid",
+    "quote": "Replace every 48,000 miles (80,000km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 80000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 429 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (80,000km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "525d9385bcfc3c6458020da0c466c86c105686577ffec12665df879347e09c08",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430: Engine oil and filter *1",
+    "quote": "Every 3,000 miles (5,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 5000,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 3,000 miles (5,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "92d7389f701f55150ff66aeab814f59b694574f867537ab0370805d17060e2d4",
+   "new": {
+    "job": "manual_transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430 severe table row 'Manual transmission fluid (if equipped)': operation R",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "583fc99a84deaca42069cb7285008f45ec174a961d271b07e8baa1e0fe4fec06",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430: Dual clutch transmission fluid (if equipped)",
+    "quote": "Every 56,000 miles (91,000 km)"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 91000,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430 severe table row 'Dual clutch transmission fluid (if equipped)': operation R",
+    "quote": "Every 56,000 miles (91,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1256f4d71c60e71f4c431c5b01a4b22be6126a3a408f5fc4bc3f9688e1e101a9",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Cabin air filter': I at 6,000/18,000/30,000/42,000/54,000 miles; months 12/36/60/84/108; km 10,000/30,000/50,000/70,000/90,000",
+    "quote": "Cabin air filter I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5ca8b5fb99da4e9c84a29b2d3a32a8baa082d03264d5c2084521d42934a62573",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427: Cabin air filter",
+    "quote": "Cabin air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2024,
+     2025
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 427 grid (rotated) row 'Cabin air filter': I at 6,000/18,000/30,000/42,000/54,000 miles; months 12/36/60/84/108; km 10,000/30,000/50,000/70,000/90,000",
+    "quote": "Cabin air filter I R I R I R I R I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "66521126eff07060c68d09c04173f762af35b29eb1b114545158f1e42a8134b4",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2026
+    ],
+    "applicability": {
+     "edition": "elantra n"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 430: Manual transmission fluid (if equipped)",
+    "quote": "Every 72,000 miles (120,000 km)"
+   }
+  }
+ ],
  "counts": {
-  "replaced_own_maintenance": 67,
-  "replaced_own_te": 1499,
-  "replaced_own_issues": 73,
   "raw_documents_seen": 112,
-  "te_new_GENERATION": 648,
-  "te_new_CONFIGURATION": 852,
+  "te_existing": 1500,
   "configurations": 64,
   "configurations_research_only": 54,
   "configurations_linked": 10,
-  "issues_new": 73,
-  "maintenance_new": 67
+  "issues_existing": 73,
+  "maintenance_corrected": 66,
+  "maintenance_existing": 66,
+  "maintenance_new": 13,
+  "maintenance_stale_deleted": 1
  },
- "finished_at": "2026-10-02T15:57:35+00:00"
+ "finished_at": "2026-10-04T13:02:51+00:00"
 }

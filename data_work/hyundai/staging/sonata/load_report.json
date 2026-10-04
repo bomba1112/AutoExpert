@@ -17,21 +17,5617 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T15:57:15+00:00",
+ "started_at": "2026-10-04T13:02:36+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "3a3c0a48c85ab2b2033c9863afa2cd45bbee5961fbdbf086d3cc25eb8692c049",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Drive belts *1",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dc723e0eb1bf2ace7b87411e8feec0d383d15edc3125efe95a90d87c36d39414",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Drive belts *1",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6243c521c479dfbecce527af8bf1b52b8c36df2fb535bee6966602a88f47df45",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Engine oil and engine oil filter *2",
+    "quote": "Engine oil and engine oil filter *2"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Engine oil and engine oil filter *2': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *2 R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fd932e933c18ad6c41f9e2a999db41d29808e77f825394ed8a8585279a368a2a",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4a5f9275b20169fa29f95ee47d0c25ee5ab23093297fbc2e5fcafe815ba520ff",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 65000,
+    "interval_miles_original": 40000,
+    "interval_months": 60,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Spark plugs",
+    "quote": "Spark plugs"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 65000,
+    "interval_miles_original": 40000,
+    "interval_months": 60,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Spark plugs': R at 40,000/80,000 miles; months 60/120; km 65,000/130,000",
+    "quote": "Spark plugs R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "66f57e10f9fd16b452351b0a720375a442483936e0d65ed8b2bd22ba3824e2d8",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 77249,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Spark plugs",
+    "quote": "Replace every 48,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 77249,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 48,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3cd1c133dcb795049ce5b79d6670212534c130344c34fe741db98cc3987f5521",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Rotate tires",
+    "quote": "Rotate every 8,000 miles (13,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate every 8,000 miles (13,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4a0d9cb0c4c2c34edad3eaad70b4d76f9240b632b8fdcfe304bb3c55dc7ca271",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f69bf292cf421b04545aa5c19f3829c46548bfbb0d0cbbe67de1c9d128584554",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Climate control air filter R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4cb2ca92f06eac834452db3dd25c495212d501881db0f8eb744f6b973279f38e",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6b8b9b54cc46d1db3376b23bd082c73a653a6daa2f65a078201151bf1a63ace2",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5aebef8acaec55f2f2eae27ab68fa14986ff19197076e2335cf08fe5bccf8f03",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a73f230810ee1d33b51cf09ba6a263ce825c6af2979b2dacb979111dc6423503",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 500 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "77e65a4ad9d12bce706020ef25ebb470f5b391cd433373ce8e17382a1c5a7886",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502: Fuel filter *5",
+    "quote": "Fuel filter *5"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502 grid (rotated) row 'Fuel filter *5': I at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Fuel filter *5 I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "297ec8df4c2a34fc632d74b43402e0bea3508cd130d5b0a677969da4e1fc0d9d",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1b5de17013b83ef5085ea6cc9f67bc704236a001a02e9fb170d76574cd8e73ae",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 502 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a39c6cb2d367f0fad355f3026e290a7acdd3024545701d4d95ddeb63b581a204",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 503: Engine oil and filter *1",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 503 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "80f33bfe1c96b07aec7ecbd1a86d4d2bcde47929c4c8ad6c442b50f3b21822a6",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 503: Automatic transmission fluid",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G1.6 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 503 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "232f8e3f43840b2199d6b2ae027e4edd4e4011e70c4876d3a3206223a307e4dd",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Drive belts *1",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e03ed22baa09a0d8255c77bc3df6d55730933c3716fcaa5d36ccda7b1e6da618",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Drive belts *1",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7373d6c811b66897746f1c3cadd35cdf296e7de48721c2c6030742a2c0c64470",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Engine oil and engine oil filter *2",
+    "quote": "Engine oil and engine oil filter *2"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Engine oil and engine oil filter *2': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *2 R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d733764f9473490078d05b526eb3dd03692f47a4e56ce89dd3f39ed0bf659e85",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3ebaefa801d97c3a7425ab8f00522323fe84c322f57bac78830134907a64ad37",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 154497,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Spark plugs",
+    "quote": "Replace every 96,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 154497,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 96,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ed115bdf3de4b6f63cdbb6ca9a83acd24f0cc1ece8d1f1963f89210342738476",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9c1d68cd7982a60d97e1e901b0808ed1f8ae5b7064ea519ddab92f95289ec813",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3604f8a8292286b75745e253e153acf5af48e4b937b13ce738668f3905021314",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Climate control air filter R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d7ef489f26c4653fab1d7cc76fa08167310974531e88c428701da1e534d0aa7b",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a9591a2a152af3f65175c8d1115c17fb214d00f390be558c64bdb9e50e04ebb3",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "2e5be13caaa27737d140e2471a5f7dbfb4bf6845e4ce25a23d6ba29216f4bbb9",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9bf7a987de3a6464cea67b0c91c8df572484b17cacc4eed8d2248353aaf3d363",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 505 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "48fd487fe2588975a7572caf1bfd7d5f65e799594c31f98f1ce22f9ca5d4b2b6",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5680f6cd9ebafa5deafc6aebb2f2656a77ba70135cbeef0235b5afec66c861a1",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6a4b4eafc6b96cac1b3e0d625f62abce92fb654f0cbb45b75578b56a1fe494f1",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 506 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c342abd1a81188cd3918c26bd9c33ace3e90f7a253ca390500e7410b790cbfed",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507: Fuel filter *4",
+    "quote": "Fuel filter *4"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507 grid (rotated) row 'Fuel filter *4': I at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Fuel filter *4 I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a705af4353970e65884a44062bbcd640f1c563e09dbc18ddbe7a1c11ada3c233",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8dcaea9361e8a1bdcb073ca79ccbd268951794fe2ba7109bd7dc24c0cef235a1",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 507 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e4ba83aa468867afe67f5b8bf711b5275064b2b2c45bb20d2675e44ff430e13d",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 508: Engine oil and filter *1",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 508 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a0fa088697eca81635a75cf311139d58d6267ee91d9c2ff793f04e4dd07623df",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 508: Automatic transmission fluid",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 508 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3a93d99dcdd8c6325eda0735a44c2c86a136acb22d0f40c09a91a87c47ad2e9d",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Drive belts *1",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fa3c6327b6ac17563d979e75daa39882b779339dcf6f24977240310435c24afe",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Drive belts *1",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Drive belts *1': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "ab9079babf6b6fd14202d9c47cad1284ac1fa6bff200344c25c304f008e1d62e",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Engine oil and engine oil filter *2",
+    "quote": "Engine oil and engine oil filter *2"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Engine oil and engine oil filter *2': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *2 R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6baf9a18a8ac549a595dfe74a59da64cfaa75d75ae3b5b2acc31be572147820e",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4b4363668d46d617f71fd7f8b231ce5eebc49c2b4b6cfe94db8ed8f59ce35b18",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 77249,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Spark plugs",
+    "quote": "Replace every 48,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 77249,
+    "interval_miles_original": 48000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Spark plugs': text cell",
+    "quote": "Replace every 48,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f42b7cf40dc0318eed4c79023e64f838e673316ab92a6ee17887abec74f03ad4",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5860f442d7a148f804affe3c1437501a0c020bbbae54349e25b4b64d69b835bc",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d1d57d0c3a64b2cb12ed512ba4ddbadbb05c92f975b4d83a30420b373886676e",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Climate control air filter R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c4c42acc93180af1b62be68c89af25da9b21fa169f16bced5868ecb475ea05d1",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Engine coolant",
+    "quote": "At first, replace at 120,000 miles or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1e1abbec5be209125ba4793360980bf02e73fb69b70079db846914e36d0d28cb",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a7ed70594a1268d24785209874d074768aec2c4f321003c941ec384d5e836029",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Engine coolant",
+    "quote": "Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 120 months. Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b533933a6dd309600062c8287cf499d8dcceaf8ed46817da9aa1c384ca325d72",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 510 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f60760b568d78fd4d5a713e9c7a9444ec91243d6418efc23e48b5af8287cf1bf",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "af38176fce446e0c90336b83fcf2b7e2719702de8b303c803c238869d8789361",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "41fbdb576e0f3244f078ebfa06b22655f7fa423b9696661fa4fce2ec6a7232c8",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1a819402548a2c5a8a9ae194f00520b4bc01f9a497bd324cfea18e990dc98e81",
+   "old": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511: Dual clutch transmission fluid",
+    "quote": "Dual clutch transmission fluid"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 511 grid (rotated) row 'Dual clutch transmission fluid': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000",
+    "quote": "Dual clutch transmission fluid I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9e9f153325ca00130569c7696e190f158a84a0d9122ff6e519a30a85d5ecce10",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512: Fuel filter *4",
+    "quote": "Fuel filter *4"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512 grid (rotated) row 'Fuel filter *4': I at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Fuel filter *4 I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "25e5d466abb9bf850a45723a8c42075501fda1805d81ee5ebaad2e96d31cdf0b",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0cd8d2eb0eadfdbc74b577cd433714386b6ab67e74ab1e4d62875a37b67aa580",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 512 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3db47cd87d156b17ed4b9d3707276dca2a2deed752281221a2c0cbe2f8f427e1",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513: Engine oil and filter *1",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8047,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 5,000 miles or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5c0b8e67d98cf0e9d794a54abc74099006d400fbd6fea5f3973e5694e7af7668",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513: Automatic transmission fluid",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6c2c991719fba190077906b9dec720e3921990b41561515ce8a8ca0717b72074",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 102998,
+    "interval_miles_original": 64000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513: Dual clutch transmission fluid",
+    "quote": "Replace every 64,000 miles"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 102998,
+    "interval_miles_original": 64000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513 severe table row 'Dual clutch transmission fluid': operation R",
+    "quote": "Replace every 64,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "45ce9373de2eaec51dd11f2b04e712d73da62c384c3fcb1a9374ab6fc316350a",
+   "old": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90123,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513: Dual clutch transmission fluid",
+    "quote": "Replace every 56,000 miles"
+   },
+   "new": {
+    "job": "dct_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata",
+     "engine": "Smartstream G2.5 T-GDi"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 90123,
+    "interval_miles_original": 56000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 513 severe table row 'Dual clutch transmission fluid': operation R",
+    "quote": "Replace every 56,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fd7e4fe7179adb7c657d40b3ae374bea446be140e5a0e27ab311d4ca5afab9f7",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Engine oil and engine oil filter *2",
+    "quote": "Engine oil and engine oil filter *2"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Engine oil and engine oil filter *2': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000/112,000/120,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000/182,000/195,000",
+    "quote": "Engine oil and engine oil filter *2 R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "4ea089504e64d9659cce64b6cf3532b0f3b31f36a16b8f96a2b5614b4800eb71",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "e6eb083692f0ad8b6cf8995d6e12a851d77e5b95bd1f4353bf80575e912771cf",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000/120,000 miles; months 36/72/108/144/180; km 39,000/78,000/117,000/156,000/195,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I I R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5b4b55cdac621e49e5893ffd0e757c6d0f1dd92077489b6d1c874422fcd53d75",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 160934,
+    "interval_miles_original": 100000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Spark plugs",
+    "quote": "Replace every 100,000miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 160934,
+    "interval_miles_original": 100000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Spark plugs': text cell",
+    "quote": "Replace every 100,000miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c798c1faf13411c4ecc8126d320aa332be08eafbb4dfba0eaaa6cf9e26c37416",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Rotate tires",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dc4191d64150c9e2af84a5a880d0881b16f864ac1db410357b9766f66146a053",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12875,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 467: Rotate tires",
+    "quote": "Rotate tires every 8,000 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12875,
+    "interval_miles_original": 8000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 467 grid (rotated) row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 8,000 miles"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "17b137a468b0be0d3810d54f711254659c93f4398d12762d444a1135ae4f2542",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Rotate Tires (includes tread wear inspection and tire pressure check)",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Rotate Tires (includes tread wear inspection and tire pressure check)': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c523a8529e08f9fedb8ed117955b1366b3f6421c7245b755882f80ba2bcd6bcd",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Climate control air filter",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Climate control air filter': text cell",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3c6fa96a5dca943a297d1fae14b73986abc20a63443caf2dfc0c4ec5ff49f5cd",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Climate control air filter",
+    "quote": "Climate control air filter"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Climate control air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000/112,000 miles; months 24/48/72/96/120/144/168; km 26,000/52,000/78,000/104,000/130,000/156,000/182,000",
+    "quote": "Climate control air filter R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "f4dd9bf69c2abf3037a56de0458984d3c5c32a2c4cc4db6439c088e6b06c5fab",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Engine coolant / Inverter coolant",
+    "quote": "At first, replace at 120,000 miles or 10 years"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6c4a0c56c54fad59ea0ba04cd4c0d5c7284f2e882a6a16567c3f1205a771263e",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Engine coolant / Inverter coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c93bef4055cce378006c75e71c9e9a5f62cf3f5238dd0fbfee8dc673f3ea6302",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457: Engine coolant / Inverter coolant",
+    "quote": "after that, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fe61a11c68556073d543b40ab30d34babd6a9c41c14841b8bef099299de48168",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481: Engine coolant / Inverter coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "0b467785a9a4d768d486779638e5edd9158a73a4b3bb9805450d1e43610cc366",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "9bb603aa9c04b2f4a444e26dfec5741ace5cda7842fd94418ca5a5e7cd561446",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "bdf194221231346ed7808e4a2fb1e2aeadf62dfc1d7b2902e404b45aee4e9921",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2020,
+     2021
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : after that, replace every 30,000 miles or 24 months"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "f9dc6877ce7f8e10c0dda637caf9b743bb6cd68d1d3d1e0b65e0f27615d7bd6f",
+   "new": {
+    "job": "inverter_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 481 grid (rotated) row 'Engine coolant / Inverter coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "bb81dc97dcd4b5ff1751f0452a690743a76df866a3916edfec7c49c903ff0857",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000/112,000/120,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000/182,000/195,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "1fc180dc2160654f9d83d0d62ea322cfe1644adcd1494855a6d49caef4823617",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000/112,000/120,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000/182,000/195,000",
+    "quote": "Suspension mounting bolts I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7e296afd4a23f79515cf7fdaa4a1f3826da793cf2c3b4db0e92267001b620be5",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 458: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 458 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Exhaust pipe and muffler': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8cdbfbd32922b813679fe07e2b19604d0950b227e43f749f30bede4231ff1a74",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 482 grid (rotated) row 'Exhaust pipe and muffler': I at 16,000/32,000/48,000/64,000/80,000/96,000/112,000 miles; months 24/48/72/96/120/144/168; km 26,000/52,000/78,000/104,000/130,000/156,000/182,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c2384cae26ef1f7757ffc0dd443b2a0e07fdb4cde5d28896d1a652bb922c8224",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459: Fuel filter *3",
+    "quote": "Fuel filter *3"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Fuel filter *3': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Fuel filter *3 I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9dae8ac262da5d399590e09146c45be38219158d250e808db98ae92528e34120",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483: Fuel filter *4",
+    "quote": "Fuel filter *4"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483 grid (rotated) row 'Fuel filter *4': I at 16,000/32,000/48,000/64,000/80,000/96,000/112,000 miles; months 24/48/72/96/120/144/168; km 26,000/52,000/78,000/104,000/130,000/156,000/182,000",
+    "quote": "Fuel filter *4 I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "af65430f662b532a0de08ee185357fcbe098b972515f34ea45b93d9cc0c936ff",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459: Brake fluid",
+    "quote": "Inspect every 7,500 miles (12,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Brake fluid': text cell",
+    "quote": "Inspect every 7,500 miles (12,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b5611654acf0f4b0d7f24d06ffaa09d4c7781a1adb7333e67d129b85222cecb6",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c0972dbd855f813dc94dd03a801b20e611cda069379d17ed68e00d81f64bb0d9",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459: Brake fluid",
+    "quote": "Replace every 60,000 miles (96,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459 grid (rotated) (header 'Miles' / 'Km' without 'x 1,000': thousands) row 'Brake fluid': text cell",
+    "quote": "Replace every 60,000 miles (96,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "7a542dc7c7ef3757e054db277ba825ccc81a2096fc53219a6935278b3b40af1a",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 483 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "076440f10d806a30f5fa47682d7b88a6433b0ffd05ea0d3fb415d7e0a8d11e23",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 460: Engine oil and filter",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2020
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6000,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 460 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,750 miles (6,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "802481ed4167fd67720d78dba95a3a435ba3ec887d8af5c4f75c3a74ff83a2f5",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 484: Engine oil and filter *1",
+    "quote": "Every 5,000 miles (8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 484 severe table row 'Engine oil and filter *1': operation R",
+    "quote": "Every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d1c5ce481e31472e93964c366babfa0afb41bfe0da984482927464abdd7cdc79",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 461: Automatic transmission fluid",
+    "quote": "Every 60,000 miles (96,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2020,
+     2023
+    ],
+    "applicability": {
+     "edition": "sonata hybrid"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 461 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles (96,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  }
+ ],
  "counts": {
-  "replaced_own_maintenance": 87,
-  "replaced_own_te": 1531,
-  "replaced_own_issues": 84,
   "raw_documents_seen": 117,
-  "te_new_GENERATION": 824,
-  "te_new_ENGINE": 8,
-  "te_new_CONFIGURATION": 694,
+  "te_existing": 1526,
   "configurations": 54,
   "configurations_research_only": 39,
   "configurations_linked": 15,
-  "issues_new": 84,
-  "maintenance_new": 87
+  "issues_existing": 84,
+  "maintenance_corrected": 87,
+  "maintenance_existing": 87,
+  "maintenance_new": 4
  },
- "finished_at": "2026-10-02T15:57:24+00:00"
+ "finished_at": "2026-10-04T13:02:43+00:00"
 }

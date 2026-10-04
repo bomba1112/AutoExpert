@@ -1,0 +1,3820 @@
+{
+ "date": "2026-10-04",
+ "reason": "owner decision 2026-10-04: every maintenance row must be confirmed by the text of its source (scripts/verify_maintenance_source.py); rows the source does not confirm are hidden (HIDDEN_CONFLICT), rows a corrected parser no longer produces are removed, corrected values replace the old ones",
+ "mode": "rehearsal",
+ "counts": {
+  "hidden": 58
+ },
+ "changes": [
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "5edf9b218c5a2b6ec41818f0b50055ec870e7fb036c70d1dc3a8b85a4fe7141d",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Engine oil and engine oil filter *1': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *1 RRRRRRRRRRRRR"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Engine oil and engine oil filter *1': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *1 RRRRRRRRRRRRR"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "684f94516311d9461ab5b85dc8b41193cc889ac23f4b15a96bab5fd7f1920ba8",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "317e4412f9271b2f18300d1f9b67224bcb75d84036f9fa1abf2a1e7cd1867174",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "df853fb62fe38a378614163458ae276b3b0b368ab4448837eced6e6f5fce8f2a",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "a99240667d081e215be000dfac150cd1fddd0cf6153a3609d8058044a2b4f72f",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Spark plugs *4': text cell",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Spark plugs *4': text cell",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "fd03facb0f9b941c37e879b2eedd91654b5a5c9105e849c122dd78600e2f30cd",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "8f7e0533f8395b16122d9a57e078b5e7b2c5e7ee12a243edb3b74d72909e8ab6",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "14b651ac0f8b140554b7500459aa021ace1d5aaaa713ba671470fe312b3ffafa",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition IIIIIIIIIIIII"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition IIIIIIIIIIIII"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "118d96593870c821b1d4b1486e7f588f7c9aa79914d9e1f2d90c7b4b39b932d6",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "56cdf3a71186f2e0ede8a00701ad2287ba87beb6939edb4c4f4225106b71145d",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "af7e15a13211caf32f31e691da79142e467372a967af223b806b7309e3bb3509",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts IIIIIIIIIIIII"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts IIIIIIIIIIIII"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "3f8bb6ddc0c238cb3cb40d4757af61d2bd4350207863c1fcc43269751eb8906a",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles (25,000 km) or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles (25,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "64cf4f70749655bf4727c4a085d204d5272473bd6bdd2bd06e21066d34537b1e",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler IIIIIIIIIIIII"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler IIIIIIIIIIIII"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "8bd3c2f7deefb61eb22e70c436ceba04c41548359c0b239412b4e073ed647712",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Rear differential oil *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000",
+    "quote": "Rear differential oil *6 III"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Rear differential oil *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000",
+    "quote": "Rear differential oil *6 III"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "0b4844d4589900230a18bf00197cebc1254fe7d2050ef4b24c477cd4c717b86c",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 566 severe table row 'Engine oil and engine oil filter*1': operation R",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 566 severe table row 'Engine oil and engine oil filter*1': operation R",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "98dddb539088866688d6c2ac1d9b9ff6225497feae03953a926182179e1ed1ca",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "de414e9f1872bf88320b5a60e208e985b7946dc3ea733833023e6f41255e127c",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Rear differential oil': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Rear differential oil': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "tucson",
+   "change": "updated",
+   "natural_key": "171bebdd8b9a01d5dad874a0f33cefdf7ba5b3093189530f5e506f3d7c68e558",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "66f9c2872f37577b009844fd74defab1b96363935f6f5c34167ac4101e476f3b",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine oil and engine oil filter': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine oil and engine oil filter': R at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "632c2f0738a567f73c93efc1e4ea429a7130c8f307cf9dcd635915dfa8b27185",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12070,
+    "interval_miles_original": 7500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 7,500 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "1f2c443bb0cd9115198b186c9afed5faf63ac1d623be040bcc49cbfa2c0e89f0",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Climate control air filter (for evaporator and blower unit)': text cell",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Climate control air filter (for evaporator and blower unit)': text cell",
+    "quote": "Replace every 15,000 miles or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "ce689c6a3f993e7bc12460c313454da145de5712b35900fba2cfc5ab0cc23ad8",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Air cleaner filter': R at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "c6027fd82bdd79188ff04e346c63d37872baf02e9ddc8d90fc02e91341126de2",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156911,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 97,500 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156911,
+    "interval_miles_original": 97500,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 97,500 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "9e5847c8294b5dbd09bdee5a6f61403eeadf0a40dc032eed8ad0ce59a75ae48e",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "ddd8449ec55ec71deec9fe74c686ac8c8fe0650852895a98116fbbe5b93b3512",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24140,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 15,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "8a04d2f6767a01438bce94a76d44d00514149bd3471076225cb5547e69c8a2c2",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "49d5b160ba521c11fe42c219151584f00accd5a67e523b24298abfab3fb3af3d",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "f13e405ffeeca6ec68c37212f414f891c805995487a558ca98d15bf33f38f9b8",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Battery condition': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 450 grid row 'Battery condition': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "00f1d91a6179c5cb3fe524f9f1072e91b1b7451596a35cbc1ac8fdf090bd9790",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "9e46d491dee852b6d1a77714ff39341939ddda29f78dfa8604d86f25445b0f3e",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Exhaust pipe and muffler': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 12000,
+    "interval_miles_original": 7500,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Exhaust pipe and muffler': I at 7,500/15,000/22,500/30,000/37,500/45,000/52,500/60,000/67,500/75,000/82,500/90,000/97,500/105,000/112,500 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 12,000/24,000/36,000/48,000/60,000/72,000/84,000/96,000/108,000/120,000/132,000/144,000/156,000/168,000/180,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "2d9e55c3554a838ff8db83e718a3b549d8e9f05735d72575da80d2785b1643d5",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Rear differential oil (AWD) *4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Rear differential oil (AWD) *4 I I I"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Rear differential oil (AWD) *4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Rear differential oil (AWD) *4 I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "bc113039d5af2b7c33f34e1560b3f6f06937d4d55cadf702e70e0123ce376430",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Transfer case oil (AWD)*4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Transfer case oil (AWD)*4 I I I"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48000,
+    "interval_miles_original": 30000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 451 grid row 'Transfer case oil (AWD)*4': I at 30,000/60,000/90,000 miles; months 48/96/144; km 48,000/96,000/144,000",
+    "quote": "Transfer case oil (AWD)*4 I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "d157df884bc939bb28804d49cfb2abeeb56ee8aaeed30801f4dc8fd9bb186726",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 452 grid row 'Fuel filter *5': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Fuel filter *5 I I I I I I I"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 452 grid row 'Fuel filter *5': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Fuel filter *5 I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "a88095cd924d973883951da8d0edd44763589edc1c331f31cff2d037b94cc5e0",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 452 grid row 'Brake fluid': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 24000,
+    "interval_miles_original": 15000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 452 grid row 'Brake fluid': I at 15,000/30,000/45,000/60,000/75,000/90,000/105,000 miles; months 24/48/72/96/120/144/168; km 24,000/48,000/72,000/96,000/120,000/144,000/168,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "4f520eae54e82464bd44150fc37c5b32741af488857332899f1c9f171b717710",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 453 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,750 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 6035,
+    "interval_miles_original": 3750,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 453 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,750 miles or 6 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "7473bcd9bb2a518efed800bf57f344c2cb596a2a51cef08f9918079839259677",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 453 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 453 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "dcf4225418b9020f5d68ec7359fea11710c436e75212eac9012e8eda46adbac4",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 454 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 454 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "82078c1f08b0ca4008b7ec4100e8b0d77efdc0cff3fea9961e88ddeb8b03b6bc",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 454 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.4 GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 454 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "33ac929b1d290e6546f2b698b585b9889866f77b4c64bad81f59b2b1ea52d0fc",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine oil and engine oil filter': R at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine oil and engine oil filter': R at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Engine oil and engine oil filter R R R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "67d6863551c5127abaa85d0c1ee4bd3d05b9632648ad54bcfcb4f7f56d1bd9ad",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 9656,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 6,000 miles"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 9656,
+    "interval_miles_original": 6000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Rotate tires': text cell",
+    "quote": "Rotate tires every 6,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "3d8b884519acf15bb3a65fc68a2cb986458275d23d37398156f002f2fa536a3e",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Climate control air filter (for evaporate and blower unit)': text cell",
+    "quote": "Replace every 12,000 miles or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Climate control air filter (for evaporate and blower unit)': text cell",
+    "quote": "Replace every 12,000 miles or 12 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "bcde92a1686dcf1e765b88ac171e2113b1912bdfaa3f4182e74af88de82d4265",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Air cleaner filter': R at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Air cleaner filter': R at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Air cleaner filter I I I R I I I R I I I R I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "a1932cbb04e28c713d5d305841277b8a3c09d41eca14de56453a0580d8efc9eb",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 67592,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 42,000 miles"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 67592,
+    "interval_miles_original": 42000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Spark plugs': text cell",
+    "quote": "Replace every 42,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "10cda0fee94801e76679b838d3d166873d4c9ca5e506fc11d75f9936c907c2d1",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "e613d5a34ff4e3a9adecde166c79d68348a9a81d4e0839e04fa9ec568df365c3",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 19312,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 60,000 miles or 72 months. Thereafter, inspect every 12,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "33d8176bbcf7ffe1191eff9e5720cb7656e57b7176d0e2aeb4c9e5edb88643c9",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 193121,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "d1b8fe9e021a2a8657b8835b378b989989390548888f4cbbf8ef23c73592fc99",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 48280,
+    "interval_miles_original": 30000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 455 grid row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles or 10 years : Thereafter, replace every 30,000 miles or 24 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "96a2b6faf0e6aacbc84004cbe2d8cb7b25e86b0230ec66e879ead5790f736058",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 456 grid row 'Battery condition': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 456 grid row 'Battery condition': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Battery condition I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "04458a89b3133353657f8303b0dbc45dbc3384ec8df54c5013225417799d5b9a",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 456 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 456 grid row 'Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Steering gear rack, linkage and boots/ lower arm ball joint, upper arm ball joint I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "7eb0a93fc90752fd6cc9189ba1292cb059cc7928a3d966764f66d222a183a993",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Exhaust pipe and muffler': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 10000,
+    "interval_miles_original": 6000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Exhaust pipe and muffler': I at 6,000/12,000/18,000/24,000/30,000/36,000/42,000/48,000/54,000/60,000/66,000/72,000/78,000/84,000/90,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156/168/180; km 10,000/20,000/30,000/40,000/50,000/60,000/70,000/80,000/90,000/100,000/110,000/120,000/130,000/140,000/150,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "fc3ea62422511dba64a482cd3ca2649b43712aa643bbd42dc79a1aa0ea20a0ae",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Rear differential oil (AWD) *4 I I I"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Rear differential oil (AWD) *4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Rear differential oil (AWD) *4 I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "f29d57f50117bc9706b78fc51a3c8942f3a143700508ccc7dcc5a920bc33a7d7",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Transfer case oil (AWD)*4 I I I"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 40000,
+    "interval_miles_original": 24000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Transfer case oil (AWD)*4': I at 24,000/48,000/72,000 miles; months 48/96/144; km 40,000/80,000/120,000",
+    "quote": "Transfer case oil (AWD)*4 I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "b692ce61ffc079ccb173d506c0e97822f04135137a73949ff4428a69d341c7a5",
+   "old": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Fuel filter *5': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Fuel filter *5 I I I I I I I"
+   },
+   "new": {
+    "job": "fuel_filter",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Fuel filter *5': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Fuel filter *5 I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "ee7c97d870bfdaec78901f0122ce0024b12bc23e8034f2d33ddb9e6029e92f42",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Brake fluid': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 20000,
+    "interval_miles_original": 12000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 457 grid row 'Brake fluid': I at 12,000/24,000/36,000/48,000/60,000/72,000/84,000 miles; months 24/48/72/96/120/144/168; km 20,000/40,000/60,000/80,000/100,000/120,000/140,000",
+    "quote": "Brake fluid I I I I I I I"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "c826575e501c1694506f43d07d17b3e896d6e87ec62dc9e1e05be625e73078a1",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 4828,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 458 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,000 miles or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 4828,
+    "interval_miles_original": 3000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 458 severe table row 'Engine oil and filter': operation R",
+    "quote": "Every 3,000 miles or 6 months"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "76d7c57d79d5d836399166d14e573dfc97690880fbf4c44c2d2e40edecac429c",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 458 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96561,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 458 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Every 60,000 miles"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "d36d3c742c168f8817b316cf51ca1f19e53d650024a44b934ba799520f70bc8a",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 459 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "line": "santa-fe",
+   "change": "updated",
+   "natural_key": "7caac932e9d72f37aaba87f3b56031329b6e0f9f5421d8c5b9f9e7c91a5df553",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 459 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2018,
+     2018
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "santa fe",
+     "engine": "2.0 T-GDI"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 75000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 459 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Every 75,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  }
+ ]
+}

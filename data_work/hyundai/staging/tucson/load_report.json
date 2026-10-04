@@ -17,20 +17,2626 @@
  "existing_vs_new": [],
  "stale": [],
  "dry_run": false,
- "started_at": "2026-10-02T15:57:36+00:00",
+ "started_at": "2026-10-04T13:02:52+00:00",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
+ "maintenance_corrections": [
+  {
+   "change": "updated",
+   "natural_key": "a7c9c8f77a1d76bff18d0f2b69924fcc69801f3aeceba981e78e491b0a8be772",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572: Engine oil and engine oil filter *1",
+    "quote": "Engine oil and engine oil filter *1"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572 grid (rotated) row 'Engine oil and engine oil filter *1': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *1 R R R R R R R R R R R R R"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "cc495d7615de3e53a3fa11260cbe0da245603a722acfc3105ee9137f29c412ac",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572: Drive belts *2",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "6f4a880e2cff9eeb1bdfba069236fb064e790c8fb23d5838bbe8c1410fd09954",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572: Drive belts *2",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 572 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "b9e38c404ac75b019cd31351d68d5ec5a108c28c191b8ab22b9921b0442280fa",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 573: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 573 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "c10c6e4fcd9eda748b4a7e5f53fcdeaa398263c11046d33511c32e58cc0773fb",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 573: Spark plugs *4",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 573 grid (rotated) row 'Spark plugs *4': text cell",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "dd933edc1c0ba74ae1b2de5dd5b8189e09d82cc288c6e5ff302c1400e74e82e4",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3f1321897b5097a928085d29baf6dddc258e76293b0eed3545260281470a18ff",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "357b8eb30e826c96c86bc32394e7193dbd9045218a1ab3e1fc7924342d50b519",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition I I I I I I I I I I I I I"
+   },
+   "fields": [
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "grid"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "95af15737c0991e5d7e61e3307944f31c362033813018fa3c1e3fdfe731f9533",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "9c3226f9a687211b52cfedfaee6fda9cfe7b38a30cd8e4c7e92fdb5bb6f446cb",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 574 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "d64cb4391b296bfdb962e40a4ac8b63383cd9640e943be6abd08dfad7c70dfe0",
+   "old": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575: Rotate Tires (includes tread wear inspection and tire pressure check)",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "tire_rotation",
+    "action": "ROTATE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575 grid (rotated) row 'Rotate Tires (includes tread wear inspection and tire pressure check)': text cell",
+    "quote": "Rotate tires every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "1c29e64bb3824514b9d33195218cd0b0fa3d7bc649dd533eca9ab25dcbe09527",
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts I I I I I I I I I I I I I"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "3851b99904d3cc40daaf7ecff57866eb54bcd505a2db09c6843bf8d177244ec8",
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575 grid (rotated) row 'Cabin air filter': R at 16,000/32,000/48,000/64,000/80,000/96,000 miles; months 24/48/72/96/120/144; km 26,000/52,000/78,000/104,000/130,000/156,000",
+    "quote": "Cabin air filter R R R R R R"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "2b7ffc738370e8fa19cc2180c6bdc8a888a07ccaad01f48debe5007db51c6750",
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler I I I I I I I I I I I I I"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "8f68c45e5148d5a7d699d70171f56abb48797ca263925343106b2c3f1f8574b3",
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575 grid (rotated) row 'Rear differential oil *5': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000",
+    "quote": "Rear differential oil *5 I I I"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "519e9d4de6ddbdfb6d4947bc64e967016e502b48eccac279d082d30c84ee982b",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 576: Engine oil and engine oil filter*1",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 576 severe table row 'Engine oil and engine oil filter*1': operation R",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0ab0fa526b58a48316ffc9a62c89dcf7c07f7fe3d16c9615eea4eb7a04492cbb",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577: Automatic transmission fluid",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "fields": [
+    "locator"
+   ],
+   "verification": {
+    "verdict": "CONFIRMED",
+    "method": "text"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "95df1ca38a0c102021922a34a45dfe8d0af28b1cf714b83293e7a655cdc44ccc",
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577 severe table row 'Rear differential oil (AWD)': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "34292997b24de636e800814174a390648016791cbd8965d5118e3cb61f8cd475",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "5edf9b218c5a2b6ec41818f0b50055ec870e7fb036c70d1dc3a8b85a4fe7141d",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562: Engine oil and engine oil filter *1",
+    "quote": "Engine oil and engine oil filter *1"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Engine oil and engine oil filter *1': R at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Engine oil and engine oil filter *1 RRRRRRRRRRRRR"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "684f94516311d9461ab5b85dc8b41193cc889ac23f4b15a96bab5fd7f1920ba8",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562: Drive belts *2",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 72,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "317e4412f9271b2f18300d1f9b67224bcb75d84036f9fa1abf2a1e7cd1867174",
+   "old": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 562: Drive belts *2",
+    "quote": "Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "accessory_drive_belt",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 562 grid (rotated) row 'Drive belts *2': text cell",
+    "quote": "At first, inspect at 48,000 miles (78,000 km) or 72 months. Thereafter, inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "df853fb62fe38a378614163458ae276b3b0b368ab4448837eced6e6f5fce8f2a",
+   "old": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 563: Air cleaner filter",
+    "quote": "Air cleaner filter"
+   },
+   "new": {
+    "job": "engine_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 36,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Air cleaner filter': R at 24,000/48,000/72,000/96,000 miles; months 36/72/108/144; km 39,000/78,000/117,000/156,000",
+    "quote": "Air cleaner filter I I R I I R I I R I I R I"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "a99240667d081e215be000dfac150cd1fddd0cf6153a3609d8058044a2b4f72f",
+   "old": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 563: Spark plugs *4",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "new": {
+    "job": "spark_plugs",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 563 grid (rotated) row 'Spark plugs *4': text cell",
+    "quote": "Replace every 96,000 miles (156,000 km)"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "fd03facb0f9b941c37e879b2eedd91654b5a5c9105e849c122dd78600e2f30cd",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564: Engine coolant",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 200000,
+    "interval_miles_original": 120000,
+    "interval_months": 120,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "8f7e0533f8395b16122d9a57e078b5e7b2c5e7ee12a243edb3b74d72909e8ab6",
+   "old": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564: Engine coolant",
+    "quote": "After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "new": {
+    "job": "engine_coolant",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 39000,
+    "interval_miles_original": 24000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Engine coolant': text cell",
+    "quote": "At first, replace at 120,000 miles (200,000 km) or 120 months. After that, replace every 24,000 miles (39,000 km) or 24 months"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "14b651ac0f8b140554b7500459aa021ace1d5aaaa713ba671470fe312b3ffafa",
+   "old": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564: Battery condition",
+    "quote": "Battery condition"
+   },
+   "new": {
+    "job": "battery",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Battery condition': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Battery condition IIIIIIIIIIIII"
+   },
+   "fields": [
+    "display_level",
+    "locator",
+    "quote"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "118d96593870c821b1d4b1486e7f588f7c9aa79914d9e1f2d90c7b4b39b932d6",
+   "old": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564: Brake fluid",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Inspect every 8,000 miles (13,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "56cdf3a71186f2e0ede8a00701ad2287ba87beb6939edb4c4f4225106b71145d",
+   "old": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 564: Brake fluid",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "new": {
+    "job": "brake_fluid",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 78000,
+    "interval_miles_original": 48000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 564 grid (rotated) row 'Brake fluid': text cell",
+    "quote": "Replace every 48,000 miles (78,000 km) or 48 months"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "af7e15a13211caf32f31e691da79142e467372a967af223b806b7309e3bb3509",
+   "new": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Suspension mounting bolts': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Suspension mounting bolts IIIIIIIIIIIII"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "3f8bb6ddc0c238cb3cb40d4757af61d2bd4350207863c1fcc43269751eb8906a",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Cabin air filter",
+    "quote": "Replace every 16,000 miles (25,000 km) or 12 months"
+   },
+   "new": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 25000,
+    "interval_miles_original": 16000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Cabin air filter': text cell",
+    "quote": "Replace every 16,000 miles (25,000 km) or 12 months"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "64cf4f70749655bf4727c4a085d204d5272473bd6bdd2bd06e21066d34537b1e",
+   "new": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Exhaust pipe and muffler': I at 8,000/16,000/24,000/32,000/40,000/48,000/56,000/64,000/72,000/80,000/88,000/96,000/104,000 miles; months 12/24/36/48/60/72/84/96/108/120/132/144/156; km 13,000/26,000/39,000/52,000/65,000/78,000/91,000/104,000/117,000/130,000/143,000/156,000/169,000",
+    "quote": "Exhaust pipe and muffler IIIIIIIIIIIII"
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "8bd3c2f7deefb61eb22e70c436ceba04c41548359c0b239412b4e073ed647712",
+   "new": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 565 grid (rotated) row 'Rear differential oil *6': I at 32,000/64,000/96,000 miles; months 48/96/144; km 52,000/104,000/156,000",
+    "quote": "Rear differential oil *6 III"
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "0b4844d4589900230a18bf00197cebc1254fe7d2050ef4b24c477cd4c717b86c",
+   "old": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 566: Engine oil and engine oil filter*1",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "new": {
+    "job": "engine_oil_and_filter",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 8000,
+    "interval_miles_original": 5000,
+    "interval_months": 6,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 566 severe table row 'Engine oil and engine oil filter*1': operation R",
+    "quote": "Replace every 5,000 miles (8,000 km) or 6 months"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "98dddb539088866688d6c2ac1d9b9ff6225497feae03953a926182179e1ed1ca",
+   "old": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567: Automatic transmission fluid",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "new": {
+    "job": "transmission_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 96000,
+    "interval_miles_original": 60000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Automatic transmission fluid': operation R",
+    "quote": "Replace every 60,000 miles (96,000 km)"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "updated",
+   "natural_key": "de414e9f1872bf88320b5a60e208e985b7946dc3ea733833023e6f41255e127c",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567: Rear differential oil",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "new": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Rear differential oil': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   },
+   "fields": [
+    "display_level",
+    "locator"
+   ],
+   "verification": {
+    "verdict": "UNCONFIRMED",
+    "reasons": [
+     "audit:source_generation_mismatch"
+    ]
+   }
+  },
+  {
+   "change": "added",
+   "natural_key": "171bebdd8b9a01d5dad874a0f33cefdf7ba5b3093189530f5e506f3d7c68e558",
+   "new": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "drive": "AWD",
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "HIDDEN_CONFLICT",
+    "confidence": "HIGH",
+    "locator": "page 567 severe table row 'Transfer case oil (AWD)': operation R",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "049b840e01d4f1fc8a3c584dfc873ddbd025f512568ef5b46e0364385a0fd9e1",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 472: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "2b16f2dffe3fffb13cfe50bf30275326a8351453c2aeed9fd882029030024189",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 472: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "77f53152e51eeb5e0c806b5682d34853fffc0e238c5eeee807405b43455e433c",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 472: Cabin air filter",
+    "quote": "Cabin air filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "a36f29989eadb7a7722962a2acccca8f3a30e5f033c39d52f5c7cd49f8b19fd0",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 472: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "a75e4d52bea4242f5ee576788db3dff58c469a5c92cedcd77dae25124e26b02c",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 472: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "d1b71d5652d3ccb1b4edf88e3ec31c90d9134df3304985a636b722c35469bac8",
+   "old": {
+    "job": "differential_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577: Rear differential oil (AWD)",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "21d7b603b8b423f1abf77a3c22bb5c4facbf3644ac883c3e8d7e35f3408ba02f",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 577: Transfer case oil (AWD)",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "020cf8ea118a29f95c42bd3c447d7b9cb7dbf779f07d449c6ad1b3e8edbfc2d9",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "6805e07fa6d53f717d191f4f376948f19e827c82ffd4af2852efe125671833fe",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "85d22dbab76b91e6d61386ebd9f26f64b5eb03095119b31f563295c9e8d25749",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575: Cabin air filter",
+    "quote": "Cabin air filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "b84b202180d788c9ec3ec4e6d0407c5b0b49856ca6090474a884d1719271de02",
+   "old": {
+    "job": "cabin_air_filter",
+    "action": "REPLACE",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 26000,
+    "interval_miles_original": 16000,
+    "interval_months": 24,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Cabin air filter",
+    "quote": "Cabin air filter"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "cd1eb261be3ed68589ca485f79193293c8456170c20006231cd0177814729119",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "5c8a634c06b753fa295d010041c26a0bad8699e29903a5dcdacbc881a57b73d1",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "fcfe125365edefc7054903281ba74367412f3562c4fe35c04bcf49a8a4ee0ff0",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2022,
+     2022
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 575: Rear differential oil *5",
+    "quote": "Rear differential oil *5"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "e9143058b98af9f32e877b5935bdfc145d1c6cebaacf4341dea04c50fbcb18df",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "EVERY",
+    "years": [
+     2024,
+     2024
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 52000,
+    "interval_miles_original": 32000,
+    "interval_months": 48,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 490: Rear differential oil *6",
+    "quote": "Rear differential oil *6"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "8b36d55db4b0642dfe1541e150d23536a71e958209ed0f593da28b994fe2eda6",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "436980b86be3fb055c3404467969d98968fc2bd6599751e8c12171a0c6a1e9b8",
+   "old": {
+    "job": "front_suspension",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Suspension mounting bolts",
+    "quote": "Suspension mounting bolts"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "135a105ab45746edffe4c59840f66673ea9a612e526f7edbc34c40fb30eba28b",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "4b75045f428c9021ecfd5ef9f00f298ed24a267d397302f63284f52ebf0cd722",
+   "old": {
+    "job": "exhaust_system",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "SUBSEQUENT",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 13000,
+    "interval_miles_original": 8000,
+    "interval_months": 12,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Exhaust pipe and muffler",
+    "quote": "Exhaust pipe and muffler"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "f548e92753cb61f407b41bed7e09f5124fe1f05a12d6e6c686a0208c305e6e0f",
+   "old": {
+    "job": "differential_fluid",
+    "action": "INSPECT",
+    "condition": "NORMAL",
+    "occurrence": "FIRST",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 156000,
+    "interval_miles_original": 96000,
+    "interval_months": 144,
+    "rule": "WHICHEVER_FIRST",
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 565: Rear differential oil *6",
+    "quote": "Rear differential oil *6"
+   }
+  },
+  {
+   "change": "removed",
+   "natural_key": "4fde7923053fa27a1dd15a6c540992352a2bbaf42327edc9a36393e0a44a68ca",
+   "old": {
+    "job": "transfer_case_fluid",
+    "action": "REPLACE",
+    "condition": "SEVERE",
+    "occurrence": "EVERY",
+    "years": [
+     2021,
+     2021
+    ],
+    "applicability": {
+     "edition": "tucson"
+    },
+    "engine": null,
+    "schedule_system": "FIXED_INTERVAL",
+    "interval_km": 120000,
+    "interval_miles_original": 72000,
+    "interval_months": null,
+    "rule": null,
+    "max_interval_km": null,
+    "max_interval_months": null,
+    "display_level": "FACT",
+    "confidence": "HIGH",
+    "locator": "page 567: Transfer case oil (AWD)",
+    "quote": "Replace every 72,000 miles (120,000 km)"
+   }
+  }
+ ],
  "counts": {
-  "replaced_own_maintenance": 48,
-  "replaced_own_te": 1129,
-  "replaced_own_issues": 62,
   "raw_documents_seen": 90,
-  "te_new_GENERATION": 502,
-  "te_new_CONFIGURATION": 630,
+  "te_existing": 1132,
   "configurations": 54,
   "configurations_research_only": 34,
   "configurations_linked": 20,
-  "issues_new": 62,
-  "maintenance_new": 48
+  "issues_existing": 62,
+  "maintenance_corrected": 27,
+  "maintenance_existing": 27,
+  "maintenance_new": 10,
+  "maintenance_stale_deleted": 21
  },
- "finished_at": "2026-10-02T15:57:43+00:00"
+ "finished_at": "2026-10-04T13:02:58+00:00"
 }
