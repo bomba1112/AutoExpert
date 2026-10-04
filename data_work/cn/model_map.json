@@ -30,8 +30,9 @@
   "Toyota Corolla Cross Hybrid (Китай, 卡罗拉锐放双擎)": {"make": "Toyota", "model": "Corolla Cross", "sub_brand": null, "aliases": ["Corolla Cross Hybrid", "卡罗拉锐放"]}
  },
  "source_display": {
-  "_doc": "Display level by source host (owner decision 2026-10-04: sohu -> FACT; xchuxing, carnewschina, Wikipedia -> SECONDARY_NOTE). Hosts the owner has not ruled on default to SECONDARY_NOTE.",
-  "FACT": ["portal.auto.sohu.com", "db.auto.sohu.com"],
+  "_doc": "Display level by source (owner decisions 2026-10-04): sohu config tables, autohome config tables (paths /config/ and /spec/) and SAMR (samr.gov.cn) -> FACT; xchuxing, carnewschina, Wikipedia and every other source (autohome news / ask pages included) -> SECONDARY_NOTE. Owner reviews (autohome club k.autohome.com.cn, drom, kolesa) are known_issues with OWNER_REPORTS, never facts.",
+  "FACT": ["portal.auto.sohu.com", "db.auto.sohu.com", "www.samr.gov.cn", "samr.gov.cn"],
+  "FACT_URL_PREFIXES": ["https://car.autohome.com.cn/config/", "https://www.autohome.com.cn/config/", "https://www.autohome.com.cn/spec/", "https://car.autohome.com.cn/spec/"],
   "SECONDARY_NOTE": ["www.xchuxing.com", "carnewschina.com", "data.carnewschina.com", "en.wikipedia.org"],
   "default": "SECONDARY_NOTE"
  }
