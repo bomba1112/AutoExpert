@@ -2,19 +2,21 @@
  "make": "toyota",
  "mode": "live",
  "db": "C:\\Users\\jalil\\OneDrive\\Desktop\\AUTO_EXPERT\\STAGE6_1\\autoexpert.db",
- "started_at": "2026-10-03T14:24:09+00:00",
+ "started_at": "2026-10-04T13:09:10+00:00",
  "replace_own": [],
  "lines": {
   "toyota/corolla": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 107,
-    "te_existing": 1601,
+    "raw_documents_seen": 105,
+    "te_existing": 1596,
+    "te_new_GENERATION": 9,
     "configurations": 59,
     "configurations_research_only": 57,
     "configurations_linked": 2,
-    "issues_existing": 44
+    "issues_existing": 44,
+    "te_stale_deleted": 5
    },
    "generations": [
     {
@@ -33,12 +35,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 113,
-    "te_existing": 1395,
+    "raw_documents_seen": 109,
+    "te_existing": 1374,
+    "te_new_GENERATION": 25,
     "configurations": 38,
     "configurations_research_only": 36,
     "configurations_linked": 2,
-    "issues_existing": 66
+    "issues_existing": 66,
+    "te_stale_deleted": 21
    },
    "generations": [
     {
@@ -61,12 +65,14 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 99,
-    "te_existing": 1526,
+    "raw_documents_seen": 90,
+    "te_existing": 1511,
+    "te_new_GENERATION": 15,
     "configurations": 49,
     "configurations_linked": 6,
     "configurations_research_only": 43,
-    "issues_existing": 64
+    "issues_existing": 64,
+    "te_stale_deleted": 15
    },
    "generations": [
     {
@@ -86,9 +92,7 @@
    "exit": 0,
    "counts": {
     "raw_documents_seen": 81,
-    "source_records_new": 13,
-    "te_existing": 769,
-    "te_new_GENERATION": 395,
+    "te_existing": 1164,
     "configurations": 21,
     "configurations_research_only": 21,
     "issues_existing": 39
@@ -111,8 +115,45 @@
    "existing_vs_new": 0
   }
  },
- "stale_without_same_value": [],
+ "maintenance_corrections": {},
+ "stale_without_same_value": [
+  {
+   "line": "toyota/rav4",
+   "key": "coolant_capacity_l",
+   "value": 6.1,
+   "years": [
+    2022,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "toyota/rav4",
+   "key": "coolant_capacity_l",
+   "value": 8.2,
+   "years": [
+    2021,
+    2022
+   ],
+   "now": [
+    "6.7"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "toyota/highlander",
+   "key": "brake_fluid",
+   "value": "DOT 3",
+   "years": [
+    2020,
+    2022
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-03T14:25:12+00:00"
+ "finished_at": "2026-10-04T13:09:41+00:00"
 }
