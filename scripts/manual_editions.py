@@ -9,8 +9,8 @@ the page it was posted on is bound to its own year as well (a "2021 Atlas" post 
 Per document (one entry per sha256, every post that serves it listed):
   stated years   "model year 2021" / "Model Year 2016" on the cover (first pages)
                  a title "2019 Volkswagen Atlas", "2016 Accord Owner's Manual" on the cover
-                 an edition number "Edition 01/2023" (VW prints the model year this way) —
-                 used only when the cover states no model year
+                 an edition date "Edition 01/2023" is NOT a model year (owner decision
+                 2026-10-05): a document with only an edition date is bound to no year
                  print dates ("Print status", copyright, "Printed in") are not model years
   years used     stated years (within the line's US years); none stated: the year of the
                  post when the document is posted for one year only, else none
@@ -220,10 +220,13 @@ def editions(make: str) -> dict:
         first = [e for e in evidence if e["method"] != "edition number on the cover" and e["page"] == 1]
         strong = sorted({e["year"] for e in (first or [e for e in evidence if e["method"] != "edition number on the cover"])})
         weak = sorted({e["year"] for e in evidence if e["method"] == "edition number on the cover"})
-        stated = strong or weak
+        # owner decision 2026-10-05: an edition date ("Edition 01/2023") is not a model year (the
+        # Passat "Edition 08/2021" is model year 2022); only an explicit model year binds a document
+        stated = strong
         entry["year_evidence"] = evidence
         entry["stated_years"] = stated
-        entry["stated_by"] = ("cover" if strong else "edition number" if weak else None)
+        entry["edition_dates"] = weak
+        entry["stated_by"] = "cover" if strong else None
         years_window = set()
         for k in line_keys:
             if k in BY_KEY:
@@ -237,6 +240,9 @@ def editions(make: str) -> dict:
         elif stated:
             used = [y for y in stated if y in years_window]
             entry["rule"] = "years stated in the document"
+        elif weak:
+            used = []
+            entry["rule"] = "only an edition date in the document: the model year is ambiguous, bound to none (owner decision 2026-10-05)"
         elif len(post_years) == 1:
             used = post_years
             entry["rule"] = "no year stated; posted for one model year only: that year"

@@ -2,21 +2,22 @@
  "make": "volkswagen",
  "mode": "rehearsal",
  "db": "C:\\AutoExpertData\\work\\rehearsal_batch.db",
- "started_at": "2026-10-04T12:47:16+00:00",
+ "started_at": "2026-10-04T16:51:11+00:00",
  "replace_own": [],
  "lines": {
   "volkswagen/jetta": {
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 124,
-    "te_existing": 1971,
+    "raw_documents_seen": 123,
+    "te_existing": 1941,
+    "te_new_GENERATION": 3,
     "configurations": 66,
     "configurations_research_only": 63,
     "configurations_linked": 3,
     "issues_existing": 80,
     "maintenance_existing": 72,
-    "maintenance_corrected": 2
+    "te_stale_deleted": 30
    },
    "generations": [
     {
@@ -40,8 +41,7 @@
     "configurations": 21,
     "configurations_research_only": 21,
     "issues_existing": 47,
-    "maintenance_existing": 34,
-    "maintenance_corrected": 3
+    "maintenance_existing": 34
    },
    "generations": [
     {
@@ -56,13 +56,15 @@
    "flag": "--prune-stale",
    "exit": 0,
    "counts": {
-    "raw_documents_seen": 84,
-    "te_existing": 1383,
+    "raw_documents_seen": 83,
+    "te_existing": 1356,
+    "te_new_GENERATION": 2,
     "configurations": 29,
     "configurations_research_only": 25,
     "configurations_linked": 4,
     "issues_existing": 80,
-    "maintenance_existing": 84
+    "maintenance_existing": 84,
+    "te_stale_deleted": 27
    },
    "generations": [
     {
@@ -78,7 +80,7 @@
      "action": "unchanged"
     }
    ],
-   "conflicts": 0,
+   "conflicts": 2,
    "existing_vs_new": 18
   },
   "volkswagen/atlas": {
@@ -87,6 +89,7 @@
    "counts": {
     "raw_documents_seen": 56,
     "te_existing": 1034,
+    "te_new_GENERATION": 6,
     "configurations": 27,
     "configurations_linked": 6,
     "configurations_research_only": 21,
@@ -144,11 +147,336 @@
    "existing_vs_new": 0
   }
  },
- "maintenance_corrections": {
-  "hidden": 5
- },
- "stale_without_same_value": [],
+ "maintenance_corrections": {},
+ "stale_without_same_value": [
+  {
+   "line": "volkswagen/jetta",
+   "key": "engine_oil_topup_standards",
+   "value": "ACEA C3; ACEA C4; API SP; ILSAC GF-6A",
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "\"VW standard 504 00; ACEA C3; ACEA C4; API SP; ILS"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "fuel_tank_l",
+   "value": 55,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "50.0"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "tires",
+   "value": "225/45 R18 91H; 225/45 R18 91Y",
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "\"205/55 R17 91H; 205/60 R16 92H\"",
+    "\"205/55 R17 91H; 205/60 R16 92H; 225/45 R18 91H\"",
+    "\"225/45 R18 91H\""
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "track_front_mm",
+   "value": 1543,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1537",
+    "1540",
+    "1542"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "track_rear_mm",
+   "value": 1541,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1534",
+    "1540",
+    "1542"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "width_mm",
+   "value": 1799,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1798",
+    "1810"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "width_mm",
+   "value": 1799,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1798",
+    "1810"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "wheelbase_mm",
+   "value": 2686,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "2682",
+    "2685",
+    "2690"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "wheelbase_mm",
+   "value": 2681,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "2682",
+    "2685",
+    "2690"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "length_mm",
+   "value": 4738,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "4720",
+    "4737",
+    "4747"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "coolant",
+   "value": "G12evo",
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/jetta",
+   "key": "ground_clearance",
+   "value": 146,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "140",
+    "145"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "coolant",
+   "value": "G12evo",
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "fuel_tank_l",
+   "value": 60,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "57.9",
+    "60.2",
+    "62.0"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "tire_pressure_front_kpa",
+   "value": 300,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "250",
+    "260",
+    "270",
+    "280"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "tire_pressure_rear_kpa",
+   "value": 300,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "250",
+    "260",
+    "270",
+    "280"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "track_front_mm",
+   "value": 1581,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1580",
+    "1590"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "track_rear_mm",
+   "value": 1571,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1570",
+    "1572"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "track_rear_mm",
+   "value": 1571,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1570",
+    "1572"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "height_mm",
+   "value": 1688,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "1687",
+    "1689",
+    "1690"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "ground_clearance",
+   "value": 187,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "188",
+    "193"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "length_mm",
+   "value": 4728,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "4720",
+    "4727"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  },
+  {
+   "line": "volkswagen/tiguan",
+   "key": "length_mm",
+   "value": 4728,
+   "years": [
+    2023,
+    2023
+   ],
+   "now": [
+    "4720",
+    "4727"
+   ],
+   "action": "deleted (superseded by the current staging scope)"
+  }
+ ],
  "quick_check": "ok",
  "foreign_key_violations": 0,
- "finished_at": "2026-10-04T12:47:53+00:00"
+ "finished_at": "2026-10-04T16:52:34+00:00"
 }

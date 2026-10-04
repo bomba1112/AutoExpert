@@ -1143,6 +1143,43 @@ def service_page_facts(pages: list[str], i: int) -> tuple[list[dict], list[dict]
     return facts, page_notes
 
 
+# owner decision 2026-10-05: the 2019 Atlas manual (carmans file 31750ad2..., bound to MY2019) prints
+# the oil approval, the factory viscosity and the oil capacity per engine; they are written for 2019
+# and the named engines only, each with its quote and page. Every other VW manual keeps the gap.
+OWNER_ALLOWED_OIL = {"31750ad277acad5a11e03e11586a8fd232216cee817ee7da3a7870f2b23623e9"}
+OIL_CAPACITY_ROW = re.compile(r"(?P<hp>\d+) hp \((?P<kw>\d+) kW\), (?P<disp>\d\.\d) L gasoline engines? About (?P<qt>[\d.]+) quarts \((?P<l>[\d.]+) liters\)")
+OIL_APPROVAL_ROW = re.compile(r"Approved engine oil Engines Engine oil specification Gasoline engines (?P<spec>VW \d{3} \d{2})")
+OIL_FACTORY_FILL = re.compile(r"factory-filled with an all-season engine oil that meets strict Volkswagen oil quality standards and has a viscosity grade of (?P<visc>SAE \d+W-\d+)")
+
+
+def owner_allowed_oil(doc: dict, pages: list[str]) -> list[dict]:
+    if doc["sha256"] not in OWNER_ALLOWED_OIL:
+        return []
+    facts, engines = [], []
+    for i, text in enumerate(pages):
+        flat = norm(text)
+        for m in OIL_CAPACITY_ROW.finditer(flat):
+            engine = f"{m.group('disp')} L gasoline engine"
+            engines.append(engine)
+            facts.append({"key": "engine_oil_capacity_l", "value": float(m.group("l")), "unit": "L", "page": i + 1, "quote": m.group(0),
+                          "row": f"engine oil capacity (with filter) | {m.group('disp')} L", "label": "engine oil capacity (with filter)",
+                          "engine_text": f"{m.group('disp')} L", "original": f"About {m.group('qt')} quarts ({m.group('l')} liters)",
+                          "approx_in_source": True, "source_layout": "owner_allowed_oil"})
+    for i, text in enumerate(pages):
+        flat = norm(text)
+        for rx, key in ((OIL_APPROVAL_ROW, "engine_oil_oem_approval"), (OIL_FACTORY_FILL, "engine_oil_viscosity")):
+            m = rx.search(flat)
+            if not m:
+                continue
+            value = m.group("spec") if key == "engine_oil_oem_approval" else m.group("visc")
+            for engine in engines:  # the row / sentence covers every gasoline engine the manual lists
+                facts.append({"key": key, "value": value, "unit": None, "page": i + 1, "quote": m.group(0),
+                              "row": f"{key} | gasoline engines", "label": key.replace("_", " "),
+                              "engine_text": engine.replace(" gasoline engine", ""), "original": value,
+                              "source_layout": "owner_allowed_oil"})
+    return facts
+
+
 def service_pass(doc: dict, pages: list[str], result: dict) -> None:
     found, notes = [], []
     for i in range(len(pages)):
@@ -1186,7 +1223,7 @@ def service_pass(doc: dict, pages: list[str], result: dict) -> None:
             continue
         kept.append(f)
     tables, table_review = vw_tables(doc, pages)
-    result["facts"] = kept + found + tables
+    result["facts"] = kept + found + tables + owner_allowed_oil(doc, pages)
     result["review"] += table_review
     result["not_in_manual"] = notes
 
