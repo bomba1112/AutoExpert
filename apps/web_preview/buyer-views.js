@@ -1,7 +1,7 @@
-import {api, downloadReportPdf} from './api.js?v=0.8.1';
+import {api, downloadReportPdf} from './api.js?v=0.11.0';
 
 // Views of the existing client. Reports, research, auth and PDF use the same API.
-export function createBuyerViews({root, state, layout, go, esc, ensureSession, handleError, showToast, startMockVinHistory, mockVinHistoryCards}) {
+export function createBuyerViews({root, state, layout, go, esc, ensureSession, handleError, showToast, startMockVinHistory, mockVinHistoryCards, garageEntrance}) {
   const KEY = 'autoexpert.buyer.v1';
   let saved = {};
   try {saved = JSON.parse(localStorage.getItem(KEY) || '{}');} catch {}
@@ -38,7 +38,7 @@ export function createBuyerViews({root, state, layout, go, esc, ensureSession, h
         [l('Узнать об автомобиле', 'Avtomobil haqqında öyrən', 'Explore a car'), l('Характеристики, сильные и слабые стороны, отзывы', 'Xüsusiyyətlər, üstünlüklər, zəif cəhətlər və rəylər', 'Specifications, strengths, weaknesses and owner reviews'), 'model', '01'],
         [l('Проверить объявление или VIN', 'Elanı və ya VIN-i yoxla', 'Check a listing or VIN'), l('Разбор конкретного предложения', 'Konkret təklifin təhlili', 'Understand a specific offer'), 'offer', '02'],
         [l('Сравнить автомобили', 'Avtomobilləri müqayisə et', 'Compare cars'), l('Выберите между двумя или тремя вариантами', 'İki və ya üç variant arasında seçim edin', 'Choose between two or three options'), 'compare', '03'],
-      ].map(([title, sub, action, n]) => `<button class="buyer-entrance" data-baction="${action}"><span class="entrance-number">${n}</span><span><strong>${esc(title)}</strong><small>${esc(sub)}</small></span><span class="entrance-arrow">›</span></button>`).join('')}</div>
+      ].map(([title, sub, action, n]) => `<button class="buyer-entrance" data-baction="${action}"><span class="entrance-number">${n}</span><span><strong>${esc(title)}</strong><small>${esc(sub)}</small></span><span class="entrance-arrow">›</span></button>`).join('')}${garageEntrance ? garageEntrance() : ''}</div>
       <p class="buyer-footnote">${esc(l('VIN необязателен. Начните с автомобиля, который вам интересен.', 'VIN məcburi deyil. Maraqlandığınız avtomobildən başlayın.', 'VIN is optional. Start with the car you are considering.'))}</p>`, 'home');
   }
 

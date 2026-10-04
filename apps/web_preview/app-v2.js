@@ -1,4 +1,4 @@
-import {EN, pickText, deviceLanguage} from './en-text.js?v=0.10.0';
+import {EN, pickText, deviceLanguage} from './en-text.js?v=0.11.0';
 import {
   ApiError,
   api,
@@ -9,17 +9,18 @@ import {
   hasSession,
   trackEvent,
   vehiclePhotoUrl,
-} from './api.js?v=0.8.1';
+} from './api.js?v=0.11.0';
 import {
   ResearchContinuation,
   executeResearchContinuation,
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
-import {createBuyerViews} from './buyer-views.js?v=0.10.0';
-import {createCatalogViews} from './catalog-views.js?v=0.10.0';
-import {createVinHistoryViews} from './vin-history-views.js?v=0.10.0';
-import {createListingViews} from './listing-views.js?v=0.10.0';
-import {createUsTechViews} from './us-tech-views.js?v=0.10.0';
+import {createBuyerViews} from './buyer-views.js?v=0.11.0';
+import {createCatalogViews} from './catalog-views.js?v=0.11.0';
+import {createVinHistoryViews} from './vin-history-views.js?v=0.11.0';
+import {createListingViews} from './listing-views.js?v=0.11.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.11.0';
+import {createGarageViews} from './garage-views.js?v=0.11.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -48,8 +49,10 @@ const buyerViews = createBuyerViews({
   root, state, layout, go, esc, ensureSession, handleError, showToast,
   startMockVinHistory: vin => historyViews.start(vin),
   mockVinHistoryCards: () => historyViews.savedCards(),
+  garageEntrance: () => garageViews.homeCard(),
 });
 const usTechViews = createUsTechViews({root, state, layout});
+const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast});
 const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews});
 const listingViews = createListingViews({root, state, layout, go, esc, ensureSession, showToast, addCatalogVariant:(id,title)=>catalogViews.addVariantToBasket(id,title)});
 
@@ -60,8 +63,15 @@ root.addEventListener('click', (event) => {
   void handleAction(target).catch(handleError);
 });
 
+root.addEventListener('change', (event) => {
+  if (event.target.dataset?.garagePick) void garageViews.change(event.target).catch(handleError);
+});
+
 root.addEventListener('submit', (event) => {
-  if (event.target.id === 'vin-form') {
+  if (event.target.id?.startsWith('garage-')) {
+    event.preventDefault();
+    void garageViews.submit(event.target).catch(handleError);
+  } else if (event.target.id === 'vin-form') {
     event.preventDefault();
     void submitVin().catch(handleError);
   } else if (event.target.id === 'research-form') {
@@ -120,6 +130,7 @@ async function route() {
     if (await historyViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await listingViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await usTechViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await garageViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await catalogViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await buyerViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (name === 'language') renderLanguage();
@@ -1011,11 +1022,12 @@ function developerToolbar() {
 
 function bottomNav(active) {
   return `
-    <nav class="bottom-nav" aria-label="Primary">
+    <nav class="bottom-nav ${garageViews.enabled() ? 'five' : ''}" aria-label="Primary">
       <button class="${active === 'home' ? 'active' : ''}" data-action="home"><span class="nav-icon">⌂</span><span>${esc(t('navHome'))}</span></button>
       <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(state.language === 'ru' ? 'Сравнение' : pickText(state.language, 'Compare', 'Müqayisə'))}</span></button>
       <button class="${active === 'check' ? 'active' : ''}" data-action="buyer-check"><span class="nav-icon">⌕</span><span>${esc(pickText(state.language, 'Проверить', 'Yoxla'))}</span></button>
       <button class="${active === 'reports' ? 'active' : ''}" data-action="reports"><span class="nav-icon">▤</span><span>${esc(t('navReports'))}</span></button>
+      ${garageViews.enabled() ? `<button class="${active === 'garage' ? 'active' : ''}" data-action="garage"><span class="nav-icon">⚙</span><span>${esc(garageViews.navLabel())}</span></button>` : ''}
     </nav>`;
 }
 
@@ -1033,6 +1045,7 @@ async function ensureSession() {
 
 async function handleAction(target) {
   if (await historyViews.action(target)) return;
+  if (await garageViews.action(target)) return;
   const action = target.dataset.action;
   if (action === 'profile') {go('/profile'); return;}
   if (action === 'buyer-check') {go('/check'); return;}

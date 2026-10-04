@@ -1183,7 +1183,10 @@ def weak_points(db, t: Target, language: str) -> list[dict]:
                     "symptoms": [translate("issue_symptom", s) for s in symptoms],
                     "how_to_check": translate("issue_inspection", issue.inspection_recommendation) or None,
                     "original": {"title": title, "symptoms": symptoms, "how_to_check": issue.inspection_recommendation or None},
-                    "owner_reports": owner, "note": note, "years": [issue.year_from, issue.year_to]})
+                    "owner_reports": owner, "note": note, "years": [issue.year_from, issue.year_to],
+                    "typical_km": [issue.typical_mileage_min, issue.typical_mileage_max]
+                    if issue.typical_mileage_min or issue.typical_mileage_max else None,
+                    "component_code": issue.component, "engine": issue.engine_family_key})
     out.sort(key=lambda i: (i["owner_reports"], SEVERITY_RANK.get(i["severity_code"], 9), i["title"] or ""))
     return out
 
@@ -1291,7 +1294,10 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
                  "approximate": bool(app.get("approx_in_source")),
                  "secondary": display == "SECONDARY_NOTE",
                  "km": it.interval_km, "months": it.interval_months,
-                 "source": _source_view(it.source, it) | {"quote": _quote_of(it.notes)}}
+                 # raw codes for the Garage's next-due calculation (app.services.garage_schedule)
+                 "action_code": action, "occurrence_code": occurrence, "rule": _enum(it.rule), "system_code": system,
+                 "max_km": it.max_interval_km, "max_months": it.max_interval_months, "miles": it.interval_miles_original,
+                 "source":_source_view(it.source, it) | {"quote": _quote_of(it.notes)}}
         dedupe = tuple(entry[k] for k in ("job", "action", "interval", "max_interval", "severe", "occurrence", "service", "qualifier",
                                           "condition_detail"))
         if dedupe in seen:

@@ -7,6 +7,7 @@ from app.api.routes import (
     buyer,
     catalog,
     chat,
+    garage,
     health,
     history_flow,
     knowledge,
@@ -31,4 +32,5 @@ api_router.include_router(vin.router)
 api_router.include_router(history_flow.router)
 api_router.include_router(listing_intake.router)
 api_router.include_router(chat.router)
+api_router.include_router(garage.router)
 api_router.include_router(research.router)

@@ -34,6 +34,13 @@ def create_app() -> FastAPI:
         ],
     )
     application.include_router(api_router, prefix=settings.api_v1_prefix)
+    from app.services import garage as garage_service
+
+    if settings.garage_recall_job and garage_service.enabled(settings):
+        from app.db.session import SessionLocal
+        from app.services.garage_recalls import start_daily
+
+        start_daily(SessionLocal)
     web_preview = Path(__file__).resolve().parents[2] / "apps" / "web_preview"
     if web_preview.is_dir():
         application.mount(

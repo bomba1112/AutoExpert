@@ -17,6 +17,14 @@ from app.models.evidence import (
     SourceRecord,
     TechnicalEvidence,
 )
+from app.models.ai_mechanic import AIMechanicRequest  # noqa: F401
+from app.models.garage import (  # noqa: F401
+    GarageFeedItem,
+    GarageOdometerReading,
+    GarageRecallNotice,
+    GarageServiceRecord,
+    GarageVehicle,
+)
 from app.models.history_flow import (  # noqa: F401
     AuctionEvent,
     CostLedgerEntry,
