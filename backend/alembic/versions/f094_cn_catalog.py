@@ -16,8 +16,8 @@ remove them explicitly first instead of losing them silently.
 import sqlalchemy as sa
 from alembic import op
 
-revision = "f093_cn_catalog"
-down_revision = "f091_ai_mechanic"
+revision = "f094_cn_catalog"
+down_revision = "f092_account_readiness"
 branch_labels = depends_on = None
 
 
@@ -51,7 +51,7 @@ def downgrade():
     found = {name: bind.execute(sa.text(sql)).scalar() for name, sql in counts.items()}
     if any(found.values()):
         raise RuntimeError(
-            f"f093 downgrade refused: {found}. Export and delete the CN rows explicitly first."
+            f"f094 downgrade refused: {found}. Export and delete the CN rows explicitly first."
         )
 
     with op.batch_alter_table("known_issues") as batch:

@@ -112,7 +112,7 @@ class VehicleVariant(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     ground_clearance_mm: Mapped[int | None] = mapped_column(Integer)
     official_fuel_city_l_100km: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
     official_fuel_highway_l_100km: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
-    # f093 (CN catalogue): ICE / HEV / PHEV / EREV / BEV and the official traction battery,
+    # f094 (CN catalogue): ICE / HEV / PHEV / EREV / BEV and the official traction battery,
     # the main fingerprint of a Chinese configuration. NULL for every US/CA variant.
     powertrain_type: Mapped[str | None] = mapped_column(String(16), index=True)
     battery_kwh: Mapped[Decimal | None] = mapped_column(Numeric(6, 2), index=True)

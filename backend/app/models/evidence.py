@@ -55,7 +55,7 @@ class ScopedFactMixin:
     # Normalized factory family key confirmed by a source (e.g. A25A-FKS); never an EPA code.
     engine_family_key: Mapped[str | None] = mapped_column(String(40), index=True)
     transmission_key: Mapped[str | None] = mapped_column(String(40), index=True)
-    # f093: hybrid system component key (CN catalogue, e.g. byd_dmi_4.0).
+    # f094: hybrid system component key (CN catalogue, e.g. byd_dmi_4.0).
     hybrid_system_key: Mapped[str | None] = mapped_column(String(40), index=True)
     year_from: Mapped[int | None] = mapped_column(Integer)
     year_to: Mapped[int | None] = mapped_column(Integer)
