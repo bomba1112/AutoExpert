@@ -1,30 +1,397 @@
 {
-  "_readme": "Битва поколений на главной (UI-by-reference prompt, 2.1). Владелец редактирует этот список: 2-3 машины одного класса и близких лет из нашего каталога. make / model / year — как в каталоге; если такой версии нет, карточка честно скажет, что сравнение пока недоступно. title / subtitle — подписи на трёх языках.",
+  "_readme": "Битва поколений на главной (UI-by-reference prompt 2.1; решение владельца 2026-10-06: две машины одного класса, короткий вердикт). Владелец редактирует список: make / model / year — как в каталоге. verdict и safety заполняет scripts/build_battle_verdicts.py один раз заранее (наша база + рейтинги NHTSA 5-Star с указанием источника); править можно руками.",
   "battles": [
     {
-      "id": "camry-accord-sonata",
-      "members": [{"make": "Toyota", "model": "Camry", "year": 2017}, {"make": "Honda", "model": "Accord", "year": 2017}, {"make": "Hyundai", "model": "Sonata", "year": 2017}],
-      "subtitle": {"ru": "Три главных седана D-класса: кто надёжнее и дешевле в содержании?", "az": "D-sinfinin üç əsas sedanı: hansı daha etibarlı və ucuzdur?", "en": "Three mid-size sedans: which is more reliable and cheaper to own?"}
+      "id": "camry-accord",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Camry 4 DR FWD"
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "Accord",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Honda Accord 4 DR FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Два главных седана D-класса: кто надёжнее и практичнее?",
+        "az": "D-sinfinin iki əsas sedanı: hansı daha etibarlı və praktikdir?",
+        "en": "Two key mid-size sedans: which is more reliable and practical?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "Toyota Motor North America",
+          "U.S. DOE / EPA",
+          "NHTSA recalls",
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
     },
     {
-      "id": "corolla-elantra-civic",
-      "members": [{"make": "Toyota", "model": "Corolla", "year": 2017}, {"make": "Hyundai", "model": "Elantra", "year": 2017}, {"make": "Honda", "model": "Civic", "year": 2017}],
-      "subtitle": {"ru": "Компактные седаны на каждый день: расход, слабые места, ТО.", "az": "Hər gün üçün kompakt sedanlar: sərfiyyat, zəif yerlər, TXQ.", "en": "Everyday compact sedans: fuel use, weak points, service."}
+      "id": "sonata-camry",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Sonata",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Hyundai Sonata 4 DR FWD"
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Camry 4 DR FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Кореец против японца: расход, багажник, слабые места.",
+        "az": "Koreyalı və yaponiyalı: sərfiyyat, baqaj, zəif yerlər.",
+        "en": "Korean versus Japanese: fuel, boot, weak points."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Hyundai Sonata лучше по: расход",
+            "Toyota Camry лучше по: известные проблемы, отзывные кампании"
+          ],
+          "az": [
+            "Hyundai Sonata daha yaxşıdır: sərfiyyat",
+            "Toyota Camry daha yaxşıdır: məlum problemlər, geri çağırmalar"
+          ],
+          "en": [
+            "Hyundai Sonata is better at: fuel use",
+            "Toyota Camry is better at: known problems, recalls"
+          ]
+        },
+        "sources": [
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "Toyota Motor North America",
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
     },
     {
-      "id": "rav4-crv-tucson",
-      "members": [{"make": "Toyota", "model": "RAV4", "year": 2020}, {"make": "Honda", "model": "CR-V", "year": 2019}, {"make": "Hyundai", "model": "Tucson", "year": 2020}],
-      "subtitle": {"ru": "Семейные кроссоверы: что выбрать для города и трассы?", "az": "Ailə krossoverləri: şəhər və yol üçün hansı?", "en": "Family crossovers: which one for the city and the highway?"}
+      "id": "corolla-civic",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "Corolla",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Corolla 4 DR FWD"
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "Civic",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Honda Civic 2 DR FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Компактные седаны на каждый день.",
+        "az": "Hər gün üçün kompakt sedanlar.",
+        "en": "Everyday compact sedans."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "elantra-corolla",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Elantra",
+          "year": 2017,
+          "safety": {
+            "value": 4,
+            "text": "4/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Hyundai Elantra 4 DR FWD Later Release"
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "Corolla",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Corolla 4 DR FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Самые частые соперники в классе C.",
+        "az": "C sinfinin ən tez-tez rəqibləri.",
+        "en": "The most frequent rivals in the compact class."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Toyota Corolla лучше по: безопасность"
+          ],
+          "az": [
+            "Toyota Corolla daha yaxşıdır: təhlükəsizlik"
+          ],
+          "en": [
+            "Toyota Corolla is better at: safety"
+          ]
+        },
+        "sources": [
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "rav4-crv",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "RAV4",
+          "year": 2019,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2019 Toyota RAV4 SUV FWD"
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "CR-V",
+          "year": 2019,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2019 Honda CR-V SUV FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Семейные кроссоверы: что выбрать для города и трассы?",
+        "az": "Ailə krossoverləri: şəhər və yol üçün hansı?",
+        "en": "Family crossovers: which one for the city and the highway?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "tucson-rav4",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Tucson",
+          "year": 2020,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2020 Hyundai Tucson SUV FWD"
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "RAV4",
+          "year": 2020,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2020 Toyota RAV4 SUV FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Кроссоверы одного года: клиренс, багажник, отзывы.",
+        "az": "Eyni ilin krossoverləri: klirens, baqaj, geri çağırmalar.",
+        "en": "Crossovers of one year: clearance, boot, recalls."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "Hyundai USA Media Center",
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
     },
     {
       "id": "optima-sonata",
-      "members": [{"make": "Kia", "model": "Optima", "year": 2015}, {"make": "Hyundai", "model": "Sonata", "year": 2015}],
-      "subtitle": {"ru": "Братья на одной платформе: в чём реальная разница?", "az": "Eyni platformada qardaşlar: real fərq nədədir?", "en": "Siblings on one platform: what really differs?"}
+      "members": [
+        {
+          "make": "Kia",
+          "model": "Optima",
+          "year": 2015,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2015 Kia Optima 4 DR FWD"
+          }
+        },
+        {
+          "make": "Hyundai",
+          "model": "Sonata",
+          "year": 2015,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2015 Hyundai Sonata 4 DR FWD"
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Братья на одной платформе: в чём реальная разница?",
+        "az": "Eyni platformada qardaşlar: real fərq nədədir?",
+        "en": "Siblings on one platform: what really differs?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
     },
     {
       "id": "eclass-5series",
-      "members": [{"make": "Mercedes-Benz", "model": "E-Class", "year": 2016}, {"make": "BMW", "model": "5 Series", "year": 2017}],
-      "subtitle": {"ru": "Бизнес-седаны: комфорт против драйва и цена владения.", "az": "Biznes sedanlar: komfort və sürüş, sahiblik dəyəri.", "en": "Executive sedans: comfort versus drive and the cost of owning."}
+      "members": [
+        {
+          "make": "Mercedes-Benz",
+          "model": "E-Class",
+          "year": 2016,
+          "safety": {
+            "value": 4,
+            "text": "4/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2016 Mercedes-Benz E-Class 4 DR RWD"
+          }
+        },
+        {
+          "make": "BMW",
+          "model": "5 Series",
+          "year": 2017
+        }
+      ],
+      "subtitle": {
+        "ru": "Бизнес-седаны: комфорт против драйва.",
+        "az": "Biznes sedanlar: komfort və sürüş.",
+        "en": "Executive sedans: comfort versus drive."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "По данным нашей базы заметной разницы нет"
+          ],
+          "az": [
+            "Bazamızın məlumatlarına görə nəzərəçarpan fərq yoxdur"
+          ],
+          "en": [
+            "Our data show no clear difference"
+          ]
+        },
+        "sources": [
+          "BMW Group PressClub USA",
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "NHTSA 5-Star Safety Ratings"
+        ],
+        "prepared": "2026-10-06"
+      }
     }
   ]
 }

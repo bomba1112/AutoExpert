@@ -61,19 +61,45 @@ test('costs are fuel only: EPA L/100 km x km a month x the price; no price, no c
   for (const key of Object.keys(config.prices)) assert.ok(['AI92', 'AI95', 'AI98', 'DIESEL'].includes(key), key);
 });
 
-test('battles are curated: 2-3 cars, close years, three languages', async () => {
+test('battles are curated pairs of one class with a prepared short verdict and its sources', async () => {
   const config = JSON.parse(await readFile(new URL('../battles.json', import.meta.url), 'utf8'));
   assert.ok(config.battles.length >= 5);
   const titles = config.battles.map(b => b.members.map(m => m.model).join(' vs '));
-  for (const wanted of ['Camry vs Accord vs Sonata', 'Corolla vs Elantra vs Civic', 'RAV4 vs CR-V vs Tucson', 'Optima vs Sonata', 'E-Class vs 5 Series']) assert.ok(titles.includes(wanted), wanted);
+  for (const wanted of ['Camry vs Accord', 'Corolla vs Civic', 'RAV4 vs CR-V', 'Optima vs Sonata', 'E-Class vs 5 Series']) assert.ok(titles.includes(wanted), wanted);
   for (const b of config.battles) {
-    assert.ok(b.members.length >= 2 && b.members.length <= 3, b.id);
+    assert.equal(b.members.length, 2, b.id);
     for (const m of b.members) assert.ok(m.make && m.model && Number.isInteger(m.year), b.id);
     const years = b.members.map(m => m.year);
     assert.ok(Math.max(...years) - Math.min(...years) <= 2, b.id);
     assert.ok(b.subtitle.ru && b.subtitle.az && b.subtitle.en, b.id);
     assert.doesNotMatch(b.subtitle.en, CYR);
+    assert.ok(b.verdict.lines.ru.length >= 1 && b.verdict.lines.ru.length <= 4, b.id);
+    assert.equal(b.verdict.lines.en.length, b.verdict.lines.ru.length, b.id);
+    for (const line of b.verdict.lines.en) assert.doesNotMatch(line, CYR, line);
+    assert.ok(Array.isArray(b.verdict.sources), b.id);
+    for (const m of b.members) for (const spec of Object.values(m.specs || {})) if (spec && spec.value !== null) assert.ok(spec.source, `${b.id}: a figure without its source`);
   }
+});
+
+test('the verdict: who is better at what, only parameters someone has, ties not mentioned', async () => {
+  const {verdict, numberOf, specMetrics, metricsOf} = await import('../compare-verdict.js');
+  assert.equal(numberOf('1 234 л'), 1234);
+  assert.equal(numberOf('7,4 л/100 км'), 7.4);
+  const a = {name: 'Toyota Camry', metrics: {power: {value: 203, text: '203 hp'}, fuel: {value: 7.4, text: '7.4'}, cargo: {value: 428, text: '428 L'}, problems: {value: 1003, serious: 1, count: 3}, recalls: {value: 3, count: 3}}};
+  const b = {name: 'Honda Accord', metrics: {power: {value: 192, text: '192 hp'}, fuel: {value: 7.2, text: '7.2'}, cargo: {value: 473, text: '473 L'}, problems: {value: 5009, serious: 5, count: 9}, recalls: {value: 3, count: 3}}};
+  const r = verdict([a, b], 'ru');
+  assert.deepEqual(r.lines, ['Toyota Camry лучше по: мощность, известные проблемы', 'Honda Accord лучше по: багажник']);  // fuel within 3 %, recalls equal
+  assert.deepEqual(r.table.map(x => x.key), ['power', 'fuel', 'cargo', 'problems', 'recalls']);  // no clearance, no safety: not mentioned
+  assert.equal(r.table.find(x => x.key === 'power').cells[0].best, true);
+  const en = verdict([a, b], 'en');
+  assert.equal(en.lines[1], 'Honda Accord is better at: boot space');
+  // published figures fill only what our base lacks, with their source
+  const fill = specMetrics({specs: {power_hp: {value: 178, source: 'Toyota Pressroom'}, cargo_cuft: {value: 15.1, source: 'Edmunds'}}, safety: {value: 5, text: '5/5 NHTSA'}});
+  const m = metricsOf({categories: [{rows: [{key: 'power_hp', values: [{value: '203 hp', source: {publisher: 'EPA'}}]}]}], weak_points: [], campaigns: []}, {}, fill.metrics);
+  assert.equal(m.power.value, 203);
+  assert.equal(Math.round(m.cargo.value), 428);
+  assert.equal(m.safety.value, 5);
+  assert.ok(m.sources.includes('Edmunds') && m.sources.includes('NHTSA 5-Star Safety Ratings'));
 });
 
 test('every new text has three languages and English has no Russian', async () => {
@@ -128,6 +154,35 @@ test('the opinion screen: behind the flag, the confirmed car, seller claims apar
   const blocked = views.render({status: 'LISTING_UNAVAILABLE', message: 'x', paste_text: true});
   assert.match(blocked, /expert-paste/);  // the text paste appears only when the site could not be read
   assert.doesNotMatch(views.render(missing ? {status: 'MODEL_NOT_IN_BASE', message: 'x'} : {}), /expert-paste/);
+});
+
+test('regression: a new check never shows the car of the previous one', async () => {
+  const {createExpertViews} = await import('../expert-views.js');
+  const session = new Map();
+  globalThis.sessionStorage = {getItem: k => session.get(k) ?? null, setItem: (k, v) => session.set(k, String(v)), removeItem: k => session.delete(k)};
+  const sent = [];
+  const reply = query => (query.includes('stinger')
+    ? {status: 'MODEL_NOT_IN_BASE', message: 'Модели Kia Stinger пока нет в нашей базе.', claims: {make: 'Kia', model: 'Stinger'}}
+    : {status: 'OK', make: 'Toyota', model: 'Camry', year: 2019, confirmed: true, source: {kind: 'LINK'}, configuration: {key: 'k', label: '2.5 л'},
+      summary: [], claims: {make: 'Toyota', model: 'Camry'}, discrepancies: [], notes: [], checklist: [], next_service: [], weak_points: [], campaigns: []});
+  globalThis.fetch = async (url, options) => {
+    const body = JSON.parse(options.body);
+    sent.push(body.query);
+    return {ok: true, status: 200, headers: {get: () => 'application/json'}, json: async () => reply(body.query)};
+  };
+  const root = fakeRoot();
+  const state = {language: 'ru', meta: {expert_opinion_v1: {enabled: true}}};
+  const views = createExpertViews({root, state, layout: x => x, go() {}, ensureSession: async () => {}, showToast() {}});
+  session.set('autoexpert.expert.request', JSON.stringify({query: 'https://turbo.az/autos/10556520-kia-stinger'}));
+  await views.route('opinion');
+  assert.match(root.innerHTML, /Stinger/);
+  session.set('autoexpert.expert.request', JSON.stringify({query: 'https://turbo.az/autos/10690262-toyota-camry'}));
+  await views.route('opinion');
+  assert.match(root.innerHTML, /Toyota Camry 2019/);
+  assert.doesNotMatch(root.innerHTML, /Stinger/);
+  await views.route('opinion');  // the same request again: the kept result, no second fetch
+  assert.equal(sent.length, 2);
+  globalThis.sessionStorage = {getItem: () => null, setItem() {}, removeItem() {}};
 });
 
 test('the EN home has no AZN, no Turbo.az and no Azerbaijan label', async () => {

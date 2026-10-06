@@ -81,12 +81,16 @@ export function createExpertViews({root, state, layout, go, ensureSession, showT
   }
 
   async function opinion() {
-    let body = last?.request;
-    if (!body) { try { body = JSON.parse(sessionStorage.getItem(STORE) || 'null'); } catch { body = null; } }
+    // the stored request is the truth: a result kept in memory is reused only for the very same request,
+    // so an opinion never shows the car of an earlier check
+    let body = null;
+    try { body = JSON.parse(sessionStorage.getItem(STORE) || 'null'); } catch { body = null; }
+    body = body || last?.request;
     if (!body) { go('/check'); return; }
+    if (last && JSON.stringify(last.request) !== JSON.stringify(body)) last = null;
     page(`${top(p('Мнение Auto Expert', 'Auto Expert rəyi', 'Auto Expert opinion'), 'check')}<p class="catalog-loading" role="status">${escape(body.query && detectInput(body.query) === 'LINK' ? p('Открываем объявление и сверяем с базой…', 'Elanı açırıq və bazayla tutuşdururuq…', 'Opening the listing and checking it against our database…') : p('Сверяем с базой…', 'Bazayla tutuşdururuq…', 'Checking against our database…'))}</p>`);
     await ensureSession();
-    const result = last?.result && last.request === body ? last.result : await api('/expert/opinion', {method: 'POST', body: JSON.stringify({...body, language: lang()})});
+    const result = last?.result ? last.result : await api('/expert/opinion', {method: 'POST', body: JSON.stringify({...body, language: lang()})});
     last = {request: body, result};
     page(`${top(p('Мнение Auto Expert', 'Auto Expert rəyi', 'Auto Expert opinion'), 'check')}${result.status === 'OK' ? opinionHtml(result) : problemHtml(result, body)}`);
   }
