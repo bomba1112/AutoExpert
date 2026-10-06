@@ -39,7 +39,8 @@ export function numberOf(text) {
 
 // published figures prepared for a curated battle (battles.json "specs", each with its source):
 // they only fill what our database does not have
-export function specMetrics(member) {
+export function specMetrics(member, language = 'en') {
+  const u = (ru, az, en) => pickText(language, ru, az, en);
   const s = member?.specs || {};
   const out = {}, sources = [];
   const put = (key, spec, value, text) => {
@@ -47,10 +48,10 @@ export function specMetrics(member) {
     out[key] = {value, text, source: spec.source};
     if (spec.source) sources.push(spec.source);
   };
-  put('power', s.power_hp, Number(s.power_hp?.value), `${s.power_hp?.value} hp`);
-  put('fuel', s.mpg_combined, 235.215 / Number(s.mpg_combined?.value), `${(235.215 / Number(s.mpg_combined?.value)).toFixed(1)} L/100 km (${s.mpg_combined?.value} mpg)`);
-  put('cargo', s.cargo_cuft, Number(s.cargo_cuft?.value) * 28.3168, `${Math.round(Number(s.cargo_cuft?.value) * 28.3168)} L`);
-  put('clearance', s.clearance_in, Number(s.clearance_in?.value) * 25.4, `${Math.round(Number(s.clearance_in?.value) * 25.4)} mm`);
+  put('power', s.power_hp, Number(s.power_hp?.value), `${s.power_hp?.value} ${u('л. с.', 'a.g.', 'hp')}`);
+  put('fuel', s.mpg_combined, 235.215 / Number(s.mpg_combined?.value), `${(235.215 / Number(s.mpg_combined?.value)).toFixed(1)} ${u('л/100 км', 'l/100 km', 'L/100 km')} (EPA ${s.mpg_combined?.value} mpg)`);
+  put('cargo', s.cargo_cuft, Number(s.cargo_cuft?.value) * 28.3168, `${Math.round(Number(s.cargo_cuft?.value) * 28.3168)} ${u('л', 'l', 'L')}`);
+  put('clearance', s.clearance_in, Number(s.clearance_in?.value) * 25.4, `${Math.round(Number(s.clearance_in?.value) * 25.4)} ${u('мм', 'mm', 'mm')}`);
   if (member?.safety) {
     out.safety = {...member.safety, source: 'NHTSA 5-Star Safety Ratings'};
     sources.push('NHTSA 5-Star Safety Ratings');
@@ -92,6 +93,7 @@ export function metricsOf(tech, extra = {}, fill = {}) {
 
 function cellText(key, m, language) {
   if (!m) return null;
+  if (key === 'problems' && !m.count) return pickText(language, 'в базе нет', 'bazada yoxdur', 'none in our base');
   if (key === 'problems') return pickText(language, `${m.count}, серьёзных ${m.serious}`, `${m.count}, ciddi ${m.serious}`, `${m.count}, ${m.serious} serious`);
   if (key === 'recalls') return String(m.count);
   if (key === 'safety') return m.text || `${m.value}/5`;

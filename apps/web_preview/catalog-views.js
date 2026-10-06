@@ -292,7 +292,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     // a curated battle keeps its prepared verdict and the safety ratings found for it
     const battle=battleId?battleList.find(b=>b.id===battleId):null;
     const prepared=battle?.verdict;
-    const cars=members.map((v,i)=>({name:`${v.make} ${v.model}`,metrics:metricsOf(tech[v.id],{},battle?specMetrics(battle.members[i]).metrics:{})}));
+    const cars=members.map((v,i)=>({name:`${v.make} ${v.model}`,metrics:metricsOf(tech[v.id],{},battle?specMetrics(battle.members[i],state.language).metrics:{})}));
     const result=verdict(cars,state.language);
     const lines=prepared?.lines?.[state.language]||prepared?.lines?.ru||result.lines;
     const techRow=(v,key)=>(tech[v.id]?.categories||[]).flatMap(c=>c.rows).find(r=>r.key===key);

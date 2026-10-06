@@ -139,6 +139,8 @@ def test_listing_opinion(db_session, camry):
     assert [c["number"] for c in result["campaigns"]] == ["20V682000"]
     assert any("20V682000" in c["text"] for c in result["checklist"] if c["kind"] == "recall")
     assert any("Check by VIN." in c["text"] for c in result["checklist"] if c["kind"] == "issue")
+    assert len(result["checklist"]) <= lo.MAX_ISSUES + lo.MAX_RECALLS
+    assert not any("rattle" in c["text"] for c in result["checklist"])  # owner reports stay in the weak points
     jobs = [s["job"] for s in result["next_service"]]
     assert "spark_plugs" not in jobs and "engine_oil_and_filter" not in jobs  # hidden; oil needs the owner's interval
     assert all(s["next_km"] > 87000 for s in result["next_service"] if s["next_km"])

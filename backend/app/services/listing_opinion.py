@@ -42,6 +42,7 @@ PROVIDER = "turbo.az.listing"
 CAPABILITY = "LISTING_PAGE"
 CACHE_TTL = timedelta(hours=24)
 FETCH_TIMEOUT = 15
+MAX_ISSUES, MAX_RECALLS = 6, 4  # the inspection checklist stays short
 BROWSER_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml",
@@ -389,15 +390,18 @@ def opinion_for(db, *, make: str, model: str, year: int | None, claims: dict, la
     market = claims.get("market")
     conditions = "NORMAL" if market == "US" and source.get("kind") == "VIN" else "SEVERE"  # a car in AZ: severe by default
     service = _next_service(card, claims.get("mileage_km"), conditions, language)
-    checklist = []
-    for issue in card.get("weak_points") or []:
-        checklist.append({"text": issue["title"] + (f": {issue['how_to_check']}" if issue.get("how_to_check") else ""),
-                          "note": issue.get("note"), "kind": "issue"})
-    for recall in card.get("campaigns") or []:
-        if any(recall["number"] in c["text"] for c in checklist):
-            continue  # already named by a known issue
+    # what to check at the inspection: the main points only — confirmed issues, serious first (owner
+    # reports stay in the weak points), then recalls not named by an issue; the rest is counted
+    rank = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3}
+    issues = sorted((i for i in card.get("weak_points") or [] if not i.get("owner_reports")),
+                    key=lambda i: rank.get(i.get("severity_code"), 4))
+    checklist = [{"text": i["title"] + (f": {i['how_to_check']}" if i.get("how_to_check") else ""), "note": i.get("note"), "kind": "issue"}
+                 for i in issues[:MAX_ISSUES]]
+    recalls = [r for r in card.get("campaigns") or [] if not any(r["number"] in c["text"] for c in checklist)]
+    for recall in recalls[:MAX_RECALLS]:
         component = f" ({recall['component']})" if recall.get("component") else ""
         checklist.append({"text": tt(language, "check_recall", number=recall["number"], component=component), "kind": "recall"})
+    more = max(0, len(card.get("weak_points") or []) - len(issues[:MAX_ISSUES])) + max(0, len(recalls) - MAX_RECALLS)
     if any(s["job"] == "timing_belt" and s["status"] in ("CHECK", "OVERDUE") for s in service):
         checklist.append({"text": tt(language, "check_belt"), "kind": "service"})
     serious = sum(1 for i in card.get("weak_points") or [] if i.get("severity_code") in ("HIGH", "CRITICAL"))
@@ -424,7 +428,7 @@ def opinion_for(db, *, make: str, model: str, year: int | None, claims: dict, la
         "alternatives": [c["label"] for c in candidates[1:6]],
         "discrepancies": found, "notes": notes,
         "weak_points": card.get("weak_points") or [], "campaigns": card.get("campaigns") or [],
-        "checklist": checklist, "next_service": service, "summary": summary,
+        "checklist": checklist, "checklist_more": more, "next_service": service, "summary": summary,
         "labels": card.get("labels") or {},
         "seller_label": tt(language, "seller_claim"),
         "vin_check": bool(claims.get("vin")),
