@@ -3211,3 +3211,14 @@ html.large-text .match-specs span {font-size:.8em;}
 .club-comments p {margin:4px 0;}
 .club-link {justify-self:start;}
 .club textarea {border:1px solid var(--line);border-radius:10px;padding:9px 10px;font:inherit;}
+
+/* The subscription (product phase, stage 6) */
+.sub-plans {display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.sub-plans article {align-content:start;}
+.sub-price {font-size:26px;font-weight:700;margin:0;}
+.sub-price small {font-size:13px;color:var(--muted);font-weight:400;}
+.sub-list {margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px;}
+.sub-active {border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft);}
+.sub-premium .button {width:100%;}
+.sub-current {margin:0;}
+.sub-locked {background:var(--gold-soft);}

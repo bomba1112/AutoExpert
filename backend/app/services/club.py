@@ -182,6 +182,9 @@ def active_ban(db, user: User) -> ClubBan | None:
 
 
 def check_writer(db, user: User) -> None:
+    from app.services import entitlements
+
+    entitlements.require(db, user, "CLUB_WRITE")
     if not accounts.can_write(user):
         raise ClubError(403, "EMAIL_NOT_CONFIRMED")
     if active_ban(db, user):

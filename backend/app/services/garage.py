@@ -27,7 +27,15 @@ from app.models.garage import (
     GarageServiceRecord,
     GarageVehicle,
 )
-from app.services import garage_push, garage_schedule, unit_display, us_tech_facts, vpic_local
+from app.models.user import User
+from app.services import (
+    entitlements,
+    garage_push,
+    garage_schedule,
+    unit_display,
+    us_tech_facts,
+    vpic_local,
+)
 from app.services.garage_schedule import OIL_JOBS, Reading, Record
 
 MI = 1.609344
@@ -320,8 +328,11 @@ def overview(db, vehicle: GarageVehicle, language: str, today: date | None = Non
         items.append(result)
     items.sort(key=garage_schedule.order)
     recalls = _recalls(db, vehicle, data, language)
+    owner = db.get(User, vehicle.user_id)
+    hints = entitlements.allows(db, owner, "PERSONAL_HINTS") if owner else True
+    locked = {} if hints else {"PERSONAL_HINTS": len((data or {}).get("weak_points") or [])}
     weak = []
-    for issue in (data or {}).get("weak_points") or []:
+    for issue in ((data or {}).get("weak_points") or []) if hints else []:
         typical = issue.get("typical_km")
         weak.append({**issue, "typical": (f"{t(language, 'typical')} {distance(typical[0], language)}"
                                           + (f"–{distance(typical[1], language)}" if typical[1] and typical[1] != typical[0] else ""))
@@ -351,6 +362,8 @@ def overview(db, vehicle: GarageVehicle, language: str, today: date | None = Non
                  "km_text": distance(r.odometer_km, language), "note": r.note}
                 for r in sorted(vehicle.records, key=lambda r: (r.performed_on or date.min, r.odometer_km or 0), reverse=True)],
         "main_jobs": main_jobs(schedule, language),
+        "locked": locked,
+        "recall_alerts": entitlements.allows(db, owner, "RECALL_ALERTS") if owner else True,
         "fluids": [{"job": job, "label": _job_label(job, language), **fluid} for job in FLUIDS
                    if (fluid := _fluid(categories, job))],
         "labels": (data or {}).get("labels"),
@@ -414,7 +427,7 @@ def refresh_feed(db, vehicle: GarageVehicle, view: dict | None = None, today: da
             wanted.append(("SERVICE_CHECK", f"check:{s['job']}", {"job": s["job"], "action": s["action"]}))
         elif s["status"] == "SET_INTERVAL":
             wanted.append(("OIL_INTERVAL", "oil:set", {}))
-    for r in view["recalls"]:
+    for r in view["recalls"] if view.get("recall_alerts", True) else []:
         wanted.append(("RECALL", f"recall:{r['number']}", {"number": r["number"], "component": (r.get("original") or {}).get("component") or r.get("component"),
                                                            "origin": r.get("origin")}))
     if view["mileage"]["ask"]:

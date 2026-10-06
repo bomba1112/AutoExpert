@@ -65,6 +65,7 @@ const C = {
   back: ['Назад', 'Geri', 'Back'],
   open: ['Открыть', 'Aç', 'Open'],
   urgent: ['требуют внимания', 'diqqət tələb edir', 'need attention'],
+  subscription: ['Подписка', 'Abunə', 'Subscription'],
   mechanic: ['Спросить механика', 'Mexanikdən soruş', 'Ask the mechanic'],
   mechanicNote: ['Отвечает только по данным вашей машины. Чего нет в данных — так и скажет.', 'Yalnız avtomobilinizin məlumatlarına əsasən cavab verir. Məlumatda olmayanı açıq deyir.', 'Answers only from your car\'s data. If it is not in the data, it says so.'],
   ask: ['Спросить', 'Soruş', 'Ask'],
@@ -82,7 +83,7 @@ export function garageCopy(language, key) {
   return entry ? entry[LANG_INDEX[language] ?? 0] : key;
 }
 
-export function createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton}) {
+export function createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton, lockedPanel}) {
   const t = key => garageCopy(state.language, key);
   const unit = () => (state.language === 'en' ? 'mi' : 'km');
   const enabled = () => Boolean(state.meta?.garage_v1?.enabled);
@@ -114,6 +115,7 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
         </div>
         <div class="garage-actions">
           <button class="button primary" data-action="garage-add">＋ ${escape(t('add'))}</button>
+          ${state.meta?.subscription_v1?.enabled ? `<button class="button" data-action="subscription">${escape(garageCopy(state.language, 'subscription'))}</button>` : ''}
           <button class="button" data-action="garage-feed">${escape(t('feed'))}${unread ? ` <span class="garage-count">${unread}</span>` : ''}</button>
         </div>
       </section>`, {active: 'garage'});
@@ -235,6 +237,7 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
           ${v.recalls.length ? `<ul class="garage-recalls">${v.recalls.map(r => `<li><strong>${escape(r.number)}</strong> ${r.label ? `<span class="garage-pill soon">${escape(r.label)}</span>` : ''}<span>${escape(r.component || '')}</span>${r.summary ? `<p>${escape(r.summary)}</p>` : ''}<small>${escape(r.note)}</small></li>`).join('')}</ul>` : `<p class="garage-empty">${escape(t('noRecalls'))}</p>`}
         </section>
         ${mechanic ? mechanicPanel(mechanic) : ''}
+        ${v.locked?.PERSONAL_HINTS !== undefined && lockedPanel ? lockedPanel(v.locked.PERSONAL_HINTS) : ''}
         ${v.weak_points.length ? `<section class="garage-panel"><h2>${escape(t('issues'))}</h2><ul class="garage-issues">${v.weak_points.slice(0, 8).map(issueRow).join('')}</ul></section>` : ''}
         <section class="garage-panel">
           <h2>${escape(t('log'))}</h2>
@@ -364,6 +367,7 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
       try {
         await api(`/garage/vehicles/${encodeURIComponent(id)}/mechanic?${lang()}`, {method: 'POST', body: JSON.stringify({question: data.get('question')})});
       } catch (error) {
+        if (error.status === 402) throw error;
         showToast(error.payload?.detail?.message || error.message);
       }
       await renderCar(id);

@@ -21,13 +21,17 @@ def secure_feature_flags_for_tests() -> Generator[None, None, None]:
     settings = get_settings()
     original_developer_mode = settings.developer_mode
     original_simulation = settings.developer_simulate_user_paywall_default
+    original_subscription = settings.subscription_v1
     settings.developer_mode = False
     settings.developer_simulate_user_paywall_default = False
+    # subscription rights (stage 6) are tested in test_subscription.py; other tests see every right
+    settings.subscription_v1 = False
     try:
         yield
     finally:
         settings.developer_mode = original_developer_mode
         settings.developer_simulate_user_paywall_default = original_simulation
+        settings.subscription_v1 = original_subscription
 
 
 @pytest.fixture

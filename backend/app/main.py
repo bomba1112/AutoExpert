@@ -34,7 +34,21 @@ def create_app() -> FastAPI:
         ],
     )
     application.include_router(api_router, prefix=settings.api_v1_prefix)
+    from fastapi.responses import JSONResponse
+
+    from app.services.entitlements import SubscriptionRequired
+
+    @application.exception_handler(SubscriptionRequired)
+    async def subscription_required(request: Request, exc: SubscriptionRequired):  # type: ignore[no-untyped-def]
+        detail = {"code": "SUBSCRIPTION_REQUIRED", "feature": exc.feature}
+        return JSONResponse(status_code=402, content={"detail": detail})
+
     from app.services import garage as garage_service
+    from app.services import public_pages
+
+    site = Path(settings.public_site_dir) / "cars"
+    if public_pages.enabled(settings) and site.is_dir():
+        application.mount("/cars", StaticFiles(directory=site, html=True), name="public-car-pages")
 
     if settings.garage_recall_job and garage_service.enabled(settings):
         from app.db.session import SessionLocal
