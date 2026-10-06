@@ -85,6 +85,12 @@ test('the verdict: who is better at what, only parameters someone has, ties not 
   const {verdict, numberOf, specMetrics, metricsOf} = await import('../compare-verdict.js');
   assert.equal(numberOf('1 234 л'), 1234);
   assert.equal(numberOf('7,4 л/100 км'), 7.4);
+  const {valueIn} = await import('../compare-verdict.js');
+  // units: the first number is not always the comparable one
+  assert.equal(valueIn('fuel', '27 mpg (8.7 L/100km)'), 8.7);
+  assert.equal(valueIn('clearance', '5.7 in (145 mm)'), 145);
+  assert.equal(valueIn('cargo', '392 qt (371 L)'), 371);
+  assert.equal(valueIn('fuel', '27 mpg'), null);  // another unit only: not compared
   const a = {name: 'Toyota Camry', metrics: {power: {value: 203, text: '203 hp'}, fuel: {value: 7.4, text: '7.4'}, cargo: {value: 428, text: '428 L'}, problems: {value: 1003, serious: 1, count: 3}, recalls: {value: 3, count: 3}}};
   const b = {name: 'Honda Accord', metrics: {power: {value: 192, text: '192 hp'}, fuel: {value: 7.2, text: '7.2'}, cargo: {value: 473, text: '473 L'}, problems: {value: 5009, serious: 5, count: 9}, recalls: {value: 3, count: 3}}};
   const r = verdict([a, b], 'ru');

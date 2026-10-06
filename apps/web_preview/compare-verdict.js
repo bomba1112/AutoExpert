@@ -15,6 +15,23 @@ export const PARAMS = [
 ];
 const TOLERANCE = 0.03;  // closer than 3 %: neither is better
 
+// the number with the unit the comparison needs: values may read "27 mpg (8.7 L/100km)", "5.7 in
+// (145 mm)", "392 qt (371 L)" — the first number is not always the right one
+const NUM = String.raw`(\d+(?:[.,]\d+)?)`;
+export const UNITS = {
+  power: new RegExp(NUM + String.raw`\s*(?:hp|л\.?\s?с|a\.?\s?g)`, 'i'),
+  fuel: new RegExp(NUM + String.raw`\s*(?:l|л)\s*\/\s*100`, 'i'),
+  cargo: new RegExp(NUM + String.raw`\s*(?:l|л)(?![a-zа-я\/])`, 'i'),
+  clearance: new RegExp(NUM + String.raw`\s*(?:mm|мм)`, 'i'),
+};
+
+export function valueIn(key, text) {
+  const clean = String(text ?? '').replace(/(\d)[\s ](?=\d{3}\b)/g, '$1');
+  const match = UNITS[key] ? clean.match(UNITS[key]) : null;
+  if (match) return Number(match[1].replace(',', '.'));
+  return UNITS[key] && /[a-zа-я]/i.test(clean.replace(/\d|[.,\s()]/g, '')) ? null : numberOf(clean);  // another unit only: not comparable
+}
+
 export function numberOf(text) {
   const match = String(text ?? '').replace(/(\d)[\s ](?=\d{3}\b)/g, '$1').match(/\d+(?:[.,]\d+)?/);
   return match ? Number(match[0].replace(',', '.')) : null;
@@ -50,7 +67,7 @@ export function metricsOf(tech, extra = {}, fill = {}) {
   const sources = new Set();
   for (const p of PARAMS.filter(x => x.rows)) {
     const row = p.rows.map(k => rows[k]).find(r => r?.values?.length);
-    const value = row ? numberOf(row.values[0].value) : null;
+    const value = row ? valueIn(p.key, row.values[0].value) : null;
     if (value) {
       out[p.key] = {value, text: row.values[0].value};
       const s = row.values[0].source;

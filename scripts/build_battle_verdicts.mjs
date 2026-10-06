@@ -20,12 +20,13 @@ async function json(url, options) {
   return r.json();
 }
 
-// the same base version the app compares: not a preview, the smallest engine
+// the same base version the app compares: not a preview, gasoline without hybrid, the smallest engine
 async function baseVariant(m) {
   const data = await json(`${base}/api/v1/knowledge/search?language=ru`, {method: 'POST', headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({...FILTERS, makes: [m.make], models: [m.model], year_min: m.year, year_max: m.year})});
   const disp = v => Number(v.facts?.engine_displacement?.value) || 99;
-  return (data.matches || []).slice().sort((a, b) => (!!a.preview - !!b.preview) || (disp(a) - disp(b)))[0] || null;
+  const plain = v => (v.facts?.fuel?.value === 'GASOLINE' && v.facts?.powertrain?.value === 'ICE' ? 0 : 1);
+  return (data.matches || []).slice().sort((a, b) => (!!a.preview - !!b.preview) || (plain(a) - plain(b)) || (disp(a) - disp(b)))[0] || null;
 }
 
 async function safety(m) {

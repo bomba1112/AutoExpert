@@ -108,9 +108,10 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     const found=[];
     for(const m of b.members){
       const data=await api(`/knowledge/search?language=${state.language}`,{method:'POST',body:JSON.stringify({...defaults(),origin:undefined,budget_usd:undefined,makes:[m.make],models:[m.model],year_min:m.year,year_max:m.year,limit:30,sort:'recommended'})});
-      // the base version of the model: not a preview, the smallest engine
+      // the base version of the model: not a preview, gasoline without hybrid, the smallest engine
       const disp=v=>Number(v.facts?.engine_displacement?.value)||99;
-      const hits=(data.matches||[]).slice().sort((a,b)=>(!!a.preview-!!b.preview)||(disp(a)-disp(b)));
+      const plain=v=>v.facts?.fuel?.value==='GASOLINE'&&v.facts?.powertrain?.value==='ICE'?0:1;
+      const hits=(data.matches||[]).slice().sort((a,b)=>(!!a.preview-!!b.preview)||(plain(a)-plain(b))||(disp(a)-disp(b)));
       const hit=hits[0];
       if(!hit)return {battle:b,missing:`${m.make} ${m.model} ${m.year}`};
       found.push(hit);names[hit.id]=`${hit.make} ${hit.model} · ${hit.year}`;
