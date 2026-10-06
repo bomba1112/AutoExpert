@@ -1,4 +1,4 @@
-"""f094: CN catalogue columns — SQLite round trip, guarded downgrade, PostgreSQL DDL."""
+"""f095: CN catalogue columns — SQLite round trip, guarded downgrade, PostgreSQL DDL."""
 
 from __future__ import annotations
 
@@ -36,8 +36,8 @@ def columns(connection: sqlite3.Connection, table: str) -> dict[str, bool]:
     return {row[1]: bool(row[3]) for row in connection.execute(f"PRAGMA table_info({table})")}
 
 
-def test_f094_upgrade_downgrade_round_trip_on_sqlite(tmp_path):
-    database = tmp_path / "f094.db"
+def test_f095_upgrade_downgrade_round_trip_on_sqlite(tmp_path):
+    database = tmp_path / "f095.db"
     url = f"sqlite:///{database.as_posix()}"
     result = alembic(url, "upgrade", "head", cwd=tmp_path)
     assert result.returncode == 0, result.stdout + result.stderr
@@ -49,7 +49,7 @@ def test_f094_upgrade_downgrade_round_trip_on_sqlite(tmp_path):
         assert "hybrid_system_key" in issue
         assert issue["severity"] is False
 
-    result = alembic(url, "downgrade", "f093_owners_club", cwd=tmp_path)
+    result = alembic(url, "downgrade", "f094_subscriptions", cwd=tmp_path)
     assert result.returncode == 0, result.stdout + result.stderr
     with sqlite3.connect(database) as connection:
         assert "battery_kwh" not in columns(connection, "vehicle_variants")
@@ -59,8 +59,8 @@ def test_f094_upgrade_downgrade_round_trip_on_sqlite(tmp_path):
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_f094_downgrade_refused_while_cn_rows_exist(tmp_path):
-    database = tmp_path / "f094_guard.db"
+def test_f095_downgrade_refused_while_cn_rows_exist(tmp_path):
+    database = tmp_path / "f095_guard.db"
     url = f"sqlite:///{database.as_posix()}"
     assert alembic(url, "upgrade", "head", cwd=tmp_path).returncode == 0
     now = "2026-10-04 00:00:00"
@@ -86,20 +86,20 @@ def test_f094_downgrade_refused_while_cn_rows_exist(tmp_path):
             " VALUES ('vr', 'gn', 'CN', 'x', '{}', 0, 'REAL', 0, 18.32, ?, ?)",
             (now, now),
         )
-    result = alembic(url, "downgrade", "f093_owners_club", cwd=tmp_path)
+    result = alembic(url, "downgrade", "f094_subscriptions", cwd=tmp_path)
     assert result.returncode != 0
-    assert "f094 downgrade refused" in result.stdout + result.stderr
+    assert "f095 downgrade refused" in result.stdout + result.stderr
     with sqlite3.connect(database) as connection:
         assert connection.execute("SELECT version_num FROM alembic_version").fetchone() == (
-            "f094_cn_catalog",
+            "f095_cn_catalog",
         )
 
 
-def test_f094_postgresql_ddl_is_plain_alter(tmp_path):
+def test_f095_postgresql_ddl_is_plain_alter(tmp_path):
     result = alembic(
         "postgresql://user:password@localhost/autoexpert",
         "upgrade",
-        "f093_owners_club:f094_cn_catalog",
+        "f094_subscriptions:f095_cn_catalog",
         "--sql",
         cwd=tmp_path,
     )
@@ -115,7 +115,7 @@ def test_f094_postgresql_ddl_is_plain_alter(tmp_path):
     assert "CREATE TYPE" not in sql
 
 
-def test_f094_models_match_migration():
+def test_f095_models_match_migration():
     assert VehicleVariant.__table__.c.powertrain_type.nullable
     assert VehicleVariant.__table__.c.battery_kwh.nullable
     assert TechnicalEvidence.__table__.c.hybrid_system_key.nullable
