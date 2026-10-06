@@ -10,7 +10,13 @@
 
 Проверка: `nslookup staging.DOMAIN` отдаёт `77.42.27.222`.
 
-## 2. HTTPS (Caddy сам получит сертификат Let's Encrypt)
+## 2. HTTPS
+**На общем сервере со Stories (как сейчас):** порты 80/443 у Caddy проекта Stories. Сейчас staging открыт
+по `https://autoexpert.77-42-27-222.sslip.io` (сертификат Let's Encrypt уже выдан). Для своего домена — в
+`/opt/stories/deploy/production/Caddyfile` добавить такой же блок с именем домена
+(`deploy/server/stories_caddy_link.sh`, переменная `HOST`) и перезагрузить Caddy Stories без простоя.
+
+**На отдельном сервере** (Caddy Auto Expert сам получит сертификат):
 В `/srv/autoexpert/shared/.env`:
 ```
 SITE_ADDRESS='staging.DOMAIN'

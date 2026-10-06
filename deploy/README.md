@@ -4,8 +4,13 @@
 
 ## Устройство
 
+Сервер общий с проектом **Stories** (Telegram Mini App, `/opt/stories`): его Caddy держит 80/443, выдаёт HTTPS
+и пересылает `autoexpert.77-42-27-222.sslip.io` на край Auto Expert (`172.17.0.1:8088`, снаружи недоступен).
+Блок добавлен скриптом `deploy/server/stories_caddy_link.sh` (откат: `--undo`). Docker на сервере не
+перезапускать: это перезапустит и Stories.
+
 ```
-Интернет :80/:443 ──> caddy (Basic Auth, noindex; HTTPS — когда будет домен)
+Интернет :443 ──> stories-caddy (HTTPS) ──> 172.17.0.1:8088 ──> caddy Auto Expert (Basic Auth, noindex)
                        ├─ /api/*     ──> backend  (FastAPI, 2 процесса, read-only контейнер)
                        ├─ /preview/* ──> web      (nginx: веб-приложение apps/web_preview)
                        ├─ /app/*     ──> web      (nginx: Flutter web)
@@ -32,6 +37,7 @@ migrate — разовый контейнер: alembic upgrade head перед �
 
 ## Порядок первой установки
 1. С ноутбука: `ssh root@77.42.27.222 'bash -s' < deploy/server/inspect.sh` — осмотр (ничего не меняет).
+   (Выполнено 2026-10-06, результат — `data_work/deploy/server_inspection_before.txt`.)
 2. Если чужих проектов нет: `scp -r deploy/server root@77.42.27.222:/root/autoexpert-server` и
    `ssh root@77.42.27.222 bash /root/autoexpert-server/bootstrap.sh`. Проверить вход `ssh deploy@77.42.27.222`
    в новом окне, не закрывая старое.
@@ -41,7 +47,9 @@ migrate — разовый контейнер: alembic upgrade head перед �
 5. Выпуск: `deploy/release.sh` (код из закоммиченного HEAD, web, Flutter web, сайт из
    `C:/AutoExpertData/public_site_staging`).
 6. База: `deploy/push_database.sh` (дамп локального PostgreSQL → восстановление → сверка строк).
-7. Перезагрузка сервера и проверка, что всё поднялось само.
+7. `ssh root@77.42.27.222 bash /root/autoexpert-server/stories_caddy_link.sh` — HTTPS через Caddy Stories.
+8. `sudo systemctl start autoexpert-backup.timer autoexpert-health.timer autoexpert-recalls.timer`.
+9. Перезагрузка сервера и проверка, что всё поднялось само (выполнено: оба проекта поднялись).
 
 ## Команды «на всякий случай» (на сервере, пользователь deploy)
 
