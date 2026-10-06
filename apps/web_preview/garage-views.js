@@ -1,7 +1,7 @@
 // The Garage (product phase, stage 2): the owner's cars, next services, the service log and the
 // "My car" feed. Shown only while the API advertises the garage_v1 flag (client-config
 // "garage_v1"); production without the flag never loads or renders anything from here.
-import {api, downloadFile} from './api.js?v=0.12.0';
+import {api, downloadFile} from './api.js?v=0.13.0';
 
 const C = {
   garage: ['Гараж', 'Qaraj', 'Garage'],
@@ -384,6 +384,12 @@ export function createGarageViews({root, state, layout, go, ensureSession, showT
 
   return {
     enabled,
+    // "Добавить в мой гараж" from a car card or an expert opinion: the add form opens on that configuration
+    prefill({make, model, year, configuration_key: key, label, vin} = {}) {
+      Object.assign(draft, {make, model, year: year ? Number(year) : undefined, vin: vin || draft.vin, decoded: null, searched: true, chosen: key || null,
+        candidates: key ? [{configuration_key: key, make, model, year, label: label || ''}] : []});
+      go('/garage-add');
+    },
     async route(name, id) {
       if (!enabled() || !['garage', 'garage-add', 'garage-car', 'garage-feed'].includes(name)) return false;
       if (name === 'garage') await renderList();

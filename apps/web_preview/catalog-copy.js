@@ -1,4 +1,4 @@
-import {EN, pickText} from './en-text.js?v=0.12.0';
+import {EN, pickText} from './en-text.js?v=0.13.0';
 // New buyer journeys share a single AZ/RU message catalogue. Existing EN reports remain readable.
 export const copy = {
   ownershipImport:['Импорт ТО, деталей и цен','Xidmət, hissə və qiymət idxalı'],

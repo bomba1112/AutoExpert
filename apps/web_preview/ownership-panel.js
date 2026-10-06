@@ -1,5 +1,5 @@
-import {EN, pickText} from './en-text.js?v=0.12.0';
-import {api} from './api.js?v=0.12.0';
+import {EN, pickText} from './en-text.js?v=0.13.0';
+import {api} from './api.js?v=0.13.0';
 
 // Shared by the existing dossier and comparison. All arithmetic stays on the backend.
 export function mountOwnership(host, members, {language, esc, ensureSession, go}) {

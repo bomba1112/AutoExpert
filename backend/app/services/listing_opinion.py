@@ -394,6 +394,8 @@ def opinion_for(db, *, make: str, model: str, year: int | None, claims: dict, la
         checklist.append({"text": issue["title"] + (f": {issue['how_to_check']}" if issue.get("how_to_check") else ""),
                           "note": issue.get("note"), "kind": "issue"})
     for recall in card.get("campaigns") or []:
+        if any(recall["number"] in c["text"] for c in checklist):
+            continue  # already named by a known issue
         component = f" ({recall['component']})" if recall.get("component") else ""
         checklist.append({"text": tt(language, "check_recall", number=recall["number"], component=component), "kind": "recall"})
     if any(s["job"] == "timing_belt" and s["status"] in ("CHECK", "OVERDUE") for s in service):

@@ -1,4 +1,4 @@
-import {EN, pickText, deviceLanguage} from './en-text.js?v=0.12.0';
+import {EN, pickText, deviceLanguage} from './en-text.js?v=0.13.0';
 import {
   ApiError,
   api,
@@ -9,20 +9,22 @@ import {
   hasSession,
   trackEvent,
   vehiclePhotoUrl,
-} from './api.js?v=0.12.0';
+} from './api.js?v=0.13.0';
 import {
   ResearchContinuation,
   executeResearchContinuation,
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
-import {createBuyerViews} from './buyer-views.js?v=0.12.0';
-import {createCatalogViews} from './catalog-views.js?v=0.12.0';
-import {createVinHistoryViews} from './vin-history-views.js?v=0.12.0';
-import {createListingViews} from './listing-views.js?v=0.12.0';
-import {createUsTechViews} from './us-tech-views.js?v=0.12.0';
-import {createGarageViews} from './garage-views.js?v=0.12.0';
-import {createClubViews} from './club-views.js?v=0.12.0';
-import {createSubscriptionViews} from './subscription-views.js?v=0.12.0';
+import {createBuyerViews} from './buyer-views.js?v=0.13.0';
+import {createCatalogViews} from './catalog-views.js?v=0.13.0';
+import {createVinHistoryViews} from './vin-history-views.js?v=0.13.0';
+import {createListingViews} from './listing-views.js?v=0.13.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.13.0';
+import {createGarageViews} from './garage-views.js?v=0.13.0';
+import {createClubViews} from './club-views.js?v=0.13.0';
+import {createSubscriptionViews} from './subscription-views.js?v=0.13.0';
+import {createExpertViews} from './expert-views.js?v=0.13.0';
+import {region, setRegion} from './ui-config.js?v=0.13.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -57,7 +59,8 @@ const usTechViews = createUsTechViews({root, state, layout});
 const clubViews = createClubViews({root, state, layout, go, ensureSession, showToast});
 const subscriptionViews = createSubscriptionViews({root, state, layout, go, ensureSession, showToast});
 const garageViews = createGarageViews({root, state, layout, go, ensureSession, showToast, clubButton: id => clubViews.vehicleRoomsButton(id), lockedPanel: n => subscriptionViews.enabled() ? subscriptionViews.lockedPanel(n) : ''});
-const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews});
+const catalogViews = createCatalogViews({root, state, layout, go, esc, ensureSession, showToast, usTech: usTechViews, garage: () => garageViews, expert: () => expertViews, club: () => clubViews, subscription: () => subscriptionViews});
+const expertViews = createExpertViews({root, state, layout, go, ensureSession, showToast, garage: garageViews, usTech: usTechViews});
 const listingViews = createListingViews({root, state, layout, go, esc, ensureSession, showToast, addCatalogVariant:(id,title)=>catalogViews.addVariantToBasket(id,title)});
 
 root.addEventListener('click', (event) => {
@@ -135,12 +138,14 @@ async function route() {
   }
   try {
     if (await historyViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await expertViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await listingViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (name === 'vin-report') {renderVinInput(decodeURIComponent(id || '')); return;}
     if (await usTechViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await garageViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await clubViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await subscriptionViews.route(name, id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
-    if (await catalogViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
+    if (await catalogViews.route(name || 'home', id, routeParts()[2])) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (await buyerViews.route(name || 'home', id)) {window.scrollTo({top: 0, behavior: 'auto'}); return;}
     if (name === 'language') renderLanguage();
     else if (name === 'home' || !name) renderHome();
@@ -1008,9 +1013,9 @@ function layout(content, {active = '', wide = false, nav = true} = {}) {
     <div class="shell ${nav ? '' : 'no-nav'}">
       <header class="app-header">
         <button class="brand ghost-button" data-action="home" aria-label="${esc(t('navHome'))}">
-          <span class="brand-car" aria-hidden="true"><svg viewBox="0 0 50 28"><path d="m5 16 6-10h25l8 10 3 2v7H3v-7Z"/><path d="M14 9h19l6 8H9ZM24 9v8"/><circle cx="12" cy="23" r="4"/><circle cx="38" cy="23" r="4"/></svg></span><span><strong><em>AUTO</em> EXPERT</strong><small>Azerbaijan</small></span>
+          <span class="brand-car" aria-hidden="true"><svg viewBox="0 0 50 28"><path d="m5 16 6-10h25l8 10 3 2v7H3v-7Z"/><path d="M14 9h19l6 8H9ZM24 9v8"/><circle cx="12" cy="23" r="4"/><circle cx="38" cy="23" r="4"/></svg></span><span><strong><em>AUTO</em> EXPERT</strong>${region(state) === 'AZ' ? '<small>Azerbaijan</small>' : ''}</span>
         </button>
-        <div class="header-actions"><div class="language-switch">${['en','az','ru'].map(code => `<button data-action="buyer-language" data-language="${code}" class="${state.language === code ? 'selected' : ''}">${code.toUpperCase()}</button>`).join('')}</div><button class="profile-button" data-action="profile" aria-label="${pickText(state.language, 'Профиль', 'Profil')}">●</button></div>
+        <div class="header-actions">${garageViews.enabled() ? `<button class="header-bell" data-action="garage-feed" aria-label="${esc(pickText(state.language, 'Лента гаража', 'Qaraj lenti', 'Garage feed'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></button>` : ''}<button class="profile-button" data-action="profile" aria-label="${esc(pickText(state.language, 'Профиль и подписка', 'Profil və abunə', 'Profile and subscription'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg></button></div>
       </header>
       ${state.meta?.developer?.enabled ? `<details class="developer-drawer"><summary>${esc(state.language === 'ru' ? 'Настройки тестирования' : pickText(state.language, 'Test settings', 'Sınaq parametrləri'))}</summary>${developerToolbar()}</details>` : ''}
       <main class="screen ${wide ? 'wide' : ''}">${content}</main>
@@ -1033,7 +1038,7 @@ function bottomNav(active) {
   return `
     <nav class="bottom-nav ${garageViews.enabled() ? 'five' : ''}" aria-label="Primary">
       <button class="${active === 'home' ? 'active' : ''}" data-action="home"><span class="nav-icon">⌂</span><span>${esc(t('navHome'))}</span></button>
-      <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(state.language === 'ru' ? 'Сравнение' : pickText(state.language, 'Compare', 'Müqayisə'))}</span></button>
+      <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(pickText(state.language, 'Сравнения', 'Müqayisələr', 'Compare'))}</span></button>
       <button class="${active === 'check' ? 'active' : ''}" data-action="buyer-check"><span class="nav-icon">⌕</span><span>${esc(pickText(state.language, 'Проверить', 'Yoxla'))}</span></button>
       <button class="${active === 'reports' ? 'active' : ''}" data-action="reports"><span class="nav-icon">▤</span><span>${esc(t('navReports'))}</span></button>
       ${garageViews.enabled() ? `<button class="${active === 'garage' ? 'active' : ''}" data-action="garage"><span class="nav-icon">⚙</span><span>${esc(garageViews.navLabel())}</span></button>` : ''}

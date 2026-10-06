@@ -220,3 +220,11 @@ def test_api_behind_the_flag(client, camry, monkeypatch):
     assert client.post("/api/v1/expert/opinion", json={"query": "Toyota Camry 2020"}, headers=h).status_code == 404
     settings.expert_opinion_v1, settings.environment = None, "production"
     assert not lo.enabled()
+
+
+def test_client_config_advertises_the_flag(client):
+    settings = get_settings()
+    settings.expert_opinion_v1 = True
+    assert client.get("/api/v1/meta/client-config").json()["expert_opinion_v1"] == {"enabled": True}
+    settings.expert_opinion_v1 = False
+    assert "expert_opinion_v1" not in client.get("/api/v1/meta/client-config").json()
