@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+import os
 from collections.abc import Generator
 
 import pytest
 from app import models  # noqa: F401
 from app.core.config import get_settings
 from app.db.base import Base
+from app.db.ordering import add_row_order
 from app.db.session import get_db
 from app.main import app
 from fastapi.testclient import TestClient
@@ -34,8 +36,41 @@ def secure_feature_flags_for_tests() -> Generator[None, None, None]:
         settings.subscription_v1 = original_subscription
 
 
+# AUTOEXPERT_TEST_DATABASE_URL=postgresql+psycopg://... runs the tests on PostgreSQL (deploy
+# prompt, stage A): the schema is created once, every test runs in a transaction rolled back at
+# the end (the application's commits become savepoints). Unset: in-memory SQLite per test.
+TEST_DATABASE_URL = os.environ.get("AUTOEXPERT_TEST_DATABASE_URL")
+
+
+@pytest.fixture(scope="session")
+def postgres_engine():
+    if not TEST_DATABASE_URL:
+        yield None
+        return
+    engine = create_engine(TEST_DATABASE_URL)
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
+    with engine.begin() as connection:
+        add_row_order(connection)  # as migration f095 does on PostgreSQL
+    yield engine
+    Base.metadata.drop_all(engine)
+    engine.dispose()
+
+
 @pytest.fixture
-def db_session() -> Generator[Session, None, None]:
+def db_session(postgres_engine) -> Generator[Session, None, None]:
+    if postgres_engine is not None:
+        connection = postgres_engine.connect()
+        outer = connection.begin()
+        session = Session(bind=connection, autoflush=False, expire_on_commit=False,
+                          join_transaction_mode="create_savepoint")
+        try:
+            yield session
+        finally:
+            session.close()
+            outer.rollback()
+            connection.close()
+        return
     engine = create_engine(
         "sqlite://",
         connect_args={"check_same_thread": False},

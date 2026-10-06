@@ -169,4 +169,5 @@ def test_deleting_the_car_keeps_its_mechanic_log_without_the_car(car, db_session
     db_session.commit()
     kept = db_session.get(AIMechanicRequest, entry.id)
     assert kept is not None and kept.vehicle_id is None  # ON DELETE SET NULL, also on SQLite
-    assert db_session.execute(text("pragma foreign_key_check")).all() == []
+    if db_session.get_bind().dialect.name == "sqlite":  # PostgreSQL enforces the foreign keys itself
+        assert db_session.execute(text("pragma foreign_key_check")).all() == []
