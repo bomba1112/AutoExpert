@@ -30,12 +30,18 @@ install -d -m 700 -o "$DEPLOY_USER" -g "$DEPLOY_USER" "/home/$DEPLOY_USER/.ssh"
 if [ -s /root/.ssh/authorized_keys ]; then
   install -m 600 -o "$DEPLOY_USER" -g "$DEPLOY_USER" /root/.ssh/authorized_keys "/home/$DEPLOY_USER/.ssh/authorized_keys"
 fi
-# sudo only for the service units (no general root)
-cat > /etc/sudoers.d/autoexpert <<EOF
-$DEPLOY_USER ALL=(root) NOPASSWD: /usr/bin/systemctl start autoexpert-*, /usr/bin/systemctl restart autoexpert-*, /usr/bin/systemctl status autoexpert-*, /usr/sbin/reboot
-EOF
-chmod 440 /etc/sudoers.d/autoexpert
-visudo -cf /etc/sudoers.d/autoexpert
+# sudo only for the service units and reboot (no general root); checked before it is installed
+SUDOERS_TMP=$(mktemp)
+{
+  printf '%s ALL=(root) NOPASSWD: ' "$DEPLOY_USER"
+  printf '/usr/bin/systemctl start autoexpert-backup.service, /usr/bin/systemctl start autoexpert-health.service, '
+  printf '/usr/bin/systemctl start autoexpert-recalls.service, /usr/bin/systemctl status autoexpert-backup.service, '
+  printf '/usr/bin/systemctl status autoexpert-health.service, /usr/bin/systemctl status autoexpert-recalls.service, /usr/sbin/reboot
+'
+} > "$SUDOERS_TMP"
+visudo -cf "$SUDOERS_TMP"
+install -m 440 "$SUDOERS_TMP" /etc/sudoers.d/autoexpert
+rm -f "$SUDOERS_TMP"
 
 echo "== ssh: key only"
 cat > /etc/ssh/sshd_config.d/10-autoexpert.conf <<'EOF'
@@ -106,7 +112,7 @@ sysctl --system >/dev/null
 echo "== folders"
 install -d -m 755 -o "$DEPLOY_USER" -g "$DEPLOY_USER" /srv/autoexpert /srv/autoexpert/releases /srv/autoexpert/vpic /srv/autoexpert/logs
 install -d -m 700 -o "$DEPLOY_USER" -g "$DEPLOY_USER" /srv/autoexpert/shared /srv/autoexpert/backups
-install -d -m 755 -o 10001 -g 10001 /srv/autoexpert/media   # the backend container's user
+install -d -m 755 /srv/autoexpert/media && chown 10001:10001 /srv/autoexpert/media   # the backend container's user (uid 10001)
 install -m 755 "$HERE/backup.sh" "$HERE/health.sh" /usr/local/bin/
 cp "$HERE"/systemd/*.service "$HERE"/systemd/*.timer /etc/systemd/system/
 systemctl daemon-reload
