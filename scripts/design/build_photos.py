@@ -46,11 +46,20 @@ def main() -> None:
     if meta.exists():
         hero.update(json.loads(meta.read_text(encoding="utf-8")))
     if hero_dark and not hero.get("dark"):
-        hero["dark"] = hero_dark["file"]
+        cut = DIR / "cut" / Path(hero_dark["file"]).name  # the dark car without its background
+        hero["dark"] = f"cut/{cut.name}" if cut.exists() else hero_dark["file"]
         hero["credits"].append({"file": hero_dark["file"], "author": hero_dark.get("author"), "license": hero_dark.get("license"),
                                 "license_url": hero_dark.get("license_url"), "source_page": hero_dark.get("source_page")})
     keep = ("file", "make", "model", "generation", "years", "author", "license", "license_url", "source_page")
     photos = [{k: r.get(k) for k in keep} for r in items]
+    facing = json.loads((DIR / "facing.json").read_text(encoding="utf-8")) if (DIR / "facing.json").exists() else {}
+    for p in photos:
+        if p["file"] in facing:  # where the front points: the VS layouts mirror only when needed
+            p["facing"] = facing[p["file"]]
+    for p in photos:  # the cut-out of the photo for the "VS" layouts (scripts/design/make_cutouts.py)
+        cut = DIR / "cut" / Path(p["file"]).name
+        if cut.exists():
+            p["cut"] = f"cut/{cut.name}"
     OUT_JS.write_text(
         "// written by scripts/design/build_photos.py from photos/**/provenance_*.json — freely licensed car photos\n"
         f"export const PHOTOS = {json.dumps(photos, ensure_ascii=False)};\n"

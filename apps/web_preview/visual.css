@@ -351,3 +351,42 @@ body {font-size:var(--ae-fs-body);line-height:1.4;-webkit-font-smoothing:antiali
 .ae-view .ae-verdict li + li {font-size:12px;font-weight:500;color:var(--ae-text);}
 .catalog-card > details > summary,.catalog-card details summary {font-size:13px;font-weight:600;color:var(--ae-heading);}
 details.catalog-card {padding:10px 12px;}
+
+/* two cars facing each other: battle cards and the comparison head */
+.ae-cut {display:block;width:100%;height:auto;filter:drop-shadow(0 6px 6px color-mix(in srgb,var(--ae-navy-card) 45%,transparent));}
+.ae-cut.mirror {transform:scaleX(-1);}
+.ae-battle-photos {background:linear-gradient(180deg,var(--ae-tower) 0%,var(--ae-tower-light) 55%,var(--ae-navy-card) 100%);}
+.ae-battle-photos:before {content:'';position:absolute;inset:0 0 auto 0;height:60%;background:linear-gradient(90deg,transparent 0 6%,color-mix(in srgb,var(--ae-card) 18%,transparent) 6% 9%,transparent 9% 20%,color-mix(in srgb,var(--ae-card) 14%,transparent) 20% 24%,transparent 24% 62%,color-mix(in srgb,var(--ae-card) 16%,transparent) 62% 66%,transparent 66% 80%,color-mix(in srgb,var(--ae-card) 12%,transparent) 80% 85%,transparent 85%);opacity:.7;}
+.ae-battle-photos > span.ae-battle-car {position:relative;display:flex;align-items:flex-end;overflow:visible;height:102px;padding:0 2px 4px;}
+.ae-battle-car .ae-cut {width:118%;max-width:none;margin:0 -9%;}
+.ae-battle-car .ae-photo-empty,.ae-battle-car .ae-photo {height:102px;}
+.vs-stage {height:106px;display:flex;align-items:flex-end;justify-content:center;padding:6px 6px 4px;background:linear-gradient(180deg,var(--ae-bg) 0%,var(--ae-chip-selected) 100%);}
+.vs-stage .ae-cut {width:100%;}
+.vs-stage .ae-photo,.vs-stage .ae-photo-empty {height:96px;}
+.ae-vin-frame b {font-size:9.5px;letter-spacing:0;}
+.ae-vin-frame {width:140px;}
+.ae-battle {height:170px;}
+.ae-battle-photos {inset:0 0 70px;}
+.ae-battle-photos > span.ae-battle-car {height:100px;padding:0 0 2px;}
+.ae-vs {top:62px;}
+.ae-battle-text {padding:14px 9px 8px;background:linear-gradient(180deg,transparent 0%,var(--ae-navy-card) 22%,var(--ae-navy-card) 100%);}
+.ae-sort {position:relative;display:inline-flex!important;flex-direction:row!important;align-items:center;gap:3px;margin:0!important;color:var(--ae-link);font-size:11.5px!important;font-weight:500!important;white-space:nowrap;}
+.ae-sort .ic {width:14px;height:14px;}
+.catalog-view .ae-sort select {position:absolute;inset:0;opacity:0;min-height:0;width:100%;cursor:pointer;}
+.result-head strong {white-space:nowrap;}
+.vs-car .text-button {font-size:10.5px;margin:0 10px;padding:0;min-height:22px;}
+.ae-battle-photos {inset:0 0 78px;}
+.ae-battle-photos > span.ae-battle-car {height:92px;padding:0 0 6px;}
+.ae-vs {top:56px;}
+.ae-battle-text {padding:10px 9px 8px;background:linear-gradient(180deg,color-mix(in srgb,var(--ae-navy-card) 70%,transparent) 0%,var(--ae-navy-card) 18%,var(--ae-navy-card) 100%);}
+.ae-skyline-az,.ae-skyline-us {height:106px;width:170px;}
+.ae-skyline-az .ae-skyline {height:106px;width:170px;}
+.ae-script {top:26px;right:52px;}
+.ae-flag {top:76px;right:68px;}
+.catalog-view .ae-check-text p {max-width:196px;}
+.ae-buy {min-height:196px;}
+.ae-buy-cars {top:44px;}
+/* the dark car of the check card: a cut-out on the navy background */
+.ae-check-car {right:-36px;top:18px;width:250px;height:auto;object-fit:contain;opacity:.95;-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 38%);mask-image:linear-gradient(90deg,transparent 0%,black 38%);filter:brightness(.9) drop-shadow(0 10px 14px color-mix(in srgb,var(--ae-navy-card) 80%,transparent));}
+.ae-check-car {top:44px;right:-30px;width:228px;opacity:.9;}
+.catalog-view .ae-sort span,.catalog-view .ae-sort .ic {color:var(--ae-link);}

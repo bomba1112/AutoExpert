@@ -25,6 +25,15 @@ export function carPhoto(make, model, year, {alt = '', cls = ''} = {}) {
   return placeholder(make, cls);
 }
 
+// the car without its background (two cars facing each other in the "VS" layouts); a car is
+// mirrored only when its photo shows it facing away from the other one (photos/facing.json)
+export function carCutout(make, model, year, {face = null, mirror = false, cls = ''} = {}) {
+  const p = photoOf(make, model, year);
+  if (face && p?.facing) mirror = p.facing !== face;  // turn the car towards the other one
+  if (p?.cut) return `<img class="ae-cut ${mirror ? 'mirror' : ''} ${cls}" src="${esc(asset(p.cut))}" alt="${esc(`${make} ${model}`)}" loading="lazy" decoding="async">`;
+  return p ? carPhoto(make, model, year, {cls}) : placeholder(make, cls);
+}
+
 // the author and the licence of a photo (CC BY / CC BY-SA need them next to the photo or on a credits page)
 export function photoCredit(make, model, year, language = 'ru') {
   const p = photoOf(make, model, year);

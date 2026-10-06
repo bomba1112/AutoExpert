@@ -6,7 +6,7 @@ import {message} from './catalog-copy.js?v=0.9.4';
 import {localizeConfiguration, localizeProfile, localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 import {metricsOf, numberOf, specMetrics, verdict} from './compare-verdict.js?v=0.14.0';
 import {budgetSteps, flag, fuelCost, loadBattles, loadFuelPrices, money, region, setRegion} from './ui-config.js?v=0.14.0';
-import {icon, carPhoto, photoCredit, allCredits, heroCars, darkCar, skyline} from './visual.js?v=0.14.0';
+import {icon, carPhoto, carCutout, photoCredit, allCredits, heroCars, darkCar, skyline} from './visual.js?v=0.14.0';
 
 // Screens by the owner's design reference (design/reference, data_work/ui/REFERENCE_MAP.md):
 // home, selection in steps, matching cars, the car card with technical categories, the comparison
@@ -101,7 +101,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
   function battleCard(b) {
     const [a,c]=b.members;
     const subtitle=(b.subtitle||{})[state.language]||(b.subtitle||{}).ru||'';
-    return `<button class="ae-battle" data-k="battle-compare" data-id="${esc(b.id)}" aria-label="${esc(`${a.make} ${a.model} vs ${c.make} ${c.model}`)}"><span class="ae-battle-photos">${b.members.map(m=>`<span>${carPhoto(m.make,m.model,m.year,{alt:''})}</span>`).join('')}<span class="ae-vs">VS</span></span><span class="ae-battle-text"><strong>${esc(`${a.make} ${a.model}`)}<br>vs ${esc(`${c.make} ${c.model}`)}</strong>${subtitle?`<small>${esc(subtitle)}</small>`:''}</span></button>`;
+    return `<button class="ae-battle" data-k="battle-compare" data-id="${esc(b.id)}" aria-label="${esc(`${a.make} ${a.model} vs ${c.make} ${c.model}`)}"><span class="ae-battle-photos">${b.members.map((m,i)=>`<span class="ae-battle-car ${i?'right':'left'}">${carCutout(m.make,m.model,m.year,{face:i?'left':'right'})}</span>`).join('')}<span class="ae-vs">VS</span></span><span class="ae-battle-text"><strong>${esc(`${a.make} ${a.model}`)}<br>vs ${esc(`${c.make} ${c.model}`)}</strong>${subtitle?`<small>${esc(subtitle)}</small>`:''}</span></button>`;
   }
   async function resolveBattle(id) {
     const b=(await loadBattles()).find(x=>x.id===id); if(!b)return null;
@@ -165,7 +165,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     const list = result.recommendation?.top ? [result.recommendation.top, ...result.recommendation.competitors] : [];
     const usBudget = !isAZ() && filters.budget_usd ? `<p class="catalog-note">${esc(T('Цен рынка США в базе пока нет — бюджет в $ не сужает список.','ABŞ bazarının qiymətləri hələ bazada yoxdur — $ büdcə siyahını daraltmır.','US market prices are not in our database yet — the $ budget does not narrow the list.'))}</p>` : '';
     show(top(T('Подходящие варианты','Uyğun variantlar','Matching cars'),'wizard') + `<section class="catalog-card profile-summary"><span class="profile-dot">${icon('user','',{filled:true})}</span><div><strong>${esc(T('Ваш профиль','Profiliniz','Your profile'))}</strong><p>${esc(profileText())}</p></div><button class="text-button" data-k="wizard">${esc(l('change'))}</button></section>${usBudget}
-      <div class="result-head"><strong>${esc(T(`Мы нашли ${result.matched_models} подходящих моделей`,`${result.matched_models} uyğun model tapdıq`,`We found ${result.matched_models} matching models`))}</strong>${select('sort','sort',['recommended','year_desc','make','consumption'].map(k=>[k,k]),filters.sort,'id="catalog-sort"')}</div>
+      <div class="result-head"><strong>${esc(T(`Мы нашли ${result.matched_models} подходящих моделей`,`${result.matched_models} uyğun model tapdıq`,`We found ${result.matched_models} matching models`))}</strong><label class="ae-sort"><span>${esc(T('Сортировка','Sıralama','Sort'))}</span>${icon('chevron-down')}<select id="catalog-sort" name="sort" aria-label="${esc(T('Сортировка','Sıralama','Sort'))}">${['recommended','year_desc','make','consumption'].map(k=>`<option value="${k}" ${filters.sort===k?'selected':''}>${esc(l(k))}</option>`).join('')}</select></label></div>
       ${list.length?list.map(modelCard).join(''):box(`<h2>${esc(l('noMatches'))}</h2>${btn('change','wizard')}`)}
       ${(result.needs_confirmation||[]).length?`<section class="catalog-card ae-warn-card ae-warn-row"><span class="ae-warn-icon">!</span><div><h2>${esc(T('Нужно уточнить','Dəqiqləşdirmək lazımdır','Needs confirming'))}</h2><p>${esc(T('Эти версии подходят не по всем условиям — уточните рынок, коробку или двигатель.','Bu versiyalar bütün şərtlərə uyğun deyil — bazarı, qutunu və ya mühərriki dəqiqləşdirin.','These versions do not meet every condition — confirm the market, gearbox or engine.'))}</p></div><button class="ae-btn-outline" data-k="wizard">${esc(T('Уточнить','Dəqiqləşdir','Refine'))}</button></section>${result.needs_confirmation.slice(0,5).map(modelCard).join('')}`:''}
       ${(result.recommendation?.competitor_models||0)>(filters.offset||0)+20?btn('more','more','','secondary full'):''}<div class="catalog-sticky"><button class="ae-btn ae-btn-wide" data-k="compare">${icon('chart-bar')}${esc(T('Сравнить выбранные машины','Seçilmiş avtomobilləri müqayisə et','Compare the chosen cars'))} (<span data-basket-count>${basket.length}</span>)</button></div>`, 'compare');
@@ -303,7 +303,7 @@ export function createCatalogViews({root, state, layout, go, esc, ensureSession,
     const litres=v=>numberOf(techRow(v,'fuel_combined')?.values?.[0]?.value);
     // the grade: diesel by the fuel, else the Auto Expert recommendation (AI-98 / AI-95 / AI-92)
     const grade=v=>{if(factValue(v.facts,'fuel')==='DIESEL')return 'DIESEL';const rec=techRow(v,'fuel_recommendation')?.values?.[0]?.value||'';return /98/.test(rec)?'AI98':/95/.test(rec)?'AI95':'AI92';};
-    const vs=members.map((v,i)=>`${i?'<span class="vs-badge">VS</span>':''}<div class="vs-car">${photo(v,v.make+' '+v.model)}<h2>${esc(v.make+' '+v.model)}</h2><p>${esc(specLine(v))}</p><button class="text-button" data-k="remove" data-id="${esc(v.id)}">${esc(l('remove'))}</button></div>`).join('');
+    const vs=members.map((v,i)=>`${i?'<span class="vs-badge">VS</span>':''}<div class="vs-car"><div class="vs-stage">${v.asset?.url?photo(v,v.make+' '+v.model):carCutout(v.make,v.model,v.year,{face:i?'left':'right'})}</div><h2>${esc(v.make+' '+v.model)}</h2><p>${esc(specLine(v))}</p><button class="text-button" data-k="remove" data-id="${esc(v.id)}">${esc(l('remove'))}</button></div>`).join('');
     // costs (owner decision 2026-10-06): fuel only — EPA consumption x km per month x the fuel price
     // from fuel-prices.json; no price there, no block. No service or repair estimates here.
     const months=conditions.months||24, monthlyKm=conditions.monthly_km||1000;
