@@ -1,7 +1,7 @@
-import {EN, pickText} from './en-text.js?v=0.11.0';
-import {mountOwnership} from './ownership-panel.js?v=0.11.0';
-import {editorTools, bindEditorTools} from './editor-tools.js?v=0.11.0';
-import {api, sessionUser, clearSession} from './api.js?v=0.11.0';
+import {EN, pickText} from './en-text.js?v=0.12.0';
+import {mountOwnership} from './ownership-panel.js?v=0.12.0';
+import {editorTools, bindEditorTools} from './editor-tools.js?v=0.12.0';
+import {api, sessionUser, clearSession} from './api.js?v=0.12.0';
 import {message} from './catalog-copy.js?v=0.9.4';
 import {localizeConfiguration, localizeProfile, localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 

@@ -1,4 +1,4 @@
-import {api, downloadReportPdf} from './api.js?v=0.11.0';
+import {api, downloadReportPdf} from './api.js?v=0.12.0';
 
 // Views of the existing client. Reports, research, auth and PDF use the same API.
 export function createBuyerViews({root, state, layout, go, esc, ensureSession, handleError, showToast, startMockVinHistory, mockVinHistoryCards, garageEntrance}) {

@@ -1,4 +1,4 @@
-import {EN, pickText} from './en-text.js?v=0.11.0';
+import {EN, pickText} from './en-text.js?v=0.12.0';
 // Consumer wording is derived from the published structured facts. Source
 // descriptions remain available to editors; unsupported English prose is not
 // presented as a translated technical specification.

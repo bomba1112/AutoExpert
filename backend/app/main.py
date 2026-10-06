@@ -28,6 +28,7 @@ def create_app() -> FastAPI:
         allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
         allow_headers=[
             "Authorization",
+            "X-AutoExpert-Token",
             "Content-Type",
             "X-Request-ID",
             "X-AutoExpert-Simulate-Paywall",

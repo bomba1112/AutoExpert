@@ -100,3 +100,17 @@ def test_club_writing_needs_a_confirmed_email(db_session):
         assert accounts.can_write(demo)
     finally:
         settings.environment = original
+
+
+def test_the_app_token_travels_next_to_the_site_basic_auth(client):
+    """Closed staging: Authorization carries the site's Basic Auth (the browser attaches it), the
+    app's token goes in X-AutoExpert-Token; Authorization: Bearer keeps working."""
+    token = _register(client)["access_token"]
+    basic = "Basic " + __import__("base64").b64encode(b"site:password").decode()
+    path = "/api/v1/auth/verify-email/resend"
+    assert client.post(path, headers={"Authorization": basic, "X-AutoExpert-Token": token}).status_code == 202
+    assert client.post(path, headers={"X-AutoExpert-Token": f"Bearer {token}"}).status_code == 202
+    assert client.post(path, headers={"Authorization": f"Bearer {token}"}).status_code == 202
+    only_basic = client.post(path, headers={"Authorization": basic})
+    assert only_basic.status_code == 401 and only_basic.headers["www-authenticate"] == "Bearer"
+    assert client.post(path, headers={"X-AutoExpert-Token": "not-a-token"}).status_code == 401

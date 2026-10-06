@@ -1,4 +1,4 @@
-import {EN, pickText, deviceLanguage} from './en-text.js?v=0.11.0';
+import {EN, pickText, deviceLanguage} from './en-text.js?v=0.12.0';
 import {
   ApiError,
   api,
@@ -9,20 +9,20 @@ import {
   hasSession,
   trackEvent,
   vehiclePhotoUrl,
-} from './api.js?v=0.11.0';
+} from './api.js?v=0.12.0';
 import {
   ResearchContinuation,
   executeResearchContinuation,
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
-import {createBuyerViews} from './buyer-views.js?v=0.11.0';
-import {createCatalogViews} from './catalog-views.js?v=0.11.0';
-import {createVinHistoryViews} from './vin-history-views.js?v=0.11.0';
-import {createListingViews} from './listing-views.js?v=0.11.0';
-import {createUsTechViews} from './us-tech-views.js?v=0.11.0';
-import {createGarageViews} from './garage-views.js?v=0.11.0';
-import {createClubViews} from './club-views.js?v=0.11.0';
-import {createSubscriptionViews} from './subscription-views.js?v=0.11.0';
+import {createBuyerViews} from './buyer-views.js?v=0.12.0';
+import {createCatalogViews} from './catalog-views.js?v=0.12.0';
+import {createVinHistoryViews} from './vin-history-views.js?v=0.12.0';
+import {createListingViews} from './listing-views.js?v=0.12.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.12.0';
+import {createGarageViews} from './garage-views.js?v=0.12.0';
+import {createClubViews} from './club-views.js?v=0.12.0';
+import {createSubscriptionViews} from './subscription-views.js?v=0.12.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
