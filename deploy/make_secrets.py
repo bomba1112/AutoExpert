@@ -49,11 +49,11 @@ def main() -> int:
         lines.append(line)
     env_path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     access_path.write_text(
-        "Auto Expert — закрытый staging (без HTTPS до появления домена)\n"
-        f"Адрес: http://{SERVER_IP}/\n"
+        "Auto Expert — закрытый staging (HTTPS через имя sslip.io)\n"
+        f"Адрес: https://autoexpert.{SERVER_IP.replace('.', '-')}.sslip.io/\n"
         f"Пользователь: {user}\n"
         f"Пароль: {password}\n"
-        "Не пересылать открытым текстом в мессенджерах; без HTTPS пароль идёт по сети открыто.\n",
+        "Не пересылать открытым текстом в мессенджерах.\n",
         encoding="utf-8")
     print(f"written: {env_path} and {access_path} (values not shown)")
     return 0
