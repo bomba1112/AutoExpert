@@ -14,10 +14,11 @@ from __future__ import annotations
 import re
 from datetime import UTC, date, datetime
 
-from sqlalchemy import func, select
+from sqlalchemy import func, select, update
 
 from app.core.config import get_settings
 from app.core.english import pick
+from app.models.ai_mechanic import AIMechanicRequest
 from app.models.catalog import VehicleMake
 from app.models.evidence import TechnicalEvidence
 from app.models.garage import (
@@ -479,6 +480,14 @@ def feed_text(item: GarageFeedItem, vehicle: GarageVehicle, language: str, db=No
     return {"id": item.id, "kind": item.kind, "vehicle_id": vehicle.id, "vehicle": f"{vehicle.make} {vehicle.model} {vehicle.year}",
             "title": title, "body": body, "created_at": item.created_at.isoformat() if item.created_at else None,
             "read": item.read_at is not None}
+
+
+def delete_vehicle(db, vehicle: GarageVehicle) -> None:
+    """The car goes with its readings, records and feed (ORM cascade). Its AI-mechanic requests stay
+    in the request log without the car: the declared ON DELETE SET NULL, applied here because SQLite
+    connections run without PRAGMA foreign_keys and the log has no ORM relationship to the car."""
+    db.execute(update(AIMechanicRequest).where(AIMechanicRequest.vehicle_id == vehicle.id).values(vehicle_id=None))
+    db.delete(vehicle)
 
 
 def mark_read(item: GarageFeedItem) -> None:
