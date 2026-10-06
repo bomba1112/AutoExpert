@@ -139,7 +139,7 @@
 | ручной бэкап | `sudo systemctl start autoexpert-backup.service` |
 | скачать и проверить бэкап (ноутбук) | `deploy/pull_backup.sh` |
 | новый выпуск (ноутбук) | `deploy/release.sh` |
-| откат | `ln -sfn /srv/autoexpert/releases/<прошлый> /srv/autoexpert/current && cd /srv/autoexpert/current/deploy && RELEASE=<прошлый> $C up -d` |
+| откат | `ln -sfn /srv/autoexpert/releases/<прошлый> /srv/autoexpert/current && cd /srv/autoexpert/current/deploy && RELEASE=<прошлый> $C up -d --force-recreate` |
 | восстановление из дампа | `$C stop backend caddy && $C exec -T postgres pg_restore -U autoexpert -d autoexpert --clean --if-exists --no-owner < /srv/autoexpert/backups/<файл>.dump && $C up -d` |
 | подтвердить почту / модератор | `$C exec backend python scripts/manage_users.py verify EMAIL` / `admin EMAIL` |
 | убрать связь с Caddy Stories | `ssh root@77.42.27.222 bash /root/autoexpert-server/stories_caddy_link.sh --undo` |

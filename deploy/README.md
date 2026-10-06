@@ -70,7 +70,7 @@ $C exec backend python scripts/manage_users.py admin EMAIL       # права м
 ```bash
 ls -1t /srv/autoexpert/releases                     # выпуски, новые сверху
 ln -sfn /srv/autoexpert/releases/<прошлый> /srv/autoexpert/current
-cd /srv/autoexpert/current/deploy && RELEASE=<прошлый> docker compose --env-file /srv/autoexpert/shared/.env up -d
+cd /srv/autoexpert/current/deploy && RELEASE=<прошлый> docker compose --env-file /srv/autoexpert/shared/.env up -d --force-recreate
 ```
 Миграции базы вперёд необратимы без бэкапа: перед выпуском с новой миграцией — ручной бэкап.
 

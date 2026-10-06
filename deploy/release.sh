@@ -44,6 +44,9 @@ ssh "$SERVER" "set -euo pipefail
   ln -sfn /srv/autoexpert/releases/$STAMP /srv/autoexpert/current
   cd /srv/autoexpert/current/deploy
   RELEASE=$STAMP docker compose --env-file /srv/autoexpert/shared/.env up -d --build --remove-orphans
+  # bind mounts through the current symlink are resolved when a container starts: the static
+  # services and the proxy must start again to serve the new release's files and Caddyfile
+  RELEASE=$STAMP docker compose --env-file /srv/autoexpert/shared/.env up -d --force-recreate --no-deps web site caddy
   ls -1dt /srv/autoexpert/releases/*/ | tail -n +6 | xargs -r rm -rf   # keep 5 releases
   docker image prune -f >/dev/null"
 echo "released $STAMP"
