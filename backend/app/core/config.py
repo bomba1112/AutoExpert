@@ -98,6 +98,9 @@ class Settings(BaseSettings):
     # US technical facts in the configuration card (next-stage prompt, stage C). Unset: on in
     # development/test (preview), off in production; AUTOEXPERT_SHOW_US_TECH_FACTS overrides.
     show_us_tech_facts: bool | None = None
+    # The Auto Expert opinion on a listing link / VIN / manual input (UI-by-reference prompt,
+    # section 3). Unset: on in development/test, off in production; AUTOEXPERT_EXPERT_OPINION_V1.
+    expert_opinion_v1: bool | None = None
     # US configurations 2021-2026 prepared for publication, shown in the preview catalogue only
     # (owner decision 2026-10-03). Unset: on in development/test; never in production, whatever
     # the value (app/services/catalog_preview.enabled).

@@ -8,7 +8,7 @@ from app.api.routes import (
     catalog,
     chat,
     club,
-    subscription,
+    expert,
     garage,
     health,
     history_flow,
@@ -17,6 +17,7 @@ from app.api.routes import (
     meta,
     reports,
     research,
+    subscription,
     vin,
 )
 
@@ -38,3 +39,4 @@ api_router.include_router(garage.router)
 api_router.include_router(club.router)
 api_router.include_router(subscription.router)
 api_router.include_router(research.router)
+api_router.include_router(expert.router)
