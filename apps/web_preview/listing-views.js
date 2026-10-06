@@ -1,5 +1,5 @@
-import {EN, pickText} from './en-text.js?v=0.13.0';
-import {api} from './api.js?v=0.13.0';
+import {EN, pickText} from './en-text.js?v=0.14.0';
+import {api} from './api.js?v=0.14.0';
 import {localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 
 // Consumer listing intake deliberately accepts only material supplied by the user.

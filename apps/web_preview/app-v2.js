@@ -1,4 +1,4 @@
-import {EN, pickText, deviceLanguage} from './en-text.js?v=0.13.0';
+import {EN, pickText, deviceLanguage} from './en-text.js?v=0.14.0';
 import {
   ApiError,
   api,
@@ -9,22 +9,23 @@ import {
   hasSession,
   trackEvent,
   vehiclePhotoUrl,
-} from './api.js?v=0.13.0';
+} from './api.js?v=0.14.0';
 import {
   ResearchContinuation,
   executeResearchContinuation,
   useDemoPrecheck,
 } from './research-flow.js?v=0.8.1';
-import {createBuyerViews} from './buyer-views.js?v=0.13.0';
-import {createCatalogViews} from './catalog-views.js?v=0.13.0';
-import {createVinHistoryViews} from './vin-history-views.js?v=0.13.0';
-import {createListingViews} from './listing-views.js?v=0.13.0';
-import {createUsTechViews} from './us-tech-views.js?v=0.13.0';
-import {createGarageViews} from './garage-views.js?v=0.13.0';
-import {createClubViews} from './club-views.js?v=0.13.0';
-import {createSubscriptionViews} from './subscription-views.js?v=0.13.0';
-import {createExpertViews} from './expert-views.js?v=0.13.0';
-import {region, setRegion} from './ui-config.js?v=0.13.0';
+import {createBuyerViews} from './buyer-views.js?v=0.14.0';
+import {createCatalogViews} from './catalog-views.js?v=0.14.0';
+import {createVinHistoryViews} from './vin-history-views.js?v=0.14.0';
+import {createListingViews} from './listing-views.js?v=0.14.0';
+import {createUsTechViews} from './us-tech-views.js?v=0.14.0';
+import {createGarageViews} from './garage-views.js?v=0.14.0';
+import {createClubViews} from './club-views.js?v=0.14.0';
+import {createSubscriptionViews} from './subscription-views.js?v=0.14.0';
+import {createExpertViews} from './expert-views.js?v=0.14.0';
+import {region, setRegion} from './ui-config.js?v=0.14.0';
+import {icon, brandMark} from './visual.js?v=0.14.0';
 
 const root = document.querySelector('#app');
 const toastNode = document.querySelector('#toast');
@@ -1011,11 +1012,11 @@ async function renderReports() {
 function layout(content, {active = '', wide = false, nav = true} = {}) {
   return `
     <div class="shell ${nav ? '' : 'no-nav'}">
-      <header class="app-header">
+      <header class="app-header ae-header">
         <button class="brand ghost-button" data-action="home" aria-label="${esc(t('navHome'))}">
-          <span class="brand-car" aria-hidden="true"><svg viewBox="0 0 50 28"><path d="m5 16 6-10h25l8 10 3 2v7H3v-7Z"/><path d="M14 9h19l6 8H9ZM24 9v8"/><circle cx="12" cy="23" r="4"/><circle cx="38" cy="23" r="4"/></svg></span><span><strong><em>AUTO</em> EXPERT</strong>${region(state) === 'AZ' ? '<small>Azerbaijan</small>' : ''}</span>
+          ${brandMark()}<span class="ae-brand-text"><strong><em>AUTO</em> EXPERT</strong>${region(state) === 'AZ' ? '<small>Azerbaijan</small>' : ''}</span>
         </button>
-        <div class="header-actions">${garageViews.enabled() ? `<button class="header-bell" data-action="garage-feed" aria-label="${esc(pickText(state.language, 'Лента гаража', 'Qaraj lenti', 'Garage feed'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></button>` : ''}<button class="profile-button" data-action="profile" aria-label="${esc(pickText(state.language, 'Профиль и подписка', 'Profil və abunə', 'Profile and subscription'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg></button></div>
+        <div class="header-actions">${garageViews.enabled() ? `<button class="header-bell" data-action="garage-feed" aria-label="${esc(pickText(state.language, 'Лента гаража', 'Qaraj lenti', 'Garage feed'))}">${icon('bell')}</button>` : ''}<button class="profile-button" data-action="profile" aria-label="${esc(pickText(state.language, 'Профиль и подписка', 'Profil və abunə', 'Profile and subscription'))}">${icon('user', '', {filled: true})}</button></div>
       </header>
       ${state.meta?.developer?.enabled ? `<details class="developer-drawer"><summary>${esc(state.language === 'ru' ? 'Настройки тестирования' : pickText(state.language, 'Test settings', 'Sınaq parametrləri'))}</summary>${developerToolbar()}</details>` : ''}
       <main class="screen ${wide ? 'wide' : ''}">${content}</main>
@@ -1035,13 +1036,14 @@ function developerToolbar() {
 }
 
 function bottomNav(active) {
+  const item = (key, action, ic, label) => `<button class="${active === key ? 'active' : ''}" data-action="${action}"${active === key ? ' aria-current="page"' : ''}>${icon(ic, 'nav-icon', {filled: active === key})}<span>${esc(label)}</span></button>`;
   return `
     <nav class="bottom-nav ${garageViews.enabled() ? 'five' : ''}" aria-label="Primary">
-      <button class="${active === 'home' ? 'active' : ''}" data-action="home"><span class="nav-icon">⌂</span><span>${esc(t('navHome'))}</span></button>
-      <button class="${active === 'compare' ? 'active' : ''}" data-action="buyer-compare"><span class="nav-icon">⇄</span><span>${esc(pickText(state.language, 'Сравнения', 'Müqayisələr', 'Compare'))}</span></button>
-      <button class="${active === 'check' ? 'active' : ''}" data-action="buyer-check"><span class="nav-icon">⌕</span><span>${esc(pickText(state.language, 'Проверить', 'Yoxla'))}</span></button>
-      <button class="${active === 'reports' ? 'active' : ''}" data-action="reports"><span class="nav-icon">▤</span><span>${esc(t('navReports'))}</span></button>
-      ${garageViews.enabled() ? `<button class="${active === 'garage' ? 'active' : ''}" data-action="garage"><span class="nav-icon">⚙</span><span>${esc(garageViews.navLabel())}</span></button>` : ''}
+      ${item('home', 'home', 'home', t('navHome'))}
+      ${item('compare', 'buyer-compare', 'scale', pickText(state.language, 'Сравнения', 'Müqayisələr', 'Compare'))}
+      ${item('check', 'buyer-check', 'search', pickText(state.language, 'Проверить', 'Yoxla', 'Check'))}
+      ${item('reports', 'reports', 'file-text', t('navReports'))}
+      ${garageViews.enabled() ? item('garage', 'garage', 'car-garage', garageViews.navLabel()) : ''}
     </nav>`;
 }
 

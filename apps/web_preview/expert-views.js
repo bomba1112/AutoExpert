@@ -1,9 +1,10 @@
 // "Проверить конкретную машину" and "Мнение Auto Expert" (UI-by-reference prompt, sections 2.1 and 3):
 // one field for a VIN, a plate or a listing link (recognised by itself), a manual form, and the
 // opinion screen. The listing text is asked for only when the site could not be read.
-import {pickText} from './en-text.js?v=0.13.0';
-import {api} from './api.js?v=0.13.0';
-import {detectInput, flag, money, region} from './ui-config.js?v=0.13.0';
+import {pickText} from './en-text.js?v=0.14.0';
+import {api} from './api.js?v=0.14.0';
+import {detectInput, flag, money, region} from './ui-config.js?v=0.14.0';
+import {icon, carPhoto, photoCredit} from './visual.js?v=0.14.0';
 
 const STORE = 'autoexpert.expert.request';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
@@ -33,9 +34,9 @@ export function createExpertViews({root, state, layout, go, ensureSession, showT
   function checkField(id = 'expert-check') {
     return `<form id="${id}" class="ae-check-field" data-expert-form autocomplete="off">
       <label class="sr-only" for="${id}-q">${escape(placeholder())}</label>
-      <span class="ae-check-icon" aria-hidden="true">⌕</span>
+      <span class="ae-check-icon">${icon('search')}</span>
       <input id="${id}-q" name="q" maxlength="600" placeholder="${escape(placeholder())}" spellcheck="false" autocapitalize="characters" required>
-      <button class="ae-check-go" type="submit" aria-label="${escape(p('Проверить', 'Yoxla', 'Check'))}">→</button>
+      <button class="ae-check-go" type="submit" aria-label="${escape(p('Проверить', 'Yoxla', 'Check'))}">${icon('arrow-right')}</button>
       <output class="ae-check-kind" data-expert-kind aria-live="polite"></output>
     </form>`;
   }
@@ -45,7 +46,7 @@ export function createExpertViews({root, state, layout, go, ensureSession, showT
   }
 
   function top(title, back = 'home') {
-    return `<div class="page-top"><button class="icon-button" data-expert="${back}" aria-label="${escape(p('Назад', 'Geri', 'Back'))}">←</button><strong>${escape(title)}</strong><span></span></div>`;
+    return `<div class="page-top"><button class="icon-button" data-expert="${back}" aria-label="${escape(p('Назад', 'Geri', 'Back'))}">${icon('arrow-left')}</button><strong>${escape(title)}</strong><span></span></div>`;
   }
 
   function check() {
@@ -66,7 +67,7 @@ export function createExpertViews({root, state, layout, go, ensureSession, showT
           <div class="form-pair"><label>${escape(p('Год', 'İl', 'Year'))}<input name="year" type="number" min="1980" max="2100" inputmode="numeric" placeholder="2018"></label><label>${escape(p('Объём, л', 'Həcm, l', 'Engine, L'))}<input name="engine" inputmode="decimal" maxlength="10" placeholder="2.5"></label></div>
           <div class="form-pair"><label>${escape(p('Топливо', 'Yanacaq', 'Fuel'))}<select name="fuel">${options(fuels)}</select></label><label>${escape(p('Коробка', 'Sürətlər qutusu', 'Gearbox'))}<select name="transmission">${options(boxes)}</select></label></div>
           <label>${escape(p('Пробег, км', 'Yürüş, km', 'Mileage, km'))}<input name="mileage_km" type="number" min="0" max="3000000" inputmode="numeric"></label>
-          <button class="button primary full" type="submit">${escape(p('Получить мнение', 'Rəy al', 'Get the opinion'))} →</button>
+          <button class="button primary full" type="submit">${escape(p('Получить мнение', 'Rəy al', 'Get the opinion'))}${icon('arrow-right')}</button>
           <p class="catalog-note">${escape(p('Обязательны только марка и модель. Остальное — если знаете.', 'Yalnız marka və model məcburidir.', 'Only the make and the model are required.'))}</p>
         </form>
       </details>
@@ -122,7 +123,7 @@ export function createExpertViews({root, state, layout, go, ensureSession, showT
     const checklist = r.checklist || [];
     const service = r.next_service || [];
     return `
-      <section class="ae-car-hero">${photo ? `<img src="${escape(photo)}" alt="${escape(title)}" loading="lazy" referrerpolicy="no-referrer">` : '<div class="ae-car-hero-art" aria-hidden="true"></div>'}
+      <section class="ae-car-hero">${photo ? `<img class="ae-photo" src="${escape(photo)}" alt="${escape(title)}" loading="lazy" referrerpolicy="no-referrer">` : `${carPhoto(r.make, r.model, r.year, {alt: title})}${photoCredit(r.make, r.model, r.year, lang())}`}
         <div class="ae-car-hero-text"><h1>${escape(title)}</h1><p>${escape([r.configuration?.label, r.configuration?.generation && `${p('поколение', 'nəsil', 'generation')} ${r.configuration.generation}`].filter(Boolean).join(' · '))}</p></div></section>
       <p class="ae-badges"><span class="ae-badge ${confirmed ? 'ok' : 'warn'}">${escape(confirmed ? p('Модификация подтверждена', 'Modifikasiya təsdiqlənib', 'Version confirmed') : p('Нужно уточнить версию', 'Versiyanı dəqiqləşdirmək lazımdır', 'The version needs confirming'))}</span><span class="ae-badge">${escape(r.source?.kind === 'LINK' ? p('По объявлению', 'Elana görə', 'From the listing') : r.source?.kind === 'VIN' ? p('По VIN · NHTSA vPIC', 'VIN üzrə · NHTSA vPIC', 'By VIN · NHTSA vPIC') : p('По вашим данным', 'Sizin məlumatlara görə', 'From your details'))}</span></p>
       <section class="ae-verdict"><p class="ae-eyebrow">${escape(p('Вывод Auto Expert', 'Auto Expert nəticəsi', 'Auto Expert conclusion'))}</p><ul>${(r.summary || []).map(s => `<li>${escape(s)}</li>`).join('')}</ul></section>

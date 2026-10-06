@@ -2,7 +2,7 @@
 // "B is better at: …", the parameters we have, the sources in one line. Made from our database
 // at request time; a parameter nobody has is not mentioned. Curated battles carry the same kind
 // of verdict prepared once in battles.json (scripts/build_battle_verdicts.py).
-import {pickText} from './en-text.js?v=0.13.0';
+import {pickText} from './en-text.js?v=0.14.0';
 
 export const PARAMS = [
   {key: 'power', better: 'high', label: ['мощность', 'güc', 'power'], rows: ['power_hp', 'system_power_hp']},

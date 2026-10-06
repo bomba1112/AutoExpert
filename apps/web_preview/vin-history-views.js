@@ -1,5 +1,5 @@
-import {EN, pickText} from './en-text.js?v=0.13.0';
-import {api, privateImageUrl} from './api.js?v=0.13.0';
+import {EN, pickText} from './en-text.js?v=0.14.0';
+import {api, privateImageUrl} from './api.js?v=0.14.0';
 
 // VIN-history checkout is intentionally separate from the legacy demo dossier.
 // The server decides entitlement and which provider facts can be displayed.

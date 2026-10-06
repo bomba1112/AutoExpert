@@ -1,6 +1,6 @@
 // The owners club (product phase, stage 4): rooms by make and generation, posts, comments, photos,
 // "me too" and reports. Shown only while the API advertises the owners_club_v1 flag.
-import {api, apiForm, privateImageUrl} from './api.js?v=0.13.0';
+import {api, apiForm, privateImageUrl} from './api.js?v=0.14.0';
 
 const C = {
   club: ['Клуб владельцев', 'Sahiblər klubu', 'Owners club'],

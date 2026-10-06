@@ -1,7 +1,7 @@
 // The Garage (product phase, stage 2): the owner's cars, next services, the service log and the
 // "My car" feed. Shown only while the API advertises the garage_v1 flag (client-config
 // "garage_v1"); production without the flag never loads or renders anything from here.
-import {api, downloadFile} from './api.js?v=0.13.0';
+import {api, downloadFile} from './api.js?v=0.14.0';
 
 const C = {
   garage: ['Гараж', 'Qaraj', 'Garage'],
