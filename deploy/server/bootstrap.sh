@@ -110,7 +110,7 @@ install -d -m 755 -o 10001 -g 10001 /srv/autoexpert/media   # the backend contai
 install -m 755 "$HERE/backup.sh" "$HERE/health.sh" /usr/local/bin/
 cp "$HERE"/systemd/*.service "$HERE"/systemd/*.timer /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable --now autoexpert-backup.timer autoexpert-health.timer autoexpert-recalls.timer
+systemctl enable autoexpert-backup.timer autoexpert-health.timer autoexpert-recalls.timer   # started after the first release
 cat > /etc/logrotate.d/autoexpert <<'EOF'
 /srv/autoexpert/logs/*.log {
   weekly
