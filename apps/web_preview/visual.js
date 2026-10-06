@@ -52,7 +52,24 @@ export function placeholder(make = '', cls = '') {
 }
 
 export function heroCars() {
-  return (HERO.buy || []).map((file, i) => `<img class="ae-hero-car ae-hero-car-${i + 1}" src="${esc(asset(file))}" alt="" aria-hidden="true" decoding="async">`).join('');
+  const buy = HERO.buy || [];
+  if (buy.length === 1) {  // one car standing on the card's baseline, a soft shadow under the wheels
+    return `<span class="ae-hero-shadow" aria-hidden="true"></span><img class="ae-hero-car ae-hero-single" src="${esc(asset(buy[0]))}" alt="" aria-hidden="true" decoding="async">`;
+  }
+  return buy.map((file, i) => `<img class="ae-hero-car ae-hero-car-${i + 1}" src="${esc(asset(file))}" alt="" aria-hidden="true" decoding="async">`).join('');
+}
+
+// the owner's banner pictures (photos/banners/hero_buy | hero_check | battle_bg): when present they
+// replace the drawn art of that card; '' when the file is not there yet
+export function banner(name) {
+  const file = (HERO.banners || {})[name];
+  return file ? asset(file) : '';
+}
+
+// the style attribute that hands a banner to the CSS (background of the card)
+export function bannerStyle(name, variable = '--banner-img') {
+  const url = banner(name);
+  return url ? ` style="${variable}:url('${esc(url)}')"` : '';
 }
 
 export function darkCar() {

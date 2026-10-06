@@ -50,6 +50,14 @@ def main() -> None:
         hero["dark"] = f"cut/{cut.name}" if cut.exists() else hero_dark["file"]
         hero["credits"].append({"file": hero_dark["file"], "author": hero_dark.get("author"), "license": hero_dark.get("license"),
                                 "license_url": hero_dark.get("license_url"), "source_page": hero_dark.get("source_page")})
+    # the owner's banner pictures (photos/banners/hero_buy|hero_check|battle_bg.*) replace the made-up art
+    banners = {}
+    for name in ("hero_buy", "hero_check", "battle_bg"):
+        found = sorted((DIR / "banners").glob(f"{name}.*")) if (DIR / "banners").exists() else []
+        found = [f for f in found if f.suffix.lower() in (".webp", ".png", ".jpg", ".jpeg", ".avif")]
+        if found:
+            banners[name] = f"banners/{found[0].name}?v={int(found[0].stat().st_mtime)}"  # a replaced file is fetched anew
+    hero["banners"] = banners
     keep = ("file", "make", "model", "generation", "years", "author", "license", "license_url", "source_page")
     photos = [{k: r.get(k) for k in keep} for r in items]
     facing = json.loads((DIR / "facing.json").read_text(encoding="utf-8")) if (DIR / "facing.json").exists() else {}
