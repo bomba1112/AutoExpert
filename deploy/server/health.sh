@@ -9,7 +9,8 @@ COMPOSE=(docker compose --env-file "$ENV_FILE" -f /srv/autoexpert/current/deploy
 LOG=/srv/autoexpert/logs/health.log
 problems=()
 
-code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 http://127.0.0.1/ || echo 000)
+EDGE_URL=${EDGE_URL:-http://172.17.0.1:8088/}
+code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 "$EDGE_URL" || echo 000)
 [ "$code" = "401" ] || [ "$code" = "200" ] || [ "$code" = "302" ] || problems+=("proxy answered $code")
 "${COMPOSE[@]}" exec -T backend curl -fsS --max-time 10 http://127.0.0.1:8000/api/v1/health >/dev/null 2>&1 \
   || problems+=("backend health failed")

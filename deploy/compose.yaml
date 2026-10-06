@@ -2,7 +2,7 @@
 # Release directory: /srv/autoexpert/current (code, deploy/, web/, site/); secrets:
 # /srv/autoexpert/shared/.env (chmod 600, never in git). Run from /srv/autoexpert/current/deploy:
 #   docker compose --env-file /srv/autoexpert/shared/.env up -d --build
-# Only Caddy publishes ports (80 / 443). PostgreSQL has no published port.
+# Only Caddy publishes a port (172.17.0.1:8088, behind the Stories Caddy). PostgreSQL has none.
 name: autoexpert
 
 x-logging: &logging
@@ -90,9 +90,11 @@ services:
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
+    # Shared server: the Stories project's Caddy owns 80/443 and forwards
+    # autoexpert.77-42-27-222.sslip.io here. The port is published only on the Docker host bridge
+    # (172.17.0.1), unreachable from outside. On a server of its own: EDGE_PORTS="80" plus a 443 line.
     ports:
-      - "80:80"
-      - "443:443"
+      - "${EDGE_BIND:-172.17.0.1}:${EDGE_PORT:-8088}:80"
     environment:
       SITE_ADDRESS: ${SITE_ADDRESS:-:80}
       BASIC_AUTH_USER: ${BASIC_AUTH_USER:?set in /srv/autoexpert/shared/.env}

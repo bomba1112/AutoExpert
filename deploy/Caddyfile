@@ -1,6 +1,13 @@
 # Auto Expert — closed staging. SITE_ADDRESS=":80" serves http://<server IP>; with a domain
 # (SITE_ADDRESS=example.com) Caddy gets the HTTPS certificate itself (stage E, not yet).
 # The whole site is behind Basic Auth and marked noindex.
+# On the shared server the Stories Caddy terminates HTTPS and forwards here (Docker networks only).
+{
+	servers {
+		trusted_proxies static 172.16.0.0/12
+	}
+}
+
 {$SITE_ADDRESS::80} {
 	encode zstd gzip
 	# No access log: URLs may contain private vehicle identifiers.

@@ -6,13 +6,17 @@
 #   - user "deploy" (no password, SSH key only, docker group), key copied from root
 #   - SSH: key login only; root without password (prohibit-password); config checked before reload
 #   - firewall ufw: only 22, 80, 443 incoming; fail2ban for sshd; automatic security updates
-#   - Docker Engine + Compose plugin from Docker's repository, log rotation
+#   - Docker Engine + Compose plugin from Docker's repository if missing (never restarted)
 #   - swap 2 GB; folders /srv/autoexpert/*; systemd timers (backup, health, recalls)
 set -euo pipefail
 [ "$(id -u)" -eq 0 ] || { echo "run as root"; exit 1; }
 HERE="$(cd "$(dirname "$0")" && pwd)"
 DEPLOY_USER=deploy
 export DEBIAN_FRONTEND=noninteractive
+
+echo "== backup of the configuration this script changes"
+tar -czf "/root/autoexpert-preinstall-$(date -u +%Y%m%dT%H%M%SZ).tar.gz" /etc/ssh /etc/fstab /etc/sysctl.d /etc/apt/apt.conf.d \
+  $( [ -d /etc/ufw ] && echo /etc/ufw ) $( [ -d /etc/fail2ban ] && echo /etc/fail2ban ) 2>/dev/null || true
 
 echo "== packages"
 apt-get update -q
@@ -49,6 +53,8 @@ ufw default allow outgoing
 ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
+# containers (the Stories Caddy) reach the Auto Expert edge on the Docker host bridge
+ufw allow from 172.16.0.0/12 to 172.17.0.1 port 8088 proto tcp
 ufw --force enable
 
 echo "== fail2ban"
@@ -81,11 +87,9 @@ if ! command -v docker >/dev/null 2>&1; then
   apt-get update -q
   apt-get install -y -q docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 fi
-cat > /etc/docker/daemon.json <<'EOF'
-{"log-driver": "json-file", "log-opts": {"max-size": "10m", "max-file": "5"}, "live-restore": true}
-EOF
+# Docker is NOT restarted and daemon.json is not written: other projects' containers run here.
+# Log rotation is set per service in deploy/compose.yaml.
 systemctl enable docker containerd
-systemctl restart docker
 usermod -aG docker "$DEPLOY_USER"
 
 echo "== swap 2 GB"
