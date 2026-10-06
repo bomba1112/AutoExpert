@@ -21,7 +21,7 @@ COUNTS_SQL="SELECT table_name, (xpath('/row/c/text()', query_to_xml(format('sele
 "$PG_BIN/psql" $LOCAL -d postgres -qc "DROP DATABASE IF EXISTS autoexpert_restore_check" -c "CREATE DATABASE autoexpert_restore_check"
 "$PG_BIN/pg_restore" $LOCAL -d autoexpert_restore_check --no-owner --no-privileges "$DEST/$base.dump"
 "$PG_BIN/psql" $LOCAL -d autoexpert_restore_check -At -F ' ' -c "$COUNTS_SQL" > "$DEST/$base.restored.counts"
-if diff -u "$DEST/$base.counts" "$DEST/$base.restored.counts"; then
+if diff -u <(tr -d '\r' < "$DEST/$base.counts") <(tr -d '\r' < "$DEST/$base.restored.counts"); then
   echo "restore OK: $base — rows per table equal ($(wc -l < "$DEST/$base.counts") tables)"
 else
   echo "RESTORE CHECK FAILED for $base" >&2; exit 1

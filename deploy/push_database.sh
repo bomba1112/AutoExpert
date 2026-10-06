@@ -26,7 +26,7 @@ ssh "$SERVER" "set -euo pipefail
   \$C exec -T postgres psql -U \$U -d \$D -At -F ' ' -c \"$COUNTS_SQL\" > /srv/autoexpert/backups/initial.counts
   \$C up -d backend caddy"
 scp "$SERVER:/srv/autoexpert/backups/initial.counts" "$DUMP.server.counts"
-if diff -u "$DUMP.counts" "$DUMP.server.counts"; then
+if diff -u <(tr -d '\r' < "$DUMP.counts") <(tr -d '\r' < "$DUMP.server.counts"); then
   echo "rows per table: equal on the laptop and the server ($(wc -l < "$DUMP.counts") tables)"
 else
   echo "ROW COUNTS DIFFER" >&2; exit 1
