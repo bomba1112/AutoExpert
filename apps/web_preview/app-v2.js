@@ -155,7 +155,7 @@ async function route() {
     else if (name === 'reports' || name === 'legacy-reports') await renderReports();
     else renderHome();
   } catch (error) {
-    if (version === state.routeVersion) renderError(error);
+    if (version === state.routeVersion) handleError(error);
   }
   if (version !== state.routeVersion) return;
   if (name === 'chat') scrollChatToBottom();
@@ -1049,6 +1049,13 @@ function metric(value, label) {
 }
 
 async function ensureSession() {
+  // Without demo sessions (staging / production) a signed-in account is needed: the profile screen
+  // signs in or registers; demo sessions exist only in the local QA preview.
+  if (!hasSession() && !qaMode()) {
+    const error = new Error('LOGIN_REQUIRED');
+    error.loginRequired = true;
+    throw error;
+  }
   await ensureDemoSession(state.language || deviceLanguage());
 }
 
@@ -1171,6 +1178,11 @@ function renderError(error) {
 }
 
 function handleError(error) {
+  if (error?.loginRequired || (error?.status === 401 && !qaMode())) {
+    showToast(pickText(state.language, 'Войдите или зарегистрируйтесь', 'Daxil olun və ya qeydiyyatdan keçin', 'Sign in or register'));
+    go('/profile');
+    return;
+  }
   if (subscriptionViews.handle(error)) return;
   renderError(error);
 }

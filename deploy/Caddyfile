@@ -1,10 +1,42 @@
-{$AUTOEXPERT_SITE} {
-    encode gzip zstd
-    header X-Content-Type-Options nosniff
-    header Referrer-Policy no-referrer
-    # No access log: URLs may contain private vehicle identifiers.
-    request_body {
-        max_size 33MB
-    }
-    reverse_proxy api:8000
+# Auto Expert — closed staging. SITE_ADDRESS=":80" serves http://<server IP>; with a domain
+# (SITE_ADDRESS=example.com) Caddy gets the HTTPS certificate itself (stage E, not yet).
+# The whole site is behind Basic Auth and marked noindex.
+{$SITE_ADDRESS::80} {
+	encode zstd gzip
+	# No access log: URLs may contain private vehicle identifiers.
+	request_body {
+		max_size 33MB
+	}
+
+	header {
+		X-Robots-Tag "noindex, nofollow, noarchive"
+		X-Content-Type-Options nosniff
+		Referrer-Policy no-referrer
+		-Server
+	}
+
+	basic_auth {
+		{$BASIC_AUTH_USER} {$BASIC_AUTH_HASH}
+	}
+
+	handle /robots.txt {
+		respond "User-agent: *
+Disallow: /
+" 200
+	}
+	handle /api/* {
+		reverse_proxy backend:8000
+	}
+	handle /cars/* {
+		reverse_proxy site:80
+	}
+	handle /preview/* {
+		reverse_proxy web:80
+	}
+	handle /app/* {
+		reverse_proxy web:80
+	}
+	handle {
+		redir * /preview/ 302
+	}
 }

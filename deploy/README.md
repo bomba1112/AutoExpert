@@ -1,85 +1,76 @@
-# Auto Expert local delivery / deployment preparation
+# Auto Expert — закрытый staging на сервере (Hetzner CX23)
 
-**READY_NOT_DEPLOYED. Hetzner deployment is explicitly deferred by the owner.**
-No host, DNS, firewall, remote service, paid product or other project was changed.
+Полный отчёт: `data_work/deploy/REPORT.md`. Здесь — как устроено и команды.
 
-Current data checkpoint: [US base catalogue batch07](../docs/CHECKPOINT_US_BASE_CATALOG.md).
-The archive contains source/manifests, not the published live DB or private document cache.
-Existing-local-DB replay is idempotent; fresh deployment requires document acquisition,
-RawDocument/revision ID remapping and review. Existing APK was not rebuilt by this batch.
-Batch07 is published over batch06 and the retained batch05 completion correction; see
-[BATCH07_VALIDATION](../docs/BATCH07_VALIDATION.md). Batch05 has a retained superseded preparation. Use the final
-scopes described in [BATCH05_VALIDATION](../docs/BATCH05_VALIDATION.md); do not replay the
-failed parent Toyota job as a final verified state. Historical portable exports are not
-a current verified database restore and are not updated by this catalogue batch.
+## Устройство
 
-This package extends the existing FastAPI application and working WebView client.
-Local runtime: SQLite. Prepared target: separate Compose project `autoexpert`, PostgreSQL 16,
-API, import worker, Caddy and private knowledge storage. Docker/PostgreSQL execution must be
-validated on the target before any live claim. The current computer has no Docker CLI.
-Dependencies are exported from uv.lock to deploy/requirements.lock and installed with pip
---require-hashes. API and worker share the queue-enabled setting in the prepared configuration.
+```
+Интернет :80/:443 ──> caddy (Basic Auth, noindex; HTTPS — когда будет домен)
+                       ├─ /api/*     ──> backend  (FastAPI, 2 процесса, read-only контейнер)
+                       ├─ /preview/* ──> web      (nginx: веб-приложение apps/web_preview)
+                       ├─ /app/*     ──> web      (nginx: Flutter web)
+                       ├─ /cars/*    ──> site     (nginx: публичные страницы, собраны на ноутбуке)
+                       └─ /          ──> 302 /preview/
+backend ──> postgres (PostgreSQL 16, порт наружу не открыт; deploy/postgres/postgresql.conf под 4 ГБ)
+migrate — разовый контейнер: alembic upgrade head перед стартом backend
+```
 
-## Operator preparation (future authorized stage)
+Папки на сервере:
 
-1. Inventory the existing host, reverse proxy, ports, backups, disk and memory. Do not replace
-   existing projects, change tariffs, open public ports or buy volumes without authorization.
-2. Copy source package into an isolated release directory owned by a dedicated service account.
-3. Copy `.env.example` to `.env`, permission 0600. Supply a random secret (at least 32 chars),
-   database password and URL-encoded database URL. Keep provider keys in the secret store only.
-4. Run `docker compose --env-file .env config --quiet` (never print expanded config with secrets),
-   `docker compose --env-file .env build`, then start on loopback 8088 for staging validation.
-5. Register the operator in the app, then explicitly grant that existing account via
-   `docker compose exec api python scripts/knowledge_admin.py grant-admin --email OPERATOR_EMAIL`.
-   Registration does not confer admin rights, even for the configured admin email.
-6. Check `/api/v1/health`, `/api/v1/meta/client-config`, anonymous catalogue, private report
-   ownership, source rights, payment simulation, import pause/restart, logs and backup/restore.
-7. For an approved domain, integrate with the existing host reverse proxy. If Caddy owns TLS,
-   configure the actual domain and only then its approved 80/443 mappings. The default package
-   intentionally binds **127.0.0.1:8088**. There is no guessed domain or public exposure.
+| Путь | Что |
+|---|---|
+| `/srv/autoexpert/releases/<время>-<коммит>/` | выпуски (код, deploy/, web/, site/); хранятся 5 последних |
+| `/srv/autoexpert/current` | ссылка на работающий выпуск |
+| `/srv/autoexpert/shared/.env` | секреты (chmod 600, не в git) |
+| `/srv/autoexpert/vpic/vpic_lite.sqlite` | локальная база NHTSA vPIC (только чтение) |
+| `/srv/autoexpert/media/` | фото клуба и данные знаний |
+| `/srv/autoexpert/backups/` | ежесуточные дампы (7 последних) |
+| `/srv/autoexpert/logs/` | health.log, backup.log, recalls.log (ротация еженедельно) |
 
-## Data and rights gates
+Задачи по расписанию (systemd timers): `autoexpert-backup` 03:30 UTC, `autoexpert-health` каждые 5 минут,
+`autoexpert-recalls` 06:00 UTC (новые кампании NHTSA по машинам в гаражах).
 
-The local EPA catalogue is a research edition. Commercial reuse is **not** approved by this
-implementation. Production queries exclude sources without documented commercial rights;
-production imports fail closed. Do not toggle the registry flag without the underlying licence.
-The data volume includes raw source files, revisions and images. Private originals are not served.
-Image approval requires rights and matching generation/body/market/year applicability. Generated
-images require an explicit editor review and are never published automatically.
+## Порядок первой установки
+1. С ноутбука: `ssh root@77.42.27.222 'bash -s' < deploy/server/inspect.sh` — осмотр (ничего не меняет).
+2. Если чужих проектов нет: `scp -r deploy/server root@77.42.27.222:/root/autoexpert-server` и
+   `ssh root@77.42.27.222 bash /root/autoexpert-server/bootstrap.sh`. Проверить вход `ssh deploy@77.42.27.222`
+   в новом окне, не закрывая старое.
+3. Секреты: `uv run --no-project --with bcrypt python deploy/make_secrets.py` (на ноутбуке, вне git) →
+   `scp C:/AutoExpertData/secrets/staging.env deploy@77.42.27.222:/srv/autoexpert/shared/.env` → `chmod 600`.
+4. vPIC: `scp C:/AutoExpertData/vpic/vpic_lite.sqlite deploy@77.42.27.222:/srv/autoexpert/vpic/`.
+5. Выпуск: `deploy/release.sh` (код из закоммиченного HEAD, web, Flutter web, сайт из
+   `C:/AutoExpertData/public_site_staging`).
+6. База: `deploy/push_database.sh` (дамп локального PostgreSQL → восстановление → сверка строк).
+7. Перезагрузка сервера и проверка, что всё поднялось само.
 
-Concept prices 7 / +10 / 17 AZN are inactive configuration. Existing prices are preserved.
-Payments remain mock; no paid provider, subscription or live charging was enabled.
+## Команды «на всякий случай» (на сервере, пользователь deploy)
 
-## Backup / restore
+```bash
+cd /srv/autoexpert/current/deploy
+C="docker compose --env-file /srv/autoexpert/shared/.env"
+$C ps                                  # состояние
+$C logs -f --tail 200 backend          # логи (то же для caddy, postgres, web, site)
+$C restart backend                     # перезапуск одного сервиса
+$C up -d                               # поднять всё
+sudo systemctl start autoexpert-backup # ручной бэкап сейчас
+$C exec backend python scripts/manage_users.py list              # аккаунты
+$C exec backend python scripts/manage_users.py verify EMAIL      # подтвердить почту (пока нет почтового провайдера)
+$C exec backend python scripts/manage_users.py admin EMAIL       # права модератора
+```
 
-`backup.sh /private/existing/directory` pauses only this project's API/worker, creates a consistent
-`pg_dump -Fc`, archives the knowledge volume, records hashes, and restarts the services.
-The database contains private reports and account data: restrict permissions and encrypt any
-off-host backup using the operator's existing vault. Do not attach backups to public deliverables.
-Secrets are excluded; back them up in the vault separately. Retention: start with 7 daily and
-4 weekly copies after measuring actual size, then define the policy with the operator.
+Откат на прошлый выпуск:
+```bash
+ls -1t /srv/autoexpert/releases                     # выпуски, новые сверху
+ln -sfn /srv/autoexpert/releases/<прошлый> /srv/autoexpert/current
+cd /srv/autoexpert/current/deploy && RELEASE=<прошлый> docker compose --env-file /srv/autoexpert/shared/.env up -d
+```
+Миграции базы вперёд необратимы без бэкапа: перед выпуском с новой миграцией — ручной бэкап.
 
-Restore rehearsal: use a **new** isolated Compose project/database/volume, verify SHA256SUMS,
-restore with `pg_restore --exit-on-error --no-owner --no-acl`, restore the knowledge tree with
-path-safe extraction, run Alembic head and compare counts, raw/assets checksums, health and
-ownership checks. Never test restore over the live database. Promote only after verification.
-The local executable rehearsal is `python scripts/local_backup_restore.py`; its evidence is
-`deliverables/MasterLocal/backup-restore.json`. PostgreSQL rehearsal is a separate target check.
+Восстановление базы из дампа:
+```bash
+$C stop backend caddy
+$C exec -T postgres pg_restore -U autoexpert -d autoexpert --clean --if-exists --no-owner < /srv/autoexpert/backups/<файл>.dump
+$C up -d
+```
 
-Hetzner server backups/snapshots do not replace backups of attached volumes. Include database,
-raw archive, assets, manifests, publication metadata and private configuration in the recovery plan.
-
-## Sizing, updates and rollback
-
-Measure database/raw/rendition growth, peak RSS, importer queue lag and restore time before choosing
-capacity. A guessed 40–60 GB is not evidence. Worker uses bounded batches and persistent cursors.
-Failed acquisition requires explicit retry; source pause stops updates without erasing published
-facts. Version publication is atomic and editor-locked variants cannot be overwritten. Rollback is
-an authenticated audited API action; saved reports retain their original factual snapshots.
-Database downgrade removes operational metadata: use a verified backup for a full release rollback.
-
-Official references checked 2026-09-19:
-- [Compose readiness](https://docs.docker.com/compose/how-tos/startup-order/)
-- [PostgreSQL pg_dump](https://www.postgresql.org/docs/16/app-pgdump.html)
-- [Caddy automatic HTTPS](https://caddyserver.com/docs/automatic-https)
-- [Hetzner snapshots and backups](https://docs.hetzner.com/cloud/servers/backups-snapshots/overview/)
+С ноутбука: `deploy/pull_backup.sh` — скачать последний дамп и проверить, что он восстанавливается.
