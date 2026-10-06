@@ -6,8 +6,9 @@ import {readFile} from 'node:fs/promises';
 
 const read = path => readFile(new URL(path, import.meta.url), 'utf8');
 
-test('every colour of visual.css comes from the tokens', async () => {
-  const css = await read('../visual.css');
+for (const sheet of ['../visual.css', '../styles.css'])
+test(`every colour of ${sheet.slice(3)} comes from the tokens`, async () => {
+  const css = await read(sheet);
   const lines = css.split(/[;{}]/).filter(d => !/mask/.test(d) && !/@font-face|src:|unicode-range/.test(d));
   const literal = lines.filter(d => /#[0-9a-f]{3,8}\b|\brgba?\(|\bhsla?\(/i.test(d));
   assert.deepEqual(literal, []);
