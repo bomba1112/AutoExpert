@@ -66,8 +66,8 @@ def texts():
         if not isinstance(value, str):
             return
         if CYR.search(value) or (also_chinese and '工信部' in value):
-            value = norm(value)
-            out.setdefault(key_of(value), (kind, value))
+            # the key is the app's text_hash of the stored text (whitespace collapsed, no NFC)
+            out.setdefault(key_of(value), (kind, norm(value)))
 
     def issues(items):
         for i in items or []:
