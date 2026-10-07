@@ -1,7 +1,9 @@
 """Snapshot of the Chinese configuration catalogue (samr/catalog) into data_work/cn/staging.
 
 Copies the configuration records (*.json), the component files (components/*/*.json),
-index.csv and REPORT.md. Build scripts (_build) and review dumps (_issues) stay in samr.
+index.csv, REPORT.md and the translations (i18n/glossary.json, i18n/az.json, i18n/en.json;
+the phrase book they are built from stays in samr). Build scripts (_build) and review dumps
+(_issues) stay in samr.
 MANIFEST.json records the samr commit the snapshot was taken from and the sha256 of every
 copied file; the snapshot is refused when samr/catalog has uncommitted changes, so the commit
 hash always describes the copied bytes.
@@ -42,6 +44,7 @@ def main(argv: list[str]) -> int:
         return 1
     files = sorted(catalog.glob("*.json")) + sorted(catalog.glob("components/*/*.json"))
     files += [catalog / "index.csv", catalog / "REPORT.md"]
+    files += [catalog / "i18n" / name for name in ("glossary.json", "az.json", "en.json")]
     target = STAGING / "catalog"
     if target.exists():
         shutil.rmtree(target)

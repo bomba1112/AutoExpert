@@ -27,7 +27,37 @@ KIND_COLUMN = {
     "transmission": KnownIssue.transmission_key,
     "hybrid_system": KnownIssue.hybrid_system_key,
 }
-KIND_RU = {"engine": "двигатель", "transmission": "коробка", "hybrid_system": "гибридная система"}
+KIND_LABEL = {
+    "engine": ("двигатель", "mühərrik", "engine"),
+    "transmission": ("коробка", "sürətlər qutusu", "transmission"),
+    "hybrid_system": ("гибридная система", "hibrid sistem", "hybrid system"),
+}
+ORIGIN_MODEL = ("модель", "model", "model")
+ORIGIN_UNKNOWN = ("неизвестно", "naməlum", "unknown")
+ORIGIN_THIS_MODEL = (" (эта модель)", " (bu model)", " (this model)")
+
+
+def translator(db, language: str):
+    """Text of a catalogue original (Russian) in the language: content_translations, "original
+    RU -> AZ / EN" mode (loaded from samr catalog/i18n); a text without a translation is returned
+    as it is."""
+    from app.services.us_tech_facts import Translator
+
+    return Translator(db, language)
+
+
+def _origin(kind: str, label: str, models: list[str], own_model: bool, language: str) -> str:
+    """Where an inherited owner report comes from, in the language (Russian = the catalogue's
+    known_issues_resolved wording, character for character)."""
+    names = ", ".join(models) or pick(language, *ORIGIN_UNKNOWN)
+    kind_label = pick(language, *KIND_LABEL[kind])
+    text = pick(
+        language,
+        f"{kind_label} {label}, отзыв по {names}",
+        f"{kind_label} {label}, {names} üzrə rəy",
+        f"{kind_label} {label}, review of {names}",
+    )
+    return text + (pick(language, *ORIGIN_THIS_MODEL) if own_model else "")
 
 
 def _issue_view(issue: KnownIssue, origin: str, component: str | None = None) -> dict:
@@ -55,11 +85,13 @@ def _order(issue: KnownIssue) -> int:
     return int((issue.conditions or {}).get("order", 0))
 
 
-def resolved_issues(db, variant: VehicleVariant) -> list[dict]:
+def resolved_issues(db, variant: VehicleVariant, language: str = "ru") -> list[dict]:
     """The model's own owner reports, then the reports of its components (engine, transmission,
     hybrid system, in the record's order), each (source, text) once — the rule of
-    samr/tools/resolve_issues.py. Inherited reports name their origin."""
+    samr/tools/resolve_issues.py. Inherited reports name their origin (in the language; the
+    texts stay Russian here, the card translates them)."""
     cn = (variant.specifications or {}).get("cn") or {}
+    translate = translator(db, language) if language != "ru" else (lambda kind, text: text)
     own = sorted(
         db.scalars(
             select(KnownIssue).where(
@@ -68,7 +100,7 @@ def resolved_issues(db, variant: VehicleVariant) -> list[dict]:
         ),
         key=_order,
     )
-    result = [_issue_view(issue, "модель") for issue in own]
+    result = [_issue_view(issue, pick(language, *ORIGIN_MODEL)) for issue in own]
     seen = {(i["source"], i["text"]) for i in result}
     for kind, cid in (cn.get("components") or {}).items():
         if not cid or kind not in KIND_COLUMN:
@@ -91,11 +123,10 @@ def resolved_issues(db, variant: VehicleVariant) -> list[dict]:
             seen.add(key)
             models = conditions.get("reported_in") or []
             own_model = cn.get("catalogue_model") in models
-            origin = (
-                f"{KIND_RU[kind]} {conditions.get('component_label', cid)}, "
-                f"отзыв по {', '.join(models) or 'неизвестно'}"
-                + (" (эта модель)" if own_model else "")
-            )
+            label = conditions.get("component_label", cid)
+            if kind != "engine":  # an engine is named by its code, a component by its name
+                label = translate("cn_component_name", label)
+            origin = _origin(kind, label, models, own_model, language)
             result.append(_issue_view(issue, origin, cid))
     return result
 
@@ -339,10 +370,12 @@ def show(key: str, value, unit: str | None, language: str) -> str:
     return text
 
 
-def _qualifier(row: TechnicalEvidence) -> str | None:
+def _qualifier(row: TechnicalEvidence, translate=None) -> str | None:
     conditions = row.conditions or {}
     if conditions.get("cycle"):
-        return str(conditions["cycle"])
+        cycle = str(conditions["cycle"])
+        # MIIT / CLTC / WLTC stay; a fuel-cycle label such as 工信部综合 is translated
+        return translate("cn_fuel_cycle", cycle) if translate else cycle
     if conditions.get("window_pct"):
         window = str(conditions["window_pct"])
         return window if "%" in window else f"{window} %"
@@ -371,6 +404,7 @@ def _configuration_row(db, key: str) -> TechnicalEvidence | None:
 
 def _components(db, variant: VehicleVariant, language: str) -> list[dict]:
     cn = (variant.specifications or {}).get("cn") or {}
+    translate = translator(db, language)
     out = []
     for kind, cid in (cn.get("components") or {}).items():
         if not cid or kind not in COMPONENT_COLUMN:
@@ -393,7 +427,7 @@ def _components(db, variant: VehicleVariant, language: str) -> list[dict]:
                 "kind": kind,
                 "kind_label": tr(language, COMPONENT_KINDS[kind]),
                 "key": cid,
-                "name": name.value if name else cid,
+                "name": translate("cn_component_name", name.value) if name else cid,
                 "codes": value("component_codes") or [],
                 "supplier": value("component_supplier"),
                 "generation": value("component_generation"),
@@ -405,20 +439,25 @@ def _components(db, variant: VehicleVariant, language: str) -> list[dict]:
 
 def weak_points(db, variant: VehicleVariant, language: str) -> list[dict]:
     """Owner reports (own model and inherited through components); never a severity."""
+    translate = translator(db, language)
     out = []
-    for issue in resolved_issues(db, variant):
+    for issue in resolved_issues(db, variant, language):
         scope = issue.get("scope")
         sources = [issue["source"], *(issue.get("more_sources") or [])]
+        title = translate("cn_issue", issue["text"])
         out.append(
             {
-                "title": issue["text"],
+                "title": title,
                 "component": tr(language, SCOPES[scope]) if scope in SCOPES else scope,
                 "inherited": bool(issue.get("component")),
                 "origin": issue["origin"],
                 "owner_reports": True,
                 "note": tr(language, OWNERS_REPORT),
                 "sources": [s for s in sources if s],
-                "original_language": "ru",
+                # the Russian original is shown where a translation is missing
+                "original_language": "ru"
+                if language == "ru" or title == issue["text"]
+                else language,
             }
         )
     return out
@@ -454,6 +493,7 @@ def build(db, key: str, language: str = "ru") -> dict | None:
             TechnicalEvidence.is_demo.is_(False),
         )
     ).all()
+    translate = translator(db, language)
     by_key = defaultdict(list)
     for fact in facts:
         by_key[fact.fact_key].append(fact)
@@ -469,13 +509,16 @@ def build(db, key: str, language: str = "ru") -> dict | None:
         for fact_key in keys:
             values = []
             for fact in sorted(by_key.get(fact_key, []), key=lambda f: str(_qualifier(f))):
-                shown = show(fact_key, fact.value, fact.unit, language)
+                value = fact.value
+                if fact_key == "hybrid_system_name" and isinstance(value, str):
+                    value = translate("cn_hybrid_system", value)
+                shown = show(fact_key, value, fact.unit, language)
                 if not shown:
                     continue
                 values.append(
                     {
                         "value": shown,
-                        "qualifier": _qualifier(fact),
+                        "qualifier": _qualifier(fact, translate),
                         "secondary": fact.display_level.value == "SECONDARY_NOTE",
                         "level": fact.scope_level.value,
                         "source": _source_view(sources.get(fact.source_id), fact),
@@ -513,6 +556,9 @@ def build(db, key: str, language: str = "ru") -> dict | None:
         "sub_brand": cn.get("sub_brand"),
         "trim": cn.get("trim_key"),
         "trims": cn.get("trims") or [],
+        "generation_label": translate("cn_generation", cn.get("generation_label")),
+        "status_china": translate("cn_status", cn.get("status_china")),
+        "buyer_checks": [translate("cn_buyer_check", t) for t in cn.get("buyer_checks") or []],
         "summary": summary(variant, language),
         "powertrain_type": variant.powertrain_type,
         "battery_kwh": float(variant.battery_kwh) if variant.battery_kwh is not None else None,
@@ -530,6 +576,16 @@ def build(db, key: str, language: str = "ru") -> dict | None:
             "model_year": tr(
                 language, ("Модельный год (年款)", "Model ili (年款)", "Model year (年款)")
             ),
+            "buyer_checks": tr(
+                language,
+                (
+                    "Что проверить при покупке",
+                    "Alarkən nəyi yoxlamalı",
+                    "What to check when buying",
+                ),
+            ),
+            "status_china": tr(language, ("Статус в Китае", "Çində status", "Status in China")),
+            "generation": tr(language, ("Поколение / 年款", "Nəsil / 年款", "Generation / 年款")),
         },
     }
 

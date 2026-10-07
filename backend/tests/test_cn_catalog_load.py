@@ -222,3 +222,22 @@ def test_replace_own_reloads_only_cn_rows(db_session, loaded, staging):
     assert report.counts["removed_vehicle_variants"] == 157
     assert report.counts["variants_new"] == 157
     assert db_session.get(VehicleVariant, us.id) is not None
+
+
+def test_a_newer_snapshot_of_the_same_records_only_moves_the_provenance(
+    db_session, loaded, staging
+):
+    import copy
+
+    newer = copy.copy(staging)
+    newer.manifest = {**staging.manifest, "samr_commit": "f" * 40}
+    report = CnLoader(db_session, newer).load()
+    db_session.flush()
+    assert report.conflicts == []
+    assert report.counts["variants_provenance_updated"] == 157
+    variant = db_session.scalar(
+        select(VehicleVariant).where(VehicleVariant.market == "CN").limit(1)
+    )
+    assert variant.specifications["cn"]["samr_commit"] == "f" * 40
+    again = CnLoader(db_session, newer).load()
+    assert again.counts["variants_unchanged"] == 157 and again.conflicts == []

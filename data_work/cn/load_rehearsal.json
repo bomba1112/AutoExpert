@@ -1,10 +1,10 @@
 {
  "mode": "rehearsal",
  "database": "C:\\AutoExpertData\\work\\rehearsal_cn.db",
- "started_at": "2026-10-07T21:53:04+00:00",
- "samr_commit": "a9f99c4bdb538c4246a969f873ca32b297ddb60d",
+ "started_at": "2026-10-07T23:37:51+00:00",
+ "samr_commit": "0504d49b62ea4e1b3b03a3678400b45cc50e7c90",
  "alembic_before": [
-  "f094_subscriptions"
+  "f096_cn_catalog"
  ],
  "alembic_after": {
   "heads": [
@@ -19,10 +19,11 @@
   },
   "us_configuration_rows": 3260,
   "cn": {
-   "variants": 0,
-   "technical_evidence": 0,
-   "known_issues": 0,
-   "source_records": 0
+   "variants": 157,
+   "technical_evidence": 3926,
+   "known_issues": 367,
+   "source_records": 175,
+   "translations": 0
   }
  },
  "load": {
@@ -30,13 +31,11 @@
    "components_engine": 26,
    "components_hybrid_system": 21,
    "components_transmission": 7,
-   "facts_new": 3926,
-   "generations_new": 24,
-   "issues_new": 367,
-   "makes_new": 4,
-   "models_new": 23,
-   "source_records_new": 175,
-   "variants_new": 157
+   "facts_unchanged": 3926,
+   "issues_unchanged": 367,
+   "translations_new": 510,
+   "translations_stale": 0,
+   "variants_provenance_updated": 157
   },
   "conflicts": [],
   "warnings": [],
@@ -49,7 +48,9 @@
    "issues_unchanged": 367,
    "components_engine": 26,
    "components_transmission": 7,
-   "components_hybrid_system": 21
+   "components_hybrid_system": 21,
+   "translations_unchanged": 510,
+   "translations_stale": 0
   },
   "conflicts": 0,
   "stale": 0
@@ -64,7 +65,8 @@
    "variants": 157,
    "technical_evidence": 3926,
    "known_issues": 367,
-   "source_records": 175
+   "source_records": 175,
+   "translations": 510
   }
  },
  "inherited_issues": {
@@ -569,6 +571,6 @@
   "foreign_key_violations": 0,
   "new_foreign_key_violations": []
  },
- "finished_at": "2026-10-07T21:58:48+00:00",
+ "finished_at": "2026-10-07T23:38:18+00:00",
  "ok": true
 }
