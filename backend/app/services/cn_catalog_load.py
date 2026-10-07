@@ -766,13 +766,29 @@ class CnLoader:
             self.db.flush()
             self.report.counts["variants_new"] += 1
         else:
+
+            def without_provenance(specs):
+                # samr_commit names the snapshot a row came from, not catalogue data: a newer
+                # snapshot with the same record only moves this stamp
+                cn_part = dict((specs or {}).get("cn") or {})
+                cn_part.pop("samr_commit", None)
+                return {**(specs or {}), "cn": cn_part}
+
             changed = {
                 k: [plain(getattr(variant, k)), plain(v)]
                 for k, v in values.items()
-                if not same(plain(getattr(variant, k)), plain(v))
+                if not same(
+                    without_provenance(getattr(variant, k))
+                    if k == "specifications"
+                    else plain(getattr(variant, k)),
+                    without_provenance(v) if k == "specifications" else plain(v),
+                )
             }
             if changed:
                 self.report.conflicts.append({"what": f"variant {key}", "changed": changed})
+            elif variant.specifications != values["specifications"]:
+                variant.specifications = values["specifications"]
+                self.report.counts["variants_provenance_updated"] += 1
             else:
                 self.report.counts["variants_unchanged"] += 1
         self.variants[slug] = variant
