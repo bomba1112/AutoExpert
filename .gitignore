@@ -27,3 +27,18 @@ data_work/**/raw/
 data_work/_library/**/*.pdf
 data_work/_library/**/*.html
 data_work/**/load_report_rehearsal.json
+
+# Added 2026-10-08 before the first push: dumps, SQLite side files, local env files, keys
+*.sql
+*.sql.gz
+*.dump
+*.pgdump
+*.bak
+*.sqlite
+*.db-journal
+*.db-wal
+*.db-shm
+.env.*
+!.env.example
+*.pem
+*.key
