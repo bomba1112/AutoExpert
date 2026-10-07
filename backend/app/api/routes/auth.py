@@ -89,7 +89,9 @@ def login(value: LoginRequest, db: DBSession, request: Request) -> TokenResponse
         raise HTTPException(status_code=status.HTTP_429_TOO_MANY_REQUESTS,
                             detail="Too many attempts, try again in 15 minutes")
     user = db.scalar(select(User).where(User.email == email))
-    ok = user is not None and verify_password(value.password, user.password_hash)
+    # An inactive account gets the same answer as a wrong password (no account enumeration);
+    # the password is still checked, so both answers take the same time.
+    ok = user is not None and verify_password(value.password, user.password_hash) and user.is_active
     accounts.record_attempt(db, email, ip, ok)
     db.commit()
     if not ok:

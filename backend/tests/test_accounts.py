@@ -84,6 +84,19 @@ def test_login_is_locked_after_repeated_failures(client):
     assert client.post("/api/v1/auth/login", json={"email": "other@example.com", "password": "x"}).status_code == 401
 
 
+def test_inactive_account_gets_no_token_and_the_same_answer_as_a_wrong_password(client, db_session):
+    _register(client)
+    ok = client.post("/api/v1/auth/login", json={"email": "owner@example.com", "password": PASSWORD})
+    assert ok.status_code == 200 and ok.json()["access_token"]  # an active account signs in
+    wrong = client.post("/api/v1/auth/login", json={"email": "owner@example.com", "password": "wrong-password"})
+    user = db_session.query(User).filter_by(email="owner@example.com").one()
+    user.is_active = False
+    db_session.commit()
+    inactive = client.post("/api/v1/auth/login", json={"email": "owner@example.com", "password": PASSWORD})
+    assert inactive.status_code == 401 and "access_token" not in inactive.json()
+    assert inactive.json() == wrong.json()  # nothing tells that the account exists
+
+
 def test_club_writing_needs_a_confirmed_email(db_session):
     from app.core.config import get_settings
 
