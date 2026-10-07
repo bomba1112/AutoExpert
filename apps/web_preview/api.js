@@ -1,4 +1,7 @@
 const TOKEN_KEY = 'autoexpert.demo.token';
+// The app's token goes in its own header: on the closed staging Authorization carries the site's
+// Basic Auth, which the browser attaches by itself (a Bearer there would make it ask again).
+const TOKEN_HEADER = 'X-AutoExpert-Token';
 const USER_KEY = 'autoexpert.demo.user';
 const SIMULATE_PAYWALL_HEADER = 'X-AutoExpert-Simulate-Paywall';
 
@@ -49,7 +52,7 @@ export function clearSession() {
 }
 
 export async function privateImageUrl(path) {
-  const response = await fetch(endpoint(path), {headers:{Authorization:`Bearer ${localStorage.getItem(TOKEN_KEY)||''}`}});
+  const response = await fetch(endpoint(path), {headers:{[TOKEN_HEADER]: localStorage.getItem(TOKEN_KEY)||''}});
   if (!response.ok) throw new ApiError(response.status, 'ASSET_UNAVAILABLE');
   return URL.createObjectURL(await response.blob());
 }
@@ -76,7 +79,7 @@ export async function ensureDemoSession(preferredLanguage) {
       let expired = true;
       try {expired = JSON.parse(atob(token.split('.')[1].replaceAll('-', '+').replaceAll('_', '/'))).exp < Date.now() / 1000 + 30;} catch {}
       if (expired) {
-        const response = await fetch(endpoint('/auth/local-session/renew'), {method: 'POST', headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch(endpoint('/auth/local-session/renew'), {method: 'POST', headers: {[TOKEN_HEADER]: token}});
         if (!response.ok) throw new ApiError(response.status, 'Saved local session could not be renewed');
         const payload = await response.json();
         localStorage.setItem(TOKEN_KEY, payload.access_token);
@@ -91,7 +94,7 @@ export async function ensureDemoSession(preferredLanguage) {
 export async function api(path, options = {}) {
   const headers = new Headers(options.headers || {});
   const token = localStorage.getItem(TOKEN_KEY);
-  if (token) headers.set('Authorization', `Bearer ${token}`);
+  if (token) headers.set(TOKEN_HEADER, token);
   if (developerMode && simulateUserPaywall) {
     headers.set(SIMULATE_PAYWALL_HEADER, 'true');
   }
@@ -114,7 +117,7 @@ export async function api(path, options = {}) {
 
 export async function downloadReportPdf(checkId, vin, buyerLanguage = null) {
   const headers = new Headers();
-  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  headers.set(TOKEN_HEADER, localStorage.getItem(TOKEN_KEY) || '');
   if (developerMode && simulateUserPaywall) headers.set(SIMULATE_PAYWALL_HEADER, 'true');
   const path = buyerLanguage ? `/reports/buyer/${encodeURIComponent(checkId)}/pdf?language=${encodeURIComponent(buyerLanguage)}` : `/vin/${encodeURIComponent(checkId)}/report.pdf`;
   const response = await fetch(endpoint(path), {headers});
@@ -138,7 +141,7 @@ export async function downloadReportPdf(checkId, vin, buyerLanguage = null) {
 
 export async function vehiclePhotoUrl(checkId, photoId) {
   const headers = new Headers();
-  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  headers.set(TOKEN_HEADER, localStorage.getItem(TOKEN_KEY) || '');
   if (developerMode && simulateUserPaywall) headers.set(SIMULATE_PAYWALL_HEADER, 'true');
   const response = await fetch(endpoint(`/vin/${encodeURIComponent(checkId)}/photos/${encodeURIComponent(photoId)}`), {headers});
   if (!response.ok) throw new ApiError(response.status, 'Photograph unavailable');
@@ -188,7 +191,7 @@ function errorMessage(payload) {
 
 export async function downloadFile(path, filename) {
   const headers = new Headers();
-  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  headers.set(TOKEN_HEADER, localStorage.getItem(TOKEN_KEY) || '');
   const response = await fetch(endpoint(path), {headers});
   if (!response.ok) throw new ApiError(response.status, 'Download unavailable');
   const blob = await response.blob();
@@ -209,7 +212,7 @@ export async function downloadFile(path, filename) {
 
 export async function apiForm(path, formData) {
   const headers = new Headers();
-  headers.set('Authorization', `Bearer ${localStorage.getItem(TOKEN_KEY) || ''}`);
+  headers.set(TOKEN_HEADER, localStorage.getItem(TOKEN_KEY) || '');
   const response = await fetch(endpoint(path), {method: 'POST', body: formData, headers});
   const payload = await readPayload(response);
   if (!response.ok) throw new ApiError(response.status, errorMessage(payload), payload);

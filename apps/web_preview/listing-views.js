@@ -1,5 +1,5 @@
-import {EN, pickText} from './en-text.js?v=0.11.0';
-import {api} from './api.js?v=0.11.0';
+import {EN, pickText} from './en-text.js?v=0.14.0';
+import {api} from './api.js?v=0.14.0';
 import {localizeTechnicalValue} from './catalog-display.js?v=0.9.1';
 
 // Consumer listing intake deliberately accepts only material supplied by the user.
@@ -197,5 +197,5 @@ export function createListingViews({root, state, layout, go, esc, ensureSession,
       }else await submitImport(form,form.id==='listing-enrich-form'?lastResult?.snapshot?.source_url:'');
     })().catch(error=>showToast(error.message && Object.keys(copy.ru).map(t).includes(error.message)?error.message:t('submitError'))).finally(()=>{if(button)button.disabled=false;});
   });
-  return {route(name,id){if(name==='check'){check(id);return true;}if(name==='manual'){check('manual');return true;}if(name==='listing-result'){return loadResult(id).then(()=>true);}return false;},check,result};
+  return {route(name,id){if(name==='check'||name==='check-legacy'){check(id);return true;}if(name==='manual'){check('manual');return true;}if(name==='listing-result'){return loadResult(id).then(()=>true);}return false;},check,result};
 }

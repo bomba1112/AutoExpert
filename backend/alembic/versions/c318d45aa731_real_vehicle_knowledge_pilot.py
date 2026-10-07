@@ -76,7 +76,7 @@ def upgrade() -> None:
         )
 
     for table in ["source_records", *tables, "vehicle_knowledge_profiles"]:
-        op.execute(sa.text(f"UPDATE {table} SET data_origin = 'DEMO' WHERE is_demo = 1"))
+        op.execute(sa.text(f"UPDATE {table} SET data_origin = 'DEMO' WHERE is_demo = TRUE"))
 
 
 def downgrade() -> None:

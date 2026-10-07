@@ -31,6 +31,7 @@ from sqlalchemy import func, select
 
 from app.core.config import get_settings
 from app.core.english import pick
+from app.db.session import bind_url
 from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel
 from app.models.club import (
     ClubBan,
@@ -109,7 +110,7 @@ _ROOMS_READY: set[str] = set()
 
 def ensure_rooms(db) -> None:
     """Make rooms and popular generation rooms (idempotent)."""
-    bind = str(db.get_bind().url)
+    bind = bind_url(db)
     if bind in _ROOMS_READY and db.scalar(select(func.count()).select_from(ClubRoom)):
         return
     existing = set(db.scalars(select(ClubRoom.key)))
@@ -118,7 +119,8 @@ def ensure_rooms(db) -> None:
                func.min(TechnicalEvidence.year_from), func.max(TechnicalEvidence.year_to))
         .join(VehicleModel, VehicleModel.id == VehicleGeneration.model_id).join(VehicleMake, VehicleMake.id == VehicleModel.make_id)
         .join(TechnicalEvidence, TechnicalEvidence.generation_id == VehicleGeneration.id)
-        .where(TechnicalEvidence.fact_key == "configuration").group_by(VehicleGeneration.id)).all()
+        .where(TechnicalEvidence.fact_key == "configuration")
+        .group_by(VehicleGeneration.id, VehicleGeneration.code, VehicleGeneration.name, VehicleModel.name, VehicleMake.id, VehicleMake.name)).all()
     issue_counts = dict(db.execute(
         select(KnownIssue.generation_id, func.count(func.distinct(func.coalesce(KnownIssue.title, KnownIssue.component))))
         .where(KnownIssue.display_level.in_(VISIBLE_LEVELS), KnownIssue.is_demo.is_(False)).group_by(KnownIssue.generation_id)).all())

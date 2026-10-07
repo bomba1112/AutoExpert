@@ -28,6 +28,8 @@ from sqlalchemy import func, select
 
 from app.core.config import get_settings
 from app.core.english import pick
+from app.db.ordering import insertion_order
+from app.db.session import bind_url
 from app.models.catalog import VehicleGeneration, VehicleMake, VehicleModel, VehicleVariant
 from app.models.evidence import KnownIssue, MaintenanceScheduleItem, SourceRecord, TechnicalEvidence
 from app.models.translations import ContentTranslation
@@ -742,7 +744,8 @@ NOT_CN = func.coalesce(TechnicalEvidence.market, "") != "CN"
 
 def _configuration_row(db, configuration_key: str) -> TechnicalEvidence | None:
     return db.scalar(select(TechnicalEvidence).where(TechnicalEvidence.fact_key == "configuration", NOT_CN,
-                                                     TechnicalEvidence.configuration_key == configuration_key).limit(1))
+                                                     TechnicalEvidence.configuration_key == configuration_key)
+                     .order_by(insertion_order(db, TechnicalEvidence)).limit(1))
 
 
 def _gearbox(text: str) -> tuple[str | None, int | None]:
@@ -809,10 +812,10 @@ def _target(db, row: TechnicalEvidence) -> tuple[Target, list[TechnicalEvidence]
     rows = list(db.scalars(select(TechnicalEvidence).where(
         TechnicalEvidence.generation_id == row.generation_id, TechnicalEvidence.make_id == row.make_id,
         TechnicalEvidence.year_from <= year, TechnicalEvidence.year_to >= year, TechnicalEvidence.scope_level.is_not(None),
-        TechnicalEvidence.fact_key.not_in(NOT_LOADED))))
+        TechnicalEvidence.fact_key.not_in(NOT_LOADED)).order_by(insertion_order(db, TechnicalEvidence))))
     epa = db.execute(select(TechnicalEvidence.configuration_key, TechnicalEvidence.conditions).where(
         TechnicalEvidence.generation_id == row.generation_id, TechnicalEvidence.year_from <= year,
-        TechnicalEvidence.year_to >= year, TechnicalEvidence.fact_key == "epa_combined_mpg")).all()
+        TechnicalEvidence.year_to >= year, TechnicalEvidence.fact_key == "epa_combined_mpg").order_by(insertion_order(db, TechnicalEvidence))).all()
     designations, generation_labels = [], []
     for key, cond in epa:
         label = (cond or {}).get("epa_model")
@@ -922,7 +925,7 @@ def _stamp(db) -> tuple:
 def build(db, configuration_key: str, language: str = "ru") -> dict | None:
     """Facts for one configuration, cached per configuration and language; the cache is renewed
     when the scoped tables change (checked at most once a minute)."""
-    key = (str(db.get_bind().url), configuration_key, language)
+    key = (bind_url(db), configuration_key, language)
     now = time.monotonic()
     with _CACHE_LOCK:
         hit = _CACHE.get(key)
@@ -1160,7 +1163,7 @@ def weak_points(db, t: Target, language: str) -> list[dict]:
     translate = Translator(db, language)
     issues = db.scalars(select(KnownIssue).where(
         KnownIssue.make_id == t.make_id, KnownIssue.generation_id == t.generation_id, KnownIssue.year_from <= t.year,
-        KnownIssue.year_to >= t.year, KnownIssue.scope_level.is_not(None), KnownIssue.is_demo.is_(False)))
+        KnownIssue.year_to >= t.year, KnownIssue.scope_level.is_not(None), KnownIssue.is_demo.is_(False)).order_by(insertion_order(db, KnownIssue)))
     out = []
     for issue in issues:
         display = _enum(issue.display_level)
@@ -1273,7 +1276,7 @@ def maintenance(db, t: Target, language: str, excluded_editions: set[str] = froz
     items = [it for it in db.scalars(select(MaintenanceScheduleItem).where(
         MaintenanceScheduleItem.make_id == t.make_id, MaintenanceScheduleItem.generation_id == t.generation_id,
         MaintenanceScheduleItem.year_from <= t.year, MaintenanceScheduleItem.year_to >= t.year,
-        MaintenanceScheduleItem.is_demo.is_(False)))
+        MaintenanceScheduleItem.is_demo.is_(False)).order_by(insertion_order(db, MaintenanceScheduleItem)))
         if _enum(it.display_level) in DISPLAY_RANK and not (it.engine_family_key and it.engine_family_key != t.engine)
         and (it.applicability or {}).get("edition") not in excluded_editions]
     jobs = {it.job for it in items}

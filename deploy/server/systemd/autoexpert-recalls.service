@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto Expert daily NHTSA recall check for the cars in the garages
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=deploy
+WorkingDirectory=/srv/autoexpert/current/deploy
+ExecStart=/usr/bin/docker compose --env-file /srv/autoexpert/shared/.env exec -T backend python scripts/garage_recall_job.py
+StandardOutput=append:/srv/autoexpert/logs/recalls.log
+StandardError=append:/srv/autoexpert/logs/recalls.log

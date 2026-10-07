@@ -62,7 +62,9 @@ class ApiClient {
 
   Map<String, String> get _headers => {
         'Content-Type': 'application/json',
-        if (_accessToken != null) 'Authorization': 'Bearer $_accessToken',
+        // the app's token in its own header: on the closed staging Authorization carries the
+        // site's Basic Auth; the backend also accepts Authorization: Bearer
+        if (_accessToken != null) 'X-AutoExpert-Token': _accessToken!,
       };
 
   Map<String, dynamic> _decode(http.Response response) {

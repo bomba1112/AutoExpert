@@ -1,97 +1,117 @@
+# Auto Expert — closed staging on one server (deploy prompt, stages B–C).
+# Release directory: /srv/autoexpert/current (code, deploy/, web/, site/); secrets:
+# /srv/autoexpert/shared/.env (chmod 600, never in git). Run from /srv/autoexpert/current/deploy:
+#   docker compose --env-file /srv/autoexpert/shared/.env up -d --build
+# Only Caddy publishes a port (172.17.0.1:8088, behind the Stories Caddy). PostgreSQL has none.
 name: autoexpert
-x-app: &app
+
+x-logging: &logging
+  driver: json-file
+  options: {max-size: 10m, max-file: "5"}
+
+x-backend: &backend
   build:
     context: ..
     dockerfile: deploy/Dockerfile
-  image: autoexpert-local:0.8.0
-  env_file: .env
+  image: autoexpert-backend:${RELEASE:-current}
+  env_file: /srv/autoexpert/shared/.env
   environment:
-    AUTOEXPERT_ENVIRONMENT: production
-    AUTOEXPERT_DEVELOPER_MODE: "false"
-    AUTOEXPERT_DEMO_MODE: "false"
-    AUTOEXPERT_KNOWLEDGE_DATA_DIR: /data
-    AUTOEXPERT_KNOWLEDGE_WORKER_ENABLED: "true"
-    AUTOEXPERT_LLM_PROVIDER: deterministic
-    AUTOEXPERT_PAYMENT_PROVIDER: mock
+    AUTOEXPERT_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    AUTOEXPERT_VPIC_DATABASE_PATH: /data/vpic/vpic_lite.sqlite
+    AUTOEXPERT_KNOWLEDGE_DATA_DIR: /data/media/knowledge
+    AUTOEXPERT_CLUB_MEDIA_DIR: /data/media/club_media
+    AUTOEXPERT_PUBLIC_SITE_DIR: /nonexistent     # the site service serves /cars
   volumes:
-    - knowledge:/data
-  networks: [private]
+    - /srv/autoexpert/vpic:/data/vpic:ro
+    - /srv/autoexpert/media:/data/media
+  networks: [internal]
   read_only: true
   tmpfs: [/tmp]
   security_opt: [no-new-privileges:true]
   cap_drop: [ALL]
+  logging: *logging
+
 services:
-  db:
-    image: postgres:16.15
-    environment:
-      POSTGRES_DB: autoexpert
-      POSTGRES_USER: autoexpert
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a random database password in deploy/.env}
-    volumes: [database:/var/lib/postgresql/data]
-    networks: [private]
+  postgres:
+    image: postgres:16-alpine
     restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in /srv/autoexpert/shared/.env}
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+    shm_size: 256mb
     healthcheck:
-      test: [CMD-SHELL, "pg_isready -U autoexpert -d autoexpert"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
       retries: 10
-    logging:
-      driver: json-file
-      options: {max-size: 10m, max-file: "3"}
-  migrate:
-    <<: *app
-    command: [sh, -ec, "alembic -c backend/alembic.ini upgrade head && python scripts/knowledge_admin.py seed-registry"]
+    networks: [internal]
+    logging: *logging
+
+  migrate:          # alembic upgrade head, once per start
+    <<: *backend
+    command: ["alembic", "-c", "backend/alembic.ini", "upgrade", "head"]
     depends_on:
-      db: {condition: service_healthy}
+      postgres: {condition: service_healthy}
     restart: "no"
-  api:
-    <<: *app
+
+  backend:
+    <<: *backend
+    restart: unless-stopped
     depends_on:
       migrate: {condition: service_completed_successfully}
-    restart: unless-stopped
     healthcheck:
-      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health',timeout=3)"]
-      interval: 20s
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/v1/health"]
+      interval: 30s
       timeout: 5s
+      start_period: 60s
       retries: 3
-    logging:
-      driver: json-file
-      options: {max-size: 10m, max-file: "3"}
-  worker:
-    <<: *app
-    command: [python, -m, app.knowledge_worker]
-    environment:
-      AUTOEXPERT_ENVIRONMENT: production
-      AUTOEXPERT_DEVELOPER_MODE: "false"
-      AUTOEXPERT_DEMO_MODE: "false"
-      AUTOEXPERT_KNOWLEDGE_DATA_DIR: /data
-      AUTOEXPERT_KNOWLEDGE_WORKER_ENABLED: "true"
-    depends_on:
-      migrate: {condition: service_completed_successfully}
+
+  web:              # the web application: apps/web_preview at /preview, Flutter web at /app
+    image: nginx:1.27-alpine
     restart: unless-stopped
-    logging:
-      driver: json-file
-      options: {max-size: 10m, max-file: "3"}
-  proxy:
-    image: caddy:2
-    ports: ["127.0.0.1:8088:80"]
+    volumes:
+      - ../web:/usr/share/nginx/html:ro
+    networks: [internal]
+    logging: *logging
+
+  site:             # the public car pages at /cars, generated on the laptop
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    volumes:
+      - ../site:/usr/share/nginx/html:ro
+    networks: [internal]
+    logging: *logging
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    # Shared server: the Stories project's Caddy owns 80/443 and forwards
+    # autoexpert.77-42-27-222.sslip.io here. The port is published only on the Docker host bridge
+    # (172.17.0.1), unreachable from outside. On a server of its own: EDGE_PORTS="80" plus a 443 line.
+    ports:
+      - "${EDGE_BIND:-172.17.0.1}:${EDGE_PORT:-8088}:80"
     environment:
-      AUTOEXPERT_SITE: ${AUTOEXPERT_SITE:-:80}
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
+      BASIC_AUTH_USER: ${BASIC_AUTH_USER:?set in /srv/autoexpert/shared/.env}
+      BASIC_AUTH_HASH: ${BASIC_AUTH_HASH:?set in /srv/autoexpert/shared/.env}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
-    networks: [private]
     depends_on:
-      api: {condition: service_healthy}
-    restart: unless-stopped
-    logging:
-      driver: json-file
-      options: {max-size: 10m, max-file: "3"}
+      backend: {condition: service_healthy}
+    networks: [internal]
+    logging: *logging
+
 volumes:
-  database:
-  knowledge:
+  pgdata:
   caddy_data:
   caddy_config:
+
 networks:
-  private:
+  internal:

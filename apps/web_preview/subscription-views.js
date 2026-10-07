@@ -1,7 +1,7 @@
 // The subscription "my car under the expert's eye" (product phase, stage 6): plans, the price of
 // the region, the trial and the store stub. Shown only while the API advertises subscription_v1;
 // no real payment is taken (App Store / Google Play are connected at deployment).
-import {api} from './api.js?v=0.11.0';
+import {api} from './api.js?v=0.14.0';
 
 const C = {
   title: ['Подписка', 'Abunə', 'Subscription'],

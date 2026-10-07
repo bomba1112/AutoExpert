@@ -2,7 +2,7 @@ from datetime import UTC
 from typing import Annotated
 
 import jwt
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 
@@ -10,8 +10,27 @@ from app.core.security import decode_access_token
 from app.db.session import get_db
 from app.models.user import User
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
+# The app's own token travels in X-AutoExpert-Token: on the closed staging the Authorization header
+# belongs to the site's Basic Auth (the browser attaches it), and a Bearer token there would replace
+# it and make the proxy ask for the site password again. Authorization: Bearer keeps working
+# (mobile apps, tests); Authorization: Basic is not an app token and is ignored.
+TOKEN_HEADER = "X-AutoExpert-Token"
+_bearer = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login", auto_error=False)
 DBSession = Annotated[Session, Depends(get_db)]
+
+
+def oauth2_scheme(request: Request, bearer: Annotated[str | None, Depends(_bearer)]) -> str:
+    token = (request.headers.get(TOKEN_HEADER) or "").strip()
+    if token.lower().startswith("bearer "):
+        token = token[7:].strip()
+    token = token or bearer
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    return token
 
 
 def get_current_user(db: DBSession, token: Annotated[str, Depends(oauth2_scheme)]) -> User:

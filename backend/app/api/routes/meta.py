@@ -9,6 +9,7 @@ from app.services.chat_access import configured_chat_access_policy
 from app.services.club import enabled as club_enabled
 from app.services.entitlements import enabled as subscription_enabled
 from app.services.garage import enabled as garage_enabled
+from app.services.listing_opinion import enabled as expert_opinion_enabled
 from app.services.us_tech_facts import enabled as us_tech_facts_enabled
 
 router = APIRouter(prefix="/meta", tags=["meta"])
@@ -76,6 +77,8 @@ def client_config() -> dict:
         config["owners_club_v1"] = {"enabled": True}
     if us_tech_facts_enabled(settings):
         config["us_tech_facts"] = {"enabled": True}
+    if expert_opinion_enabled(settings):
+        config["expert_opinion_v1"] = {"enabled": True}
     if preview_us_configurations_enabled(settings):
         config["us_configurations_preview"] = {"enabled": True, "years": [2021, 2026]}
     return config

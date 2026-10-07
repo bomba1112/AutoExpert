@@ -156,3 +156,18 @@ def test_the_log_keeps_every_request(car, db_session, user, no_key):  # noqa: F8
     ai_mechanic.ask(db_session, user, v, "oil?", "en")
     assert db_session.query(AIMechanicRequest).filter_by(user_id=user.id).count() == 1
     assert ai_mechanic.used_today(db_session, user.id) == 1
+
+
+def test_deleting_the_car_keeps_its_mechanic_log_without_the_car(car, db_session, user, no_key):  # noqa: F811
+    from app.services import garage
+    from sqlalchemy import text
+
+    v = _vehicle(db_session, user.id)
+    entry = ai_mechanic.ask(db_session, user, v, "Какая жидкость в коробку?", "ru")
+    db_session.commit()
+    garage.delete_vehicle(db_session, v)
+    db_session.commit()
+    kept = db_session.get(AIMechanicRequest, entry.id)
+    assert kept is not None and kept.vehicle_id is None  # ON DELETE SET NULL, also on SQLite
+    if db_session.get_bind().dialect.name == "sqlite":  # PostgreSQL enforces the foreign keys itself
+        assert db_session.execute(text("pragma foreign_key_check")).all() == []

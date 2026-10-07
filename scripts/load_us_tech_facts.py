@@ -846,8 +846,8 @@ class Loader:
             self.counts["replaced_own_maintenance"] += 1
         own = lambda model: (  # noqa: E731
             model.make_id == self.make.id,
-            func.json_extract(model.conditions, "$.load") == LOAD_VERSION,
-            func.json_extract(model.conditions, "$.line") == self.s["line"],
+            model.conditions["load"].as_string() == LOAD_VERSION,
+            model.conditions["line"].as_string() == self.s["line"],
         )
         te_ids = list(self.db.scalars(select(TechnicalEvidence.id).where(*own(TechnicalEvidence))))
         if te_ids:
@@ -1094,8 +1094,8 @@ class Loader:
         rows = self.db.scalars(
             select(TechnicalEvidence).where(
                 TechnicalEvidence.make_id == self.make.id,
-                func.json_extract(TechnicalEvidence.conditions, "$.load") == LOAD_VERSION,
-                func.json_extract(TechnicalEvidence.conditions, "$.line") == self.s["line"],
+                TechnicalEvidence.conditions["load"].as_string() == LOAD_VERSION,
+                TechnicalEvidence.conditions["line"].as_string() == self.s["line"],
             )
         ).all()
         referenced = {

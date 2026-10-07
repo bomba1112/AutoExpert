@@ -190,7 +190,7 @@ def update_vehicle(vehicle_id: str, value: VehicleUpdate, db: DBSession, user: C
 @router.delete("/vehicles/{vehicle_id}", status_code=204)
 def delete_vehicle(vehicle_id: str, db: DBSession, user: CurrentUser) -> Response:
     _enabled()
-    db.delete(_vehicle(db, user, vehicle_id))
+    garage.delete_vehicle(db, _vehicle(db, user, vehicle_id))
     db.commit()
     return Response(status_code=204)
 

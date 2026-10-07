@@ -20,6 +20,7 @@ import threading
 from sqlalchemy import func, select
 
 from app.core.config import get_settings
+from app.db.session import bind_url
 from app.models.catalog import VehicleVariant
 from app.models.knowledge_ops import CatalogRevision, ImportJob, SourceRegistry
 
@@ -65,7 +66,7 @@ def preview_rows(db) -> list:
     from app.services import catalog_buyer as buyer
     from app.services.listing_intake import production_visible_us_rows
 
-    key = str(db.get_bind().url)
+    key = bind_url(db)
     stamp = _stamp(db)
     with _LOCK:
         hit = _CACHE.get(key)

@@ -129,7 +129,8 @@ void main() {
       }
       expect(request.url.path, endsWith('/listings/intake'));
       expect(request.method, 'POST');
-      expect(request.headers['Authorization'], 'Bearer local-demo-token');
+      expect(request.headers['X-AutoExpert-Token'], 'local-demo-token');
+      expect(request.headers.containsKey('Authorization'), isFalse);
       final body = jsonDecode(request.body) as Map<String, dynamic>;
       expect(body['input_type'], 'URL_REFERENCE');
       expect(body['source_url'], 'https://turbo.az/autos/12345678-a');

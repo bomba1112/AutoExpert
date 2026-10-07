@@ -41,7 +41,7 @@ def public_address(url: str) -> tuple[str, str, int, str, str]:
 
 
 def fetch_public(
-    url: str, *, deadline: float | None = None, redirect_policy=None
+    url: str, *, deadline: float | None = None, redirect_policy=None, headers: dict | None = None
 ) -> tuple[int, str, bytes, str]:
     """Pin each validated DNS address to the socket; TLS still validates original host."""
     deadline = deadline or time.monotonic() + 25
@@ -64,9 +64,10 @@ def fetch_public(
                 "GET",
                 path,
                 headers={
-                    "Host": host,
                     "User-Agent": AGENT,
                     "Accept": "text/html,text/plain,application/xhtml+xml",
+                    **(headers or {}),
+                    "Host": host,
                     "Accept-Encoding": "identity",
                 },
             )
@@ -237,7 +238,10 @@ def parse_listing(html: str, url: str) -> dict:
     return out
 
 
-def import_listing(url: str) -> dict:
+def import_listing(url: str, *, headers: dict | None = None, timeout: float | None = None) -> dict:
+    """One listing page. headers: what the request carries (the expert opinion sends ordinary
+    browser headers); robots.txt is still read and honoured for our agent name. timeout: seconds
+    for the whole page."""
     result = {
         "source_url": url,
         "retrieved_at": datetime.now(UTC).isoformat(),
@@ -266,7 +270,10 @@ def import_listing(url: str) -> dict:
             if parser and not parser.can_fetch(AGENT, target):
                 raise ListingUnavailable("SOURCE_RESTRICTED")
 
-        status, kind, body, final_url = fetch_public(url, redirect_policy=allowed_redirect)
+        status, kind, body, final_url = fetch_public(
+            url, redirect_policy=allowed_redirect, headers=headers,
+            deadline=time.monotonic() + timeout if timeout else None,
+        )
         result["http_status"] = status
         if status != 200:
             raise ListingUnavailable(

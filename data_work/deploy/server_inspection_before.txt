@@ -1,0 +1,139 @@
+
+===== system =====
+ Static hostname: ubuntu-4gb-hel1-1
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: e0294ebb94824cd9be03f1e9d1008d9f
+         Boot ID: c527118f3cdc4efca36ab4bfe6759092
+    Product UUID: e0294ebb-9482-4cd9-be03-f1e9d1008d9f
+  Virtualization: kvm
+Operating System: Ubuntu 26.04 LTS
+          Kernel: Linux 7.0.0-28-generic
+    Architecture: x86-64
+ Hardware Vendor: Hetzner
+  Hardware Model: vServer
+ Hardware Serial: 149394521
+    Hardware SKU: TM
+Hardware Version: 20171111
+Firmware Version: 20171111
+   Firmware Date: Sat 2017-11-11
+    Firmware Age: 8y 10month 3w 3d
+PRETTY_NAME="Ubuntu 26.04 LTS"
+VERSION_ID="26.04"
+7.0.0-28-generic
+ 08:53:54 up 73 days, 20:30,  2 users,  load average: 0.46, 0.28, 0.21
+
+===== memory and swap =====
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       782Mi       324Mi        19Mi       2.9Gi       3.0Gi
+Swap:             0B          0B          0B
+
+===== disk =====
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        38G  8.8G   27G  25% /
+/dev/sda15      253M  154K  252M   1% /boot/efi
+overlay          38G  8.8G   27G  25% /var/lib/docker/rootfs/overlayfs/2405450487e1449bd9f203942afaaf520a58d4fe8e539ed7e89fe4798217972f
+overlay          38G  8.8G   27G  25% /var/lib/docker/rootfs/overlayfs/af0260e1debdc287c09879f4dc3ae12ceee283abcdb240967b233656be9c93e7
+overlay          38G  8.8G   27G  25% /var/lib/docker/rootfs/overlayfs/745cdf30a7d219f1b5a196675344b719f0d97cbca37816c1dd4d5866ff7563b0
+
+===== listening ports =====
+Netid State  Recv-Q Send-Q     Local Address:Port Peer Address:PortProcess                                                   
+udp   UNCONN 0      0             127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=247407,fd=19))             
+udp   UNCONN 0      0          127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=247407,fd=17))             
+udp   UNCONN 0      0      77.42.27.222%eth0:68        0.0.0.0:*    users:(("systemd-network",pid=247427,fd=34))             
+udp   UNCONN 0      0              127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=326939,fd=4))                      
+udp   UNCONN 0      0                  [::1]:323          [::]:*    users:(("chronyd",pid=326939,fd=5))                      
+tcp   LISTEN 0      4096       127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=247407,fd=18))             
+tcp   LISTEN 0      4096             0.0.0.0:80        0.0.0.0:*    users:(("docker-proxy",pid=1758,fd=8))                   
+tcp   LISTEN 0      4096             0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=247409,fd=3),("systemd",pid=1,fd=234))
+tcp   LISTEN 0      4096             0.0.0.0:443       0.0.0.0:*    users:(("docker-proxy",pid=1788,fd=8))                   
+tcp   LISTEN 0      4096          127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=247407,fd=20))             
+tcp   LISTEN 0      4096                [::]:80           [::]:*    users:(("docker-proxy",pid=1771,fd=8))                   
+tcp   LISTEN 0      4096                [::]:22           [::]:*    users:(("sshd",pid=247409,fd=4),("systemd",pid=1,fd=236))
+tcp   LISTEN 0      4096                [::]:443          [::]:*    users:(("docker-proxy",pid=1795,fd=8))                   
+
+===== running services (systemd) =====
+  atd.service                 loaded active running Deferred execution scheduler
+  chrony.service              loaded active running chrony, an NTP client/server
+  containerd.service          loaded active running containerd container runtime
+  cron.service                loaded active running Regular background program processing daemon
+  dbus.service                loaded active running D-Bus System Message Bus
+  docker.service              loaded active running Docker Application Container Engine
+  getty@tty1.service          loaded active running Getty on tty1
+  multipathd.service          loaded active running Device-Mapper Multipath Device Controller
+  networkd-dispatcher.service loaded active running Dispatcher daemon for systemd-networkd
+  polkit.service              loaded active running Authorization Manager
+  qemu-guest-agent.service    loaded active running QEMU Guest Agent
+  rsyslog.service             loaded active running System Logging Service
+  serial-getty@ttyS0.service  loaded active running Serial Getty on ttyS0
+  ssh.service                 loaded active running OpenBSD Secure Shell server
+  systemd-hostnamed.service   loaded active running Hostname Service
+  systemd-journald.service    loaded active running Journal Service
+  systemd-logind.service      loaded active running User Login Management
+  systemd-networkd.service    loaded active running Network Management
+  systemd-resolved.service    loaded active running Network Name Resolution
+  systemd-udevd.service       loaded active running Rule-based Manager for Device Events and Files
+  unattended-upgrades.service loaded active running Unattended Upgrades Shutdown
+  user@0.service              loaded active running User Manager for UID 0
+
+===== enabled timers =====
+NEXT                                 LEFT LAST                              PASSED UNIT                           ACTIVATES
+Tue 2026-10-06 09:00:00 UTC          6min Tue 2026-10-06 08:50:33 UTC 3min 21s ago sysstat-collect.timer          sysstat-collect.service
+Tue 2026-10-06 12:52:57 UTC      3h 59min Mon 2026-10-05 12:52:57 UTC      20h ago update-notifier-download.timer update-notifier-download.service
+Tue 2026-10-06 13:02:43 UTC       4h 8min Mon 2026-10-05 13:02:43 UTC      19h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Tue 2026-10-06 13:44:58 UTC      4h 51min Tue 2026-10-06 03:45:33 UTC  5h 8min ago motd-news.timer                motd-news.service
+Wed 2026-10-07 00:00:00 UTC           15h Tue 2026-10-06 00:00:33 UTC       8h ago dpkg-db-backup.timer           dpkg-db-backup.service
+Wed 2026-10-07 00:00:00 UTC           15h Tue 2026-10-06 00:00:33 UTC       8h ago sysstat-rotate.timer           sysstat-rotate.service
+Wed 2026-10-07 00:07:00 UTC           15h Tue 2026-10-06 00:07:22 UTC       8h ago sysstat-summary.timer          sysstat-summary.service
+Wed 2026-10-07 00:11:40 UTC           15h Tue 2026-10-06 00:58:11 UTC       7h ago logrotate.timer                logrotate.service
+Wed 2026-10-07 02:46:11 UTC           17h Tue 2026-10-06 07:41:25 UTC 1h 12min ago apt-daily.timer                apt-daily.service
+Wed 2026-10-07 06:13:37 UTC           21h Tue 2026-10-06 06:17:34 UTC 2h 36min ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+Wed 2026-10-07 09:27:58 UTC           24h Tue 2026-10-06 00:15:33 UTC       8h ago man-db.timer                   man-db.service
+Sun 2026-10-11 03:10:07 UTC        4 days Sun 2026-10-04 03:10:45 UTC   2 days ago e2scrub_all.timer              e2scrub_all.service
+Sun 2026-10-11 03:10:10 UTC        4 days Sun 2026-10-04 03:10:45 UTC   2 days ago xfs_scrub_all.timer            xfs_scrub_all.service
+Mon 2026-10-12 01:32:15 UTC        5 days Mon 2026-10-05 01:02:23 UTC 1 day 7h ago fstrim.timer                   fstrim.service
+Sat 2026-10-17 03:12:32 UTC 1 week 3 days Mon 2026-10-05 06:56:33 UTC 1 day 1h ago update-notifier-motd.timer     update-notifier-motd.service
+
+15 timers listed.
+Pass --all to see loaded but inactive timers, too.
+
+===== docker =====
+Docker version 29.6.2, build dfc4efb
+Docker Compose version v5.3.1
+NAMES                IMAGE                        STATUS                    PORTS
+stories-migrate-1    stories-backend:production   Exited (0) 8 weeks ago    
+stories-backend-1    stories-backend:production   Up 8 weeks (healthy)      
+stories-caddy-1      caddy:2-alpine               Up 2 months               0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp, 443/udp, 2019/tcp
+stories-postgres-1   postgres:16-alpine           Up 2 months (healthy)     5432/tcp
+story-app            story-backend                Exited (0) 2 months ago   
+DRIVER    VOLUME NAME
+local     e655c5937ededb640c96c41508f8f005eb2161e5340cc4d40e967d0ba2d441f9
+local     stories_stories_caddy_config
+local     stories_stories_caddy_data
+local     stories_stories_media
+local     stories_stories_postgres_data
+
+===== web servers / databases installed =====
+
+===== users with a login shell =====
+root uid=0 home=/root
+
+===== ssh settings =====
+port 22
+permitrootlogin yes
+pubkeyauthentication yes
+passwordauthentication yes
+
+===== firewall =====
+Status: inactive
+fail2ban: not installed
+
+===== cron =====
+root crontab: empty
+e2scrub_all
+
+===== big directories in /srv /opt /home /var/www =====
+12K	/opt/containerd
+72M	/opt/stories
+
+===== end =====

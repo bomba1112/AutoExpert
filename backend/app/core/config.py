@@ -104,6 +104,9 @@ class Settings(BaseSettings):
     # turbo.az listing -> CN catalogue configuration (battery kWh first, power ±3 %, year ±1).
     # Unset: on in development/test, off in production; AUTOEXPERT_CN_LISTING_MATCH overrides.
     cn_listing_match: bool | None = None
+    # The Auto Expert opinion on a listing link / VIN / manual input (UI-by-reference prompt,
+    # section 3). Unset: on in development/test, off in production; AUTOEXPERT_EXPERT_OPINION_V1.
+    expert_opinion_v1: bool | None = None
     # US configurations 2021-2026 prepared for publication, shown in the preview catalogue only
     # (owner decision 2026-10-03). Unset: on in development/test; never in production, whatever
     # the value (app/services/catalog_preview.enabled).

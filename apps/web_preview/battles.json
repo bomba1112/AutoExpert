@@ -1,0 +1,777 @@
+{
+  "_readme": "Битва поколений на главной (UI-by-reference prompt 2.1; решение владельца 2026-10-06: две машины одного класса, короткий вердикт). Владелец редактирует список: make / model / year — как в каталоге. verdict и safety заполняет scripts/build_battle_verdicts.mjs один раз заранее (наша база; чего в ней нет — specs из открытых источников с источником и ссылкой, рейтинг NHTSA 5-Star); править можно руками.",
+  "battles": [
+    {
+      "id": "camry-accord",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Camry 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 178,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/2017-toyota-camry-camry-hybrid/"
+            },
+            "mpg_combined": {
+              "value": 27,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/37724.shtml"
+            },
+            "cargo_cuft": {
+              "value": 15.4,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/camry/2017/st-401647953/features-specs/"
+            },
+            "clearance_in": {
+              "value": 6.1,
+              "source": "Kelley Blue Book",
+              "url": "https://www.kbb.com/toyota/camry/2017/specs/"
+            }
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "Accord",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Honda Accord 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 185,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-844f0bc02e014d7ebe44f348f9f434e9-2017-honda-accord-sedan-specifications"
+            },
+            "mpg_combined": {
+              "value": 30,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/37625.shtml"
+            },
+            "cargo_cuft": {
+              "value": 15.8,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-844f0bc02e014d7ebe44f348f9f434e9-2017-honda-accord-sedan-specifications"
+            },
+            "clearance_in": {
+              "value": 6,
+              "source": "cars.com",
+              "url": "https://www.cars.com/research/honda-accord-2017/specs/387305/"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Два главных седана D-класса: кто надёжнее и практичнее?",
+        "az": "D-sinfinin iki əsas sedanı: hansı daha etibarlı və praktikdir?",
+        "en": "Two key mid-size sedans: which is more reliable and practical?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Honda Accord лучше по: мощность, расход"
+          ],
+          "az": [
+            "Honda Accord daha yaxşıdır: güc, sərfiyyat"
+          ],
+          "en": [
+            "Honda Accord is better at: power, fuel use"
+          ]
+        },
+        "sources": [
+          "Toyota Motor North America",
+          "U.S. DOE / EPA",
+          "NHTSA recalls",
+          "NHTSA 5-Star Safety Ratings",
+          "Honda News",
+          "fueleconomy.gov",
+          "cars.com"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "sonata-camry",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Sonata",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Hyundai Sonata 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 185,
+              "source": "cars.com",
+              "url": "https://www.cars.com/research/hyundai-sonata-2017/specs/388119/"
+            },
+            "mpg_combined": {
+              "value": 29,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/37432.shtml"
+            },
+            "cargo_cuft": {
+              "value": 16.3,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/sonata/2017/sedan/st-401655748/features-specs/"
+            },
+            "clearance_in": {
+              "value": 5.3,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/sonata/2017/sedan/st-401655748/features-specs/"
+            }
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Camry 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 178,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/2017-toyota-camry-camry-hybrid/"
+            },
+            "mpg_combined": {
+              "value": 27,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/37724.shtml"
+            },
+            "cargo_cuft": {
+              "value": 15.4,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/camry/2017/st-401647953/features-specs/"
+            },
+            "clearance_in": {
+              "value": 6.1,
+              "source": "Kelley Blue Book",
+              "url": "https://www.kbb.com/toyota/camry/2017/specs/"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Кореец против японца: расход, багажник, слабые места.",
+        "az": "Koreyalı və yaponiyalı: sərfiyyat, baqaj, zəif yerlər.",
+        "en": "Korean versus Japanese: fuel, boot, weak points."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Hyundai Sonata лучше по: мощность, расход, багажник",
+            "Toyota Camry лучше по: клиренс, известные проблемы, отзывные кампании"
+          ],
+          "az": [
+            "Hyundai Sonata daha yaxşıdır: güc, sərfiyyat, baqaj",
+            "Toyota Camry daha yaxşıdır: klirens, məlum problemlər, geri çağırmalar"
+          ],
+          "en": [
+            "Hyundai Sonata is better at: power, fuel use, boot space",
+            "Toyota Camry is better at: ground clearance, known problems, recalls"
+          ]
+        },
+        "sources": [
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "cars.com",
+          "Edmunds",
+          "NHTSA 5-Star Safety Ratings",
+          "Toyota Motor North America"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "corolla-civic",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "Corolla",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Corolla 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 132,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/2017-toyota-corolla-50-n-fabulous/"
+            },
+            "mpg_combined": {
+              "value": 32,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/38153.shtml"
+            },
+            "cargo_cuft": {
+              "value": 13,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/corolla/2017/st-401668010/features-specs/"
+            },
+            "clearance_in": {
+              "value": 5.5,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/corolla/2017/st-401668010/features-specs/"
+            }
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "Civic",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Honda Civic 2 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 158,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-25c7d3d97b3a4b0084138e739a22df56-2017-honda-civic-sedan-specifications-features"
+            },
+            "mpg_combined": {
+              "value": 34,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/38247.shtml"
+            },
+            "cargo_cuft": {
+              "value": 15.1,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-25c7d3d97b3a4b0084138e739a22df56-2017-honda-civic-sedan-specifications-features"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Компактные седаны на каждый день.",
+        "az": "Hər gün üçün kompakt sedanlar.",
+        "en": "Everyday compact sedans."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Honda Civic лучше по: мощность, расход, багажник"
+          ],
+          "az": [
+            "Honda Civic daha yaxşıdır: güc, sərfiyyat, baqaj"
+          ],
+          "en": [
+            "Honda Civic is better at: power, fuel use, boot space"
+          ]
+        },
+        "sources": [
+          "Toyota USA Newsroom",
+          "fueleconomy.gov",
+          "Edmunds",
+          "NHTSA 5-Star Safety Ratings",
+          "Honda News"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "elantra-corolla",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Elantra",
+          "year": 2017,
+          "safety": {
+            "value": 4,
+            "text": "4/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Hyundai Elantra 4 DR FWD Later Release"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 147,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/elantra/2017/st-401627611/features-specs/"
+            },
+            "mpg_combined": {
+              "value": 33,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/37225.shtml"
+            },
+            "cargo_cuft": {
+              "value": 14.4,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/elantra/2017/st-401627611/features-specs/"
+            },
+            "clearance_in": {
+              "value": 5.3,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/elantra/2017/st-401627611/features-specs/"
+            }
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "Corolla",
+          "year": 2017,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2017 Toyota Corolla 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 132,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/2017-toyota-corolla-50-n-fabulous/"
+            },
+            "mpg_combined": {
+              "value": 32,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/38153.shtml"
+            },
+            "cargo_cuft": {
+              "value": 13,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/corolla/2017/st-401668010/features-specs/"
+            },
+            "clearance_in": {
+              "value": 5.5,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/corolla/2017/st-401668010/features-specs/"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Самые частые соперники в классе C.",
+        "az": "C sinfinin ən tez-tez rəqibləri.",
+        "en": "The most frequent rivals in the compact class."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Hyundai Elantra лучше по: мощность, расход, багажник",
+            "Toyota Corolla лучше по: клиренс, безопасность"
+          ],
+          "az": [
+            "Hyundai Elantra daha yaxşıdır: güc, sərfiyyat, baqaj",
+            "Toyota Corolla daha yaxşıdır: klirens, təhlükəsizlik"
+          ],
+          "en": [
+            "Hyundai Elantra is better at: power, fuel use, boot space",
+            "Toyota Corolla is better at: ground clearance, safety"
+          ]
+        },
+        "sources": [
+          "Edmunds",
+          "fueleconomy.gov",
+          "NHTSA 5-Star Safety Ratings",
+          "Toyota USA Newsroom"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "rav4-crv",
+      "members": [
+        {
+          "make": "Toyota",
+          "model": "RAV4",
+          "year": 2019,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2019 Toyota RAV4 SUV FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 203,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/all-new-2019-toyota-rav4-breaks-the-mold-for-the-segment-it-created/"
+            },
+            "mpg_combined": {
+              "value": 30,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/41122.shtml"
+            },
+            "cargo_cuft": {
+              "value": 37.6,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/rav4/2019/st-401782485/features-specs/"
+            },
+            "clearance_in": {
+              "value": 8.4,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/all-new-2019-toyota-rav4-breaks-the-mold-for-the-segment-it-created/"
+            }
+          }
+        },
+        {
+          "make": "Honda",
+          "model": "CR-V",
+          "year": 2019,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2019 Honda CR-V SUV FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 184,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-54f22367b7254cfbb14771b4caa5a654-2019-cr-v-specifications-features"
+            },
+            "mpg_combined": {
+              "value": 28,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/40852.shtml"
+            },
+            "cargo_cuft": {
+              "value": 39.2,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-54f22367b7254cfbb14771b4caa5a654-2019-cr-v-specifications-features"
+            },
+            "clearance_in": {
+              "value": 7.8,
+              "source": "Honda News",
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-54f22367b7254cfbb14771b4caa5a654-2019-cr-v-specifications-features"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Семейные кроссоверы: что выбрать для города и трассы?",
+        "az": "Ailə krossoverləri: şəhər və yol üçün hansı?",
+        "en": "Family crossovers: which one for the city and the highway?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Toyota RAV4 лучше по: мощность, расход, клиренс",
+            "Honda CR-V лучше по: багажник"
+          ],
+          "az": [
+            "Toyota RAV4 daha yaxşıdır: güc, sərfiyyat, klirens",
+            "Honda CR-V daha yaxşıdır: baqaj"
+          ],
+          "en": [
+            "Toyota RAV4 is better at: power, fuel use, ground clearance",
+            "Honda CR-V is better at: boot space"
+          ]
+        },
+        "sources": [
+          "Toyota USA Newsroom",
+          "fueleconomy.gov",
+          "Edmunds",
+          "NHTSA 5-Star Safety Ratings",
+          "Honda News"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "tucson-rav4",
+      "members": [
+        {
+          "make": "Hyundai",
+          "model": "Tucson",
+          "year": 2020,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2020 Hyundai Tucson SUV FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 161,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/tucson/2020/st-401822966/features-specs/"
+            },
+            "mpg_combined": {
+              "value": 25,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/41439.shtml"
+            },
+            "cargo_cuft": {
+              "value": 31,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/tucson/2020/st-401822966/features-specs/"
+            },
+            "clearance_in": {
+              "value": 6.4,
+              "source": "Hyundai News",
+              "url": "https://www.hyundainews.com/assets/documents/original/39952-2020TucsonProductGuidespecs010820pptx.pdf"
+            }
+          }
+        },
+        {
+          "make": "Toyota",
+          "model": "RAV4",
+          "year": 2020,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2020 Toyota RAV4 SUV FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 203,
+              "source": "Toyota USA Newsroom",
+              "url": "https://pressroom.toyota.com/2020-toyota-rav4-offers-a-new-trd-off-road-model-and-multimedia-enhancements/"
+            },
+            "mpg_combined": {
+              "value": 30,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/42181.shtml"
+            },
+            "cargo_cuft": {
+              "value": 37.6,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/toyota/rav4/2020/st-401831165/features-specs/"
+            },
+            "clearance_in": {
+              "value": 8.4,
+              "source": "cars.com",
+              "url": "https://www.cars.com/research/toyota-rav4-2020/specs/"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Кроссоверы одного года: клиренс, багажник, отзывы.",
+        "az": "Eyni ilin krossoverləri: klirens, baqaj, geri çağırmalar.",
+        "en": "Crossovers of one year: clearance, boot, recalls."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Toyota RAV4 лучше по: мощность, расход, багажник, клиренс"
+          ],
+          "az": [
+            "Toyota RAV4 daha yaxşıdır: güc, sərfiyyat, baqaj, klirens"
+          ],
+          "en": [
+            "Toyota RAV4 is better at: power, fuel use, boot space, ground clearance"
+          ]
+        },
+        "sources": [
+          "Hyundai USA Media Center",
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "Edmunds",
+          "Hyundai News",
+          "NHTSA 5-Star Safety Ratings",
+          "Toyota USA Newsroom",
+          "fueleconomy.gov",
+          "cars.com"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "optima-sonata",
+      "members": [
+        {
+          "make": "Kia",
+          "model": "Optima",
+          "year": 2015,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2015 Kia Optima 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 192,
+              "source": "Kia Media",
+              "url": "https://www.kiamedia.com/us/en/models/optima/2015/specifications"
+            },
+            "mpg_combined": {
+              "value": 26,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/34949.shtml"
+            },
+            "cargo_cuft": {
+              "value": 15.4,
+              "source": "Kia Media",
+              "url": "https://www.kiamedia.com/us/en/models/optima/2015/specifications"
+            },
+            "clearance_in": {
+              "value": 5.1,
+              "source": "Kia Media",
+              "url": "https://www.kiamedia.com/us/en/models/optima/2015/specifications"
+            }
+          }
+        },
+        {
+          "make": "Hyundai",
+          "model": "Sonata",
+          "year": 2015,
+          "safety": {
+            "value": 5,
+            "text": "5/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2015 Hyundai Sonata 4 DR FWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 185,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/sonata/2015/sedan/st-200698174/features-specs/"
+            },
+            "mpg_combined": {
+              "value": 28,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/35033.shtml"
+            },
+            "cargo_cuft": {
+              "value": 16.3,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/sonata/2015/sedan/st-200698174/features-specs/"
+            },
+            "clearance_in": {
+              "value": 5.3,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/hyundai/sonata/2015/sedan/st-200698174/features-specs/"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Братья на одной платформе: в чём реальная разница?",
+        "az": "Eyni platformada qardaşlar: real fərq nədədir?",
+        "en": "Siblings on one platform: what really differs?"
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Kia Optima лучше по: мощность",
+            "Hyundai Sonata лучше по: расход, багажник, клиренс"
+          ],
+          "az": [
+            "Kia Optima daha yaxşıdır: güc",
+            "Hyundai Sonata daha yaxşıdır: sərfiyyat, baqaj, klirens"
+          ],
+          "en": [
+            "Kia Optima is better at: power",
+            "Hyundai Sonata is better at: fuel use, boot space, ground clearance"
+          ]
+        },
+        "sources": [
+          "Kia Media",
+          "fueleconomy.gov",
+          "NHTSA 5-Star Safety Ratings",
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "NHTSA recalls",
+          "Edmunds"
+        ],
+        "prepared": "2026-10-06"
+      }
+    },
+    {
+      "id": "eclass-5series",
+      "members": [
+        {
+          "make": "Mercedes-Benz",
+          "model": "E-Class",
+          "year": 2016,
+          "safety": {
+            "value": 4,
+            "text": "4/5 NHTSA",
+            "source": "NHTSA 5-Star Safety Ratings: 2016 Mercedes-Benz E-Class 4 DR RWD"
+          },
+          "specs": {
+            "power_hp": {
+              "value": 302,
+              "source": "cars.com",
+              "url": "https://www.cars.com/research/mercedes_benz-e_class-2016/specs/376798/"
+            },
+            "mpg_combined": {
+              "value": 23,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/36180.shtml"
+            },
+            "cargo_cuft": {
+              "value": 12.9,
+              "source": "Edmunds",
+              "url": "https://www.edmunds.com/mercedes-benz/e-class/2016/sedan/st-200732932/features-specs/"
+            }
+          }
+        },
+        {
+          "make": "BMW",
+          "model": "5 Series",
+          "year": 2017,
+          "specs": {
+            "power_hp": {
+              "value": 248,
+              "source": "BMW Group PressClub USA",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0264802EN_US/the-all-new-2017-bmw-5-series:-performance-redefined?language=en_US"
+            },
+            "mpg_combined": {
+              "value": 27,
+              "source": "fueleconomy.gov",
+              "url": "https://www.fueleconomy.gov/feg/noframes/38543.shtml"
+            },
+            "cargo_cuft": {
+              "value": 18.7,
+              "source": "BMW Group PressClub USA",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0264802EN_US/the-all-new-2017-bmw-5-series:-performance-redefined?language=en_US"
+            },
+            "clearance_in": {
+              "value": 5.7,
+              "source": "BMW Group PressClub USA",
+              "url": "https://www.press.bmwgroup.com/usa/article/detail/T0264802EN_US/the-all-new-2017-bmw-5-series:-performance-redefined?language=en_US"
+            }
+          }
+        }
+      ],
+      "subtitle": {
+        "ru": "Бизнес-седаны: комфорт против драйва.",
+        "az": "Biznes sedanlar: komfort və sürüş.",
+        "en": "Executive sedans: comfort versus drive."
+      },
+      "verdict": {
+        "lines": {
+          "ru": [
+            "Mercedes-Benz E-Class лучше по: мощность, отзывные кампании",
+            "BMW 5 Series лучше по: расход, багажник"
+          ],
+          "az": [
+            "Mercedes-Benz E-Class daha yaxşıdır: güc, geri çağırmalar",
+            "BMW 5 Series daha yaxşıdır: sərfiyyat, baqaj"
+          ],
+          "en": [
+            "Mercedes-Benz E-Class is better at: power, recalls",
+            "BMW 5 Series is better at: fuel use, boot space"
+          ]
+        },
+        "sources": [
+          "U.S. DOE / EPA",
+          "Auto Expert known issues",
+          "cars.com",
+          "Edmunds",
+          "NHTSA 5-Star Safety Ratings",
+          "BMW Group PressClub USA",
+          "NHTSA recalls"
+        ],
+        "prepared": "2026-10-06"
+      }
+    }
+  ]
+}
