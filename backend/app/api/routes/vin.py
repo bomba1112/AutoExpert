@@ -757,7 +757,10 @@ def _profile_snapshots(
 ) -> tuple[dict, list[dict]]:
     known_issues = list(
         db.scalars(
-            select(KnownIssue).where(KnownIssue.vehicle_variant_id == profile.vehicle_variant_id)
+            select(KnownIssue).where(
+                KnownIssue.vehicle_variant_id == profile.vehicle_variant_id,
+                KnownIssue.severity.is_not(None),
+            )
         )
     )
     rows = DatabaseOwnerReviewProvider(db).observations_for(profile.vehicle_variant_id)

@@ -1,0 +1,39 @@
+{
+ "_doc": "Catalogue model name (record field `model`) -> database make/model. Owner decision 2026-10-04: Deepal, Qiyuan and Nevo are make Changan, the model is named as on turbo.az, the sub-brand goes to specifications.cn.sub_brand; aliases are used by the listing matcher only. Twins (twin_models) are different cars and are not aliases.",
+ "makes": {"BYD": "BYD", "Changan": "Changan", "Zeekr": "Zeekr", "Lynk & Co": "Lynk & Co", "Toyota": "Toyota"},
+ "make_aliases": {"ZEEKR": "Zeekr", "Lynk": "Lynk & Co", "Lynk&Co": "Lynk & Co", "Deepal": "Changan", "Qiyuan": "Changan", "Nevo": "Changan", "Fangchengbao": "BYD"},
+ "models": {
+  "BYD Qin Plus DM-i": {"make": "BYD", "model": "Qin Plus", "sub_brand": null, "aliases": ["Qin Plus DM-i", "Qin PLUS", "秦PLUS"]},
+  "BYD Song PLUS DM-i": {"make": "BYD", "model": "Song Plus DM-i", "sub_brand": null, "aliases": ["Song Plus", "Song PLUS DM-i", "宋PLUS"]},
+  "BYD Destroyer 05": {"make": "BYD", "model": "Destroyer 05", "sub_brand": null, "aliases": ["Seal 5 DM-i", "King", "Chazor", "驱逐舰05"]},
+  "BYD Leopard 7 PHEV": {"make": "BYD", "model": "Leopard 7", "sub_brand": "Fangchengbao", "aliases": ["Leopard 7 PHEV", "Fangchengbao Tai 7", "Tai 7", "Leopard Ti7", "Ti7"]},
+  "Changan Qiyuan A05": {"make": "Changan", "model": "Qiyuan A05", "sub_brand": "Qiyuan", "aliases": ["Nevo A05", "A05"]},
+  "Changan Nevo A05": {"make": "Changan", "model": "Nevo A05", "sub_brand": "Qiyuan", "aliases": ["Qiyuan A05", "A05"]},
+  "Changan Qiyuan A06 EREV": {"make": "Changan", "model": "Qiyuan A06", "sub_brand": "Qiyuan", "aliases": ["Nevo A06", "A06"]},
+  "Changan Qiyuan A06R (название из объявления)": {"make": "Changan", "model": "Qiyuan A06R", "sub_brand": "Qiyuan", "aliases": ["Nevo A06R", "A06R"]},
+  "Changan Qiyuan Q07": {"make": "Changan", "model": "Qiyuan Q07", "sub_brand": "Qiyuan", "aliases": ["Nevo Q07", "Q07"]},
+  "Changan Nevo Q06 EREV": {"make": "Changan", "model": "Nevo Q06", "sub_brand": "Qiyuan", "aliases": ["Qiyuan Q06", "Q06", "Q06 R"]},
+  "Changan Eado PHEV": {"make": "Changan", "model": "Eado", "sub_brand": null, "aliases": ["Eado PHEV", "Yidong"]},
+  "Changan CS75 / CS75 PRO": {"make": "Changan", "model": "CS 75", "sub_brand": null, "aliases": ["CS75", "CS 75 Pro", "CS75 PRO"]},
+  "Changan CS75 PRO": {"make": "Changan", "model": "CS 75 Pro", "sub_brand": null, "aliases": ["CS75 PRO", "CS 75", "CS75"]},
+  "Changan CS75 PLUS": {"make": "Changan", "model": "CS 75 Plus", "sub_brand": null, "aliases": ["CS75 PLUS"]},
+  "Changan CS55 PLUS": {"make": "Changan", "model": "CS 55 Plus", "sub_brand": null, "aliases": ["CS55 PLUS"]},
+  "Changan UNI-V": {"make": "Changan", "model": "Uni-V", "sub_brand": null, "aliases": ["UNI-V"]},
+  "Changan UNI-Z PHEV": {"make": "Changan", "model": "Uni-Z", "sub_brand": null, "aliases": ["UNI-Z", "UNI-Z PHEV"]},
+  "Deepal S07 EREV": {"make": "Changan", "model": "Deepal S07", "sub_brand": "Deepal", "aliases": ["S07", "Deepal S7", "S7"]},
+  "Deepal S09 EREV": {"make": "Changan", "model": "Deepal S09", "sub_brand": "Deepal", "aliases": ["S09", "Deepal S9", "S9"]},
+  "Lynk & Co 900": {"make": "Lynk & Co", "model": "900", "sub_brand": null, "aliases": []},
+  "Zeekr 001": {"make": "Zeekr", "model": "001", "sub_brand": null, "aliases": []},
+  "Zeekr X": {"make": "Zeekr", "model": "X", "sub_brand": null, "aliases": []},
+  "Zeekr 8X": {"make": "Zeekr", "model": "8X", "sub_brand": null, "aliases": []},
+  "Toyota Corolla Cross Hybrid": {"make": "Toyota", "model": "Corolla Cross", "sub_brand": null, "aliases": ["Corolla Cross Hybrid", "卡罗拉锐放"]},
+  "Toyota Corolla Cross Hybrid (Китай, 卡罗拉锐放双擎)": {"make": "Toyota", "model": "Corolla Cross", "sub_brand": null, "aliases": ["Corolla Cross Hybrid", "卡罗拉锐放"]}
+ },
+ "source_display": {
+  "_doc": "Display level by source (owner decisions 2026-10-04): sohu config tables, autohome config tables (paths /config/ and /spec/) and SAMR (samr.gov.cn) -> FACT; xchuxing, carnewschina, Wikipedia and every other source (autohome news / ask pages included) -> SECONDARY_NOTE. Owner reviews (autohome club k.autohome.com.cn, drom, kolesa) are known_issues with OWNER_REPORTS, never facts.",
+  "FACT": ["portal.auto.sohu.com", "db.auto.sohu.com", "www.samr.gov.cn", "samr.gov.cn"],
+  "FACT_URL_PREFIXES": ["https://car.autohome.com.cn/config/", "https://www.autohome.com.cn/config/", "https://www.autohome.com.cn/spec/", "https://car.autohome.com.cn/spec/"],
+  "SECONDARY_NOTE": ["www.xchuxing.com", "carnewschina.com", "data.carnewschina.com", "en.wikipedia.org"],
+  "default": "SECONDARY_NOTE"
+ }
+}

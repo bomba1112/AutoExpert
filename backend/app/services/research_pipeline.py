@@ -671,7 +671,8 @@ class ResearchPipeline:
         issues = list(
             self.db.scalars(
                 select(KnownIssue).where(
-                    KnownIssue.vehicle_variant_id == profile.vehicle_variant_id
+                    KnownIssue.vehicle_variant_id == profile.vehicle_variant_id,
+                    KnownIssue.severity.is_not(None),
                 )
             )
         )

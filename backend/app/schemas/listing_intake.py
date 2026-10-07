@@ -119,6 +119,13 @@ class ListingCandidateRead(APIModel):
     drivetrain: str | None = None
     body: str | None = None
     fuel: str | None = None
+    # CN catalogue candidates only (absent for US rows)
+    market: str | None = None
+    configuration_key: str | None = None
+    powertrain_type: str | None = None
+    battery_kwh: float | None = None
+    power_kw: float | None = None
+    primary: bool = False
 
 
 class ListingConflictRead(APIModel):
