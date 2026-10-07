@@ -4,6 +4,9 @@
   3. components.py write  -> 4. migrate_issues.py  -> 5. resolve_issues.py
   6. index.csv + auto blocks in REPORT.md
   7. regression check vs. previous run: records / components / issues must not decrease.
+  8. translations (tools/i18n.py build): catalog/i18n/{az,en}.json from catalog/i18n/phrases;
+     a changed Russian text keeps its old translation as "stale" and is listed as missing
+     until the phrases cover it (reported, does not stop the rebuild).
 Usage: python tools/rebuild_all.py
 """
 import collections, glob, json, os, re, subprocess, sys
@@ -117,6 +120,11 @@ def main():
         raise SystemExit('REGRESSION: something disappeared — snapshot NOT updated')
     W(SNAP, after)
     print('OK — snapshot updated')
+    print('\n=== translations')
+    import i18n
+    report, errors = i18n.build()
+    if errors:
+        print(f'TRANSLATIONS: {errors} missing or failing checks — add them to catalog/i18n/phrases')
 
 if __name__ == '__main__':
     main()
