@@ -45,10 +45,13 @@ from app.models.enums import (
     SourceUsageStatus,
 )
 from app.models.evidence import KnownIssue, SourceRecord, TechnicalEvidence
+from app.models.translations import ContentTranslation
 from app.services.catalog_names import existing_name
 from app.services.knowledge_import import normalized
 
 LOAD_VERSION = "cn-catalog-load-1"
+TRANSLATION_LANGUAGES = ("az", "en")
+TRANSLATION_PREFIX = "cn_"
 MARKET = "CN"
 KEY_PREFIX = "cn:"
 GENERATION_CODE = "CN"
@@ -114,6 +117,15 @@ class Staging:
     model_map: dict
     records: dict[str, dict]  # slug -> record
     components: dict[tuple[str, str], dict]  # (kind, id) -> component
+    # catalog/i18n: {"az": {key: {ru, text, kind, status}}, "en": {...}} and the glossary
+    translations: dict[str, dict] = field(default_factory=dict)
+    glossary: dict = field(default_factory=dict)
+
+
+def text_key(text: str) -> str:
+    """The key of a translation: sha256 of the Russian text with whitespace collapsed — the same
+    as app.services.us_tech_facts.text_hash and samr/tools/i18n.py."""
+    return hashlib.sha256(" ".join(str(text or "").split()).encode("utf-8")).hexdigest()
 
 
 def read_staging(staging_dir: Path, model_map_path: Path) -> Staging:
@@ -127,18 +139,34 @@ def read_staging(staging_dir: Path, model_map_path: Path) -> Staging:
         for path in sorted((catalog / "components" / folder).glob("*.json")):
             component = json.loads(path.read_text(encoding="utf-8"))
             components[(kind, component["id"])] = component
+    i18n = catalog / "i18n"
+
+    def optional(name):
+        path = i18n / name
+        return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
     return Staging(
         root=staging_dir,
         manifest=json.loads((staging_dir / "MANIFEST.json").read_text(encoding="utf-8")),
         model_map=json.loads(model_map_path.read_text(encoding="utf-8")),
         records=records,
         components=components,
+        translations={lang: optional(f"{lang}.json") for lang in TRANSLATION_LANGUAGES},
+        glossary=optional("glossary.json"),
     )
 
 
 def validate(staging: Staging) -> list[str]:
     """Problems that stop a load."""
     errors = []
+    for lang, entries in staging.translations.items():
+        for key, entry in entries.items():
+            if text_key(entry.get("ru")) != key:
+                errors.append(f"i18n/{lang}.json: key does not match its Russian text: {key[:12]}")
+            if not str(entry.get("kind", "")).startswith(TRANSLATION_PREFIX):
+                errors.append(
+                    f"i18n/{lang}.json: kind {entry.get('kind')!r} outside {TRANSLATION_PREFIX}*"
+                )
     expected = {f"catalog/{k}": v for k, v in staging.manifest["files"].items()}
     expected.update(
         {f"listings/{k}": v for k, v in (staging.manifest.get("listing_files") or {}).items()}
@@ -565,6 +593,9 @@ class CnLoader:
         removed["vehicle_variants"] = self.db.execute(
             delete(VehicleVariant).where(VehicleVariant.id.in_(cn_variants))
         ).rowcount
+        removed["content_translations"] = self.db.execute(
+            delete(ContentTranslation).where(ContentTranslation.kind.like(f"{TRANSLATION_PREFIX}%"))
+        ).rowcount
         self.db.flush()
         for key, value in removed.items():
             self.report.counts[f"removed_{key}"] = value
@@ -581,9 +612,58 @@ class CnLoader:
             self.load_record(slug, record, generation)
         for (kind, cid), component in self.s.components.items():
             self.load_component(kind, cid, component, component_makes.get((kind, cid)))
+        self.load_translations(prune_stale)
         self.find_stale(prune_stale)
         self.db.flush()
         return self.report
+
+    def load_translations(self, prune: bool) -> None:
+        """content_translations in the "original RU -> AZ / EN" mode: source_text and text_ru are
+        the Russian original of the catalogue, text_az / text_en its translations (samr
+        catalog/i18n, status ok only; a stale entry is not loaded). One row per (kind, key)."""
+        current = {}
+        for lang in TRANSLATION_LANGUAGES:
+            for key, entry in (self.s.translations.get(lang) or {}).items():
+                if entry.get("status") != "ok":
+                    continue
+                row = current.setdefault((entry["kind"], key), {"ru": entry["ru"]})
+                row[lang] = entry["text"]
+        version = str(self.s.glossary.get("version") or "cn")[:20]
+        existing = {
+            (r.kind, r.source_hash): r
+            for r in self.db.scalars(
+                select(ContentTranslation).where(
+                    ContentTranslation.kind.like(f"{TRANSLATION_PREFIX}%")
+                )
+            )
+        }
+        for (kind, key), texts in current.items():
+            values = {
+                "source_text": texts["ru"],
+                "text_ru": texts["ru"],
+                # a text without an Azerbaijani translation shows its Russian original
+                "text_az": texts.get("az") or texts["ru"],
+                "text_en": texts.get("en"),
+                "method": "llm",
+                "glossary_version": version,
+                "status": "CHECKED",
+            }
+            row = existing.get((kind, key))
+            if row is None:
+                self.db.add(ContentTranslation(kind=kind, source_hash=key, **values))
+                self.report.counts["translations_new"] += 1
+            elif all(getattr(row, k) == v for k, v in values.items()):
+                self.report.counts["translations_unchanged"] += 1
+            else:
+                for k, v in values.items():
+                    setattr(row, k, v)
+                self.report.counts["translations_updated"] += 1
+        stale = [r for k, r in existing.items() if k not in current]
+        self.report.counts["translations_stale"] = len(stale)
+        if prune:
+            for row in stale:
+                self.db.delete(row)
+        self.db.flush()
 
     def component_makes(self) -> dict:
         makes = defaultdict(set)
@@ -1013,5 +1093,10 @@ def db_counts(db) -> dict:
         ),
         "source_records": db.scalar(
             select(func.count()).select_from(SourceRecord).where(SourceRecord.market == MARKET)
+        ),
+        "translations": db.scalar(
+            select(func.count())
+            .select_from(ContentTranslation)
+            .where(ContentTranslation.kind.like(f"{TRANSLATION_PREFIX}%"))
         ),
     }

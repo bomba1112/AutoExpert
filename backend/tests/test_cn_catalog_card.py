@@ -77,7 +77,8 @@ def test_card_languages(cn_db):
     assert rows_of(az)["motor_power_kw"]["values"][0]["value"] == "145 kVt (197 a.g.)"
     assert rows_of(en)["battery_kwh"]["values"][0]["value"] == "18.32 kWh"
     assert {c["title"] for c in en["categories"]} >= {"Battery and range", "Electric motors"}
-    assert all(w["original_language"] == "ru" for w in en["weak_points"])
+    # owner reports are translated (samr catalog/i18n -> content_translations)
+    assert all(w["original_language"] == "en" for w in en["weak_points"])
 
 
 def test_bev_card_has_no_engine_and_secondary_is_marked(cn_db):
